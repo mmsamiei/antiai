@@ -11,6 +11,7 @@ enum GameType {
   IRAN_CITY
   COUNTRY
   ADJECTIVE
+  ADJECTIVE_RAIN
 }
 
 enum GameStatus {
@@ -68,4 +69,17 @@ model Guess {
 
   @@unique([gameId, itemId])
   @@index([gameId, createdAt])
+}
+
+model AdjectiveJudgment {
+  id        String   @id @default(cuid())
+  promptId  String
+  word      String
+  accepted  Boolean
+  quality   Int
+  reason    String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([promptId, word])
 }

@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 
-type GameType = "IRAN_CITY" | "COUNTRY" | "ADJECTIVE";
+type GameType = "IRAN_CITY" | "COUNTRY" | "ADJECTIVE" | "ADJECTIVE_RAIN";
 type PublicItem = { id: string; name: string; emoji?: string; detail?: string };
 type Guess = PublicItem & { rank: number; createdAt: string };
 type Game = {
@@ -13,6 +13,8 @@ type Game = {
   totalItems: number;
   guesses: Guess[];
   target: PublicItem | null;
+  prompt?: { id: string; name: string; emoji: string; examples: string[] } | null;
+  acceptedCount?: number;
 };
 type Stats = { total: number; wins: number; surrendered: number; averageGuesses: number; bestGame: number };
 type LeaderRow = { rank: number; userId: string; displayName: string; photoUrl?: string; wins: number; averageGuesses: number; bestGame: number; isMe: boolean };
@@ -22,8 +24,10 @@ const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const gameMeta: Record<GameType, { title: string; icon: string; description: string; hint: string }> = {
   IRAN_CITY: { title: "شهرجو", icon: "🇮🇷", description: "شهر پنهان ایران را پیدا کن", hint: "نام یک شهر ایران را بنویس…" },
   COUNTRY: { title: "کشورجو", icon: "🌍", description: "کشور پنهان را روی نقشه ذهنی‌ات پیدا کن", hint: "نام یک کشور را بنویس…" },
-  ADJECTIVE: { title: "صفت‌جو", icon: "✦", description: "صفت پنهان را با نزدیکی معنایی پیدا کن", hint: "یک صفت فارسی بنویس…" }
+  ADJECTIVE: { title: "صفت‌جو کلاسیک", icon: "✦", description: "نسخهٔ قدیمی", hint: "یک صفت فارسی بنویس…" },
+  ADJECTIVE_RAIN: { title: "صفت‌جو", icon: "✦", description: "برای یک واژه، صفت‌های مناسب پیدا کن", hint: "یک صفت فارسی بنویس…" }
 };
+const playableTypes: GameType[] = ["IRAN_CITY", "COUNTRY", "ADJECTIVE_RAIN"];
 
 function telegram() { return (globalThis as typeof globalThis & { Telegram?: { WebApp?: any } }).Telegram?.WebApp; }
 
@@ -139,7 +143,7 @@ function Home({ stats, onlineCount, busy, onStart }: { stats: Stats; onlineCount
       <div className="live-count"><i />{onlineCount === null ? "در حال شمارش بازیکن‌ها…" : <><b>{onlineCount.toLocaleString("fa-IR")}</b> نفر همین حالا در حال بازی‌اند</>}</div>
     </section>
     <section className="game-grid">
-      {(Object.keys(gameMeta) as GameType[]).map((type) => <button className={`game-card ${type === "IRAN_CITY" ? "iran" : type === "COUNTRY" ? "world" : "words"}`} key={type} disabled={busy} onClick={() => onStart(type)}>
+      {playableTypes.map((type) => <button className={`game-card ${type === "IRAN_CITY" ? "iran" : type === "COUNTRY" ? "world" : "words"}`} key={type} disabled={busy} onClick={() => onStart(type)}>
         <span className="game-icon">{gameMeta[type].icon}</span>
         <span className="game-copy"><b>{gameMeta[type].title}</b><small>{gameMeta[type].description}</small></span>
         <span className="game-arrow">←</span>
@@ -159,27 +163,28 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
   setError: (error: string) => void; onNew: () => void; onExit: () => void;
 }) {
   const meta = gameMeta[game.type];
+  const isAdjectiveRain = game.type === "ADJECTIVE_RAIN";
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState<PublicItem[]>([]);
   const [selected, setSelected] = useState<PublicItem | null>(null);
   const sortedGuesses = useMemo(() => [...game.guesses].sort((a, b) => a.rank - b.rank), [game.guesses]);
 
   useEffect(() => {
-    if (query.trim().length < 1 || selected?.name === query || game.status !== "ACTIVE") { setSuggestions([]); return; }
+    if (isAdjectiveRain || query.trim().length < 1 || selected?.name === query || game.status !== "ACTIVE") { setSuggestions([]); return; }
     const timer = setTimeout(() => {
       jsonFetch<{ items: PublicItem[] }>(`/api/search?type=${game.type}&q=${encodeURIComponent(query)}`)
         .then(({ items }) => setSuggestions(items.filter((item) => !game.guesses.some((guess) => guess.id === item.id))))
         .catch(() => setSuggestions([]));
     }, 140);
     return () => clearTimeout(timer);
-  }, [query, selected, game.type, game.status, game.guesses]);
+  }, [query, selected, game.type, game.status, game.guesses, isAdjectiveRain]);
 
   const submitGuess = async () => {
-    if (!selected || busy) return;
+    if ((!isAdjectiveRain && !selected) || (isAdjectiveRain && !query.trim()) || busy) return;
     setBusy(true); setError("");
     try {
       const data = await jsonFetch<{ game: Game }>("/api/game/guess", {
-        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ gameId: game.id, itemId: selected.id })
+        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(isAdjectiveRain ? { gameId: game.id, word: query } : { gameId: game.id, itemId: selected!.id })
       });
       setGame(data.game); setQuery(""); setSelected(null); setSuggestions([]);
       telegram()?.HapticFeedback?.notificationOccurred(data.game.status === "WON" ? "success" : "warning");
@@ -208,19 +213,20 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
   };
 
   return <section className="play-screen">
-    <div className="play-heading"><button className="icon-button" onClick={onExit}>→</button><div><small>{meta.icon} {meta.title}</small><h1>پاسخ پنهان را پیدا کن</h1></div><span className="guess-count">{game.guessesCount.toLocaleString("fa-IR")} حدس</span></div>
+    <div className="play-heading"><button className="icon-button" onClick={onExit}>→</button><div><small>{meta.icon} {meta.title}</small><h1>{isAdjectiveRain ? "هر صفتِ مناسب را پیدا کن" : "پاسخ پنهان را پیدا کن"}</h1></div><span className="guess-count">{isAdjectiveRain ? `${(game.acceptedCount || 0).toLocaleString("fa-IR")} از ۵` : `${game.guessesCount.toLocaleString("fa-IR")} حدس`}</span></div>
+    {isAdjectiveRain && game.prompt && <div className="adjective-prompt"><span>{game.prompt.emoji}</span><small>برای این واژه صفت بنویس</small><strong>{game.prompt.name}</strong><p>هر صفت طبیعی و مناسب پذیرفته می‌شود.</p></div>}
     {game.status === "ACTIVE" ? <div className="search-box">
-      <div className="search-row"><input value={query} onChange={(event) => { setQuery(event.target.value); setSelected(null); }} placeholder={meta.hint} autoComplete="off" /><button disabled={!selected || busy} onClick={submitGuess}>{busy ? "…" : "حدس"}</button></div>
+      <div className="search-row"><input value={query} onChange={(event) => { setQuery(event.target.value); setSelected(null); }} placeholder={meta.hint} autoComplete="off" /><button disabled={(!isAdjectiveRain && !selected) || (isAdjectiveRain && !query.trim()) || busy} onClick={submitGuess}>{busy ? "…" : isAdjectiveRain ? "ثبت" : "حدس"}</button></div>
       {suggestions.length > 0 && <div className="suggestions">{suggestions.map((item) => <button key={item.id} onClick={() => { setSelected(item); setQuery(item.name); setSuggestions([]); }}><span>{item.emoji} {item.name}</span>{item.detail && <small>{item.detail}</small>}</button>)}</div>}
     </div> : <div className={`finish-card ${game.status === "WON" ? "won" : "gave-up"}`}>
       <span className="finish-icon">{game.status === "WON" ? "🎯" : "🏳️"}</span>
-      <h2>{game.status === "WON" ? "پیداش کردی!" : "پاسخ این بود:"}</h2>
-      <strong>{game.target?.emoji} {game.target?.name}</strong>
-      <p>{game.status === "WON" ? `با ${game.guessesCount.toLocaleString("fa-IR")} حدس به جواب رسیدی.` : "بازی بعدی را از نو شروع کن."}</p>
+      <h2>{game.status === "WON" ? (isAdjectiveRain ? "پنج صفت پیدا کردی!" : "پیداش کردی!") : isAdjectiveRain ? "نمونه‌صفت‌ها:" : "پاسخ این بود:"}</h2>
+      <strong>{isAdjectiveRain ? game.prompt?.examples.join(" · ") : <>{game.target?.emoji} {game.target?.name}</>}</strong>
+      <p>{game.status === "WON" ? (isAdjectiveRain ? `با ${game.guessesCount.toLocaleString("fa-IR")} تلاش به هدف رسیدی.` : `با ${game.guessesCount.toLocaleString("fa-IR")} حدس به جواب رسیدی.`) : "بازی بعدی را از نو شروع کن."}</p>
       <div className="finish-actions"><button className="primary" onClick={onNew}>بازی بعدی</button>{game.status === "WON" && <button className="secondary" onClick={share}>اشتراک نتیجه</button>}</div>
     </div>}
-    <div className="guess-head"><b>حدس‌ها</b>{game.status === "ACTIVE" && <button onClick={surrender} disabled={busy}>تسلیم می‌شوم</button>}</div>
-    {sortedGuesses.length === 0 ? <div className="empty-state"><span>⌁</span><p>{game.type === "ADJECTIVE" ? "یک صفت حدس بزن؛ رتبهٔ ۱ نزدیک‌ترین صفتِ دیگر به پاسخ است." : "اولین حدس را بزن. رتبهٔ ۱ نزدیک‌ترین جای دیگر به پاسخ است."}</p></div> : <div className="guess-list">{sortedGuesses.map((guess) => <div className={`guess-row ${rankColor(guess.rank, game.totalItems)}`} key={guess.id}><div className="guess-name"><span>{guess.emoji}</span><b>{guess.name}</b></div><div className="rank-copy"><small>رتبه</small><strong>{guess.rank === 0 ? "✓" : guess.rank.toLocaleString("fa-IR")}</strong><span>{guess.rank === 0 ? "پاسخ درست" : `از ${(game.totalItems - 1).toLocaleString("fa-IR")}`}</span></div><div className="rank-bar"><i style={{ width: `${guess.rank === 0 ? 100 : Math.max(4, 100 - ((guess.rank - 1) / Math.max(1, game.totalItems - 2)) * 100)}%` }} /></div></div>)}</div>}
+    <div className="guess-head"><b>{isAdjectiveRain ? "صفت‌های تو" : "حدس‌ها"}</b>{game.status === "ACTIVE" && <button onClick={surrender} disabled={busy}>تسلیم می‌شوم</button>}</div>
+    {sortedGuesses.length === 0 ? <div className="empty-state"><span>⌁</span><p>{isAdjectiveRain ? "اولین صفتی را که به ذهنت می‌رسد بنویس." : "اولین حدس را بزن."}</p></div> : isAdjectiveRain ? <div className="guess-list">{game.guesses.map((guess) => <div className={`word-row ${guess.rank > 1 ? "direct" : guess.rank > 0 ? "accepted" : "rejected"}`} key={guess.id}><b>{guess.name}</b><span>{guess.rank > 1 ? "عالی" : guess.rank > 0 ? "پذیرفته شد" : "این یکی نه"}</span></div>)}</div> : <div className="guess-list">{sortedGuesses.map((guess) => <div className={`guess-row ${rankColor(guess.rank, game.totalItems)}`} key={guess.id}><div className="guess-name"><span>{guess.emoji}</span><b>{guess.name}</b></div><div className="rank-copy"><small>رتبه</small><strong>{guess.rank === 0 ? "✓" : guess.rank.toLocaleString("fa-IR")}</strong><span>{guess.rank === 0 ? "پاسخ درست" : `از ${(game.totalItems - 1).toLocaleString("fa-IR")}`}</span></div><div className="rank-bar"><i style={{ width: `${guess.rank === 0 ? 100 : Math.max(4, 100 - ((guess.rank - 1) / Math.max(1, game.totalItems - 2)) * 100)}%` }} /></div></div>)}</div>}
   </section>;
 }
 
@@ -235,7 +241,7 @@ function Leaderboard() {
   return <section><div className="section-heading"><div><small>رقابت واقعی</small><h1>لیدربورد</h1></div><span>🏆</span></div>
     <div className="board-modes"><button className={mode === "effort" ? "active" : ""} onClick={() => setMode("effort")}><b>پرتلاش‌ترین‌ها</b><small>بیشترین تعداد برد</small></button><button className={mode === "skill" ? "active" : ""} onClick={() => setMode("skill")}><b>ماهرترین‌ها</b><small>کمترین میانگین حدس</small></button></div>
     <div className="segmented"><button className={period === "week" ? "active" : ""} onClick={() => setPeriod("week")}>این هفته</button><button className={period === "all" ? "active" : ""} onClick={() => setPeriod("all")}>همه دوران</button></div>
-    <div className="filter-chips"><button className={type === "ALL" ? "active" : ""} onClick={() => setType("ALL")}>مجموع</button><button className={type === "IRAN_CITY" ? "active" : ""} onClick={() => setType("IRAN_CITY")}>شهرجو</button><button className={type === "COUNTRY" ? "active" : ""} onClick={() => setType("COUNTRY")}>کشورجو</button><button className={type === "ADJECTIVE" ? "active" : ""} onClick={() => setType("ADJECTIVE")}>صفت‌جو</button></div>
+    <div className="filter-chips"><button className={type === "ALL" ? "active" : ""} onClick={() => setType("ALL")}>مجموع</button><button className={type === "IRAN_CITY" ? "active" : ""} onClick={() => setType("IRAN_CITY")}>شهرجو</button><button className={type === "COUNTRY" ? "active" : ""} onClick={() => setType("COUNTRY")}>کشورجو</button><button className={type === "ADJECTIVE_RAIN" ? "active" : ""} onClick={() => setType("ADJECTIVE_RAIN")}>صفت‌جو</button></div>
     {mode === "skill" && <p className="board-note">امتیاز مهارت = مجموع حدس‌های بازی‌های تمام‌شده ÷ تعداد بردها · حداقل ۳ برد</p>}
     {loading ? <div className="empty-state">در حال محاسبه رتبه‌ها…</div> : rows.length === 0 ? <div className="empty-state">{mode === "skill" ? "هنوز کسی در این جدول به ۳ برد نرسیده." : "هنوز بردی ثبت نشده؛ اولین نفر باش!"}</div> : <div className="leader-list">{rows.map((row) => <LeaderRowView key={row.userId} row={row} mode={mode} />)}</div>}
     {me && me.rank > 50 && <div className="my-rank"><small>جایگاه تو</small><LeaderRowView row={me} mode={mode} /></div>}

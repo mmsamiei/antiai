@@ -9,3 +9,4 @@
 
 (max-width:380px){.shell{padding-inline:12px}.hero h1{font-size:27px}.game-card{padding:14px;grid-template-columns:52px 1fr 26px}.game-icon{width:52px;height:52px}.play-heading{grid-template-columns:34px 1fr}.guess-count{display:none}}
 @media(min-width:700px){.bottom-nav{border:1px solid #222c45;border-bottom:0;border-radius:20px 20px 0 0}.shell{padding-top:28px}}
+.game-card.words{background:radial-gradient(circle at 0 0,#6a3c1f99,transparent 45%),linear-gradient(145deg,#2b1b28,#171326)}

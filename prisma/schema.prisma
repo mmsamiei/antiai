@@ -10,6 +10,7 @@ datasource db {
 enum GameType {
   IRAN_CITY
   COUNTRY
+  ADJECTIVE
 }
 
 enum GameStatus {

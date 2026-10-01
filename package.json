@@ -10,7 +10,9 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "db:generate": "prisma generate",
-    "db:migrate": "prisma migrate deploy"
+    "db:migrate": "prisma migrate deploy",
+    "adjectives:embed": "node scripts/embed-adjectives.mjs",
+    "adjectives:report": "node scripts/report-adjective-neighbors.mjs"
   },
   "dependencies": {
     "@prisma/client": "^6.16.2",

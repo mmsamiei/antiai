@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 
-type GameType = "IRAN_CITY" | "COUNTRY";
+type GameType = "IRAN_CITY" | "COUNTRY" | "ADJECTIVE";
 type PublicItem = { id: string; name: string; emoji?: string; detail?: string };
 type Guess = PublicItem & { rank: number; createdAt: string };
 type Game = {
@@ -21,7 +21,8 @@ const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const gameMeta: Record<GameType, { title: string; icon: string; description: string; hint: string }> = {
   IRAN_CITY: { title: "شهرجو", icon: "🇮🇷", description: "شهر پنهان ایران را پیدا کن", hint: "نام یک شهر ایران را بنویس…" },
-  COUNTRY: { title: "کشورجو", icon: "🌍", description: "کشور پنهان را روی نقشه ذهنی‌ات پیدا کن", hint: "نام یک کشور را بنویس…" }
+  COUNTRY: { title: "کشورجو", icon: "🌍", description: "کشور پنهان را روی نقشه ذهنی‌ات پیدا کن", hint: "نام یک کشور را بنویس…" },
+  ADJECTIVE: { title: "صفت‌جو", icon: "✦", description: "صفت پنهان را با نزدیکی معنایی پیدا کن", hint: "یک صفت فارسی بنویس…" }
 };
 
 function telegram() { return (globalThis as typeof globalThis & { Telegram?: { WebApp?: any } }).Telegram?.WebApp; }
@@ -138,7 +139,7 @@ function Home({ stats, onlineCount, busy, onStart }: { stats: Stats; onlineCount
       <div className="live-count"><i />{onlineCount === null ? "در حال شمارش بازیکن‌ها…" : <><b>{onlineCount.toLocaleString("fa-IR")}</b> نفر همین حالا در حال بازی‌اند</>}</div>
     </section>
     <section className="game-grid">
-      {(Object.keys(gameMeta) as GameType[]).map((type) => <button className={`game-card ${type === "IRAN_CITY" ? "iran" : "world"}`} key={type} disabled={busy} onClick={() => onStart(type)}>
+      {(Object.keys(gameMeta) as GameType[]).map((type) => <button className={`game-card ${type === "IRAN_CITY" ? "iran" : type === "COUNTRY" ? "world" : "words"}`} key={type} disabled={busy} onClick={() => onStart(type)}>
         <span className="game-icon">{gameMeta[type].icon}</span>
         <span className="game-copy"><b>{gameMeta[type].title}</b><small>{gameMeta[type].description}</small></span>
         <span className="game-arrow">←</span>
@@ -219,7 +220,7 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
       <div className="finish-actions"><button className="primary" onClick={onNew}>بازی بعدی</button>{game.status === "WON" && <button className="secondary" onClick={share}>اشتراک نتیجه</button>}</div>
     </div>}
     <div className="guess-head"><b>حدس‌ها</b>{game.status === "ACTIVE" && <button onClick={surrender} disabled={busy}>تسلیم می‌شوم</button>}</div>
-    {sortedGuesses.length === 0 ? <div className="empty-state"><span>⌁</span><p>اولین حدس را بزن. رتبهٔ ۱ نزدیک‌ترین جای دیگر به پاسخ است.</p></div> : <div className="guess-list">{sortedGuesses.map((guess) => <div className={`guess-row ${rankColor(guess.rank, game.totalItems)}`} key={guess.id}><div className="guess-name"><span>{guess.emoji}</span><b>{guess.name}</b></div><div className="rank-copy"><small>رتبه</small><strong>{guess.rank === 0 ? "✓" : guess.rank.toLocaleString("fa-IR")}</strong><span>{guess.rank === 0 ? "پاسخ درست" : `از ${(game.totalItems - 1).toLocaleString("fa-IR")}`}</span></div><div className="rank-bar"><i style={{ width: `${guess.rank === 0 ? 100 : Math.max(4, 100 - ((guess.rank - 1) / Math.max(1, game.totalItems - 2)) * 100)}%` }} /></div></div>)}</div>}
+    {sortedGuesses.length === 0 ? <div className="empty-state"><span>⌁</span><p>{game.type === "ADJECTIVE" ? "یک صفت حدس بزن؛ رتبهٔ ۱ نزدیک‌ترین صفتِ دیگر به پاسخ است." : "اولین حدس را بزن. رتبهٔ ۱ نزدیک‌ترین جای دیگر به پاسخ است."}</p></div> : <div className="guess-list">{sortedGuesses.map((guess) => <div className={`guess-row ${rankColor(guess.rank, game.totalItems)}`} key={guess.id}><div className="guess-name"><span>{guess.emoji}</span><b>{guess.name}</b></div><div className="rank-copy"><small>رتبه</small><strong>{guess.rank === 0 ? "✓" : guess.rank.toLocaleString("fa-IR")}</strong><span>{guess.rank === 0 ? "پاسخ درست" : `از ${(game.totalItems - 1).toLocaleString("fa-IR")}`}</span></div><div className="rank-bar"><i style={{ width: `${guess.rank === 0 ? 100 : Math.max(4, 100 - ((guess.rank - 1) / Math.max(1, game.totalItems - 2)) * 100)}%` }} /></div></div>)}</div>}
   </section>;
 }
 
@@ -234,7 +235,7 @@ function Leaderboard() {
   return <section><div className="section-heading"><div><small>رقابت واقعی</small><h1>لیدربورد</h1></div><span>🏆</span></div>
     <div className="board-modes"><button className={mode === "effort" ? "active" : ""} onClick={() => setMode("effort")}><b>پرتلاش‌ترین‌ها</b><small>بیشترین تعداد برد</small></button><button className={mode === "skill" ? "active" : ""} onClick={() => setMode("skill")}><b>ماهرترین‌ها</b><small>کمترین میانگین حدس</small></button></div>
     <div className="segmented"><button className={period === "week" ? "active" : ""} onClick={() => setPeriod("week")}>این هفته</button><button className={period === "all" ? "active" : ""} onClick={() => setPeriod("all")}>همه دوران</button></div>
-    <div className="filter-chips"><button className={type === "ALL" ? "active" : ""} onClick={() => setType("ALL")}>مجموع</button><button className={type === "IRAN_CITY" ? "active" : ""} onClick={() => setType("IRAN_CITY")}>شهرجو</button><button className={type === "COUNTRY" ? "active" : ""} onClick={() => setType("COUNTRY")}>کشورجو</button></div>
+    <div className="filter-chips"><button className={type === "ALL" ? "active" : ""} onClick={() => setType("ALL")}>مجموع</button><button className={type === "IRAN_CITY" ? "active" : ""} onClick={() => setType("IRAN_CITY")}>شهرجو</button><button className={type === "COUNTRY" ? "active" : ""} onClick={() => setType("COUNTRY")}>کشورجو</button><button className={type === "ADJECTIVE" ? "active" : ""} onClick={() => setType("ADJECTIVE")}>صفت‌جو</button></div>
     {mode === "skill" && <p className="board-note">امتیاز مهارت = مجموع حدس‌های بازی‌های تمام‌شده ÷ تعداد بردها · حداقل ۳ برد</p>}
     {loading ? <div className="empty-state">در حال محاسبه رتبه‌ها…</div> : rows.length === 0 ? <div className="empty-state">{mode === "skill" ? "هنوز کسی در این جدول به ۳ برد نرسیده." : "هنوز بردی ثبت نشده؛ اولین نفر باش!"}</div> : <div className="leader-list">{rows.map((row) => <LeaderRowView key={row.userId} row={row} mode={mode} />)}</div>}
     {me && me.rank > 50 && <div className="my-rank"><small>جایگاه تو</small><LeaderRowView row={me} mode={mode} /></div>}
@@ -248,7 +249,7 @@ function LeaderRowView({ row, mode = "effort" }: { row: LeaderRow; mode?: "effor
 function Profile({ stats, recent }: { stats: Stats; recent: any[] }) {
   return <section><div className="section-heading"><div><small>کارنامه ذهنی</small><h1>آمار من</h1></div><span>🧠</span></div>
     <div className="profile-grid"><div><strong>{stats.total.toLocaleString("fa-IR")}</strong><span>کل بازی‌ها</span></div><div><strong>{stats.wins.toLocaleString("fa-IR")}</strong><span>بردها</span></div><div><strong>{stats.averageGuesses.toLocaleString("fa-IR")}</strong><span>میانگین حدس</span></div><div><strong>{stats.bestGame ? stats.bestGame.toLocaleString("fa-IR") : "—"}</strong><span>بهترین بازی</span></div></div>
-    <div className="card recent"><h2>بازی‌های اخیر</h2>{recent.length === 0 ? <div className="empty-state">هنوز بازی تمام‌شده‌ای نداری.</div> : recent.map((item) => <div className="recent-row" key={item.id}><span>{item.type === "IRAN_CITY" ? "🇮🇷" : "🌍"}</span><div><b>{gameMeta[item.type as GameType].title}</b><small>{item.status === "WON" ? `${item.guessesCount.toLocaleString("fa-IR")} حدس` : "تسلیم"}</small></div><strong className={item.status === "WON" ? "success" : "muted"}>{item.status === "WON" ? "برد" : "ناتمام"}</strong></div>)}</div>
+    <div className="card recent"><h2>بازی‌های اخیر</h2>{recent.length === 0 ? <div className="empty-state">هنوز بازی تمام‌شده‌ای نداری.</div> : recent.map((item) => <div className="recent-row" key={item.id}><span>{gameMeta[item.type as GameType].icon}</span><div><b>{gameMeta[item.type as GameType].title}</b><small>{item.status === "WON" ? `${item.guessesCount.toLocaleString("fa-IR")} حدس` : "تسلیم"}</small></div><strong className={item.status === "WON" ? "success" : "muted"}>{item.status === "WON" ? "برد" : "ناتمام"}</strong></div>)}</div>
   </section>;
 }
 

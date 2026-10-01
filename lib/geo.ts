@@ -1,6 +1,7 @@
 import type { GameType } from "@prisma/client";
 import { countries } from "./data/countries";
 import { iranCities } from "./data/iran-cities";
+import { adjectives, type AdjectiveItem } from "./data/adjectives";
 
 export type GeoItem = {
   id: string;
@@ -12,7 +13,9 @@ export type GeoItem = {
   detail?: string;
 };
 
-export const DATASET_VERSION = "2026-10-01-v2";
+export type GameItem = GeoItem | AdjectiveItem;
+
+export const DATASET_VERSION = "2026-10-01-v3";
 
 export function normalizePersian(value: string): string {
   return value
@@ -30,15 +33,17 @@ export function normalizePersian(value: string): string {
     .trim();
 }
 
-export function datasetFor(type: GameType): GeoItem[] {
-  return type === "IRAN_CITY" ? iranCities : countries;
+export function datasetFor(type: GameType): GameItem[] {
+  if (type === "IRAN_CITY") return iranCities;
+  if (type === "COUNTRY") return countries;
+  return adjectives;
 }
 
-export function findItem(type: GameType, id: string): GeoItem | undefined {
+export function findItem(type: GameType, id: string): GameItem | undefined {
   return datasetFor(type).find((item) => item.id === id);
 }
 
-export function searchItems(type: GameType, rawQuery: string, limit = 8): GeoItem[] {
+export function searchItems(type: GameType, rawQuery: string, limit = 8): GameItem[] {
   const query = normalizePersian(rawQuery);
   if (!query) return [];
   return datasetFor(type)
@@ -66,14 +71,41 @@ export function haversineDistance(a: GeoItem, b: GeoItem): number {
   return 2 * radius * Math.asin(Math.sqrt(h));
 }
 
-export function proximityRank(type: GameType, guess: GeoItem, target: GeoItem): number {
+function isAdjective(item: GameItem): item is AdjectiveItem {
+  return "embedding" in item;
+}
+
+function cosineSimilarity(a: number[], b: number[]): number {
+  let dot = 0;
+  let aNorm = 0;
+  let bNorm = 0;
+  for (let index = 0; index < a.length; index += 1) {
+    dot += a[index] * b[index];
+    aNorm += a[index] ** 2;
+    bNorm += b[index] ** 2;
+  }
+  return dot / Math.sqrt(aNorm * bNorm);
+}
+
+export function proximityRank(type: GameType, guess: GameItem, target: GameItem): number {
   // The exact answer is intentionally kept outside the proximity ranks. Rank 1
   // therefore always means the nearest *other* place to the hidden answer.
   if (guess.id === target.id) return 0;
+  if (type === "ADJECTIVE") {
+    if (!isAdjective(guess) || !isAdjective(target)) throw new Error("Invalid adjective dataset item");
+    const similarity = cosineSimilarity(guess.embedding, target.embedding);
+    return 1 + datasetFor(type).filter((item) => isAdjective(item) && item.id !== target.id && cosineSimilarity(item.embedding, target.embedding) > similarity + 1e-12).length;
+  }
+  if (isAdjective(guess) || isAdjective(target)) throw new Error("Invalid geography dataset item");
   const distance = haversineDistance(guess, target);
-  return 1 + datasetFor(type).filter((item) => item.id !== target.id && haversineDistance(item, target) < distance - 1e-9).length;
+  return 1 + datasetFor(type).filter((item) => !isAdjective(item) && item.id !== target.id && haversineDistance(item, target) < distance - 1e-9).length;
 }
 
-export function publicItem(item: GeoItem) {
-  return { id: item.id, name: item.name, emoji: item.emoji, detail: item.detail };
+export function publicItem(item: GameItem) {
+  return {
+    id: item.id,
+    name: item.name,
+    emoji: "emoji" in item ? item.emoji : undefined,
+    detail: "detail" in item ? item.detail : undefined
+  };
 }

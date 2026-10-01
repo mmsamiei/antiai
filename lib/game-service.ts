@@ -2,7 +2,7 @@ import type { GameSession, GameType, Guess } from "@prisma/client";
 import { prisma } from "./prisma";
 import { DATASET_VERSION, datasetFor, findItem, publicItem } from "./geo";
 
-export const GAME_TYPES = ["IRAN_CITY", "COUNTRY"] as const;
+export const GAME_TYPES = ["IRAN_CITY", "COUNTRY", "ADJECTIVE"] as const;
 
 export function parseGameType(value: unknown): GameType | null {
   return typeof value === "string" && GAME_TYPES.includes(value as (typeof GAME_TYPES)[number])

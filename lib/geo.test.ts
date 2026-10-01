@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { haversineDistance, normalizePersian, proximityRank, searchItems } from "./geo";
+import { datasetFor, haversineDistance, normalizePersian, proximityRank, searchItems } from "./geo";
 
 describe("Persian normalization", () => {
   it("normalizes Arabic characters and whitespace", () => {
@@ -25,5 +25,24 @@ describe("geography engine", () => {
     expect(target?.name).toBe("زارچ");
     expect(ashkezar?.name).toBe("اشکذر");
     expect(proximityRank("IRAN_CITY", ashkezar, target)).toBe(1);
+  });
+});
+
+describe("adjective engine", () => {
+  it("loads the embedded adjective dataset", () => {
+    expect(datasetFor("ADJECTIVE")).toHaveLength(818);
+  });
+
+  it("ranks the exact adjective as the answer", () => {
+    const scary = searchItems("ADJECTIVE", "ترسناک")[0];
+    expect(scary?.name).toBe("ترسناک");
+    expect(proximityRank("ADJECTIVE", scary!, scary!)).toBe(0);
+  });
+
+  it("places a close synonym ahead of an unrelated adjective", () => {
+    const target = searchItems("ADJECTIVE", "ترسناک")[0]!;
+    const neighbor = searchItems("ADJECTIVE", "وحشت‌آور")[0]!;
+    const unrelated = searchItems("ADJECTIVE", "آرام")[0]!;
+    expect(proximityRank("ADJECTIVE", neighbor, target)).toBeLessThan(proximityRank("ADJECTIVE", unrelated, target));
   });
 });

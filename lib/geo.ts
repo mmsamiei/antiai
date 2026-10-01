@@ -12,7 +12,7 @@ export type GeoItem = {
   detail?: string;
 };
 
-export const DATASET_VERSION = "2026-10-01-v1";
+export const DATASET_VERSION = "2026-10-01-v2";
 
 export function normalizePersian(value: string): string {
   return value

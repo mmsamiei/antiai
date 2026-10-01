@@ -38,7 +38,7 @@ npm run build
 
 ## داده‌ها
 
-داده شهرها از GeoNames و داده نام/ترجمه کشورها از `mledoze/countries` تولید شده است. فایل‌های نهایی داخل repository نگهداری می‌شوند. برای بازتولید، فایل‌های منبع را در `/tmp/anti-ai-geonames` و `/tmp/anti-ai-countries.json` قرار داده و اجرا کنید:
+دادهٔ پایهٔ مختصات شهرها از GeoNames می‌آید؛ نام‌های نمایشی و ۷۰۹ شهرِ افزوده از [فهرست شهرهای ایران در ویکی‌پدیای فارسی](https://fa.wikipedia.org/wiki/فهرست_شهرهای_ایران) گرفته شده‌اند. اسنپ‌شاتِ بازبینی‌شده در `scripts/data/iran-cities-canonical.json` نگهداری می‌شود تا تولید دوباره، این اصلاح‌ها را حفظ کند. دادهٔ نام/ترجمهٔ کشورها از `mledoze/countries` است. برای بازتولید، فایل‌های منبع را در `/tmp/anti-ai-geonames` و `/tmp/anti-ai-countries.json` قرار داده و اجرا کنید:
 
 ```bash
 node scripts/generate-datasets.mjs

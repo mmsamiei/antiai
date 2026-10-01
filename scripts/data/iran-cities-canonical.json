@@ -1,7 +1,4 @@
-// Generated from GeoNames and the Persian Wikipedia city list. Do not edit manually.
-import type { GeoItem } from "../geo";
-
-export const iranCities: GeoItem[] = [
+[
   {
     "id": "wiki-ca3c2bb96512",
     "name": "‌ گل‌تپه",
@@ -12390,4 +12387,4 @@ export const iranCities: GeoItem[] = [
     "latitude": 34.80527778,
     "longitude": 58.4375
   }
-];
+]

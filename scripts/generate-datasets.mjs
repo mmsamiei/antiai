@@ -94,7 +94,7 @@ const iranRows = iranCandidates.filter((row) => {
   return true;
 }).slice(0, 500);
 
-const iranCities = iranRows.map((row) => {
+const geoNamesIranCities = iranRows.map((row) => {
   const name = choosePersianName(row);
   const aliases = [...new Set([
     name, row.name, row.asciiName,
@@ -112,6 +112,11 @@ const iranCities = iranRows.map((row) => {
 const capitalRows = readGeoNames(capitalsPath).filter((row) => row.featureCode === "PPLC");
 const capitalByCountry = new Map(capitalRows.map((row) => [row.countryCode, row]));
 const countryRows = JSON.parse(fs.readFileSync(countriesPath, "utf8"));
+
+const canonicalIranCitiesPath = path.join(process.cwd(), "scripts/data/iran-cities-canonical.json");
+const iranCities = fs.existsSync(canonicalIranCitiesPath)
+  ? JSON.parse(fs.readFileSync(canonicalIranCitiesPath, "utf8"))
+  : geoNamesIranCities;
 
 const countries = countryRows
   .filter((country) => country.unMember || ["VA", "PS"].includes(country.cca2))

@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum GameType {
+  IRAN_CITY
+  COUNTRY
+}
+
+enum GameStatus {
+  ACTIVE
+  WON
+  SURRENDERED
+}
+
+model User {
+  id        String        @id
+  firstName String?
+  lastName  String?
+  username  String?
+  photoUrl  String?
+  games     GameSession[]
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+}
+
+model GameSession {
+  id             String      @id @default(cuid())
+  userId         String
+  type           GameType
+  targetId       String
+  datasetVersion String
+  status         GameStatus  @default(ACTIVE)
+  guessesCount   Int         @default(0)
+  startedAt      DateTime    @default(now())
+  finishedAt     DateTime?
+  user           User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  guesses        Guess[]
+
+  @@index([userId, type, status])
+  @@index([type, status, finishedAt])
+  @@index([userId, targetId])
+}
+
+model Guess {
+  id        String      @id @default(cuid())
+  gameId    String
+  itemId    String
+  rank      Int
+  createdAt DateTime    @default(now())
+  game      GameSession @relation(fields: [gameId], references: [id], onDelete: Cascade)
+
+  @@unique([gameId, itemId])
+  @@index([gameId, createdAt])
+}

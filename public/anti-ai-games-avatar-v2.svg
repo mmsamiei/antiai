@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Anti AI Games</title>
+  <desc id="desc">A minimal human head containing a maze and play symbol</desc>
+  <rect width="1024" height="1024" rx="220" fill="#080b17"/>
+  <path fill="#916dff" d="M523 126c-213 0-382 151-382 348 0 111 52 195 132 248l-21 114c-7 38 22 72 60 72h314c31 0 57-23 61-54l12-91c136-61 222-174 222-316 0-180-163-321-398-321Zm185 554-62 24-17 126H339l27-148-42-25c-63-38-101-101-101-183 0-151 130-266 300-266 183 0 316 103 316 239 0 103-66 188-131 233Z"/>
+  <path fill="none" stroke="#916dff" stroke-width="56" stroke-linecap="round" stroke-linejoin="round" d="M383 319h284v101H482v105h226M383 319v209h99v105H370M667 319v-61M708 525v107H566v103"/>
+  <path fill="#39d98a" d="m476 412 137 85c20 12 20 41 0 53l-137 85c-21 13-48-2-48-27V439c0-25 27-40 48-27Z"/>
+</svg>

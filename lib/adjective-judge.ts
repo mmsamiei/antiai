@@ -25,15 +25,15 @@ export async function judgeAdjective(promptId: string, rawWord: string): Promise
     headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
     body: JSON.stringify({
       model: process.env.JEV_MODEL || "typesafe/jev-1.13",
-      state: { prompt_word: prompt.name, submitted_word: word, language: "Persian" },
+      state: { target_adjective: prompt.name, submitted_adjective: word, language: "Persian" },
       questions: {
         verdict: {
           type: "choice",
-          instructions: "Judge the submitted word as a Persian adjective describing the prompt word. DIRECT means natural and direct. ACCEPT means defensible but less direct. REJECT means unrelated, not an adjective, or an unnatural description. Never accept a mere associated noun.",
+          instructions: "Judge whether submitted_adjective is a true Persian synonym or close synonym of target_adjective. This is a strict synonym game, not a word-association game. Reject words that merely describe a similar object, are broader or narrower in a different sense, are antonyms, or merely occur in the same topic. The target adjective itself is not an answer.",
           criteria: {
-            DIRECT: "A common, natural, direct adjective for the prompt word.",
-            ACCEPT: "A defensible Persian adjective for the prompt word, but less direct.",
-            REJECT: "Not a suitable adjective for the prompt word."
+            DIRECT: "A common, natural direct synonym or near-synonym with the same central meaning.",
+            ACCEPT: "A defensible but less common close synonym; it must still preserve the central meaning.",
+            REJECT: "Not a real synonym or close synonym, or it is the target word itself."
           }
         }
       }
@@ -45,7 +45,7 @@ export async function judgeAdjective(promptId: string, rawWord: string): Promise
   const choice = payload.answers?.verdict?.choice;
   const accepted = choice === "DIRECT" || choice === "ACCEPT";
   const quality = choice === "DIRECT" ? 2 : choice === "ACCEPT" ? 1 : -1;
-  const reason = choice === "DIRECT" ? "صفتی دقیق و طبیعی است." : choice === "ACCEPT" ? "قابل‌قبول است؛ ادامه بده." : "برای این واژه، صفتِ طبیعی‌ای نیست.";
+  const reason = choice === "DIRECT" ? "هم‌معنیِ دقیق است." : choice === "ACCEPT" ? "هم‌معنیِ نزدیک و قابل‌قبولی است." : "هم‌معنیِ این صفت نیست.";
   await prisma.adjectiveJudgment.create({ data: { promptId, word, accepted, quality, reason } });
   return { accepted, quality, reason, word };
 }

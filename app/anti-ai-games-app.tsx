@@ -25,7 +25,7 @@ const gameMeta: Record<GameType, { title: string; icon: string; description: str
   IRAN_CITY: { title: "شهرجو", icon: "🇮🇷", description: "شهر پنهان ایران را پیدا کن", hint: "نام یک شهر ایران را بنویس…" },
   COUNTRY: { title: "کشورجو", icon: "🌍", description: "کشور پنهان را روی نقشه ذهنی‌ات پیدا کن", hint: "نام یک کشور را بنویس…" },
   ADJECTIVE: { title: "صفت‌جو کلاسیک", icon: "✦", description: "نسخهٔ قدیمی", hint: "یک صفت فارسی بنویس…" },
-  ADJECTIVE_RAIN: { title: "صفت‌جو", icon: "✦", description: "برای یک واژه، صفت‌های مناسب پیدا کن", hint: "یک صفت فارسی بنویس…" }
+  ADJECTIVE_RAIN: { title: "صفت‌جو", icon: "✦", description: "برای یک صفت، هم‌معنی پیدا کن", hint: "یک هم‌معنی فارسی بنویس…" }
 };
 const playableTypes: GameType[] = ["IRAN_CITY", "COUNTRY", "ADJECTIVE_RAIN"];
 
@@ -213,20 +213,20 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
   };
 
   return <section className="play-screen">
-    <div className="play-heading"><button className="icon-button" onClick={onExit}>→</button><div><small>{meta.icon} {meta.title}</small><h1>{isAdjectiveRain ? "هر صفتِ مناسب را پیدا کن" : "پاسخ پنهان را پیدا کن"}</h1></div><span className="guess-count">{isAdjectiveRain ? `${(game.acceptedCount || 0).toLocaleString("fa-IR")} از ۵` : `${game.guessesCount.toLocaleString("fa-IR")} حدس`}</span></div>
-    {isAdjectiveRain && game.prompt && <div className="adjective-prompt"><span>{game.prompt.emoji}</span><small>برای این واژه صفت بنویس</small><strong>{game.prompt.name}</strong><p>هر صفت طبیعی و مناسب پذیرفته می‌شود.</p></div>}
+    <div className="play-heading"><button className="icon-button" onClick={onExit}>→</button><div><small>{meta.icon} {meta.title}</small><h1>{isAdjectiveRain ? "هم‌معنی‌هایش را پیدا کن" : "پاسخ پنهان را پیدا کن"}</h1></div><span className="guess-count">{isAdjectiveRain ? `${(game.acceptedCount || 0).toLocaleString("fa-IR")} از ۵` : `${game.guessesCount.toLocaleString("fa-IR")} حدس`}</span></div>
+    {isAdjectiveRain && game.prompt && <div className="adjective-prompt"><span>{game.prompt.emoji}</span><small>برای این صفت هم‌معنی بنویس</small><strong>{game.prompt.name}</strong><p>فقط هم‌معنی یا نزدیک‌معنی واقعی پذیرفته می‌شود.</p></div>}
     {game.status === "ACTIVE" ? <div className="search-box">
       <div className="search-row"><input value={query} onChange={(event) => { setQuery(event.target.value); setSelected(null); }} placeholder={meta.hint} autoComplete="off" /><button disabled={(!isAdjectiveRain && !selected) || (isAdjectiveRain && !query.trim()) || busy} onClick={submitGuess}>{busy ? "…" : isAdjectiveRain ? "ثبت" : "حدس"}</button></div>
       {suggestions.length > 0 && <div className="suggestions">{suggestions.map((item) => <button key={item.id} onClick={() => { setSelected(item); setQuery(item.name); setSuggestions([]); }}><span>{item.emoji} {item.name}</span>{item.detail && <small>{item.detail}</small>}</button>)}</div>}
     </div> : <div className={`finish-card ${game.status === "WON" ? "won" : "gave-up"}`}>
       <span className="finish-icon">{game.status === "WON" ? "🎯" : "🏳️"}</span>
-      <h2>{game.status === "WON" ? (isAdjectiveRain ? "پنج صفت پیدا کردی!" : "پیداش کردی!") : isAdjectiveRain ? "نمونه‌صفت‌ها:" : "پاسخ این بود:"}</h2>
+      <h2>{game.status === "WON" ? (isAdjectiveRain ? "پنج هم‌معنی پیدا کردی!" : "پیداش کردی!") : isAdjectiveRain ? "هم‌معنی‌های دیگر:" : "پاسخ این بود:"}</h2>
       <strong>{isAdjectiveRain ? game.prompt?.examples.join(" · ") : <>{game.target?.emoji} {game.target?.name}</>}</strong>
       <p>{game.status === "WON" ? (isAdjectiveRain ? `با ${game.guessesCount.toLocaleString("fa-IR")} تلاش به هدف رسیدی.` : `با ${game.guessesCount.toLocaleString("fa-IR")} حدس به جواب رسیدی.`) : "بازی بعدی را از نو شروع کن."}</p>
       <div className="finish-actions"><button className="primary" onClick={onNew}>بازی بعدی</button>{game.status === "WON" && <button className="secondary" onClick={share}>اشتراک نتیجه</button>}</div>
     </div>}
     <div className="guess-head"><b>{isAdjectiveRain ? "صفت‌های تو" : "حدس‌ها"}</b>{game.status === "ACTIVE" && <button onClick={surrender} disabled={busy}>تسلیم می‌شوم</button>}</div>
-    {sortedGuesses.length === 0 ? <div className="empty-state"><span>⌁</span><p>{isAdjectiveRain ? "اولین صفتی را که به ذهنت می‌رسد بنویس." : "اولین حدس را بزن."}</p></div> : isAdjectiveRain ? <div className="guess-list">{game.guesses.map((guess) => <div className={`word-row ${guess.rank > 1 ? "direct" : guess.rank > 0 ? "accepted" : "rejected"}`} key={guess.id}><b>{guess.name}</b><span>{guess.rank > 1 ? "عالی" : guess.rank > 0 ? "پذیرفته شد" : "این یکی نه"}</span></div>)}</div> : <div className="guess-list">{sortedGuesses.map((guess) => <div className={`guess-row ${rankColor(guess.rank, game.totalItems)}`} key={guess.id}><div className="guess-name"><span>{guess.emoji}</span><b>{guess.name}</b></div><div className="rank-copy"><small>رتبه</small><strong>{guess.rank === 0 ? "✓" : guess.rank.toLocaleString("fa-IR")}</strong><span>{guess.rank === 0 ? "پاسخ درست" : `از ${(game.totalItems - 1).toLocaleString("fa-IR")}`}</span></div><div className="rank-bar"><i style={{ width: `${guess.rank === 0 ? 100 : Math.max(4, 100 - ((guess.rank - 1) / Math.max(1, game.totalItems - 2)) * 100)}%` }} /></div></div>)}</div>}
+    {sortedGuesses.length === 0 ? <div className="empty-state"><span>⌁</span><p>{isAdjectiveRain ? "اولین هم‌معنی‌ای را که به ذهنت می‌رسد بنویس." : "اولین حدس را بزن."}</p></div> : isAdjectiveRain ? <div className="guess-list">{game.guesses.map((guess) => <div className={`word-row ${guess.rank > 1 ? "direct" : guess.rank > 0 ? "accepted" : "rejected"}`} key={guess.id}><b>{guess.name}</b><span>{guess.rank > 1 ? "عالی" : guess.rank > 0 ? "پذیرفته شد" : "هم‌معنی نیست"}</span></div>)}</div> : <div className="guess-list">{sortedGuesses.map((guess) => <div className={`guess-row ${rankColor(guess.rank, game.totalItems)}`} key={guess.id}><div className="guess-name"><span>{guess.emoji}</span><b>{guess.name}</b></div><div className="rank-copy"><small>رتبه</small><strong>{guess.rank === 0 ? "✓" : guess.rank.toLocaleString("fa-IR")}</strong><span>{guess.rank === 0 ? "پاسخ درست" : `از ${(game.totalItems - 1).toLocaleString("fa-IR")}`}</span></div><div className="rank-bar"><i style={{ width: `${guess.rank === 0 ? 100 : Math.max(4, 100 - ((guess.rank - 1) / Math.max(1, game.totalItems - 2)) * 100)}%` }} /></div></div>)}</div>}
   </section>;
 }
 

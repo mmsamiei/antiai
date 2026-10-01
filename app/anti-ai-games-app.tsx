@@ -51,6 +51,7 @@ export default function AntiAiGamesApp() {
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const [onlineCount, setOnlineCount] = useState<number | null>(null);
 
   const loadProfile = useCallback(async () => {
     const data = await jsonFetch<{ user: any; stats: Stats; recent: any[] }>("/api/profile");
@@ -74,6 +75,23 @@ export default function AntiAiGamesApp() {
       .finally(() => setLoading(false));
   }, [loadProfile]);
 
+  useEffect(() => {
+    if (!user) return;
+    const isPlaying = screen === "play" && game?.status === "ACTIVE";
+    const heartbeat = () => {
+      jsonFetch<{ onlineCount: number }>("/api/presence", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ isPlaying })
+      }).then(({ onlineCount }) => setOnlineCount(onlineCount)).catch(() => undefined);
+    };
+    heartbeat();
+    const timer = window.setInterval(heartbeat, 20_000);
+    const onVisibility = () => { if (document.visibilityState === "visible") heartbeat(); };
+    document.addEventListener("visibilitychange", onVisibility);
+    return () => { window.clearInterval(timer); document.removeEventListener("visibilitychange", onVisibility); };
+  }, [user, screen, game?.status]);
+
   const startGame = async (type: GameType) => {
     setBusy(true); setError("");
     try {
@@ -92,7 +110,7 @@ export default function AntiAiGamesApp() {
   return <main className="shell">
     <Header user={user} onHome={exitGame} />
     {error && <div className="toast" onClick={() => setError("")}>{error}<button>×</button></div>}
-    {screen === "home" && <Home stats={stats} busy={busy} onStart={startGame} />}
+    {screen === "home" && <Home stats={stats} onlineCount={onlineCount} busy={busy} onStart={startGame} />}
     {screen === "play" && game && <Play game={game} setGame={setGame} busy={busy} setBusy={setBusy} setError={setError} onNew={() => startGame(game.type)} onExit={exitGame} />}
     {screen === "leaderboard" && <Leaderboard />}
     {screen === "profile" && <Profile stats={stats} recent={recent} />}
@@ -111,12 +129,13 @@ function Header({ user, onHome }: { user: any; onHome: () => void }) {
   </header>;
 }
 
-function Home({ stats, busy, onStart }: { stats: Stats; busy: boolean; onStart: (type: GameType) => void }) {
+function Home({ stats, onlineCount, busy, onStart }: { stats: Stats; onlineCount: number | null; busy: boolean; onStart: (type: GameType) => void }) {
   return <>
     <section className="hero">
       <span className="hero-chip">بدون کمک AI</span>
       <h1>هنوز خودت فکر می‌کنی؟</h1>
       <p>یکی از بازی‌ها را انتخاب کن و نقشه‌ای را که در ذهنت ساخته‌ای به چالش بکش.</p>
+      <div className="live-count"><i />{onlineCount === null ? "در حال شمارش بازیکن‌ها…" : <><b>{onlineCount.toLocaleString("fa-IR")}</b> نفر همین حالا در حال بازی‌اند</>}</div>
     </section>
     <section className="game-grid">
       {(Object.keys(gameMeta) as GameType[]).map((type) => <button className={`game-card ${type === "IRAN_CITY" ? "iran" : "world"}`} key={type} disabled={busy} onClick={() => onStart(type)}>

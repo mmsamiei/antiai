@@ -5524,14 +5524,13 @@ export const iranCities: GeoItem[] = [
   },
   {
     "id": "ir-111407",
-    "name": "زرج",
+    "name": "زارچ",
     "aliases": [
-      "زرج",
+      "زارچ",
       "Zārach",
       "Zarach",
-      "اشکذر",
-      "زارج",
-      "زارچ"
+      "زرج",
+      "زارج"
     ],
     "latitude": 31.99111,
     "longitude": 54.23194

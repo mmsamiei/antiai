@@ -13,9 +13,17 @@ describe("geography engine", () => {
     expect(haversineDistance(point, point)).toBe(0);
   });
 
-  it("ranks the target itself first", () => {
+  it("keeps the target outside proximity ranks", () => {
     const target = searchItems("IRAN_CITY", "تهران")[0];
     expect(target).toBeTruthy();
-    expect(proximityRank("IRAN_CITY", target, target)).toBe(1);
+    expect(proximityRank("IRAN_CITY", target, target)).toBe(0);
+  });
+
+  it("uses rank 1 for the nearest different city", () => {
+    const target = searchItems("IRAN_CITY", "زارچ")[0];
+    const ashkezar = searchItems("IRAN_CITY", "اشکذر")[0];
+    expect(target?.name).toBe("زارچ");
+    expect(ashkezar?.name).toBe("اشکذر");
+    expect(proximityRank("IRAN_CITY", ashkezar, target)).toBe(1);
   });
 });

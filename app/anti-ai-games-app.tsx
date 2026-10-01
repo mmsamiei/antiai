@@ -28,7 +28,7 @@ function telegram() { return (globalThis as typeof globalThis & { Telegram?: { W
 
 function rankColor(rank: number, total: number) {
   const ratio = rank / total;
-  if (rank === 1) return "perfect";
+  if (rank === 0) return "perfect";
   if (ratio <= 0.05) return "hot";
   if (ratio <= 0.2) return "warm";
   if (ratio <= 0.5) return "mild";
@@ -181,7 +181,7 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
   };
 
   const share = () => {
-    const blocks = game.guesses.map((guess) => guess.rank === 1 ? "🎯" : guess.rank / game.totalItems < .05 ? "🟩" : guess.rank / game.totalItems < .2 ? "🟨" : guess.rank / game.totalItems < .5 ? "🟧" : "🟥").join("");
+    const blocks = game.guesses.map((guess) => guess.rank === 0 ? "🎯" : guess.rank / game.totalItems < .05 ? "🟩" : guess.rank / game.totalItems < .2 ? "🟨" : guess.rank / game.totalItems < .5 ? "🟧" : "🟥").join("");
     const text = `${meta.title} در Anti AI Games\n${blocks}\n${game.guessesCount.toLocaleString("fa-IR")} حدس`;
     const url = `https://t.me/share/url?url=${encodeURIComponent(`${location.origin}${BASE_PATH}`)}&text=${encodeURIComponent(text)}`;
     telegram()?.openTelegramLink ? telegram().openTelegramLink(url) : window.open(url, "_blank");
@@ -200,7 +200,7 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
       <div className="finish-actions"><button className="primary" onClick={onNew}>بازی بعدی</button>{game.status === "WON" && <button className="secondary" onClick={share}>اشتراک نتیجه</button>}</div>
     </div>}
     <div className="guess-head"><b>حدس‌ها</b>{game.status === "ACTIVE" && <button onClick={surrender} disabled={busy}>تسلیم می‌شوم</button>}</div>
-    {sortedGuesses.length === 0 ? <div className="empty-state"><span>⌁</span><p>اولین حدس را بزن. هرچه رتبه کمتر باشد، نزدیک‌تری.</p></div> : <div className="guess-list">{sortedGuesses.map((guess) => <div className={`guess-row ${rankColor(guess.rank, game.totalItems)}`} key={guess.id}><div className="guess-name"><span>{guess.emoji}</span><b>{guess.name}</b></div><div className="rank-copy"><small>رتبه</small><strong>{guess.rank.toLocaleString("fa-IR")}</strong><span>از {game.totalItems.toLocaleString("fa-IR")}</span></div><div className="rank-bar"><i style={{ width: `${Math.max(4, 100 - ((guess.rank - 1) / (game.totalItems - 1)) * 100)}%` }} /></div></div>)}</div>}
+    {sortedGuesses.length === 0 ? <div className="empty-state"><span>⌁</span><p>اولین حدس را بزن. رتبهٔ ۱ نزدیک‌ترین جای دیگر به پاسخ است.</p></div> : <div className="guess-list">{sortedGuesses.map((guess) => <div className={`guess-row ${rankColor(guess.rank, game.totalItems)}`} key={guess.id}><div className="guess-name"><span>{guess.emoji}</span><b>{guess.name}</b></div><div className="rank-copy"><small>رتبه</small><strong>{guess.rank === 0 ? "✓" : guess.rank.toLocaleString("fa-IR")}</strong><span>{guess.rank === 0 ? "پاسخ درست" : `از ${(game.totalItems - 1).toLocaleString("fa-IR")}`}</span></div><div className="rank-bar"><i style={{ width: `${guess.rank === 0 ? 100 : Math.max(4, 100 - ((guess.rank - 1) / Math.max(1, game.totalItems - 2)) * 100)}%` }} /></div></div>)}</div>}
   </section>;
 }
 

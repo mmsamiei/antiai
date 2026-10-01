@@ -67,8 +67,11 @@ export function haversineDistance(a: GeoItem, b: GeoItem): number {
 }
 
 export function proximityRank(type: GameType, guess: GeoItem, target: GeoItem): number {
+  // The exact answer is intentionally kept outside the proximity ranks. Rank 1
+  // therefore always means the nearest *other* place to the hidden answer.
+  if (guess.id === target.id) return 0;
   const distance = haversineDistance(guess, target);
-  return 1 + datasetFor(type).filter((item) => haversineDistance(item, target) < distance - 1e-9).length;
+  return 1 + datasetFor(type).filter((item) => item.id !== target.id && haversineDistance(item, target) < distance - 1e-9).length;
 }
 
 export function publicItem(item: GeoItem) {

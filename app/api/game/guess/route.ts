@@ -19,7 +19,7 @@ export async function POST(request: Request) {
       if (!guessItem || !target) throw new Error("ITEM_NOT_FOUND");
       const rank = proximityRank(game.type, guessItem, target);
       await tx.guess.create({ data: { gameId: game.id, itemId, rank } });
-      const won = rank === 1;
+      const won = guessItem.id === target.id;
       const updated = await tx.gameSession.update({
         where: { id: game.id },
         data: { guessesCount: { increment: 1 }, ...(won ? { status: "WON", finishedAt: new Date() } : {}) },

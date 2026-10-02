@@ -1,7 +1,6 @@
 import type { GameType } from "@prisma/client";
 import { countries } from "./data/countries";
 import { iranCities } from "./data/iran-cities";
-import { adjectives, type AdjectiveItem } from "./data/adjectives";
 
 export type GeoItem = {
   id: string;
@@ -13,7 +12,7 @@ export type GeoItem = {
   detail?: string;
 };
 
-export type GameItem = GeoItem | AdjectiveItem;
+export type GameItem = GeoItem;
 
 export const DATASET_VERSION = "2026-10-01-v3";
 
@@ -36,7 +35,7 @@ export function normalizePersian(value: string): string {
 export function datasetFor(type: GameType): GameItem[] {
   if (type === "IRAN_CITY") return iranCities;
   if (type === "COUNTRY") return countries;
-  return adjectives;
+  return [];
 }
 
 export function findItem(type: GameType, id: string): GameItem | undefined {
@@ -71,41 +70,20 @@ export function haversineDistance(a: GeoItem, b: GeoItem): number {
   return 2 * radius * Math.asin(Math.sqrt(h));
 }
 
-function isAdjective(item: GameItem): item is AdjectiveItem {
-  return "embedding" in item;
-}
-
-function cosineSimilarity(a: number[], b: number[]): number {
-  let dot = 0;
-  let aNorm = 0;
-  let bNorm = 0;
-  for (let index = 0; index < a.length; index += 1) {
-    dot += a[index] * b[index];
-    aNorm += a[index] ** 2;
-    bNorm += b[index] ** 2;
-  }
-  return dot / Math.sqrt(aNorm * bNorm);
-}
-
 export function proximityRank(type: GameType, guess: GameItem, target: GameItem): number {
   // The exact answer is intentionally kept outside the proximity ranks. Rank 1
   // therefore always means the nearest *other* place to the hidden answer.
   if (guess.id === target.id) return 0;
-  if (type === "ADJECTIVE") {
-    if (!isAdjective(guess) || !isAdjective(target)) throw new Error("Invalid adjective dataset item");
-    const similarity = cosineSimilarity(guess.embedding, target.embedding);
-    return 1 + datasetFor(type).filter((item) => isAdjective(item) && item.id !== target.id && cosineSimilarity(item.embedding, target.embedding) > similarity + 1e-12).length;
-  }
-  if (isAdjective(guess) || isAdjective(target)) throw new Error("Invalid geography dataset item");
+  if (type !== "IRAN_CITY" && type !== "COUNTRY") throw new Error("No proximity ranks for this game type");
   const distance = haversineDistance(guess, target);
-  return 1 + datasetFor(type).filter((item) => !isAdjective(item) && item.id !== target.id && haversineDistance(item, target) < distance - 1e-9).length;
+  return 1 + datasetFor(type).filter((item) => item.id !== target.id && haversineDistance(item, target) < distance - 1e-9).length;
 }
 
 export function publicItem(item: GameItem) {
   return {
     id: item.id,
     name: item.name,
-    emoji: "emoji" in item ? item.emoji : undefined,
-    detail: "detail" in item ? item.detail : undefined
+    emoji: item.emoji,
+    detail: item.detail
   };
 }

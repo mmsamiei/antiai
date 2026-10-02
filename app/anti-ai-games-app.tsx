@@ -14,7 +14,7 @@ type Game = {
   guesses: Guess[];
   target: PublicItem | null;
   startedAt: string;
-  prompt?: { id: string; name: string; emoji: string; examples: string[] } | null;
+  prompt?: { id: string; name: string; emoji: string; examples: string[]; partOfSpeech?: string } | null;
   acceptedCount?: number;
 };
 type Stats = { total: number; wins: number; surrendered: number; averageGuesses: number; bestGame: number };
@@ -25,8 +25,8 @@ const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const gameMeta: Record<GameType, { title: string; icon: string; description: string; hint: string }> = {
   IRAN_CITY: { title: "شهرجو", icon: "🇮🇷", description: "شهر پنهان ایران را پیدا کن", hint: "نام یک شهر ایران را بنویس…" },
   COUNTRY: { title: "کشورجو", icon: "🌍", description: "کشور پنهان را روی نقشه ذهنی‌ات پیدا کن", hint: "نام یک کشور را بنویس…" },
-  ADJECTIVE: { title: "صفت‌جو کلاسیک", icon: "✦", description: "نسخهٔ قدیمی", hint: "یک صفت فارسی بنویس…" },
-  ADJECTIVE_RAIN: { title: "صفت‌جو", icon: "✦", description: "برای یک صفت، هم‌معنی پیدا کن", hint: "یک هم‌معنی فارسی بنویس…" }
+  ADJECTIVE: { title: "واژه‌جو قدیمی", icon: "✦", description: "نسخهٔ قدیمی", hint: "یک واژهٔ فارسی بنویس…" },
+  ADJECTIVE_RAIN: { title: "واژه‌جو", icon: "✦", description: "برای یک واژه، هم‌معنی پیدا کن", hint: "یک هم‌معنی فارسی بنویس…" }
 };
 const playableTypes: GameType[] = ["IRAN_CITY", "COUNTRY", "ADJECTIVE_RAIN"];
 
@@ -233,7 +233,7 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
 
   return <section className="play-screen">
     <div className="play-heading"><button className="icon-button" onClick={onExit}>→</button><div><small>{meta.icon} {meta.title}</small><h1>{isAdjectiveRain ? "هم‌معنی‌هایش را پیدا کن" : "پاسخ پنهان را پیدا کن"}</h1></div><span className={`guess-count ${isAdjectiveRain && secondsLeft <= 10 ? "urgent" : ""}`}>{isAdjectiveRain ? `${secondsLeft.toLocaleString("fa-IR")} ثانیه` : `${game.guessesCount.toLocaleString("fa-IR")} حدس`}</span></div>
-    {isAdjectiveRain && game.prompt && <div className="adjective-prompt"><span>{game.prompt.emoji}</span><small>تا تمام‌شدن زمان، ۳ هم‌معنی دقیق بنویس</small><strong>{game.prompt.name}</strong><p>فقط هم‌معنی یا نزدیک‌معنی واقعی پذیرفته می‌شود.</p></div>}
+    {isAdjectiveRain && game.prompt && <div className="adjective-prompt"><span>{game.prompt.emoji}</span><small>{game.prompt.partOfSpeech || "صفت"} · تا تمام‌شدن زمان، ۳ هم‌معنی دقیق بنویس</small><strong>{game.prompt.name}</strong><p>فقط هم‌معنی یا نزدیک‌معنی واقعی پذیرفته می‌شود.</p></div>}
     {game.status === "ACTIVE" ? <div className="search-box">
       <div className="search-row"><input value={query} onChange={(event) => { setQuery(event.target.value); setSelected(null); }} placeholder={meta.hint} autoComplete="off" /><button disabled={(!isAdjectiveRain && !selected) || (isAdjectiveRain && !query.trim()) || busy} onClick={submitGuess}>{busy ? "…" : isAdjectiveRain ? "ثبت" : "حدس"}</button></div>
       {suggestions.length > 0 && <div className="suggestions">{suggestions.map((item) => <button key={item.id} onClick={() => { setSelected(item); setQuery(item.name); setSuggestions([]); }}><span>{item.emoji} {item.name}</span>{item.detail && <small>{item.detail}</small>}</button>)}</div>}
@@ -260,7 +260,7 @@ function Leaderboard() {
   return <section><div className="section-heading"><div><small>رقابت واقعی</small><h1>لیدربورد</h1></div><span>🏆</span></div>
     <div className="board-modes"><button className={mode === "effort" ? "active" : ""} onClick={() => setMode("effort")}><b>پرتلاش‌ترین‌ها</b><small>بیشترین تعداد برد</small></button><button className={mode === "skill" ? "active" : ""} onClick={() => setMode("skill")}><b>ماهرترین‌ها</b><small>کمترین میانگین حدس</small></button></div>
     <div className="segmented"><button className={period === "week" ? "active" : ""} onClick={() => setPeriod("week")}>این هفته</button><button className={period === "all" ? "active" : ""} onClick={() => setPeriod("all")}>همه دوران</button></div>
-    <div className="filter-chips"><button className={type === "ALL" ? "active" : ""} onClick={() => setType("ALL")}>مجموع</button><button className={type === "IRAN_CITY" ? "active" : ""} onClick={() => setType("IRAN_CITY")}>شهرجو</button><button className={type === "COUNTRY" ? "active" : ""} onClick={() => setType("COUNTRY")}>کشورجو</button><button className={type === "ADJECTIVE_RAIN" ? "active" : ""} onClick={() => setType("ADJECTIVE_RAIN")}>صفت‌جو</button></div>
+    <div className="filter-chips"><button className={type === "ALL" ? "active" : ""} onClick={() => setType("ALL")}>مجموع</button><button className={type === "IRAN_CITY" ? "active" : ""} onClick={() => setType("IRAN_CITY")}>شهرجو</button><button className={type === "COUNTRY" ? "active" : ""} onClick={() => setType("COUNTRY")}>کشورجو</button><button className={type === "ADJECTIVE_RAIN" ? "active" : ""} onClick={() => setType("ADJECTIVE_RAIN")}>واژه‌جو</button></div>
     {mode === "skill" && <p className="board-note">امتیاز مهارت = مجموع حدس‌های بازی‌های تمام‌شده ÷ تعداد بردها · حداقل ۳ برد</p>}
     {loading ? <div className="empty-state">در حال محاسبه رتبه‌ها…</div> : rows.length === 0 ? <div className="empty-state">{mode === "skill" ? "هنوز کسی در این جدول به ۳ برد نرسیده." : "هنوز بردی ثبت نشده؛ اولین نفر باش!"}</div> : <div className="leader-list">{rows.map((row) => <LeaderRowView key={row.userId} row={row} mode={mode} />)}</div>}
     {me && me.rank > 50 && <div className="my-rank"><small>جایگاه تو</small><LeaderRowView row={me} mode={mode} /></div>}

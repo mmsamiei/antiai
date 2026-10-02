@@ -3,6 +3,7 @@ export type AdjectivePrompt = {
   name: string;
   emoji: string;
   examples: string[];
+  partOfSpeech?: "صفت" | "اسم" | "فعل";
 };
 
 export const adjectivePrompts: AdjectivePrompt[] = [
@@ -34,6 +35,44 @@ export const adjectivePrompts: AdjectivePrompt[] = [
   { id: "syn-vague", name: "مبهم", emoji: "…", examples: ["گنگ", "ناروشن", "نامعلوم", "سربسته", "موهوم", "ناواضح"] }
 ];
 
+const nounPrompts: AdjectivePrompt[] = [
+  { id: "noun-home", name: "خانه", emoji: "⌂", partOfSpeech: "اسم", examples: ["منزل", "مسکن", "سرا", "کاشانه", "آشیانه"] },
+  { id: "noun-friend", name: "دوست", emoji: "♡", partOfSpeech: "اسم", examples: ["یار", "رفیق", "همدم", "همراه", "آشنا"] },
+  { id: "noun-enemy", name: "دشمن", emoji: "⚔", partOfSpeech: "اسم", examples: ["خصم", "بدخواه", "معاند", "رقیب", "ستیزه‌جو"] },
+  { id: "noun-child", name: "کودک", emoji: "◡", partOfSpeech: "اسم", examples: ["بچه", "طفل", "نوباوه", "صغیر", "نوپا"] },
+  { id: "noun-start", name: "شروع", emoji: "↯", partOfSpeech: "اسم", examples: ["آغاز", "ابتدا", "سرآغاز", "مبدأ", "افتتاح"] },
+  { id: "noun-end", name: "پایان", emoji: "■", partOfSpeech: "اسم", examples: ["انتها", "خاتمه", "فرجام", "سرانجام", "عاقبت"] },
+  { id: "noun-road", name: "راه", emoji: "⌁", partOfSpeech: "اسم", examples: ["مسیر", "جاده", "طریق", "گذرگاه", "معبر"] },
+  { id: "noun-work", name: "کار", emoji: "◆", partOfSpeech: "اسم", examples: ["شغل", "پیشه", "فعالیت", "حرفه", "وظیفه"] },
+  { id: "noun-knowledge", name: "دانش", emoji: "▤", partOfSpeech: "اسم", examples: ["علم", "آگاهی", "معرفت", "شناخت", "دانستگی"] },
+  { id: "noun-calm", name: "آرامش", emoji: "◌", partOfSpeech: "اسم", examples: ["آسودگی", "سکون", "طمأنینه", "قرار", "صلح"] },
+  { id: "noun-joy", name: "شادی", emoji: "✦", partOfSpeech: "اسم", examples: ["سرور", "نشاط", "خرمی", "خوشی", "شادمانی"] },
+  { id: "noun-sorrow", name: "غم", emoji: "☾", partOfSpeech: "اسم", examples: ["اندوه", "حزن", "دلتنگی", "سوگ", "افسوس"] },
+  { id: "noun-sound", name: "صدا", emoji: "♪", partOfSpeech: "اسم", examples: ["آوا", "بانگ", "نوا", "طنین", "صوت"] },
+  { id: "noun-light", name: "نور", emoji: "☀", partOfSpeech: "اسم", examples: ["روشنایی", "پرتو", "تابش", "فروغ", "درخشندگی"] },
+  { id: "noun-time", name: "زمان", emoji: "◷", partOfSpeech: "اسم", examples: ["وقت", "هنگام", "برهه", "دوره", "زمانه"] }
+];
+
+const verbPrompts: AdjectivePrompt[] = [
+  { id: "verb-see", name: "دیدن", emoji: "◉", partOfSpeech: "فعل", examples: ["نگریستن", "تماشا کردن", "مشاهده کردن", "نظر کردن", "دید زدن"] },
+  { id: "verb-say", name: "گفتن", emoji: "◌", partOfSpeech: "فعل", examples: ["بیان کردن", "اظهار کردن", "سخن گفتن", "بازگو کردن", "حکایت کردن"] },
+  { id: "verb-go", name: "رفتن", emoji: "→", partOfSpeech: "فعل", examples: ["حرکت کردن", "روانه شدن", "عزیمت کردن", "رهسپار شدن", "راهی شدن"] },
+  { id: "verb-come", name: "آمدن", emoji: "←", partOfSpeech: "فعل", examples: ["رسیدن", "وارد شدن", "حاضر شدن", "پدیدار شدن", "دررسیدن"] },
+  { id: "verb-eat", name: "خوردن", emoji: "◒", partOfSpeech: "فعل", examples: ["بلعیدن", "میل کردن", "غذا خوردن", "نوش جان کردن", "تناول کردن"] },
+  { id: "verb-sleep", name: "خوابیدن", emoji: "☾", partOfSpeech: "فعل", examples: ["خفتن", "آرمیدن", "استراحت کردن", "به خواب رفتن", "چرت زدن"] },
+  { id: "verb-run", name: "دویدن", emoji: "↯", partOfSpeech: "فعل", examples: ["شتافتن", "تکاپو کردن", "پا به فرار گذاشتن", "تند رفتن", "یورتمه رفتن"] },
+  { id: "verb-build", name: "ساختن", emoji: "▰", partOfSpeech: "فعل", examples: ["ایجاد کردن", "پدید آوردن", "تولید کردن", "بنا کردن", "درست کردن"] },
+  { id: "verb-hide", name: "پنهان کردن", emoji: "◈", partOfSpeech: "فعل", examples: ["مخفی کردن", "پوشاندن", "نهفتن", "مستور کردن", "پنهان ساختن"] },
+  { id: "verb-ask", name: "پرسیدن", emoji: "?", partOfSpeech: "فعل", examples: ["سؤال کردن", "جویا شدن", "استفسار کردن", "پرس‌وجو کردن", "بازخواست کردن"] },
+  { id: "verb-learn", name: "یاد گرفتن", emoji: "✦", partOfSpeech: "فعل", examples: ["آموختن", "فراگرفتن", "تعلیم دیدن", "یادگیری کردن", "دانش اندوختن"] },
+  { id: "verb-help", name: "کمک کردن", emoji: "♡", partOfSpeech: "فعل", examples: ["یاری کردن", "دستگیری کردن", "معاونت کردن", "یار شدن", "مدد کردن"] },
+  { id: "verb-fear", name: "ترسیدن", emoji: "△", partOfSpeech: "فعل", examples: ["هراسیدن", "بیم داشتن", "واهمه داشتن", "وحشت کردن", "بیمناک شدن"] },
+  { id: "verb-understand", name: "فهمیدن", emoji: "◆", partOfSpeech: "فعل", examples: ["دریافتن", "درک کردن", "پی بردن", "متوجه شدن", "فهم کردن"] },
+  { id: "verb-love", name: "دوست داشتن", emoji: "♥", partOfSpeech: "فعل", examples: ["عاشق بودن", "محبت کردن", "دل‌بستن", "علاقه داشتن", "مهر ورزیدن"] }
+];
+
+export const wordPrompts = [...adjectivePrompts, ...nounPrompts, ...verbPrompts];
+
 export function promptById(id: string) {
-  return adjectivePrompts.find((prompt) => prompt.id === id);
+  return wordPrompts.find((prompt) => prompt.id === id);
 }

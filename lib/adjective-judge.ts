@@ -25,11 +25,11 @@ export async function judgeAdjective(promptId: string, rawWord: string): Promise
     headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
     body: JSON.stringify({
       model: process.env.JEV_MODEL || "typesafe/jev-1.13",
-      state: { target_adjective: prompt.name, submitted_adjective: word, language: "Persian" },
+      state: { target_word: prompt.name, submitted_word: word, part_of_speech: prompt.partOfSpeech || "صفت", language: "Persian" },
       questions: {
         verdict: {
           type: "choice",
-          instructions: "Judge whether submitted_adjective is a true Persian synonym or close synonym of target_adjective. This is a strict synonym game, not a word-association game. Reject words that merely describe a similar object, are broader or narrower in a different sense, are antonyms, or merely occur in the same topic. The target adjective itself is not an answer.",
+          instructions: "Judge whether submitted_word is a true Persian synonym or close synonym of target_word, with the same part of speech. This is a strict synonym game, not a word-association game. Reject words that merely share a topic, are a different part of speech, are antonyms, or are the target word itself.",
           criteria: {
             DIRECT: "A common, natural direct synonym or near-synonym with the same central meaning.",
             ACCEPT: "A defensible but less common close synonym; it must still preserve the central meaning.",

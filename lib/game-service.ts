@@ -1,9 +1,9 @@
 import type { GameSession, GameType, Guess } from "@prisma/client";
 import { prisma } from "./prisma";
 import { DATASET_VERSION, datasetFor, findItem, publicItem } from "./geo";
-import { adjectivePrompts, promptById } from "./data/adjective-prompts";
+import { wordPrompts, promptById } from "./data/adjective-prompts";
 
-export const GAME_TYPES = ["IRAN_CITY", "COUNTRY", "ADJECTIVE", "ADJECTIVE_RAIN"] as const;
+export const GAME_TYPES = ["IRAN_CITY", "COUNTRY", "ADJECTIVE_RAIN"] as const;
 
 export function parseGameType(value: unknown): GameType | null {
   return typeof value === "string" && GAME_TYPES.includes(value as (typeof GAME_TYPES)[number])
@@ -53,8 +53,8 @@ export async function activeOrNewGame(userId: string, type: GameType) {
   if (type === "ADJECTIVE_RAIN") {
     const previous = await prisma.gameSession.findMany({ where: { userId, type }, select: { targetId: true }, distinct: ["targetId"] });
     const seen = new Set(previous.map((game) => game.targetId));
-    const pool = adjectivePrompts.filter((prompt) => !seen.has(prompt.id));
-    const prompt = (pool.length ? pool : adjectivePrompts)[Math.floor(Math.random() * (pool.length || adjectivePrompts.length))];
+    const pool = wordPrompts.filter((prompt) => !seen.has(prompt.id));
+    const prompt = (pool.length ? pool : wordPrompts)[Math.floor(Math.random() * (pool.length || wordPrompts.length))];
     return prisma.gameSession.create({ data: { userId, type, targetId: prompt.id, datasetVersion: "2026-10-02-adjective-rain-v1" }, include: { guesses: true } });
   }
 

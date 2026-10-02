@@ -1,7 +1,7 @@
 import type { GameSession, GameType, Guess } from "@prisma/client";
 import { prisma } from "./prisma";
-import { DATASET_VERSION, datasetFor, findItem, publicItem } from "./geo";
-import { wordPrompts, promptById } from "./data/adjective-prompts";
+import { DATASET_VERSION, datasetFor, findItem, normalizePersian, publicItem } from "./geo";
+import { challengeForPrompt, maskChallenge, wordPrompts, promptById } from "./data/adjective-prompts";
 
 export const GAME_TYPES = ["IRAN_CITY", "COUNTRY", "ADJECTIVE_RAIN"] as const;
 
@@ -15,10 +15,12 @@ export function serializeGame(game: GameSession & { guesses: Guess[] }, revealTa
   if (game.type === "ADJECTIVE_RAIN") {
     const prompt = promptById(game.targetId);
     const acceptedCount = game.guesses.filter((guess) => guess.rank > 0).length;
+    const challenge = prompt ? challengeForPrompt(prompt) : "";
+    const challengeFound = Boolean(challenge) && game.guesses.some((guess) => guess.rank > 0 && guess.itemId === normalizePersian(challenge));
     return {
       id: game.id, type: game.type, status: game.status, guessesCount: game.guessesCount, totalItems: 3,
       startedAt: game.startedAt, finishedAt: game.finishedAt,
-      prompt: prompt ? { id: prompt.id, name: prompt.name, emoji: prompt.emoji, examples: revealTarget ? prompt.examples : [] } : null,
+      prompt: prompt ? { id: prompt.id, name: prompt.name, emoji: prompt.emoji, partOfSpeech: prompt.partOfSpeech || "صفت", examples: revealTarget ? prompt.examples : [], challenge: revealTarget ? challenge : maskChallenge(challenge), challengeFound } : null,
       acceptedCount,
       guesses: game.guesses.map((guess) => ({ id: guess.itemId, name: guess.itemId, rank: guess.rank, createdAt: guess.createdAt })),
       target: null

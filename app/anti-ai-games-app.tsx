@@ -14,7 +14,7 @@ type Game = {
   guesses: Guess[];
   target: PublicItem | null;
   startedAt: string;
-  prompt?: { id: string; name: string; emoji: string; examples: string[]; partOfSpeech?: string } | null;
+  prompt?: { id: string; name: string; emoji: string; examples: string[]; partOfSpeech?: string; challenge?: string; challengeFound?: boolean } | null;
   acceptedCount?: number;
 };
 type Stats = { total: number; wins: number; surrendered: number; averageGuesses: number; bestGame: number };
@@ -233,7 +233,7 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
 
   return <section className="play-screen">
     <div className="play-heading"><button className="icon-button" onClick={onExit}>→</button><div><small>{meta.icon} {meta.title}</small><h1>{isAdjectiveRain ? "هم‌معنی‌هایش را پیدا کن" : "پاسخ پنهان را پیدا کن"}</h1></div><span className={`guess-count ${isAdjectiveRain && secondsLeft <= 10 ? "urgent" : ""}`}>{isAdjectiveRain ? `${secondsLeft.toLocaleString("fa-IR")} ثانیه` : `${game.guessesCount.toLocaleString("fa-IR")} حدس`}</span></div>
-    {isAdjectiveRain && game.prompt && <div className="adjective-prompt"><span>{game.prompt.emoji}</span><small>{game.prompt.partOfSpeech || "صفت"} · تا تمام‌شدن زمان، ۳ هم‌معنی دقیق بنویس</small><strong>{game.prompt.name}</strong><p>فقط هم‌معنی یا نزدیک‌معنی واقعی پذیرفته می‌شود.</p></div>}
+    {isAdjectiveRain && game.prompt && <div className="adjective-prompt"><span>{game.prompt.emoji}</span><small>{game.prompt.partOfSpeech || "صفت"} · تا تمام‌شدن زمان، ۳ هم‌معنی دقیق بنویس</small><strong>{game.prompt.name}</strong><p>فقط هم‌معنی یا نزدیک‌معنی واقعی پذیرفته می‌شود.</p><div className={`challenge-word ${game.prompt.challengeFound ? "found" : ""}`}><small>واژهٔ ویژه</small><b>{game.prompt.challengeFound ? "پیدا شد ✓" : game.prompt.challenge}</b></div></div>}
     {game.status === "ACTIVE" ? <div className="search-box">
       <div className="search-row"><input value={query} onChange={(event) => { setQuery(event.target.value); setSelected(null); }} placeholder={meta.hint} autoComplete="off" /><button disabled={(!isAdjectiveRain && !selected) || (isAdjectiveRain && !query.trim()) || busy} onClick={submitGuess}>{busy ? "…" : isAdjectiveRain ? "ثبت" : "حدس"}</button></div>
       {suggestions.length > 0 && <div className="suggestions">{suggestions.map((item) => <button key={item.id} onClick={() => { setSelected(item); setQuery(item.name); setSuggestions([]); }}><span>{item.emoji} {item.name}</span>{item.detail && <small>{item.detail}</small>}</button>)}</div>}

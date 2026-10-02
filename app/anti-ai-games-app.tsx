@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import CountryGuessMap from "./country-guess-map";
 
 type GameType = "IRAN_CITY" | "COUNTRY" | "ADJECTIVE" | "ADJECTIVE_RAIN";
 type PublicItem = { id: string; name: string; emoji?: string; detail?: string };
@@ -241,6 +242,7 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
     <div className="play-heading"><button className="icon-button" onClick={onExit}>→</button><div><small>{meta.icon} {meta.title}</small><h1>{isAdjectiveRain ? "هم‌معنی‌هایش را پیدا کن" : "پاسخ پنهان را پیدا کن"}</h1></div><div className="play-actions"><button className="help-button" onClick={() => setShowHelp(true)} aria-label={`راهنمای ${meta.title}`}>?</button><span className={`guess-count ${isAdjectiveRain && secondsLeft <= 10 ? "urgent" : ""}`}>{isAdjectiveRain ? `${secondsLeft.toLocaleString("fa-IR")} ثانیه` : `${game.guessesCount.toLocaleString("fa-IR")} حدس`}</span></div></div>
     {showHelp && <div className="help-backdrop" onClick={() => setShowHelp(false)}><div className="help-modal" role="dialog" aria-modal="true" aria-label={help.title} onClick={(event) => event.stopPropagation()}><button className="help-close" onClick={() => setShowHelp(false)}>×</button><span>{meta.icon}</span><h2>{help.title}</h2><ol>{help.steps.map((step) => <li key={step}>{step}</li>)}</ol><button className="primary help-done" onClick={() => setShowHelp(false)}>فهمیدم</button></div></div>}
     {isAdjectiveRain && game.prompt && <div className="adjective-prompt"><span>{game.prompt.emoji}</span><small>{game.prompt.partOfSpeech || "صفت"} · تا تمام‌شدن زمان، ۳ هم‌معنی دقیق بنویس</small><strong>{game.prompt.name}</strong><p>فقط هم‌معنی یا نزدیک‌معنی واقعی پذیرفته می‌شود.</p></div>}
+    {game.type === "COUNTRY" && <CountryGuessMap guesses={game.guesses} target={game.status === "ACTIVE" ? null : game.target} total={game.totalItems} />}
     {game.status === "ACTIVE" ? <div className="search-box">
       <div className="search-row"><input value={query} onChange={(event) => { setQuery(event.target.value); setSelected(null); }} placeholder={meta.hint} autoComplete="off" /><button disabled={(!isAdjectiveRain && !selected) || (isAdjectiveRain && !query.trim()) || busy} onClick={submitGuess}>{busy ? "…" : isAdjectiveRain ? "ثبت" : "حدس"}</button></div>
       {suggestions.length > 0 && <div className="suggestions">{suggestions.map((item) => <button key={item.id} onClick={() => { setSelected(item); setQuery(item.name); setSuggestions([]); }}><span>{item.emoji} {item.name}</span>{item.detail && <small>{item.detail}</small>}</button>)}</div>}

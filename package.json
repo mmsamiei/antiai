@@ -14,16 +14,22 @@
   },
   "dependencies": {
     "@prisma/client": "^6.16.2",
+    "d3-geo": "^3.1.1",
     "dotenv": "^18.0.3",
+    "i18n-iso-countries": "^7.14.0",
     "next": "^14.2.32",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2",
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "@types/d3-geo": "^3.1.1",
     "@types/node": "^22.10.2",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
+    "@types/topojson-client": "^3.1.5",
     "prisma": "^6.16.2",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"

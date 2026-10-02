@@ -252,7 +252,7 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
 function Leaderboard() {
   const [period, setPeriod] = useState<"week" | "all">("week");
   const [mode, setMode] = useState<"effort" | "skill">("effort");
-  const [type, setType] = useState<"ALL" | GameType>("ALL");
+  const [type, setType] = useState<GameType>("IRAN_CITY");
   const [rows, setRows] = useState<LeaderRow[]>([]);
   const [me, setMe] = useState<LeaderRow | null>(null);
   const [loading, setLoading] = useState(true);
@@ -260,7 +260,7 @@ function Leaderboard() {
   return <section><div className="section-heading"><div><small>رقابت واقعی</small><h1>لیدربورد</h1></div><span>🏆</span></div>
     <div className="board-modes"><button className={mode === "effort" ? "active" : ""} onClick={() => setMode("effort")}><b>پرتلاش‌ترین‌ها</b><small>بیشترین تعداد برد</small></button><button className={mode === "skill" ? "active" : ""} onClick={() => setMode("skill")}><b>ماهرترین‌ها</b><small>کمترین میانگین حدس</small></button></div>
     <div className="segmented"><button className={period === "week" ? "active" : ""} onClick={() => setPeriod("week")}>این هفته</button><button className={period === "all" ? "active" : ""} onClick={() => setPeriod("all")}>همه دوران</button></div>
-    <div className="filter-chips"><button className={type === "ALL" ? "active" : ""} onClick={() => setType("ALL")}>مجموع</button><button className={type === "IRAN_CITY" ? "active" : ""} onClick={() => setType("IRAN_CITY")}>شهرجو</button><button className={type === "COUNTRY" ? "active" : ""} onClick={() => setType("COUNTRY")}>کشورجو</button><button className={type === "ADJECTIVE_RAIN" ? "active" : ""} onClick={() => setType("ADJECTIVE_RAIN")}>واژه‌جو</button></div>
+    <div className="filter-chips"><button className={type === "IRAN_CITY" ? "active" : ""} onClick={() => setType("IRAN_CITY")}>شهرجو</button><button className={type === "COUNTRY" ? "active" : ""} onClick={() => setType("COUNTRY")}>کشورجو</button><button className={type === "ADJECTIVE_RAIN" ? "active" : ""} onClick={() => setType("ADJECTIVE_RAIN")}>واژه‌جو</button></div>
     {mode === "skill" && <p className="board-note">امتیاز مهارت = مجموع حدس‌های بازی‌های تمام‌شده ÷ تعداد بردها · حداقل ۳ برد</p>}
     {loading ? <div className="empty-state">در حال محاسبه رتبه‌ها…</div> : rows.length === 0 ? <div className="empty-state">{mode === "skill" ? "هنوز کسی در این جدول به ۳ برد نرسیده." : "هنوز بردی ثبت نشده؛ اولین نفر باش!"}</div> : <div className="leader-list">{rows.map((row) => <LeaderRowView key={row.userId} row={row} mode={mode} />)}</div>}
     {me && me.rank > 50 && <div className="my-rank"><small>جایگاه تو</small><LeaderRowView row={me} mode={mode} /></div>}

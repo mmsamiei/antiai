@@ -169,6 +169,7 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
   const [suggestions, setSuggestions] = useState<PublicItem[]>([]);
   const [selected, setSelected] = useState<PublicItem | null>(null);
   const [secondsLeft, setSecondsLeft] = useState(30);
+  const [showHelp, setShowHelp] = useState(false);
   const expirySent = useRef<string | null>(null);
   const sortedGuesses = useMemo(() => [...game.guesses].sort((a, b) => a.rank - b.rank), [game.guesses]);
 
@@ -230,9 +231,15 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
     const url = `https://t.me/share/url?url=${encodeURIComponent(`${location.origin}${BASE_PATH}`)}&text=${encodeURIComponent(text)}`;
     telegram()?.openTelegramLink ? telegram().openTelegramLink(url) : window.open(url, "_blank");
   };
+  const help = isAdjectiveRain
+    ? { title: "راهنمای واژه‌جو", steps: ["واژهٔ نمایش‌داده‌شده را ببین.", "تا ۳۰ ثانیه، ۳ هم‌معنیِ دقیق برایش بنویس.", "واژه‌های پذیرفته‌شده سبز یا زرد می‌شوند؛ واژه‌های نامرتبط پذیرفته نمی‌شوند."] }
+    : game.type === "IRAN_CITY"
+      ? { title: "راهنمای شهرجو", steps: ["نام یک شهر ایران را تایپ و از پیشنهادها انتخاب کن.", "هر حدس یک رتبه می‌گیرد؛ هرچه رتبه کمتر باشد، به شهر پنهان نزدیک‌تری.", "رتبهٔ ۱ نزدیک‌ترین شهرِ دیگر است؛ وقتی پاسخ را پیدا کنی، برده‌ای."] }
+      : { title: "راهنمای کشورجو", steps: ["نام یک کشور را تایپ و از پیشنهادها انتخاب کن.", "هر حدس یک رتبه می‌گیرد؛ هرچه رتبه کمتر باشد، به کشور پنهان نزدیک‌تری.", "رتبهٔ ۱ نزدیک‌ترین کشورِ دیگر است؛ پاسخ پنهان را پیدا کن تا ببری."] };
 
   return <section className="play-screen">
-    <div className="play-heading"><button className="icon-button" onClick={onExit}>→</button><div><small>{meta.icon} {meta.title}</small><h1>{isAdjectiveRain ? "هم‌معنی‌هایش را پیدا کن" : "پاسخ پنهان را پیدا کن"}</h1></div><span className={`guess-count ${isAdjectiveRain && secondsLeft <= 10 ? "urgent" : ""}`}>{isAdjectiveRain ? `${secondsLeft.toLocaleString("fa-IR")} ثانیه` : `${game.guessesCount.toLocaleString("fa-IR")} حدس`}</span></div>
+    <div className="play-heading"><button className="icon-button" onClick={onExit}>→</button><div><small>{meta.icon} {meta.title}</small><h1>{isAdjectiveRain ? "هم‌معنی‌هایش را پیدا کن" : "پاسخ پنهان را پیدا کن"}</h1></div><div className="play-actions"><button className="help-button" onClick={() => setShowHelp(true)} aria-label={`راهنمای ${meta.title}`}>?</button><span className={`guess-count ${isAdjectiveRain && secondsLeft <= 10 ? "urgent" : ""}`}>{isAdjectiveRain ? `${secondsLeft.toLocaleString("fa-IR")} ثانیه` : `${game.guessesCount.toLocaleString("fa-IR")} حدس`}</span></div></div>
+    {showHelp && <div className="help-backdrop" onClick={() => setShowHelp(false)}><div className="help-modal" role="dialog" aria-modal="true" aria-label={help.title} onClick={(event) => event.stopPropagation()}><button className="help-close" onClick={() => setShowHelp(false)}>×</button><span>{meta.icon}</span><h2>{help.title}</h2><ol>{help.steps.map((step) => <li key={step}>{step}</li>)}</ol><button className="primary help-done" onClick={() => setShowHelp(false)}>فهمیدم</button></div></div>}
     {isAdjectiveRain && game.prompt && <div className="adjective-prompt"><span>{game.prompt.emoji}</span><small>{game.prompt.partOfSpeech || "صفت"} · تا تمام‌شدن زمان، ۳ هم‌معنی دقیق بنویس</small><strong>{game.prompt.name}</strong><p>فقط هم‌معنی یا نزدیک‌معنی واقعی پذیرفته می‌شود.</p></div>}
     {game.status === "ACTIVE" ? <div className="search-box">
       <div className="search-row"><input value={query} onChange={(event) => { setQuery(event.target.value); setSelected(null); }} placeholder={meta.hint} autoComplete="off" /><button disabled={(!isAdjectiveRain && !selected) || (isAdjectiveRain && !query.trim()) || busy} onClick={submitGuess}>{busy ? "…" : isAdjectiveRain ? "ثبت" : "حدس"}</button></div>

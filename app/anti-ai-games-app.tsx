@@ -195,9 +195,11 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
     finally { setBusy(false); }
   };
 
-  const surrender = async () => {
-    const confirmed = globalThis.confirm("تسلیم می‌شوی؟ پاسخ نمایش داده می‌شود و بازی تمام خواهد شد.");
-    if (!confirmed) return;
+  const surrender = async (expired = false) => {
+    if (!expired) {
+      const confirmed = globalThis.confirm("تسلیم می‌شوی؟ پاسخ نمایش داده می‌شود و بازی تمام خواهد شد.");
+      if (!confirmed) return;
+    }
     setBusy(true);
     try {
       const data = await jsonFetch<{ game: Game }>("/api/game/surrender", {
@@ -219,7 +221,7 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
   useEffect(() => {
     if (!isAdjectiveRain || game.status !== "ACTIVE" || secondsLeft > 0 || busy || expirySent.current === game.id) return;
     expirySent.current = game.id;
-    surrender();
+    surrender(true);
   }, [busy, game.id, game.status, isAdjectiveRain, secondsLeft]);
 
   const share = () => {
@@ -242,7 +244,7 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
       <p>{game.status === "WON" ? (isAdjectiveRain ? `با ${game.guessesCount.toLocaleString("fa-IR")} تلاش به هدف رسیدی.` : `با ${game.guessesCount.toLocaleString("fa-IR")} حدس به جواب رسیدی.`) : "بازی بعدی را از نو شروع کن."}</p>
       <div className="finish-actions"><button className="primary" onClick={onNew}>بازی بعدی</button>{game.status === "WON" && <button className="secondary" onClick={share}>اشتراک نتیجه</button>}</div>
     </div>}
-    <div className="guess-head"><b>{isAdjectiveRain ? "صفت‌های تو" : "حدس‌ها"}</b>{game.status === "ACTIVE" && <button onClick={surrender} disabled={busy}>تسلیم می‌شوم</button>}</div>
+    <div className="guess-head"><b>{isAdjectiveRain ? "صفت‌های تو" : "حدس‌ها"}</b>{game.status === "ACTIVE" && <button onClick={() => surrender()} disabled={busy}>تسلیم می‌شوم</button>}</div>
     {sortedGuesses.length === 0 ? <div className="empty-state"><span>⌁</span><p>{isAdjectiveRain ? "اولین هم‌معنی‌ای را که به ذهنت می‌رسد بنویس." : "اولین حدس را بزن."}</p></div> : isAdjectiveRain ? <div className="guess-list">{game.guesses.map((guess) => <div className={`word-row ${guess.rank > 1 ? "direct" : guess.rank > 0 ? "accepted" : "rejected"}`} key={guess.id}><b>{guess.name}</b><span>{guess.rank > 1 ? "عالی" : guess.rank > 0 ? "پذیرفته شد" : "هم‌معنی نیست"}</span></div>)}</div> : <div className="guess-list">{sortedGuesses.map((guess) => <div className={`guess-row ${rankColor(guess.rank, game.totalItems)}`} key={guess.id}><div className="guess-name"><span>{guess.emoji}</span><b>{guess.name}</b></div><div className="rank-copy"><small>رتبه</small><strong>{guess.rank === 0 ? "✓" : guess.rank.toLocaleString("fa-IR")}</strong><span>{guess.rank === 0 ? "پاسخ درست" : `از ${(game.totalItems - 1).toLocaleString("fa-IR")}`}</span></div><div className="rank-bar"><i style={{ width: `${guess.rank === 0 ? 100 : Math.max(4, 100 - ((guess.rank - 1) / Math.max(1, game.totalItems - 2)) * 100)}%` }} /></div></div>)}</div>}
   </section>;
 }

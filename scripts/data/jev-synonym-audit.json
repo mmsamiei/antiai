@@ -1,0 +1,7024 @@
+{
+  "syn-sad": {
+    "اندوهگین": "DIRECT",
+    "افسرده": "DIRECT",
+    "دلگیر": "DIRECT",
+    "غم‌آلود": "DIRECT",
+    "سوگوار": "ACCEPT",
+    "محزون": "DIRECT"
+  },
+  "syn-beautiful": {
+    "قشنگ": "DIRECT",
+    "دلنشین": "ACCEPT",
+    "جذاب": "ACCEPT",
+    "خوش‌نما": "DIRECT",
+    "برازنده": "REJECT",
+    "خوش‌منظر": "ACCEPT"
+  },
+  "syn-angry": {
+    "خشمگین": "DIRECT",
+    "غضبناک": "DIRECT",
+    "برآشفته": "DIRECT",
+    "برافروخته": "REJECT",
+    "خشم‌آلود": "DIRECT",
+    "خشماگین": "DIRECT"
+  },
+  "syn-calm": {
+    "ساکت": "ACCEPT",
+    "بی‌صدا": "REJECT",
+    "ملایم": "ACCEPT",
+    "آسوده": "DIRECT",
+    "قرار": "REJECT",
+    "خونسرد": "ACCEPT"
+  },
+  "syn-scary": {
+    "هولناک": "DIRECT",
+    "وحشت‌آور": "DIRECT",
+    "دهشتناک": "DIRECT",
+    "موحش": "ACCEPT",
+    "دلهره‌آور": "DIRECT",
+    "هراس‌انگیز": "DIRECT"
+  },
+  "syn-brave": {
+    "دلیر": "DIRECT",
+    "جسور": "DIRECT",
+    "بی‌باک": "DIRECT",
+    "نترس": "DIRECT",
+    "جری": "ACCEPT",
+    "جرئت‌مند": "DIRECT"
+  },
+  "syn-happy": {
+    "خوشحال": "DIRECT",
+    "خرسند": "DIRECT",
+    "مسرور": "DIRECT",
+    "شاداب": "ACCEPT",
+    "سرزنده": "ACCEPT",
+    "بشاش": "DIRECT"
+  },
+  "syn-big": {
+    "عظیم": "DIRECT",
+    "کلان": "DIRECT",
+    "سترگ": "DIRECT",
+    "غول‌آسا": "ACCEPT",
+    "فراخ": "REJECT",
+    "وسیع": "ACCEPT"
+  },
+  "syn-fast": {
+    "تند": "DIRECT",
+    "پرشتاب": "DIRECT",
+    "شتابان": "DIRECT",
+    "سریع‌السیر": "ACCEPT",
+    "چابک": "ACCEPT",
+    "تیز": "ACCEPT"
+  },
+  "syn-small": {
+    "ریز": "DIRECT",
+    "خرد": "ACCEPT",
+    "کوچولو": "DIRECT",
+    "اندک": "ACCEPT",
+    "مینیاتوری": "ACCEPT",
+    "کم‌حجم": "ACCEPT"
+  },
+  "syn-hard": {
+    "دشوار": "DIRECT",
+    "مشکل": "REJECT",
+    "صعب": "DIRECT",
+    "طاقت‌فرسا": "REJECT",
+    "پیچیده": "REJECT",
+    "دردسرساز": "REJECT"
+  },
+  "syn-smart": {
+    "زیرک": "ACCEPT",
+    "هوشمند": "DIRECT",
+    "تیزهوش": "DIRECT",
+    "خردمند": "ACCEPT",
+    "دانا": "ACCEPT",
+    "فهمیده": "ACCEPT"
+  },
+  "syn-dark": {
+    "تیره": "DIRECT",
+    "ظلمانی": "DIRECT",
+    "سیاه": "ACCEPT",
+    "کم‌نور": "DIRECT",
+    "شبگون": "ACCEPT",
+    "گرفته": "REJECT"
+  },
+  "syn-easy": {
+    "ساده": "DIRECT",
+    "راحت": "DIRECT",
+    "سهل": "DIRECT",
+    "بی‌دردسر": "ACCEPT",
+    "روان": "ACCEPT",
+    "کم‌زحمت": "DIRECT"
+  },
+  "syn-hot": {
+    "داغ": "DIRECT",
+    "سوزان": "REJECT",
+    "حرارت‌آور": "REJECT",
+    "آتشین": "REJECT",
+    "گرمابخش": "REJECT",
+    "تب‌دار": "REJECT"
+  },
+  "syn-bright": {
+    "نورانی": "ACCEPT",
+    "درخشان": "DIRECT",
+    "تابان": "DIRECT",
+    "پرتو‌افشان": "REJECT",
+    "پرنور": "DIRECT",
+    "شفاف": "REJECT"
+  },
+  "syn-bad": {
+    "ناخوشایند": "DIRECT",
+    "نامطلوب": "ACCEPT",
+    "ناپسند": "DIRECT",
+    "زننده": "REJECT",
+    "نامناسب": "ACCEPT",
+    "بدوی": "REJECT"
+  },
+  "syn-cold": {
+    "خنک": "DIRECT",
+    "یخ‌زده": "REJECT",
+    "منجمد": "REJECT",
+    "یخین": "ACCEPT",
+    "سردسیر": "REJECT",
+    "یخ‌بندان": "REJECT"
+  },
+  "syn-good": {
+    "عالی": "ACCEPT",
+    "نیکو": "DIRECT",
+    "پسندیده": "ACCEPT",
+    "مطلوب": "ACCEPT",
+    "خوشایند": "ACCEPT",
+    "شایسته": "ACCEPT"
+  },
+  "syn-weak": {
+    "ناتوان": "DIRECT",
+    "سست": "ACCEPT",
+    "کم‌توان": "DIRECT",
+    "نحیف": "ACCEPT",
+    "فرسوده": "REJECT",
+    "لاغر": "REJECT"
+  },
+  "syn-mysterious": {
+    "اسرارآمیز": "DIRECT",
+    "رازآلود": "DIRECT",
+    "مبهم": "DIRECT",
+    "پوشیده": "ACCEPT",
+    "معماگونه": "DIRECT",
+    "غریب": "REJECT"
+  },
+  "syn-clean": {
+    "پاکیزه": "DIRECT",
+    "پاک": "DIRECT",
+    "نظیف": "DIRECT",
+    "مرتب": "ACCEPT",
+    "آراسته": "ACCEPT",
+    "بی‌لکه": "ACCEPT"
+  },
+  "syn-strong": {
+    "نیرومند": "DIRECT",
+    "توانمند": "DIRECT",
+    "مقتدر": "ACCEPT",
+    "پرقدرت": "DIRECT",
+    "زورمند": "DIRECT",
+    "محکم": "DIRECT"
+  },
+  "syn-clear": {
+    "آشکار": "DIRECT",
+    "روشن": "DIRECT",
+    "شفاف": "ACCEPT",
+    "بیّن": "DIRECT",
+    "صریح": "ACCEPT",
+    "پیدا": "REJECT"
+  },
+  "syn-dirty": {
+    "آلوده": "DIRECT",
+    "چرک": "DIRECT",
+    "ناپاک": "DIRECT",
+    "پلید": "DIRECT",
+    "لکه‌دار": "REJECT",
+    "ژولیده": "REJECT"
+  },
+  "syn-vague": {
+    "گنگ": "DIRECT",
+    "ناروشن": "DIRECT",
+    "نامعلوم": "ACCEPT",
+    "سربسته": "ACCEPT",
+    "موهوم": "DIRECT",
+    "ناواضح": "DIRECT"
+  },
+  "noun-home": {
+    "منزل": "DIRECT",
+    "مسکن": "ACCEPT",
+    "سرا": "ACCEPT",
+    "کاشانه": "DIRECT",
+    "آشیانه": "REJECT"
+  },
+  "noun-enemy": {
+    "خصم": "DIRECT",
+    "بدخواه": "ACCEPT",
+    "معاند": "ACCEPT",
+    "رقیب": "REJECT",
+    "ستیزه‌جو": "ACCEPT"
+  },
+  "noun-friend": {
+    "یار": "DIRECT",
+    "رفیق": "DIRECT",
+    "همدم": "ACCEPT",
+    "همراه": "REJECT",
+    "آشنا": "REJECT"
+  },
+  "noun-start": {
+    "آغاز": "DIRECT",
+    "ابتدا": "DIRECT",
+    "سرآغاز": "DIRECT",
+    "مبدأ": "REJECT",
+    "افتتاح": "DIRECT"
+  },
+  "noun-child": {
+    "بچه": "DIRECT",
+    "طفل": "DIRECT",
+    "نوباوه": "DIRECT",
+    "صغیر": "REJECT",
+    "نوپا": "DIRECT"
+  },
+  "noun-end": {
+    "انتها": "DIRECT",
+    "خاتمه": "DIRECT",
+    "فرجام": "DIRECT",
+    "سرانجام": "ACCEPT",
+    "عاقبت": "DIRECT"
+  },
+  "noun-road": {
+    "مسیر": "DIRECT",
+    "جاده": "ACCEPT",
+    "طریق": "DIRECT",
+    "گذرگاه": "ACCEPT",
+    "معبر": "ACCEPT"
+  },
+  "noun-knowledge": {
+    "علم": "DIRECT",
+    "آگاهی": "ACCEPT",
+    "معرفت": "DIRECT",
+    "شناخت": "ACCEPT",
+    "دانستگی": "ACCEPT"
+  },
+  "noun-work": {
+    "شغل": "DIRECT",
+    "پیشه": "ACCEPT",
+    "فعالیت": "ACCEPT",
+    "حرفه": "ACCEPT",
+    "وظیفه": "ACCEPT"
+  },
+  "noun-calm": {
+    "آسودگی": "DIRECT",
+    "سکون": "DIRECT",
+    "طمأنینه": "DIRECT",
+    "قرار": "ACCEPT",
+    "صلح": "ACCEPT"
+  },
+  "noun-sorrow": {
+    "اندوه": "DIRECT",
+    "حزن": "DIRECT",
+    "دلتنگی": "ACCEPT",
+    "سوگ": "ACCEPT",
+    "افسوس": "REJECT"
+  },
+  "noun-light": {
+    "روشنایی": "DIRECT",
+    "پرتو": "DIRECT",
+    "تابش": "ACCEPT",
+    "فروغ": "DIRECT",
+    "درخشندگی": "ACCEPT"
+  },
+  "noun-sound": {
+    "آوا": "DIRECT",
+    "بانگ": "DIRECT",
+    "نوا": "ACCEPT",
+    "طنین": "ACCEPT",
+    "صوت": "DIRECT"
+  },
+  "verb-say": {
+    "بیان کردن": "DIRECT",
+    "اظهار کردن": "ACCEPT",
+    "سخن گفتن": "DIRECT",
+    "بازگو کردن": "ACCEPT",
+    "حکایت کردن": "ACCEPT"
+  },
+  "verb-go": {
+    "حرکت کردن": "ACCEPT",
+    "روانه شدن": "ACCEPT",
+    "عزیمت کردن": "ACCEPT",
+    "رهسپار شدن": "ACCEPT",
+    "راهی شدن": "ACCEPT"
+  },
+  "noun-joy": {
+    "سرور": "ACCEPT",
+    "نشاط": "ACCEPT",
+    "خرمی": "REJECT",
+    "خوشی": "DIRECT",
+    "شادمانی": "DIRECT"
+  },
+  "verb-come": {
+    "رسیدن": "ACCEPT",
+    "وارد شدن": "ACCEPT",
+    "حاضر شدن": "ACCEPT",
+    "پدیدار شدن": "ACCEPT",
+    "دررسیدن": "ACCEPT"
+  },
+  "noun-time": {
+    "وقت": "DIRECT",
+    "هنگام": "ACCEPT",
+    "برهه": "ACCEPT",
+    "دوره": "REJECT",
+    "زمانه": "ACCEPT"
+  },
+  "verb-eat": {
+    "بلعیدن": "ACCEPT",
+    "میل کردن": "REJECT",
+    "غذا خوردن": "REJECT",
+    "نوش جان کردن": "REJECT",
+    "تناول کردن": "DIRECT"
+  },
+  "verb-sleep": {
+    "خفتن": "DIRECT",
+    "آرمیدن": "DIRECT",
+    "استراحت کردن": "REJECT",
+    "به خواب رفتن": "DIRECT",
+    "چرت زدن": "ACCEPT"
+  },
+  "verb-ask": {
+    "سؤال کردن": "DIRECT",
+    "جویا شدن": "ACCEPT",
+    "استفسار کردن": "DIRECT",
+    "پرس‌وجو کردن": "DIRECT",
+    "بازخواست کردن": "ACCEPT"
+  },
+  "verb-help": {
+    "یاری کردن": "DIRECT",
+    "دستگیری کردن": "ACCEPT",
+    "معاونت کردن": "DIRECT",
+    "یار شدن": "ACCEPT",
+    "مدد کردن": "DIRECT"
+  },
+  "verb-run": {
+    "شتافتن": "ACCEPT",
+    "تکاپو کردن": "REJECT",
+    "پا به فرار گذاشتن": "REJECT",
+    "تند رفتن": "REJECT",
+    "یورتمه رفتن": "REJECT"
+  },
+  "verb-see": {
+    "نگریستن": "DIRECT",
+    "تماشا کردن": "ACCEPT",
+    "مشاهده کردن": "DIRECT",
+    "نظر کردن": "REJECT",
+    "دید زدن": "REJECT"
+  },
+  "verb-build": {
+    "ایجاد کردن": "ACCEPT",
+    "پدید آوردن": "ACCEPT",
+    "تولید کردن": "ACCEPT",
+    "بنا کردن": "DIRECT",
+    "درست کردن": "DIRECT"
+  },
+  "adj-cheerful": {
+    "شادمان": "REJECT",
+    "بشاش": "DIRECT",
+    "گشاده‌رو": "ACCEPT",
+    "خوش‌رو": "ACCEPT",
+    "سرحال": "REJECT"
+  },
+  "verb-fear": {
+    "هراسیدن": "DIRECT",
+    "بیم داشتن": "DIRECT",
+    "واهمه داشتن": "DIRECT",
+    "وحشت کردن": "ACCEPT",
+    "بیمناک شدن": "DIRECT"
+  },
+  "verb-love": {
+    "عاشق بودن": "REJECT",
+    "محبت کردن": "DIRECT",
+    "دل‌بستن": "ACCEPT",
+    "علاقه داشتن": "DIRECT",
+    "مهر ورزیدن": "DIRECT"
+  },
+  "verb-understand": {
+    "دریافتن": "ACCEPT",
+    "درک کردن": "DIRECT",
+    "پی بردن": "DIRECT",
+    "متوجه شدن": "DIRECT",
+    "فهم کردن": "DIRECT"
+  },
+  "verb-learn": {
+    "آموختن": "DIRECT",
+    "فراگرفتن": "DIRECT",
+    "تعلیم دیدن": "ACCEPT",
+    "یادگیری کردن": "DIRECT",
+    "دانش اندوختن": "ACCEPT"
+  },
+  "verb-hide": {
+    "مخفی کردن": "DIRECT",
+    "پوشاندن": "ACCEPT",
+    "نهفتن": "DIRECT",
+    "مستور کردن": "DIRECT",
+    "پنهان ساختن": "DIRECT"
+  },
+  "adj-tired": {
+    "فرسوده": "ACCEPT",
+    "کوفته": "REJECT",
+    "مانده": "REJECT",
+    "درمانده": "REJECT",
+    "بی‌رمق": "ACCEPT"
+  },
+  "adj-hungry": {
+    "گرسنه‌کام": "REJECT",
+    "محتاج غذا": "REJECT",
+    "ناشتا": "REJECT",
+    "گرسنه‌دل": "DIRECT",
+    "گرسنه‌چشم": "REJECT"
+  },
+  "adj-shy": {
+    "کم‌رو": "DIRECT",
+    "شرمگین": "DIRECT",
+    "محجوب": "ACCEPT",
+    "سر به زیر": "REJECT",
+    "با حیا": "DIRECT"
+  },
+  "adj-proud": {
+    "خودخواه": "REJECT",
+    "متکبر": "DIRECT",
+    "خودپسند": "DIRECT",
+    "گردن‌فراز": "DIRECT",
+    "خودبزرگ‌بین": "DIRECT"
+  },
+  "adj-honest": {
+    "راستگو": "DIRECT",
+    "راستین": "DIRECT",
+    "درستکار": "ACCEPT",
+    "یک‌رنگ": "REJECT",
+    "بی‌ریا": "ACCEPT"
+  },
+  "adj-thirsty": {
+    "آب‌طلب": "ACCEPT",
+    "تشنه‌کام": "REJECT",
+    "خشک‌لب": "ACCEPT",
+    "محتاج آب": "REJECT",
+    "تشنگی‌زده": "ACCEPT"
+  },
+  "adj-kind": {
+    "دل‌سوز": "ACCEPT",
+    "خوش‌قلب": "DIRECT",
+    "نیک‌دل": "DIRECT",
+    "شفیق": "DIRECT",
+    "مهرورز": "DIRECT"
+  },
+  "adj-stingy": {
+    "خسیس": "DIRECT",
+    "تنگ‌نظر": "ACCEPT",
+    "ممِسک": "DIRECT",
+    "مال‌اندوز": "DIRECT",
+    "تنگ‌چشم": "DIRECT"
+  },
+  "adj-liar": {
+    "کذاب": "DIRECT",
+    "دروغ‌پرداز": "REJECT",
+    "دروغ‌باف": "DIRECT",
+    "ناراستگو": "REJECT",
+    "فریبکار": "ACCEPT"
+  },
+  "adj-cruel": {
+    "سنگدل": "DIRECT",
+    "ستمگر": "ACCEPT",
+    "نامهربان": "ACCEPT",
+    "قسی‌القلب": "DIRECT",
+    "خشن": "ACCEPT"
+  },
+  "adj-generous": {
+    "سخاوتمند": "DIRECT",
+    "دست‌ودل‌باز": "DIRECT",
+    "کریم": "DIRECT",
+    "گشاده‌دست": "DIRECT",
+    "جواد": "DIRECT"
+  },
+  "adj-patient": {
+    "بردبار": "DIRECT",
+    "شکیبا": "DIRECT",
+    "حوصله‌مند": "DIRECT",
+    "تحمل‌پذیر": "REJECT",
+    "پرتحمل": "DIRECT"
+  },
+  "adj-hasty": {
+    "شتاب‌زده": "DIRECT",
+    "بی‌حوصله": "REJECT",
+    "کم‌طاقت": "REJECT",
+    "شتابکار": "DIRECT",
+    "نسنجیده": "ACCEPT"
+  },
+  "adj-precise": {
+    "موشکاف": "ACCEPT",
+    "ریز‌بین": "REJECT",
+    "جزئی‌نگر": "REJECT",
+    "حساب‌شده": "ACCEPT",
+    "سنجیده": "REJECT"
+  },
+  "adj-messy": {
+    "نامرتب": "DIRECT",
+    "بی‌نظم": "ACCEPT",
+    "آشفته": "ACCEPT",
+    "درهم‌وبرهم": "ACCEPT",
+    "پریشان": "ACCEPT"
+  },
+  "adj-wide": {
+    "عریض": "DIRECT",
+    "گسترده": "ACCEPT",
+    "وسیع": "DIRECT",
+    "فراخ": "DIRECT",
+    "گشاد": "DIRECT"
+  },
+  "adj-old": {
+    "فرسوده": "DIRECT",
+    "قدیمی": "DIRECT",
+    "ازکارافتاده": "REJECT",
+    "منسوخ": "REJECT",
+    "پوسیده": "REJECT"
+  },
+  "adj-fresh": {
+    "نو": "DIRECT",
+    "جدید": "DIRECT",
+    "تازه‌نفس": "REJECT",
+    "طراوت‌دار": "ACCEPT",
+    "امروزی": "REJECT"
+  },
+  "adj-narrow": {
+    "نازک": "DIRECT",
+    "تنگ": "DIRECT",
+    "کم‌عرض": "DIRECT",
+    "ظریف": "ACCEPT",
+    "باریك‌اندام": "REJECT"
+  },
+  "adj-tall": {
+    "دراز": "REJECT",
+    "مرتفع": "DIRECT",
+    "قدبلند": "REJECT",
+    "کشیده": "REJECT",
+    "والا": "REJECT"
+  },
+  "adj-deep": {
+    "ژرف": "DIRECT",
+    "گود": "ACCEPT",
+    "پرفروغ": "REJECT",
+    "پرعمق": "ACCEPT",
+    "بنیادی": "REJECT"
+  },
+  "adj-heavy": {
+    "گران": "REJECT",
+    "وزین": "DIRECT",
+    "پروزن": "REJECT",
+    "ثقیل": "DIRECT",
+    "پرجرم": "DIRECT"
+  },
+  "adj-short": {
+    "کم‌ارتفاع": "ACCEPT",
+    "مختصر": "DIRECT",
+    "جمع‌وجور": "REJECT",
+    "قدکوتاه": "REJECT",
+    "اندک": "REJECT"
+  },
+  "adj-shallow": {
+    "سطحی": "DIRECT",
+    "ناژرف": "REJECT",
+    "کم‌ژرفا": "DIRECT",
+    "رویه‌ای": "REJECT",
+    "دم‌دستی": "REJECT"
+  },
+  "adj-soft": {
+    "ملایم": "DIRECT",
+    "لطیف": "ACCEPT",
+    "انعطاف‌پذیر": "ACCEPT",
+    "مخملی": "ACCEPT",
+    "نرمخو": "REJECT"
+  },
+  "adj-lightweight": {
+    "کم‌وزن": "ACCEPT",
+    "ناچیزوزن": "REJECT",
+    "سبکبار": "REJECT",
+    "کم‌جرم": "ACCEPT",
+    "پرمانند": "REJECT"
+  },
+  "adj-safe": {
+    "بی‌خطر": "DIRECT",
+    "ایمن": "DIRECT",
+    "محفوظ": "ACCEPT",
+    "مطمئن": "ACCEPT",
+    "آرام": "REJECT"
+  },
+  "adj-firm": {
+    "استوار": "DIRECT",
+    "سفت": "DIRECT",
+    "مقاوم": "ACCEPT",
+    "پابرجا": "ACCEPT",
+    "نفوذناپذیر": "REJECT"
+  },
+  "adj-dangerous": {
+    "پرخطر": "DIRECT",
+    "مخاطره‌آمیز": "DIRECT",
+    "مهلک": "ACCEPT",
+    "هولناک": "REJECT",
+    "زیان‌بار": "REJECT"
+  },
+  "adj-ordinary": {
+    "عادی": "DIRECT",
+    "متعارف": "DIRECT",
+    "رایج": "DIRECT",
+    "همیشگی": "REJECT",
+    "مرسوم": "DIRECT"
+  },
+  "adj-fragile": {
+    "ترد": "DIRECT",
+    "آسیب‌پذیر": "ACCEPT",
+    "ظریف": "ACCEPT",
+    "سست": "REJECT",
+    "ناپایدار": "REJECT"
+  },
+  "adj-rough": {
+    "خشن": "DIRECT",
+    "ناهموار": "ACCEPT",
+    "زمخت": "DIRECT",
+    "درشت": "ACCEPT",
+    "ناملایم": "REJECT"
+  },
+  "adj-strange": {
+    "غریب": "DIRECT",
+    "شگفت": "DIRECT",
+    "نامعمول": "DIRECT",
+    "غیرعادی": "DIRECT",
+    "شگفت‌انگیز": "ACCEPT"
+  },
+  "adj-trivial": {
+    "ناچیز": "DIRECT",
+    "کم‌ارزش": "ACCEPT",
+    "جزئی": "REJECT",
+    "فرعی": "ACCEPT",
+    "پیش‌پاافتاده": "ACCEPT"
+  },
+  "adj-important": {
+    "اساسی": "ACCEPT",
+    "حیاتی": "ACCEPT",
+    "کلیدی": "ACCEPT",
+    "سرنوشت‌ساز": "ACCEPT",
+    "ارزشمند": "ACCEPT"
+  },
+  "adj-crowded": {
+    "شلوغ": "ACCEPT",
+    "انبوه": "ACCEPT",
+    "پرمردم": "DIRECT",
+    "پرتراکم": "DIRECT",
+    "غوغایی": "REJECT"
+  },
+  "adj-deserted": {
+    "ساکت": "REJECT",
+    "کم‌رفت‌وآمد": "ACCEPT",
+    "تنها": "REJECT",
+    "دنج": "ACCEPT",
+    "بی‌جمعیت": "ACCEPT"
+  },
+  "adj-humid": {
+    "نمناک": "DIRECT",
+    "نم‌دار": "DIRECT",
+    "شرجی": "REJECT",
+    "تَر": "DIRECT",
+    "خیس": "DIRECT"
+  },
+  "adj-expensive": {
+    "پرهزینه": "DIRECT",
+    "گران‌قیمت": "DIRECT",
+    "گران‌بها": "DIRECT",
+    "نفیس": "ACCEPT",
+    "قیمت‌دار": "DIRECT"
+  },
+  "adj-healthy": {
+    "تندرست": "DIRECT",
+    "صحیح": "ACCEPT",
+    "بی‌عیب": "ACCEPT",
+    "سلامت": "REJECT",
+    "سرحال": "ACCEPT"
+  },
+  "adj-ill": {
+    "ناخوش": "DIRECT",
+    "مریض": "DIRECT",
+    "رنجور": "DIRECT",
+    "علیل": "DIRECT",
+    "بستری": "REJECT"
+  },
+  "adj-dry": {
+    "بی‌آب": "ACCEPT",
+    "عاری از رطوبت": "ACCEPT",
+    "کم‌آب": "ACCEPT",
+    "خشکیده": "ACCEPT",
+    "تفتیده": "ACCEPT"
+  },
+  "noun-clothing": {
+    "پوشاک": "DIRECT",
+    "جامه": "DIRECT",
+    "تن‌پوش": "DIRECT",
+    "رخت": "DIRECT",
+    "پیرایه": "REJECT"
+  },
+  "adj-cheap": {
+    "کم‌هزینه": "DIRECT",
+    "ارزان‌قیمت": "DIRECT",
+    "مقرون‌به‌صرفه": "ACCEPT",
+    "کم‌بها": "DIRECT",
+    "ناچیزبها": "REJECT"
+  },
+  "noun-school": {
+    "آموزشگاه": "ACCEPT",
+    "دبستان": "REJECT",
+    "دبیرستان": "REJECT",
+    "مکتب": "DIRECT",
+    "مدرسه علمیه": "REJECT"
+  },
+  "noun-book": {
+    "دفتر": "REJECT",
+    "اثر": "REJECT",
+    "نوشتار": "REJECT",
+    "جلد": "REJECT",
+    "کتابچه": "REJECT"
+  },
+  "noun-water": {
+    "مایع": "REJECT",
+    "آبینه": "REJECT",
+    "آب روان": "REJECT",
+    "آب آشامیدنی": "REJECT",
+    "آب گوارا": "REJECT"
+  },
+  "noun-food": {
+    "خوراک": "DIRECT",
+    "طعام": "DIRECT",
+    "مأکول": "DIRECT",
+    "غذای روزانه": "REJECT",
+    "خورش": "REJECT"
+  },
+  "noun-teacher": {
+    "آموزگار": "DIRECT",
+    "دبیر": "ACCEPT",
+    "استاد": "DIRECT",
+    "مدرس": "DIRECT",
+    "مربی": "ACCEPT"
+  },
+  "noun-student": {
+    "شاگرد": "DIRECT",
+    "محصل": "ACCEPT",
+    "نوآموز": "ACCEPT",
+    "متعلم": "ACCEPT",
+    "پژوهنده": "REJECT"
+  },
+  "noun-city": {
+    "بلد": "REJECT",
+    "آبادی": "REJECT",
+    "شهرستان": "REJECT",
+    "کلان‌شهر": "REJECT",
+    "دیار": "REJECT"
+  },
+  "noun-country": {
+    "سرزمین": "DIRECT",
+    "مملکت": "DIRECT",
+    "میهن": "DIRECT",
+    "دولت": "REJECT",
+    "مرزوبوم": "ACCEPT"
+  },
+  "noun-village": {
+    "ده": "DIRECT",
+    "آبادی": "ACCEPT",
+    "دهکده": "DIRECT",
+    "قصبه": "REJECT",
+    "دهستان": "REJECT"
+  },
+  "noun-sky": {
+    "سپهر": "DIRECT",
+    "فلک": "DIRECT",
+    "گردون": "DIRECT",
+    "هوا": "REJECT",
+    "آسمانه": "REJECT"
+  },
+  "noun-earth": {
+    "خاک": "REJECT",
+    "کره زمین": "REJECT",
+    "گیتی": "REJECT",
+    "سرزمین": "ACCEPT",
+    "خشکی": "REJECT"
+  },
+  "noun-world": {
+    "دنیا": "DIRECT",
+    "گیتی": "DIRECT",
+    "عالم": "DIRECT",
+    "کیهان": "DIRECT",
+    "هستی": "REJECT"
+  },
+  "noun-forest": {
+    "بیشه": "ACCEPT",
+    "انبوهه": "REJECT",
+    "جنگلزار": "ACCEPT",
+    "درختزار": "ACCEPT",
+    "بیشه‌زار": "ACCEPT"
+  },
+  "noun-river": {
+    "رود": "DIRECT",
+    "نهر": "DIRECT",
+    "جویبار": "REJECT",
+    "آبراه": "ACCEPT",
+    "رودبار": "ACCEPT"
+  },
+  "noun-sea": {
+    "بحر": "DIRECT",
+    "اقیانوس": "ACCEPT",
+    "آبگیر": "REJECT",
+    "آب‌های آزاد": "REJECT",
+    "دریای بزرگ": "REJECT"
+  },
+  "noun-rain": {
+    "بارش": "DIRECT",
+    "نم‌نم": "REJECT",
+    "رگبار": "REJECT",
+    "مطر": "ACCEPT",
+    "بارندگی": "REJECT"
+  },
+  "noun-mountain": {
+    "کوهسار": "REJECT",
+    "قله": "REJECT",
+    "بلندی": "REJECT",
+    "کوهستان": "REJECT",
+    "شاخ": "REJECT"
+  },
+  "noun-wind": {
+    "نسیم": "ACCEPT",
+    "تندباد": "REJECT",
+    "صبا": "REJECT",
+    "طوفان": "REJECT",
+    "هوا": "REJECT"
+  },
+  "noun-fire": {
+    "شعله": "REJECT",
+    "اخگر": "REJECT",
+    "آذر": "DIRECT",
+    "حریق": "REJECT",
+    "فروغ": "REJECT"
+  },
+  "noun-family": {
+    "اهل خانه": "ACCEPT",
+    "خویشان": "ACCEPT",
+    "فامیل": "DIRECT",
+    "کانون خانواده": "REJECT",
+    "اهل": "ACCEPT"
+  },
+  "noun-mother": {
+    "مامان": "DIRECT",
+    "مادرزن": "REJECT",
+    "والده": "REJECT",
+    "ماما": "DIRECT",
+    "مادر بزرگ": "REJECT"
+  },
+  "noun-father": {
+    "بابا": "DIRECT",
+    "والد": "REJECT",
+    "آقا جان": "REJECT",
+    "پاپا": "ACCEPT",
+    "پدر بزرگ": "REJECT"
+  },
+  "noun-sister": {
+    "آبجی": "DIRECT",
+    "همشیره": "DIRECT",
+    "خواهر تنی": "REJECT",
+    "دختر هم‌خون": "REJECT",
+    "همزاد": "REJECT"
+  },
+  "noun-language": {
+    "لسان": "DIRECT",
+    "گویش": "REJECT",
+    "لهجه": "REJECT",
+    "زبان گفتاری": "REJECT",
+    "زبان نوشتاری": "REJECT"
+  },
+  "noun-story": {
+    "قصه": "DIRECT",
+    "حکایت": "DIRECT",
+    "روایت": "DIRECT",
+    "سرگذشت": "DIRECT",
+    "افسانه": "ACCEPT"
+  },
+  "noun-poem": {
+    "سروده": "DIRECT",
+    "چکامه": "ACCEPT",
+    "نظم": "DIRECT",
+    "غزل": "REJECT",
+    "قطعه": "REJECT"
+  },
+  "noun-people": {
+    "ملت": "DIRECT",
+    "مردمان": "DIRECT",
+    "اهالی": "ACCEPT",
+    "خلق": "ACCEPT",
+    "عامه": "ACCEPT"
+  },
+  "noun-film": {
+    "سینما": "REJECT",
+    "اثر تصویری": "REJECT",
+    "نوار": "ACCEPT",
+    "تصویر متحرک": "ACCEPT",
+    "پردۀ سینما": "REJECT"
+  },
+  "noun-brother": {
+    "داداش": "DIRECT",
+    "اخو": "DIRECT",
+    "هم‌خون": "REJECT",
+    "برادر تنی": "REJECT",
+    "برادرزاده": "REJECT"
+  },
+  "noun-word": {
+    "کلمه": "DIRECT",
+    "لفظ": "DIRECT",
+    "لغت": "DIRECT",
+    "تک‌واژه": "REJECT",
+    "واژه‌نامه": "REJECT"
+  },
+  "noun-smell": {
+    "رایحه": "DIRECT",
+    "عطر": "REJECT",
+    "بویایی": "REJECT",
+    "عفونت": "REJECT",
+    "مشام": "REJECT"
+  },
+  "noun-music": {
+    "آهنگ": "REJECT",
+    "نوا": "REJECT",
+    "نوای موسیقی": "REJECT",
+    "ملودی": "REJECT",
+    "ترانه": "REJECT"
+  },
+  "noun-image": {
+    "عکس": "DIRECT",
+    "نگاره": "DIRECT",
+    "پیکره": "REJECT",
+    "عکس‌نگاره": "ACCEPT",
+    "نما": "REJECT"
+  },
+  "noun-color": {
+    "فام": "DIRECT",
+    "رنگینه": "REJECT",
+    "رنگ‌مایه": "REJECT",
+    "طیف": "REJECT",
+    "لون": "REJECT"
+  },
+  "noun-taste": {
+    "طعم": "DIRECT",
+    "چاشنی": "ACCEPT",
+    "کام": "ACCEPT",
+    "طعم‌مایه": "REJECT",
+    "ذائقه": "DIRECT"
+  },
+  "noun-thought": {
+    "اندیشه": "DIRECT",
+    "خیال": "ACCEPT",
+    "تفکر": "DIRECT",
+    "ذهنیت": "REJECT",
+    "تأمل": "ACCEPT"
+  },
+  "noun-freedom": {
+    "رهایی": "DIRECT",
+    "اختیار": "ACCEPT",
+    "آزادگی": "DIRECT",
+    "استقلال": "ACCEPT",
+    "حریت": "DIRECT"
+  },
+  "noun-fear": {
+    "هراس": "DIRECT",
+    "بیم": "DIRECT",
+    "وحشت": "ACCEPT",
+    "دلهره": "DIRECT",
+    "واهمه": "DIRECT"
+  },
+  "noun-love": {
+    "محبت": "ACCEPT",
+    "دوست‌داشتن": "REJECT",
+    "مهر": "ACCEPT",
+    "دلدادگی": "ACCEPT",
+    "شیفتگی": "ACCEPT"
+  },
+  "noun-dream": {
+    "خواب": "REJECT",
+    "خیال": "ACCEPT",
+    "آرزو": "REJECT",
+    "پندار": "REJECT",
+    "رویای شبانه": "REJECT"
+  },
+  "noun-hatred": {
+    "بیزاری": "DIRECT",
+    "کینه": "ACCEPT",
+    "دشمنی": "ACCEPT",
+    "انزجار": "DIRECT",
+    "عداوت": "ACCEPT"
+  },
+  "noun-hope": {
+    "آرزو": "ACCEPT",
+    "امیدواری": "DIRECT",
+    "دلگرمی": "ACCEPT",
+    "چشم‌داشت": "ACCEPT",
+    "نوید": "REJECT"
+  },
+  "noun-law": {
+    "مقررات": "ACCEPT",
+    "آیین‌نامه": "ACCEPT",
+    "ضابطه": "ACCEPT",
+    "قاعده": "ACCEPT",
+    "حقوق": "REJECT"
+  },
+  "noun-answer": {
+    "جواب": "DIRECT",
+    "پاسخ‌گویی": "REJECT",
+    "واکنش": "ACCEPT",
+    "حل": "REJECT",
+    "رد": "REJECT"
+  },
+  "noun-justice": {
+    "داد": "REJECT",
+    "انصاف": "DIRECT",
+    "دادگری": "DIRECT",
+    "برابری": "ACCEPT",
+    "حق": "REJECT"
+  },
+  "noun-question": {
+    "سؤال": "DIRECT",
+    "استفسار": "DIRECT",
+    "پرس‌وجو": "DIRECT",
+    "بازخواست": "ACCEPT",
+    "جویا شدن": "REJECT"
+  },
+  "noun-decision": {
+    "انتخاب": "ACCEPT",
+    "اراده": "REJECT",
+    "عزم": "ACCEPT",
+    "رأی": "ACCEPT",
+    "قصد": "REJECT"
+  },
+  "noun-mistake": {
+    "خطا": "DIRECT",
+    "غلط": "DIRECT",
+    "سهو": "ACCEPT",
+    "لغزش": "ACCEPT",
+    "کج‌روی": "REJECT"
+  },
+  "noun-success": {
+    "کامیابی": "DIRECT",
+    "پیروزی": "ACCEPT",
+    "توفیق": "DIRECT",
+    "سربلندی": "ACCEPT",
+    "رستگاری": "REJECT"
+  },
+  "verb-cry": {
+    "اشک ریختن": "DIRECT",
+    "زاری کردن": "DIRECT",
+    "نالیدن": "ACCEPT",
+    "مویه کردن": "DIRECT",
+    "هق‌هق کردن": "ACCEPT"
+  },
+  "verb-laugh": {
+    "قهقهه زدن": "ACCEPT",
+    "لبخند زدن": "REJECT",
+    "خندیدن از ته دل": "REJECT",
+    "پوزخند زدن": "REJECT",
+    "بشاش بودن": "REJECT"
+  },
+  "verb-hear": {
+    "گوش دادن": "DIRECT",
+    "استماع کردن": "DIRECT",
+    "به گوش رسیدن": "REJECT",
+    "شنوا بودن": "REJECT",
+    "شنودن": "DIRECT"
+  },
+  "verb-read": {
+    "مطالعه کردن": "ACCEPT",
+    "قرائت کردن": "DIRECT",
+    "از رو خواندن": "REJECT",
+    "خوانش کردن": "ACCEPT",
+    "ورق زدن": "REJECT"
+  },
+  "verb-write": {
+    "نگاشتن": "DIRECT",
+    "تحریر کردن": "DIRECT",
+    "ثبت کردن": "ACCEPT",
+    "رقم زدن": "REJECT",
+    "قلم زدن": "ACCEPT"
+  },
+  "verb-listen": {
+    "شنیدن": "ACCEPT",
+    "استماع کردن": "DIRECT",
+    "گوش سپردن": "DIRECT",
+    "گوش کردن": "DIRECT",
+    "دقت کردن": "REJECT"
+  },
+  "verb-know": {
+    "آگاه بودن": "ACCEPT",
+    "اطلاع داشتن": "DIRECT",
+    "واقف بودن": "DIRECT",
+    "شناختن": "ACCEPT",
+    "خبر داشتن": "ACCEPT"
+  },
+  "verb-think": {
+    "اندیشیدن": "DIRECT",
+    "تأمل کردن": "ACCEPT",
+    "تفکر کردن": "DIRECT",
+    "سبک‌سنگین کردن": "REJECT",
+    "خیال کردن": "ACCEPT"
+  },
+  "verb-talk": {
+    "صحبت کردن": "DIRECT",
+    "سخن گفتن": "DIRECT",
+    "گفت‌وگو کردن": "DIRECT",
+    "درددل کردن": "REJECT",
+    "گپ زدن": "DIRECT"
+  },
+  "verb-want": {
+    "طلب کردن": "ACCEPT",
+    "آرزو کردن": "ACCEPT",
+    "تمایل داشتن": "ACCEPT",
+    "میل داشتن": "DIRECT",
+    "خواستار بودن": "ACCEPT"
+  },
+  "verb-can": {
+    "قادر بودن": "DIRECT",
+    "قدرت داشتن": "ACCEPT",
+    "از عهده برآمدن": "ACCEPT",
+    "بلد بودن": "ACCEPT",
+    "توانا بودن": "REJECT"
+  },
+  "verb-take": {
+    "برداشتن": "ACCEPT",
+    "دریافت کردن": "DIRECT",
+    "ستاندن": "REJECT",
+    "تحویل گرفتن": "REJECT",
+    "اخذ کردن": "DIRECT"
+  },
+  "verb-leave": {
+    "رها کردن": "DIRECT",
+    "واگذاشتن": "DIRECT",
+    "دور شدن": "REJECT",
+    "وداع کردن": "REJECT",
+    "کنار گذاشتن": "ACCEPT"
+  },
+  "verb-give": {
+    "بخشیدن": "ACCEPT",
+    "سپردن": "DIRECT",
+    "ارائه کردن": "ACCEPT",
+    "واگذار کردن": "ACCEPT",
+    "تحویل دادن": "DIRECT"
+  },
+  "verb-have": {
+    "دارا بودن": "DIRECT",
+    "مالک بودن": "ACCEPT",
+    "در اختیار داشتن": "ACCEPT",
+    "برخوردار بودن": "ACCEPT",
+    "حائز بودن": "ACCEPT"
+  },
+  "verb-bring": {
+    "حاضر کردن": "REJECT",
+    "رساندن": "ACCEPT",
+    "با خود آوردن": "REJECT",
+    "تحویل دادن": "ACCEPT",
+    "فراهم کردن": "REJECT"
+  },
+  "verb-stay": {
+    "باقی ماندن": "DIRECT",
+    "درنگ کردن": "ACCEPT",
+    "توقف کردن": "ACCEPT",
+    "اقامت کردن": "ACCEPT",
+    "بر جا ماندن": "ACCEPT"
+  },
+  "verb-sit": {
+    "جلوس کردن": "DIRECT",
+    "قرار گرفتن": "ACCEPT",
+    "جا گرفتن": "REJECT",
+    "جا خوش کردن": "REJECT",
+    "تکیه دادن": "REJECT"
+  },
+  "verb-stand": {
+    "برخاستن": "ACCEPT",
+    "توقف کردن": "ACCEPT",
+    "پا شدن": "DIRECT",
+    "قیام کردن": "ACCEPT",
+    "سر پا ماندن": "ACCEPT"
+  },
+  "verb-wake": {
+    "از خواب برخاستن": "DIRECT",
+    "هوشیار شدن": "ACCEPT",
+    "هشیار شدن": "ACCEPT",
+    "چشم گشودن": "ACCEPT",
+    "به هوش آمدن": "DIRECT"
+  },
+  "verb-open": {
+    "گشودن": "DIRECT",
+    "وا کردن": "DIRECT",
+    "بازگشایی کردن": "DIRECT",
+    "گشایش دادن": "DIRECT",
+    "باز نمودن": "DIRECT"
+  },
+  "verb-close": {
+    "مسدود کردن": "ACCEPT",
+    "قفل کردن": "ACCEPT",
+    "فرو بستن": "ACCEPT",
+    "جمع کردن": "REJECT",
+    "مهر و موم کردن": "REJECT"
+  },
+  "verb-break": {
+    "خرد کردن": "ACCEPT",
+    "درهم شکستن": "ACCEPT",
+    "ترکاندن": "REJECT",
+    "متلاشی کردن": "ACCEPT",
+    "درهم کوبیدن": "ACCEPT"
+  },
+  "verb-wear": {
+    "به تن کردن": "DIRECT",
+    "بر تن کردن": "DIRECT",
+    "جامه پوشیدن": "REJECT",
+    "مستتر کردن": "REJECT",
+    "ملبس شدن": "DIRECT"
+  },
+  "verb-buy": {
+    "تهیه کردن": "ACCEPT",
+    "ابتیاع کردن": "DIRECT",
+    "خریداری کردن": "DIRECT",
+    "پول دادن": "REJECT",
+    "به دست آوردن": "REJECT"
+  },
+  "verb-wash": {
+    "آب کشیدن": "REJECT",
+    "تمیز کردن": "REJECT",
+    "غسل دادن": "ACCEPT",
+    "شست‌وشو کردن": "DIRECT",
+    "آب زدن": "REJECT"
+  },
+  "verb-fix": {
+    "تعمیر کردن": "ACCEPT",
+    "اصلاح کردن": "ACCEPT",
+    "ساختن": "ACCEPT",
+    "مرمت کردن": "ACCEPT",
+    "سر و سامان دادن": "ACCEPT"
+  },
+  "verb-sell": {
+    "فروش کردن": "DIRECT",
+    "عرضه کردن": "ACCEPT",
+    "واگذار کردن": "REJECT",
+    "به فروش رساندن": "DIRECT",
+    "داد و ستد کردن": "REJECT"
+  },
+  "verb-choose": {
+    "برگزیدن": "DIRECT",
+    "گزینش کردن": "DIRECT",
+    "اختیار کردن": "REJECT",
+    "گلچین کردن": "ACCEPT",
+    "ترجیح دادن": "ACCEPT"
+  },
+  "verb-pay": {
+    "پول دادن": "DIRECT",
+    "تسویه کردن": "ACCEPT",
+    "تأدیه کردن": "DIRECT",
+    "هزینه کردن": "REJECT",
+    "حق را ادا کردن": "ACCEPT"
+  },
+  "verb-lose": {
+    "از دست دادن": "ACCEPT",
+    "گم شدن": "REJECT",
+    "نیافتن": "REJECT",
+    "جا گذاشتن": "REJECT",
+    "ناپدید کردن": "ACCEPT"
+  },
+  "verb-find": {
+    "یافتن": "DIRECT",
+    "کشف کردن": "ACCEPT",
+    "به دست آوردن": "ACCEPT",
+    "ردیابی کردن": "ACCEPT",
+    "برخوردن": "REJECT"
+  },
+  "verb-clean": {
+    "تمیز کردن": "DIRECT",
+    "زدودن": "DIRECT",
+    "برطرف کردن": "REJECT",
+    "رفع کردن": "REJECT",
+    "دور ریختن": "REJECT"
+  },
+  "verb-change": {
+    "دگرگون شدن": "DIRECT",
+    "عوض شدن": "DIRECT",
+    "تحول یافتن": "ACCEPT",
+    "تبدیل شدن": "ACCEPT",
+    "دیگر شدن": "REJECT"
+  },
+  "verb-grow": {
+    "بزرگ شدن": "DIRECT",
+    "بالیدن": "DIRECT",
+    "پرورش یافتن": "ACCEPT",
+    "فزونی گرفتن": "ACCEPT",
+    "گسترش یافتن": "ACCEPT"
+  },
+  "verb-decrease": {
+    "کاهش یافتن": "DIRECT",
+    "فروکاستن": "ACCEPT",
+    "ناقص شدن": "ACCEPT",
+    "تنزل کردن": "ACCEPT",
+    "فروکش کردن": "ACCEPT"
+  },
+  "verb-increase": {
+    "افزایش یافتن": "DIRECT",
+    "فزونی گرفتن": "DIRECT",
+    "بیشتر شدن": "DIRECT",
+    "رشد کردن": "ACCEPT",
+    "بالا رفتن": "ACCEPT"
+  },
+  "verb-win": {
+    "بردن": "DIRECT",
+    "موفق شدن": "DIRECT",
+    "کامیاب شدن": "ACCEPT",
+    "غالب شدن": "DIRECT",
+    "ظفر یافتن": "DIRECT"
+  },
+  "verb-fail": {
+    "شکست خوردن": "DIRECT",
+    "مغلوب شدن": "DIRECT",
+    "ناکام شدن": "ACCEPT",
+    "عقب ماندن": "REJECT",
+    "از دست دادن": "DIRECT"
+  },
+  "verb-begin": {
+    "شروع کردن": "DIRECT",
+    "ابتدا کردن": "DIRECT",
+    "دست به کار شدن": "ACCEPT",
+    "گشودن": "REJECT",
+    "کلید زدن": "REJECT"
+  },
+  "verb-try": {
+    "کوشش کردن": "DIRECT",
+    "سعی کردن": "DIRECT",
+    "جد و جهد کردن": "DIRECT",
+    "تقلا کردن": "DIRECT",
+    "دست و پا زدن": "REJECT"
+  },
+  "verb-finish": {
+    "به پایان رساندن": "DIRECT",
+    "خاتمه دادن": "DIRECT",
+    "تمام شدن": "REJECT",
+    "فراغت یافتن": "ACCEPT",
+    "جمع کردن": "REJECT"
+  },
+  "verb-practice": {
+    "مشق کردن": "ACCEPT",
+    "تکرار کردن": "REJECT",
+    "ورزیدن": "ACCEPT",
+    "کار کردن": "REJECT",
+    "آمادگی گرفتن": "REJECT"
+  },
+  "verb-live": {
+    "زیستن": "DIRECT",
+    "حیات داشتن": "ACCEPT",
+    "به سر بردن": "DIRECT",
+    "عمر کردن": "DIRECT",
+    "روزگار گذراندن": "ACCEPT"
+  },
+  "verb-work": {
+    "فعالیت کردن": "ACCEPT",
+    "زحمت کشیدن": "ACCEPT",
+    "اشتغال داشتن": "ACCEPT",
+    "کوشیدن": "ACCEPT",
+    "وظیفه انجام دادن": "REJECT"
+  },
+  "verb-die": {
+    "فوت کردن": "DIRECT",
+    "درگذشتن": "DIRECT",
+    "جان سپردن": "ACCEPT",
+    "وفات کردن": "DIRECT",
+    "از دنیا رفتن": "DIRECT"
+  },
+  "verb-request-help": {
+    "یاری خواستن": "DIRECT",
+    "مدد خواستن": "DIRECT",
+    "استمداد کردن": "DIRECT",
+    "دست کمک خواستن": "DIRECT",
+    "درخواست یاری کردن": "DIRECT"
+  },
+  "verb-wait": {
+    "صبر کردن": "DIRECT",
+    "درنگ کردن": "ACCEPT",
+    "چشم به راه بودن": "DIRECT",
+    "انتظار کشیدن": "DIRECT",
+    "تعلل کردن": "REJECT"
+  },
+  "verb-remember": {
+    "به خاطر آوردن": "REJECT",
+    "یاد کردن": "REJECT",
+    "به یاد آوردن": "REJECT",
+    "بازخوانی کردن": "REJECT",
+    "به ذهن سپردن": "REJECT"
+  },
+  "verb-forget": {
+    "از یاد بردن": "DIRECT",
+    "یادش رفتن": "DIRECT",
+    "به خاطر نداشتن": "DIRECT",
+    "محو کردن": "REJECT",
+    "نادیده گرفتن": "REJECT"
+  },
+  "generated-001": {
+    "خوشایند": "DIRECT",
+    "مطبوع": "DIRECT",
+    "لذت بخش": "DIRECT",
+    "دلپذیر": "DIRECT",
+    "روح افزا": "ACCEPT"
+  },
+  "generated-002": {
+    "نیرومند": "DIRECT",
+    "قدرتمند": "DIRECT",
+    "توانا": "DIRECT",
+    "زورمند": "DIRECT",
+    "قادر": "ACCEPT"
+  },
+  "generated-003": {
+    "حساس": "ACCEPT",
+    "رقیق الطبع": "DIRECT",
+    "لطیف": "ACCEPT",
+    "باریک بین": "REJECT",
+    "ظریف اندیش": "DIRECT"
+  },
+  "generated-005": {
+    "انتظاردار": "DIRECT",
+    "طالب": "REJECT",
+    "مدعی": "REJECT",
+    "خواهان": "REJECT",
+    "متوقع": "REJECT"
+  },
+  "generated-004": {
+    "کوشا": "DIRECT",
+    "مجاهد": "ACCEPT",
+    "پشتکاردار": "DIRECT",
+    "همت گمار": "ACCEPT",
+    "متقاعد": "REJECT"
+  },
+  "generated-006": {
+    "وراج": "DIRECT",
+    "پُرگو": "DIRECT",
+    "زبان دراز": "ACCEPT",
+    "ثرثار": "DIRECT",
+    "پُرگفتار": "DIRECT"
+  },
+  "generated-007": {
+    "صبور": "DIRECT",
+    "بردبار": "DIRECT",
+    "متین": "ACCEPT",
+    "آرام": "REJECT",
+    "شکیبا": "DIRECT"
+  },
+  "generated-008": {
+    "مکار": "DIRECT",
+    "حیله گر": "REJECT",
+    "فریبکار": "ACCEPT",
+    "دغل": "ACCEPT",
+    "روباه صفت": "REJECT"
+  },
+  "generated-009": {
+    "ستیزه جو": "DIRECT",
+    "جنگجو": "REJECT",
+    "نزاع طلب": "ACCEPT",
+    "عصیانگر": "REJECT",
+    "متخاصم": "DIRECT"
+  },
+  "generated-011": {
+    "بی آبرویی": "REJECT",
+    "رسوایی": "REJECT",
+    "بدنامی": "REJECT",
+    "بی عفتی": "REJECT",
+    "بی آلایشی": "REJECT"
+  },
+  "generated-010": {
+    "پوشاننده": "REJECT",
+    "مستورکننده": "REJECT",
+    "مخفی کننده": "REJECT",
+    "رازدار": "REJECT",
+    "کتمان کننده": "ACCEPT"
+  },
+  "generated-012": {
+    "خانه نشین": "ACCEPT",
+    "منزوی": "ACCEPT",
+    "گوشه گیر": "ACCEPT",
+    "عزل": "REJECT"
+  },
+  "generated-013": {
+    "جهش": "REJECT",
+    "خیز": "REJECT",
+    "صعود": "REJECT",
+    "اوج": "REJECT",
+    "پریدن": "REJECT"
+  },
+  "generated-016": {
+    "پروازنده": "DIRECT",
+    "بالدار": "REJECT",
+    "هواپیما": "REJECT",
+    "پرنده": "REJECT",
+    "صعودکننده": "REJECT"
+  },
+  "generated-017": {
+    "فرودگاه": "DIRECT",
+    "آشیانه": "REJECT",
+    "آشیانگاه": "REJECT",
+    "محل پرواز": "REJECT",
+    "میدان هوایی": "DIRECT"
+  },
+  "generated-018": {
+    "گواهینامه خلبانی": "REJECT",
+    "مجوز پرواز": "REJECT",
+    "اجازه پرواز": "REJECT",
+    "سند پرواز": "REJECT",
+    "کارت پرواز": "REJECT"
+  },
+  "generated-015": {
+    "پرنده": "REJECT",
+    "بالدار": "REJECT",
+    "هواپیما": "REJECT",
+    "پروازگر": "REJECT",
+    "صعودکننده": "REJECT"
+  },
+  "generated-014": {
+    "جهیدن": "ACCEPT",
+    "خیز کردن": "REJECT",
+    "صعود کردن": "REJECT",
+    "اوج گرفتن": "ACCEPT",
+    "پریدن": "ACCEPT"
+  },
+  "generated-019": {
+    "پروازکننده": "REJECT",
+    "پروازنده": "REJECT",
+    "بالدار": "REJECT",
+    "صعودکننده": "REJECT",
+    "جهنده": "REJECT"
+  },
+  "generated-021": {
+    "پروازدهنده": "REJECT",
+    "بال دهنده": "REJECT",
+    "صعوددهنده": "REJECT",
+    "جهش دهنده": "REJECT",
+    "اوج دهنده": "REJECT"
+  },
+  "generated-020": {
+    "پرواز کردن": "DIRECT",
+    "جهیدن": "REJECT",
+    "خیز کردن": "REJECT",
+    "صعود کردن": "REJECT",
+    "اوج گرفتن": "REJECT"
+  },
+  "generated-023": {
+    "محل پرواز دادن": "REJECT",
+    "محل جهاندن": "REJECT",
+    "محل خیزاندن": "REJECT",
+    "محل صعوداندن": "REJECT",
+    "محل اوجاندن": "REJECT"
+  },
+  "generated-025": {
+    "تابان": "DIRECT",
+    "فروزان": "DIRECT",
+    "منیر": "DIRECT",
+    "تابنده": "DIRECT",
+    "پرتو افکن": "REJECT"
+  },
+  "generated-022": {
+    "پرواز دادن": "DIRECT",
+    "جهاندن": "REJECT",
+    "خیزاندن": "REJECT",
+    "صعوداندن": "REJECT",
+    "اوجاندن": "REJECT"
+  },
+  "generated-028": {
+    "پذیرنده": "REJECT",
+    "قابلیت دار": "REJECT",
+    "ظرفیت دار": "ACCEPT",
+    "تیزهوش": "REJECT"
+  },
+  "generated-029": {
+    "قانع کردن": "DIRECT",
+    "رضایت جلب کردن": "REJECT",
+    "متقاعد ساختن": "DIRECT",
+    "به کرسی نشاندن": "REJECT",
+    "راضی کردن": "DIRECT"
+  },
+  "generated-027": {
+    "بسط یافته": "REJECT",
+    "گسترده": "REJECT",
+    "مشروح": "DIRECT",
+    "دقیق": "REJECT",
+    "کامل": "REJECT"
+  },
+  "generated-024": {
+    "سند پرواز دادن": "REJECT",
+    "سند جهاندن": "REJECT",
+    "سند خیزاندن": "REJECT",
+    "سند صعوداندن": "REJECT",
+    "سند اوجاندن": "REJECT"
+  },
+  "generated-031": {
+    "ممکن": "DIRECT",
+    "احتمالی": "DIRECT",
+    "شدنی": "REJECT",
+    "قابل تصور": "REJECT"
+  },
+  "generated-030": {
+    "درون مایه": "ACCEPT",
+    "مضمون": "DIRECT",
+    "مطلب": "ACCEPT",
+    "محتویات": "DIRECT"
+  },
+  "generated-026": {
+    "استوار": "DIRECT",
+    "پایدار": "ACCEPT",
+    "محکم": "DIRECT",
+    "پابرجا": "ACCEPT"
+  },
+  "generated-032": {
+    "تولید محتوا": "DIRECT",
+    "ساختن محتوا": "DIRECT",
+    "ایجاد محتوا": "DIRECT",
+    "پرداختن به محتوا": "REJECT",
+    "خلق محتوا": "ACCEPT"
+  },
+  "generated-033": {
+    "مغزداری": "REJECT",
+    "پر بار": "ACCEPT",
+    "مفید": "REJECT",
+    "مضمون دار": "DIRECT"
+  },
+  "generated-034": {
+    "خالی کردن محتوا": "ACCEPT",
+    "بی محتوا کردن": "DIRECT",
+    "زدودن محتوا": "DIRECT",
+    "تهی کردن": "ACCEPT",
+    "از محتوا تهی کردن": "ACCEPT"
+  },
+  "generated-035": {
+    "محتوا محوری": "ACCEPT",
+    "محتوا گرایی": "DIRECT",
+    "اهمیت دادن به محتوا": "REJECT",
+    "تمرکز بر محتوا": "REJECT",
+    "محتوا مداری": "DIRECT"
+  },
+  "generated-036": {
+    "محتوا محور": "DIRECT",
+    "محتوا دوست": "REJECT",
+    "محتوا پسند": "REJECT",
+    "محتوا دار": "REJECT",
+    "محتوا مدار": "DIRECT"
+  },
+  "generated-038": {
+    "نویسنده محتوا": "DIRECT",
+    "تولید کننده محتوا": "DIRECT",
+    "محتوا ساز": "DIRECT",
+    "خالق محتوا": "ACCEPT",
+    "محتوا پرداز": "REJECT"
+  },
+  "generated-037": {
+    "نگاه به محتوا": "REJECT",
+    "بررسی محتوا": "REJECT",
+    "توجه به محتوا": "REJECT",
+    "محتوا سنجی": "REJECT",
+    "محتوا شناسی": "REJECT"
+  },
+  "generated-039": {
+    "نگارش محتوا": "DIRECT",
+    "تولید محتوا": "ACCEPT",
+    "ساخت محتوا": "ACCEPT",
+    "خلق محتوا": "REJECT",
+    "پردازش محتوا": "REJECT"
+  },
+  "generated-043": {
+    "شناخت محتوا": "REJECT",
+    "درک محتوا": "REJECT",
+    "تحلیل محتوا": "ACCEPT",
+    "محتوا سنجی": "REJECT",
+    "بررسی محتوا": "REJECT"
+  },
+  "generated-040": {
+    "خلق محتوا": "REJECT",
+    "تولید محتوا": "ACCEPT",
+    "ساخت محتوا": "ACCEPT",
+    "نگارش محتوا": "ACCEPT",
+    "پرداختن به محتوا": "REJECT"
+  },
+  "generated-041": {
+    "تولید کننده محتوا": "REJECT",
+    "نویسنده محتوا": "REJECT",
+    "محتوا ساز": "REJECT",
+    "خالق محتوا": "REJECT",
+    "محتوا نگار": "REJECT"
+  },
+  "generated-042": {
+    "ارزیابی محتوا": "DIRECT",
+    "سنجش محتوا": "DIRECT",
+    "بررسی محتوا": "REJECT",
+    "تحلیل محتوا": "ACCEPT",
+    "محتوا شناسی": "REJECT"
+  },
+  "generated-044": {
+    "تولید کننده محتوا": "DIRECT",
+    "نویسنده محتوا": "ACCEPT",
+    "محتوا نگار": "DIRECT",
+    "خالق محتوا": "DIRECT",
+    "محتوا پرداز": "REJECT"
+  },
+  "generated-045": {
+    "بی محتوا": "ACCEPT",
+    "تهی شده": "ACCEPT",
+    "خالی از محتوا": "DIRECT",
+    "فاقد محتوا": "ACCEPT",
+    "بی مایه": "REJECT"
+  },
+  "generated-046": {
+    "پر بار کردن": "ACCEPT",
+    "محتوا بخشیدن": "DIRECT",
+    "مضمون دادن": "ACCEPT",
+    "مغزداری کردن": "ACCEPT",
+    "غنی کردن": "ACCEPT"
+  },
+  "generated-047": {
+    "خالی کردن محتوا": "ACCEPT",
+    "بی محتوا کردن": "DIRECT",
+    "زدودن محتوا": "DIRECT",
+    "تهی کردن": "ACCEPT",
+    "از محتوا تهی کردن": "DIRECT"
+  },
+  "generated-052": {
+    "تولید محتوا": "DIRECT",
+    "خلق محتوا": "REJECT",
+    "ایجاد محتوا": "ACCEPT",
+    "ساخت محتوا": "DIRECT",
+    "پردازش محتوا": "REJECT"
+  },
+  "generated-050": {
+    "ارزیاب": "ACCEPT",
+    "سنجشگر": "REJECT",
+    "ناظر": "REJECT",
+    "بازبین": "REJECT",
+    "تحلیل گر": "REJECT"
+  },
+  "generated-051": {
+    "حیله گر": "REJECT",
+    "مکار": "REJECT",
+    "دغل": "REJECT",
+    "فریبکار": "REJECT",
+    "نیرنگ باز": "REJECT"
+  },
+  "generated-049": {
+    "عاقل": "DIRECT",
+    "هوشیار": "REJECT",
+    "دانا": "DIRECT",
+    "فرزانه": "DIRECT",
+    "بصیر": "ACCEPT"
+  },
+  "generated-053": {
+    "پرمحتوا": "DIRECT",
+    "غنی": "ACCEPT",
+    "مفید": "REJECT",
+    "باارزش": "REJECT",
+    "پربار": "ACCEPT"
+  },
+  "generated-054": {
+    "نوشتن محتوا": "REJECT",
+    "تولید متن": "ACCEPT",
+    "کپی رایتینگ": "REJECT",
+    "نگارش محتوا": "DIRECT",
+    "تولید محتوای متنی": "REJECT"
+  },
+  "generated-055": {
+    "تنظیم محتوا": "REJECT",
+    "آرایش محتوا": "REJECT",
+    "چیدمان محتوا": "REJECT",
+    "ساختاردهی محتوا": "REJECT",
+    "سازماندهی محتوا": "REJECT"
+  },
+  "generated-056": {
+    "تولیدکننده محتوا": "DIRECT",
+    "سازنده محتوا": "DIRECT",
+    "نویسنده محتوا": "ACCEPT",
+    "خالق محتوا": "ACCEPT",
+    "مدیر محتوا": "REJECT"
+  },
+  "generated-048": {
+    "شجاع": "DIRECT",
+    "دلیر": "DIRECT",
+    "جسور": "DIRECT",
+    "بی باک": "DIRECT",
+    "نترس": "ACCEPT"
+  },
+  "generated-058": {
+    "محتوا محور": "DIRECT",
+    "محتوا دوست": "REJECT",
+    "محتوا پسند": "REJECT",
+    "محتوا گرا": "DIRECT",
+    "محتوا خواه": "REJECT"
+  },
+  "generated-057": {
+    "حذف محتوا": "ACCEPT",
+    "پاک کردن محتوا": "REJECT",
+    "زدودن محتوا": "REJECT",
+    "تخلیه محتوا": "ACCEPT",
+    "بی محتوا کردن": "REJECT"
+  },
+  "generated-059": {
+    "محتوا بین": "REJECT",
+    "محتوا نگر": "DIRECT",
+    "محتوا سنج": "REJECT",
+    "محتوا کاو": "REJECT",
+    "محتوا پژوه": "REJECT"
+  },
+  "generated-060": {
+    "بسیار": "DIRECT",
+    "زیاد": "DIRECT",
+    "انبوه": "ACCEPT",
+    "متعدد": "ACCEPT",
+    "گسترده": "REJECT"
+  },
+  "generated-061": {
+    "استوار": "DIRECT",
+    "ثابت": "ACCEPT",
+    "پابرجا": "DIRECT",
+    "ماندگار": "DIRECT"
+  },
+  "generated-062": {
+    "پیروز شدن": "DIRECT",
+    "کامیاب شدن": "DIRECT",
+    "بهروزی یافتن": "REJECT",
+    "موفق گردیدن": "DIRECT"
+  },
+  "generated-065": {
+    "باتقوا": "REJECT",
+    "پارس": "REJECT",
+    "پرهیزکار": "DIRECT",
+    "زاهد": "ACCEPT",
+    "عابد": "ACCEPT"
+  },
+  "generated-064": {
+    "خوشایند": "DIRECT",
+    "مطبوع": "DIRECT",
+    "لذت بخش": "DIRECT",
+    "دلنشین": "DIRECT",
+    "خوش": "ACCEPT"
+  },
+  "generated-063": {
+    "مغلوب شدن": "DIRECT",
+    "ناکامی یافتن": "DIRECT",
+    "شکست یافتن": "DIRECT",
+    "عقب نشینی کردن": "REJECT"
+  },
+  "generated-066": {
+    "جسور": "DIRECT",
+    "بی پروا": "DIRECT",
+    "دلیر": "DIRECT",
+    "تهورآمیز": "ACCEPT",
+    "بی باکانه": "REJECT"
+  },
+  "generated-067": {
+    "متفکر": "DIRECT",
+    "متأمل": "ACCEPT",
+    "خردمند": "DIRECT",
+    "عمیق فکر": "REJECT",
+    "ژرف اندیش": "ACCEPT"
+  },
+  "generated-068": {
+    "غضبناک": "DIRECT",
+    "برآشفته": "DIRECT",
+    "خشم آلود": "DIRECT",
+    "عصبانی": "DIRECT",
+    "تندخو": "ACCEPT"
+  },
+  "generated-069": {
+    "وسیع": "DIRECT",
+    "فراخ": "DIRECT",
+    "پهناور": "DIRECT",
+    "عریض": "ACCEPT",
+    "بزرگ": "REJECT"
+  },
+  "generated-071": {
+    "سنگین": "REJECT",
+    "پیچیده": "ACCEPT",
+    "دشواریاب": "REJECT",
+    "عقده ای": "REJECT"
+  },
+  "generated-072": {
+    "درخشان": "DIRECT",
+    "پرتو افشان": "ACCEPT",
+    "نورانی": "DIRECT",
+    "روشن": "ACCEPT",
+    "درخشنده": "DIRECT"
+  },
+  "generated-073": {
+    "ملایم": "ACCEPT",
+    "متعادل": "DIRECT",
+    "خوش هوا": "REJECT",
+    "خنک": "REJECT",
+    "مطبوع": "REJECT"
+  },
+  "generated-074": {
+    "خوب": "DIRECT",
+    "پسندیده": "DIRECT",
+    "خوش": "ACCEPT",
+    "عالی": "ACCEPT",
+    "مطلوب": "ACCEPT"
+  },
+  "generated-070": {
+    "متراکم": "DIRECT",
+    "جمع وجور": "REJECT",
+    "کوچک": "REJECT",
+    "محدود": "REJECT"
+  },
+  "generated-075": {
+    "بد": "ACCEPT",
+    "نامطلوب": "DIRECT",
+    "ناگوار": "DIRECT",
+    "ناخوشایند": "DIRECT",
+    "نامطبوع": "DIRECT"
+  },
+  "generated-078": {
+    "تمیز": "DIRECT",
+    "منزه": "DIRECT",
+    "پاک": "DIRECT",
+    "براق": "REJECT",
+    "نیکو": "REJECT"
+  },
+  "generated-077": {
+    "ضعیف": "ACCEPT",
+    "عاجز": "DIRECT",
+    "بی قدرت": "DIRECT",
+    "نحیف": "REJECT"
+  },
+  "generated-076": {
+    "قدرتمند": "DIRECT",
+    "قادر": "DIRECT",
+    "نیرومند": "DIRECT",
+    "پرقدرت": "DIRECT",
+    "توانمند": "DIRECT"
+  },
+  "generated-080": {
+    "مخفی": "DIRECT",
+    "پوشیده": "DIRECT",
+    "مستور": "ACCEPT",
+    "مستتر": "DIRECT"
+  },
+  "generated-079": {
+    "کثیف": "DIRECT",
+    "ناپاک": "DIRECT",
+    "چرکین": "DIRECT",
+    "پلشت": "ACCEPT"
+  },
+  "generated-081": {
+    "عیان": "DIRECT",
+    "پدیدار": "REJECT",
+    "معلوم": "DIRECT",
+    "ظاهر": "REJECT",
+    "واضح": "DIRECT"
+  },
+  "generated-082": {
+    "آسان": "DIRECT",
+    "بی آلایش": "DIRECT",
+    "بی تکلف": "ACCEPT",
+    "معمولی": "ACCEPT",
+    "روشن": "REJECT"
+  },
+  "generated-083": {
+    "ارزشمند": "DIRECT",
+    "گران": "ACCEPT",
+    "نفیس": "ACCEPT",
+    "قیمتی": "REJECT"
+  },
+  "generated-084": {
+    "صبور": "DIRECT",
+    "بردبار": "DIRECT",
+    "متین": "REJECT",
+    "آرام": "REJECT",
+    "حلیم": "REJECT"
+  },
+  "generated-085": {
+    "حیله گر": "REJECT",
+    "مکار": "REJECT",
+    "فریبکار": "DIRECT",
+    "دغل": "REJECT",
+    "روباه صفت": "REJECT"
+  },
+  "generated-086": {
+    "پوشیده": "ACCEPT",
+    "مستور": "DIRECT",
+    "محتجب": "ACCEPT",
+    "مخفی": "REJECT",
+    "مکتوم": "ACCEPT"
+  },
+  "generated-087": {
+    "فعال": "ACCEPT",
+    "پرشور": "ACCEPT",
+    "پرجنب وجوش": "DIRECT",
+    "پوی": "ACCEPT",
+    "پرتحرک": "ACCEPT"
+  },
+  "generated-090": {
+    "گذراندن": "ACCEPT",
+    "عبور کردن": "ACCEPT",
+    "طی کردن": "DIRECT",
+    "سپری کردن": "REJECT",
+    "رد شدن": "REJECT"
+  },
+  "generated-088": {
+    "صدا": "REJECT",
+    "آوا": "REJECT",
+    "انعکاس صدا": "REJECT",
+    "تکرار صدا": "REJECT",
+    "بازتاب صوت": "ACCEPT"
+  },
+  "generated-091": {
+    "بینش": "DIRECT",
+    "هوش": "REJECT",
+    "فهم": "REJECT",
+    "درایت": "ACCEPT",
+    "تیزهوشی": "REJECT"
+  },
+  "generated-089": {
+    "تابان": "ACCEPT",
+    "درخشان": "DIRECT",
+    "نورانی": "ACCEPT",
+    "برق زننده": "REJECT",
+    "تابنده": "DIRECT"
+  },
+  "generated-092": {
+    "فکر کردن": "DIRECT",
+    "اندیشه کردن": "DIRECT",
+    "تفکر کردن": "DIRECT",
+    "تأمل کردن": "DIRECT",
+    "اندیشه نمودن": "DIRECT"
+  },
+  "generated-093": {
+    "پهن کردن": "DIRECT",
+    "پخش کردن": "ACCEPT",
+    "گشودن": "REJECT",
+    "باز کردن": "ACCEPT",
+    "پخشیدن": "ACCEPT"
+  },
+  "generated-094": {
+    "بی پروا": "REJECT",
+    "گستاخ": "REJECT",
+    "جسور": "REJECT",
+    "بی باک": "REJECT",
+    "بی شرم": "REJECT"
+  },
+  "generated-095": {
+    "خانه نشین": "REJECT",
+    "منزوی": "ACCEPT",
+    "گوشه گیر": "ACCEPT",
+    "منعزل": "ACCEPT",
+    "منزوی نشین": "REJECT"
+  },
+  "generated-097": {
+    "دایره ای": "DIRECT",
+    "کروی": "DIRECT",
+    "مدور": "DIRECT",
+    "استوانه ای": "REJECT",
+    "کره ای شکل": "ACCEPT"
+  },
+  "generated-098": {
+    "چهارگوش": "ACCEPT",
+    "چهارضلعی": "REJECT",
+    "مربعی شکل": "REJECT",
+    "مکعبی": "REJECT",
+    "مستطیلی": "REJECT"
+  },
+  "generated-101": {
+    "هموار": "DIRECT",
+    "مسطح": "ACCEPT",
+    "یکنواخت": "REJECT",
+    "بدون پستی بلندی": "REJECT",
+    "همتراز": "REJECT"
+  },
+  "generated-103": {
+    "کوچک": "DIRECT",
+    "خرد": "REJECT",
+    "کوچک اندام": "ACCEPT",
+    "ناچیز": "REJECT",
+    "مینیاتوری": "ACCEPT"
+  },
+  "generated-102": {
+    "پستی بلند": "REJECT",
+    "غیر مسطح": "ACCEPT",
+    "زبر": "ACCEPT",
+    "خشن": "ACCEPT",
+    "دندانه دار": "ACCEPT"
+  },
+  "generated-100": {
+    "تخم مرغی": "DIRECT",
+    "کشیده": "REJECT",
+    "بیضوی": "DIRECT",
+    "بیضی شکل": "ACCEPT",
+    "دوکی شکل": "REJECT"
+  },
+  "generated-096": {
+    "بینا": "REJECT",
+    "آگاه": "ACCEPT",
+    "هشیار": "REJECT",
+    "دانا": "REJECT",
+    "تیزبین": "DIRECT"
+  },
+  "generated-099": {
+    "سه گوش": "REJECT",
+    "سه ضلعی": "DIRECT",
+    "هرمی": "REJECT",
+    "مخروطی": "REJECT",
+    "مثلثی شکل": "REJECT"
+  },
+  "generated-104": {
+    "بزرگ": "ACCEPT",
+    "گنده": "DIRECT",
+    "کلان": "ACCEPT",
+    "تنومند": "ACCEPT",
+    "چاق": "ACCEPT"
+  },
+  "generated-106": {
+    "نحیف": "DIRECT",
+    "باریک": "DIRECT",
+    "استخوانی": "ACCEPT",
+    "کم گوشت": "ACCEPT",
+    "ضعیف": "REJECT"
+  },
+  "generated-105": {
+    "فربه": "DIRECT",
+    "تپل": "DIRECT",
+    "گوشتالو": "DIRECT",
+    "پرگوشت": "ACCEPT",
+    "سمن": "REJECT"
+  },
+  "generated-107": {
+    "سخت": "DIRECT",
+    "محکم": "DIRECT",
+    "جامد": "DIRECT",
+    "استوار": "ACCEPT",
+    "غیر قابل انعطاف": "ACCEPT"
+  },
+  "generated-108": {
+    "نرم": "ACCEPT",
+    "ملایم": "DIRECT",
+    "نازک": "ACCEPT",
+    "ظریف": "DIRECT",
+    "حساس": "REJECT"
+  },
+  "generated-109": {
+    "پژمرده": "ACCEPT",
+    "چین خورده": "DIRECT",
+    "مچاله": "DIRECT",
+    "ناصاف": "REJECT",
+    "فرسوده": "REJECT"
+  },
+  "generated-110": {
+    "عمیق": "DIRECT",
+    "فرورفته": "REJECT",
+    "حفره دار": "REJECT",
+    "ژرف": "REJECT",
+    "مقعر": "ACCEPT"
+  },
+  "generated-111": {
+    "بیرون زده": "ACCEPT",
+    "متورم": "REJECT",
+    "برآمده": "DIRECT",
+    "محدب": "ACCEPT",
+    "نمایان": "DIRECT"
+  },
+  "generated-112": {
+    "پوچ": "DIRECT",
+    "تهی": "DIRECT",
+    "خالی": "REJECT",
+    "میان تهی": "DIRECT",
+    "بی محتوا": "DIRECT"
+  },
+  "generated-114": {
+    "روشن": "REJECT",
+    "زلال": "DIRECT",
+    "آشکار": "REJECT",
+    "پیدا": "REJECT",
+    "واضح": "ACCEPT"
+  },
+  "generated-113": {
+    "جامد": "REJECT",
+    "پر": "REJECT",
+    "سفت": "REJECT",
+    "مملو": "DIRECT",
+    "پرتراکم": "ACCEPT"
+  },
+  "generated-116": {
+    "طویل": "DIRECT",
+    "دراز": "DIRECT",
+    "ممتد": "DIRECT",
+    "باریک": "REJECT",
+    "بلند": "ACCEPT"
+  },
+  "generated-115": {
+    "کدر": "REJECT",
+    "تار": "REJECT",
+    "غیر شفاف": "ACCEPT",
+    "مبهم": "REJECT",
+    "تیره": "REJECT"
+  },
+  "generated-119": {
+    "آینده": "REJECT",
+    "بعدی": "DIRECT",
+    "پیش رو": "ACCEPT",
+    "مستقبل": "DIRECT",
+    "بعدازاین": "REJECT"
+  },
+  "generated-117": {
+    "آنی": "DIRECT",
+    "بی درنگ": "DIRECT",
+    "عاجل": "DIRECT",
+    "سریع": "DIRECT",
+    "بلافاصله": "REJECT",
+    "زود": "REJECT"
+  },
+  "generated-120": {
+    "آنی": "DIRECT",
+    "فوری": "DIRECT",
+    "دمی": "ACCEPT",
+    "زودگذر": "ACCEPT",
+    "ناپایدار": "REJECT"
+  },
+  "generated-118": {
+    "کهن": "DIRECT",
+    "باستانی": "DIRECT",
+    "قدیمی": "DIRECT",
+    "ازلی": "ACCEPT",
+    "دیرینه": "DIRECT",
+    "کهنسال": "ACCEPT"
+  },
+  "generated-122": {
+    "گهگاهی": "DIRECT",
+    "هر از گاهی": "DIRECT",
+    "بعضی اوقات": "REJECT",
+    "نامنظم": "ACCEPT",
+    "متناوب": "ACCEPT"
+  },
+  "generated-121": {
+    "مداوم": "DIRECT",
+    "دائم": "DIRECT",
+    "همیشگی": "ACCEPT",
+    "یکریز": "DIRECT",
+    "بی وقفه": "DIRECT",
+    "متصل": "ACCEPT"
+  },
+  "generated-123": {
+    "پیش رس": "DIRECT",
+    "زود هنگام": "DIRECT",
+    "نابهنگام": "REJECT",
+    "قبل از موعد": "REJECT"
+  },
+  "generated-124": {
+    "دیر هنگام": "DIRECT",
+    "پس رس": "DIRECT",
+    "دیر موقع": "DIRECT",
+    "بعد از موعد": "REJECT"
+  },
+  "generated-127": {
+    "سریع": "DIRECT",
+    "چابک": "ACCEPT",
+    "شتابان": "ACCEPT",
+    "زود": "REJECT",
+    "پرشتاب": "DIRECT"
+  },
+  "generated-126": {
+    "آهسته": "DIRECT",
+    "آرام": "REJECT",
+    "بطیء": "DIRECT",
+    "سست": "REJECT",
+    "کاهنده": "REJECT"
+  },
+  "generated-125": {
+    "یکباره": "DIRECT",
+    "غیرمنتظره": "DIRECT",
+    "بغتتاً": "DIRECT",
+    "بی خبر": "REJECT",
+    "فجأه": "DIRECT"
+  },
+  "generated-128": {
+    "کم": "DIRECT",
+    "قلیل": "DIRECT",
+    "ناچیز": "REJECT",
+    "مختصر": "REJECT",
+    "جزئی": "ACCEPT"
+  },
+  "generated-129": {
+    "تمام": "ACCEPT",
+    "تام": "DIRECT",
+    "جامع": "ACCEPT",
+    "بی نقص": "DIRECT",
+    "فراگیر": "REJECT"
+  },
+  "generated-130": {
+    "ناتمام": "ACCEPT",
+    "نیمه کاره": "ACCEPT",
+    "معیوب": "ACCEPT",
+    "نارسا": "DIRECT",
+    "کاستی دار": "DIRECT"
+  },
+  "generated-131": {
+    "میانه": "DIRECT",
+    "معمولی": "ACCEPT",
+    "حد وسط": "REJECT",
+    "متعادل": "ACCEPT",
+    "نرمال": "ACCEPT"
+  },
+  "generated-132": {
+    "بیشترین": "DIRECT",
+    "اوج": "REJECT",
+    "نهایت": "ACCEPT",
+    "غایت": "REJECT",
+    "بالاترین": "DIRECT"
+  },
+  "generated-133": {
+    "کمترین": "DIRECT",
+    "پایین ترین": "ACCEPT",
+    "اقل": "DIRECT",
+    "ناچیزترین": "REJECT"
+  },
+  "generated-134": {
+    "کم": "REJECT",
+    "مختصر": "REJECT",
+    "کوتاه": "REJECT",
+    "ناچیز": "REJECT",
+    "معدود": "REJECT"
+  },
+  "generated-135": {
+    "بی حد": "DIRECT",
+    "بی پایان": "DIRECT",
+    "نامتناهی": "DIRECT",
+    "بی کران": "DIRECT",
+    "بی شمار": "ACCEPT"
+  },
+  "generated-137": {
+    "ناقص": "ACCEPT",
+    "ناکافی": "ACCEPT",
+    "کمبود": "REJECT",
+    "پایین تر از حد": "DIRECT",
+    "محدود": "REJECT"
+  },
+  "generated-136": {
+    "زیاده از حد": "DIRECT",
+    "افراطی": "DIRECT",
+    "مفرط": "DIRECT",
+    "بیش از اندازه": "DIRECT",
+    "غیرمعمول": "REJECT"
+  },
+  "generated-138": {
+    "حدودی": "ACCEPT",
+    "نزدیک به": "REJECT",
+    "تخمینی": "DIRECT",
+    "غیردقیق": "ACCEPT",
+    "تقریباً": "REJECT"
+  },
+  "generated-139": {
+    "پایدار": "DIRECT",
+    "ماندگار": "ACCEPT",
+    "استوار": "DIRECT",
+    "همیشگی": "ACCEPT",
+    "بی تغییر": "DIRECT"
+  },
+  "generated-140": {
+    "ناپایدار": "ACCEPT",
+    "دگرگون شونده": "ACCEPT",
+    "تغییرپذیر": "DIRECT",
+    "بی ثبات": "DIRECT",
+    "ناماندگار": "ACCEPT"
+  },
+  "generated-141": {
+    "پیاپی": "DIRECT",
+    "مداوم": "REJECT",
+    "بارها": "REJECT",
+    "تکراری": "DIRECT",
+    "پی درپی": "ACCEPT"
+  },
+  "generated-142": {
+    "کمیاب": "DIRECT",
+    "نایاب": "DIRECT",
+    "غیرمعمول": "ACCEPT",
+    "استثنایی": "ACCEPT"
+  },
+  "generated-145": {
+    "فروتن": "DIRECT",
+    "افتاده": "ACCEPT",
+    "خاکسار": "DIRECT",
+    "کم ادعا": "DIRECT",
+    "بی تکبر": "DIRECT"
+  },
+  "generated-144": {
+    "بخشنده": "DIRECT",
+    "دست و دل باز": "DIRECT",
+    "جوانمرد": "ACCEPT",
+    "کریم": "DIRECT",
+    "گشاده دست": "DIRECT"
+  },
+  "generated-146": {
+    "با وفا": "DIRECT",
+    "پایبند": "ACCEPT",
+    "متعهد": "ACCEPT",
+    "با ثبات": "REJECT",
+    "امین": "ACCEPT"
+  },
+  "generated-148": {
+    "عادل": "DIRECT",
+    "دادگر": "DIRECT",
+    "بی طرف": "ACCEPT",
+    "حق شناس": "ACCEPT",
+    "با انصاف": "DIRECT"
+  },
+  "generated-149": {
+    "بخشنده": "REJECT",
+    "عفو کننده": "DIRECT",
+    "چشم پوش": "DIRECT",
+    "متسامح": "DIRECT",
+    "سهل گیر": "REJECT"
+  },
+  "generated-147": {
+    "متعهد": "ACCEPT",
+    "وظیفه شناس": "ACCEPT",
+    "پاسخگو": "DIRECT",
+    "با مسئولیت": "ACCEPT",
+    "ملتزم": "ACCEPT"
+  },
+  "generated-150": {
+    "مؤدب": "DIRECT",
+    "با نزاکت": "DIRECT",
+    "خوش رفتار": "ACCEPT",
+    "با احترام": "ACCEPT",
+    "با فرهنگ": "ACCEPT"
+  },
+  "generated-151": {
+    "امیدوار": "ACCEPT",
+    "مثبت اندیش": "DIRECT",
+    "خوش دل": "REJECT",
+    "با نشاط": "REJECT",
+    "شاداب": "REJECT"
+  },
+  "generated-152": {
+    "ناامید": "REJECT",
+    "منفی باف": "ACCEPT",
+    "بدگمان": "DIRECT",
+    "مأیوس": "REJECT",
+    "تاریک بین": "DIRECT"
+  },
+  "generated-153": {
+    "بدخواه": "REJECT",
+    "رشک ورز": "REJECT",
+    "کینه توز": "REJECT",
+    "بخیل": "REJECT",
+    "چشم تنگ": "DIRECT"
+  },
+  "generated-155": {
+    "ایثارگر": "DIRECT",
+    "از خود گذشته": "ACCEPT",
+    "جان بر کف": "REJECT",
+    "فداشونده": "REJECT",
+    "جان فشان": "DIRECT"
+  },
+  "generated-154": {
+    "خودپسند": "ACCEPT",
+    "خودبین": "ACCEPT",
+    "مغرور": "REJECT",
+    "متکبر": "REJECT",
+    "نخوت طلب": "REJECT"
+  },
+  "generated-156": {
+    "عالم": "ACCEPT",
+    "دانشمند": "ACCEPT",
+    "آگاه": "DIRECT",
+    "با اطلاع": "REJECT",
+    "خردمند": "DIRECT"
+  },
+  "generated-160": {
+    "منظم": "ACCEPT",
+    "مرتب": "ACCEPT",
+    "قانونمند": "REJECT",
+    "با قاعده": "ACCEPT",
+    "دقیق": "REJECT"
+  },
+  "generated-158": {
+    "زودباور": "ACCEPT",
+    "ساده دل": "REJECT",
+    "خام": "REJECT",
+    "بی تجربه": "ACCEPT",
+    "بی شیله پیله": "DIRECT"
+  },
+  "generated-161": {
+    "نامنظم": "ACCEPT",
+    "بی نظم": "DIRECT",
+    "بی قاعده": "ACCEPT",
+    "آشفته": "ACCEPT",
+    "درهم": "REJECT"
+  },
+  "generated-159": {
+    "باهوش": "ACCEPT",
+    "تیزهوش": "DIRECT",
+    "دانا": "REJECT",
+    "هوشیار": "ACCEPT",
+    "بصیر": "REJECT"
+  },
+  "generated-157": {
+    "جاهل": "DIRECT",
+    "بی سواد": "ACCEPT",
+    "ناآگاه": "DIRECT",
+    "بی خبر": "REJECT",
+    "کم دانش": "ACCEPT"
+  },
+  "generated-162": {
+    "خوش رو": "ACCEPT",
+    "خوش رفتار": "DIRECT",
+    "اجتماعی": "REJECT",
+    "با محبت": "REJECT",
+    "مهربان": "ACCEPT"
+  },
+  "generated-163": {
+    "بد اخلاق": "ACCEPT",
+    "تندخو": "ACCEPT",
+    "عبوس": "ACCEPT",
+    "بد رفتار": "DIRECT",
+    "ناخوشایند": "REJECT"
+  },
+  "generated-165": {
+    "منزوی": "ACCEPT",
+    "گوشه گیر": "ACCEPT",
+    "غیر اجتماعی": "ACCEPT",
+    "تنها": "REJECT",
+    "دوری گزین": "REJECT"
+  },
+  "generated-164": {
+    "اجتماعی": "ACCEPT",
+    "خوش معاشرت": "ACCEPT",
+    "محبوب": "ACCEPT",
+    "مردم دوست": "DIRECT",
+    "با مردم": "REJECT"
+  },
+  "generated-167": {
+    "مدبر": "DIRECT",
+    "دوراندیش": "ACCEPT",
+    "با فکر": "ACCEPT",
+    "عاقل": "REJECT",
+    "با درایت": "DIRECT"
+  },
+  "generated-166": {
+    "انتقام جو": "ACCEPT",
+    "کینه توز": "DIRECT",
+    "بدخواه": "ACCEPT",
+    "حسود": "REJECT",
+    "کینه ورز": "ACCEPT"
+  },
+  "generated-170": {
+    "مخ": "DIRECT",
+    "دماغ": "DIRECT",
+    "سر": "REJECT",
+    "قوه عقل": "REJECT"
+  },
+  "generated-169": {
+    "دل": "DIRECT",
+    "فؤاد": "DIRECT",
+    "صمیم": "REJECT",
+    "نهاد": "REJECT"
+  },
+  "generated-168": {
+    "بی فکر": "ACCEPT",
+    "ناآگاه": "REJECT",
+    "بی درایت": "DIRECT",
+    "بی خرد": "ACCEPT",
+    "نابخرد": "ACCEPT"
+  },
+  "generated-171": {
+    "شش": "DIRECT",
+    "جگر سفید": "REJECT",
+    "عضو تنفسی": "REJECT",
+    "اندام تنفسی": "REJECT"
+  },
+  "generated-173": {
+    "شکم": "DIRECT",
+    "دل": "REJECT",
+    "انبان": "REJECT",
+    "کیسه گوارش": "REJECT"
+  },
+  "generated-174": {
+    "قلوه": "REJECT",
+    "گرده": "REJECT",
+    "عضو دفعی": "REJECT",
+    "اندام دفعی": "REJECT"
+  },
+  "generated-172": {
+    "جگر": "DIRECT",
+    "کبده": "REJECT",
+    "عضو کبدی": "REJECT",
+    "اندام کبدی": "REJECT"
+  },
+  "generated-176": {
+    "عظم": "DIRECT",
+    "پیکر": "REJECT",
+    "اسکلت": "REJECT",
+    "قلم": "REJECT"
+  },
+  "generated-175": {
+    "امعا": "DIRECT",
+    "احشا": "REJECT",
+    "مصران": "REJECT",
+    "عضو گوارشی": "REJECT"
+  },
+  "generated-143": {
+    "دراز": "DIRECT",
+    "بلند": "ACCEPT",
+    "مدید": "DIRECT",
+    "ممتد": "DIRECT",
+    "کشیده": "DIRECT"
+  },
+  "generated-177": {
+    "عضله": "DIRECT",
+    "گوشت": "REJECT",
+    "پیکر": "REJECT",
+    "بافت عضلانی": "REJECT"
+  },
+  "generated-178": {
+    "جلود": "DIRECT",
+    "بشره": "DIRECT",
+    "رویه": "ACCEPT",
+    "جلد": "DIRECT"
+  },
+  "generated-179": {
+    "دم": "DIRECT",
+    "عرق": "REJECT",
+    "ماده حیاتی": "REJECT",
+    "مایع حیات": "REJECT"
+  },
+  "generated-181": {
+    "جوش": "REJECT",
+    "برآمدگی": "REJECT",
+    "توده": "REJECT",
+    "بافت ترشحی": "REJECT"
+  },
+  "generated-180": {
+    "رگ": "REJECT",
+    "پی": "REJECT",
+    "تار عصبی": "REJECT",
+    "بافت عصبی": "REJECT"
+  },
+  "generated-183": {
+    "چنگ": "REJECT",
+    "پنجه": "REJECT",
+    "ماده شاخی": "REJECT",
+    "پوشش انگشت": "REJECT"
+  },
+  "generated-182": {
+    "زلف": "REJECT",
+    "گیسو": "REJECT",
+    "پشم": "REJECT",
+    "تار": "REJECT"
+  },
+  "generated-184": {
+    "سندان": "REJECT",
+    "عاج": "REJECT",
+    "دندانه": "REJECT",
+    "دندانک": "REJECT"
+  },
+  "generated-185": {
+    "دیده": "REJECT",
+    "بصر": "REJECT",
+    "نگاه": "REJECT",
+    "عین": "REJECT"
+  },
+  "generated-186": {
+    "سمع": "REJECT",
+    "شنوا": "REJECT",
+    "آذین": "REJECT",
+    "عضو شنوایی": "REJECT"
+  },
+  "generated-187": {
+    "دماغ": "DIRECT",
+    "پوزه": "REJECT",
+    "منخر": "REJECT",
+    "عضو بویایی": "REJECT"
+  },
+  "generated-188": {
+    "فم": "DIRECT",
+    "لب": "REJECT",
+    "کام": "REJECT",
+    "سخن": "REJECT"
+  },
+  "generated-189": {
+    "حلق": "DIRECT",
+    "نای": "REJECT",
+    "مری": "REJECT",
+    "گردن": "REJECT"
+  },
+  "generated-190": {
+    "عنق": "DIRECT",
+    "نای": "REJECT",
+    "حلق": "REJECT",
+    "کله": "REJECT"
+  },
+  "generated-191": {
+    "بطن": "DIRECT",
+    "دل": "ACCEPT",
+    "انبان": "REJECT",
+    "معده": "ACCEPT"
+  },
+  "generated-193": {
+    "قدم": "REJECT",
+    "رجل": "REJECT",
+    "ساق": "REJECT",
+    "کف پا": "REJECT"
+  },
+  "generated-192": {
+    "ید": "DIRECT",
+    "کف": "REJECT",
+    "بازو": "REJECT",
+    "ساعد": "REJECT"
+  },
+  "generated-194": {
+    "ناخوشی": "DIRECT",
+    "مرض": "DIRECT",
+    "کسالت": "DIRECT",
+    "علت": "REJECT"
+  },
+  "generated-195": {
+    "تندرستی": "DIRECT",
+    "عافیت": "DIRECT",
+    "صحت": "DIRECT",
+    "ندرستی": "REJECT"
+  },
+  "generated-196": {
+    "رنج": "DIRECT",
+    "الم": "DIRECT",
+    "آزار": "ACCEPT",
+    "سوزش": "REJECT"
+  },
+  "generated-197": {
+    "معالجه": "DIRECT",
+    "شفا": "ACCEPT",
+    "چاره": "ACCEPT",
+    "مداوا": "DIRECT"
+  },
+  "generated-199": {
+    "جوجه": "REJECT",
+    "برگ": "REJECT",
+    "کوبیده": "REJECT",
+    "چنجه": "REJECT"
+  },
+  "generated-198": {
+    "آبگوشت": "REJECT",
+    "قلیه": "ACCEPT",
+    "آش": "REJECT",
+    "پلو": "REJECT",
+    "چلو": "REJECT"
+  },
+  "generated-200": {
+    "دیزی": "ACCEPT",
+    "شوربا": "REJECT",
+    "آش": "REJECT",
+    "یخنی": "REJECT"
+  },
+  "generated-201": {
+    "چلو": "DIRECT",
+    "دمپختک": "REJECT",
+    "کته": "REJECT",
+    "ته چین": "REJECT"
+  },
+  "generated-203": {
+    "کیک": "REJECT",
+    "باقلوا": "REJECT",
+    "قطاب": "REJECT",
+    "کلوچه": "REJECT"
+  },
+  "generated-202": {
+    "بربری": "REJECT",
+    "سنگک": "REJECT",
+    "تافتون": "REJECT",
+    "لواش": "REJECT"
+  },
+  "generated-204": {
+    "سیب": "REJECT",
+    "پرتقال": "REJECT",
+    "انگور": "REJECT",
+    "انار": "REJECT"
+  },
+  "generated-205": {
+    "کاهو": "REJECT",
+    "خیار": "REJECT",
+    "گوجه": "REJECT",
+    "فلفل": "REJECT"
+  },
+  "generated-207": {
+    "تنبان": "REJECT",
+    "سراویل": "DIRECT",
+    "دامنی": "REJECT",
+    "پاچه": "REJECT"
+  },
+  "generated-206": {
+    "بلوز": "ACCEPT",
+    "شومیز": "ACCEPT",
+    "تونیک": "REJECT",
+    "تی شرت": "REJECT"
+  },
+  "generated-208": {
+    "پاپوش": "DIRECT",
+    "کفشک": "REJECT",
+    "صندل": "REJECT",
+    "گیوه": "REJECT"
+  },
+  "generated-209": {
+    "سرپوش": "ACCEPT",
+    "کلاهک": "REJECT",
+    "کلاهخود": "REJECT",
+    "کلاهچه": "REJECT"
+  },
+  "generated-211": {
+    "لنگ": "REJECT",
+    "دامنچه": "REJECT",
+    "لنگی": "REJECT",
+    "شلوارک": "REJECT"
+  },
+  "generated-210": {
+    "پوشینه": "REJECT",
+    "ساق پوش": "REJECT",
+    "پای پوش": "REJECT",
+    "جورابک": "REJECT"
+  },
+  "generated-212": {
+    "ژاکت": "ACCEPT",
+    "کاپشن": "ACCEPT",
+    "پالتو": "ACCEPT",
+    "اورکت": "REJECT"
+  },
+  "generated-213": {
+    "سربند": "REJECT",
+    "چارقد": "ACCEPT",
+    "مقنعه": "REJECT",
+    "شال": "ACCEPT"
+  },
+  "generated-214": {
+    "کف پوش": "REJECT",
+    "دست پوش": "ACCEPT",
+    "دست بند": "REJECT",
+    "دستمال": "REJECT"
+  },
+  "generated-216": {
+    "روسری": "ACCEPT",
+    "دستمال": "REJECT",
+    "سربند": "REJECT",
+    "چفیه": "REJECT"
+  },
+  "generated-217": {
+    "غذا": "DIRECT",
+    "مأکول": "DIRECT",
+    "خوردنی": "DIRECT",
+    "رزق": "REJECT"
+  },
+  "generated-215": {
+    "میان بند": "ACCEPT",
+    "حایل": "REJECT",
+    "تسمه": "ACCEPT",
+    "بند": "REJECT"
+  },
+  "generated-221": {
+    "خشکبار": "ACCEPT",
+    "مغز": "REJECT",
+    "تخمه": "REJECT",
+    "پسته": "REJECT"
+  },
+  "generated-220": {
+    "چاشنی": "ACCEPT",
+    "بهارلیمو": "REJECT",
+    "زردچوبه": "REJECT",
+    "فلفل": "REJECT"
+  },
+  "generated-218": {
+    "مشروب": "ACCEPT",
+    "آبمیوه": "REJECT",
+    "شربت": "REJECT",
+    "چای": "REJECT"
+  },
+  "generated-219": {
+    "پس غذا": "ACCEPT",
+    "شیرینی": "ACCEPT",
+    "کیک": "REJECT",
+    "بستنی": "REJECT"
+  },
+  "generated-222": {
+    "هله هوله": "REJECT",
+    "چیپس": "REJECT",
+    "پفک": "REJECT",
+    "شکلات": "REJECT"
+  },
+  "generated-223": {
+    "مقنعه": "REJECT",
+    "روبنده": "REJECT",
+    "برقع": "REJECT",
+    "حجاب": "REJECT"
+  },
+  "generated-224": {
+    "پالتو": "DIRECT",
+    "بارانی": "REJECT",
+    "روپوش": "ACCEPT",
+    "کت": "ACCEPT"
+  },
+  "generated-225": {
+    "پیراهن": "REJECT",
+    "دامن": "REJECT",
+    "لباس": "REJECT",
+    "تونیک": "REJECT"
+  },
+  "generated-226": {
+    "نیم تنه": "REJECT",
+    "کت": "REJECT",
+    "پوشاک": "REJECT",
+    "سینه پوش": "REJECT"
+  },
+  "generated-227": {
+    "شارع": "DIRECT",
+    "معبر": "REJECT",
+    "جاده": "REJECT",
+    "راه": "REJECT",
+    "بلوار": "ACCEPT"
+  },
+  "generated-228": {
+    "پسکوچه": "REJECT",
+    "گذرگاه": "ACCEPT",
+    "گذر": "ACCEPT",
+    "گذرگاه فرعی": "ACCEPT",
+    "بن بست": "REJECT"
+  },
+  "generated-229": {
+    "فلکه": "REJECT",
+    "چهارراه": "REJECT",
+    "میدانگاه": "REJECT",
+    "گرداگرد": "REJECT",
+    "میدانک": "REJECT"
+  },
+  "generated-231": {
+    "سنگفرش": "REJECT",
+    "گذر پیاده": "ACCEPT",
+    "راه پیاده": "ACCEPT",
+    "پاخور": "REJECT",
+    "گذرگاه عابر": "REJECT"
+  },
+  "generated-233": {
+    "مسافرت": "DIRECT",
+    "گردش": "ACCEPT",
+    "سیاحت": "DIRECT",
+    "کوچ": "ACCEPT",
+    "رهسپاری": "ACCEPT"
+  },
+  "generated-234": {
+    "رهگذر": "ACCEPT",
+    "گردشگر": "ACCEPT",
+    "سیاح": "DIRECT",
+    "جهانگرد": "ACCEPT",
+    "رهسپار": "DIRECT"
+  },
+  "generated-232": {
+    "توقفگاه": "DIRECT",
+    "پایانه": "ACCEPT",
+    "محل توقف": "ACCEPT",
+    "بارانداز": "REJECT",
+    "لنگرگاه": "REJECT"
+  },
+  "generated-230": {
+    "آزادراه": "DIRECT",
+    "اتوبان": "DIRECT",
+    "شاهراه": "DIRECT",
+    "راه اصلی": "REJECT",
+    "جاده پهن": "REJECT"
+  },
+  "generated-236": {
+    "رهگذر": "DIRECT",
+    "پیاده": "ACCEPT",
+    "گذرنده": "DIRECT",
+    "عبورکننده": "DIRECT",
+    "گام زن": "REJECT"
+  },
+  "generated-237": {
+    "راهبندان": "REJECT",
+    "شلوغی راه": "ACCEPT",
+    "ازدحام": "ACCEPT",
+    "گرفتگی راه": "ACCEPT",
+    "تراکم": "REJECT"
+  },
+  "generated-238": {
+    "توقفگاه": "ACCEPT",
+    "جای پارک": "DIRECT",
+    "محل توقف خودرو": "ACCEPT",
+    "خودروگاه": "DIRECT",
+    "ایستگاه خودرو": "REJECT"
+  },
+  "generated-235": {
+    "سائق": "DIRECT",
+    "شوفر": "DIRECT",
+    "گرداننده": "REJECT",
+    "هدایت کننده": "REJECT",
+    "راهبر": "REJECT"
+  },
+  "generated-239": {
+    "باج": "REJECT",
+    "مالیات راه": "REJECT",
+    "حق عبور": "REJECT",
+    "گذرنامه": "REJECT",
+    "حق العبور": "REJECT"
+  },
+  "generated-240": {
+    "گذرگاه": "REJECT",
+    "معبر": "REJECT",
+    "جسر": "DIRECT",
+    "پال": "REJECT",
+    "گذر": "REJECT"
+  },
+  "generated-241": {
+    "نقبی": "ACCEPT",
+    "دالان": "REJECT",
+    "سوراخ": "REJECT",
+    "گذرگاه زیرزمینی": "ACCEPT",
+    "راه زیرزمینی": "ACCEPT"
+  },
+  "generated-242": {
+    "چهارراه": "REJECT",
+    "محل تلاقی": "ACCEPT",
+    "محل برخورد": "ACCEPT",
+    "گذرگاه مشترک": "REJECT",
+    "محل اتصال": "ACCEPT"
+  },
+  "generated-243": {
+    "بازگشتگاه": "REJECT",
+    "محل برگشت": "REJECT",
+    "دورزن": "REJECT",
+    "برگشت راه": "REJECT",
+    "میدان دور": "REJECT"
+  },
+  "generated-244": {
+    "علامت": "REJECT",
+    "نشانه": "REJECT",
+    "لوحه": "DIRECT",
+    "پلاک": "REJECT",
+    "نشانگر": "REJECT"
+  },
+  "generated-246": {
+    "نشانه گذاری": "REJECT",
+    "خط گذاری": "DIRECT",
+    "علامت گذاری": "REJECT",
+    "رسم خط": "ACCEPT",
+    "مرزبندی": "ACCEPT"
+  },
+  "generated-248": {
+    "دیدار": "ACCEPT",
+    "ملاقات": "ACCEPT",
+    "سرکشی": "ACCEPT",
+    "مشاهده": "ACCEPT",
+    "نظاره": "ACCEPT"
+  },
+  "generated-247": {
+    "دور": "REJECT",
+    "گردش": "DIRECT",
+    "بازرسی": "ACCEPT",
+    "نظارت": "REJECT",
+    "پاسبانی": "REJECT"
+  },
+  "generated-249": {
+    "پاسپورت": "DIRECT",
+    "مجوز عبور": "REJECT",
+    "برگ عبور": "ACCEPT",
+    "اجازه نامه": "REJECT",
+    "گواهی عبور": "REJECT"
+  },
+  "generated-250": {
+    "روادید": "DIRECT",
+    "مجوز ورود": "ACCEPT",
+    "اجازه اقامت": "REJECT",
+    "برگ اقامت": "REJECT",
+    "گواهی ورود": "REJECT"
+  },
+  "generated-252": {
+    "پایانه": "DIRECT",
+    "ایستگاه مرکزی": "ACCEPT",
+    "مرکز حمل ونقل": "REJECT",
+    "محل بارگیری": "REJECT",
+    "ایستگاه اتوبوس": "REJECT"
+  },
+  "generated-253": {
+    "مطار": "DIRECT",
+    "هواپیماگاه": "DIRECT",
+    "محل پرواز": "REJECT",
+    "باند پرواز": "REJECT",
+    "ایستگاه هوایی": "ACCEPT"
+  },
+  "generated-254": {
+    "لنگرگاه": "ACCEPT",
+    "ساحل": "REJECT",
+    "اسکله": "REJECT",
+    "بارانداز": "REJECT",
+    "محل پهلوگیری": "REJECT"
+  },
+  "generated-255": {
+    "راه آهن": "REJECT",
+    "ترن": "DIRECT",
+    "ماشین دودی": "REJECT",
+    "واگن": "REJECT",
+    "لوکوموتیو": "REJECT"
+  },
+  "generated-251": {
+    "محموله": "ACCEPT",
+    "کالا": "REJECT",
+    "بسته": "REJECT",
+    "حمل ونقل": "REJECT",
+    "اثاثیه": "REJECT"
+  },
+  "generated-256": {
+    "واحد": "REJECT",
+    "خودرو عمومی": "REJECT",
+    "ماشین مسافربری": "REJECT",
+    "حمل ونقل عمومی": "REJECT",
+    "مینی بوس": "REJECT"
+  },
+  "generated-257": {
+    "نگارگری": "DIRECT",
+    "تصویرگری": "ACCEPT",
+    "رسم": "DIRECT",
+    "طراحی": "REJECT",
+    "پیکرنگاری": "ACCEPT"
+  },
+  "generated-261": {
+    "نمایش": "REJECT",
+    "صحنه": "REJECT",
+    "هنر نمایش": "REJECT",
+    "بازیگری": "REJECT"
+  },
+  "generated-258": {
+    "تندیس سازی": "DIRECT",
+    "پیکرتراشی": "DIRECT",
+    "تندیسگری": "DIRECT",
+    "پیکرسازی": "DIRECT"
+  },
+  "generated-260": {
+    "فیلم": "REJECT",
+    "فیلم سازی": "REJECT",
+    "تصویر متحرک": "REJECT",
+    "پرده نقره ای": "REJECT"
+  },
+  "generated-262": {
+    "پایکوبی": "REJECT",
+    "سماع": "REJECT",
+    "جنبش موزون": "REJECT",
+    "حرکت موزون": "REJECT"
+  },
+  "generated-263": {
+    "عکس برداری": "DIRECT",
+    "تصویربرداری": "DIRECT",
+    "فتوگرافی": "DIRECT",
+    "نگاره برداری": "ACCEPT"
+  },
+  "generated-265": {
+    "گرافیک": "REJECT",
+    "طراحی بصری": "ACCEPT",
+    "هنر گرافیک": "REJECT",
+    "تصویرسازی": "REJECT"
+  },
+  "generated-266": {
+    "خبرنگاری": "ACCEPT",
+    "مطبوعات": "REJECT",
+    "گزارشگری": "ACCEPT",
+    "ژورنالیسم": "DIRECT"
+  },
+  "generated-267": {
+    "امواج رادیویی": "REJECT",
+    "پخش رادیویی": "REJECT",
+    "فرستنده رادیویی": "REJECT",
+    "برنامه رادیویی": "REJECT"
+  },
+  "generated-268": {
+    "صدا و سیما": "REJECT",
+    "پخش تلویزیونی": "REJECT",
+    "رسانه تصویری": "REJECT",
+    "برنامه تلویزیونی": "REJECT"
+  },
+  "generated-264": {
+    "ساختمان سازی": "REJECT",
+    "بنایی": "REJECT",
+    "عمران": "ACCEPT",
+    "شهرسازی": "REJECT"
+  },
+  "generated-269": {
+    "ابزار اطلاع رسانی": "REJECT",
+    "مطبوعات": "ACCEPT",
+    "وسایل ارتباط جمعی": "DIRECT",
+    "خبررسانی": "REJECT"
+  },
+  "generated-271": {
+    "خطاطی": "DIRECT",
+    "زیبانویسی": "DIRECT",
+    "هنر خط": "DIRECT",
+    "خط نگاری": "ACCEPT"
+  },
+  "generated-270": {
+    "فن": "DIRECT",
+    "صنعت": "ACCEPT",
+    "مهارت": "ACCEPT",
+    "چیرگی": "REJECT"
+  },
+  "generated-272": {
+    "کوزه گری": "DIRECT",
+    "ساخت سفال": "REJECT",
+    "هنر سفال": "ACCEPT",
+    "سفال سازی": "DIRECT"
+  },
+  "generated-273": {
+    "قالی بافی": "DIRECT",
+    "گلیم بافی": "REJECT",
+    "هنر فرش": "REJECT",
+    "نساجی فرش": "DIRECT"
+  },
+  "generated-259": {
+    "سخنوری": "REJECT",
+    "نوشتار": "REJECT",
+    "قلمرو سخن": "REJECT",
+    "فرهنگ": "REJECT"
+  },
+  "generated-274": {
+    "داستان بلند": "REJECT",
+    "اثر داستانی": "REJECT",
+    "نوشته داستانی": "REJECT",
+    "قصه بلند": "REJECT"
+  },
+  "generated-275": {
+    "تئاترنامه": "DIRECT",
+    "متن نمایش": "ACCEPT",
+    "سناریو": "REJECT",
+    "نمایش نامه": "DIRECT"
+  },
+  "generated-276": {
+    "ارزیابی": "ACCEPT",
+    "بررسی": "REJECT",
+    "داوری": "ACCEPT",
+    "تحلیل": "REJECT"
+  },
+  "generated-277": {
+    "نگارخانه": "DIRECT",
+    "نمایشگاه هنری": "REJECT",
+    "سالن نمایش": "ACCEPT",
+    "فضای هنری": "REJECT"
+  },
+  "generated-279": {
+    "گنجینه": "REJECT",
+    "مکان نگهداری آثار": "REJECT",
+    "نمایشگاه دائمی": "REJECT",
+    "بنای فرهنگی": "REJECT"
+  },
+  "generated-281": {
+    "اجرای موسیقی": "REJECT",
+    "هم نوازی": "REJECT",
+    "برنامه موسیقی": "REJECT",
+    "موسیقی زنده": "REJECT"
+  },
+  "generated-282": {
+    "جشنواره": "DIRECT",
+    "جشن": "DIRECT",
+    "گردهمایی": "REJECT",
+    "مراسم": "REJECT"
+  },
+  "generated-278": {
+    "کارگاه هنری": "ACCEPT",
+    "آتلیه": "DIRECT",
+    "فضای کاری هنرمند": "REJECT",
+    "پاتوق هنری": "REJECT"
+  },
+  "generated-283": {
+    "بایگانی": "DIRECT",
+    "مخزن": "ACCEPT",
+    "گنجینه اسناد": "REJECT",
+    "محل نگهداری": "REJECT"
+  },
+  "generated-284": {
+    "مردم": "REJECT",
+    "اجتماع": "REJECT",
+    "همگان": "REJECT",
+    "عموم": "REJECT",
+    "خلایق": "REJECT",
+    "توده": "REJECT"
+  },
+  "generated-280": {
+    "مجموعه": "ACCEPT",
+    "دفترچه": "REJECT",
+    "کتابچه": "REJECT",
+    "فهرست": "REJECT"
+  },
+  "generated-285": {
+    "همجوار": "DIRECT",
+    "همسایه دیوار به دیوار": "REJECT",
+    "همسایه بغلی": "REJECT",
+    "همسایه روبرویی": "REJECT"
+  },
+  "generated-245": {
+    "چراغ راه": "ACCEPT",
+    "چراغ ترافیک": "DIRECT",
+    "چراغ سه رنگ": "ACCEPT",
+    "نشانگر راه": "REJECT",
+    "چراغ فرمان": "ACCEPT"
+  },
+  "generated-286": {
+    "همپیشه": "REJECT",
+    "همکار اداری": "REJECT",
+    "همکار شغلی": "REJECT",
+    "همکار حرفه ای": "REJECT"
+  },
+  "generated-287": {
+    "جفت": "ACCEPT",
+    "زوج": "DIRECT",
+    "شریک زندگی": "ACCEPT",
+    "عیال": "ACCEPT",
+    "زناشویی": "REJECT"
+  },
+  "generated-289": {
+    "جد": "DIRECT",
+    "بابابزرگ": "DIRECT",
+    "پدر بزرگ پدری": "REJECT",
+    "پدر بزرگ مادری": "REJECT"
+  },
+  "generated-288": {
+    "بچه": "DIRECT",
+    "اولاد": "DIRECT",
+    "نسل": "REJECT",
+    "ذریه": "REJECT",
+    "نوزاد": "REJECT",
+    "کودک": "REJECT"
+  },
+  "generated-291": {
+    "ایل": "REJECT",
+    "قبیله": "ACCEPT",
+    "طایفه": "ACCEPT",
+    "نژاد": "ACCEPT",
+    "ملت": "ACCEPT",
+    "خویشاوندان": "REJECT"
+  },
+  "generated-293": {
+    "تبعه": "ACCEPT",
+    "مقیم": "REJECT",
+    "ساکن شهر": "ACCEPT",
+    "اهل شهر": "ACCEPT"
+  },
+  "generated-292": {
+    "کشور": "REJECT",
+    "امت": "DIRECT",
+    "مردم": "DIRECT",
+    "جامعه": "ACCEPT",
+    "شهروندان": "REJECT"
+  },
+  "generated-295": {
+    "اتحاد": "ACCEPT",
+    "یکپارچگی": "ACCEPT",
+    "همدلی": "ACCEPT",
+    "انسجام": "ACCEPT",
+    "همکاری": "REJECT",
+    "همراهی": "REJECT"
+  },
+  "generated-290": {
+    "جده": "DIRECT",
+    "مامان بزرگ": "DIRECT",
+    "مادر بزرگ پدری": "REJECT",
+    "مادر بزرگ مادری": "REJECT"
+  },
+  "generated-296": {
+    "مشارکت": "ACCEPT",
+    "معاضدت": "ACCEPT",
+    "همیاری": "DIRECT",
+    "همدستی": "REJECT",
+    "تعاون": "DIRECT",
+    "همراهی": "REJECT"
+  },
+  "generated-294": {
+    "ارتباطات": "ACCEPT",
+    "مناسبات": "ACCEPT",
+    "پیوندها": "ACCEPT",
+    "تعاملات": "ACCEPT",
+    "مراودات": "ACCEPT",
+    "بستگی ها": "ACCEPT"
+  },
+  "generated-297": {
+    "رفاقت": "DIRECT",
+    "صمیمیت": "ACCEPT",
+    "محبت": "ACCEPT",
+    "علاقه": "REJECT",
+    "مودت": "ACCEPT",
+    "مهربانی": "REJECT"
+  },
+  "generated-298": {
+    "خصومت": "DIRECT",
+    "کینه": "REJECT",
+    "عداوت": "DIRECT",
+    "ستیز": "DIRECT",
+    "نفرت": "REJECT",
+    "بدخواهی": "ACCEPT"
+  },
+  "generated-300": {
+    "جدایی": "REJECT",
+    "انفصال": "ACCEPT",
+    "متارکه": "DIRECT",
+    "فسخ نکاح": "REJECT",
+    "طلاقنامه": "REJECT"
+  },
+  "generated-299": {
+    "پیوند زناشویی": "ACCEPT",
+    "عقد": "REJECT",
+    "عروسی": "REJECT",
+    "وصلت": "REJECT",
+    "همسری": "REJECT"
+  },
+  "generated-302": {
+    "فکر": "DIRECT",
+    "تأمل": "ACCEPT",
+    "تفکر": "DIRECT",
+    "پندار": "DIRECT",
+    "خیال": "ACCEPT",
+    "نظر": "ACCEPT"
+  },
+  "generated-301": {
+    "دانایی": "ACCEPT",
+    "شناخت": "ACCEPT",
+    "ادراک": "ACCEPT",
+    "هوشیاری": "ACCEPT",
+    "وقوف": "REJECT",
+    "بصیرت": "ACCEPT"
+  },
+  "generated-303": {
+    "عاطفه": "ACCEPT",
+    "هیجان": "ACCEPT",
+    "شور": "REJECT",
+    "حس": "DIRECT",
+    "دریافت": "REJECT",
+    "وجدان": "REJECT"
+  },
+  "generated-306": {
+    "عقل": "DIRECT",
+    "دانش": "ACCEPT",
+    "فهم": "ACCEPT",
+    "درایت": "ACCEPT",
+    "هوش": "ACCEPT",
+    "بینش": "REJECT"
+  },
+  "generated-305": {
+    "اعتقاد": "DIRECT",
+    "ایمان": "DIRECT",
+    "عقیده": "DIRECT",
+    "پندار": "ACCEPT",
+    "گمان": "ACCEPT",
+    "اطمینان": "DIRECT"
+  },
+  "generated-308": {
+    "فهم": "REJECT",
+    "ادراک": "ACCEPT",
+    "عقل": "REJECT",
+    "درک": "REJECT",
+    "هوش": "REJECT",
+    "بینش": "REJECT"
+  },
+  "generated-307": {
+    "خواب": "REJECT",
+    "خیال": "ACCEPT",
+    "تصور": "REJECT",
+    "وهم": "REJECT",
+    "آرزو": "REJECT",
+    "پندار": "REJECT"
+  },
+  "generated-304": {
+    "خواست": "ACCEPT",
+    "عزم": "DIRECT",
+    "نیت": "ACCEPT",
+    "قصد": "ACCEPT",
+    "میل": "REJECT",
+    "تصمیم": "ACCEPT"
+  },
+  "generated-310": {
+    "درک": "DIRECT",
+    "شعور": "REJECT",
+    "ادراک": "DIRECT",
+    "دانش": "REJECT",
+    "بینش": "ACCEPT",
+    "معرفت": "ACCEPT"
+  },
+  "generated-309": {
+    "شکیبایی": "DIRECT",
+    "حوصله": "ACCEPT",
+    "بردباری": "DIRECT",
+    "تحمل": "ACCEPT",
+    "استقامت": "ACCEPT",
+    "پایداری": "ACCEPT"
+  },
+  "generated-311": {
+    "داوری": "DIRECT",
+    "حکم": "ACCEPT",
+    "رأی": "REJECT",
+    "سنجش": "REJECT",
+    "ارزیابی": "ACCEPT",
+    "نتیجه گیری": "REJECT"
+  },
+  "generated-313": {
+    "خوشی": "DIRECT",
+    "شادی": "ACCEPT",
+    "کام": "REJECT",
+    "کیف": "REJECT",
+    "بهجت": "ACCEPT",
+    "سرور": "ACCEPT"
+  },
+  "generated-312": {
+    "جستجوگری": "ACCEPT",
+    "فضولی": "REJECT",
+    "تفحص": "REJECT",
+    "پرسشگری": "ACCEPT",
+    "میل به دانستن": "ACCEPT",
+    "کاوش": "REJECT"
+  },
+  "generated-314": {
+    "شناخت": "DIRECT",
+    "دانش": "DIRECT",
+    "آگاهی": "ACCEPT",
+    "فهم": "ACCEPT",
+    "بصیرت": "ACCEPT",
+    "بینش": "ACCEPT"
+  },
+  "generated-315": {
+    "گرایش": "ACCEPT",
+    "اشتیاق": "DIRECT",
+    "آرزو": "ACCEPT",
+    "خواهش": "REJECT",
+    "رغبت": "DIRECT",
+    "علاقه": "DIRECT"
+  },
+  "generated-316": {
+    "قصد": "DIRECT",
+    "اراده": "ACCEPT",
+    "عزم": "ACCEPT",
+    "هدف": "ACCEPT",
+    "مراد": "ACCEPT",
+    "تصمیم": "ACCEPT"
+  },
+  "generated-317": {
+    "خیال": "ACCEPT",
+    "توهم": "DIRECT",
+    "پندار": "ACCEPT",
+    "تصور": "ACCEPT",
+    "گمان": "REJECT",
+    "اشتباه": "REJECT"
+  },
+  "generated-318": {
+    "اطمینان": "DIRECT",
+    "قطعیت": "DIRECT",
+    "باور": "REJECT",
+    "اعتقاد": "REJECT",
+    "حتمیت": "DIRECT",
+    "وثوق": "ACCEPT"
+  },
+  "generated-320": {
+    "دلیری": "DIRECT",
+    "شهامت": "DIRECT",
+    "جسارت": "DIRECT",
+    "بی باکی": "ACCEPT",
+    "پایداری": "REJECT",
+    "تهور": "REJECT"
+  },
+  "generated-322": {
+    "کامپیوتر": "DIRECT",
+    "ماشین حساب الکترونیکی": "REJECT",
+    "پردازشگر": "REJECT",
+    "دستگاه محاسباتی": "ACCEPT",
+    "سخت افزار": "REJECT"
+  },
+  "generated-321": {
+    "غضب": "DIRECT",
+    "عصبانیت": "DIRECT",
+    "خشمگینی": "ACCEPT",
+    "غیظ": "DIRECT",
+    "کینه": "REJECT",
+    "خشمناکی": "ACCEPT"
+  },
+  "generated-319": {
+    "واقعیت": "DIRECT",
+    "راستی": "DIRECT",
+    "درستی": "DIRECT",
+    "صدق": "DIRECT",
+    "واقع": "DIRECT",
+    "اصل": "REJECT"
+  },
+  "generated-323": {
+    "موبایل": "DIRECT",
+    "گوشی": "DIRECT",
+    "تلفن همراه هوشمند": "REJECT",
+    "دستگاه سیار": "REJECT",
+    "واکمن": "REJECT"
+  },
+  "generated-325": {
+    "پویشگر": "ACCEPT",
+    "دستگاه پویش": "ACCEPT",
+    "تصویربردار": "ACCEPT",
+    "رقومی ساز": "REJECT"
+  },
+  "generated-326": {
+    "کیبورد": "DIRECT",
+    "تخته کلید": "DIRECT",
+    "کلیدواژه": "REJECT",
+    "پد کلید": "REJECT"
+  },
+  "generated-328": {
+    "مانیتور": "DIRECT",
+    "صفحه نمایش": "ACCEPT",
+    "صفحه دیداری": "REJECT",
+    "دیسپلی": "ACCEPT"
+  },
+  "generated-324": {
+    "پرینتر": "DIRECT",
+    "دستگاه چاپ": "ACCEPT",
+    "ماشین چاپ": "ACCEPT",
+    "چاپ کننده": "DIRECT"
+  },
+  "generated-330": {
+    "گوشی": "REJECT",
+    "سماعه": "REJECT",
+    "گوشواره": "REJECT",
+    "هدست": "DIRECT"
+  },
+  "generated-331": {
+    "عکاس خانه": "REJECT",
+    "دستگاه تصویربرداری": "ACCEPT",
+    "فیلمبردار": "REJECT",
+    "عکس بردار": "REJECT"
+  },
+  "generated-329": {
+    "اسپیکر": "DIRECT",
+    "گوینده": "REJECT",
+    "تقویت کننده صدا": "REJECT",
+    "پخش کننده صدا": "REJECT"
+  },
+  "generated-332": {
+    "فرافکن": "DIRECT",
+    "نورافکن": "ACCEPT",
+    "دستگاه نمایش": "REJECT",
+    "ویدئو پروژکتور": "ACCEPT"
+  },
+  "generated-327": {
+    "ماوس": "REJECT",
+    "اشاره گر": "REJECT",
+    "دستگاه اشاره گر": "REJECT",
+    "کنترل گر": "REJECT"
+  },
+  "generated-335": {
+    "دیسک سخت": "DIRECT",
+    "حافظه دائمی": "REJECT",
+    "ذخیره ساز": "REJECT",
+    "دیسک گردان": "REJECT"
+  },
+  "generated-333": {
+    "تعدیل کننده": "REJECT",
+    "پالاینده": "REJECT",
+    "دستگاه ارتباطی": "REJECT",
+    "فرستنده-گیرنده": "REJECT"
+  },
+  "generated-334": {
+    "مسیریاب": "ACCEPT",
+    "رهیاب": "REJECT",
+    "دستگاه شبکه": "REJECT",
+    "سوییچ": "REJECT"
+  },
+  "generated-337": {
+    "انباره": "REJECT",
+    "پیله": "REJECT",
+    "منبع تغذیه": "REJECT",
+    "باطری": "DIRECT"
+  },
+  "generated-336": {
+    "حافظه فلش": "DIRECT",
+    "یواس بی درایو": "DIRECT",
+    "کول دیسک": "ACCEPT",
+    "حافظه جانبی": "REJECT"
+  },
+  "generated-338": {
+    "شارژکننده": "DIRECT",
+    "برق دهنده": "REJECT",
+    "آداپتور": "ACCEPT",
+    "تغذیه کننده": "REJECT"
+  },
+  "generated-341": {
+    "افزونه": "DIRECT",
+    "الحاقیه": "ACCEPT",
+    "وصله": "REJECT",
+    "ماژول": "ACCEPT"
+  },
+  "generated-342": {
+    "سافت ور": "ACCEPT",
+    "برنامه رایانه ای": "DIRECT",
+    "کد": "REJECT",
+    "اپلیکیشن": "REJECT"
+  },
+  "generated-340": {
+    "پریز": "DIRECT",
+    "مادگی": "REJECT",
+    "اتصال دهنده": "REJECT",
+    "درگاه": "REJECT"
+  },
+  "generated-343": {
+    "جستجوگر": "REJECT",
+    "گردشگر وب": "REJECT",
+    "کاوشگر": "ACCEPT",
+    "برنامه وب": "REJECT"
+  },
+  "generated-344": {
+    "نتورک": "ACCEPT",
+    "سامانه ارتباطی": "REJECT",
+    "بافت": "REJECT",
+    "ارتباطات": "REJECT"
+  },
+  "generated-346": {
+    "دیواره آتش": "DIRECT",
+    "سپر امنیتی": "ACCEPT",
+    "حفاظ": "REJECT",
+    "مانع": "REJECT"
+  },
+  "generated-345": {
+    "شبکه جهانی": "ACCEPT",
+    "وب": "REJECT",
+    "فضای مجازی": "REJECT",
+    "سایبر": "REJECT"
+  },
+  "generated-347": {
+    "ضدویروس": "DIRECT",
+    "پادویروس": "DIRECT",
+    "محافظ": "REJECT",
+    "پاک کننده ویروس": "ACCEPT"
+  },
+  "generated-339": {
+    "سیم": "REJECT",
+    "رشته": "REJECT",
+    "طناب": "REJECT",
+    "بند": "REJECT"
+  },
+  "generated-348": {
+    "گذرواژه": "DIRECT",
+    "کلمه عبور": "DIRECT",
+    "کد امنیتی": "REJECT",
+    "پسورد": "DIRECT"
+  },
+  "generated-349": {
+    "اکانت": "ACCEPT",
+    "شناسه کاربری": "REJECT",
+    "پروفایل": "REJECT",
+    "حساب شخصی": "ACCEPT"
+  },
+  "generated-350": {
+    "اطلاعات": "ACCEPT",
+    "دیتا": "DIRECT",
+    "آمار": "ACCEPT",
+    "معلومات": "DIRECT"
+  },
+  "generated-351": {
+    "بانک اطلاعاتی": "DIRECT",
+    "دیتابیس": "DIRECT",
+    "مخزن داده": "ACCEPT",
+    "مرکز داده": "REJECT"
+  },
+  "generated-352": {
+    "جواب دادن": "DIRECT",
+    "واکنش نشان دادن": "ACCEPT",
+    "اقرار کردن": "REJECT",
+    "اعتراف کردن": "REJECT",
+    "جوابگو بودن": "REJECT",
+    "پاسخگو بودن": "REJECT"
+  },
+  "generated-353": {
+    "مباحثه کردن": "REJECT",
+    "مناظره کردن": "REJECT",
+    "گفتگو کردن": "REJECT",
+    "جدل کردن": "REJECT",
+    "تبادل نظر کردن": "REJECT",
+    "استدلال کردن": "REJECT"
+  },
+  "generated-354": {
+    "تشریح کردن": "DIRECT",
+    "تبیین کردن": "DIRECT",
+    "روشن کردن": "ACCEPT",
+    "تفسیر کردن": "ACCEPT",
+    "شرح دادن": "DIRECT",
+    "واضح ساختن": "DIRECT"
+  },
+  "generated-357": {
+    "تکذیب کردن": "DIRECT",
+    "رد کردن": "DIRECT",
+    "نفی کردن": "DIRECT",
+    "منکر شدن": "DIRECT",
+    "حاشا کردن": "DIRECT",
+    "زیر بار نرفتن": "REJECT"
+  },
+  "generated-355": {
+    "مخالفت کردن": "DIRECT",
+    "انتقاد کردن": "ACCEPT",
+    "شکایت کردن": "ACCEPT",
+    "نارضایتی نشان دادن": "ACCEPT",
+    "گله کردن": "ACCEPT",
+    "خرده گرفتن": "ACCEPT"
+  },
+  "generated-358": {
+    "عرضه کردن": "DIRECT",
+    "مطرح کردن": "ACCEPT",
+    "توصیه کردن": "ACCEPT",
+    "ایده دادن": "ACCEPT",
+    "نظر دادن": "REJECT",
+    "ارائه کردن": "ACCEPT"
+  },
+  "generated-359": {
+    "تقاضا کردن": "DIRECT",
+    "خواهش کردن": "DIRECT",
+    "تمنا کردن": "DIRECT",
+    "التماس کردن": "DIRECT",
+    "طلب کردن": "DIRECT",
+    "استدعا کردن": "DIRECT"
+  },
+  "generated-360": {
+    "امر کردن": "DIRECT",
+    "فرمان دادن": "DIRECT",
+    "حکم کردن": "ACCEPT",
+    "سفارش کردن": "ACCEPT",
+    "ابلاغ کردن": "REJECT",
+    "مأمور کردن": "ACCEPT"
+  },
+  "generated-361": {
+    "اطلاع دادن": "DIRECT",
+    "آگاه کردن": "DIRECT",
+    "گزارش دادن": "ACCEPT",
+    "اعلام کردن": "ACCEPT",
+    "مطلع ساختن": "ACCEPT",
+    "پیغام دادن": "DIRECT"
+  },
+  "generated-356": {
+    "تصدیق کردن": "DIRECT",
+    "صحّه گذاشتن": "DIRECT",
+    "موافقت کردن": "DIRECT",
+    "قبول کردن": "ACCEPT",
+    "تأیید نمودن": "DIRECT",
+    "پذیرفتن": "ACCEPT"
+  },
+  "generated-362": {
+    "وعده دادن": "DIRECT",
+    "متعهد شدن": "DIRECT",
+    "ضمانت کردن": "ACCEPT",
+    "تعهد کردن": "DIRECT",
+    "پیمان بستن": "ACCEPT",
+    "سوگند خوردن": "REJECT"
+  },
+  "generated-363": {
+    "ترساندن": "ACCEPT",
+    "ارعاب کردن": "ACCEPT",
+    "بیم دادن": "DIRECT",
+    "هشدار دادن": "REJECT",
+    "اخطار کردن": "ACCEPT",
+    "تهدید نمودن": "DIRECT"
+  },
+  "generated-364": {
+    "ترغیب کردن": "DIRECT",
+    "تحریک کردن": "ACCEPT",
+    "دلگرم کردن": "ACCEPT",
+    "حمایت کردن": "REJECT",
+    "ستودن": "REJECT",
+    "آفرین گفتن": "REJECT"
+  },
+  "generated-365": {
+    "پند دادن": "DIRECT",
+    "اندرز دادن": "DIRECT",
+    "موعظه کردن": "ACCEPT",
+    "رهنمود دادن": "DIRECT",
+    "توصیه کردن": "DIRECT",
+    "راهنمایی کردن": "ACCEPT"
+  },
+  "generated-366": {
+    "گله کردن": "DIRECT",
+    "ناله کردن": "ACCEPT",
+    "اعتراض کردن": "ACCEPT",
+    "دادخواهی کردن": "ACCEPT",
+    "فریاد زدن": "REJECT",
+    "گلایه کردن": "DIRECT"
+  },
+  "generated-369": {
+    "ستایش کردن": "DIRECT",
+    "تحسین کردن": "DIRECT",
+    "تعریف کردن": "DIRECT",
+    "مدح کردن": "DIRECT",
+    "ستودن": "DIRECT",
+    "آفرین گفتن": "ACCEPT"
+  },
+  "generated-367": {
+    "رایزنی کردن": "DIRECT",
+    "همفکری کردن": "ACCEPT",
+    "نظرخواهی کردن": "ACCEPT",
+    "صلاح دیدن": "REJECT",
+    "تبادل نظر کردن": "ACCEPT",
+    "مشاوره کردن": "DIRECT"
+  },
+  "generated-371": {
+    "خبرپراکنی": "REJECT",
+    "افترا": "REJECT",
+    "تهمت": "REJECT",
+    "بدگویی": "REJECT",
+    "شایعه سازی": "DIRECT",
+    "نشر اکاذیب": "DIRECT"
+  },
+  "generated-372": {
+    "افشا کردن": "DIRECT",
+    "برملا کردن": "DIRECT",
+    "آشکار کردن": "DIRECT",
+    "لو دادن": "DIRECT",
+    "رازگشایی کردن": "ACCEPT",
+    "پرده برداشتن": "ACCEPT"
+  },
+  "generated-368": {
+    "نزاع کردن": "DIRECT",
+    "دعوا کردن": "ACCEPT",
+    "ستیزه کردن": "ACCEPT",
+    "مخاصمه کردن": "DIRECT",
+    "بگو مگو کردن": "DIRECT",
+    "جر و بحث کردن": "DIRECT"
+  },
+  "generated-373": {
+    "خطابه خواندن": "DIRECT",
+    "نطق کردن": "DIRECT",
+    "بیان کردن": "REJECT",
+    "گفتار ایراد کردن": "DIRECT",
+    "صحبت کردن": "REJECT",
+    "کلام گفتن": "REJECT"
+  },
+  "generated-370": {
+    "نقد کردن": "DIRECT",
+    "خرده گرفتن": "DIRECT",
+    "عیب جویی کردن": "DIRECT",
+    "ایراد گرفتن": "DIRECT",
+    "اعتراض کردن": "ACCEPT",
+    "سرزنش کردن": "ACCEPT"
+  },
+  "generated-375": {
+    "اقرار کردن": "DIRECT",
+    "برملا کردن": "DIRECT",
+    "اذعان کردن": "DIRECT",
+    "صراحت داشتن": "REJECT",
+    "بیان کردن": "REJECT",
+    "شهادت دادن": "REJECT"
+  },
+  "generated-374": {
+    "گفتگو کردن": "REJECT",
+    "ملاقات کردن": "REJECT",
+    "پرسش و پاسخ کردن": "ACCEPT",
+    "گفتمان کردن": "REJECT",
+    "بحث کردن": "REJECT",
+    "دیدار کردن": "REJECT"
+  },
+  "generated-377": {
+    "دگرگون کردن": "DIRECT",
+    "تحول بخشیدن": "ACCEPT",
+    "تبدیل کردن": "DIRECT",
+    "اصلاح کردن": "ACCEPT",
+    "تغییر شکل دادن": "ACCEPT",
+    "دستکاری کردن": "ACCEPT"
+  },
+  "generated-376": {
+    "اهانت کردن": "DIRECT",
+    "بی احترامی کردن": "DIRECT",
+    "تحقیر کردن": "DIRECT",
+    "ناسزا گفتن": "DIRECT",
+    "فحاشی کردن": "ACCEPT",
+    "بی حرمتی کردن": "DIRECT"
+  },
+  "generated-378": {
+    "قالب زدن": "ACCEPT",
+    "فرم دادن": "DIRECT",
+    "مدل ساختن": "ACCEPT",
+    "طرح ریختن": "ACCEPT",
+    "نقش بستن": "REJECT",
+    "پرداخت کردن": "REJECT"
+  },
+  "generated-380": {
+    "ترمیم کردن": "ACCEPT",
+    "نوسازی کردن": "ACCEPT",
+    "دوباره ساختن": "DIRECT",
+    "مرمت کردن": "ACCEPT",
+    "احیا کردن": "ACCEPT",
+    "بازپروری کردن": "REJECT"
+  },
+  "generated-379": {
+    "تغییر کلی دادن": "ACCEPT",
+    "زیر و رو کردن": "ACCEPT",
+    "متحول کردن": "DIRECT",
+    "قلب ماهیت کردن": "REJECT",
+    "واژگون کردن": "ACCEPT",
+    "انقلاب ایجاد کردن": "REJECT"
+  },
+  "generated-382": {
+    "گسترش دادن": "DIRECT",
+    "بسط دادن": "DIRECT",
+    "پیشرفت دادن": "ACCEPT",
+    "فراگیر کردن": "REJECT",
+    "ترویج دادن": "REJECT",
+    "افزایش دادن": "REJECT"
+  },
+  "generated-383": {
+    "به پایان رساندن": "DIRECT",
+    "به اتمام رساندن": "DIRECT",
+    "سر و سامان دادن": "REJECT",
+    "تمام کردن": "DIRECT",
+    "فارغ شدن": "REJECT",
+    "متمم کردن": "DIRECT"
+  },
+  "generated-384": {
+    "کم کردن": "DIRECT",
+    "تقلیل دادن": "DIRECT",
+    "محدود کردن": "ACCEPT",
+    "پایین آوردن": "DIRECT",
+    "تنزل دادن": "DIRECT",
+    "کاستن": "DIRECT"
+  },
+  "generated-388": {
+    "نظر را عوض کردن": "REJECT",
+    "عقیده را دگرگون کردن": "DIRECT",
+    "رای را برگرداندن": "REJECT",
+    "تصمیم را تغییر دادن": "REJECT",
+    "عقب نشینی کردن": "REJECT",
+    "منصرف شدن": "REJECT"
+  },
+  "generated-386": {
+    "انحراف دادن": "ACCEPT",
+    "مسیر عوض کردن": "DIRECT",
+    "راه را برگرداندن": "ACCEPT",
+    "جهت را تغییر دادن": "DIRECT",
+    "سوق دادن": "ACCEPT",
+    "منحرف کردن": "ACCEPT"
+  },
+  "generated-389": {
+    "وضعیت را عوض کردن": "DIRECT",
+    "حالت را دگرگون کردن": "DIRECT",
+    "شکل را تغییر دادن": "REJECT",
+    "تبدیل شدن": "REJECT",
+    "مسخ شدن": "REJECT",
+    "جهش یافتن": "REJECT"
+  },
+  "generated-387": {
+    "کاربرد را عوض کردن": "DIRECT",
+    "استفاده را دگرگون کردن": "REJECT",
+    "مصرف را تغییر دادن": "REJECT",
+    "تبدیل به چیز دیگر کردن": "REJECT",
+    "تغییر ماهیت استفاده": "REJECT",
+    "تغییر عملکرد": "REJECT"
+  },
+  "generated-381": {
+    "بهبود بخشیدن": "ACCEPT",
+    "تصحیح کردن": "DIRECT",
+    "درست کردن": "ACCEPT",
+    "بهینه سازی کردن": "REJECT",
+    "رفع عیب کردن": "DIRECT",
+    "ویرایش کردن": "ACCEPT"
+  },
+  "generated-390": {
+    "رنگ عوض کردن": "DIRECT",
+    "رنگ را دگرگون کردن": "DIRECT",
+    "رنگ را تغییر دادن": "DIRECT",
+    "بی رنگ شدن": "REJECT",
+    "رنگ باختن": "REJECT",
+    "رنگ گرفتن": "REJECT"
+  },
+  "generated-385": {
+    "زیاد کردن": "DIRECT",
+    "بالا بردن": "DIRECT",
+    "بیشتر کردن": "DIRECT",
+    "رشد دادن": "ACCEPT",
+    "متزاید کردن": "DIRECT",
+    "فزونی بخشیدن": "DIRECT"
+  },
+  "generated-391": {
+    "صدا را عوض کردن": "DIRECT",
+    "آهنگ را دگرگون کردن": "REJECT",
+    "تن صدا را تغییر دادن": "DIRECT",
+    "زیر و بم کردن": "ACCEPT",
+    "خش دار شدن": "REJECT",
+    "بم شدن": "REJECT"
+  },
+  "generated-392": {
+    "جا به جا کردن": "DIRECT",
+    "محل را عوض کردن": "DIRECT",
+    "نقل مکان کردن": "DIRECT",
+    "جابجایی": "REJECT",
+    "کوچ کردن": "ACCEPT",
+    "منتقل کردن": "DIRECT"
+  },
+  "generated-394": {
+    "سایز را عوض کردن": "DIRECT",
+    "ابعاد را دگرگون کردن": "ACCEPT",
+    "مقیاس را تغییر دادن": "ACCEPT",
+    "کوچک کردن": "REJECT",
+    "بزرگ کردن": "REJECT",
+    "متناسب کردن": "ACCEPT"
+  },
+  "generated-395": {
+    "کیفیت را عوض کردن": "DIRECT",
+    "مرغوبیت را دگرگون کردن": "ACCEPT",
+    "استاندارد را تغییر دادن": "REJECT",
+    "بهتر کردن": "REJECT",
+    "بدتر کردن": "REJECT",
+    "ارتقا دادن": "REJECT"
+  },
+  "generated-397": {
+    "ذات را عوض کردن": "DIRECT",
+    "جوهر را دگرگون کردن": "ACCEPT",
+    "سرشت را تغییر دادن": "DIRECT",
+    "تبدیل به چیز دیگر شدن": "ACCEPT",
+    "قلب ماهیت کردن": "DIRECT",
+    "هویت را دگرگون کردن": "ACCEPT"
+  },
+  "generated-396": {
+    "قالب را عوض کردن": "ACCEPT",
+    "هیئت را دگرگون کردن": "ACCEPT",
+    "ظاهر را تغییر دادن": "REJECT",
+    "مسخ کردن": "ACCEPT",
+    "دفرمه کردن": "ACCEPT",
+    "متبدل کردن": "ACCEPT"
+  },
+  "generated-399": {
+    "سلیقه را عوض کردن": "DIRECT",
+    "میل را دگرگون کردن": "ACCEPT",
+    "علاقه را تغییر دادن": "REJECT",
+    "به چیز دیگری روی آوردن": "REJECT",
+    "گرایش را عوض کردن": "REJECT",
+    "طبع را دگرگون کردن": "ACCEPT"
+  },
+  "generated-398": {
+    "روش را عوض کردن": "DIRECT",
+    "شیوه را دگرگون کردن": "DIRECT",
+    "خط مشی را تغییر دادن": "ACCEPT",
+    "سیاست را عوض کردن": "ACCEPT",
+    "مسیر را برگرداندن": "REJECT",
+    "رویکرد را تغییر دادن": "DIRECT"
+  },
+  "generated-393": {
+    "وقت را عوض کردن": "DIRECT",
+    "تاریخ را دگرگون کردن": "REJECT",
+    "موعد را تغییر دادن": "DIRECT",
+    "عقب انداختن": "ACCEPT",
+    "جلو انداختن": "REJECT",
+    "به تعویق انداختن": "ACCEPT"
+  },
+  "generated-400": {
+    "شرایط را عوض کردن": "ACCEPT",
+    "اوضاع را دگرگون کردن": "ACCEPT",
+    "حالت را تغییر دادن": "DIRECT",
+    "موقعیت را عوض کردن": "ACCEPT",
+    "وضعیت را بهبود بخشیدن": "REJECT",
+    "وضعیت را بدتر کردن": "REJECT"
+  },
+  "generated-401": {
+    "نسل را عوض کردن": "DIRECT",
+    "تولید مثل کردن": "REJECT",
+    "تکثیر کردن": "REJECT",
+    "زایش کردن": "REJECT",
+    "زاد و ولد کردن": "REJECT",
+    "نسل جدید را ایجاد کردن": "REJECT"
+  },
+  "generated-402": {
+    "اسم را عوض کردن": "DIRECT",
+    "نام را دگرگون کردن": "DIRECT",
+    "عنوان را تغییر دادن": "DIRECT",
+    "تغییر هویت اسمی": "REJECT",
+    "نامگذاری مجدد": "DIRECT",
+    "تغییر برند": "REJECT"
+  },
+  "generated-404": {
+    "عناصر را عوض کردن": "ACCEPT",
+    "اجزا را دگرگون کردن": "ACCEPT",
+    "ساختار را تغییر دادن": "ACCEPT",
+    "مخلوط کردن": "ACCEPT",
+    "جداسازی کردن": "REJECT",
+    "ترکیب مجدد": "REJECT"
+  },
+  "generated-405": {
+    "سمت را عوض کردن": "DIRECT",
+    "سوی را دگرگون کردن": "DIRECT",
+    "مسیر را تغییر دادن": "DIRECT",
+    "انحراف یافتن": "ACCEPT",
+    "چرخش کردن": "ACCEPT",
+    "گردش کردن": "REJECT"
+  },
+  "generated-406": {
+    "رای دادن": "REJECT",
+    "حکم کردن": "REJECT",
+    "فتوا دادن": "REJECT",
+    "نظر دادن": "REJECT",
+    "قضاوت کردن": "REJECT",
+    "انتخاب کردن": "ACCEPT"
+  },
+  "generated-403": {
+    "بها را عوض کردن": "DIRECT",
+    "ارزش را دگرگون کردن": "REJECT",
+    "نرخ را تغییر دادن": "ACCEPT",
+    "گران کردن": "REJECT",
+    "ارزان کردن": "REJECT",
+    "قیمت گذاری مجدد": "ACCEPT"
+  },
+  "generated-408": {
+    "طراحی کردن": "REJECT",
+    "نقشه کشیدن": "ACCEPT",
+    "تدبیر کردن": "ACCEPT",
+    "تنظیم کردن": "REJECT",
+    "سازماندهی کردن": "REJECT",
+    "آماده سازی کردن": "REJECT"
+  },
+  "generated-407": {
+    "وارسی کردن": "DIRECT",
+    "کاوش کردن": "ACCEPT",
+    "جستجو کردن": "REJECT",
+    "تحقیق کردن": "ACCEPT",
+    "موشکافی کردن": "ACCEPT",
+    "بازرسی کردن": "ACCEPT"
+  },
+  "generated-409": {
+    "عملی کردن": "DIRECT",
+    "پیاده کردن": "ACCEPT",
+    "انجام دادن": "DIRECT",
+    "به کار بستن": "ACCEPT",
+    "متحقق کردن": "ACCEPT",
+    "به مرحله عمل رساندن": "ACCEPT"
+  },
+  "generated-410": {
+    "اداره کردن": "DIRECT",
+    "رهبری کردن": "ACCEPT",
+    "سرپرستی کردن": "ACCEPT",
+    "نظارت کردن": "REJECT",
+    "ساماندهی کردن": "ACCEPT",
+    "کنترل کردن": "ACCEPT"
+  },
+  "generated-412": {
+    "گره گشایی کردن": "ACCEPT",
+    "رفع کردن": "ACCEPT",
+    "برطرف کردن": "ACCEPT",
+    "چاره اندیشی کردن": "REJECT",
+    "گشودن": "REJECT",
+    "پایان دادن": "REJECT"
+  },
+  "generated-411": {
+    "مشارکت کردن": "ACCEPT",
+    "همیاری کردن": "DIRECT",
+    "معاضدت کردن": "ACCEPT",
+    "همراهی کردن": "REJECT",
+    "کمک کردن": "REJECT",
+    "شرکت کردن": "REJECT"
+  },
+  "generated-413": {
+    "سنجیدن": "ACCEPT",
+    "برآورد کردن": "ACCEPT",
+    "تخمین زدن": "ACCEPT",
+    "قضاوت کردن": "ACCEPT",
+    "ارزش گذاری کردن": "ACCEPT",
+    "محاسبه کردن": "REJECT"
+  },
+  "generated-414": {
+    "نپذیرفتن": "DIRECT",
+    "مخالفت کردن": "DIRECT",
+    "انکار کردن": "DIRECT",
+    "باطل کردن": "REJECT",
+    "لغو کردن": "REJECT",
+    "پس زدن": "DIRECT"
+  },
+  "generated-415": {
+    "پذیرفتن": "DIRECT",
+    "تایید کردن": "ACCEPT",
+    "رضایت دادن": "DIRECT",
+    "گردن نهادن": "ACCEPT",
+    "موافقت کردن": "DIRECT",
+    "اجابت کردن": "ACCEPT"
+  },
+  "generated-416": {
+    "طراحی": "REJECT",
+    "نقشه": "REJECT",
+    "تدبیر": "ACCEPT",
+    "تنظیم": "REJECT",
+    "سازماندهی": "ACCEPT",
+    "آماده سازی": "REJECT"
+  },
+  "generated-417": {
+    "عملیات": "ACCEPT",
+    "پیاده سازی": "ACCEPT",
+    "انجام": "ACCEPT",
+    "تحقق": "ACCEPT",
+    "به کارگیری": "ACCEPT",
+    "عمل": "ACCEPT"
+  },
+  "generated-418": {
+    "اداره": "DIRECT",
+    "رهبری": "ACCEPT",
+    "سرپرستی": "ACCEPT",
+    "نظارت": "REJECT",
+    "ساماندهی": "ACCEPT",
+    "کنترل": "ACCEPT"
+  },
+  "generated-419": {
+    "گره گشایی": "ACCEPT",
+    "رفع": "REJECT",
+    "برطرف سازی": "ACCEPT",
+    "چاره اندیشی": "REJECT",
+    "گشایش": "ACCEPT",
+    "پایان": "REJECT"
+  },
+  "generated-420": {
+    "سنجش": "ACCEPT",
+    "برآورد": "ACCEPT",
+    "تخمین": "ACCEPT",
+    "قضاوت": "ACCEPT",
+    "ارزش گذاری": "ACCEPT",
+    "محاسبه": "REJECT"
+  },
+  "generated-421": {
+    "برگزیدن": "REJECT",
+    "گزینش": "DIRECT",
+    "گلچین": "ACCEPT",
+    "برداشت": "REJECT",
+    "پسند": "REJECT"
+  },
+  "generated-422": {
+    "نپذیرفتن": "REJECT",
+    "مخالفت": "REJECT",
+    "انکار": "DIRECT",
+    "ابطال": "REJECT",
+    "لغو": "REJECT",
+    "پس زدن": "REJECT"
+  },
+  "generated-423": {
+    "پذیرش": "DIRECT",
+    "تایید": "DIRECT",
+    "رضایت": "ACCEPT",
+    "موافقت": "DIRECT",
+    "اجابت": "ACCEPT",
+    "پذیرا": "REJECT"
+  },
+  "generated-425": {
+    "تقاضا": "DIRECT",
+    "خواهش": "DIRECT",
+    "التماس": "DIRECT",
+    "طلب": "DIRECT",
+    "استدعا": "DIRECT",
+    "خواست": "DIRECT"
+  },
+  "generated-424": {
+    "عرضه": "ACCEPT",
+    "مطرح سازی": "REJECT",
+    "ارائه": "REJECT",
+    "توصیه": "ACCEPT",
+    "سفارش": "REJECT",
+    "ایده": "ACCEPT"
+  },
+  "generated-426": {
+    "فرمان": "ACCEPT",
+    "حکم": "ACCEPT",
+    "امر": "ACCEPT",
+    "ابلاغ": "REJECT",
+    "صادر": "REJECT",
+    "مقرره": "ACCEPT"
+  },
+  "generated-427": {
+    "کوشش": "DIRECT",
+    "سعی": "DIRECT",
+    "جهد": "DIRECT",
+    "تقلا": "DIRECT",
+    "پشتکار": "ACCEPT",
+    "همت": "ACCEPT"
+  },
+  "generated-428": {
+    "شروع کردن": "DIRECT",
+    "آغاز کردن": "DIRECT",
+    "ابتدا کردن": "DIRECT",
+    "دست به کار شدن": "ACCEPT",
+    "بنیان نهادن": "ACCEPT",
+    "بنا کردن": "ACCEPT"
+  },
+  "generated-430": {
+    "پی گرفتن": "ACCEPT",
+    "دنبال کردن": "REJECT",
+    "مداومت کردن": "DIRECT",
+    "استمرار بخشیدن": "DIRECT",
+    "پیوسته انجام دادن": "ACCEPT",
+    "سیر کردن": "REJECT"
+  },
+  "generated-429": {
+    "تمام شدن": "DIRECT",
+    "به سر آمدن": "DIRECT",
+    "ختم شدن": "DIRECT",
+    "به اتمام رسیدن": "DIRECT",
+    "به پایان رسیدن": "DIRECT",
+    "منقضی شدن": "ACCEPT"
+  },
+  "generated-431": {
+    "آغاز کردن": "DIRECT",
+    "دست به کاری زدن": "DIRECT",
+    "وارد شدن": "REJECT",
+    "اقدام کردن": "ACCEPT",
+    "پیش گرفتن": "REJECT",
+    "بنا گذاشتن": "DIRECT"
+  },
+  "generated-434": {
+    "تمام کردن": "DIRECT",
+    "ختم کردن": "DIRECT",
+    "به سرانجام رساندن": "DIRECT",
+    "به اتمام رساندن": "DIRECT",
+    "مختومه کردن": "ACCEPT",
+    "فارغ شدن": "REJECT"
+  },
+  "generated-433": {
+    "ادامه دادن": "ACCEPT",
+    "پایداری کردن": "ACCEPT",
+    "استمرار ورزیدن": "DIRECT",
+    "ثابت قدم بودن": "ACCEPT",
+    "پشتکار داشتن": "ACCEPT",
+    "پافشاری کردن": "DIRECT"
+  },
+  "generated-437": {
+    "متصل شدن": "DIRECT",
+    "وصل شدن": "DIRECT",
+    "ملحق شدن": "DIRECT",
+    "همراه شدن": "DIRECT",
+    "به هم پیوستن": "DIRECT",
+    "یکپارچه شدن": "ACCEPT"
+  },
+  "generated-436": {
+    "ختم کردن": "DIRECT",
+    "تمام کردن": "DIRECT",
+    "به انتها رساندن": "DIRECT",
+    "به سر آوردن": "DIRECT",
+    "منقضی کردن": "REJECT",
+    "فراغت یافتن": "ACCEPT"
+  },
+  "generated-432": {
+    "پایان دادن": "DIRECT",
+    "به سر آوردن": "ACCEPT",
+    "تمام کردن": "ACCEPT",
+    "به انتها رساندن": "ACCEPT",
+    "به پایان رساندن": "DIRECT",
+    "مختومه کردن": "DIRECT"
+  },
+  "generated-438": {
+    "دوباره شروع کردن": "DIRECT",
+    "مجدداً آغاز کردن": "DIRECT",
+    "از نو شروع کردن": "DIRECT",
+    "از سر نو آغازیدن": "DIRECT",
+    "از ابتدا شروع کردن": "DIRECT",
+    "تکرار کردن": "REJECT"
+  },
+  "generated-435": {
+    "ادامه داشتن": "DIRECT",
+    "پیوستگی داشتن": "DIRECT",
+    "مداومت داشتن": "DIRECT",
+    "همواره بودن": "ACCEPT",
+    "پابرجا بودن": "ACCEPT",
+    "برقرار بودن": "ACCEPT"
+  },
+  "generated-440": {
+    "دوباره شروع کردن": "DIRECT",
+    "از سر گرفتن": "DIRECT",
+    "مجدداً شروع کردن": "DIRECT",
+    "از ابتدا شروع کردن": "DIRECT",
+    "تجدید کردن": "ACCEPT",
+    "بازگشتن": "REJECT"
+  },
+  "generated-442": {
+    "استوار ماندن": "DIRECT",
+    "برقرار ماندن": "DIRECT",
+    "ثابت ماندن": "ACCEPT",
+    "مستحکم ماندن": "ACCEPT",
+    "پایدار ماندن": "DIRECT",
+    "دوام آوردن": "ACCEPT"
+  },
+  "generated-443": {
+    "شروع کننده بودن": "DIRECT",
+    "پیشقدم بودن": "ACCEPT",
+    "بنیانگذار بودن": "ACCEPT",
+    "مبتکر بودن": "ACCEPT",
+    "پیشرو بودن": "ACCEPT",
+    "مقدم بودن": "REJECT"
+  },
+  "generated-441": {
+    "تمام کردن": "DIRECT",
+    "ختم کردن": "DIRECT",
+    "به پایان بردن": "DIRECT",
+    "به سرانجام رساندن": "DIRECT",
+    "به اتمام رساندن": "DIRECT",
+    "به فرجام رساندن": "DIRECT"
+  },
+  "generated-439": {
+    "بازداشتن": "ACCEPT",
+    "ایستادن": "REJECT",
+    "قطع کردن": "DIRECT",
+    "از حرکت بازداشتن": "ACCEPT",
+    "متوقف ساختن": "DIRECT",
+    "سد کردن": "ACCEPT"
+  },
+  "generated-446": {
+    "شروع شدن": "ACCEPT",
+    "آغاز شدن": "ACCEPT",
+    "برپا شدن": "REJECT",
+    "تشکیل شدن": "REJECT",
+    "پدید آمدن": "REJECT",
+    "آغازیدن": "ACCEPT"
+  },
+  "generated-445": {
+    "مداوم بودن": "DIRECT",
+    "مستمر بودن": "DIRECT",
+    "بی وقفه بودن": "DIRECT",
+    "ناگسسته بودن": "REJECT",
+    "همیشگی بودن": "ACCEPT",
+    "دائمی بودن": "ACCEPT"
+  },
+  "generated-444": {
+    "تمام شدن": "DIRECT",
+    "پایان یافتن": "DIRECT",
+    "ختم شدن": "DIRECT",
+    "به سر آمدن": "DIRECT",
+    "به اتمام رسیدن": "DIRECT",
+    "به فرجام رسیدن": "DIRECT"
+  },
+  "generated-449": {
+    "پیش زمینه سازی کردن": "DIRECT",
+    "آماده سازی کردن": "ACCEPT",
+    "تدارک دیدن": "ACCEPT",
+    "فراهم آوردن": "REJECT",
+    "زمینه سازی کردن": "DIRECT",
+    "پیش درآمد ساختن": "REJECT"
+  },
+  "generated-450": {
+    "تمام کردن": "ACCEPT",
+    "ختم کردن": "ACCEPT",
+    "به پایان رساندن": "DIRECT",
+    "به اتمام رساندن": "DIRECT",
+    "به فرجام رساندن": "DIRECT",
+    "کامل کردن": "DIRECT"
+  },
+  "generated-447": {
+    "به پایان رسیدن": "DIRECT",
+    "تمام شدن": "ACCEPT",
+    "ختم شدن": "ACCEPT",
+    "به سرانجام رسیدن": "DIRECT",
+    "به اتمام رسیدن": "DIRECT",
+    "به آخر رسیدن": "DIRECT"
+  },
+  "generated-448": {
+    "پایداری کردن": "ACCEPT",
+    "مقاومت کردن": "ACCEPT",
+    "استقامت کردن": "DIRECT",
+    "تحمل کردن": "DIRECT",
+    "برقرار ماندن": "ACCEPT",
+    "پابرجا ماندن": "DIRECT"
+  },
+  "generated-451": {
+    "دوام آوردن": "DIRECT",
+    "برقرار ماندن": "DIRECT",
+    "مستحکم ماندن": "ACCEPT",
+    "ثابت ماندن": "ACCEPT",
+    "استوار ماندن": "DIRECT",
+    "پابرجا ماندن": "DIRECT"
+  },
+  "generated-452": {
+    "مرتب": "DIRECT",
+    "با قاعده": "DIRECT",
+    "دقیق": "REJECT",
+    "آراسته": "ACCEPT",
+    "منضبط": "DIRECT"
+  },
+  "generated-453": {
+    "وفادار": "DIRECT",
+    "صادق": "REJECT",
+    "امین": "ACCEPT",
+    "پایبند": "ACCEPT",
+    "با عهد": "ACCEPT"
+  },
+  "generated-454": {
+    "پرسشگر": "ACCEPT",
+    "جستجوگر": "REJECT",
+    "کاووشگر": "REJECT",
+    "فضول": "ACCEPT",
+    "علاقه مند": "ACCEPT"
+  },
+  "generated-455": {
+    "بذله گو": "ACCEPT",
+    "خوش مشرب": "REJECT",
+    "شاداب": "REJECT",
+    "سرزنده": "REJECT",
+    "خوش رو": "REJECT"
+  },
+  "generated-457": {
+    "منطقی": "ACCEPT",
+    "معقول": "ACCEPT",
+    "عاقل": "REJECT",
+    "دوراندیش": "REJECT",
+    "حقیقت بین": "DIRECT"
+  },
+  "generated-460": {
+    "باهوش": "ACCEPT",
+    "زیرک": "REJECT",
+    "توانا": "REJECT",
+    "نابغه": "REJECT",
+    "ماهر": "REJECT"
+  },
+  "generated-459": {
+    "مهربان": "ACCEPT",
+    "غمخوار": "DIRECT",
+    "همدل": "ACCEPT",
+    "با محبت": "REJECT",
+    "رحیم": "ACCEPT"
+  },
+  "generated-461": {
+    "خودمختار": "DIRECT",
+    "آزاد": "ACCEPT",
+    "خودکفا": "ACCEPT",
+    "بی نیاز": "ACCEPT",
+    "خودگردان": "ACCEPT"
+  },
+  "generated-462": {
+    "با انصاف": "ACCEPT",
+    "عادل": "REJECT",
+    "شریف": "ACCEPT",
+    "با شرافت": "ACCEPT",
+    "درستکار": "ACCEPT"
+  },
+  "generated-458": {
+    "کوشا": "ACCEPT",
+    "پرتلاش": "DIRECT",
+    "با پشتکار": "DIRECT",
+    "فعال": "REJECT",
+    "زحمتکش": "DIRECT"
+  },
+  "generated-463": {
+    "اندیشمند": "ACCEPT",
+    "متفکر": "ACCEPT",
+    "باهوش": "ACCEPT",
+    "خردمند": "ACCEPT",
+    "عاقل": "ACCEPT"
+  },
+  "generated-456": {
+    "نوآور": "REJECT",
+    "مبتکر": "DIRECT",
+    "سازنده": "REJECT",
+    "خلاقانه": "REJECT",
+    "ابداع گر": "REJECT"
+  },
+  "generated-465": {
+    "بخشنده": "DIRECT",
+    "سخاوتمند": "REJECT",
+    "کریم": "REJECT",
+    "جوانمرد": "REJECT",
+    "چشم پوش": "DIRECT"
+  },
+  "generated-466": {
+    "مودب": "DIRECT",
+    "با نزاکت": "DIRECT",
+    "محترم": "ACCEPT",
+    "خوش رفتار": "ACCEPT",
+    "بافرهنگ": "ACCEPT"
+  },
+  "generated-464": {
+    "پایبند": "DIRECT",
+    "مسئولیت پذیر": "ACCEPT",
+    "وفادار": "ACCEPT",
+    "امین": "ACCEPT",
+    "باوفا": "ACCEPT"
+  },
+  "generated-467": {
+    "مصمم": "DIRECT",
+    "قاطع": "ACCEPT",
+    "با پشتکار": "ACCEPT",
+    "پرتلاش": "REJECT",
+    "سرسخت": "ACCEPT"
+  },
+  "generated-468": {
+    "شریف": "ACCEPT",
+    "باوجدان": "ACCEPT",
+    "درستکار": "ACCEPT",
+    "با شرافت": "ACCEPT",
+    "نیک خو": "ACCEPT"
+  },
+  "generated-470": {
+    "بلندقامت": "DIRECT",
+    "کشیده": "REJECT",
+    "سربلند": "REJECT",
+    "والا": "REJECT",
+    "رفیع": "ACCEPT"
+  },
+  "generated-469": {
+    "مهربان": "DIRECT",
+    "دلسوز": "DIRECT",
+    "با محبت": "REJECT",
+    "باگذشت": "ACCEPT",
+    "نیک سرشت": "DIRECT"
+  },
+  "generated-471": {
+    "ریزجثه": "REJECT",
+    "کوچک قامت": "DIRECT",
+    "غوک": "REJECT",
+    "پست": "DIRECT"
+  },
+  "generated-472": {
+    "بدقواره": "DIRECT",
+    "نازیبا": "DIRECT",
+    "کریه": "DIRECT",
+    "بدریخت": "DIRECT",
+    "ناخوشایند": "ACCEPT"
+  },
+  "generated-473": {
+    "نوجوان": "REJECT",
+    "برنا": "DIRECT",
+    "تازه": "REJECT",
+    "شاداب": "REJECT",
+    "نورس": "DIRECT"
+  },
+  "generated-475": {
+    "گشاده رو": "DIRECT",
+    "خوش برخورد": "ACCEPT",
+    "مهربان": "REJECT",
+    "خندان": "ACCEPT",
+    "بشاش": "DIRECT"
+  },
+  "generated-476": {
+    "ترش رو": "DIRECT",
+    "اخمو": "DIRECT",
+    "گرفته": "REJECT",
+    "ناراحت": "REJECT",
+    "بدخلق": "ACCEPT"
+  },
+  "generated-478": {
+    "تیره": "DIRECT",
+    "مشکی": "DIRECT",
+    "سیاهگون": "DIRECT",
+    "تاریک": "ACCEPT",
+    "کدر": "REJECT"
+  },
+  "generated-479": {
+    "سبزه": "REJECT",
+    "برنزه": "ACCEPT",
+    "قهوه ای": "REJECT",
+    "تیره پوست": "REJECT"
+  },
+  "generated-474": {
+    "سالخورده": "DIRECT",
+    "کهنسال": "DIRECT",
+    "فرتوت": "ACCEPT",
+    "سالدیده": "DIRECT",
+    "مسن": "DIRECT"
+  },
+  "generated-480": {
+    "طلایی": "REJECT",
+    "بلوند": "REJECT",
+    "زرد": "REJECT",
+    "روشن": "REJECT"
+  },
+  "generated-482": {
+    "پوست لطیف": "ACCEPT",
+    "پوست نرم": "REJECT",
+    "پوست شفاف": "REJECT",
+    "پوست بی عیب": "ACCEPT"
+  },
+  "generated-481": {
+    "چشم گشاد": "REJECT",
+    "چشم بزرگ": "REJECT",
+    "چشم شهلا": "REJECT",
+    "چشم زیبا": "REJECT"
+  },
+  "generated-483": {
+    "پوست پیر": "REJECT",
+    "پوست افتاده": "ACCEPT",
+    "پوست خشک": "REJECT",
+    "پوست فرسوده": "ACCEPT"
+  },
+  "generated-484": {
+    "سریع": "DIRECT",
+    "باقید": "REJECT",
+    "فوری": "REJECT",
+    "شتابان": "REJECT",
+    "به سرعت": "REJECT",
+    "عاجل": "ACCEPT"
+  },
+  "generated-485": {
+    "با تأخیر": "REJECT",
+    "درازمدت": "REJECT",
+    "طولانی": "REJECT",
+    "کند": "REJECT",
+    "به کندی": "REJECT",
+    "پس افتاده": "REJECT"
+  },
+  "generated-477": {
+    "روشن": "REJECT",
+    "سپید": "DIRECT",
+    "درخشان": "REJECT",
+    "شفاف": "REJECT",
+    "تابان": "REJECT"
+  },
+  "generated-486": {
+    "دائماً": "DIRECT",
+    "پیوسته": "REJECT",
+    "مدام": "REJECT",
+    "مکرراً": "REJECT",
+    "همواره": "DIRECT",
+    "جاودانه": "REJECT"
+  },
+  "generated-487": {
+    "ابداً": "REJECT",
+    "هیچ وقت": "REJECT",
+    "به هیچ وجه": "REJECT",
+    "اصلاً": "REJECT",
+    "به هیچ رو": "REJECT",
+    "مطلقاً": "REJECT"
+  },
+  "generated-488": {
+    "بعضی اوقات": "REJECT",
+    "گهگاه": "DIRECT",
+    "هر از گاهی": "DIRECT",
+    "ناگهانی": "REJECT",
+    "گاهی اوقات": "DIRECT",
+    "گاه به گاه": "DIRECT"
+  },
+  "generated-490": {
+    "پیشین": "DIRECT",
+    "گذشته": "DIRECT",
+    "قدیم": "ACCEPT",
+    "اسبق": "DIRECT",
+    "پیشینه ای": "REJECT",
+    "قبلی": "DIRECT"
+  },
+  "generated-491": {
+    "بعدی": "ACCEPT",
+    "پیش رو": "ACCEPT",
+    "آتی": "DIRECT",
+    "بعد از این": "REJECT",
+    "مستقبل": "REJECT",
+    "پیش بینی شده": "REJECT"
+  },
+  "generated-492": {
+    "یک باره": "REJECT",
+    "بی مقدمه": "REJECT",
+    "یک دفعه": "REJECT",
+    "فجأة": "REJECT",
+    "غیرمنتظره": "REJECT",
+    "بی خبر": "REJECT"
+  },
+  "generated-494": {
+    "اندک": "DIRECT",
+    "ناچیز": "REJECT",
+    "قلیل": "DIRECT",
+    "مختصر": "REJECT",
+    "کوچک": "REJECT"
+  },
+  "generated-495": {
+    "بسنده": "DIRECT",
+    "به اندازه": "REJECT",
+    "مکفی": "DIRECT",
+    "وافی": "DIRECT",
+    "متناسب": "REJECT",
+    "کامل": "REJECT"
+  },
+  "generated-493": {
+    "کند": "DIRECT",
+    "آرام": "DIRECT",
+    "به کندی": "REJECT",
+    "یواش": "DIRECT",
+    "ملایم": "REJECT",
+    "خفیف": "REJECT"
+  },
+  "generated-496": {
+    "کامل": "DIRECT",
+    "سراسر": "ACCEPT",
+    "همه": "REJECT",
+    "یکپارچه": "REJECT",
+    "بی کم وکاست": "ACCEPT",
+    "جامع": "REJECT"
+  },
+  "generated-497": {
+    "زیاد": "DIRECT",
+    "فراوان": "DIRECT",
+    "کثیر": "ACCEPT",
+    "بیشمار": "ACCEPT",
+    "پر": "REJECT",
+    "وفور": "REJECT"
+  },
+  "generated-499": {
+    "شتاب": "REJECT",
+    "تندی": "DIRECT",
+    "چابکی": "REJECT",
+    "فرزی": "REJECT",
+    "عجله": "REJECT",
+    "زودباشی": "REJECT"
+  },
+  "generated-498": {
+    "میزان": "DIRECT",
+    "اندازه": "DIRECT",
+    "حجم": "ACCEPT",
+    "کمیّت": "DIRECT",
+    "حد": "REJECT",
+    "سهم": "REJECT"
+  },
+  "generated-502": {
+    "گذرا": "DIRECT",
+    "موقتی": "DIRECT",
+    "ناپایدار": "ACCEPT",
+    "کوتاه مدت": "DIRECT",
+    "عارضی": "DIRECT",
+    "فانی": "REJECT"
+  },
+  "generated-501": {
+    "پیوسته": "DIRECT",
+    "همیشگی": "DIRECT",
+    "مداوم": "DIRECT",
+    "مستمر": "DIRECT",
+    "ثابت": "ACCEPT",
+    "پابرجا": "ACCEPT"
+  },
+  "generated-500": {
+    "دم": "ACCEPT",
+    "آن": "REJECT",
+    "وقت کوتاه": "REJECT",
+    "چشم برهم زدن": "REJECT",
+    "یک آن": "DIRECT",
+    "ثانیه": "ACCEPT"
+  },
+  "generated-503": {
+    "عمومی": "ACCEPT",
+    "همه گیر": "DIRECT",
+    "جامع": "ACCEPT",
+    "گسترده": "ACCEPT",
+    "شامل": "REJECT",
+    "کلی": "REJECT"
+  },
+  "generated-504": {
+    "پیوسته": "DIRECT",
+    "مستمر": "DIRECT",
+    "همیشگی": "DIRECT",
+    "بی وقفه": "DIRECT",
+    "دائم": "DIRECT",
+    "پشت سرهم": "REJECT"
+  },
+  "generated-505": {
+    "گرانبها": "DIRECT",
+    "نفیس": "ACCEPT",
+    "ارزشمند": "DIRECT",
+    "بها دار": "DIRECT",
+    "قیمتی": "REJECT"
+  },
+  "generated-506": {
+    "ناچیز": "DIRECT",
+    "پوچ": "ACCEPT",
+    "بی مقدار": "DIRECT",
+    "کم بها": "DIRECT",
+    "بی اهمیت": "ACCEPT"
+  },
+  "generated-507": {
+    "دلخواه": "REJECT",
+    "پسندیده": "ACCEPT",
+    "مرغوب": "REJECT",
+    "نیکو": "REJECT",
+    "خواستنی": "DIRECT"
+  },
+  "generated-508": {
+    "ناپسند": "DIRECT",
+    "ناگوار": "ACCEPT",
+    "بَد": "ACCEPT",
+    "نامرغوب": "ACCEPT",
+    "ناخوشایند": "ACCEPT"
+  },
+  "generated-511": {
+    "کهنه": "DIRECT",
+    "باستانی": "ACCEPT",
+    "دیرین": "DIRECT",
+    "کهن": "DIRECT",
+    "فرسوده": "REJECT"
+  },
+  "generated-512": {
+    "پر سر و صدا": "REJECT",
+    "پرترافیک": "ACCEPT",
+    "همهمه": "REJECT",
+    "آشفته": "ACCEPT",
+    "درهم": "REJECT"
+  },
+  "generated-513": {
+    "تهی": "DIRECT",
+    "پوچ": "DIRECT",
+    "بی محتوا": "ACCEPT",
+    "سفید": "REJECT",
+    "بی چیز": "REJECT"
+  },
+  "generated-510": {
+    "نو": "DIRECT",
+    "تازه": "DIRECT",
+    "مدرن": "ACCEPT",
+    "امروزی": "ACCEPT",
+    "بکر": "ACCEPT"
+  },
+  "generated-514": {
+    "لبریز": "ACCEPT",
+    "مملو": "DIRECT",
+    "سرشار": "ACCEPT",
+    "آکنده": "ACCEPT",
+    "لبالب": "REJECT"
+  },
+  "generated-509": {
+    "برتر": "ACCEPT",
+    "ممتاز": "DIRECT",
+    "والا": "REJECT",
+    "فوق العاده": "DIRECT",
+    "بی نظیر": "ACCEPT"
+  },
+  "generated-515": {
+    "عمیق نگر": "DIRECT",
+    "فکور": "ACCEPT",
+    "متفکر": "ACCEPT",
+    "باریک بین": "REJECT",
+    "دقیق": "REJECT",
+    "بصیر": "REJECT"
+  },
+  "generated-517": {
+    "عقلانی": "DIRECT",
+    "معقول": "DIRECT",
+    "استدلالی": "ACCEPT",
+    "خردپسند": "ACCEPT",
+    "مستدل": "DIRECT",
+    "برهانی": "ACCEPT"
+  },
+  "generated-516": {
+    "باهوش": "DIRECT",
+    "زیرک": "ACCEPT",
+    "دانا": "ACCEPT",
+    "عاقل": "ACCEPT",
+    "نکته سنج": "REJECT",
+    "تیزهوش": "DIRECT"
+  },
+  "generated-518": {
+    "تجزیه گر": "REJECT",
+    "واکاوانه": "ACCEPT",
+    "تفکیکی": "ACCEPT",
+    "بررسی گر": "REJECT",
+    "کالبدشکافانه": "ACCEPT"
+  },
+  "generated-519": {
+    "عیب جویانه": "ACCEPT",
+    "خرده گیرانه": "DIRECT",
+    "سنجشگرانه": "ACCEPT",
+    "ارزیابانه": "ACCEPT",
+    "ریشه یابانه": "REJECT"
+  },
+  "generated-521": {
+    "دانشی": "DIRECT",
+    "پژوهشی": "ACCEPT",
+    "آکادمیک": "ACCEPT",
+    "دانشمندانه": "ACCEPT",
+    "تجربی": "ACCEPT",
+    "آزمایشی": "REJECT"
+  },
+  "generated-523": {
+    "عملی": "DIRECT",
+    "مصرفی": "REJECT",
+    "استفاده ای": "ACCEPT",
+    "اجرایی": "REJECT",
+    "مفید": "ACCEPT"
+  },
+  "generated-520": {
+    "حکیمانه": "REJECT",
+    "دانشورانه": "REJECT",
+    "اندیشمندانه": "REJECT",
+    "خردورزانه": "ACCEPT",
+    "متفکرانه": "REJECT"
+  },
+  "generated-522": {
+    "تئوریک": "DIRECT",
+    "مفهومی": "ACCEPT",
+    "ذهنی": "REJECT",
+    "انتزاعی": "ACCEPT",
+    "تصوری": "ACCEPT"
+  },
+  "generated-525": {
+    "بغنج": "REJECT",
+    "دشوار": "REJECT",
+    "مرکب": "ACCEPT",
+    "مغلق": "REJECT",
+    "پیچ در پیچ": "ACCEPT"
+  },
+  "generated-524": {
+    "نوآور": "DIRECT",
+    "خلاق": "DIRECT",
+    "ایده پرداز": "REJECT",
+    "بدیع": "DIRECT",
+    "خلاقانه": "REJECT",
+    "آفریننده": "REJECT"
+  },
+  "generated-527": {
+    "واقعی": "DIRECT",
+    "ملموس": "ACCEPT",
+    "مشخص": "REJECT",
+    "مادی": "ACCEPT",
+    "قابل مشاهده": "ACCEPT"
+  },
+  "generated-529": {
+    "با دلیل": "REJECT",
+    "با برهان": "REJECT",
+    "منطقی": "ACCEPT",
+    "مستند": "REJECT",
+    "مبتنی بر استدلال": "ACCEPT"
+  },
+  "generated-528": {
+    "ادراکی": "REJECT",
+    "تصوری": "ACCEPT",
+    "ذهنی": "ACCEPT",
+    "انتزاعی": "ACCEPT",
+    "معنایی": "ACCEPT"
+  },
+  "generated-530": {
+    "مدارک دار": "REJECT",
+    "مبتنی بر سند": "ACCEPT",
+    "موثق": "DIRECT",
+    "معتبر": "ACCEPT",
+    "قابل اثبات": "ACCEPT"
+  },
+  "generated-526": {
+    "فکری": "DIRECT",
+    "درونی": "ACCEPT",
+    "انتزاعی": "REJECT",
+    "تصوری": "ACCEPT",
+    "پنداری": "ACCEPT"
+  },
+  "generated-489": {
+    "حالا": "REJECT",
+    "اینک": "DIRECT",
+    "در حال حاضر": "REJECT",
+    "هم اکنون": "REJECT",
+    "فعلاً": "REJECT",
+    "همین الان": "REJECT"
+  },
+  "generated-531": {
+    "قابل اعتماد": "DIRECT",
+    "موثق": "ACCEPT",
+    "رسمی": "REJECT",
+    "قانونی": "REJECT",
+    "صحیح": "REJECT"
+  },
+  "generated-533": {
+    "تحقیقاتی": "DIRECT",
+    "علمی": "ACCEPT",
+    "کاوشی": "DIRECT",
+    "جستجوگرانه": "ACCEPT",
+    "مطالعاتی": "ACCEPT"
+  },
+  "generated-532": {
+    "قابل اعتماد": "ACCEPT",
+    "معتبر": "ACCEPT",
+    "صحیح": "REJECT",
+    "درست": "REJECT",
+    "مطمئن": "REJECT"
+  },
+  "generated-534": {
+    "آزمایشی": "DIRECT",
+    "عملی": "ACCEPT",
+    "بر اساس تجربه": "REJECT",
+    "آزموده": "DIRECT",
+    "کارآزموده": "ACCEPT"
+  },
+  "generated-535": {
+    "مفروض": "DIRECT",
+    "پنداری": "ACCEPT",
+    "تصوری": "ACCEPT",
+    "تئوریک": "ACCEPT",
+    "غیر واقعی": "ACCEPT"
+  },
+  "generated-536": {
+    "حقیقی": "DIRECT",
+    "عینی": "DIRECT",
+    "ملموس": "REJECT",
+    "راستین": "DIRECT",
+    "اصیل": "ACCEPT"
+  },
+  "generated-538": {
+    "کله": "DIRECT",
+    "راس": "DIRECT",
+    "فرق": "REJECT",
+    "جمجمه": "REJECT"
+  },
+  "generated-540": {
+    "صدر": "ACCEPT",
+    "پستان": "REJECT",
+    "قفسه سینه": "REJECT",
+    "پهلوی": "REJECT"
+  },
+  "generated-539": {
+    "میان": "REJECT",
+    "پشت": "REJECT",
+    "ستون فقرات": "REJECT",
+    "عقب": "REJECT"
+  },
+  "generated-541": {
+    "بندها": "REJECT",
+    "پیوندگاه": "REJECT",
+    "اتصالات استخوانی": "ACCEPT",
+    "محل اتصال استخوان ها": "REJECT"
+  },
+  "generated-542": {
+    "پی ها": "REJECT",
+    "رگ های عصبی": "REJECT",
+    "شبکه عصبی": "REJECT",
+    "تارهای عصبی": "REJECT"
+  },
+  "generated-543": {
+    "جهاز ترشحی": "REJECT",
+    "اندام ترشح کننده": "REJECT",
+    "بافت ترشحی": "REJECT",
+    "عضو ترشح کننده": "REJECT"
+  },
+  "generated-537": {
+    "کامل": "DIRECT",
+    "فراگیر": "DIRECT",
+    "همه جانبه": "DIRECT",
+    "گسترده": "ACCEPT",
+    "شامل": "DIRECT"
+  },
+  "generated-544": {
+    "سوپ": "ACCEPT",
+    "شوربا": "ACCEPT",
+    "حلیم": "REJECT",
+    "آبگوشت": "REJECT",
+    "یخنی": "REJECT"
+  },
+  "generated-545": {
+    "تره": "REJECT",
+    "جعفری": "REJECT",
+    "گشنیز": "REJECT",
+    "ریحان": "REJECT",
+    "شوید": "REJECT"
+  },
+  "generated-547": {
+    "چشمک": "REJECT",
+    "دوربین": "REJECT",
+    "عینک آفتابی": "REJECT",
+    "عینک مطالعه": "REJECT",
+    "عینک طبی": "REJECT"
+  },
+  "generated-548": {
+    "کوله": "ACCEPT",
+    "ساک": "ACCEPT",
+    "چمدان": "REJECT",
+    "کیف دستی": "REJECT",
+    "کیف پول": "REJECT"
+  },
+  "generated-546": {
+    "زمان سنج": "REJECT",
+    "کرونومتر": "REJECT",
+    "ساعت مچی": "REJECT",
+    "ساعت دیواری": "REJECT",
+    "ساعت رومیزی": "REJECT"
+  },
+  "generated-549": {
+    "آویز گوش": "DIRECT",
+    "حلقه گوش": "ACCEPT",
+    "گوش آویز": "DIRECT",
+    "گوشواره میخی": "REJECT",
+    "گوشواره آویز": "REJECT"
+  },
+  "generated-550": {
+    "طوق": "REJECT",
+    "زنجیر": "REJECT",
+    "قلاده": "DIRECT",
+    "گردن آویز": "ACCEPT",
+    "مدال": "REJECT"
+  },
+  "generated-551": {
+    "حلقه": "ACCEPT",
+    "نگین": "REJECT",
+    "انگشتری": "DIRECT",
+    "حلقه ازدواج": "REJECT",
+    "انگشتر نامزدی": "REJECT"
+  },
+  "generated-554": {
+    "پالتو": "ACCEPT",
+    "اورکت": "DIRECT",
+    "بادگیر": "REJECT",
+    "بارانی": "REJECT",
+    "ژاکت": "REJECT"
+  },
+  "generated-552": {
+    "بازوبند": "REJECT",
+    "النگو": "DIRECT",
+    "مچ بند": "DIRECT",
+    "دست بند چرمی": "REJECT",
+    "دست بند مهره ای": "REJECT"
+  },
+  "generated-553": {
+    "کت": "REJECT",
+    "پلیور": "REJECT",
+    "بلوز بافتنی": "REJECT",
+    "سویشرت": "REJECT",
+    "کاردیگان": "ACCEPT"
+  },
+  "generated-556": {
+    "آب وهوا": "REJECT",
+    "ناحیه": "ACCEPT",
+    "منطقه": "ACCEPT",
+    "بوم": "REJECT",
+    "سرزمین": "REJECT"
+  },
+  "generated-557": {
+    "یخ": "REJECT",
+    "کولاک": "REJECT",
+    "دانه های برف": "REJECT",
+    "بوران": "REJECT",
+    "سفیدی": "REJECT"
+  },
+  "generated-558": {
+    "صحرا": "DIRECT",
+    "دشت": "REJECT",
+    "کویز": "REJECT",
+    "برهوت": "DIRECT",
+    "کویر": "DIRECT"
+  },
+  "generated-559": {
+    "نور": "ACCEPT",
+    "اشعه": "DIRECT",
+    "تابش": "DIRECT",
+    "فروغ": "ACCEPT",
+    "درخشش": "ACCEPT"
+  },
+  "generated-555": {
+    "تندآب": "REJECT",
+    "شلال": "DIRECT",
+    "فروآب": "REJECT",
+    "آب ریز": "ACCEPT",
+    "آب فشان": "REJECT"
+  },
+  "generated-562": {
+    "صحرا": "REJECT",
+    "بیابان": "REJECT",
+    "هامون": "REJECT",
+    "فلات": "REJECT",
+    "جلگه": "ACCEPT"
+  },
+  "generated-560": {
+    "پشته": "ACCEPT",
+    "کوهک": "ACCEPT",
+    "بلندی": "REJECT",
+    "پشته زار": "REJECT",
+    "کوهپایه": "REJECT"
+  },
+  "generated-561": {
+    "سرچشمه": "ACCEPT",
+    "منبع": "REJECT",
+    "آبشخور": "REJECT",
+    "جوشش": "REJECT",
+    "مظهر": "REJECT"
+  },
+  "generated-563": {
+    "نهر": "DIRECT",
+    "جویبار": "REJECT",
+    "رودخانه": "DIRECT",
+    "آبراه": "ACCEPT",
+    "مسیل": "ACCEPT"
+  },
+  "generated-564": {
+    "ابر": "DIRECT",
+    "میغ": "REJECT",
+    "غیم": "DIRECT",
+    "ابرهای آسمان": "REJECT",
+    "توده ابر": "REJECT"
+  },
+  "generated-566": {
+    "گردباد": "REJECT",
+    "تندباد": "ACCEPT",
+    "باد شدید": "REJECT",
+    "کولاک": "REJECT",
+    "بحران": "REJECT"
+  },
+  "generated-565": {
+    "رعد": "REJECT",
+    "برق": "REJECT",
+    "آذرخش": "DIRECT",
+    "تندر": "REJECT",
+    "آتش آسمانی": "REJECT"
+  },
+  "generated-567": {
+    "آسمان": "REJECT",
+    "کیهان": "REJECT",
+    "جو": "REJECT",
+    "محیط": "ACCEPT",
+    "فراخنا": "REJECT"
+  },
+  "generated-568": {
+    "بیابان": "DIRECT",
+    "نمکزار": "REJECT",
+    "برهوت": "DIRECT",
+    "دشت خشک": "REJECT",
+    "صحرا": "ACCEPT"
+  },
+  "generated-569": {
+    "غبار": "REJECT",
+    "بخار": "REJECT",
+    "تاریکی": "REJECT",
+    "دود": "REJECT",
+    "تار": "REJECT"
+  },
+  "generated-570": {
+    "باد ملایم": "DIRECT",
+    "بوی خوش": "REJECT",
+    "صبا": "DIRECT",
+    "وزش": "REJECT",
+    "باد خنک": "ACCEPT"
+  },
+  "generated-571": {
+    "کوه آتشفشان": "ACCEPT",
+    "کوه گدازه": "REJECT",
+    "کوه شعله ور": "REJECT",
+    "دهانه آتشفشان": "REJECT",
+    "کوه فعال": "REJECT"
+  },
+  "generated-572": {
+    "خورشید": "DIRECT",
+    "مهر": "DIRECT",
+    "شمس": "DIRECT",
+    "نور خورشید": "REJECT",
+    "آفتابگردان": "REJECT"
+  },
+  "generated-573": {
+    "آبگیر": "ACCEPT",
+    "تالاب": "ACCEPT",
+    "مرداب": "ACCEPT",
+    "حوضچه": "ACCEPT",
+    "دریاچه کوچک": "REJECT"
+  },
+  "generated-575": {
+    "دامنه کوه": "DIRECT",
+    "پای کوه": "DIRECT",
+    "سفح": "REJECT",
+    "تپه": "REJECT",
+    "زمین شیبدار": "REJECT"
+  },
+  "generated-574": {
+    "کرانه": "DIRECT",
+    "لب دریا": "ACCEPT",
+    "کنار دریا": "REJECT",
+    "بندر": "REJECT",
+    "کناره": "ACCEPT"
+  },
+  "generated-576": {
+    "طوفان": "REJECT",
+    "توفان": "REJECT",
+    "باد شدید": "REJECT",
+    "چرخند": "DIRECT",
+    "تندباد": "DIRECT"
+  },
+  "generated-577": {
+    "چاله": "DIRECT",
+    "حفره": "DIRECT",
+    "سوراخ": "ACCEPT",
+    "فرورفتگی": "ACCEPT",
+    "گود": "ACCEPT"
+  },
+  "generated-578": {
+    "نور ماه": "REJECT",
+    "ماهتاب": "DIRECT",
+    "پرتو ماه": "REJECT",
+    "درخشش ماه": "REJECT",
+    "سفیدی ماه": "REJECT"
+  },
+  "generated-580": {
+    "تعلیم": "DIRECT",
+    "یادگیری": "REJECT",
+    "پرورش": "REJECT",
+    "تربیت": "ACCEPT",
+    "فراگیری": "REJECT",
+    "درس": "REJECT"
+  },
+  "generated-581": {
+    "مبحث": "ACCEPT",
+    "موضوع": "REJECT",
+    "ماده درسی": "REJECT",
+    "گفتار": "REJECT",
+    "تعلیم": "ACCEPT",
+    "آموزش": "ACCEPT"
+  },
+  "generated-582": {
+    "آزمون": "DIRECT",
+    "سنجش": "ACCEPT",
+    "ارزیابی": "REJECT",
+    "پرسش": "REJECT",
+    "آزمایش": "REJECT",
+    "سؤال": "REJECT"
+  },
+  "generated-584": {
+    "حروف": "REJECT",
+    "هجا": "REJECT",
+    "ابجد": "ACCEPT",
+    "خط": "REJECT",
+    "نوشتار": "REJECT",
+    "حروف الفبا": "REJECT"
+  },
+  "generated-579": {
+    "آبادی": "REJECT",
+    "نخلستان": "REJECT",
+    "سبزه زار": "REJECT",
+    "چشمه سار": "REJECT",
+    "آبادی در بیابان": "REJECT"
+  },
+  "generated-583": {
+    "امتیاز": "DIRECT",
+    "درجه": "ACCEPT",
+    "رتبه": "REJECT",
+    "مقدار": "REJECT",
+    "حد": "REJECT",
+    "میزان": "REJECT"
+  },
+  "generated-585": {
+    "عبارت": "REJECT",
+    "کلام": "REJECT",
+    "سخن": "REJECT",
+    "گفتار": "REJECT",
+    "بیان": "REJECT",
+    "جملات": "REJECT"
+  },
+  "generated-588": {
+    "برگردان": "DIRECT",
+    "نقل": "REJECT",
+    "تفسیر": "REJECT",
+    "تعبیر": "REJECT",
+    "برگرداندن": "REJECT",
+    "معادل": "REJECT"
+  },
+  "generated-586": {
+    "دستور زبان": "DIRECT",
+    "صرف و نحو": "ACCEPT",
+    "قواعد": "DIRECT",
+    "ساختار زبان": "REJECT",
+    "نحو": "ACCEPT",
+    "صرف": "REJECT"
+  },
+  "generated-590": {
+    "گفتگو": "DIRECT",
+    "سخن گفتن": "DIRECT",
+    "کلام": "REJECT",
+    "بیان": "REJECT",
+    "مکالمه": "ACCEPT",
+    "حرف زدن": "DIRECT"
+  },
+  "generated-587": {
+    "فرهنگ لغت": "DIRECT",
+    "واژه نامه": "DIRECT",
+    "دیکشنری": "DIRECT",
+    "معجم": "DIRECT",
+    "فرهنگ": "ACCEPT",
+    "واژگان": "REJECT"
+  },
+  "generated-592": {
+    "وایت برد": "REJECT",
+    "لوح": "REJECT",
+    "صفحه": "REJECT",
+    "تخته": "REJECT",
+    "تابلو": "REJECT",
+    "تخته گچی": "REJECT"
+  },
+  "generated-593": {
+    "قلم": "REJECT",
+    "خودکار": "REJECT",
+    "قلمداد": "REJECT",
+    "نوک": "REJECT",
+    "ابزار نگارش": "REJECT",
+    "قلم سربی": "DIRECT"
+  },
+  "generated-591": {
+    "نکته": "REJECT",
+    "ملاحظه": "REJECT",
+    "تذکر": "ACCEPT",
+    "یادآوری": "REJECT",
+    "نوشته": "ACCEPT",
+    "خاطره": "REJECT"
+  },
+  "generated-595": {
+    "کلاس درس": "REJECT",
+    "اتاق درس": "ACCEPT",
+    "دوره": "REJECT",
+    "گروه آموزشی": "REJECT",
+    "رشته": "REJECT",
+    "دسته": "REJECT"
+  },
+  "generated-597": {
+    "مطلب": "ACCEPT",
+    "موضوع": "REJECT",
+    "قضیه": "REJECT",
+    "مورد": "REJECT",
+    "یادداشت": "ACCEPT",
+    "اشاره": "REJECT"
+  },
+  "generated-596": {
+    "تکلیف": "ACCEPT",
+    "تمرین": "DIRECT",
+    "وظیفه": "REJECT",
+    "کار درسی": "ACCEPT",
+    "درس": "REJECT",
+    "تکالیف": "DIRECT"
+  },
+  "generated-589": {
+    "گفتگو": "DIRECT",
+    "صحبت": "ACCEPT",
+    "مباحثه": "ACCEPT",
+    "گپ": "ACCEPT",
+    "سخن": "REJECT",
+    "گفتار": "REJECT"
+  },
+  "generated-598": {
+    "بازگویی": "ACCEPT",
+    "تکرار کردن": "REJECT",
+    "مکرر": "REJECT",
+    "دوباره گویی": "ACCEPT",
+    "تکرار شونده": "REJECT",
+    "بازخوانی": "ACCEPT"
+  },
+  "generated-600": {
+    "طراحی بصری": "ACCEPT",
+    "تصویرسازی": "REJECT",
+    "هنر چاپی": "REJECT",
+    "گرافیک دیزاین": "REJECT"
+  },
+  "generated-599": {
+    "ممارست": "DIRECT",
+    "ورزش": "REJECT",
+    "تکرار": "REJECT",
+    "مشق": "DIRECT",
+    "آمادگی": "REJECT",
+    "ممارست کردن": "REJECT"
+  },
+  "generated-601": {
+    "جریده": "DIRECT",
+    "نشریه": "ACCEPT",
+    "کاغذ خبری": "REJECT",
+    "خبرنامه": "REJECT"
+  },
+  "generated-602": {
+    "نشریه ادواری": "ACCEPT",
+    "گاهنامه": "ACCEPT",
+    "فصلنامه": "ACCEPT",
+    "هفته نامه": "REJECT"
+  },
+  "generated-603": {
+    "بلاگ": "DIRECT",
+    "دفترچه اینترنتی": "ACCEPT",
+    "یادداشت آنلاین": "REJECT",
+    "صفحه شخصی": "REJECT"
+  },
+  "generated-605": {
+    "پویانمایی": "DIRECT",
+    "نقاشی متحرک": "ACCEPT",
+    "کارتون": "ACCEPT",
+    "فیلم کارتونی": "ACCEPT"
+  },
+  "generated-606": {
+    "همنوازی": "REJECT",
+    "ارکستر": "REJECT",
+    "قطعه موسیقی": "REJECT",
+    "آهنگ بزرگ": "REJECT"
+  },
+  "generated-604": {
+    "فایل صوتی": "REJECT",
+    "برنامه صوتی": "ACCEPT",
+    "رادیو اینترنتی": "REJECT",
+    "پخش صوتی": "REJECT"
+  },
+  "generated-608": {
+    "رقص کلاسیک": "REJECT",
+    "رقص نمایشی": "REJECT",
+    "پایکوبی نمایشی": "REJECT",
+    "هنر رقص": "REJECT"
+  },
+  "generated-607": {
+    "نمایش موزیکال": "REJECT",
+    "تئاتر آواز": "REJECT",
+    "نمایش آوازی": "REJECT",
+    "درام موزیکال": "REJECT"
+  },
+  "generated-609": {
+    "رهبر هنری": "ACCEPT",
+    "مدیر هنری": "REJECT",
+    "ناظر هنری": "REJECT",
+    "هدایت کننده": "ACCEPT"
+  },
+  "generated-611": {
+    "دسته": "DIRECT",
+    "جمع": "ACCEPT",
+    "هیئت": "ACCEPT",
+    "انجمن": "ACCEPT",
+    "فرقه": "ACCEPT"
+  },
+  "generated-610": {
+    "آرتیست": "DIRECT",
+    "صاحب هنر": "ACCEPT",
+    "اهل هنر": "ACCEPT",
+    "خلاق": "REJECT"
+  },
+  "generated-594": {
+    "کتابچه": "ACCEPT",
+    "جزوه": "ACCEPT",
+    "یادداشت برداری": "REJECT",
+    "دفتر": "ACCEPT",
+    "کتاب کوچک": "REJECT",
+    "سررسید": "ACCEPT"
+  },
+  "generated-612": {
+    "ارتباط": "DIRECT",
+    "پیوند": "ACCEPT",
+    "تعامل": "ACCEPT",
+    "بستگی": "REJECT",
+    "مناسبات": "ACCEPT"
+  },
+  "generated-613": {
+    "درگیری": "DIRECT",
+    "اختلاف": "ACCEPT",
+    "ستیز": "DIRECT",
+    "کشمکش": "DIRECT",
+    "جدال": "DIRECT"
+  },
+  "generated-614": {
+    "همگرایی": "REJECT",
+    "همزیستی مسالمت آمیز": "REJECT",
+    "همگرایی اجتماعی": "REJECT",
+    "همزیستی فرهنگی": "REJECT"
+  },
+  "generated-616": {
+    "اطمینان": "DIRECT",
+    "باور": "REJECT",
+    "اعتقاد": "REJECT",
+    "وثوق": "DIRECT"
+  },
+  "generated-615": {
+    "همکاری": "DIRECT",
+    "همراهی": "REJECT",
+    "شرکت": "REJECT",
+    "سهیم شدن": "REJECT",
+    "همیاری": "ACCEPT"
+  },
+  "generated-617": {
+    "نارفیقی": "REJECT",
+    "پیمان شکنی": "DIRECT",
+    "غدر": "DIRECT",
+    "بی وفایی": "DIRECT",
+    "جنایت": "REJECT"
+  },
+  "generated-620": {
+    "مشورت": "ACCEPT",
+    "تبادل نظر": "ACCEPT",
+    "هم اندیشی": "DIRECT",
+    "همرایی": "REJECT"
+  },
+  "generated-618": {
+    "عشق": "ACCEPT",
+    "دوستی": "REJECT",
+    "علاقه": "ACCEPT",
+    "مهربانی": "ACCEPT",
+    "مودت": "ACCEPT"
+  },
+  "generated-619": {
+    "همدلی": "DIRECT",
+    "غمخواری": "DIRECT",
+    "دلسوزی": "ACCEPT",
+    "همراهی در رنج": "REJECT"
+  },
+  "generated-621": {
+    "میهمان": "DIRECT",
+    "وارد": "REJECT",
+    "پذیرایی شونده": "REJECT",
+    "دعوت شده": "REJECT"
+  },
+  "generated-622": {
+    "پذیرایی کننده": "ACCEPT",
+    "صاحبخانه": "ACCEPT",
+    "دعوت کننده": "ACCEPT",
+    "مهماندار": "DIRECT"
+  },
+  "generated-624": {
+    "کوچنده": "ACCEPT",
+    "هجرت کننده": "DIRECT",
+    "جابه جا شونده": "REJECT",
+    "ترک وطن کننده": "ACCEPT"
+  },
+  "generated-623": {
+    "کوچ": "ACCEPT",
+    "هجرت": "DIRECT",
+    "جابه جایی": "REJECT",
+    "ترک وطن": "ACCEPT"
+  },
+  "generated-626": {
+    "ناآشنا": "DIRECT",
+    "بیگانه": "DIRECT",
+    "ناشناس": "ACCEPT",
+    "اجنبی": "DIRECT"
+  },
+  "generated-625": {
+    "محلی": "DIRECT",
+    "اهل": "REJECT",
+    "زادبومی": "DIRECT",
+    "اصیل": "ACCEPT"
+  },
+  "generated-627": {
+    "همگانی": "REJECT",
+    "عمومی": "REJECT",
+    "مردمی": "REJECT",
+    "جمعی": "ACCEPT"
+  },
+  "generated-628": {
+    "شخص": "DIRECT",
+    "کس": "ACCEPT",
+    "نفر": "DIRECT",
+    "واحد": "REJECT"
+  },
+  "generated-630": {
+    "لحظه": "REJECT",
+    "آن": "REJECT",
+    "وقت اندک": "REJECT",
+    "برهه کوتاه": "REJECT",
+    "دمی": "REJECT"
+  },
+  "generated-632": {
+    "یوم": "ACCEPT",
+    "هنگام": "REJECT",
+    "وقت": "REJECT",
+    "مدت": "REJECT",
+    "دوره": "REJECT"
+  },
+  "generated-634": {
+    "بامداد": "DIRECT",
+    "فجر": "REJECT",
+    "سپیده دم": "ACCEPT",
+    "سحر": "ACCEPT",
+    "پگاه": "DIRECT"
+  },
+  "generated-629": {
+    "توده": "ACCEPT",
+    "انبوه": "ACCEPT",
+    "مردم": "ACCEPT",
+    "خلایق": "ACCEPT"
+  },
+  "generated-631": {
+    "آن": "REJECT",
+    "لحظه": "REJECT",
+    "دم": "REJECT",
+    "وقت ناچیز": "REJECT",
+    "برهه بسیار کوتاه": "REJECT"
+  },
+  "generated-633": {
+    "لیله": "ACCEPT",
+    "تاریکی": "REJECT",
+    "هنگام شب": "REJECT",
+    "وقت شب": "REJECT",
+    "سیاهی": "REJECT"
+  },
+  "generated-635": {
+    "پسین": "REJECT",
+    "غروب": "REJECT",
+    "شامگاه": "REJECT",
+    "هنگام عصر": "REJECT",
+    "وقت عصر": "REJECT"
+  },
+  "generated-637": {
+    "سی روز": "REJECT",
+    "یک ماه": "REJECT",
+    "دوره سی روزه": "REJECT",
+    "مدت سی روز": "REJECT",
+    "سی شبانه روز": "REJECT"
+  },
+  "generated-638": {
+    "عام": "REJECT",
+    "سالانه": "REJECT",
+    "یک سال": "REJECT",
+    "دوره یک ساله": "REJECT",
+    "مدت یک سال": "REJECT"
+  },
+  "generated-636": {
+    "هفت روز": "ACCEPT",
+    "یک هفته": "REJECT",
+    "دوره هفت روزه": "REJECT",
+    "مدت هفت روز": "REJECT",
+    "هفت شبانه روز": "ACCEPT"
+  },
+  "generated-639": {
+    "سده": "DIRECT",
+    "صد سال": "REJECT",
+    "دوره صد ساله": "REJECT",
+    "مدت صد سال": "REJECT",
+    "یک سده": "DIRECT"
+  },
+  "generated-640": {
+    "ده سال": "DIRECT",
+    "یک دهه": "REJECT",
+    "دوره ده ساله": "ACCEPT",
+    "مدت ده سال": "REJECT",
+    "یک دوره ده ساله": "REJECT"
+  },
+  "generated-643": {
+    "دوره": "DIRECT",
+    "زمان": "ACCEPT",
+    "مقطع": "ACCEPT",
+    "هنگام": "ACCEPT",
+    "وقت": "ACCEPT"
+  },
+  "generated-641": {
+    "زمان": "REJECT",
+    "مدت": "ACCEPT",
+    "هنگام": "REJECT",
+    "مقطع": "ACCEPT",
+    "برهه": "ACCEPT"
+  },
+  "generated-642": {
+    "دوره": "REJECT",
+    "زمان": "REJECT",
+    "برهه": "ACCEPT",
+    "هنگام": "REJECT",
+    "وقت": "REJECT"
+  },
+  "generated-644": {
+    "موسم": "DIRECT",
+    "دوره": "ACCEPT",
+    "هنگام": "REJECT",
+    "زمان": "REJECT",
+    "وقت": "REJECT"
+  },
+  "generated-645": {
+    "فصل": "DIRECT",
+    "دوره": "REJECT",
+    "هنگام": "REJECT",
+    "زمان": "REJECT",
+    "وقت": "REJECT"
+  },
+  "generated-646": {
+    "حادثه": "ACCEPT",
+    "اتفاق": "ACCEPT",
+    "واقعه": "DIRECT",
+    "پیشامد": "DIRECT",
+    "ماجرا": "ACCEPT"
+  },
+  "generated-648": {
+    "رویداد": "REJECT",
+    "حادثه": "REJECT",
+    "واقعه": "REJECT",
+    "پیشامد": "REJECT",
+    "ماجرا": "REJECT"
+  },
+  "generated-647": {
+    "رویداد": "ACCEPT",
+    "اتفاق": "ACCEPT",
+    "واقعه": "DIRECT",
+    "پیشامد": "DIRECT",
+    "ماجرا": "ACCEPT"
+  },
+  "generated-650": {
+    "رویداد": "DIRECT",
+    "حادثه": "DIRECT",
+    "اتفاق": "DIRECT",
+    "واقعه": "DIRECT",
+    "ماجرا": "ACCEPT"
+  },
+  "generated-649": {
+    "رویداد": "DIRECT",
+    "حادثه": "DIRECT",
+    "اتفاق": "DIRECT",
+    "پیشامد": "DIRECT",
+    "ماجرا": "DIRECT"
+  },
+  "generated-651": {
+    "رویداد": "ACCEPT",
+    "حادثه": "ACCEPT",
+    "اتفاق": "ACCEPT",
+    "واقعه": "DIRECT",
+    "پیشامد": "DIRECT"
+  },
+  "generated-652": {
+    "مهمانی": "ACCEPT",
+    "سور": "ACCEPT",
+    "پایکوبی": "REJECT",
+    "عید": "ACCEPT",
+    "جشنواره": "ACCEPT"
+  },
+  "generated-655": {
+    "کنفرانس": "DIRECT",
+    "سمینار": "ACCEPT",
+    "گردهمایی": "DIRECT",
+    "نشست": "ACCEPT",
+    "اجلاس": "DIRECT"
+  },
+  "generated-653": {
+    "آیین": "DIRECT",
+    "تشریفات": "DIRECT",
+    "جشن": "REJECT",
+    "عزاداری": "REJECT",
+    "برنامه": "REJECT"
+  },
+  "generated-654": {
+    "مراسم": "DIRECT",
+    "تشریفات": "ACCEPT",
+    "سنت": "ACCEPT",
+    "رسم": "DIRECT",
+    "طریقت": "ACCEPT"
+  },
+  "generated-656": {
+    "همایش": "DIRECT",
+    "سمینار": "ACCEPT",
+    "گردهمایی": "ACCEPT",
+    "نشست": "ACCEPT",
+    "اجلاس": "DIRECT"
+  },
+  "generated-658": {
+    "موشواره": "REJECT",
+    "اشاره گر": "REJECT",
+    "کنترل گر": "REJECT",
+    "ابزار هدایت": "REJECT"
+  },
+  "generated-659": {
+    "صدابردار": "REJECT",
+    "آواگیر": "ACCEPT",
+    "ضبط کننده صدا": "REJECT",
+    "دستگاه صوتی": "REJECT"
+  },
+  "generated-657": {
+    "همایش": "ACCEPT",
+    "کنفرانس": "ACCEPT",
+    "گردهمایی": "REJECT",
+    "نشست": "ACCEPT",
+    "اجلاس": "ACCEPT"
+  },
+  "generated-660": {
+    "مبدل": "ACCEPT",
+    "تطبیق دهنده": "ACCEPT",
+    "همخوان ساز": "REJECT",
+    "رابط برق": "ACCEPT"
+  },
+  "generated-661": {
+    "حسگر": "DIRECT",
+    "آشکارساز": "ACCEPT",
+    "کاوشگر": "REJECT",
+    "ردیاب": "REJECT"
+  },
+  "generated-662": {
+    "آدمواره": "REJECT",
+    "ماشین خودکار": "REJECT",
+    "خودکارساز": "REJECT",
+    "دستگاه هوشمند": "REJECT"
+  },
+  "generated-664": {
+    "مجموعه تراشه": "REJECT",
+    "مدار مجتمع": "REJECT",
+    "ریزتراشه": "REJECT",
+    "قطعه الکترونیکی": "REJECT"
+  },
+  "generated-663": {
+    "هواپیمای بدون سرنشین": "DIRECT",
+    "درون": "REJECT",
+    "پرنده هدایت پذیر": "REJECT",
+    "هواپیمای کنترلی": "ACCEPT"
+  },
+  "generated-666": {
+    "حافظه دسترسی تصادفی": "ACCEPT",
+    "حافظه موقت": "REJECT",
+    "حافظه فعال": "REJECT",
+    "حافظه اصلی": "REJECT"
+  },
+  "generated-665": {
+    "ریزپردازنده": "REJECT",
+    "واحد پردازش مرکزی": "ACCEPT",
+    "سی پی یو": "ACCEPT",
+    "مغز رایانه": "ACCEPT"
+  },
+  "generated-668": {
+    "کارت تصویری": "DIRECT",
+    "پردازنده گرافیکی": "REJECT",
+    "کارت ویدئو": "DIRECT",
+    "واحد پردازش تصویر": "REJECT"
+  },
+  "generated-667": {
+    "برد اصلی": "DIRECT",
+    "صفحه اصلی": "REJECT",
+    "بورد مادر": "DIRECT",
+    "مدار چاپی اصلی": "ACCEPT"
+  },
+  "generated-670": {
+    "تصدیق کردن": "DIRECT",
+    "صحّه گذاشتن": "DIRECT",
+    "قبول کردن": "ACCEPT",
+    "موافقت کردن": "DIRECT",
+    "تایید نمودن": "DIRECT"
+  },
+  "generated-669": {
+    "کلید": "ACCEPT",
+    "قطع و وصل کننده": "ACCEPT",
+    "مدارگردان": "REJECT",
+    "تغییردهنده": "REJECT"
+  },
+  "generated-671": {
+    "داد زدن": "DIRECT",
+    "بانگ زدن": "DIRECT",
+    "غریو کشیدن": "ACCEPT",
+    "صیحه کشیدن": "DIRECT",
+    "نعره زدن": "DIRECT"
+  },
+  "generated-672": {
+    "پچ پچ کردن": "DIRECT",
+    "نجوا کردن": "DIRECT",
+    "زیر لب گفتن": "DIRECT",
+    "آهسته گفتن": "ACCEPT",
+    "در گوشی گفتن": "REJECT"
+  },
+  "generated-674": {
+    "نصیحت کردن": "DIRECT",
+    "پند دادن": "ACCEPT",
+    "رهنمود دادن": "DIRECT",
+    "سفارش کردن": "REJECT",
+    "اندرز دادن": "DIRECT"
+  },
+  "generated-675": {
+    "شناساندن": "DIRECT",
+    "ارائه دادن": "REJECT",
+    "نمایاندن": "REJECT",
+    "عرضه کردن": "REJECT"
+  },
+  "generated-673": {
+    "اطلاع دادن": "ACCEPT",
+    "خبر دادن": "ACCEPT",
+    "اعلام کردن": "ACCEPT",
+    "بیان کردن (گزارش)": "ACCEPT",
+    "ابلاغ کردن": "ACCEPT"
+  },
+  "generated-679": {
+    "تهنیت گفتن": "DIRECT",
+    "شادباش گفتن": "DIRECT",
+    "مبارک باد گفتن": "DIRECT",
+    "تبریک عرض کردن": "DIRECT",
+    "تهنیت عرض کردن": "DIRECT"
+  },
+  "generated-680": {
+    "همدردی کردن": "ACCEPT",
+    "ابراز همدردی کردن": "DIRECT",
+    "صبر آرزو کردن": "REJECT",
+    "دلداری دادن": "ACCEPT",
+    "تسلّی دادن": "DIRECT"
+  },
+  "generated-676": {
+    "فراخواندن": "DIRECT",
+    "احضار کردن": "ACCEPT",
+    "صدا زدن": "REJECT",
+    "فراخوانی کردن": "ACCEPT",
+    "طلبیدن": "REJECT"
+  },
+  "generated-678": {
+    "پوزش طلبیدن": "DIRECT",
+    "معذرت خواستن": "DIRECT",
+    "طلب بخشش کردن": "DIRECT",
+    "حلالیت طلبیدن": "DIRECT",
+    "پوزش خواستن": "DIRECT"
+  },
+  "generated-677": {
+    "تصریح کردن": "REJECT",
+    "پافشاری کردن": "ACCEPT",
+    "اصرار ورزیدن": "ACCEPT",
+    "اهمیت دادن": "REJECT",
+    "مصر بودن": "REJECT"
+  },
+  "generated-682": {
+    "بازگو کردن": "ACCEPT",
+    "روایت کردن": "ACCEPT",
+    "استناد کردن": "ACCEPT",
+    "حکایت کردن": "ACCEPT",
+    "نقل کردن": "DIRECT"
+  },
+  "generated-684": {
+    "یادآوری کردن": "DIRECT",
+    "گوشزد کردن": "DIRECT",
+    "متذکر شدن": "ACCEPT",
+    "اخطار دادن": "ACCEPT",
+    "هشدار دادن": "ACCEPT"
+  },
+  "generated-681": {
+    "تفسیر کردن": "ACCEPT",
+    "توضیح دادن": "DIRECT",
+    "بیان کردن": "ACCEPT",
+    "بازگویی کردن": "REJECT",
+    "تبیین کردن": "DIRECT"
+  },
+  "generated-683": {
+    "خطاب کردن": "DIRECT",
+    "صدا زدن": "REJECT",
+    "مورد خطاب قرار دادن": "DIRECT",
+    "رو به کسی کردن": "ACCEPT",
+    "منادا قرار دادن": "REJECT"
+  },
+  "generated-685": {
+    "فهمیدن": "DIRECT",
+    "متوجه شدن": "DIRECT",
+    "پی بردن": "ACCEPT",
+    "ادراک کردن": "DIRECT",
+    "دریافتن": "REJECT",
+    "استنباط کردن": "REJECT"
+  },
+  "generated-686": {
+    "یاد گرفتن": "DIRECT",
+    "فرا گرفتن": "DIRECT",
+    "کسب کردن (دانش)": "ACCEPT",
+    "تعلم کردن": "DIRECT",
+    "آموزش دیدن": "ACCEPT"
+  },
+  "generated-687": {
+    "حفظ کردن": "DIRECT",
+    "یادداشت کردن (برای یادآوری)": "REJECT",
+    "به ذهن سپردن": "DIRECT",
+    "به یاد داشتن": "DIRECT",
+    "در حافظه نگه داشتن": "ACCEPT"
+  },
+  "generated-689": {
+    "دلیل آوردن": "DIRECT",
+    "برهان آوردن": "ACCEPT",
+    "منطق آوردن": "ACCEPT",
+    "استنتاج کردن": "DIRECT",
+    "نتیجه گیری کردن": "ACCEPT"
+  },
+  "generated-688": {
+    "تجزیه و تحلیل کردن": "DIRECT",
+    "بررسی کردن": "ACCEPT",
+    "واکاوی کردن": "DIRECT",
+    "کالبدشکافی کردن": "REJECT",
+    "موشکافی کردن": "DIRECT"
+  },
+  "generated-692": {
+    "متمرکز شدن": "DIRECT",
+    "توجه کردن": "ACCEPT",
+    "دقت کردن": "ACCEPT",
+    "حواس جمع کردن": "ACCEPT",
+    "یکدل شدن": "ACCEPT"
+  },
+  "generated-690": {
+    "آفریدن": "DIRECT",
+    "ایجاد کردن": "DIRECT",
+    "پدید آوردن": "DIRECT",
+    "ابداع کردن": "ACCEPT",
+    "ساختن": "ACCEPT"
+  },
+  "generated-691": {
+    "پیدا کردن": "ACCEPT",
+    "یافتن": "ACCEPT",
+    "برملا کردن": "ACCEPT",
+    "آشکار کردن": "DIRECT",
+    "پرده برداشتن": "ACCEPT"
+  },
+  "generated-693": {
+    "تصور کردن": "DIRECT",
+    "خیال بافی کردن": "DIRECT",
+    "رویاپردازی کردن": "ACCEPT",
+    "مجسم کردن": "ACCEPT",
+    "پنداشتن": "REJECT"
+  },
+  "generated-694": {
+    "سنجیدن": "ACCEPT",
+    "همسنجی کردن": "DIRECT",
+    "قیاس کردن": "DIRECT",
+    "برابری کردن": "REJECT",
+    "موازنه کردن": "ACCEPT"
+  },
+  "generated-695": {
+    "نتیجه گرفتن": "DIRECT",
+    "برداشت کردن": "REJECT",
+    "استنباط کردن": "DIRECT",
+    "حاصل کردن": "REJECT",
+    "دریافتن": "REJECT"
+  },
+  "generated-696": {
+    "تعبیر کردن": "DIRECT",
+    "شرح دادن": "ACCEPT",
+    "توضیح دادن": "ACCEPT",
+    "معنی کردن": "ACCEPT",
+    "تأویل کردن": "DIRECT"
+  },
+  "generated-697": {
+    "حدس زدن": "ACCEPT",
+    "گمان بردن": "ACCEPT",
+    "آینده نگری کردن": "ACCEPT",
+    "پیشگویی کردن": "DIRECT",
+    "تخمین زدن": "ACCEPT"
+  },
+  "generated-698": {
+    "مرور کردن": "ACCEPT",
+    "دوباره دیدن": "REJECT",
+    "تجدید نظر کردن": "DIRECT",
+    "بازبینی کردن": "DIRECT",
+    "بازخوانی کردن": "ACCEPT"
+  },
+  "generated-699": {
+    "نتیجه گرفتن": "ACCEPT",
+    "دریافتن": "REJECT",
+    "برداشت کردن": "REJECT",
+    "پی بردن": "ACCEPT",
+    "فهمیدن": "REJECT"
+  },
+  "generated-700": {
+    "خلاصه کردن": "ACCEPT",
+    "نتیجه گیری کردن": "ACCEPT",
+    "خاتمه دادن": "REJECT",
+    "به پایان رساندن": "REJECT",
+    "فشرده کردن": "REJECT"
+  },
+  "generated-701": {
+    "سوال کردن": "DIRECT",
+    "استفسار کردن": "DIRECT",
+    "جویا شدن": "ACCEPT",
+    "استعلام کردن": "ACCEPT",
+    "پرسیدن": "DIRECT"
+  },
+  "generated-702": {
+    "قبول کردن": "DIRECT",
+    "تصدیق کردن": "ACCEPT",
+    "اقرار کردن": "ACCEPT",
+    "گردن نهادن": "DIRECT",
+    "تن دادن": "ACCEPT"
+  },
+  "generated-705": {
+    "روبیدن": "ACCEPT",
+    "پاک کردن": "REJECT",
+    "تمیز کردن": "REJECT",
+    "گردگیری کردن": "REJECT"
+  },
+  "generated-703": {
+    "تردید کردن": "DIRECT",
+    "ظن بردن": "DIRECT",
+    "گمان بردن": "ACCEPT",
+    "باور نداشتن": "DIRECT",
+    "مردد بودن": "ACCEPT"
+  },
+  "generated-704": {
+    "اعتقاد داشتن": "DIRECT",
+    "ایمان آوردن": "DIRECT",
+    "قبول کردن": "ACCEPT",
+    "پذیرفتن": "ACCEPT",
+    "تصدیق کردن": "DIRECT"
+  },
+  "generated-708": {
+    "سفره انداختن": "DIRECT",
+    "آماده کردن سفره": "ACCEPT",
+    "چیدن میز": "ACCEPT",
+    "تدارک دیدن غذا": "REJECT"
+  },
+  "generated-707": {
+    "طبخ کردن": "DIRECT",
+    "آماده کردن غذا": "REJECT",
+    "سرو کردن غذا": "REJECT",
+    "پزاندن": "DIRECT"
+  },
+  "generated-709": {
+    "برچیدن": "REJECT",
+    "گردآوری کردن": "DIRECT",
+    "متراکم کردن": "REJECT",
+    "انباشتن": "ACCEPT"
+  },
+  "generated-710": {
+    "خاک روبی کردن": "ACCEPT",
+    "پاک کردن گرد و غبار": "ACCEPT",
+    "تمیز کردن": "REJECT",
+    "غبارزدایی کردن": "DIRECT"
+  },
+  "generated-711": {
+    "صاف کردن لباس": "ACCEPT",
+    "هموار کردن": "ACCEPT",
+    "چروک زدایی کردن": "ACCEPT",
+    "پرس کردن": "DIRECT"
+  },
+  "generated-712": {
+    "آب دادن": "DIRECT",
+    "سیراب کردن": "DIRECT",
+    "رطوبت رساندن": "REJECT",
+    "آب پاشیدن": "ACCEPT"
+  },
+  "generated-706": {
+    "نظم دادن": "DIRECT",
+    "آراستن": "ACCEPT",
+    "سامان دادن": "DIRECT",
+    "منظم کردن": "DIRECT"
+  },
+  "generated-714": {
+    "اصلاح کردن": "ACCEPT",
+    "بازسازی کردن": "ACCEPT",
+    "مرمت کردن": "DIRECT",
+    "درست کردن": "ACCEPT"
+  },
+  "generated-713": {
+    "رسیدگی به باغچه": "ACCEPT",
+    "کاشت و داشت": "ACCEPT",
+    "پرورش گل و گیاه": "ACCEPT",
+    "مراقبت از باغ": "REJECT"
+  },
+  "generated-716": {
+    "تمیز کردن": "DIRECT",
+    "پاکیزه کردن": "DIRECT",
+    "بهداشت را رعایت کردن": "REJECT",
+    "پاکسازی کردن": "ACCEPT"
+  },
+  "generated-715": {
+    "نقاشی کردن": "ACCEPT",
+    "آب و رنگ زدن": "ACCEPT",
+    "تغییر رنگ دادن": "ACCEPT",
+    "پوشاندن با رنگ": "REJECT"
+  },
+  "generated-717": {
+    "تهیه کردن": "ACCEPT",
+    "ابتیاع کردن": "DIRECT",
+    "تهیه مایحتاج": "ACCEPT",
+    "بازار رفتن": "REJECT"
+  },
+  "generated-719": {
+    "توجه کردن": "REJECT",
+    "مراقبت کردن": "ACCEPT",
+    "رسیدن": "REJECT",
+    "رسیدگی": "REJECT"
+  },
+  "generated-720": {
+    "غذا پختن": "DIRECT",
+    "طبخ غذا": "DIRECT",
+    "خوراک پختن": "ACCEPT",
+    "آشپزی": "REJECT"
+  },
+  "generated-724": {
+    "نظافت کلی خانه": "REJECT",
+    "پاکسازی خانه": "ACCEPT",
+    "تمیز کردن عمیق خانه": "ACCEPT",
+    "گردگیری کامل": "REJECT"
+  },
+  "generated-722": {
+    "شستن لباس": "DIRECT",
+    "پاک کردن لباس": "ACCEPT",
+    "رخت شستن": "DIRECT",
+    "تمیز کردن لباس": "ACCEPT"
+  },
+  "generated-723": {
+    "مرتب کردن": "DIRECT",
+    "سامان دادن": "DIRECT",
+    "آراستن": "ACCEPT",
+    "ترتیب دادن": "DIRECT"
+  },
+  "generated-721": {
+    "شستن ظروف": "DIRECT",
+    "پاک کردن ظرف": "ACCEPT",
+    "ظرفشویی کردن": "DIRECT",
+    "تمیز کردن ظرف": "ACCEPT"
+  },
+  "generated-725": {
+    "نگهداری کردن": "ACCEPT",
+    "حفظ کردن": "ACCEPT",
+    "پرستاری کردن": "ACCEPT",
+    "رسیدگی کردن": "DIRECT"
+  },
+  "generated-727": {
+    "تزیین کردن": "DIRECT",
+    "زیبا کردن": "DIRECT",
+    "مرتب کردن": "ACCEPT",
+    "آذین بستن": "DIRECT"
+  },
+  "generated-726": {
+    "تربیت کردن": "ACCEPT",
+    "رشد دادن": "ACCEPT",
+    "تغذیه کردن": "REJECT",
+    "بالا آوردن": "ACCEPT"
+  },
+  "generated-730": {
+    "بازسازی کردن": "ACCEPT",
+    "تعمیر کردن": "DIRECT",
+    "نوسازی کردن": "REJECT",
+    "اصلاح کردن": "ACCEPT"
+  },
+  "generated-728": {
+    "نظم دادن": "DIRECT",
+    "مرتب کردن": "DIRECT",
+    "سازماندهی کردن": "DIRECT",
+    "ترتیب دادن": "DIRECT"
+  },
+  "generated-729": {
+    "جایگزین کردن": "DIRECT",
+    "عوض کردن": "DIRECT",
+    "تبدیل کردن": "REJECT",
+    "دگرگون کردن": "REJECT"
+  },
+  "generated-731": {
+    "گندزدایی کردن": "DIRECT",
+    "میکروب زدایی کردن": "DIRECT",
+    "پاکسازی کردن": "REJECT",
+    "استریل کردن": "ACCEPT"
+  },
+  "generated-718": {
+    "مراقبت کردن": "DIRECT",
+    "حفظ کردن": "DIRECT",
+    "محافظت کردن": "ACCEPT",
+    "پرستاری کردن": "ACCEPT"
+  },
+  "generated-732": {
+    "هواکشیدن": "REJECT",
+    "جریان هوا ایجاد کردن": "ACCEPT",
+    "هوا رسانی کردن": "ACCEPT",
+    "هوادهی کردن": "DIRECT"
+  },
+  "generated-733": {
+    "آرایش دادن": "ACCEPT",
+    "نظم دادن": "ACCEPT",
+    "مرتب کردن": "DIRECT",
+    "سازماندهی کردن": "ACCEPT"
+  },
+  "generated-734": {
+    "بیزار بودن": "DIRECT",
+    "نفرت داشتن": "DIRECT",
+    "کراهت داشتن": "DIRECT",
+    "انزجار داشتن": "DIRECT",
+    "دشمنی ورزیدن": "REJECT"
+  },
+  "generated-736": {
+    "ناراحت بودن": "DIRECT",
+    "اندوهگین بودن": "DIRECT",
+    "افسرده بودن": "DIRECT",
+    "غصه دار بودن": "DIRECT",
+    "دلگیر بودن": "DIRECT"
+  },
+  "generated-737": {
+    "خشمگین شدن": "DIRECT",
+    "غضبناک شدن": "DIRECT",
+    "برآشفتن": "ACCEPT",
+    "خشم گرفتن": "DIRECT",
+    "عصبانی گشتن": "DIRECT"
+  },
+  "generated-738": {
+    "شگفت زده شدن": "DIRECT",
+    "حیرت کردن": "DIRECT",
+    "متحیر شدن": "DIRECT",
+    "بهت زده شدن": "ACCEPT",
+    "عجیب یافتن": "ACCEPT"
+  },
+  "generated-735": {
+    "شاد بودن": "DIRECT",
+    "مسرو بودن": "DIRECT",
+    "مسرور بودن": "DIRECT",
+    "شادمان بودن": "DIRECT",
+    "خندان بودن": "REJECT"
+  },
+  "generated-740": {
+    "مأیوس شدن": "DIRECT",
+    "دلسرد شدن": "DIRECT",
+    "یأس پیدا کردن": "DIRECT",
+    "امید از دست دادن": "DIRECT",
+    "مأیوس گشتن": "DIRECT"
+  },
+  "generated-741": {
+    "ندامت کشیدن": "DIRECT",
+    "توبه کردن": "ACCEPT",
+    "افسوس خوردن": "DIRECT",
+    "پشیمانی آوردن": "REJECT",
+    "پشیمان گشتن": "DIRECT"
+  },
+  "generated-739": {
+    "آرزومند بودن": "ACCEPT",
+    "رجاء داشتن": "DIRECT",
+    "مترصد بودن": "REJECT",
+    "چشم امید داشتن": "ACCEPT",
+    "امید بستن": "DIRECT"
+  },
+  "generated-742": {
+    "خجالت کشیدن": "DIRECT",
+    "سرافکنده شدن": "ACCEPT",
+    "شرمسار شدن": "DIRECT",
+    "حیا کردن": "ACCEPT",
+    "خجل شدن": "DIRECT"
+  },
+  "generated-744": {
+    "عذاب کشیدن": "DIRECT",
+    "درد کشیدن": "DIRECT",
+    "سختی دیدن": "ACCEPT",
+    "مشقت تحمل کردن": "ACCEPT",
+    "آزار دیدن": "ACCEPT"
+  },
+  "generated-745": {
+    "ستایش کردن": "DIRECT",
+    "تمجید کردن": "DIRECT",
+    "آفرین گفتن": "ACCEPT",
+    "قدردانی کردن": "ACCEPT",
+    "تشویق کردن": "ACCEPT"
+  },
+  "generated-747": {
+    "پشتیبانی کردن": "DIRECT",
+    "پشتیبانی نمودن": "DIRECT",
+    "جانبداری کردن": "ACCEPT",
+    "طرفداری کردن": "DIRECT",
+    "حفاظت کردن": "ACCEPT"
+  },
+  "generated-746": {
+    "مغایرت داشتن": "REJECT",
+    "ناسازگاری کردن": "DIRECT",
+    "اعتراض کردن": "DIRECT",
+    "مخالف بودن": "DIRECT",
+    "مخالفت ورزیدن": "DIRECT"
+  },
+  "generated-743": {
+    "کیف کردن": "DIRECT",
+    "حظ بردن": "REJECT",
+    "خوش گذراندن": "DIRECT",
+    "کام گرفتن": "ACCEPT",
+    "بهره بردن": "REJECT"
+  },
+  "generated-748": {
+    "چشم پوشی کردن": "DIRECT",
+    "اغماض کردن": "DIRECT",
+    "بی اعتنایی کردن": "DIRECT",
+    "صرف نظر کردن": "DIRECT",
+    "اعتنا نکردن": "DIRECT"
+  },
+  "generated-749": {
+    "تکریم کردن": "DIRECT",
+    "ارج نهادن": "DIRECT",
+    "عزت گذاشتن": "DIRECT",
+    "بزرگداشتن": "DIRECT",
+    "احترام قائل شدن": "DIRECT"
+  },
+  "generated-750": {
+    "توهین کردن": "DIRECT",
+    "اهانت کردن": "DIRECT",
+    "بی حرمتی کردن": "DIRECT",
+    "جسارت کردن": "ACCEPT",
+    "تحقیر کردن": "ACCEPT"
+  },
+  "generated-753": {
+    "وفق داشتن": "DIRECT",
+    "هماهنگ بودن": "DIRECT",
+    "متناسب بودن": "DIRECT",
+    "همخوان بودن": "ACCEPT",
+    "همسو بودن": "ACCEPT"
+  },
+  "generated-752": {
+    "خودمختار بودن": "ACCEPT",
+    "آزاد بودن": "ACCEPT",
+    "خودکفا بودن": "ACCEPT",
+    "بی نیاز بودن": "ACCEPT",
+    "متکی به خود بودن": "ACCEPT"
+  },
+  "generated-751": {
+    "متکی بودن": "DIRECT",
+    "بستگی داشتن": "DIRECT",
+    "مربوط بودن": "REJECT",
+    "پیوسته بودن": "REJECT",
+    "نیازمند بودن": "ACCEPT"
+  },
+  "generated-754": {
+    "ناهمگون بودن": "ACCEPT",
+    "نامتناسب بودن": "ACCEPT",
+    "ناهمخوان بودن": "DIRECT",
+    "ناسازگاری داشتن": "DIRECT",
+    "متناقض بودن": "ACCEPT"
+  },
+  "generated-756": {
+    "نارفیقی کردن": "REJECT",
+    "پیمان شکنی کردن": "DIRECT",
+    "غدر کردن": "DIRECT",
+    "عهد شکستن": "ACCEPT",
+    "خیانت ورزیدن": "DIRECT"
+  },
+  "generated-755": {
+    "اطمینان کردن": "REJECT",
+    "باور کردن": "REJECT",
+    "دلگرم شدن": "REJECT",
+    "تکیه کردن": "DIRECT",
+    "اعتماد داشتن": "DIRECT"
+  },
+  "generated-757": {
+    "همدلی کردن": "DIRECT",
+    "دلسوزی کردن": "ACCEPT",
+    "غمخواری کردن": "DIRECT",
+    "همراهی کردن در غم": "ACCEPT",
+    "ابراز همدردی کردن": "ACCEPT"
+  },
+  "generated-758": {
+    "مشورت کردن": "ACCEPT",
+    "تبادل نظر کردن": "ACCEPT",
+    "رایزنی کردن": "ACCEPT",
+    "هم اندیشی کردن": "DIRECT",
+    "همفکری داشتن": "DIRECT"
+  },
+  "generated-759": {
+    "با هم زندگی کردن": "DIRECT",
+    "همراه بودن": "REJECT",
+    "با هم زیستن": "DIRECT",
+    "هم نشینی کردن": "REJECT",
+    "زندگی مشترک داشتن": "ACCEPT"
+  },
+  "generated-760": {
+    "وحشت زده": "DIRECT",
+    "هراسان": "DIRECT",
+    "بیمناک": "REJECT",
+    "مضطرب": "ACCEPT",
+    "نگران": "REJECT",
+    "دلهره آور": "REJECT"
+  },
+  "generated-761": {
+    "شگفت زده": "DIRECT",
+    "حیرت زده": "DIRECT",
+    "مبهوت": "DIRECT",
+    "سرگشته": "REJECT",
+    "عجیب": "REJECT",
+    "غافلگیر": "REJECT"
+  },
+  "generated-762": {
+    "آرزومند": "DIRECT",
+    "خوش بین": "DIRECT",
+    "رجامند": "REJECT",
+    "دلگرم": "ACCEPT",
+    "مشتاق": "REJECT",
+    "منتظر": "REJECT"
+  },
+  "generated-763": {
+    "مأیوس": "DIRECT",
+    "دلسرد": "DIRECT",
+    "بی امید": "DIRECT",
+    "افسرده": "ACCEPT",
+    "یأس آلود": "DIRECT",
+    "پشیمان": "REJECT"
+  },
+  "generated-764": {
+    "متأسف": "ACCEPT",
+    "ندامت زده": "DIRECT",
+    "پشیمان کننده": "REJECT",
+    "پشیمان خاطر": "ACCEPT",
+    "پشیمان دل": "REJECT",
+    "پشیمان حال": "REJECT"
+  },
+  "generated-765": {
+    "خجل": "DIRECT",
+    "سرافکنده": "DIRECT",
+    "شرمسار": "DIRECT",
+    "خجالت زده": "DIRECT",
+    "شرم آلود": "DIRECT",
+    "خجلت بار": "ACCEPT"
+  },
+  "generated-766": {
+    "دلپذیر": "DIRECT",
+    "خوشایند": "DIRECT",
+    "مطبوع": "DIRECT",
+    "فرح بخش": "DIRECT",
+    "دلنشین": "DIRECT",
+    "شیرین": "ACCEPT"
+  },
+  "generated-768": {
+    "ستودنی": "DIRECT",
+    "قابل تقدیر": "DIRECT",
+    "شایسته": "ACCEPT",
+    "عالی": "ACCEPT",
+    "موردستایش": "DIRECT",
+    "قابل تحسین": "DIRECT"
+  },
+  "generated-769": {
+    "معترض": "ACCEPT",
+    "موافق نبودن": "REJECT",
+    "ناهمسو": "ACCEPT",
+    "مغایر": "DIRECT",
+    "ناسازگار": "ACCEPT",
+    "متضاد": "DIRECT"
+  },
+  "generated-770": {
+    "پشتیبان": "ACCEPT",
+    "حامی": "REJECT",
+    "یاری رسان": "ACCEPT",
+    "پناهنده": "REJECT",
+    "مدافع": "ACCEPT",
+    "نگهبان": "REJECT"
+  },
+  "generated-767": {
+    "دردمند": "DIRECT",
+    "آزرده": "DIRECT",
+    "ناراحت": "ACCEPT",
+    "مبتلا": "REJECT",
+    "بیمار": "REJECT",
+    "خسته": "ACCEPT"
+  },
+  "generated-772": {
+    "ارجمند": "DIRECT",
+    "گرامی": "ACCEPT",
+    "عزیز": "REJECT",
+    "قابل احترام": "DIRECT",
+    "شریف": "ACCEPT",
+    "والا": "REJECT"
+  },
+  "generated-774": {
+    "متکی": "DIRECT",
+    "پیوسته": "REJECT",
+    "مرتبط": "DIRECT",
+    "مربوط": "DIRECT",
+    "ذی ربط": "DIRECT",
+    "متعلق": "DIRECT"
+  },
+  "generated-776": {
+    "ناهمگون": "ACCEPT",
+    "متناقض": "REJECT",
+    "نامتناسب": "ACCEPT",
+    "ناموافق": "DIRECT",
+    "ناهمساز": "DIRECT",
+    "غیرقابل انطباق": "ACCEPT"
+  },
+  "generated-773": {
+    "گستاخ": "DIRECT",
+    "بی حرمت": "ACCEPT",
+    "ناشایست": "REJECT",
+    "بی نزاکت": "DIRECT",
+    "بی ملاحظه": "REJECT",
+    "وقیح": "DIRECT"
+  },
+  "generated-775": {
+    "هماهنگ": "DIRECT",
+    "همخوان": "ACCEPT",
+    "متناسب": "DIRECT",
+    "موافق": "ACCEPT",
+    "همساز": "DIRECT",
+    "وفق پذیر": "REJECT"
+  },
+  "generated-771": {
+    "خونسرد": "ACCEPT",
+    "بی اعتنا": "ACCEPT",
+    "بی خیال": "ACCEPT",
+    "سرد": "REJECT",
+    "بی احساس": "ACCEPT",
+    "بی علاقه": "ACCEPT"
+  },
+  "generated-778": {
+    "خائن": "DIRECT",
+    "نارفیق": "REJECT",
+    "بی وفا": "DIRECT",
+    "عهدشکن": "DIRECT",
+    "غدار": "DIRECT",
+    "نامرد": "ACCEPT"
+  },
+  "generated-777": {
+    "امین": "DIRECT",
+    "مطمئن": "ACCEPT",
+    "قابل اطمینان": "DIRECT",
+    "راستگو": "REJECT",
+    "صادق": "REJECT",
+    "وفادار": "REJECT"
+  },
+  "generated-781": {
+    "پریشان": "DIRECT",
+    "نگران": "ACCEPT",
+    "آشفته": "DIRECT",
+    "دلهره دار": "DIRECT",
+    "بی قرار": "DIRECT",
+    "مضطرب الحال": "REJECT"
+  },
+  "generated-780": {
+    "هم عقیده": "DIRECT",
+    "هم نظر": "ACCEPT",
+    "هم رأی": "ACCEPT",
+    "هم سلیقه": "ACCEPT",
+    "هم مسلک": "ACCEPT",
+    "هم فکر": "DIRECT"
+  },
+  "generated-782": {
+    "فرز": "REJECT",
+    "چالاک": "DIRECT",
+    "سریع": "ACCEPT",
+    "تند": "REJECT",
+    "زود": "REJECT",
+    "سبک پا": "DIRECT"
+  },
+  "generated-779": {
+    "دلسوز": "DIRECT",
+    "غمخوار": "DIRECT",
+    "همراه": "REJECT",
+    "شریک غم": "REJECT",
+    "همدل": "DIRECT",
+    "همراز": "REJECT"
+  },
+  "generated-784": {
+    "تپل مپل": "DIRECT",
+    "گوشت آلود": "REJECT",
+    "پُرگوشت": "ACCEPT",
+    "فربه": "DIRECT",
+    "پُرحجم": "ACCEPT"
+  },
+  "generated-783": {
+    "زبر": "DIRECT",
+    "ناهموار": "ACCEPT",
+    "سخت": "ACCEPT",
+    "درشت": "ACCEPT",
+    "تند": "REJECT",
+    "تیز": "REJECT"
+  },
+  "generated-785": {
+    "نحیف": "DIRECT",
+    "باریک اندام": "DIRECT",
+    "استخوانی": "REJECT",
+    "کاهیده": "ACCEPT",
+    "ضعیف جثه": "ACCEPT",
+    "ریزجثه": "DIRECT"
+  },
+  "generated-786": {
+    "خوش قواره": "DIRECT",
+    "متناسب": "ACCEPT",
+    "ورزیده": "ACCEPT",
+    "خوش فرم": "DIRECT",
+    "زیبااندام": "DIRECT",
+    "خوش تراش": "REJECT"
+  },
+  "generated-787": {
+    "بدشکل": "DIRECT",
+    "نازیبا": "ACCEPT",
+    "نامتناسب": "ACCEPT",
+    "زشت هیکل": "DIRECT",
+    "بدریخت": "DIRECT",
+    "ناجور": "ACCEPT"
+  },
+  "generated-788": {
+    "عضلانی": "ACCEPT",
+    "قوی هیکل": "ACCEPT",
+    "پرورده": "REJECT",
+    "توانا": "REJECT",
+    "نیرومند": "ACCEPT",
+    "چابک": "REJECT"
+  },
+  "generated-790": {
+    "لزج": "DIRECT",
+    "چسبنده": "DIRECT",
+    "چسبان": "DIRECT",
+    "ماده چسبنده": "REJECT"
+  },
+  "generated-789": {
+    "سست": "DIRECT",
+    "افتاده": "ACCEPT",
+    "بی حالت": "ACCEPT",
+    "نرم": "ACCEPT",
+    "رخو": "REJECT",
+    "سست عنصر": "REJECT"
+  },
+  "generated-791": {
+    "لیز": "REJECT",
+    "سُر": "DIRECT",
+    "لغزان": "DIRECT",
+    "سرسره ای": "REJECT"
+  },
+  "generated-793": {
+    "باریک": "DIRECT",
+    "محدود": "REJECT",
+    "کم عرض": "DIRECT",
+    "فشرده": "ACCEPT",
+    "کوچک": "REJECT"
+  },
+  "generated-794": {
+    "کلفت": "DIRECT",
+    "ستبر": "DIRECT",
+    "قطور": "DIRECT",
+    "پرپشت": "ACCEPT",
+    "متراکم": "ACCEPT"
+  },
+  "generated-792": {
+    "فراخ": "DIRECT",
+    "پهناور": "DIRECT",
+    "وسیع": "DIRECT",
+    "آزاد": "REJECT",
+    "باز": "ACCEPT"
+  },
+  "generated-796": {
+    "دائمی": "DIRECT",
+    "مداوم": "DIRECT",
+    "پیوسته": "DIRECT",
+    "جاودان": "ACCEPT",
+    "ابدی": "DIRECT",
+    "بی وقفه": "REJECT"
+  },
+  "generated-795": {
+    "باریک": "ACCEPT",
+    "ظریف": "DIRECT",
+    "کم ضخامت": "ACCEPT",
+    "لطیف": "DIRECT",
+    "رقیق": "DIRECT"
+  },
+  "generated-797": {
+    "آهسته": "REJECT",
+    "کم کم": "REJECT",
+    "پله پله": "DIRECT",
+    "گام به گام": "ACCEPT",
+    "به مرور": "REJECT",
+    "اندک اندک": "REJECT"
+  },
+  "generated-799": {
+    "سروقت": "REJECT",
+    "به هنگام": "REJECT",
+    "مناسب": "REJECT",
+    "فوری": "REJECT",
+    "عاجل": "REJECT",
+    "زود": "REJECT"
+  },
+  "generated-798": {
+    "ناپیوسته": "DIRECT",
+    "بریده بریده": "DIRECT",
+    "گسسته": "DIRECT",
+    "متناوب": "REJECT",
+    "نامنظم": "ACCEPT",
+    "قطع شده": "DIRECT"
+  },
+  "generated-800": {
+    "نابه هنگام": "DIRECT",
+    "دیر": "REJECT",
+    "نامناسب": "ACCEPT",
+    "وقت ناشناس": "REJECT",
+    "متأخر": "REJECT",
+    "دیررس": "REJECT"
+  }
+}

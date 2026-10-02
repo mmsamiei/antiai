@@ -1,4 +1,5 @@
 import generatedWordPrompts from "../../scripts/data/word-bank-additions.json";
+import rejectedWordSynonyms from "../../scripts/data/jev-rejected-synonyms.json";
 
 export type AdjectivePrompt = {
   id: string;
@@ -226,7 +227,12 @@ const extraVerbPrompts: AdjectivePrompt[] = [
   { id: "verb-forget", name: "فراموش کردن", emoji: "…", partOfSpeech: "فعل", examples: ["از یاد بردن", "یادش رفتن", "به خاطر نداشتن", "محو کردن", "نادیده گرفتن"] }
 ];
 
-export const wordPrompts: AdjectivePrompt[] = [...adjectivePrompts, ...extraAdjectivePrompts, ...nounPrompts, ...extraNounPrompts, ...verbPrompts, ...extraVerbPrompts, ...(generatedWordPrompts as AdjectivePrompt[])];
+const rejectedSynonymKeys = new Set(rejectedWordSynonyms);
+const allWordPrompts: AdjectivePrompt[] = [...adjectivePrompts, ...extraAdjectivePrompts, ...nounPrompts, ...extraNounPrompts, ...verbPrompts, ...extraVerbPrompts, ...(generatedWordPrompts as AdjectivePrompt[])];
+
+export const wordPrompts = allWordPrompts
+  .map((prompt) => ({ ...prompt, examples: prompt.examples.filter((example) => !rejectedSynonymKeys.has(`${prompt.id}|${example}`)) }))
+  .filter((prompt) => prompt.examples.length > 0);
 
 export function promptById(id: string) {
   return wordPrompts.find((prompt) => prompt.id === id);

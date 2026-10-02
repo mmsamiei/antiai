@@ -1,3 +1,5 @@
+import generatedWordPrompts from "../../scripts/data/word-bank-additions.json";
+
 export type AdjectivePrompt = {
   id: string;
   name: string;
@@ -224,7 +226,7 @@ const extraVerbPrompts: AdjectivePrompt[] = [
   { id: "verb-forget", name: "فراموش کردن", emoji: "…", partOfSpeech: "فعل", examples: ["از یاد بردن", "یادش رفتن", "به خاطر نداشتن", "محو کردن", "نادیده گرفتن"] }
 ];
 
-export const wordPrompts = [...adjectivePrompts, ...extraAdjectivePrompts, ...nounPrompts, ...extraNounPrompts, ...verbPrompts, ...extraVerbPrompts];
+export const wordPrompts: AdjectivePrompt[] = [...adjectivePrompts, ...extraAdjectivePrompts, ...nounPrompts, ...extraNounPrompts, ...verbPrompts, ...extraVerbPrompts, ...(generatedWordPrompts as AdjectivePrompt[])];
 
 export function promptById(id: string) {
   return wordPrompts.find((prompt) => prompt.id === id);

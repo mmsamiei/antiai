@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 type GameType = "IRAN_CITY" | "COUNTRY" | "ADJECTIVE" | "ADJECTIVE_RAIN";
 type PublicItem = { id: string; name: string; emoji?: string; detail?: string };
@@ -13,6 +13,7 @@ type Game = {
   totalItems: number;
   guesses: Guess[];
   target: PublicItem | null;
+  startedAt: string;
   prompt?: { id: string; name: string; emoji: string; examples: string[] } | null;
   acceptedCount?: number;
 };
@@ -167,6 +168,8 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState<PublicItem[]>([]);
   const [selected, setSelected] = useState<PublicItem | null>(null);
+  const [secondsLeft, setSecondsLeft] = useState(30);
+  const expirySent = useRef<string | null>(null);
   const sortedGuesses = useMemo(() => [...game.guesses].sort((a, b) => a.rank - b.rank), [game.guesses]);
 
   useEffect(() => {
@@ -205,6 +208,20 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
     finally { setBusy(false); }
   };
 
+  useEffect(() => {
+    if (!isAdjectiveRain || game.status !== "ACTIVE") return;
+    const update = () => setSecondsLeft(Math.max(0, 30 - Math.floor((Date.now() - new Date(game.startedAt).getTime()) / 1000)));
+    update();
+    const timer = window.setInterval(update, 250);
+    return () => window.clearInterval(timer);
+  }, [game.id, game.startedAt, game.status, isAdjectiveRain]);
+
+  useEffect(() => {
+    if (!isAdjectiveRain || game.status !== "ACTIVE" || secondsLeft > 0 || busy || expirySent.current === game.id) return;
+    expirySent.current = game.id;
+    surrender();
+  }, [busy, game.id, game.status, isAdjectiveRain, secondsLeft]);
+
   const share = () => {
     const blocks = game.guesses.map((guess) => guess.rank === 0 ? "🎯" : guess.rank / game.totalItems < .05 ? "🟩" : guess.rank / game.totalItems < .2 ? "🟨" : guess.rank / game.totalItems < .5 ? "🟧" : "🟥").join("");
     const text = `${meta.title} در Anti AI Games\n${blocks}\n${game.guessesCount.toLocaleString("fa-IR")} حدس`;
@@ -213,14 +230,14 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
   };
 
   return <section className="play-screen">
-    <div className="play-heading"><button className="icon-button" onClick={onExit}>→</button><div><small>{meta.icon} {meta.title}</small><h1>{isAdjectiveRain ? "هم‌معنی‌هایش را پیدا کن" : "پاسخ پنهان را پیدا کن"}</h1></div><span className="guess-count">{isAdjectiveRain ? `${(game.acceptedCount || 0).toLocaleString("fa-IR")} از ۵` : `${game.guessesCount.toLocaleString("fa-IR")} حدس`}</span></div>
-    {isAdjectiveRain && game.prompt && <div className="adjective-prompt"><span>{game.prompt.emoji}</span><small>برای این صفت هم‌معنی بنویس</small><strong>{game.prompt.name}</strong><p>فقط هم‌معنی یا نزدیک‌معنی واقعی پذیرفته می‌شود.</p></div>}
+    <div className="play-heading"><button className="icon-button" onClick={onExit}>→</button><div><small>{meta.icon} {meta.title}</small><h1>{isAdjectiveRain ? "هم‌معنی‌هایش را پیدا کن" : "پاسخ پنهان را پیدا کن"}</h1></div><span className={`guess-count ${isAdjectiveRain && secondsLeft <= 10 ? "urgent" : ""}`}>{isAdjectiveRain ? `${secondsLeft.toLocaleString("fa-IR")} ثانیه` : `${game.guessesCount.toLocaleString("fa-IR")} حدس`}</span></div>
+    {isAdjectiveRain && game.prompt && <div className="adjective-prompt"><span>{game.prompt.emoji}</span><small>تا تمام‌شدن زمان، ۳ هم‌معنی دقیق بنویس</small><strong>{game.prompt.name}</strong><p>فقط هم‌معنی یا نزدیک‌معنی واقعی پذیرفته می‌شود.</p></div>}
     {game.status === "ACTIVE" ? <div className="search-box">
       <div className="search-row"><input value={query} onChange={(event) => { setQuery(event.target.value); setSelected(null); }} placeholder={meta.hint} autoComplete="off" /><button disabled={(!isAdjectiveRain && !selected) || (isAdjectiveRain && !query.trim()) || busy} onClick={submitGuess}>{busy ? "…" : isAdjectiveRain ? "ثبت" : "حدس"}</button></div>
       {suggestions.length > 0 && <div className="suggestions">{suggestions.map((item) => <button key={item.id} onClick={() => { setSelected(item); setQuery(item.name); setSuggestions([]); }}><span>{item.emoji} {item.name}</span>{item.detail && <small>{item.detail}</small>}</button>)}</div>}
     </div> : <div className={`finish-card ${game.status === "WON" ? "won" : "gave-up"}`}>
       <span className="finish-icon">{game.status === "WON" ? "🎯" : "🏳️"}</span>
-      <h2>{game.status === "WON" ? (isAdjectiveRain ? "پنج هم‌معنی پیدا کردی!" : "پیداش کردی!") : isAdjectiveRain ? "هم‌معنی‌های دیگر:" : "پاسخ این بود:"}</h2>
+      <h2>{game.status === "WON" ? (isAdjectiveRain ? "سه هم‌معنی پیدا کردی!" : "پیداش کردی!") : isAdjectiveRain ? "هم‌معنی‌های دیگر:" : "پاسخ این بود:"}</h2>
       <strong>{isAdjectiveRain ? game.prompt?.examples.join(" · ") : <>{game.target?.emoji} {game.target?.name}</>}</strong>
       <p>{game.status === "WON" ? (isAdjectiveRain ? `با ${game.guessesCount.toLocaleString("fa-IR")} تلاش به هدف رسیدی.` : `با ${game.guessesCount.toLocaleString("fa-IR")} حدس به جواب رسیدی.`) : "بازی بعدی را از نو شروع کن."}</p>
       <div className="finish-actions"><button className="primary" onClick={onNew}>بازی بعدی</button>{game.status === "WON" && <button className="secondary" onClick={share}>اشتراک نتیجه</button>}</div>

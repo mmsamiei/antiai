@@ -16,7 +16,7 @@ export function serializeGame(game: GameSession & { guesses: Guess[] }, revealTa
     const prompt = promptById(game.targetId);
     const acceptedCount = game.guesses.filter((guess) => guess.rank > 0).length;
     return {
-      id: game.id, type: game.type, status: game.status, guessesCount: game.guessesCount, totalItems: 5,
+      id: game.id, type: game.type, status: game.status, guessesCount: game.guessesCount, totalItems: 3,
       startedAt: game.startedAt, finishedAt: game.finishedAt,
       prompt: prompt ? { id: prompt.id, name: prompt.name, emoji: prompt.emoji, examples: revealTarget ? prompt.examples : [] } : null,
       acceptedCount,

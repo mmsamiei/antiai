@@ -16,11 +16,18 @@ export async function POST(request: Request) {
       const game = await tx.gameSession.findFirst({ where: { id: gameId, userId, status: "ACTIVE" } });
       if (!game) throw new Error("GAME_NOT_ACTIVE");
       if (game.type === "ADJECTIVE_RAIN") {
+        if (Date.now() - game.startedAt.getTime() >= 30_000) {
+          const expired = await tx.gameSession.update({
+            where: { id: game.id }, data: { status: "SURRENDERED", finishedAt: new Date() },
+            include: { guesses: { orderBy: { createdAt: "asc" } } }
+          });
+          return { game: expired, rank: -1, won: false, expired: true };
+        }
         if (typeof word !== "string") throw new Error("WORD_REQUIRED");
         const verdict = await judgeAdjective(game.targetId, word);
         const existingAccepted = await tx.guess.count({ where: { gameId: game.id, rank: { gt: 0 } } });
         await tx.guess.create({ data: { gameId: game.id, itemId: verdict.word, rank: verdict.quality } });
-        const won = verdict.accepted && existingAccepted + 1 >= 5;
+        const won = verdict.accepted && existingAccepted + 1 >= 3;
         const updated = await tx.gameSession.update({
           where: { id: game.id },
           data: { guessesCount: { increment: 1 }, ...(won ? { status: "WON", finishedAt: new Date() } : {}) },
@@ -42,7 +49,7 @@ export async function POST(request: Request) {
       });
       return { game: updated, rank, won };
     }, { isolationLevel: Prisma.TransactionIsolationLevel.Serializable });
-    return NextResponse.json({ game: serializeGame(result.game, result.won), rank: result.rank, verdict: result.verdict });
+    return NextResponse.json({ game: serializeGame(result.game, result.won), rank: result.rank, verdict: result.verdict, expired: result.expired || false });
   } catch (error) {
     if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === "P2002") {
       return NextResponse.json({ error: "این گزینه را قبلاً حدس زده‌ای" }, { status: 409 });

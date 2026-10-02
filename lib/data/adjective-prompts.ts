@@ -1,4 +1,5 @@
 import generatedWordPrompts from "../../scripts/data/word-bank-additions.json";
+import curatedWordPrompts from "../../scripts/data/curated-word-additions.json";
 import rejectedWordSynonyms from "../../scripts/data/jev-rejected-synonyms.json";
 import rejectedWordTargets from "../../scripts/data/jev-rejected-targets.json";
 
@@ -233,7 +234,7 @@ const rejectedTargetIds = new Set(rejectedWordTargets);
 const humanApprovedTargetIds = new Set(["adj-messy", "generated-149", "generated-158", "generated-165", "generated-476", "generated-519", "generated-721", "generated-784", "generated-785", "generated-787", "generated-789"]);
 const allowedThreeWordTargets = new Set(["به پایان رساندن", "به خاطر سپردن", "از سر گرفتن", "برنامه ریزی کردن"]);
 const wordCount = (value: string) => value.replaceAll("‌", " ").trim().split(/\s+/).length;
-const allWordPrompts: AdjectivePrompt[] = [...adjectivePrompts, ...extraAdjectivePrompts, ...nounPrompts, ...extraNounPrompts, ...verbPrompts, ...extraVerbPrompts, ...(generatedWordPrompts as AdjectivePrompt[])];
+const allWordPrompts: AdjectivePrompt[] = [...adjectivePrompts, ...extraAdjectivePrompts, ...nounPrompts, ...extraNounPrompts, ...verbPrompts, ...extraVerbPrompts, ...(generatedWordPrompts as AdjectivePrompt[]), ...(curatedWordPrompts as AdjectivePrompt[])];
 
 export const wordPrompts = allWordPrompts
   .map((prompt) => ({ ...prompt, examples: prompt.examples.filter((example) => !rejectedSynonymKeys.has(`${prompt.id}|${example}`)) }))

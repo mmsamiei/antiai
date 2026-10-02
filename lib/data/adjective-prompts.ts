@@ -76,16 +76,3 @@ export const wordPrompts = [...adjectivePrompts, ...nounPrompts, ...verbPrompts]
 export function promptById(id: string) {
   return wordPrompts.find((prompt) => prompt.id === id);
 }
-
-export function challengeForPrompt(prompt: AdjectivePrompt): string {
-  return [...prompt.examples].reverse().find((word) => /^[\p{L}]+$/u.test(word)) || prompt.examples[0];
-}
-
-export function maskChallenge(word: string): string {
-  return word.split(/([\s‌]+)/u).map((part) => {
-    if (/^[\s‌]+$/u.test(part)) return " ";
-    const letters = [...part];
-    const revealed = letters.length >= 5 ? 2 : 1;
-    return `${letters.slice(0, revealed).join("")} ${"_ ".repeat(Math.max(0, letters.length - revealed)).trim()}`;
-  }).join("");
-}

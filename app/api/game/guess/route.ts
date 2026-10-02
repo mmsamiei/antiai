@@ -5,8 +5,6 @@ import { findItem, proximityRank } from "@/lib/geo";
 import { prisma } from "@/lib/prisma";
 import { serializeGame } from "@/lib/game-service";
 import { judgeAdjective } from "@/lib/adjective-judge";
-import { challengeForPrompt, promptById } from "@/lib/data/adjective-prompts";
-import { normalizePersian } from "@/lib/geo";
 
 export async function POST(request: Request) {
   const userId = currentUserId();
@@ -28,12 +26,8 @@ export async function POST(request: Request) {
         if (typeof word !== "string") throw new Error("WORD_REQUIRED");
         const verdict = await judgeAdjective(game.targetId, word);
         const existingAccepted = await tx.guess.count({ where: { gameId: game.id, rank: { gt: 0 } } });
-        const prompt = promptById(game.targetId);
-        const challenge = prompt ? normalizePersian(challengeForPrompt(prompt)) : "";
-        const challengeAlreadyFound = await tx.guess.count({ where: { gameId: game.id, itemId: challenge, rank: { gt: 0 } } });
         await tx.guess.create({ data: { gameId: game.id, itemId: verdict.word, rank: verdict.quality } });
-        const foundChallenge = verdict.accepted && verdict.word === challenge;
-        const won = verdict.accepted && existingAccepted + 1 >= 3 && (challengeAlreadyFound > 0 || foundChallenge);
+        const won = verdict.accepted && existingAccepted + 1 >= 3;
         const updated = await tx.gameSession.update({
           where: { id: game.id },
           data: { guessesCount: { increment: 1 }, ...(won ? { status: "WON", finishedAt: new Date() } : {}) },

@@ -19,7 +19,8 @@ type Game = {
 };
 type Stats = { total: number; wins: number; surrendered: number; averageGuesses: number; bestGame: number };
 type LeaderRow = { rank: number; userId: string; displayName: string; photoUrl?: string; wins: number; averageGuesses: number; bestGame: number; isMe: boolean };
-type Screen = "home" | "play" | "leaderboard" | "profile";
+type Screen = "home" | "play" | "leaderboard" | "profile" | "word-bank";
+type WordPrompt = { id: string; name: string; emoji: string; examples: string[]; partOfSpeech?: string };
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const gameMeta: Record<GameType, { title: string; icon: string; description: string; hint: string }> = {
@@ -119,7 +120,8 @@ export default function AntiAiGamesApp() {
     {screen === "home" && <Home stats={stats} onlineCount={onlineCount} busy={busy} onStart={startGame} />}
     {screen === "play" && game && <Play game={game} setGame={setGame} busy={busy} setBusy={setBusy} setError={setError} onNew={() => startGame(game.type)} onExit={exitGame} />}
     {screen === "leaderboard" && <Leaderboard />}
-    {screen === "profile" && <Profile stats={stats} recent={recent} />}
+    {screen === "profile" && <Profile stats={stats} recent={recent} canReviewWords={String(user?.id) === "1626544510"} onReviewWords={() => setScreen("word-bank")} />}
+    {screen === "word-bank" && <WordBank onBack={() => setScreen("profile")} />}
     {screen !== "play" && <BottomNav active={screen} onChange={setScreen} />}
   </main>;
 }
@@ -271,10 +273,23 @@ function LeaderRowView({ row, mode = "effort" }: { row: LeaderRow; mode?: "effor
   return <div className={`leader-row ${row.isMe ? "me" : ""}`}><span className="leader-rank">{row.rank <= 3 ? ["🥇", "🥈", "🥉"][row.rank - 1] : row.rank.toLocaleString("fa-IR")}</span>{row.photoUrl ? <img src={row.photoUrl} alt="" /> : <span className="mini-avatar">👤</span>}<div className="leader-name"><b>{row.displayName}</b><small>{mode === "skill" ? row.wins.toLocaleString("fa-IR") + " برد" : "میانگین " + row.averageGuesses.toLocaleString("fa-IR") + " حدس"}</small></div><div className="leader-wins"><strong>{mode === "skill" ? row.averageGuesses.toLocaleString("fa-IR") : row.wins.toLocaleString("fa-IR")}</strong><small>{mode === "skill" ? "میانگین حدس" : "برد"}</small></div></div>;
 }
 
-function Profile({ stats, recent }: { stats: Stats; recent: any[] }) {
+function Profile({ stats, recent, canReviewWords, onReviewWords }: { stats: Stats; recent: any[]; canReviewWords: boolean; onReviewWords: () => void }) {
   return <section><div className="section-heading"><div><small>کارنامه ذهنی</small><h1>آمار من</h1></div><span>🧠</span></div>
     <div className="profile-grid"><div><strong>{stats.total.toLocaleString("fa-IR")}</strong><span>کل بازی‌ها</span></div><div><strong>{stats.wins.toLocaleString("fa-IR")}</strong><span>بردها</span></div><div><strong>{stats.averageGuesses.toLocaleString("fa-IR")}</strong><span>میانگین حدس</span></div><div><strong>{stats.bestGame ? stats.bestGame.toLocaleString("fa-IR") : "—"}</strong><span>بهترین بازی</span></div></div>
+    {canReviewWords && <button className="word-bank-link" onClick={onReviewWords}><span>✦</span><div><b>بررسی واژه‌جو</b><small>فهرست ۲۰۰ واژه و هم‌معنی‌ها</small></div><i>←</i></button>}
     <div className="card recent"><h2>بازی‌های اخیر</h2>{recent.length === 0 ? <div className="empty-state">هنوز بازی تمام‌شده‌ای نداری.</div> : recent.map((item) => <div className="recent-row" key={item.id}><span>{gameMeta[item.type as GameType].icon}</span><div><b>{gameMeta[item.type as GameType].title}</b><small>{item.status === "WON" ? `${item.guessesCount.toLocaleString("fa-IR")} حدس` : "تسلیم"}</small></div><strong className={item.status === "WON" ? "success" : "muted"}>{item.status === "WON" ? "برد" : "ناتمام"}</strong></div>)}</div>
+  </section>;
+}
+
+function WordBank({ onBack }: { onBack: () => void }) {
+  const [words, setWords] = useState<WordPrompt[]>([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    jsonFetch<{ words: WordPrompt[] }>("/api/word-bank").then((data) => setWords(data.words)).catch(() => setWords([])).finally(() => setLoading(false));
+  }, []);
+  const groups = ["صفت", "اسم", "فعل"].map((partOfSpeech) => ({ partOfSpeech, words: words.filter((word) => (word.partOfSpeech || "صفت") === partOfSpeech) }));
+  return <section><div className="play-heading"><button className="icon-button" onClick={onBack}>→</button><div><small>فقط برای بازبینی</small><h1>فهرست واژه‌جو</h1></div></div>
+    {loading ? <div className="empty-state">در حال آوردن فهرست…</div> : groups.map((group) => <div className="word-bank-group" key={group.partOfSpeech}><h2>{group.partOfSpeech}‌ها <small>{group.words.length.toLocaleString("fa-IR")} واژه</small></h2>{group.words.map((word) => <div className="word-bank-row" key={word.id}><b>{word.name}</b><span>{word.examples.join(" · ")}</span></div>)}</div>)}
   </section>;
 }
 

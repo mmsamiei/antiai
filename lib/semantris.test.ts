@@ -1,8 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { applySemantrisMove, applySemantrisTick, semantrisClueRejection, type SemantrisState } from "./semantris";
+import { applySemantrisMove, applySemantrisTick, createSemantrisState, semantrisClueRejection, type SemantrisState } from "./semantris";
 import { fairnessInstructions, parseSemantrisFairness } from "./semantris-judge";
 const words = ["یک", "دو", "سه", "چهار", "پنج", "شش", "هفت", "هشت"];
-function state(targetWord: string): SemantrisState { return { words, targetWord, score: 0, cleared: 0, moves: 0, combo: 0, gameOver: false, lastDropAt: new Date().toISOString(), wave: { categoryId: "fruits", queue: ["سیب", "موز"], position: 0 }, clues: [], usedClues: [], pendingWords: [] }; }
+function state(targetWord: string): SemantrisState { return { words, targetWord, score: 0, cleared: 0, moves: 0, combo: 0, gameOver: false, lastDropAt: new Date().toISOString(), wave: { categoryId: "fruits", queue: ["سیب", "موز"], position: 0 }, clues: [], usedClues: [], pendingWords: [], correctHits: 0 }; }
+describe("Semantris category waves", () => {
+  it("prepares fifteen random words from the selected category for each wave", () => { expect(createSemantrisState().wave.queue).toHaveLength(15); });
+});
+
 describe("Semantris deletion zone", () => {
   it("scores ten points per removed word without a combo multiplier", () => { const current = state("هشت"); current.combo = 5; const result = applySemantrisMove(current, "سرنخ", words); expect(result.hit).toBe(true); expect(result.targetRank).toBe(1); expect(result.removed).toBe(4); expect(result.score).toBe(40); expect(result.combo).toBe(0); });
   it("awards ten points when only the target is removed", () => { const result = applySemantrisMove(state("پنج"), "سرنخ", words); expect(result.hit).toBe(true); expect(result.targetRank).toBe(4); expect(result.removed).toBe(1); expect(result.score).toBe(10); });
@@ -19,7 +23,8 @@ describe("Semantris fairness verdict", () => {
 });
 
 describe("Semantris automatic drops", () => {
-  it("does not add a word before twelve seconds", () => { const current = state("یک"); current.lastDropAt = "2026-10-02T00:00:00.000Z"; expect(applySemantrisTick(current, new Date("2026-10-02T00:00:11.999Z")).added).toBe(false); });
-  it("adds one word at the top after twelve seconds", () => { const current = state("یک"); current.lastDropAt = "2026-10-02T00:00:00.000Z"; const result = applySemantrisTick(current, new Date("2026-10-02T00:00:12.000Z")); expect(result.added).toBe(true); expect(result.words).toHaveLength(current.words.length + 1); expect(result.words.slice(1)).toEqual(current.words); });
-  it("adds the newest player clue before older queued clues and the category wave", () => { const current = state("یک"); current.pendingWords = ["سرنخ تازه", "سرنخ قدیمی"]; current.lastDropAt = "2026-10-02T00:00:00.000Z"; const result = applySemantrisTick(current, new Date("2026-10-02T00:00:12.000Z")); expect(result.words[0]).toBe("سرنخ تازه"); expect(result.pendingWords).toEqual(["سرنخ قدیمی"]); expect(result.wave.position).toBe(current.wave.position); });
+  it("does not add a word until three successful hits unlock automatic drops", () => { const current = state("یک"); current.correctHits = 2; current.lastDropAt = "2026-10-02T00:00:00.000Z"; expect(applySemantrisTick(current, new Date("2026-10-02T00:01:00.000Z")).added).toBe(false); });
+  it("adds one word at the top after ten seconds", () => { const current = state("یک"); current.correctHits = 3; current.lastDropAt = "2026-10-02T00:00:00.000Z"; const result = applySemantrisTick(current, new Date("2026-10-02T00:00:10.000Z")); expect(result.added).toBe(true); expect(result.words).toHaveLength(current.words.length + 1); expect(result.words.slice(1)).toEqual(current.words); });
+  it("starts a fresh ten-second countdown after the third successful hit", () => { const current = state("هشت"); current.correctHits = 2; current.lastDropAt = "2026-10-02T00:00:00.000Z"; const moved = applySemantrisMove(current, "سرنخ", words); const startedAt = new Date(moved.lastDropAt).getTime(); expect(moved.correctHits).toBe(3); expect(applySemantrisTick(moved, new Date(startedAt + 9_999)).added).toBe(false); expect(applySemantrisTick(moved, new Date(startedAt + 10_000)).added).toBe(true); });
+  it("adds the newest player clue before older queued clues and the category wave", () => { const current = state("یک"); current.correctHits = 3; current.pendingWords = ["سرنخ تازه", "سرنخ قدیمی"]; current.lastDropAt = "2026-10-02T00:00:00.000Z"; const result = applySemantrisTick(current, new Date("2026-10-02T00:00:10.000Z")); expect(result.words[0]).toBe("سرنخ تازه"); expect(result.pendingWords).toEqual(["سرنخ قدیمی"]); expect(result.wave.position).toBe(current.wave.position); });
 });

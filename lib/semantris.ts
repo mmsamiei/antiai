@@ -2,9 +2,9 @@ import { normalizePersian } from "./geo";
 import { semantrisCategories, type SemantrisCategory } from "./data/semantris-categories";
 
 export const SEMANTRIS_STARTING_WORDS = 10;
-export const SEMANTRIS_MAX_WORDS = 18;
-export const SEMANTRIS_DROP_MS = 12_000;
-export const SEMANTRIS_WAVE_SIZE = 10;
+export const SEMANTRIS_MAX_WORDS = 15;
+export const SEMANTRIS_DROP_MS = 10_000;
+export const SEMANTRIS_WAVE_SIZE = 15;
 
 type SemantrisWave = { categoryId: string; queue: string[]; position: number };
 export type SemantrisState = {
@@ -12,6 +12,7 @@ export type SemantrisState = {
   clues: { word: string; targetWord: string; targetRank: number; removed: number; createdAt: string }[];
   usedClues: string[];
   pendingWords: string[];
+  correctHits: number;
 };
 
 function shuffle<T>(items: T[]) { return [...items].sort(() => Math.random() - 0.5); }
@@ -43,7 +44,7 @@ function fillFromWave(words: string[], wave: SemantrisWave, count: number) {
 
 export function createSemantrisState(): SemantrisState {
   const words = drawInitialWords(SEMANTRIS_STARTING_WORDS); const wave = createWave();
-  return { words, targetWord: words[Math.floor(Math.random() * (words.length - 4))], score: 0, cleared: 0, moves: 0, combo: 0, gameOver: false, lastDropAt: new Date().toISOString(), wave, clues: [], usedClues: [], pendingWords: [] };
+  return { words, targetWord: words[Math.floor(Math.random() * (words.length - 4))], score: 0, cleared: 0, moves: 0, combo: 0, gameOver: false, lastDropAt: new Date().toISOString(), wave, clues: [], usedClues: [], pendingWords: [], correctHits: 0 };
 }
 export function semantrisWords(state: SemantrisState) { return state.words; }
 export function readSemantrisState(value: unknown): SemantrisState | null {
@@ -57,9 +58,10 @@ export function readSemantrisState(value: unknown): SemantrisState | null {
   const clues = Array.isArray(raw.clues) && "targetWord" in (raw.clues[0] || {}) ? raw.clues as SemantrisState["clues"] : [];
   const usedClues = Array.isArray(raw.usedClues) ? raw.usedClues.filter((word): word is string => typeof word === "string").map(normalizePersian).filter(Boolean) : clues.map((item) => normalizePersian(item.word)).filter(Boolean);
   const pendingWords = Array.isArray(raw.pendingWords) ? raw.pendingWords.filter((word): word is string => typeof word === "string").map(normalizePersian).filter(Boolean) : [];
-  return { words, targetWord, score: typeof raw.score === "number" ? raw.score : 0, cleared: typeof raw.cleared === "number" ? raw.cleared : 0, moves: typeof raw.moves === "number" ? raw.moves : 0, combo: typeof raw.combo === "number" ? raw.combo : 0, gameOver: raw.gameOver === true, lastDropAt: typeof raw.lastDropAt === "string" ? raw.lastDropAt : new Date().toISOString(), wave, clues, usedClues, pendingWords };
+  const correctHits = typeof raw.correctHits === "number" ? raw.correctHits : clues.filter((item) => item.removed > 0).length;
+  return { words, targetWord, score: typeof raw.score === "number" ? raw.score : 0, cleared: typeof raw.cleared === "number" ? raw.cleared : 0, moves: typeof raw.moves === "number" ? raw.moves : 0, combo: typeof raw.combo === "number" ? raw.combo : 0, gameOver: raw.gameOver === true, lastDropAt: typeof raw.lastDropAt === "string" ? raw.lastDropAt : new Date().toISOString(), wave, clues, usedClues, pendingWords, correctHits };
 }
-export function publicSemantrisState(state: SemantrisState) { return { words: state.words, targetWord: state.targetWord, score: state.score, cleared: state.cleared, moves: state.moves, combo: state.combo, gameOver: state.gameOver, lastDropAt: state.lastDropAt, clues: state.clues }; }
+export function publicSemantrisState(state: SemantrisState) { return { words: state.words, targetWord: state.targetWord, score: state.score, cleared: state.cleared, moves: state.moves, combo: state.combo, gameOver: state.gameOver, lastDropAt: state.lastDropAt, clues: state.clues, correctHits: state.correctHits }; }
 export type SemantrisClueRejection = "CLUE_INVALID" | "CLUE_ON_BOARD" | "CLUE_REPEATED";
 export function semantrisClueRejection(state: SemantrisState, rawClue: string): SemantrisClueRejection | null {
   const clue = normalizePersian(rawClue);
@@ -72,11 +74,13 @@ export function applySemantrisMove(state: SemantrisState, rawClue: string, ranke
   const clue = normalizePersian(rawClue); const rejection = semantrisClueRejection(state, clue); if (rejection) throw new Error(rejection);
   if (rankedWords.length !== state.words.length || new Set(rankedWords).size !== state.words.length || rankedWords.some((word) => !state.words.includes(word))) throw new Error("STATE_CHANGED");
   const targetIndex = rankedWords.indexOf(state.targetWord); const dangerStart = Math.max(0, rankedWords.length - 4); const hit = targetIndex >= dangerStart;
+  const correctHits = state.correctHits + (hit ? 1 : 0); const startsAutoDrops = hit && state.correctHits < 3 && correctHits >= 3;
   let words = [...rankedWords]; let wave = state.wave; let removed = 0; let targetWord = state.targetWord;
   if (hit) { removed = targetIndex - dangerStart + 1; words = [...words.slice(0, dangerStart), ...words.slice(targetIndex + 1)]; const filled = fillFromWave(words, wave, SEMANTRIS_STARTING_WORDS); words = filled.words; wave = filled.wave; targetWord = words[Math.floor(Math.random() * Math.max(1, words.length - 4))]; }
-  return { words, wave, targetWord, score: state.score + removed * 10, cleared: state.cleared + removed, moves: state.moves + 1, combo: 0, gameOver: state.gameOver, lastDropAt: state.lastDropAt, clues: [...state.clues, { word: clue, targetWord: state.targetWord, targetRank: rankedWords.length - targetIndex, removed, createdAt: new Date().toISOString() }].slice(-8), usedClues: [...state.usedClues, clue], pendingWords: [clue, ...state.pendingWords], hit, removed, targetRank: rankedWords.length - targetIndex, removeStartIndex: hit ? dangerStart : null, removeEndIndex: hit ? targetIndex : null };
+  return { words, wave, targetWord, score: state.score + removed * 10, cleared: state.cleared + removed, moves: state.moves + 1, combo: 0, gameOver: state.gameOver, lastDropAt: startsAutoDrops ? new Date().toISOString() : state.lastDropAt, clues: [...state.clues, { word: clue, targetWord: state.targetWord, targetRank: rankedWords.length - targetIndex, removed, createdAt: new Date().toISOString() }].slice(-8), usedClues: [...state.usedClues, clue], pendingWords: [clue, ...state.pendingWords], correctHits, hit, removed, targetRank: rankedWords.length - targetIndex, removeStartIndex: hit ? dangerStart : null, removeEndIndex: hit ? targetIndex : null };
 }
 export function applySemantrisTick(state: SemantrisState, now = new Date()) {
+  if (state.correctHits < 3) return { ...state, added: false };
   const last = new Date(state.lastDropAt).getTime(); if (Number.isFinite(last) && now.getTime() - last < SEMANTRIS_DROP_MS) return { ...state, added: false };
   const excluded = new Set(state.words);
   const nextPending = state.pendingWords.find((word) => !excluded.has(word));

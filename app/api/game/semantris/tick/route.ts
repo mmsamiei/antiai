@@ -13,6 +13,6 @@ export async function POST(request: Request) {
   const state = game && readSemantrisState(game.semantrisState);
   if (!game || !state) return NextResponse.json({ error: "این بازی دیگر فعال نیست" }, { status: 409 });
   const next = applySemantrisTick(state);
-  const updated = await prisma.gameSession.update({ where: { id: game.id }, data: { semantrisState: { words: next.words, targetWord: next.targetWord, score: next.score, cleared: next.cleared, moves: next.moves, combo: next.combo, gameOver: next.gameOver, lastDropAt: next.lastDropAt, wave: next.wave, clues: next.clues, usedClues: next.usedClues, pendingWords: next.pendingWords }, ...(next.gameOver ? { status: "SURRENDERED", finishedAt: new Date() } : {}) }, include: { guesses: true } });
+  const updated = await prisma.gameSession.update({ where: { id: game.id }, data: { semantrisState: { words: next.words, targetWord: next.targetWord, score: next.score, cleared: next.cleared, moves: next.moves, combo: next.combo, gameOver: next.gameOver, lastDropAt: next.lastDropAt, wave: next.wave, clues: next.clues, usedClues: next.usedClues, pendingWords: next.pendingWords, correctHits: next.correctHits }, ...(next.gameOver ? { status: "SURRENDERED", finishedAt: new Date() } : {}) }, include: { guesses: true } });
   return NextResponse.json({ game: serializeGame(updated), added: next.added });
 }

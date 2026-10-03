@@ -17,7 +17,7 @@ type Game = {
   startedAt: string;
   prompt?: { id: string; name: string; emoji: string; examples: string[]; partOfSpeech?: string } | null;
   acceptedCount?: number;
-  semantris?: { words: string[]; targetWord: string; score: number; cleared: number; moves: number; combo: number; gameOver: boolean; lastDropAt: string; clues: { word: string; targetWord: string; targetRank: number; removed: number; createdAt: string }[] };
+  semantris?: { words: string[]; targetWord: string; score: number; cleared: number; moves: number; combo: number; gameOver: boolean; lastDropAt: string; correctHits: number; clues: { word: string; targetWord: string; targetRank: number; removed: number; createdAt: string }[] };
 };
 type Stats = { total: number; wins: number; surrendered: number; averageGuesses: number; bestGame: number };
 type LeaderRow = { rank: number; userId: string; displayName: string; photoUrl?: string; wins: number; averageGuesses: number; bestGame: number; totalScore?: number; bestScore?: number; isMe: boolean };
@@ -173,7 +173,7 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
   const [suggestions, setSuggestions] = useState<PublicItem[]>([]);
   const [selected, setSelected] = useState<PublicItem | null>(null);
   const [secondsLeft, setSecondsLeft] = useState(30);
-  const [dropSeconds, setDropSeconds] = useState(12);
+  const [dropSeconds, setDropSeconds] = useState(10);
   const [showHelp, setShowHelp] = useState(false);
   const [semantrisPreview, setSemantrisPreview] = useState<{ words: string[]; targetWord: string; removeStartIndex: number | null; removeEndIndex: number | null; phase: "sorting" | "removing" } | null>(null);
   const expirySent = useRef<string | null>(null);
@@ -185,7 +185,7 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
     const state = game.semantris;
     if (!isSemantris || game.status !== "ACTIVE" || !state) return;
     const update = () => {
-      const remaining = Math.max(0, 12_000 - (Date.now() - new Date(state.lastDropAt).getTime()));
+      const remaining = Math.max(0, 10_000 - (Date.now() - new Date(state.lastDropAt).getTime()));
       setDropSeconds(Math.ceil(remaining / 1000));
       if (remaining > 0 || busy || document.visibilityState !== "visible" || lastTickSent.current === state.lastDropAt) return;
       lastTickSent.current = state.lastDropAt;
@@ -299,6 +299,7 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
 }
 
 function SemantrisBoard({ state, removingRange, dropSeconds }: { state: NonNullable<Game["semantris"]>; removingRange: [number, number] | null; dropSeconds: number }) {
+  const onboardingRemaining = Math.max(0, 3 - state.correctHits);
   const dangerStart = Math.max(0, state.words.length - 4);
   const refs = useRef(new Map<string, HTMLDivElement>());
   const previousRects = useRef(new Map<string, DOMRect>());
@@ -308,7 +309,7 @@ function SemantrisBoard({ state, removingRange, dropSeconds }: { state: NonNulla
     current.forEach((rect, word) => { const previous = previousRects.current.get(word); const element = refs.current.get(word); if (previous && element) { const dy = previous.top - rect.top; if (Math.abs(dy) > 1) element.animate([{ transform: `translateY(${dy}px)` }, { transform: "translateY(0)" }], { duration: 700, easing: "cubic-bezier(.2,.8,.2,1)" }); } });
     previousRects.current = current;
   }, [state.words.join("|")]);
-  return <div className="semantris-board"><div className="semantris-score"><span>امتیاز <b>{state.score.toLocaleString("fa-IR")}</b></span><span className="semantris-drop">واژهٔ بعدی <b>{dropSeconds.toLocaleString("fa-IR")}</b> ثانیه</span><span>{state.cleared.toLocaleString("fa-IR")} پاک‌شده</span></div><div className="semantris-playfield"><div className="semantris-list">{state.words.map((word, index) => <div ref={(element) => { if (element) refs.current.set(word, element); else refs.current.delete(word); }} key={word} className={`semantris-word ${word === state.targetWord ? "target" : ""} ${index >= dangerStart ? "danger" : ""} ${index === dangerStart ? "danger-start" : ""} ${removingRange !== null && index >= removingRange[0] && index <= removingRange[1] ? "removing" : ""}`}><i>{word === state.targetWord ? "▶" : ""}</i><span>{word}</span>{index === dangerStart && <small>ناحیهٔ حذف</small>}</div>)}</div></div></div>;
+  return <div className="semantris-board"><div className="semantris-score"><span>امتیاز <b>{state.score.toLocaleString("fa-IR")}</b></span><span className="semantris-drop">{onboardingRemaining ? <>ورود خودکار پس از <b>{onboardingRemaining.toLocaleString("fa-IR")}</b> موفقیت</> : <>واژهٔ بعدی <b>{dropSeconds.toLocaleString("fa-IR")}</b> ثانیه</>}</span><span>{state.cleared.toLocaleString("fa-IR")} پاک‌شده</span></div><div className="semantris-playfield"><div className="semantris-list">{state.words.map((word, index) => <div ref={(element) => { if (element) refs.current.set(word, element); else refs.current.delete(word); }} key={word} className={`semantris-word ${word === state.targetWord ? "target" : ""} ${index >= dangerStart ? "danger" : ""} ${index === dangerStart ? "danger-start" : ""} ${removingRange !== null && index >= removingRange[0] && index <= removingRange[1] ? "removing" : ""}`}><i>{word === state.targetWord ? "▶" : ""}</i><span>{word}</span>{index === dangerStart && <small>ناحیهٔ حذف</small>}</div>)}</div></div></div>;
 }
 
 function Leaderboard() {

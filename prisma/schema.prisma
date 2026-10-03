@@ -12,6 +12,7 @@ enum GameType {
   COUNTRY
   ADJECTIVE
   ADJECTIVE_RAIN
+  SEMANTRIS
 }
 
 enum GameStatus {
@@ -51,6 +52,7 @@ model GameSession {
   guessesCount   Int         @default(0)
   startedAt      DateTime    @default(now())
   finishedAt     DateTime?
+  semantrisState Json?
   user           User        @relation(fields: [userId], references: [id], onDelete: Cascade)
   guesses        Guess[]
 

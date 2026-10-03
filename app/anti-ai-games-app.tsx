@@ -1,9 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import CountryGuessMap from "./country-guess-map";
 
-type GameType = "IRAN_CITY" | "COUNTRY" | "ADJECTIVE" | "ADJECTIVE_RAIN";
+type GameType = "IRAN_CITY" | "COUNTRY" | "ADJECTIVE" | "ADJECTIVE_RAIN" | "SEMANTRIS";
 type PublicItem = { id: string; name: string; emoji?: string; detail?: string };
 type Guess = PublicItem & { rank: number; createdAt: string };
 type Game = {
@@ -17,9 +17,10 @@ type Game = {
   startedAt: string;
   prompt?: { id: string; name: string; emoji: string; examples: string[]; partOfSpeech?: string } | null;
   acceptedCount?: number;
+  semantris?: { words: string[]; targetWord: string; score: number; cleared: number; moves: number; combo: number; gameOver: boolean; lastDropAt: string; clues: { word: string; targetWord: string; targetRank: number; removed: number; createdAt: string }[] };
 };
 type Stats = { total: number; wins: number; surrendered: number; averageGuesses: number; bestGame: number };
-type LeaderRow = { rank: number; userId: string; displayName: string; photoUrl?: string; wins: number; averageGuesses: number; bestGame: number; isMe: boolean };
+type LeaderRow = { rank: number; userId: string; displayName: string; photoUrl?: string; wins: number; averageGuesses: number; bestGame: number; totalScore?: number; bestScore?: number; isMe: boolean };
 type Screen = "home" | "play" | "leaderboard" | "profile";
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -27,9 +28,10 @@ const gameMeta: Record<GameType, { title: string; icon: string; description: str
   IRAN_CITY: { title: "شهرجو", icon: "🇮🇷", description: "شهر پنهان ایران را پیدا کن", hint: "نام یک شهر ایران را بنویس…" },
   COUNTRY: { title: "کشورجو", icon: "🌍", description: "کشور پنهان را روی نقشه ذهنی‌ات پیدا کن", hint: "نام یک کشور را بنویس…" },
   ADJECTIVE: { title: "واژه‌جو قدیمی", icon: "✦", description: "نسخهٔ قدیمی", hint: "یک واژهٔ فارسی بنویس…" },
-  ADJECTIVE_RAIN: { title: "واژه‌جو", icon: "✦", description: "برای یک واژه، هم‌معنی پیدا کن", hint: "یک هم‌معنی فارسی بنویس…" }
+  ADJECTIVE_RAIN: { title: "واژه‌جو", icon: "✦", description: "برای یک واژه، هم‌معنی پیدا کن", hint: "یک هم‌معنی فارسی بنویس…" },
+  SEMANTRIS: { title: "معناتریس", icon: "▦", description: "با سرنخ‌های معنایی واژه‌ها را پایین بیاور", hint: "یک سرنخ مرتبط بنویس…" }
 };
-const playableTypes: GameType[] = ["IRAN_CITY", "COUNTRY", "ADJECTIVE_RAIN"];
+const playableTypes: GameType[] = ["IRAN_CITY", "COUNTRY", "ADJECTIVE_RAIN", "SEMANTRIS"];
 
 function telegram() { return (globalThis as typeof globalThis & { Telegram?: { WebApp?: any } }).Telegram?.WebApp; }
 
@@ -145,7 +147,7 @@ function Home({ stats, onlineCount, busy, onStart }: { stats: Stats; onlineCount
       <div className="live-count"><i />{onlineCount === null ? "در حال شمارش بازیکن‌ها…" : <><b>{onlineCount.toLocaleString("fa-IR")}</b> نفر همین حالا در حال بازی‌اند</>}</div>
     </section>
     <section className="game-grid">
-      {playableTypes.map((type) => <button className={`game-card ${type === "IRAN_CITY" ? "iran" : type === "COUNTRY" ? "world" : "words"}`} key={type} disabled={busy} onClick={() => onStart(type)}>
+      {playableTypes.map((type) => <button className={`game-card ${type === "IRAN_CITY" ? "iran" : type === "COUNTRY" ? "world" : type === "SEMANTRIS" ? "semantris" : "words"}`} key={type} disabled={busy} onClick={() => onStart(type)}>
         <span className="game-icon">{gameMeta[type].icon}</span>
         <span className="game-copy"><b>{gameMeta[type].title}</b><small>{gameMeta[type].description}</small></span>
         <span className="game-arrow">←</span>
@@ -166,13 +168,35 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
 }) {
   const meta = gameMeta[game.type];
   const isAdjectiveRain = game.type === "ADJECTIVE_RAIN";
+  const isSemantris = game.type === "SEMANTRIS";
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState<PublicItem[]>([]);
   const [selected, setSelected] = useState<PublicItem | null>(null);
   const [secondsLeft, setSecondsLeft] = useState(30);
+  const [dropSeconds, setDropSeconds] = useState(12);
   const [showHelp, setShowHelp] = useState(false);
+  const [semantrisPreview, setSemantrisPreview] = useState<{ words: string[]; targetWord: string; removeStartIndex: number | null; removeEndIndex: number | null; phase: "sorting" | "removing" } | null>(null);
   const expirySent = useRef<string | null>(null);
+  const lastTickSent = useRef<string | null>(null);
+  const clueInputRef = useRef<HTMLInputElement | null>(null);
   const sortedGuesses = useMemo(() => [...game.guesses].sort((a, b) => a.rank - b.rank), [game.guesses]);
+
+  useEffect(() => {
+    const state = game.semantris;
+    if (!isSemantris || game.status !== "ACTIVE" || !state) return;
+    const update = () => {
+      const remaining = Math.max(0, 12_000 - (Date.now() - new Date(state.lastDropAt).getTime()));
+      setDropSeconds(Math.ceil(remaining / 1000));
+      if (remaining > 0 || busy || document.visibilityState !== "visible" || lastTickSent.current === state.lastDropAt) return;
+      lastTickSent.current = state.lastDropAt;
+      jsonFetch<{ game: Game }>("/api/game/semantris/tick", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ gameId: game.id }) })
+        .then(({ game: updated }) => { setGame(updated); telegram()?.HapticFeedback?.impactOccurred?.("light"); })
+        .catch((cause) => setError(cause instanceof Error ? cause.message : "واژهٔ تازه اضافه نشد"));
+    };
+    update();
+    const timer = window.setInterval(update, 250);
+    return () => window.clearInterval(timer);
+  }, [busy, game.id, game.semantris, game.status, isSemantris, setError, setGame]);
 
   useEffect(() => {
     if (isAdjectiveRain || query.trim().length < 1 || selected?.name === query || game.status !== "ACTIVE") { setSuggestions([]); return; }
@@ -185,14 +209,27 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
   }, [query, selected, game.type, game.status, game.guesses, isAdjectiveRain]);
 
   const submitGuess = async () => {
-    if ((!isAdjectiveRain && !selected) || (isAdjectiveRain && !query.trim()) || busy) return;
+    if ((!isAdjectiveRain && !isSemantris && !selected) || ((isAdjectiveRain || isSemantris) && !query.trim()) || busy) return;
     setBusy(true); setError("");
     try {
-      const data = await jsonFetch<{ game: Game }>("/api/game/guess", {
-        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(isAdjectiveRain ? { gameId: game.id, word: query } : { gameId: game.id, itemId: selected!.id })
+      const data = await jsonFetch<{ game: Game; semantris?: { hit: boolean; removed: number; targetRank: number; rankedWords: string[]; targetWord: string; removeStartIndex: number | null; removeEndIndex: number | null } }>("/api/game/guess", {
+        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(isSemantris ? { gameId: game.id, clue: query } : isAdjectiveRain ? { gameId: game.id, word: query } : { gameId: game.id, itemId: selected!.id })
       });
-      setGame(data.game); setQuery(""); setSelected(null); setSuggestions([]);
-      telegram()?.HapticFeedback?.notificationOccurred(data.game.status === "WON" ? "success" : "warning");
+      setQuery(""); setSelected(null); setSuggestions([]);
+      if (isSemantris && data.semantris) {
+        setSemantrisPreview({ words: data.semantris.rankedWords, targetWord: data.semantris.targetWord, removeStartIndex: null, removeEndIndex: null, phase: "sorting" });
+        await new Promise((resolve) => window.setTimeout(resolve, 850));
+        if (data.semantris.removeStartIndex !== null && data.semantris.removeEndIndex !== null) {
+          setSemantrisPreview({ words: data.semantris.rankedWords, targetWord: data.semantris.targetWord, removeStartIndex: data.semantris.removeStartIndex, removeEndIndex: data.semantris.removeEndIndex, phase: "removing" });
+          telegram()?.HapticFeedback?.notificationOccurred("success");
+          await new Promise((resolve) => window.setTimeout(resolve, 650));
+        } else telegram()?.HapticFeedback?.notificationOccurred("warning");
+        setGame(data.game); setSemantrisPreview(null);
+        window.requestAnimationFrame(() => clueInputRef.current?.focus());
+      } else {
+        setGame(data.game);
+        telegram()?.HapticFeedback?.notificationOccurred(data.game.status === "WON" ? "success" : "warning");
+      }
     } catch (cause) { setError(cause instanceof Error ? cause.message : "حدس ثبت نشد"); }
     finally { setBusy(false); }
   };
@@ -232,30 +269,46 @@ function Play({ game, setGame, busy, setBusy, setError, onNew, onExit }: {
     const url = `https://t.me/share/url?url=${encodeURIComponent(`${location.origin}${BASE_PATH}`)}&text=${encodeURIComponent(text)}`;
     telegram()?.openTelegramLink ? telegram().openTelegramLink(url) : window.open(url, "_blank");
   };
-  const help = isAdjectiveRain
+  const help = isSemantris
+    ? { title: "راهنمای معناتریس", steps: ["واژهٔ آبی، هدف این دور است؛ یک سرنخ مرتبط با آن بنویس.", "JEV همهٔ واژه‌ها را بر اساس ارتباط با سرنخ مرتب می‌کند؛ مرتبط‌ترین‌ها پایین می‌روند.", "هدف را وارد چهار ردیف پایین کن تا خودش و واژه‌های زیرش پاک شوند؛ نگذار فهرست به بالا برسد.", "واژه‌ای که روی بورد است یا قبلاً به‌عنوان سرنخ نوشته‌ای، پذیرفته نمی‌شود."] }
+    : isAdjectiveRain
     ? { title: "راهنمای واژه‌جو", steps: ["واژهٔ نمایش‌داده‌شده را ببین.", "تا ۳۰ ثانیه، ۳ هم‌معنیِ دقیق برایش بنویس.", "واژه‌های پذیرفته‌شده سبز یا زرد می‌شوند؛ واژه‌های نامرتبط پذیرفته نمی‌شوند."] }
     : game.type === "IRAN_CITY"
       ? { title: "راهنمای شهرجو", steps: ["نام یک شهر ایران را تایپ و از پیشنهادها انتخاب کن.", "هر حدس یک رتبه می‌گیرد؛ هرچه رتبه کمتر باشد، به شهر پنهان نزدیک‌تری.", "رتبهٔ ۱ نزدیک‌ترین شهرِ دیگر است؛ وقتی پاسخ را پیدا کنی، برده‌ای."] }
       : { title: "راهنمای کشورجو", steps: ["نام یک کشور را تایپ و از پیشنهادها انتخاب کن.", "هر حدس یک رتبه می‌گیرد؛ هرچه رتبه کمتر باشد، به کشور پنهان نزدیک‌تری.", "رتبهٔ ۱ نزدیک‌ترین کشورِ دیگر است؛ پاسخ پنهان را پیدا کن تا ببری."] };
 
-  return <section className="play-screen">
-    <div className="play-heading"><button className="icon-button" onClick={onExit}>→</button><div><small>{meta.icon} {meta.title}</small><h1>{isAdjectiveRain ? "هم‌معنی‌هایش را پیدا کن" : "پاسخ پنهان را پیدا کن"}</h1></div><div className="play-actions"><button className="help-button" onClick={() => setShowHelp(true)} aria-label={`راهنمای ${meta.title}`}>?</button><span className={`guess-count ${isAdjectiveRain && secondsLeft <= 10 ? "urgent" : ""}`}>{isAdjectiveRain ? `${secondsLeft.toLocaleString("fa-IR")} ثانیه` : `${game.guessesCount.toLocaleString("fa-IR")} حدس`}</span></div></div>
+  return <section className={`play-screen ${isSemantris ? "semantris-mode" : ""}`}>
+    <div className="play-heading"><button className="icon-button" onClick={onExit}>→</button><div><small>{meta.icon} {meta.title}</small><h1>{isSemantris ? "هدف را به پایین بفرست" : isAdjectiveRain ? "هم‌معنی‌هایش را پیدا کن" : "پاسخ پنهان را پیدا کن"}</h1></div><div className="play-actions"><button className="help-button" onClick={() => setShowHelp(true)} aria-label={`راهنمای ${meta.title}`}>?</button>{isSemantris && <button className="semantris-surrender" onClick={() => surrender()} disabled={busy}>تسلیم</button>}<span className={`guess-count ${isAdjectiveRain && secondsLeft <= 10 ? "urgent" : ""}`}>{isAdjectiveRain ? `${secondsLeft.toLocaleString("fa-IR")} ثانیه` : `${game.guessesCount.toLocaleString("fa-IR")} حدس`}</span></div></div>
     {showHelp && <div className="help-backdrop" onClick={() => setShowHelp(false)}><div className="help-modal" role="dialog" aria-modal="true" aria-label={help.title} onClick={(event) => event.stopPropagation()}><button className="help-close" onClick={() => setShowHelp(false)}>×</button><span>{meta.icon}</span><h2>{help.title}</h2><ol>{help.steps.map((step) => <li key={step}>{step}</li>)}</ol><button className="primary help-done" onClick={() => setShowHelp(false)}>فهمیدم</button></div></div>}
     {isAdjectiveRain && game.prompt && <div className="adjective-prompt"><span>{game.prompt.emoji}</span><small>{game.prompt.partOfSpeech || "صفت"} · تا تمام‌شدن زمان، ۳ هم‌معنی دقیق بنویس</small><strong>{game.prompt.name}</strong><p>فقط هم‌معنی یا نزدیک‌معنی واقعی پذیرفته می‌شود.</p></div>}
     {game.type === "COUNTRY" && <CountryGuessMap guesses={game.guesses} target={game.status === "ACTIVE" ? null : game.target} total={game.totalItems} />}
-    {game.status === "ACTIVE" ? <div className="search-box">
-      <div className="search-row"><input value={query} onChange={(event) => { setQuery(event.target.value); setSelected(null); }} placeholder={meta.hint} autoComplete="off" /><button disabled={(!isAdjectiveRain && !selected) || (isAdjectiveRain && !query.trim()) || busy} onClick={submitGuess}>{busy ? "…" : isAdjectiveRain ? "ثبت" : "حدس"}</button></div>
+    {isSemantris && game.semantris && <SemantrisBoard dropSeconds={dropSeconds} state={semantrisPreview ? { ...game.semantris, words: semantrisPreview.words, targetWord: semantrisPreview.targetWord } : game.semantris} removingRange={semantrisPreview?.phase === "removing" && semantrisPreview.removeStartIndex !== null && semantrisPreview.removeEndIndex !== null ? [semantrisPreview.removeStartIndex, semantrisPreview.removeEndIndex] : null} />}
+    {game.status === "ACTIVE" ? <div className={`search-box ${isSemantris ? "semantris-input" : ""}`}>
+      <div className="search-row"><input ref={isSemantris ? clueInputRef : undefined} value={query} onChange={(event) => { setQuery(event.target.value); setSelected(null); }} onKeyDown={(event) => { if (event.key === "Enter" && !event.nativeEvent.isComposing) { event.preventDefault(); submitGuess(); } }} placeholder={meta.hint} autoComplete="off" /><button disabled={(!isAdjectiveRain && !isSemantris && !selected) || ((isAdjectiveRain || isSemantris) && !query.trim()) || busy} onClick={submitGuess}>{busy ? "…" : isSemantris ? "بزن" : isAdjectiveRain ? "ثبت" : "حدس"}</button></div>
       {suggestions.length > 0 && <div className="suggestions">{suggestions.map((item) => <button key={item.id} onClick={() => { setSelected(item); setQuery(item.name); setSuggestions([]); }}><span>{item.emoji} {item.name}</span>{item.detail && <small>{item.detail}</small>}</button>)}</div>}
     </div> : <div className={`finish-card ${game.status === "WON" ? "won" : "gave-up"}`}>
       <span className="finish-icon">{game.status === "WON" ? "🎯" : "🏳️"}</span>
-      <h2>{game.status === "WON" ? (isAdjectiveRain ? "سه هم‌معنی پیدا کردی!" : "پیداش کردی!") : isAdjectiveRain ? "هم‌معنی‌های دیگر:" : "پاسخ این بود:"}</h2>
-      <strong>{isAdjectiveRain ? game.prompt?.examples.join(" · ") : <>{game.target?.emoji} {game.target?.name}</>}</strong>
+      <h2>{isSemantris ? "فهرست به بالای صفحه رسید" : game.status === "WON" ? (isAdjectiveRain ? "سه هم‌معنی پیدا کردی!" : "پیداش کردی!") : isAdjectiveRain ? "هم‌معنی‌های دیگر:" : "پاسخ این بود:"}</h2>
+      <strong>{isSemantris ? `${game.semantris?.score.toLocaleString("fa-IR")} امتیاز` : isAdjectiveRain ? game.prompt?.examples.join(" · ") : <>{game.target?.emoji} {game.target?.name}</>}</strong>
       <p>{game.status === "WON" ? (isAdjectiveRain ? `با ${game.guessesCount.toLocaleString("fa-IR")} تلاش به هدف رسیدی.` : `با ${game.guessesCount.toLocaleString("fa-IR")} حدس به جواب رسیدی.`) : "بازی بعدی را از نو شروع کن."}</p>
       <div className="finish-actions"><button className="primary" onClick={onNew}>بازی بعدی</button>{game.status === "WON" && <button className="secondary" onClick={share}>اشتراک نتیجه</button>}</div>
     </div>}
-    <div className="guess-head"><b>{isAdjectiveRain ? "واژه‌های تو" : "حدس‌ها"}</b>{game.status === "ACTIVE" && <button onClick={() => surrender()} disabled={busy}>تسلیم می‌شوم</button>}</div>
-    {sortedGuesses.length === 0 ? <div className="empty-state"><span>⌁</span><p>{isAdjectiveRain ? "اولین هم‌معنی‌ای را که به ذهنت می‌رسد بنویس." : "اولین حدس را بزن."}</p></div> : isAdjectiveRain ? <div className="guess-list">{game.guesses.map((guess) => <div className={`word-row ${guess.rank > 1 ? "direct" : guess.rank > 0 ? "accepted" : "rejected"}`} key={guess.id}><b>{guess.name}</b><span>{guess.rank > 1 ? "عالی" : guess.rank > 0 ? "پذیرفته شد" : "هم‌معنی نیست"}</span></div>)}</div> : <div className="guess-list">{sortedGuesses.map((guess) => <div className={`guess-row ${rankColor(guess.rank, game.totalItems)}`} key={guess.id}><div className="guess-name"><span>{guess.emoji}</span><b>{guess.name}</b></div><div className="rank-copy"><small>رتبه</small><strong>{guess.rank === 0 ? "✓" : guess.rank.toLocaleString("fa-IR")}</strong><span>{guess.rank === 0 ? "پاسخ درست" : `از ${(game.totalItems - 1).toLocaleString("fa-IR")}`}</span></div><div className="rank-bar"><i style={{ width: `${guess.rank === 0 ? 100 : Math.max(4, 100 - ((guess.rank - 1) / Math.max(1, game.totalItems - 2)) * 100)}%` }} /></div></div>)}</div>}
+    <div className={`guess-head ${isSemantris ? "semantris-extra" : ""}`}><b>{isSemantris ? "سرنخ‌های اخیر" : isAdjectiveRain ? "واژه‌های تو" : "حدس‌ها"}</b>{game.status === "ACTIVE" && <button onClick={() => surrender()} disabled={busy}>تسلیم می‌شوم</button>}</div>
+    {isSemantris && game.semantris ? <div className="semantris-history semantris-extra">{game.semantris.clues.length ? game.semantris.clues.slice().reverse().map((item) => <div key={item.createdAt}><b>{item.word}</b><span>هدف «{item.targetWord}» · رتبهٔ {item.targetRank.toLocaleString("fa-IR")} {item.removed ? `· ${item.removed.toLocaleString("fa-IR")} پاک شد` : ""}</span></div>) : <div className="empty-state">برای واژهٔ آبی یک سرنخ بنویس؛ JEV کل فهرست را مرتب می‌کند.</div>}</div> : sortedGuesses.length === 0 ? <div className="empty-state"><span>⌁</span><p>{isAdjectiveRain ? "اولین هم‌معنی‌ای را که به ذهنت می‌رسد بنویس." : "اولین حدس را بزن."}</p></div> : isAdjectiveRain ? <div className="guess-list">{game.guesses.map((guess) => <div className={`word-row ${guess.rank > 1 ? "direct" : guess.rank > 0 ? "accepted" : "rejected"}`} key={guess.id}><b>{guess.name}</b><span>{guess.rank > 1 ? "عالی" : guess.rank > 0 ? "پذیرفته شد" : "هم‌معنی نیست"}</span></div>)}</div> : <div className="guess-list">{sortedGuesses.map((guess) => <div className={`guess-row ${rankColor(guess.rank, game.totalItems)}`} key={guess.id}><div className="guess-name"><span>{guess.emoji}</span><b>{guess.name}</b></div><div className="rank-copy"><small>رتبه</small><strong>{guess.rank === 0 ? "✓" : guess.rank.toLocaleString("fa-IR")}</strong><span>{guess.rank === 0 ? "پاسخ درست" : `از ${(game.totalItems - 1).toLocaleString("fa-IR")}`}</span></div><div className="rank-bar"><i style={{ width: `${guess.rank === 0 ? 100 : Math.max(4, 100 - ((guess.rank - 1) / Math.max(1, game.totalItems - 2)) * 100)}%` }} /></div></div>)}</div>}
   </section>;
+}
+
+function SemantrisBoard({ state, removingRange, dropSeconds }: { state: NonNullable<Game["semantris"]>; removingRange: [number, number] | null; dropSeconds: number }) {
+  const dangerStart = Math.max(0, state.words.length - 4);
+  const refs = useRef(new Map<string, HTMLDivElement>());
+  const previousRects = useRef(new Map<string, DOMRect>());
+  useLayoutEffect(() => {
+    const current = new Map<string, DOMRect>();
+    refs.current.forEach((element, word) => current.set(word, element.getBoundingClientRect()));
+    current.forEach((rect, word) => { const previous = previousRects.current.get(word); const element = refs.current.get(word); if (previous && element) { const dy = previous.top - rect.top; if (Math.abs(dy) > 1) element.animate([{ transform: `translateY(${dy}px)` }, { transform: "translateY(0)" }], { duration: 700, easing: "cubic-bezier(.2,.8,.2,1)" }); } });
+    previousRects.current = current;
+  }, [state.words.join("|")]);
+  return <div className="semantris-board"><div className="semantris-score"><span>امتیاز <b>{state.score.toLocaleString("fa-IR")}</b></span><span className="semantris-drop">واژهٔ بعدی <b>{dropSeconds.toLocaleString("fa-IR")}</b> ثانیه</span><span>{state.cleared.toLocaleString("fa-IR")} پاک‌شده</span></div><div className="semantris-playfield"><div className="semantris-list">{state.words.map((word, index) => <div ref={(element) => { if (element) refs.current.set(word, element); else refs.current.delete(word); }} key={word} className={`semantris-word ${word === state.targetWord ? "target" : ""} ${index >= dangerStart ? "danger" : ""} ${index === dangerStart ? "danger-start" : ""} ${removingRange !== null && index >= removingRange[0] && index <= removingRange[1] ? "removing" : ""}`}><i>{word === state.targetWord ? "▶" : ""}</i><span>{word}</span>{index === dangerStart && <small>ناحیهٔ حذف</small>}</div>)}</div></div></div>;
 }
 
 function Leaderboard() {
@@ -265,19 +318,21 @@ function Leaderboard() {
   const [rows, setRows] = useState<LeaderRow[]>([]);
   const [me, setMe] = useState<LeaderRow | null>(null);
   const [loading, setLoading] = useState(true);
+  const isSemantris = type === "SEMANTRIS";
   useEffect(() => { setLoading(true); jsonFetch<{ rows: LeaderRow[]; me: LeaderRow | null }>(`/api/leaderboard?period=${period}&type=${type}&mode=${mode}`).then((data) => { setRows(data.rows); setMe(data.me); }).finally(() => setLoading(false)); }, [period, type, mode]);
   return <section><div className="section-heading"><div><small>رقابت واقعی</small><h1>لیدربورد</h1></div><span>🏆</span></div>
-    <div className="board-modes"><button className={mode === "effort" ? "active" : ""} onClick={() => setMode("effort")}><b>پرتلاش‌ترین‌ها</b><small>بیشترین تعداد برد</small></button><button className={mode === "skill" ? "active" : ""} onClick={() => setMode("skill")}><b>ماهرترین‌ها</b><small>کمترین میانگین حدس</small></button></div>
+    <div className="board-modes"><button className={mode === "effort" ? "active" : ""} onClick={() => setMode("effort")}><b>{isSemantris ? "پرامتیازترین‌ها" : "پرتلاش‌ترین‌ها"}</b><small>{isSemantris ? "بیشترین مجموع امتیاز" : "بیشترین تعداد برد"}</small></button><button className={mode === "skill" ? "active" : ""} onClick={() => setMode("skill")}><b>ماهرترین‌ها</b><small>{isSemantris ? "بالاترین امتیاز یک بازی" : "کمترین میانگین حدس"}</small></button></div>
     <div className="segmented"><button className={period === "week" ? "active" : ""} onClick={() => setPeriod("week")}>این هفته</button><button className={period === "all" ? "active" : ""} onClick={() => setPeriod("all")}>همه دوران</button></div>
-    <div className="filter-chips"><button className={type === "IRAN_CITY" ? "active" : ""} onClick={() => setType("IRAN_CITY")}>شهرجو</button><button className={type === "COUNTRY" ? "active" : ""} onClick={() => setType("COUNTRY")}>کشورجو</button><button className={type === "ADJECTIVE_RAIN" ? "active" : ""} onClick={() => setType("ADJECTIVE_RAIN")}>واژه‌جو</button></div>
-    {mode === "skill" && <p className="board-note">امتیاز مهارت = مجموع حدس‌های بازی‌های تمام‌شده ÷ تعداد بردها · حداقل ۳ برد</p>}
-    {loading ? <div className="empty-state">در حال محاسبه رتبه‌ها…</div> : rows.length === 0 ? <div className="empty-state">{mode === "skill" ? "هنوز کسی در این جدول به ۳ برد نرسیده." : "هنوز بردی ثبت نشده؛ اولین نفر باش!"}</div> : <div className="leader-list">{rows.map((row) => <LeaderRowView key={row.userId} row={row} mode={mode} />)}</div>}
-    {me && me.rank > 50 && <div className="my-rank"><small>جایگاه تو</small><LeaderRowView row={me} mode={mode} /></div>}
+    <div className="filter-chips"><button className={type === "IRAN_CITY" ? "active" : ""} onClick={() => setType("IRAN_CITY")}>شهرجو</button><button className={type === "COUNTRY" ? "active" : ""} onClick={() => setType("COUNTRY")}>کشورجو</button><button className={type === "ADJECTIVE_RAIN" ? "active" : ""} onClick={() => setType("ADJECTIVE_RAIN")}>واژه‌جو</button><button className={isSemantris ? "active" : ""} onClick={() => setType("SEMANTRIS")}>معناتریس</button></div>
+    {mode === "skill" && <p className="board-note">{isSemantris ? "امتیاز مهارت = بالاترین امتیاز ثبت‌شده در یک بازی." : "امتیاز مهارت = مجموع حدس‌های بازی‌های تمام‌شده ÷ تعداد بردها · حداقل ۳ برد"}</p>}
+    {loading ? <div className="empty-state">در حال محاسبه رتبه‌ها…</div> : rows.length === 0 ? <div className="empty-state">{isSemantris ? "هنوز امتیازی در معناتریس ثبت نشده؛ اولین نفر باش!" : mode === "skill" ? "هنوز کسی در این جدول به ۳ برد نرسیده." : "هنوز بردی ثبت نشده؛ اولین نفر باش!"}</div> : <div className="leader-list">{rows.map((row) => <LeaderRowView key={row.userId} row={row} mode={mode} semantris={isSemantris} />)}</div>}
+    {me && me.rank > 50 && <div className="my-rank"><small>جایگاه تو</small><LeaderRowView row={me} mode={mode} semantris={isSemantris} /></div>}
   </section>;
 }
 
-function LeaderRowView({ row, mode = "effort" }: { row: LeaderRow; mode?: "effort" | "skill" }) {
-  return <div className={`leader-row ${row.isMe ? "me" : ""}`}><span className="leader-rank">{row.rank <= 3 ? ["🥇", "🥈", "🥉"][row.rank - 1] : row.rank.toLocaleString("fa-IR")}</span>{row.photoUrl ? <img src={row.photoUrl} alt="" /> : <span className="mini-avatar">👤</span>}<div className="leader-name"><b>{row.displayName}</b><small>{mode === "skill" ? row.wins.toLocaleString("fa-IR") + " برد" : "میانگین " + row.averageGuesses.toLocaleString("fa-IR") + " حدس"}</small></div><div className="leader-wins"><strong>{mode === "skill" ? row.averageGuesses.toLocaleString("fa-IR") : row.wins.toLocaleString("fa-IR")}</strong><small>{mode === "skill" ? "میانگین حدس" : "برد"}</small></div></div>;
+function LeaderRowView({ row, mode = "effort", semantris = false }: { row: LeaderRow; mode?: "effort" | "skill"; semantris?: boolean }) {
+  const score = mode === "effort" ? row.totalScore ?? row.averageGuesses : row.bestScore ?? row.averageGuesses;
+  return <div className={`leader-row ${row.isMe ? "me" : ""}`}><span className="leader-rank">{row.rank <= 3 ? ["🥇", "🥈", "🥉"][row.rank - 1] : row.rank.toLocaleString("fa-IR")}</span>{row.photoUrl ? <img src={row.photoUrl} alt="" /> : <span className="mini-avatar">👤</span>}<div className="leader-name"><b>{row.displayName}</b><small>{semantris ? mode === "effort" ? row.wins.toLocaleString("fa-IR") + " بازی" : "مجموع " + (row.totalScore || 0).toLocaleString("fa-IR") + " امتیاز" : mode === "skill" ? row.wins.toLocaleString("fa-IR") + " برد" : "میانگین " + row.averageGuesses.toLocaleString("fa-IR") + " حدس"}</small></div><div className="leader-wins"><strong>{semantris ? score.toLocaleString("fa-IR") : mode === "skill" ? row.averageGuesses.toLocaleString("fa-IR") : row.wins.toLocaleString("fa-IR")}</strong><small>{semantris ? "امتیاز" : mode === "skill" ? "میانگین حدس" : "برد"}</small></div></div>;
 }
 
 function Profile({ stats, recent }: { stats: Stats; recent: any[] }) {

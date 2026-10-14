@@ -12,9 +12,10 @@ export async function POST(request: Request) {
       create: { id: String(user.id), firstName: user.first_name, lastName: user.last_name, username: user.username, photoUrl: user.photo_url },
       update: { firstName: user.first_name, lastName: user.last_name, username: user.username, photoUrl: user.photo_url }
     });
-    const response = NextResponse.json({ user });
+    const session = createSessionValue(String(user.id));
+    const response = NextResponse.json({ user, session });
     response.cookies.set(SESSION_COOKIE, createSessionValue(String(user.id)), {
-      httpOnly: true, sameSite: "lax", secure: process.env.NODE_ENV === "production", maxAge: 60 * 60 * 24 * 30
+      httpOnly: true, sameSite: "lax", secure: process.env.NODE_ENV === "production", path: process.env.NEXT_PUBLIC_BASE_PATH || "/", maxAge: 60 * 60 * 24 * 30
     });
     return response;
   } catch {

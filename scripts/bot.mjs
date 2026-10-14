@@ -27,11 +27,14 @@ while (true) {
       const message = update.message;
       if (!message?.chat?.id) continue;
       if (["/start", "/play"].some((command) => message.text?.startsWith(command))) {
+        const startPayload = message.text?.startsWith("/start ") ? message.text.slice(7).trim() : "";
+        const inviteToken = startPayload.startsWith("duel_") ? startPayload.slice(5) : "";
+        const destination = inviteToken ? `${appUrl}${appUrl.includes("?") ? "&" : "?"}duel=${encodeURIComponent(inviteToken)}` : appUrl;
         await call("sendMessage", {
           chat_id: message.chat.id,
-          text: "🧠 *Anti AI Games*\n\nبازی‌هایی برای مغزی که هنوز خودش فکر می‌کند.\nشهرجو یا کشورجو را انتخاب کن و هرچقدر خواستی بازی کن.",
+          text: inviteToken ? "🎮 *دعوت به بازی دوحرف*\n\nدوستت منتظر است؛ روی دکمه بزن و وارد اتاق شو." : "🧠 *Anti AI Games*\n\nبازی‌هایی برای مغزی که هنوز خودش فکر می‌کند.",
           parse_mode: "Markdown",
-          reply_markup: { inline_keyboard: [[{ text: "🎮 شروع بازی", web_app: { url: appUrl } }]] }
+          reply_markup: { inline_keyboard: [[{ text: inviteToken ? "🔤 ورود به اتاق دوحرف" : "🎮 شروع بازی", web_app: { url: destination } }]] }
         });
       }
     }

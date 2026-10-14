@@ -3,7 +3,7 @@ import { Prisma } from "@prisma/client";
 import { currentUserId } from "@/lib/auth";
 import { findItem, proximityRank } from "@/lib/geo";
 import { prisma } from "@/lib/prisma";
-import { serializeGame } from "@/lib/game-service";
+import { isRetiredWordGame, publicProximityRank, serializeGame } from "@/lib/game-service";
 import { judgeAdjective } from "@/lib/adjective-judge";
 import { applySemantrisMove, readSemantrisState, semantrisClueRejection, semantrisWords } from "@/lib/semantris";
 import { judgeSemantris } from "@/lib/semantris-judge";
@@ -13,6 +13,10 @@ export async function POST(request: Request) {
   if (!userId) return NextResponse.json({ error: "ابتدا وارد بازی شو" }, { status: 401 });
   const { gameId, itemId, word, clue } = await request.json().catch(() => ({}));
   if (typeof gameId !== "string") return NextResponse.json({ error: "حدس معتبر نیست" }, { status: 400 });
+  const ownedGame = await prisma.gameSession.findFirst({ where: { id: gameId, userId } });
+  if (ownedGame && isRetiredWordGame(ownedGame.type)) {
+    return NextResponse.json({ error: "واژه‌جو دیگر در دسترس نیست" }, { status: 409 });
+  }
   try {
     if (typeof clue === "string") {
       const current = await prisma.gameSession.findFirst({ where: { id: gameId, userId, type: "SEMANTRIS", status: "ACTIVE" } });
@@ -50,7 +54,7 @@ export async function POST(request: Request) {
       const updated = await tx.gameSession.update({ where: { id: game.id }, data: { guessesCount: { increment: 1 }, ...(won ? { status: "WON", finishedAt: new Date() } : {}) }, include: { guesses: { orderBy: { createdAt: "asc" } } } });
       return { game: updated, rank, won };
     }, { isolationLevel: Prisma.TransactionIsolationLevel.Serializable });
-    return NextResponse.json({ game: serializeGame(result.game, result.won), rank: result.rank, verdict: result.verdict, expired: result.expired || false });
+    return NextResponse.json({ game: serializeGame(result.game, result.won), rank: publicProximityRank(result.game.type, result.rank), verdict: result.verdict, expired: result.expired || false });
   } catch (error) {
     if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === "P2002") return NextResponse.json({ error: "این گزینه را قبلاً حدس زده‌ای" }, { status: 409 });
     const message = error instanceof Error ? error.message : "";

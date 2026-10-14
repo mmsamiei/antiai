@@ -13,24 +13,56 @@ enum GameType {
   ADJECTIVE
   ADJECTIVE_RAIN
   SEMANTRIS
+  LETTER_DUEL
 }
 
 enum GameStatus {
   ACTIVE
   WON
+  LOST
+  DRAW
   SURRENDERED
 }
 
+enum LetterDuelMode {
+  PRIVATE
+  RANDOM
+}
+
+enum LetterDuelStatus {
+  WAITING
+  ACTIVE
+  ENDED
+}
+
+enum LetterDuelRoundStatus {
+  PICKING
+  ANSWERING
+  JUDGING
+  RESOLVED
+  CANCELLED
+}
+
+enum LetterDuelSubmissionStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+  ERROR
+}
+
 model User {
-  id        String        @id
-  firstName String?
-  lastName  String?
-  username  String?
-  photoUrl  String?
-  games     GameSession[]
-  presence  OnlinePresence?
-  createdAt DateTime      @default(now())
-  updatedAt DateTime      @updatedAt
+  id                               String                 @id
+  firstName                        String?
+  lastName                         String?
+  username                         String?
+  photoUrl                         String?
+  games                            GameSession[]
+  presence                         OnlinePresence?
+  letterDuelConnectionsAsPlayerOne LetterDuelConnection[] @relation("LetterDuelPlayerOne")
+  letterDuelConnectionsAsPlayerTwo LetterDuelConnection[] @relation("LetterDuelPlayerTwo")
+  letterDuelSubmissions            LetterDuelSubmission[]
+  createdAt                        DateTime               @default(now())
+  updatedAt                        DateTime               @updatedAt
 }
 
 model OnlinePresence {
@@ -43,18 +75,22 @@ model OnlinePresence {
 }
 
 model GameSession {
-  id             String      @id @default(cuid())
-  userId         String
-  type           GameType
-  targetId       String
-  datasetVersion String
-  status         GameStatus  @default(ACTIVE)
-  guessesCount   Int         @default(0)
-  startedAt      DateTime    @default(now())
-  finishedAt     DateTime?
-  semantrisState Json?
-  user           User        @relation(fields: [userId], references: [id], onDelete: Cascade)
-  guesses        Guess[]
+  id                String           @id @default(cuid())
+  userId            String
+  type              GameType
+  targetId          String
+  datasetVersion    String
+  status            GameStatus       @default(ACTIVE)
+  guessesCount      Int              @default(0)
+  startedAt         DateTime         @default(now())
+  finishedAt        DateTime?
+  semantrisState    Json?
+  letterDuelRoundId String?
+  duelOwnScore      Int?
+  duelOpponentScore Int?
+  user              User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  guesses           Guess[]
+  letterDuelRound   LetterDuelRound? @relation(fields: [letterDuelRoundId], references: [id], onDelete: Cascade)
 
   @@index([userId, type, status])
   @@index([type, status, finishedAt])
@@ -84,4 +120,72 @@ model AdjectiveJudgment {
   updatedAt DateTime @updatedAt
 
   @@unique([promptId, word])
+}
+
+model LetterDuelConnection {
+  id                 String            @id @default(cuid())
+  mode               LetterDuelMode
+  status             LetterDuelStatus  @default(WAITING)
+  inviteToken        String?           @unique
+  playerOneId        String
+  playerTwoId        String?
+  playerOneHeartbeat DateTime          @default(now())
+  playerTwoHeartbeat DateTime?
+  stateVersion       Int               @default(1)
+  createdAt          DateTime          @default(now())
+  startedAt          DateTime?
+  endedAt            DateTime?
+  playerOne          User              @relation("LetterDuelPlayerOne", fields: [playerOneId], references: [id], onDelete: Cascade)
+  playerTwo          User?             @relation("LetterDuelPlayerTwo", fields: [playerTwoId], references: [id], onDelete: Cascade)
+  rounds             LetterDuelRound[]
+
+  @@index([status, mode, createdAt])
+  @@index([playerOneId, status])
+  @@index([playerTwoId, status])
+}
+
+model LetterDuelRound {
+  id              String                 @id @default(cuid())
+  connectionId    String
+  number          Int
+  status          LetterDuelRoundStatus  @default(PICKING)
+  playerOneLetter String?
+  playerTwoLetter String?
+  pickDeadline    DateTime
+  answerDeadline  DateTime?
+  winnerUserId    String?
+  winningWord     String?
+  resultReason    String?
+  createdAt       DateTime               @default(now())
+  resolvedAt      DateTime?
+  connection      LetterDuelConnection   @relation(fields: [connectionId], references: [id], onDelete: Cascade)
+  sessions        GameSession[]
+  submissions     LetterDuelSubmission[]
+
+  @@unique([connectionId, number])
+  @@index([connectionId, status])
+}
+
+model LetterDuelSubmission {
+  id         String                     @id @default(cuid())
+  roundId    String
+  userId     String
+  word       String
+  status     LetterDuelSubmissionStatus @default(PENDING)
+  reason     String?
+  receivedAt DateTime                   @default(now())
+  judgedAt   DateTime?
+  round      LetterDuelRound            @relation(fields: [roundId], references: [id], onDelete: Cascade)
+  user       User                       @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([roundId, receivedAt])
+}
+
+model LetterDuelWordJudgment {
+  word         String   @id
+  accepted     Boolean
+  reason       String?
+  judgeVersion Int      @default(1)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 }

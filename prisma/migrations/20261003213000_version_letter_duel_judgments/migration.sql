@@ -1,0 +1,1 @@
+ALTER TABLE "LetterDuelWordJudgment" ADD COLUMN "judgeVersion" INTEGER NOT NULL DEFAULT 1;

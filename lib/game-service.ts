@@ -4,12 +4,30 @@ import { DATASET_VERSION, datasetFor, findItem, publicItem } from "./geo";
 import { wordPrompts, promptById } from "./data/adjective-prompts";
 import { createSemantrisState, publicSemantrisState, readSemantrisState } from "./semantris";
 
-export const GAME_TYPES = ["IRAN_CITY", "COUNTRY", "ADJECTIVE_RAIN", "SEMANTRIS"] as const;
+export const GAME_TYPES = ["IRAN_CITY", "COUNTRY", "SEMANTRIS", "LETTER_DUEL"] as const;
 
 export function parseGameType(value: unknown): GameType | null {
   return typeof value === "string" && GAME_TYPES.includes(value as (typeof GAME_TYPES)[number])
     ? value as GameType
     : null;
+}
+
+export function isRetiredWordGame(type: GameType): boolean {
+  return type === "ADJECTIVE" || type === "ADJECTIVE_RAIN";
+}
+
+export function parseLeaderboardGameType(value: unknown): GameType | null {
+  if (value === "ADJECTIVE" || value === "ADJECTIVE_RAIN") return value;
+  return parseGameType(value);
+}
+
+/** The stored rank keeps the geographic engine's original zero/one-based semantics. */
+export function publicProximityRank(type: GameType, rank: number) {
+  return (type === "COUNTRY" || type === "IRAN_CITY") && rank > 0 ? rank + 1 : rank;
+}
+
+export function canResumeActiveGame(type: GameType, targetId: string) {
+  return type !== "IRAN_CITY" || Boolean(findItem(type, targetId));
 }
 
 export function serializeGame(game: GameSession & { guesses: Guess[] }, revealTarget = false) {
@@ -32,7 +50,7 @@ export function serializeGame(game: GameSession & { guesses: Guess[] }, revealTa
   const dataset = datasetFor(game.type);
   const guesses = game.guesses.map((guess) => {
     const item = findItem(game.type, guess.itemId);
-    return item ? { ...publicItem(item), rank: guess.rank, createdAt: guess.createdAt } : null;
+    return item ? { ...publicItem(item), rank: publicProximityRank(game.type, guess.rank), createdAt: guess.createdAt } : null;
   }).filter(Boolean);
   const target = revealTarget ? findItem(game.type, game.targetId) : undefined;
   return {
@@ -44,17 +62,24 @@ export function serializeGame(game: GameSession & { guesses: Guess[] }, revealTa
     startedAt: game.startedAt,
     finishedAt: game.finishedAt,
     guesses,
-    target: target ? publicItem(target) : null
+    target: target ? publicItem(target, revealTarget) : null
   };
 }
 
 export async function activeOrNewGame(userId: string, type: GameType) {
+  if (isRetiredWordGame(type)) throw new Error("GAME_RETIRED");
   const active = await prisma.gameSession.findFirst({
     where: { userId, type, status: "ACTIVE" },
     include: { guesses: { orderBy: { createdAt: "asc" } } },
     orderBy: { startedAt: "desc" }
   });
-  if (active) return active;
+  if (active && canResumeActiveGame(type, active.targetId)) return active;
+  if (active) {
+    await prisma.gameSession.updateMany({
+      where: { id: active.id, userId, status: "ACTIVE" },
+      data: { status: "SURRENDERED", finishedAt: new Date() }
+    });
+  }
   if (type === "SEMANTRIS") {
     const state = createSemantrisState();
     return prisma.gameSession.create({ data: { userId, type, targetId: "semantris-v1", datasetVersion: "2026-10-02-semantris-v1", semantrisState: state }, include: { guesses: true } });

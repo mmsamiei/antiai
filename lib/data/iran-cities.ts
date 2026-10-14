@@ -1,16 +1,31 @@
-// Generated from GeoNames and the Persian Wikipedia city list. Do not edit manually.
+// Generated from Iran administrative divisions v3.1.2 and audited coordinates. Do not edit manually.
 import type { GeoItem } from "../geo";
 
 export const iranCities: GeoItem[] = [
   {
-    "id": "wiki-ca3c2bb96512",
-    "name": "‌ گل‌تپه",
+    "id": "wiki-8c2ee43edd49",
+    "name": "آب بر",
     "aliases": [
-      "‌ گل‌تپه",
-      "گل‌تپه (کبودرآهنگ)"
+      "آب بر",
+      "آب‌بر",
+      "آب‌بر (زنجان)"
     ],
-    "latitude": 35.21861111,
-    "longitude": 48.20611111
+    "latitude": 36.92627,
+    "longitude": 48.95832,
+    "provinceName": "زنجان"
+  },
+  {
+    "id": "ir-44172",
+    "name": "آب پخش",
+    "aliases": [
+      "آب پخش",
+      "آب‌پخش",
+      "Āb Pakhsh",
+      "Ab Pakhsh"
+    ],
+    "latitude": 29.3485,
+    "longitude": 51.0756,
+    "provinceName": "بوشهر"
   },
   {
     "id": "wiki-776fbb39010f",
@@ -19,8 +34,9 @@ export const iranCities: GeoItem[] = [
       "آباد",
       "آباد (تنگستان)"
     ],
-    "latitude": 29.02472222,
-    "longitude": 51.2525
+    "latitude": 29.024,
+    "longitude": 51.2526,
+    "provinceName": "بوشهر"
   },
   {
     "id": "ir-145459",
@@ -32,40 +48,38 @@ export const iranCities: GeoItem[] = [
       "عبادان"
     ],
     "latitude": 30.3392,
-    "longitude": 48.3043
+    "longitude": 48.3043,
+    "provinceName": "خوزستان"
   },
   {
-    "id": "ir-48918",
+    "id": "ir-admin-1070001001296",
     "name": "آباده",
     "aliases": [
-      "آباده",
-      "Ābādeh",
-      "Abadeh"
+      "آباده"
     ],
-    "latitude": 28.83168,
-    "longitude": 53.17276
+    "latitude": 31.1608,
+    "longitude": 52.6506,
+    "provinceName": "فارس"
   },
   {
-    "id": "wiki-8c2ee43edd49",
-    "name": "آب‌بر",
+    "id": "ir-admin-10700035002199",
+    "name": "آباده طشک",
     "aliases": [
-      "آب‌بر",
-      "آب‌بر (زنجان)"
+      "آباده طشک"
     ],
-    "latitude": 36.9225,
-    "longitude": 48.97444444
+    "latitude": 29.81083,
+    "longitude": 53.7275,
+    "provinceName": "فارس"
   },
   {
-    "id": "ir-44172",
-    "name": "آب‌پخش",
+    "id": "ir-admin-1180005002484",
+    "name": "آبدان",
     "aliases": [
-      "آب‌پخش",
-      "آب پخش",
-      "Āb Pakhsh",
-      "Ab Pakhsh"
+      "آبدان"
     ],
-    "latitude": 29.35862,
-    "longitude": 51.07423
+    "latitude": 28.0799,
+    "longitude": 51.76815,
+    "provinceName": "بوشهر"
   },
   {
     "id": "ir-145233",
@@ -79,7 +93,8 @@ export const iranCities: GeoItem[] = [
       "قلعۀ آبداران"
     ],
     "latitude": 32.9926,
-    "longitude": 47.4198
+    "longitude": 47.4198,
+    "provinceName": "ایلام"
   },
   {
     "id": "wiki-5c44b0c76824",
@@ -89,7 +104,8 @@ export const iranCities: GeoItem[] = [
       "آبژدان (اندیکا)"
     ],
     "latitude": 32.15,
-    "longitude": 49.4
+    "longitude": 49.4,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-72438b443637",
@@ -98,17 +114,20 @@ export const iranCities: GeoItem[] = [
       "آبسرد",
       "آبسرد (تهران)"
     ],
-    "latitude": 35.62305556,
-    "longitude": 52.15333333
+    "latitude": 35.6232,
+    "longitude": 52.1528,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-41add73be329",
-    "name": "آبش‌احمد",
+    "name": "آبش احمد",
     "aliases": [
+      "آبش احمد",
       "آبش‌احمد"
     ],
     "latitude": 39.0425,
-    "longitude": 47.31638889
+    "longitude": 47.31638889,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-057becda2c26",
@@ -117,7 +136,8 @@ export const iranCities: GeoItem[] = [
       "آبعلی"
     ],
     "latitude": 35.76333333,
-    "longitude": 51.96527778
+    "longitude": 51.96527778,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-8e00a6cd16a5",
@@ -126,17 +146,30 @@ export const iranCities: GeoItem[] = [
       "آبگرم",
       "آبگرم (آوج)"
     ],
-    "latitude": 35.75722222,
-    "longitude": 49.28694444
+    "latitude": 35.757,
+    "longitude": 49.28589,
+    "provinceName": "قزوین"
   },
   {
     "id": "wiki-7b5fb1287f85",
-    "name": "آبی‌بیگلو",
+    "name": "آبی بیگلو",
     "aliases": [
+      "آبی بیگلو",
       "آبی‌بیگلو"
     ],
     "latitude": 38.28388889,
-    "longitude": 48.55083333
+    "longitude": 48.55083333,
+    "provinceName": "اردبیل"
+  },
+  {
+    "id": "ir-admin-1290009002898",
+    "name": "آبیز",
+    "aliases": [
+      "آبیز"
+    ],
+    "latitude": 33.68668,
+    "longitude": 59.94803,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "ir-144795",
@@ -149,7 +182,8 @@ export const iranCities: GeoItem[] = [
       "ابیک سفل"
     ],
     "latitude": 36.03993,
-    "longitude": 50.53101
+    "longitude": 50.53101,
+    "provinceName": "قزوین"
   },
   {
     "id": "wiki-49150505d22b",
@@ -157,17 +191,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "آجین"
     ],
-    "latitude": 34.73611111,
-    "longitude": 47.92416667
-  },
-  {
-    "id": "wiki-867ea680b081",
-    "name": "آچاچی",
-    "aliases": [
-      "آچاچی"
-    ],
-    "latitude": 37.39861111,
-    "longitude": 47.79638889
+    "latitude": 34.73641,
+    "longitude": 47.92487,
+    "provinceName": "همدان"
   },
   {
     "id": "ir-6686970",
@@ -179,7 +205,8 @@ export const iranCities: GeoItem[] = [
       "دهخوارقان"
     ],
     "latitude": 37.759,
-    "longitude": 45.9783
+    "longitude": 45.9783,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-76b233cea4fc",
@@ -187,8 +214,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "آرادان"
     ],
-    "latitude": 35.24972222,
-    "longitude": 52.49333333
+    "latitude": 35.24941,
+    "longitude": 52.49422,
+    "provinceName": "سمنان"
   },
   {
     "id": "wiki-6d53cf9ac68e",
@@ -197,7 +225,8 @@ export const iranCities: GeoItem[] = [
       "آراللو"
     ],
     "latitude": 38.14444444,
-    "longitude": 48.42388889
+    "longitude": 48.42388889,
+    "provinceName": "اردبیل"
   },
   {
     "id": "ir-143122",
@@ -211,7 +240,8 @@ export const iranCities: GeoItem[] = [
       "گل آرا"
     ],
     "latitude": 34.05751,
-    "longitude": 51.48291
+    "longitude": 51.48291,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-6b3e58b0897b",
@@ -220,28 +250,33 @@ export const iranCities: GeoItem[] = [
       "آرمرده"
     ],
     "latitude": 35.9325,
-    "longitude": 45.79611111
+    "longitude": 45.79611111,
+    "provinceName": "کردستان"
   },
   {
     "id": "wiki-edb6fee8b8e3",
-    "name": "آرین‌شهر",
+    "name": "آرین شهر",
     "aliases": [
+      "آرین شهر",
       "آرین‌شهر"
     ],
-    "latitude": 33.33166667,
-    "longitude": 59.23305556
+    "latitude": 33.3319,
+    "longitude": 59.2334,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "ir-110831",
-    "name": "آزاد شهر",
+    "name": "آزادشهر",
     "aliases": [
+      "آزادشهر",
       "آزاد شهر",
       "Āzādshahr",
       "Azadshahr",
       "شاه پسند"
     ],
     "latitude": 37.08641,
-    "longitude": 55.17222
+    "longitude": 55.17222,
+    "provinceName": "گلستان"
   },
   {
     "id": "wiki-6f182b2bb071",
@@ -251,7 +286,8 @@ export const iranCities: GeoItem[] = [
       "آزادی (اندیمشک)"
     ],
     "latitude": 32.40416667,
-    "longitude": 48.24916667
+    "longitude": 48.24916667,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-af4a388cef88",
@@ -260,7 +296,8 @@ export const iranCities: GeoItem[] = [
       "آسارا"
     ],
     "latitude": 36.03638889,
-    "longitude": 51.19416667
+    "longitude": 51.19416667,
+    "provinceName": "البرز"
   },
   {
     "id": "ir-142676",
@@ -271,7 +308,18 @@ export const iranCities: GeoItem[] = [
       "Astara"
     ],
     "latitude": 38.43084,
-    "longitude": 48.86994
+    "longitude": 48.86994,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-1000007001112",
+    "name": "آستانه",
+    "aliases": [
+      "آستانه"
+    ],
+    "latitude": 33.8856,
+    "longitude": 49.3522,
+    "provinceName": "مرکزی"
   },
   {
     "id": "ir-142679",
@@ -282,16 +330,29 @@ export const iranCities: GeoItem[] = [
       "Astaneh-ye Ashrafiyeh"
     ],
     "latitude": 37.26318,
-    "longitude": 49.94325
+    "longitude": 49.94325,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-10200023001039",
+    "name": "آستانه سرا",
+    "aliases": [
+      "آستانه سرا"
+    ],
+    "latitude": 36.6421794,
+    "longitude": 52.5005939,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-fdc9e4312a32",
-    "name": "آسمان‌آباد",
+    "name": "آسمان آباد",
     "aliases": [
+      "آسمان آباد",
       "آسمان‌آباد"
     ],
     "latitude": 33.85305556,
-    "longitude": 46.46138889
+    "longitude": 46.46138889,
+    "provinceName": "ایلام"
   },
   {
     "id": "wiki-efcc0101d293",
@@ -299,8 +360,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "آشار"
     ],
-    "latitude": 26.67719444,
-    "longitude": 61.67330556
+    "latitude": 26.679,
+    "longitude": 61.6705,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-200652842ed9",
@@ -308,8 +370,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "آشتیان"
     ],
-    "latitude": 34.52305556,
-    "longitude": 50.00611111
+    "latitude": 34.52298,
+    "longitude": 50.00608,
+    "provinceName": "مرکزی"
   },
   {
     "id": "ir-142768",
@@ -320,7 +383,8 @@ export const iranCities: GeoItem[] = [
       "Ashkhaneh"
     ],
     "latitude": 37.5615,
-    "longitude": 56.92125
+    "longitude": 56.92125,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "ir-144696",
@@ -330,7 +394,8 @@ export const iranCities: GeoItem[] = [
       "Aghajari"
     ],
     "latitude": 30.7006,
-    "longitude": 49.8315
+    "longitude": 49.8315,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-7329809",
@@ -341,7 +406,8 @@ export const iranCities: GeoItem[] = [
       "Aq Qala"
     ],
     "latitude": 37.0139,
-    "longitude": 54.45504
+    "longitude": 54.45504,
+    "provinceName": "گلستان"
   },
   {
     "id": "wiki-fa05fdcb704e",
@@ -350,29 +416,8 @@ export const iranCities: GeoItem[] = [
       "آقکند"
     ],
     "latitude": 37.25833333,
-    "longitude": 48.065
-  },
-  {
-    "id": "wiki-4305d6448769",
-    "name": "آکند",
-    "aliases": [
-      "آکند"
-    ],
-    "latitude": 36.75,
-    "longitude": 53.1
-  },
-  {
-    "id": "ir-144273",
-    "name": "آلارد",
-    "aliases": [
-      "آلارد",
-      "Ālārd",
-      "Alard",
-      "الارد چهار دانگ",
-      "الارد"
-    ],
-    "latitude": 35.51296,
-    "longitude": 51.05959
+    "longitude": 48.065,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-e907464e465f",
@@ -381,7 +426,8 @@ export const iranCities: GeoItem[] = [
       "آلاشت"
     ],
     "latitude": 36.06666667,
-    "longitude": 52.83722222
+    "longitude": 52.83722222,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-1a398249f20f",
@@ -389,17 +435,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "آلماجق"
     ],
-    "latitude": 36.94278056,
-    "longitude": 58.68056111
+    "latitude": 36.94314,
+    "longitude": 58.68022,
+    "provinceName": "خراسان رضوی"
   },
   {
-    "id": "wiki-b8f1529f3e03",
-    "name": "آلنی",
+    "id": "ir-admin-11400010002473",
+    "name": "آلونی",
     "aliases": [
-      "آلنی"
+      "آلونی"
     ],
-    "latitude": 38.43944444,
-    "longitude": 47.72777778
+    "latitude": 31.55303,
+    "longitude": 51.0605,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "ir-143534",
@@ -410,7 +458,18 @@ export const iranCities: GeoItem[] = [
       "Amol"
     ],
     "latitude": 36.46961,
-    "longitude": 52.35072
+    "longitude": 52.35072,
+    "provinceName": "مازندران"
+  },
+  {
+    "id": "ir-admin-1280006002848",
+    "name": "آوا",
+    "aliases": [
+      "آوا"
+    ],
+    "latitude": 37.50154,
+    "longitude": 57.56347,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "wiki-a334ea4ffdfa",
@@ -419,7 +478,8 @@ export const iranCities: GeoItem[] = [
       "آواجیق"
     ],
     "latitude": 39.31388889,
-    "longitude": 44.16472222
+    "longitude": 44.16472222,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-86934325a404",
@@ -427,8 +487,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "آوج"
     ],
-    "latitude": 35.57888889,
-    "longitude": 49.22416667
+    "latitude": 35.57959,
+    "longitude": 49.22313,
+    "provinceName": "قزوین"
+  },
+  {
+    "id": "ir-admin-1000006002827",
+    "name": "آوه",
+    "aliases": [
+      "آوه"
+    ],
+    "latitude": 34.79231,
+    "longitude": 50.42317,
+    "provinceName": "مرکزی"
   },
   {
     "id": "wiki-f05e13cd13ab",
@@ -437,34 +508,36 @@ export const iranCities: GeoItem[] = [
       "آیسک"
     ],
     "latitude": 33.8875,
-    "longitude": 58.3825
+    "longitude": 58.3825,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "ir-145427",
-    "name": "ابرغ",
+    "name": "ابرکوه",
     "aliases": [
+      "ابرکوه",
       "ابرغ",
       "Abarkūh",
       "Abarkuh",
       "ابر قو",
-      "ابرکوه",
       "ابرقوه",
       "ابرکو"
     ],
     "latitude": 31.1289,
-    "longitude": 53.2824
+    "longitude": 53.2824,
+    "provinceName": "یزد"
   },
   {
-    "id": "ir-418950",
+    "id": "wiki-9945727def3c",
     "name": "ابریشم",
     "aliases": [
       "ابریشم",
-      "Abrīsham",
-      "Abrisham",
-      "باغ ابریشم"
+      "شهر ابریشم",
+      "ابریشم (فلاورجان)"
     ],
-    "latitude": 32.55613,
-    "longitude": 51.57325
+    "latitude": 32.555,
+    "longitude": 51.57305556,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-07397943b1ee",
@@ -473,7 +546,8 @@ export const iranCities: GeoItem[] = [
       "ابوحمیظه"
     ],
     "latitude": 31.53,
-    "longitude": 48.21972222
+    "longitude": 48.21972222,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-4c28c4eea76e",
@@ -481,8 +555,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "ابوزیدآباد"
     ],
-    "latitude": 33.90416667,
-    "longitude": 51.76888889
+    "latitude": 33.9505,
+    "longitude": 51.6023,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-92e67db912b5",
@@ -491,8 +566,9 @@ export const iranCities: GeoItem[] = [
       "ابوموسی",
       "ابوموسی (شهر)"
     ],
-    "latitude": 25.86694444,
-    "longitude": 55.02361111
+    "latitude": 25.875,
+    "longitude": 55.03,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "ir-145034",
@@ -502,7 +578,38 @@ export const iranCities: GeoItem[] = [
       "Abhar"
     ],
     "latitude": 36.1468,
-    "longitude": 49.218
+    "longitude": 49.218,
+    "provinceName": "زنجان"
+  },
+  {
+    "id": "ir-admin-10300010002842",
+    "name": "اچاچی",
+    "aliases": [
+      "اچاچی"
+    ],
+    "latitude": 37.39861111,
+    "longitude": 47.79638889,
+    "provinceName": "آذربایجان شرقی"
+  },
+  {
+    "id": "ir-admin-10100012002387",
+    "name": "احمد سرگوراب",
+    "aliases": [
+      "احمد سرگوراب"
+    ],
+    "latitude": 37.1352,
+    "longitude": 49.3729,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-1210001002265",
+    "name": "احمد‌آباد",
+    "aliases": [
+      "احمد‌آباد"
+    ],
+    "latitude": 32.3577,
+    "longitude": 53.9922,
+    "provinceName": "یزد"
   },
   {
     "id": "wiki-019477a7a6f2",
@@ -510,8 +617,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "احمدآباد صولت"
     ],
-    "latitude": 35.11583056,
-    "longitude": 60.69
+    "latitude": 35.1158,
+    "longitude": 60.6899,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-admin-12300010002770",
+    "name": "احمد‌آباد مستوفی",
+    "aliases": [
+      "احمد‌آباد مستوفی"
+    ],
+    "latitude": 35.552275,
+    "longitude": 51.234985,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-382bc197cac4",
@@ -519,8 +637,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "اختیارآباد"
     ],
-    "latitude": 30.32583333,
-    "longitude": 56.92277778
+    "latitude": 30.3277,
+    "longitude": 56.9247,
+    "provinceName": "کرمان"
+  },
+  {
+    "id": "ir-admin-11100015002353",
+    "name": "ادیمی",
+    "aliases": [
+      "ادیمی"
+    ],
+    "latitude": 31.11144,
+    "longitude": 61.41189,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "ir-143127",
@@ -535,7 +664,8 @@ export const iranCities: GeoItem[] = [
       "سلطان‌آباد (خوشاب)"
     ],
     "latitude": 34.09493,
-    "longitude": 49.69809
+    "longitude": 49.69809,
+    "provinceName": "مرکزی"
   },
   {
     "id": "wiki-6b6cd91412b3",
@@ -544,7 +674,8 @@ export const iranCities: GeoItem[] = [
       "اربطان"
     ],
     "latitude": 38.17388889,
-    "longitude": 46.94083333
+    "longitude": 46.94083333,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-4a2f85016ddc",
@@ -553,8 +684,9 @@ export const iranCities: GeoItem[] = [
       "ارجمند",
       "ارجمند (فیروزکوه)"
     ],
-    "latitude": 35.815,
-    "longitude": 52.51166667
+    "latitude": 35.8155,
+    "longitude": 52.5141,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-1cd728774827",
@@ -563,8 +695,9 @@ export const iranCities: GeoItem[] = [
       "ارد",
       "ارد (گراش)"
     ],
-    "latitude": 27.72694444,
-    "longitude": 53.62583333
+    "latitude": 27.7278,
+    "longitude": 53.62702,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-a54d3875550c",
@@ -572,8 +705,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "ارداق"
     ],
-    "latitude": 36.49638889,
-    "longitude": 49.24194444
+    "latitude": 36.0531,
+    "longitude": 49.8249,
+    "provinceName": "قزوین"
   },
   {
     "id": "ir-143083",
@@ -584,7 +718,8 @@ export const iranCities: GeoItem[] = [
       "Ardabil"
     ],
     "latitude": 38.2498,
-    "longitude": 48.2933
+    "longitude": 48.2933,
+    "provinceName": "اردبیل"
   },
   {
     "id": "ir-143052",
@@ -595,7 +730,18 @@ export const iranCities: GeoItem[] = [
       "Ardestan"
     ],
     "latitude": 33.37939,
-    "longitude": 52.36981
+    "longitude": 52.36981,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-1070006001304",
+    "name": "اردکان",
+    "aliases": [
+      "اردکان"
+    ],
+    "latitude": 30.25961,
+    "longitude": 51.98491,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-143073",
@@ -606,7 +752,38 @@ export const iranCities: GeoItem[] = [
       "Ardakan"
     ],
     "latitude": 32.31001,
-    "longitude": 54.01747
+    "longitude": 54.01747,
+    "provinceName": "یزد"
+  },
+  {
+    "id": "ir-admin-1140005001476",
+    "name": "اردل",
+    "aliases": [
+      "اردل"
+    ],
+    "latitude": 31.99969,
+    "longitude": 50.66231,
+    "provinceName": "چهارمحال و بختیاری"
+  },
+  {
+    "id": "ir-admin-12400010002881",
+    "name": "اردیموسی",
+    "aliases": [
+      "اردیموسی"
+    ],
+    "latitude": 38.20059,
+    "longitude": 48.13213,
+    "provinceName": "اردبیل"
+  },
+  {
+    "id": "ir-admin-10800023002315",
+    "name": "ارزوییه",
+    "aliases": [
+      "ارزوییه"
+    ],
+    "latitude": 28.45318,
+    "longitude": 56.35994,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-6a776a7092e9",
@@ -614,8 +791,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "ارسک"
     ],
-    "latitude": 33.70138889,
-    "longitude": 57.37388889
+    "latitude": 33.70147,
+    "longitude": 57.37392,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "ir-142958",
@@ -626,7 +804,8 @@ export const iranCities: GeoItem[] = [
       "Arsanjan"
     ],
     "latitude": 29.9124,
-    "longitude": 53.3085
+    "longitude": 53.3085,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-2f6bbb9e3d1f",
@@ -635,7 +814,8 @@ export const iranCities: GeoItem[] = [
       "ارطه"
     ],
     "latitude": 36.46561111,
-    "longitude": 52.85888889
+    "longitude": 52.85888889,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-120539",
@@ -647,7 +827,8 @@ export const iranCities: GeoItem[] = [
       "قلعه دره"
     ],
     "latitude": 33.3828,
-    "longitude": 46.5983
+    "longitude": 46.5983,
+    "provinceName": "ایلام"
   },
   {
     "id": "wiki-8f7cafea4ec0",
@@ -655,8 +836,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "ارمغانخانه"
     ],
-    "latitude": 36.97805556,
-    "longitude": 48.37333333
+    "latitude": 36.9773,
+    "longitude": 48.3732,
+    "provinceName": "زنجان"
   },
   {
     "id": "ir-121801",
@@ -664,11 +846,11 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "ارومیه",
       "Orūmīyeh",
-      "Orumiyeh",
-      "شهرستان ارومیه"
+      "Orumiyeh"
     ],
     "latitude": 37.55274,
-    "longitude": 45.07605
+    "longitude": 45.07605,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "ir-403707",
@@ -678,20 +860,9 @@ export const iranCities: GeoItem[] = [
       "Arvand Kenār",
       "Arvand Kenar"
     ],
-    "latitude": 29.97775,
-    "longitude": 48.51777
-  },
-  {
-    "id": "ir-406487",
-    "name": "ارین",
-    "aliases": [
-      "ارین",
-      "Ovrīn",
-      "Ovrin",
-      "اورین"
-    ],
-    "latitude": 35.5477,
-    "longitude": 51.1282
+    "latitude": 29.9843,
+    "longitude": 48.511,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-5a9c079121e6",
@@ -699,8 +870,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "ازگله"
     ],
-    "latitude": 34.8325,
-    "longitude": 45.84333333
+    "latitude": 34.8324,
+    "longitude": 45.8433,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "ir-142497",
@@ -711,7 +883,8 @@ export const iranCities: GeoItem[] = [
       "Azna"
     ],
     "latitude": 33.45643,
-    "longitude": 49.45646
+    "longitude": 49.45646,
+    "provinceName": "لرستان"
   },
   {
     "id": "wiki-151c01362a96",
@@ -719,8 +892,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "ازندریان"
     ],
-    "latitude": 34.50888889,
-    "longitude": 48.68666667
+    "latitude": 34.5044,
+    "longitude": 48.6909,
+    "provinceName": "همدان"
   },
   {
     "id": "wiki-ad2989615df6",
@@ -729,7 +903,28 @@ export const iranCities: GeoItem[] = [
       "اژیه"
     ],
     "latitude": 32.44027778,
-    "longitude": 52.37972222
+    "longitude": 52.37972222,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-1010004002382",
+    "name": "اسالم",
+    "aliases": [
+      "اسالم"
+    ],
+    "latitude": 37.73312,
+    "longitude": 48.95333,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-11100025002506",
+    "name": "اسپکه",
+    "aliases": [
+      "اسپکه"
+    ],
+    "latitude": 26.84004,
+    "longitude": 60.1731,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "ir-135094",
@@ -740,38 +935,31 @@ export const iranCities: GeoItem[] = [
       "Estahban"
     ],
     "latitude": 29.1266,
-    "longitude": 54.0421
+    "longitude": 54.0421,
+    "provinceName": "فارس"
   },
   {
-    "id": "wiki-66da3ff645c9",
-    "name": "اسحاق‌آباد",
+    "id": "ir-admin-10900042002965",
+    "name": "اسحق آباد",
     "aliases": [
-      "اسحاق‌آباد",
-      "اسحاق‌آباد (زبرخان)"
+      "اسحق آباد"
     ],
-    "latitude": 36.02916944,
-    "longitude": 59.00778056
+    "latitude": 36.02931,
+    "longitude": 59.00813,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-142872",
-    "name": "اسد آباد",
+    "name": "اسدآباد",
     "aliases": [
+      "اسدآباد",
       "اسد آباد",
       "Asadābād",
       "Asadabad"
     ],
     "latitude": 34.78241,
-    "longitude": 48.12012
-  },
-  {
-    "id": "wiki-6bbaded654ed",
-    "name": "اسدآباد",
-    "aliases": [
-      "اسدآباد",
-      "اسدآباد (همدان)"
-    ],
-    "latitude": 34.7825,
-    "longitude": 48.12
+    "longitude": 48.12012,
+    "provinceName": "همدان"
   },
   {
     "id": "wiki-2b030837ca52",
@@ -779,8 +967,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "اسدیه"
     ],
-    "latitude": 32.91638889,
-    "longitude": 60.02583333
+    "latitude": 32.9428,
+    "longitude": 59.71998,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "wiki-579736524f16",
@@ -788,8 +977,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "اسفدن"
     ],
-    "latitude": 33.645,
-    "longitude": 59.77805556
+    "latitude": 33.65492,
+    "longitude": 59.77554,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "ir-135298",
@@ -800,7 +990,8 @@ export const iranCities: GeoItem[] = [
       "Esfarayen"
     ],
     "latitude": 37.07645,
-    "longitude": 57.51009
+    "longitude": 57.51009,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "ir-142824",
@@ -810,8 +1001,9 @@ export const iranCities: GeoItem[] = [
       "Asfarvarīn",
       "Asfarvarin"
     ],
-    "latitude": 35.93451,
-    "longitude": 49.74908
+    "latitude": 35.9353,
+    "longitude": 49.748,
+    "provinceName": "قزوین"
   },
   {
     "id": "wiki-9bf4d1db7b99",
@@ -819,8 +1011,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "اسفندک"
     ],
-    "latitude": 27.11106373,
-    "longitude": 62.83594014
+    "latitude": 27.11147,
+    "longitude": 62.83597,
+    "provinceName": "سیستان و بلوچستان"
+  },
+  {
+    "id": "ir-admin-1030003001067",
+    "name": "اسفهلان",
+    "aliases": [
+      "اسفهلان"
+    ],
+    "latitude": 37.9928,
+    "longitude": 46.11,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-121781",
@@ -831,22 +1034,14 @@ export const iranCities: GeoItem[] = [
       "Osku"
     ],
     "latitude": 37.91504,
-    "longitude": 46.12258
-  },
-  {
-    "id": "wiki-46b4363a26ad",
-    "name": "اسلام‌آباد",
-    "aliases": [
-      "اسلام‌آباد",
-      "اسلام‌آباد (پارس‌آباد)"
-    ],
-    "latitude": 28.32916667,
-    "longitude": 53.05305556
+    "longitude": 46.12258,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-135175",
-    "name": "اسلام‌آباد غرب",
+    "name": "اسلام آبادغرب",
     "aliases": [
+      "اسلام آبادغرب",
       "اسلام‌آباد غرب",
       "شاه آباد غرب",
       "Eslāmābād-e Gharb",
@@ -854,7 +1049,29 @@ export const iranCities: GeoItem[] = [
       "اسلام آباد غرب"
     ],
     "latitude": 34.1089,
-    "longitude": 46.52988
+    "longitude": 46.52988,
+    "provinceName": "کرمانشاه"
+  },
+  {
+    "id": "ir-admin-1240006002750",
+    "name": "اسلام اباد",
+    "aliases": [
+      "اسلام اباد"
+    ],
+    "latitude": 39.648235,
+    "longitude": 47.917365,
+    "provinceName": "اردبیل"
+  },
+  {
+    "id": "wiki-33b66ed64f80",
+    "name": "اسلام شهر آق گل",
+    "aliases": [
+      "اسلام شهر آق گل",
+      "اسلام‌شهر آق‌گل"
+    ],
+    "latitude": 34.55666667,
+    "longitude": 48.98805556,
+    "provinceName": "همدان"
   },
   {
     "id": "ir-449504",
@@ -864,16 +1081,8 @@ export const iranCities: GeoItem[] = [
       "Eslamshahr"
     ],
     "latitude": 35.55222,
-    "longitude": 51.23504
-  },
-  {
-    "id": "wiki-33b66ed64f80",
-    "name": "اسلام‌شهر آق‌گل",
-    "aliases": [
-      "اسلام‌شهر آق‌گل"
-    ],
-    "latitude": 34.55666667,
-    "longitude": 48.98805556
+    "longitude": 51.23504,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-1f3fb3390f3d",
@@ -882,18 +1091,31 @@ export const iranCities: GeoItem[] = [
       "اسلامیه",
       "اسلامیه (فردوس)"
     ],
-    "latitude": 34.04555556,
-    "longitude": 58.22027778
+    "latitude": 34.0449,
+    "longitude": 58.2196,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "wiki-62ea93135447",
-    "name": "اسماعیل‌آباد",
+    "name": "اسماعیل آباد",
     "aliases": [
+      "اسماعیل آباد",
       "اسماعیل‌آباد",
       "اسماعیل‌آباد (خاش)"
     ],
-    "latitude": 28.30833333,
-    "longitude": 61.13722222
+    "latitude": 28.3065,
+    "longitude": 61.13889,
+    "provinceName": "سیستان و بلوچستان"
+  },
+  {
+    "id": "ir-admin-10700021002708",
+    "name": "اسیر",
+    "aliases": [
+      "اسیر"
+    ],
+    "latitude": 27.72355,
+    "longitude": 52.6653,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-418593",
@@ -904,7 +1126,8 @@ export const iranCities: GeoItem[] = [
       "ایمان شهر"
     ],
     "latitude": 32.47352,
-    "longitude": 51.47704
+    "longitude": 51.47704,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-87cb5c6c646d",
@@ -912,8 +1135,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "اشترینان"
     ],
-    "latitude": 34.01666667,
-    "longitude": 48.64277778
+    "latitude": 33.98306,
+    "longitude": 48.6425,
+    "provinceName": "لرستان"
   },
   {
     "id": "ir-135205",
@@ -924,7 +1148,8 @@ export const iranCities: GeoItem[] = [
       "Eshtehard"
     ],
     "latitude": 35.7255,
-    "longitude": 50.3662
+    "longitude": 50.3662,
+    "provinceName": "البرز"
   },
   {
     "id": "ir-66250",
@@ -937,7 +1162,8 @@ export const iranCities: GeoItem[] = [
       "اسکیزار"
     ],
     "latitude": 31.99679,
-    "longitude": 54.20852
+    "longitude": 54.20852,
+    "provinceName": "یزد"
   },
   {
     "id": "wiki-88085eaa28c5",
@@ -945,8 +1171,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "اشکنان"
     ],
-    "latitude": 27.22916667,
-    "longitude": 53.60805556
+    "latitude": 27.2276,
+    "longitude": 53.606,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-121795",
@@ -957,7 +1184,8 @@ export const iranCities: GeoItem[] = [
       "Oshnaviyeh"
     ],
     "latitude": 37.0397,
-    "longitude": 45.0983
+    "longitude": 45.0983,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-dee23ad60dbc",
@@ -966,8 +1194,9 @@ export const iranCities: GeoItem[] = [
       "اصغرآباد",
       "اصغرآباد (خمینی‌شهر)"
     ],
-    "latitude": 32.6525,
-    "longitude": 51.48027778
+    "latitude": 32.65236,
+    "longitude": 51.48042,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-418863",
@@ -981,7 +1210,8 @@ export const iranCities: GeoItem[] = [
       "ایصفاهان"
     ],
     "latitude": 32.65246,
-    "longitude": 51.67462
+    "longitude": 51.67462,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-90d115f8544e",
@@ -989,8 +1219,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "اصلاندوز"
     ],
-    "latitude": 39.443889,
-    "longitude": 47.405556
+    "latitude": 39.4439,
+    "longitude": 47.4056,
+    "provinceName": "اردبیل"
+  },
+  {
+    "id": "ir-admin-10100010002385",
+    "name": "اطاقور",
+    "aliases": [
+      "اطاقور"
+    ],
+    "latitude": 37.11,
+    "longitude": 50.1145,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-cf6cacb0765b",
@@ -998,8 +1239,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "افزر"
     ],
-    "latitude": 28.34666667,
-    "longitude": 52.96638889
+    "latitude": 28.34682,
+    "longitude": 52.96679,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-ba3d024dedd8",
@@ -1007,8 +1249,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "افوس"
     ],
-    "latitude": 33.02305556,
-    "longitude": 50.0925
+    "latitude": 33.0241,
+    "longitude": 50.093,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-114106",
@@ -1020,7 +1263,8 @@ export const iranCities: GeoItem[] = [
       "سلطان آباد اقبالیه"
     ],
     "latitude": 36.23081,
-    "longitude": 49.92499
+    "longitude": 49.92499,
+    "provinceName": "قزوین"
   },
   {
     "id": "ir-135355",
@@ -1031,7 +1275,8 @@ export const iranCities: GeoItem[] = [
       "Eqlid"
     ],
     "latitude": 30.89885,
-    "longitude": 52.69701
+    "longitude": 52.69701,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-c978b5a0e8ac",
@@ -1041,7 +1286,18 @@ export const iranCities: GeoItem[] = [
       "اکبرآباد (کوار)"
     ],
     "latitude": 29.24638889,
-    "longitude": 52.77916667
+    "longitude": 52.77916667,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-1020007001006",
+    "name": "اکند",
+    "aliases": [
+      "اکند"
+    ],
+    "latitude": 36.75,
+    "longitude": 53.1,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-144269",
@@ -1051,7 +1307,28 @@ export const iranCities: GeoItem[] = [
       "Aleshtar"
     ],
     "latitude": 33.86419,
-    "longitude": 48.26258
+    "longitude": 48.26258,
+    "provinceName": "لرستان"
+  },
+  {
+    "id": "ir-admin-1270007001071",
+    "name": "القجر",
+    "aliases": [
+      "القجر"
+    ],
+    "latitude": 37.21001,
+    "longitude": 55.34463,
+    "provinceName": "گلستان"
+  },
+  {
+    "id": "ir-admin-1240004002948",
+    "name": "النی",
+    "aliases": [
+      "النی"
+    ],
+    "latitude": 38.43944444,
+    "longitude": 47.72777778,
+    "provinceName": "اردبیل"
   },
   {
     "id": "wiki-1b73717a1c4a",
@@ -1060,8 +1337,9 @@ export const iranCities: GeoItem[] = [
       "الوان",
       "الوان (کرخه)"
     ],
-    "latitude": 32.11138889,
-    "longitude": 48.46
+    "latitude": 32.11171,
+    "longitude": 48.45877,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-10570",
@@ -1073,7 +1351,8 @@ export const iranCities: GeoItem[] = [
       "الوند (قزوین)"
     ],
     "latitude": 36.1893,
-    "longitude": 50.0643
+    "longitude": 50.0643,
+    "provinceName": "قزوین"
   },
   {
     "id": "wiki-60802c5ac384",
@@ -1082,7 +1361,8 @@ export const iranCities: GeoItem[] = [
       "الهایی"
     ],
     "latitude": 31.65388889,
-    "longitude": 48.59444444
+    "longitude": 48.59444444,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-143921",
@@ -1093,7 +1373,29 @@ export const iranCities: GeoItem[] = [
       "Aligudarz"
     ],
     "latitude": 33.404,
-    "longitude": 49.69179
+    "longitude": 49.69179,
+    "provinceName": "لرستان"
+  },
+  {
+    "id": "ir-admin-1180008002370",
+    "name": "امام حسن",
+    "aliases": [
+      "امام حسن"
+    ],
+    "latitude": 29.84263,
+    "longitude": 50.26307,
+    "provinceName": "بوشهر"
+  },
+  {
+    "id": "wiki-c321825197ba",
+    "name": "امام شهر",
+    "aliases": [
+      "امام شهر",
+      "امام‌شهر"
+    ],
+    "latitude": 28.4475,
+    "longitude": 53.15277778,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-794cd42dbc03",
@@ -1102,17 +1404,9 @@ export const iranCities: GeoItem[] = [
       "امامزاده عبدالله",
       "شهر امامزاده عبدالله (آمل)"
     ],
-    "latitude": 36.40611111,
-    "longitude": 52.30861111
-  },
-  {
-    "id": "wiki-c321825197ba",
-    "name": "امام‌شهر",
-    "aliases": [
-      "امام‌شهر"
-    ],
-    "latitude": 28.4475,
-    "longitude": 53.15277778
+    "latitude": 36.4061,
+    "longitude": 52.30892,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-143539",
@@ -1122,7 +1416,8 @@ export const iranCities: GeoItem[] = [
       "Amlash"
     ],
     "latitude": 37.0966,
-    "longitude": 50.18709
+    "longitude": 50.18709,
+    "provinceName": "گیلان"
   },
   {
     "id": "ir-121861",
@@ -1134,18 +1429,8 @@ export const iranCities: GeoItem[] = [
       "امیدیه شرکت نفت"
     ],
     "latitude": 30.76277,
-    "longitude": 49.70226
-  },
-  {
-    "id": "ir-143561",
-    "name": "امیر کلا",
-    "aliases": [
-      "امیر کلا",
-      "Amīr Kolā",
-      "Amir Kola"
-    ],
-    "latitude": 36.59673,
-    "longitude": 52.6658
+    "longitude": 49.70226,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-84dd46e087ac",
@@ -1154,7 +1439,8 @@ export const iranCities: GeoItem[] = [
       "امیرکلا"
     ],
     "latitude": 36.59666667,
-    "longitude": 52.66583333
+    "longitude": 52.66583333,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-26069e791935",
@@ -1163,8 +1449,19 @@ export const iranCities: GeoItem[] = [
       "امیریه",
       "امیریه (دامغان)"
     ],
-    "latitude": 36.02777778,
-    "longitude": 54.14
+    "latitude": 36.02784,
+    "longitude": 54.13996,
+    "provinceName": "سمنان"
+  },
+  {
+    "id": "ir-admin-10800020002318",
+    "name": "امین شهر",
+    "aliases": [
+      "امین شهر"
+    ],
+    "latitude": 30.842,
+    "longitude": 55.3413,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-f6a969d0c69a",
@@ -1173,7 +1470,8 @@ export const iranCities: GeoItem[] = [
       "انابد"
     ],
     "latitude": 35.25194444,
-    "longitude": 57.81222222
+    "longitude": 57.81222222,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-143499",
@@ -1184,7 +1482,18 @@ export const iranCities: GeoItem[] = [
       "Anar"
     ],
     "latitude": 30.87066,
-    "longitude": 55.27025
+    "longitude": 55.27025,
+    "provinceName": "کرمان"
+  },
+  {
+    "id": "ir-admin-1180009002087",
+    "name": "انارستان",
+    "aliases": [
+      "انارستان"
+    ],
+    "latitude": 28.0322,
+    "longitude": 52.065,
+    "provinceName": "بوشهر"
   },
   {
     "id": "wiki-2a3cdc8bc750",
@@ -1192,8 +1501,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "انارک"
     ],
-    "latitude": 33.31083333,
-    "longitude": 53.69944444
+    "latitude": 33.3104,
+    "longitude": 53.6981,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-1270008002509",
+    "name": "انبار آلوم",
+    "aliases": [
+      "انبار آلوم"
+    ],
+    "latitude": 37.1331,
+    "longitude": 54.61968,
+    "provinceName": "گلستان"
   },
   {
     "id": "wiki-5e1d987afdea",
@@ -1201,8 +1521,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "اندوهجرد"
     ],
-    "latitude": 30.23194444,
-    "longitude": 57.75361111
+    "latitude": 30.2315,
+    "longitude": 57.7514,
+    "provinceName": "کرمان"
   },
   {
     "id": "ir-10865375",
@@ -1214,8 +1535,9 @@ export const iranCities: GeoItem[] = [
       "اندیشه شمالی",
       "کشت اجباری"
     ],
-    "latitude": 35.74708,
-    "longitude": 51.27739
+    "latitude": 35.7052,
+    "longitude": 51.0296,
+    "provinceName": "تهران"
   },
   {
     "id": "ir-143420",
@@ -1226,17 +1548,18 @@ export const iranCities: GeoItem[] = [
       "Andimeshk"
     ],
     "latitude": 32.4615,
-    "longitude": 48.35368
+    "longitude": 48.35368,
+    "provinceName": "خوزستان"
   },
   {
-    "id": "wiki-10bf53c4bcd7",
-    "name": "انگوت",
+    "id": "ir-admin-1120009002752",
+    "name": "اورامان تخت",
     "aliases": [
-      "انگوت",
-      "انگوت (اردبیل)"
+      "اورامان تخت"
     ],
-    "latitude": 39.04416944,
-    "longitude": 47.74528056
+    "latitude": 35.2526,
+    "longitude": 46.2624,
+    "provinceName": "کردستان"
   },
   {
     "id": "ir-135053",
@@ -1246,7 +1569,8 @@ export const iranCities: GeoItem[] = [
       "Evaz"
     ],
     "latitude": 27.7622,
-    "longitude": 54.00417
+    "longitude": 54.00417,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-77ec7b8c034b",
@@ -1256,7 +1580,8 @@ export const iranCities: GeoItem[] = [
       "اولتان (پارس‌آباد)"
     ],
     "latitude": 39.60666667,
-    "longitude": 47.77027778
+    "longitude": 47.77027778,
+    "provinceName": "اردبیل"
   },
   {
     "id": "ir-144616",
@@ -1268,7 +1593,8 @@ export const iranCities: GeoItem[] = [
       "اہر"
     ],
     "latitude": 38.4774,
-    "longitude": 47.0699
+    "longitude": 47.0699,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-144484",
@@ -1278,7 +1604,8 @@ export const iranCities: GeoItem[] = [
       "Ahram"
     ],
     "latitude": 28.8826,
-    "longitude": 51.2746
+    "longitude": 51.2746,
+    "provinceName": "بوشهر"
   },
   {
     "id": "wiki-c92985cea346",
@@ -1287,8 +1614,9 @@ export const iranCities: GeoItem[] = [
       "اهل",
       "اهل (لامرد)"
     ],
-    "latitude": 27.21121139,
-    "longitude": 53.65883839
+    "latitude": 27.2112,
+    "longitude": 53.6588,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-144448",
@@ -1301,7 +1629,8 @@ export const iranCities: GeoItem[] = [
       "اہواز"
     ],
     "latitude": 31.31901,
-    "longitude": 48.6842
+    "longitude": 48.6842,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-784dbfd99775",
@@ -1310,7 +1639,8 @@ export const iranCities: GeoItem[] = [
       "ایج"
     ],
     "latitude": 29.02138889,
-    "longitude": 54.24583333
+    "longitude": 54.24583333,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-130697",
@@ -1321,7 +1651,8 @@ export const iranCities: GeoItem[] = [
       "Izeh"
     ],
     "latitude": 31.83027,
-    "longitude": 49.86756
+    "longitude": 49.86756,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-1160939",
@@ -1332,16 +1663,8 @@ export const iranCities: GeoItem[] = [
       "ایرانشهر (سیستان و بلوچستان)"
     ],
     "latitude": 27.20245,
-    "longitude": 60.68476
-  },
-  {
-    "id": "wiki-a186f0ae4afa",
-    "name": "ایردموسی",
-    "aliases": [
-      "ایردموسی"
-    ],
-    "latitude": 38.20028056,
-    "longitude": 48.13306111
+    "longitude": 60.68476,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-bc8f7708e4ac",
@@ -1349,8 +1672,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "ایزدخواست"
     ],
-    "latitude": 31.51583333,
-    "longitude": 52.12361111
+    "latitude": 31.5158,
+    "longitude": 52.1248,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-50744f9a8a92",
@@ -1359,7 +1683,8 @@ export const iranCities: GeoItem[] = [
       "ایزدشهر"
     ],
     "latitude": 36.59277778,
-    "longitude": 52.11361111
+    "longitude": 52.11361111,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-130802",
@@ -1372,7 +1697,8 @@ export const iranCities: GeoItem[] = [
       "یلام"
     ],
     "latitude": 33.6374,
-    "longitude": 46.4227
+    "longitude": 46.4227,
+    "provinceName": "ایلام"
   },
   {
     "id": "ir-6686961",
@@ -1382,8 +1708,19 @@ export const iranCities: GeoItem[] = [
       "Īlkhchī",
       "Ilkhchi"
     ],
-    "latitude": 37.9373,
-    "longitude": 45.979
+    "latitude": 37.9389,
+    "longitude": 45.98,
+    "provinceName": "آذربایجان شرقی"
+  },
+  {
+    "id": "ir-admin-1270006002496",
+    "name": "اینچه برون",
+    "aliases": [
+      "اینچه برون"
+    ],
+    "latitude": 37.45423,
+    "longitude": 54.7194,
+    "provinceName": "گلستان"
   },
   {
     "id": "ir-129929",
@@ -1397,7 +1734,8 @@ export const iranCities: GeoItem[] = [
       "جوی زر"
     ],
     "latitude": 33.8272,
-    "longitude": 46.3097
+    "longitude": 46.3097,
+    "provinceName": "ایلام"
   },
   {
     "id": "wiki-900fe6aed4ca",
@@ -1405,8 +1743,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "ایوانکی"
     ],
-    "latitude": 35.34333333,
-    "longitude": 52.0675
+    "latitude": 35.3442,
+    "longitude": 52.0699,
+    "provinceName": "سمنان"
   },
   {
     "id": "wiki-eb617b1e047a",
@@ -1415,7 +1754,8 @@ export const iranCities: GeoItem[] = [
       "ایواوغلی"
     ],
     "latitude": 38.71444444,
-    "longitude": 45.20555556
+    "longitude": 45.20555556,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-932f707da583",
@@ -1424,19 +1764,29 @@ export const iranCities: GeoItem[] = [
       "ایور",
       "ایور (گرمه)"
     ],
-    "latitude": 36.96969444,
-    "longitude": 56.15811111
+    "latitude": 36.9697,
+    "longitude": 56.2592,
+    "provinceName": "خراسان شمالی"
   },
   {
-    "id": "ir-142453",
-    "name": "بابا حیدر",
+    "id": "ir-admin-1140003002124",
+    "name": "بآباحیدر",
     "aliases": [
-      "بابا حیدر",
-      "Bābā Ḩeydar",
-      "Baba Heydar"
+      "بآباحیدر"
     ],
     "latitude": 32.32932,
-    "longitude": 50.46805
+    "longitude": 50.46805,
+    "provinceName": "چهارمحال و بختیاری"
+  },
+  {
+    "id": "ir-admin-10700034002234",
+    "name": "باب انار",
+    "aliases": [
+      "باب انار"
+    ],
+    "latitude": 28.9752,
+    "longitude": 53.21667,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-2bfd2fe91e38",
@@ -1444,8 +1794,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "بابارشانی"
     ],
-    "latitude": 35.67944444,
-    "longitude": 47.79861111
+    "latitude": 35.67941,
+    "longitude": 47.79832,
+    "provinceName": "کردستان"
   },
   {
     "id": "wiki-05bf68ff4ab7",
@@ -1453,8 +1804,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "بابامنیر"
     ],
-    "latitude": 30.1,
-    "longitude": 51.18333333
+    "latitude": 30.07194,
+    "longitude": 51.20614,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-1020001002875",
+    "name": "بابکان",
+    "aliases": [
+      "بابکان"
+    ],
+    "latitude": 36.45631,
+    "longitude": 52.45438,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-142363",
@@ -1465,7 +1827,8 @@ export const iranCities: GeoItem[] = [
       "Babol"
     ],
     "latitude": 36.55102,
-    "longitude": 52.6786
+    "longitude": 52.6786,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-142358",
@@ -1476,7 +1839,8 @@ export const iranCities: GeoItem[] = [
       "Babolsar"
     ],
     "latitude": 36.69929,
-    "longitude": 52.65011
+    "longitude": 52.65011,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-5d5eae33df2c",
@@ -1484,8 +1848,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "باجگیران"
     ],
-    "latitude": 37.62166667,
-    "longitude": 58.41805556
+    "latitude": 37.62164,
+    "longitude": 58.41817,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-b3c17e079025",
@@ -1493,28 +1858,22 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "باخرز"
     ],
-    "latitude": 34.8375,
-    "longitude": 60.30222222
+    "latitude": 35.09861,
+    "longitude": 60.15885,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-142350",
-    "name": "باد رود",
+    "name": "بادرود",
     "aliases": [
+      "بادرود",
       "باد رود",
       "Bād Rūd",
       "Bad Rud"
     ],
     "latitude": 33.6908,
-    "longitude": 52.0085
-  },
-  {
-    "id": "wiki-038230762703",
-    "name": "بادرود",
-    "aliases": [
-      "بادرود"
-    ],
-    "latitude": 33.69083333,
-    "longitude": 52.00861111
+    "longitude": 52.0085,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-8f383e03e001",
@@ -1523,7 +1882,8 @@ export const iranCities: GeoItem[] = [
       "بادوله"
     ],
     "latitude": 28.39888889,
-    "longitude": 51.5
+    "longitude": 51.5,
+    "provinceName": "بوشهر"
   },
   {
     "id": "wiki-759c1001ef75",
@@ -1532,8 +1892,9 @@ export const iranCities: GeoItem[] = [
       "بار",
       "بار (نیشابور)"
     ],
-    "latitude": 36.49194444,
-    "longitude": 58.71666667
+    "latitude": 36.4897,
+    "longitude": 58.7162,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-7a606aca0488",
@@ -1541,8 +1902,39 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "باروق"
     ],
-    "latitude": 36.95833333,
-    "longitude": 46.325
+    "latitude": 36.9583,
+    "longitude": 46.3249,
+    "provinceName": "آذربایجان غربی"
+  },
+  {
+    "id": "ir-admin-10100016002510",
+    "name": "بازار جمعه",
+    "aliases": [
+      "بازار جمعه"
+    ],
+    "latitude": 37.3612,
+    "longitude": 49.1312,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-1040006002231",
+    "name": "بازرگان",
+    "aliases": [
+      "بازرگان"
+    ],
+    "latitude": 39.3887,
+    "longitude": 44.3877,
+    "provinceName": "آذربایجان غربی"
+  },
+  {
+    "id": "ir-admin-1140006002841",
+    "name": "بازفت",
+    "aliases": [
+      "بازفت"
+    ],
+    "latitude": 32.467229,
+    "longitude": 50.122261,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "ir-141111",
@@ -1553,7 +1945,8 @@ export const iranCities: GeoItem[] = [
       "Basmenj"
     ],
     "latitude": 37.9958,
-    "longitude": 46.4748
+    "longitude": 46.4748,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-fec12b774cb8",
@@ -1561,8 +1954,20 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "باشت"
     ],
-    "latitude": 30.36111111,
-    "longitude": 51.15722222
+    "latitude": 30.361,
+    "longitude": 51.15735,
+    "provinceName": "کهگیلویه و بویراحمد"
+  },
+  {
+    "id": "wiki-e63f7f02c5ca",
+    "name": "باغ بهادران",
+    "aliases": [
+      "باغ بهادران",
+      "باغ‌بهادران"
+    ],
+    "latitude": 32.3762,
+    "longitude": 51.189,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-705d4cebfcbe",
@@ -1571,18 +1976,8 @@ export const iranCities: GeoItem[] = [
       "باغ صفا"
     ],
     "latitude": 30.26666667,
-    "longitude": 53.55
-  },
-  {
-    "id": "ir-142112",
-    "name": "باغ معروف",
-    "aliases": [
-      "باغ معروف",
-      "Bāgh-e Ma‘rūf",
-      "Bagh-e Ma'ruf"
-    ],
-    "latitude": 38.0427,
-    "longitude": 46.1069
+    "longitude": 53.55,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-142114",
@@ -1593,16 +1988,8 @@ export const iranCities: GeoItem[] = [
       "Bagh-e Malek"
     ],
     "latitude": 31.52398,
-    "longitude": 49.88558
-  },
-  {
-    "id": "wiki-e63f7f02c5ca",
-    "name": "باغ‌بهادران",
-    "aliases": [
-      "باغ‌بهادران"
-    ],
-    "latitude": 32.37722222,
-    "longitude": 51.18805556
+    "longitude": 49.88558,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-13562246",
@@ -1614,7 +2001,18 @@ export const iranCities: GeoItem[] = [
       "باغستان (فردوس)"
     ],
     "latitude": 35.64706,
-    "longitude": 51.13378
+    "longitude": 51.13378,
+    "provinceName": "تهران"
+  },
+  {
+    "id": "ir-admin-1290007001002",
+    "name": "باغستان",
+    "aliases": [
+      "باغستان"
+    ],
+    "latitude": 34.018533,
+    "longitude": 58.172187,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "wiki-b65c42be8542",
@@ -1623,7 +2021,8 @@ export const iranCities: GeoItem[] = [
       "باغشاد"
     ],
     "latitude": 32.382807,
-    "longitude": 51.231776
+    "longitude": 51.231776,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-84923bd79956",
@@ -1631,8 +2030,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "باغین"
     ],
-    "latitude": 30.18111111,
-    "longitude": 56.80194444
+    "latitude": 30.1871,
+    "longitude": 56.8177,
+    "provinceName": "کرمان"
   },
   {
     "id": "ir-142247",
@@ -1643,7 +2043,8 @@ export const iranCities: GeoItem[] = [
       "Baft"
     ],
     "latitude": 29.2331,
-    "longitude": 56.6022
+    "longitude": 56.6022,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-17535e0173ae",
@@ -1651,8 +2052,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "بافران"
     ],
-    "latitude": 32.81666667,
-    "longitude": 53.13333333
+    "latitude": 32.8398,
+    "longitude": 53.141,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-142255",
@@ -1663,7 +2065,8 @@ export const iranCities: GeoItem[] = [
       "Bafq"
     ],
     "latitude": 31.6035,
-    "longitude": 55.40249
+    "longitude": 55.40249,
+    "provinceName": "یزد"
   },
   {
     "id": "ir-400809",
@@ -1676,18 +2079,46 @@ export const iranCities: GeoItem[] = [
       "باقر آباد",
       "باقراباد باقرف"
     ],
-    "latitude": 35.53164,
-    "longitude": 51.4048
+    "latitude": 35.5338,
+    "longitude": 51.4054,
+    "provinceName": "تهران"
   },
   {
-    "id": "wiki-cafe1cb03fb4",
-    "name": "بالاشهر",
+    "id": "ir-120351",
+    "name": "بالا شهر",
     "aliases": [
-      "بالاشهر",
-      "بالاشهر (رودان)"
+      "بالا شهر",
+      "روگن",
+      "Rūdān",
+      "Rudan",
+      "بالا شهر ده بارز",
+      "دهبارز",
+      "رودان",
+      "قلعۀ ده بارز"
     ],
-    "latitude": 27.20777778,
-    "longitude": 57.34916667
+    "latitude": 27.44194,
+    "longitude": 57.19198,
+    "provinceName": "هرمزگان"
+  },
+  {
+    "id": "ir-admin-10700010002423",
+    "name": "بالاده",
+    "aliases": [
+      "بالاده"
+    ],
+    "latitude": 29.28685,
+    "longitude": 51.94253,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-1050003002761",
+    "name": "بانوره",
+    "aliases": [
+      "بانوره"
+    ],
+    "latitude": 34.97111111,
+    "longitude": 46.35861111,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "ir-141584",
@@ -1699,16 +2130,8 @@ export const iranCities: GeoItem[] = [
       "Baneh"
     ],
     "latitude": 35.9975,
-    "longitude": 45.8853
-  },
-  {
-    "id": "wiki-e8cbae4676fa",
-    "name": "بانه‌وره",
-    "aliases": [
-      "بانه‌وره"
-    ],
-    "latitude": 34.97111111,
-    "longitude": 46.35861111
+    "longitude": 45.8853,
+    "provinceName": "کردستان"
   },
   {
     "id": "wiki-cc0dfbce53c2",
@@ -1716,17 +2139,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "باوج"
     ],
-    "latitude": 31.14611111,
-    "longitude": 49.91444444
+    "latitude": 31.14718,
+    "longitude": 49.91349,
+    "provinceName": "خوزستان"
   },
   {
-    "id": "wiki-fb382101e696",
-    "name": "بایگ",
+    "id": "ir-admin-1090005002341",
+    "name": "بایک",
     "aliases": [
-      "بایگ"
+      "بایک"
     ],
-    "latitude": 35.37583333,
-    "longitude": 59.03777778
+    "latitude": 35.3756,
+    "longitude": 59.0389,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-49ffb8dfd31b",
@@ -1735,7 +2160,8 @@ export const iranCities: GeoItem[] = [
       "باینگان"
     ],
     "latitude": 34.98138889,
-    "longitude": 46.27083333
+    "longitude": 46.27083333,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "wiki-ecbfdf640e59",
@@ -1743,8 +2169,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "بجستان"
     ],
-    "latitude": 34.51638889,
-    "longitude": 58.18444444
+    "latitude": 34.51639,
+    "longitude": 58.1845,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-140380",
@@ -1755,7 +2182,8 @@ export const iranCities: GeoItem[] = [
       "Bojnurd"
     ],
     "latitude": 37.47473,
-    "longitude": 57.32903
+    "longitude": 57.32903,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "wiki-f8ff54782f6b",
@@ -1763,8 +2191,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "بخ"
     ],
-    "latitude": 31.30744039,
-    "longitude": 54.08577189
+    "latitude": 31.30867,
+    "longitude": 54.084,
+    "provinceName": "یزد"
   },
   {
     "id": "wiki-2a80b9f11e02",
@@ -1773,7 +2202,8 @@ export const iranCities: GeoItem[] = [
       "بخشایش"
     ],
     "latitude": 38.1325,
-    "longitude": 46.94611111
+    "longitude": 46.94611111,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-6f0c65682ffe",
@@ -1781,8 +2211,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "بدره"
     ],
-    "latitude": 33.30666667,
-    "longitude": 47.03722222
+    "latitude": 33.30573,
+    "longitude": 47.03708,
+    "provinceName": "ایلام"
   },
   {
     "id": "ir-140097",
@@ -1794,7 +2225,8 @@ export const iranCities: GeoItem[] = [
       "Borazjan"
     ],
     "latitude": 29.2699,
-    "longitude": 51.2188
+    "longitude": 51.2188,
+    "provinceName": "بوشهر"
   },
   {
     "id": "wiki-3d4139684569",
@@ -1802,8 +2234,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "بران علیا"
     ],
-    "latitude": 39.3175,
-    "longitude": 47.51916667
+    "latitude": 39.3178,
+    "longitude": 47.5193,
+    "provinceName": "اردبیل"
   },
   {
     "id": "wiki-1de13dd3a4d2",
@@ -1813,7 +2246,8 @@ export const iranCities: GeoItem[] = [
       "برخوردار (دلفان)"
     ],
     "latitude": 34.04080556,
-    "longitude": 48.17430556
+    "longitude": 48.17430556,
+    "provinceName": "لرستان"
   },
   {
     "id": "wiki-62a3c617af17",
@@ -1821,8 +2255,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "بردخون"
     ],
-    "latitude": 28.06338889,
-    "longitude": 51.47741667
+    "latitude": 28.0632,
+    "longitude": 51.4778,
+    "provinceName": "بوشهر"
   },
   {
     "id": "wiki-ef6a69bb79d3",
@@ -1830,8 +2265,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "بردستان"
     ],
-    "latitude": 27.87333333,
-    "longitude": 51.96083333
+    "latitude": 27.87327,
+    "longitude": 51.96076,
+    "provinceName": "بوشهر"
   },
   {
     "id": "ir-141349",
@@ -1842,7 +2278,8 @@ export const iranCities: GeoItem[] = [
       "برداسکن"
     ],
     "latitude": 35.26218,
-    "longitude": 57.97075
+    "longitude": 57.97075,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-124647",
@@ -1853,7 +2290,18 @@ export const iranCities: GeoItem[] = [
       "Bardsir"
     ],
     "latitude": 29.92266,
-    "longitude": 56.57433
+    "longitude": 56.57433,
+    "provinceName": "کرمان"
+  },
+  {
+    "id": "ir-admin-1120006002753",
+    "name": "برده رشه",
+    "aliases": [
+      "برده رشه"
+    ],
+    "latitude": 35.5946,
+    "longitude": 46.0914,
+    "provinceName": "کردستان"
   },
   {
     "id": "wiki-60db12cd79b1",
@@ -1862,7 +2310,8 @@ export const iranCities: GeoItem[] = [
       "برزک"
     ],
     "latitude": 33.78333056,
-    "longitude": 51.23333056
+    "longitude": 51.23333056,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-5c8c2ed0de6d",
@@ -1870,17 +2319,20 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "برزول"
     ],
-    "latitude": 34.21277778,
-    "longitude": 48.25888889
+    "latitude": 34.2128,
+    "longitude": 48.2601,
+    "provinceName": "همدان"
   },
   {
     "id": "wiki-7f855845692b",
-    "name": "برف‌انبار",
+    "name": "برف انبار",
     "aliases": [
+      "برف انبار",
       "برف‌انبار"
     ],
     "latitude": 32.97222222,
-    "longitude": 50.15166667
+    "longitude": 50.15166667,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-141407",
@@ -1891,7 +2343,8 @@ export const iranCities: GeoItem[] = [
       "Baravat"
     ],
     "latitude": 29.0663,
-    "longitude": 58.4046
+    "longitude": 58.4046,
+    "provinceName": "کرمان"
   },
   {
     "id": "ir-140044",
@@ -1903,7 +2356,8 @@ export const iranCities: GeoItem[] = [
       "بوروجیرد"
     ],
     "latitude": 33.8973,
-    "longitude": 48.7516
+    "longitude": 48.7516,
+    "provinceName": "لرستان"
   },
   {
     "id": "ir-140046",
@@ -1917,7 +2371,29 @@ export const iranCities: GeoItem[] = [
       "بروجان"
     ],
     "latitude": 31.96523,
-    "longitude": 51.2873
+    "longitude": 51.2873,
+    "provinceName": "چهارمحال و بختیاری"
+  },
+  {
+    "id": "ir-admin-1010006002383",
+    "name": "بره سر",
+    "aliases": [
+      "بره سر"
+    ],
+    "latitude": 36.7791,
+    "longitude": 49.752,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "wiki-a09d06b23c98",
+    "name": "بریس",
+    "aliases": [
+      "بریس",
+      "بندر بریس"
+    ],
+    "latitude": 25.13694444,
+    "longitude": 61.19083333,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-023cd8114c26",
@@ -1925,8 +2401,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "بزمان"
     ],
-    "latitude": 27.85638889,
-    "longitude": 60.18055556
+    "latitude": 27.85637,
+    "longitude": 60.18059,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-e7ec3f331616",
@@ -1935,7 +2412,8 @@ export const iranCities: GeoItem[] = [
       "بزنجان"
     ],
     "latitude": 29.24666667,
-    "longitude": 56.6975
+    "longitude": 56.6975,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-cc8e2ba7c324",
@@ -1944,20 +2422,32 @@ export const iranCities: GeoItem[] = [
       "بستان",
       "بستان (دشت آزادگان)"
     ],
-    "latitude": 31.72166667,
-    "longitude": 47.98666667
+    "latitude": 31.7171,
+    "longitude": 48.0005,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-23290",
-    "name": "بستان‌آباد",
+    "name": "بستان آباد",
     "aliases": [
-      "بستان‌آباد",
       "بستان آباد",
+      "بستان‌آباد",
       "Bostānābād",
       "Bostanabad"
     ],
     "latitude": 37.84633,
-    "longitude": 46.83542
+    "longitude": 46.83542,
+    "provinceName": "آذربایجان شرقی"
+  },
+  {
+    "id": "ir-admin-1220009001568",
+    "name": "بستک",
+    "aliases": [
+      "بستک"
+    ],
+    "latitude": 27.19908,
+    "longitude": 54.36676,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "wiki-4e62981e6c6b",
@@ -1965,8 +2455,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "بسطام"
     ],
-    "latitude": 36.485278,
-    "longitude": 54.999722
+    "latitude": 36.4828,
+    "longitude": 55.001,
+    "provinceName": "سمنان"
   },
   {
     "id": "ir-9480732",
@@ -1977,16 +2468,18 @@ export const iranCities: GeoItem[] = [
       "Boshruyeh"
     ],
     "latitude": 33.86845,
-    "longitude": 57.42885
+    "longitude": 57.42885,
+    "provinceName": "خراسان جنوبی"
   },
   {
-    "id": "wiki-af1a7499a72f",
-    "name": "بفروئیه",
+    "id": "ir-admin-1210006002024",
+    "name": "بفروییه",
     "aliases": [
-      "بفروئیه"
+      "بفروییه"
     ],
     "latitude": 32.276667,
-    "longitude": 53.994167
+    "longitude": 53.994167,
+    "provinceName": "یزد"
   },
   {
     "id": "wiki-550f2a875c50",
@@ -1995,8 +2488,9 @@ export const iranCities: GeoItem[] = [
       "بکتاش",
       "بکتاش (میاندوآب)"
     ],
-    "latitude": 37.07888889,
-    "longitude": 46.01416667
+    "latitude": 37.07721,
+    "longitude": 46.01423,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-d58247680e8c",
@@ -2005,16 +2499,19 @@ export const iranCities: GeoItem[] = [
       "بلاوه"
     ],
     "latitude": 33.66688889,
-    "longitude": 46.80319444
+    "longitude": 46.80319444,
+    "provinceName": "ایلام"
   },
   {
     "id": "wiki-7a7f3c4d289b",
-    "name": "بلبان‌آباد",
+    "name": "بلبان آباد",
     "aliases": [
+      "بلبان آباد",
       "بلبان‌آباد"
     ],
-    "latitude": 35.14055556,
-    "longitude": 47.32111111
+    "latitude": 35.14062,
+    "longitude": 47.32105,
+    "provinceName": "کردستان"
   },
   {
     "id": "ir-140346",
@@ -2025,7 +2522,8 @@ export const iranCities: GeoItem[] = [
       "Boldaji"
     ],
     "latitude": 31.93759,
-    "longitude": 51.05147
+    "longitude": 51.05147,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "wiki-c6af28cf81b5",
@@ -2033,8 +2531,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "بلده"
     ],
-    "latitude": 36.20194444,
-    "longitude": 51.81
+    "latitude": 36.2028,
+    "longitude": 51.8089,
+    "provinceName": "مازندران"
+  },
+  {
+    "id": "ir-admin-10700037001094",
+    "name": "بلغان",
+    "aliases": [
+      "بلغان"
+    ],
+    "latitude": 28.15184,
+    "longitude": 53.60287,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-2d12a866fff5",
@@ -2042,8 +2551,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "بلورد"
     ],
-    "latitude": 29.705,
-    "longitude": 56.08361111
+    "latitude": 29.4198,
+    "longitude": 56.0486,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-93a6b12dcd9d",
@@ -2053,7 +2563,8 @@ export const iranCities: GeoItem[] = [
       "بلوک (جیرفت)"
     ],
     "latitude": 28.23138889,
-    "longitude": 57.51277778
+    "longitude": 57.51277778,
+    "provinceName": "کرمان"
   },
   {
     "id": "ir-141736",
@@ -2063,7 +2574,8 @@ export const iranCities: GeoItem[] = [
       "Bam"
     ],
     "latitude": 29.106,
-    "longitude": 58.357
+    "longitude": 58.357,
+    "provinceName": "کرمان"
   },
   {
     "id": "ir-1161735",
@@ -2074,7 +2586,18 @@ export const iranCities: GeoItem[] = [
       "Bampur"
     ],
     "latitude": 27.19439,
-    "longitude": 60.45594
+    "longitude": 60.45594,
+    "provinceName": "سیستان و بلوچستان"
+  },
+  {
+    "id": "ir-admin-1140009001480",
+    "name": "بن",
+    "aliases": [
+      "بن"
+    ],
+    "latitude": 32.54037,
+    "longitude": 50.74515,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "ir-140889",
@@ -2085,7 +2608,8 @@ export const iranCities: GeoItem[] = [
       "Bonab"
     ],
     "latitude": 37.3404,
-    "longitude": 46.0561
+    "longitude": 46.0561,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-424288d2e0c3",
@@ -2094,7 +2618,8 @@ export const iranCities: GeoItem[] = [
       "بناب مرند"
     ],
     "latitude": 38.42833333,
-    "longitude": 45.90722222
+    "longitude": 45.90722222,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-98b34c667499",
@@ -2103,7 +2628,8 @@ export const iranCities: GeoItem[] = [
       "بنارویه"
     ],
     "latitude": 28.08388889,
-    "longitude": 54.04833333
+    "longitude": 54.04833333,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-2bff8fd69d3f",
@@ -2111,8 +2637,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "بنت"
     ],
-    "latitude": 26.30055556,
-    "longitude": 59.51555556
+    "latitude": 26.29317,
+    "longitude": 59.51825,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-3ec314222488",
@@ -2121,7 +2648,19 @@ export const iranCities: GeoItem[] = [
       "بنجار"
     ],
     "latitude": 31.04277778,
-    "longitude": 61.56833333
+    "longitude": 61.56833333,
+    "provinceName": "سیستان و بلوچستان"
+  },
+  {
+    "id": "wiki-ca1c4ec16b1b",
+    "name": "بند زرک",
+    "aliases": [
+      "بند زرک",
+      "بندزرک"
+    ],
+    "latitude": 27.0666,
+    "longitude": 56.9762,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "ir-8521444",
@@ -2132,142 +2671,36 @@ export const iranCities: GeoItem[] = [
       "Bandar-e Emam Khomeyni",
       "میناء الامام الخمینی"
     ],
-    "latitude": 30.43698,
-    "longitude": 49.10288
+    "latitude": 30.55232,
+    "longitude": 49.05221,
+    "provinceName": "خوزستان"
   },
   {
-    "id": "ir-141679",
-    "name": "بندر انزلی",
+    "id": "ir-130276",
+    "name": "بندر جاسک",
     "aliases": [
-      "بندر انزلی",
-      "Bandar-e Anzalī",
-      "Bandar-e Anzali"
+      "بندر جاسک",
+      "جاسک",
+      "Jask"
     ],
-    "latitude": 37.47318,
-    "longitude": 49.45785
+    "latitude": 25.64533,
+    "longitude": 57.77552,
+    "provinceName": "هرمزگان"
   },
   {
-    "id": "wiki-a09d06b23c98",
-    "name": "بندر بریس",
+    "id": "ir-141681",
+    "name": "بندر عباس",
     "aliases": [
-      "بندر بریس"
+      "بندر عباس",
+      "بندرعباس",
+      "Bandar Abbas",
+      "بندر عباسی",
+      "بەندەر عەباس",
+      "گمبرن"
     ],
-    "latitude": 25.13694444,
-    "longitude": 61.19083333
-  },
-  {
-    "id": "wiki-270122d7bea7",
-    "name": "بندر پل",
-    "aliases": [
-      "بندر پل"
-    ],
-    "latitude": 27.00992694,
-    "longitude": 55.74308389
-  },
-  {
-    "id": "wiki-d4d1fb0adca0",
-    "name": "بندر چارک",
-    "aliases": [
-      "بندر چارک"
-    ],
-    "latitude": 26.73055556,
-    "longitude": 54.27472222
-  },
-  {
-    "id": "ir-136280",
-    "name": "بندر دیر",
-    "aliases": [
-      "بندر دیر",
-      "دیر",
-      "Bandar-e Deyr",
-      "قلئه دیر"
-    ],
-    "latitude": 27.8399,
-    "longitude": 51.9378
-  },
-  {
-    "id": "ir-141676",
-    "name": "بندر دیلم",
-    "aliases": [
-      "بندر دیلم",
-      "Bandar-e Deylam"
-    ],
-    "latitude": 30.0542,
-    "longitude": 50.159
-  },
-  {
-    "id": "wiki-940230ed1aae",
-    "name": "بندر ریگ",
-    "aliases": [
-      "بندر ریگ"
-    ],
-    "latitude": 29.49137924,
-    "longitude": 50.62372165
-  },
-  {
-    "id": "wiki-d51fbe322e86",
-    "name": "بندر سیراف",
-    "aliases": [
-      "بندر سیراف"
-    ],
-    "latitude": 27.66583333,
-    "longitude": 52.34611111
-  },
-  {
-    "id": "ir-141653",
-    "name": "بندر شاه",
-    "aliases": [
-      "بندر شاه",
-      "Bandar-e Torkaman",
-      "بندر ترکمن"
-    ],
-    "latitude": 36.90124,
-    "longitude": 54.07195
-  },
-  {
-    "id": "ir-141666",
-    "name": "بندر کنگ",
-    "aliases": [
-      "بندر کنگ",
-      "کنگ",
-      "Bandar-e Kong",
-      "بندر گنگ"
-    ],
-    "latitude": 26.59775,
-    "longitude": 54.93694
-  },
-  {
-    "id": "ir-128847",
-    "name": "بندر کنگان",
-    "aliases": [
-      "بندر کنگان",
-      "کنگان",
-      "Bandar-e Kangān",
-      "Bandar-e Kangan"
-    ],
-    "latitude": 27.83434,
-    "longitude": 52.06306
-  },
-  {
-    "id": "ir-141673",
-    "name": "بندر گز",
-    "aliases": [
-      "بندر گز",
-      "Bandar-e Gaz"
-    ],
-    "latitude": 36.77409,
-    "longitude": 53.94798
-  },
-  {
-    "id": "ir-134217",
-    "name": "بندر گناوه",
-    "aliases": [
-      "بندر گناوه",
-      "Bandar-e Genāveh",
-      "Bandar-e Genaveh"
-    ],
-    "latitude": 29.5791,
-    "longitude": 50.517
+    "latitude": 27.1865,
+    "longitude": 56.2808,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "ir-141665",
@@ -2277,7 +2710,8 @@ export const iranCities: GeoItem[] = [
       "Bandar-e Lengeh"
     ],
     "latitude": 26.56207,
-    "longitude": 54.88382
+    "longitude": 54.88382,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "ir-141663",
@@ -2288,30 +2722,110 @@ export const iranCities: GeoItem[] = [
       "Bandar-e Mahshahr"
     ],
     "latitude": 30.55655,
-    "longitude": 49.18852
+    "longitude": 49.18852,
+    "provinceName": "خوزستان"
   },
   {
-    "id": "ir-141681",
-    "name": "بندرعباس",
+    "id": "ir-141679",
+    "name": "بندرانزلی",
     "aliases": [
-      "بندرعباس",
-      "Bandar Abbas",
-      "بندر عباس",
-      "بندر عباسی",
-      "بەندەر عەباس",
-      "گمبرن"
+      "بندرانزلی",
+      "بندر انزلی",
+      "Bandar-e Anzalī",
+      "Bandar-e Anzali"
     ],
-    "latitude": 27.1865,
-    "longitude": 56.2808
+    "latitude": 37.47318,
+    "longitude": 49.45785,
+    "provinceName": "گیلان"
   },
   {
-    "id": "wiki-ca1c4ec16b1b",
-    "name": "بندزرک",
+    "id": "ir-141653",
+    "name": "بندرترکمن",
     "aliases": [
-      "بندزرک"
+      "بندرترکمن",
+      "بندر شاه",
+      "Bandar-e Torkaman",
+      "بندر ترکمن"
     ],
-    "latitude": 27.06666667,
-    "longitude": 56.97611111
+    "latitude": 36.90124,
+    "longitude": 54.07195,
+    "provinceName": "گلستان"
+  },
+  {
+    "id": "ir-136280",
+    "name": "بندردیر",
+    "aliases": [
+      "بندردیر",
+      "بندر دیر",
+      "دیر",
+      "Bandar-e Deyr",
+      "قلئه دیر"
+    ],
+    "latitude": 27.8399,
+    "longitude": 51.9378,
+    "provinceName": "بوشهر"
+  },
+  {
+    "id": "ir-141676",
+    "name": "بندردیلم",
+    "aliases": [
+      "بندردیلم",
+      "بندر دیلم",
+      "Bandar-e Deylam"
+    ],
+    "latitude": 30.0542,
+    "longitude": 50.159,
+    "provinceName": "بوشهر"
+  },
+  {
+    "id": "wiki-940230ed1aae",
+    "name": "بندرریگ",
+    "aliases": [
+      "بندرریگ",
+      "بندر ریگ"
+    ],
+    "latitude": 29.49137924,
+    "longitude": 50.62372165,
+    "provinceName": "بوشهر"
+  },
+  {
+    "id": "ir-128847",
+    "name": "بندرکنگان",
+    "aliases": [
+      "بندرکنگان",
+      "بندر کنگان",
+      "کنگان",
+      "Bandar-e Kangān",
+      "Bandar-e Kangan"
+    ],
+    "latitude": 27.83434,
+    "longitude": 52.06306,
+    "provinceName": "بوشهر"
+  },
+  {
+    "id": "ir-141673",
+    "name": "بندرگز",
+    "aliases": [
+      "بندرگز",
+      "بندر گز",
+      "Bandar-e Gaz"
+    ],
+    "latitude": 36.77409,
+    "longitude": 53.94798,
+    "provinceName": "گلستان"
+  },
+  {
+    "id": "ir-134217",
+    "name": "بندرگناوه",
+    "aliases": [
+      "بندرگناوه",
+      "بندر گناوه",
+      "Bandar-e Genāveh",
+      "Bandar-e Genaveh"
+    ],
+    "latitude": 29.5791,
+    "longitude": 50.517,
+    "provinceName": "بوشهر"
   },
   {
     "id": "ir-141702",
@@ -2324,7 +2838,8 @@ export const iranCities: GeoItem[] = [
       "بنک (کنگان)"
     ],
     "latitude": 27.871,
-    "longitude": 52.0274
+    "longitude": 52.0274,
+    "provinceName": "بوشهر"
   },
   {
     "id": "ir-113723",
@@ -2335,25 +2850,8 @@ export const iranCities: GeoItem[] = [
       "سوریان"
     ],
     "latitude": 30.4551,
-    "longitude": 53.651
-  },
-  {
-    "id": "wiki-0df679e4fdb2",
-    "name": "بوئین میاندشت",
-    "aliases": [
-      "بوئین میاندشت"
-    ],
-    "latitude": 33.07361111,
-    "longitude": 50.16472222
-  },
-  {
-    "id": "wiki-7d26d84d404f",
-    "name": "بوئین‌زهرا",
-    "aliases": [
-      "بوئین‌زهرا"
-    ],
-    "latitude": 35.76694444,
-    "longitude": 50.05777778
+    "longitude": 53.651,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-85bdd7feb713",
@@ -2363,7 +2861,18 @@ export const iranCities: GeoItem[] = [
       "بوستان (باشت)"
     ],
     "latitude": 30.32527778,
-    "longitude": 51.20166667
+    "longitude": 51.20166667,
+    "provinceName": "کهگیلویه و بویراحمد"
+  },
+  {
+    "id": "ir-admin-1100008001049",
+    "name": "بوستان زر",
+    "aliases": [
+      "بوستان زر"
+    ],
+    "latitude": 32.65858,
+    "longitude": 51.59667,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-7d63cc520f5e",
@@ -2371,8 +2880,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "بوشکان"
     ],
-    "latitude": 28.83111111,
-    "longitude": 51.69972222
+    "latitude": 28.83121,
+    "longitude": 51.69962,
+    "provinceName": "بوشهر"
   },
   {
     "id": "ir-139817",
@@ -2383,7 +2893,8 @@ export const iranCities: GeoItem[] = [
       "بندر بوشهر"
     ],
     "latitude": 28.96887,
-    "longitude": 50.83657
+    "longitude": 50.83657,
+    "provinceName": "بوشهر"
   },
   {
     "id": "ir-139889",
@@ -2394,7 +2905,8 @@ export const iranCities: GeoItem[] = [
       "Bukan"
     ],
     "latitude": 36.521,
-    "longitude": 46.2089
+    "longitude": 46.2089,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "ir-139879",
@@ -2406,8 +2918,19 @@ export const iranCities: GeoItem[] = [
       "بوم هند",
       "بوم هن"
     ],
-    "latitude": 35.72972,
-    "longitude": 51.86884
+    "latitude": 35.7285,
+    "longitude": 51.8643,
+    "provinceName": "تهران"
+  },
+  {
+    "id": "ir-admin-1260001001537",
+    "name": "بویین زهرا",
+    "aliases": [
+      "بویین زهرا"
+    ],
+    "latitude": 35.7669,
+    "longitude": 50.0578,
+    "provinceName": "قزوین"
   },
   {
     "id": "wiki-5cd8ec019f39",
@@ -2416,7 +2939,28 @@ export const iranCities: GeoItem[] = [
       "بویین سفلی"
     ],
     "latitude": 35.93861111,
-    "longitude": 45.93611111
+    "longitude": 45.93611111,
+    "provinceName": "کردستان"
+  },
+  {
+    "id": "ir-admin-11000024001416",
+    "name": "بویین و میاندشت",
+    "aliases": [
+      "بویین و میاندشت"
+    ],
+    "latitude": 33.07612,
+    "longitude": 50.16432,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-12100011001553",
+    "name": "بهاباد",
+    "aliases": [
+      "بهاباد"
+    ],
+    "latitude": 31.87091,
+    "longitude": 56.02433,
+    "provinceName": "یزد"
   },
   {
     "id": "ir-142000",
@@ -2427,21 +2971,23 @@ export const iranCities: GeoItem[] = [
       "Bahar"
     ],
     "latitude": 34.9072,
-    "longitude": 48.4414
+    "longitude": 48.4414,
+    "provinceName": "همدان"
   },
   {
     "id": "ir-418512",
-    "name": "بهاران‌شهر",
+    "name": "بهاران شهر",
     "aliases": [
+      "بهاران شهر",
       "بهاران‌شهر",
       "سهلوان",
       "Bahārān Shahr",
       "Baharan Shahr",
-      "بهاران شهر",
       "محله سهلوان"
     ],
-    "latitude": 32.51216,
-    "longitude": 51.54243
+    "latitude": 32.5155,
+    "longitude": 51.5418,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-418943",
@@ -2454,7 +3000,18 @@ export const iranCities: GeoItem[] = [
       "بهارستان (جم)"
     ],
     "latitude": 32.48814,
-    "longitude": 51.77312
+    "longitude": 51.77312,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-1180009002933",
+    "name": "بهارستان",
+    "aliases": [
+      "بهارستان"
+    ],
+    "latitude": 27.840505,
+    "longitude": 52.3486965,
+    "provinceName": "بوشهر"
   },
   {
     "id": "ir-140951",
@@ -2465,7 +3022,8 @@ export const iranCities: GeoItem[] = [
       "Behbahan"
     ],
     "latitude": 30.5959,
-    "longitude": 50.2417
+    "longitude": 50.2417,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-53707a317269",
@@ -2474,7 +3032,8 @@ export const iranCities: GeoItem[] = [
       "بهرمان"
     ],
     "latitude": 30.89833333,
-    "longitude": 55.72138889
+    "longitude": 55.72138889,
+    "provinceName": "کرمان"
   },
   {
     "id": "ir-140918",
@@ -2485,7 +3044,18 @@ export const iranCities: GeoItem[] = [
       "Behshahr"
     ],
     "latitude": 36.69235,
-    "longitude": 53.55262
+    "longitude": 53.55262,
+    "provinceName": "مازندران"
+  },
+  {
+    "id": "ir-admin-1070001002198",
+    "name": "بهمن",
+    "aliases": [
+      "بهمن"
+    ],
+    "latitude": 31.1952,
+    "longitude": 52.4862,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-5d905822b5e9",
@@ -2493,8 +3063,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "بهنمیر"
     ],
-    "latitude": 36.66833333,
-    "longitude": 52.76166667
+    "latitude": 36.6703,
+    "longitude": 52.7621,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-fd70a7030fbb",
@@ -2502,8 +3073,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "بیارجمند"
     ],
-    "latitude": 36.08055556,
-    "longitude": 55.80972222
+    "latitude": 36.08056,
+    "longitude": 55.8097,
+    "provinceName": "سمنان"
   },
   {
     "id": "ir-140521",
@@ -2514,7 +3086,8 @@ export const iranCities: GeoItem[] = [
       "Bijar"
     ],
     "latitude": 35.8668,
-    "longitude": 47.60506
+    "longitude": 47.60506,
+    "provinceName": "کردستان"
   },
   {
     "id": "wiki-f8c37b6c3355",
@@ -2523,7 +3096,8 @@ export const iranCities: GeoItem[] = [
       "بیدخت"
     ],
     "latitude": 34.34722222,
-    "longitude": 58.75722222
+    "longitude": 58.75722222,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-57fcf076f414",
@@ -2531,8 +3105,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "بیدخون"
     ],
-    "latitude": 27.48,
-    "longitude": 52.66721944
+    "latitude": 27.47885,
+    "longitude": 52.66722,
+    "provinceName": "بوشهر"
   },
   {
     "id": "wiki-349de3de24de",
@@ -2541,7 +3116,8 @@ export const iranCities: GeoItem[] = [
       "بیدروبه"
     ],
     "latitude": 32.76111111,
-    "longitude": 48.2375
+    "longitude": 48.2375,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-6659958",
@@ -2552,8 +3128,19 @@ export const iranCities: GeoItem[] = [
       "Bidestan",
       "بیدستان (البرز)"
     ],
-    "latitude": 36.23097,
-    "longitude": 50.12362
+    "latitude": 36.23,
+    "longitude": 50.1234,
+    "provinceName": "قزوین"
+  },
+  {
+    "id": "ir-admin-10700036001090",
+    "name": "بیدشهر",
+    "aliases": [
+      "بیدشهر"
+    ],
+    "latitude": 27.98329,
+    "longitude": 53.74032,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-bd93bdb725b5",
@@ -2562,8 +3149,19 @@ export const iranCities: GeoItem[] = [
       "بیده",
       "بیده (سمیرم)"
     ],
-    "latitude": 30.9,
-    "longitude": 51.63333333
+    "latitude": 30.9472,
+    "longitude": 51.65215,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-1150003002475",
+    "name": "بیران شهر",
+    "aliases": [
+      "بیران شهر"
+    ],
+    "latitude": 33.6485949,
+    "longitude": 48.5597292,
+    "provinceName": "لرستان"
   },
   {
     "id": "ir-140463",
@@ -2574,7 +3172,8 @@ export const iranCities: GeoItem[] = [
       "Birjand"
     ],
     "latitude": 32.86628,
-    "longitude": 59.22114
+    "longitude": 59.22114,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "wiki-aca663feac27",
@@ -2582,8 +3181,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "بیرم"
     ],
-    "latitude": 27.43055556,
-    "longitude": 53.51444444
+    "latitude": 27.43203,
+    "longitude": 53.51413,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-d0d9cf737330",
@@ -2592,17 +3192,29 @@ export const iranCities: GeoItem[] = [
       "بیستون",
       "بیستون (هرسین)"
     ],
-    "latitude": 34.39972222,
-    "longitude": 47.445
+    "latitude": 34.39931,
+    "longitude": 47.44525,
+    "provinceName": "کرمانشاه"
   },
   {
-    "id": "wiki-4e8cdf84bd51",
-    "name": "بیکاه",
+    "id": "ir-admin-10700031002503",
+    "name": "بیضا",
     "aliases": [
-      "بیکاه"
+      "بیضا"
+    ],
+    "latitude": 29.9717,
+    "longitude": 52.40059,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-1220007002006",
+    "name": "بیکاء",
+    "aliases": [
+      "بیکاء"
     ],
     "latitude": 27.3575,
-    "longitude": 57.18
+    "longitude": 57.18,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "ir-140494",
@@ -2613,7 +3225,8 @@ export const iranCities: GeoItem[] = [
       "Bileh Savar"
     ],
     "latitude": 39.37961,
-    "longitude": 48.35463
+    "longitude": 48.35463,
+    "provinceName": "اردبیل"
   },
   {
     "id": "wiki-c0811977001a",
@@ -2622,31 +3235,32 @@ export const iranCities: GeoItem[] = [
       "پاتاوه"
     ],
     "latitude": 30.95444444,
-    "longitude": 51.26972222
-  },
-  {
-    "id": "ir-41428",
-    "name": "پادگان منجیل",
-    "aliases": [
-      "پادگان منجیل",
-      "Pādegān-e Manjīl",
-      "Padegan-e Manjil"
-    ],
-    "latitude": 36.7415,
-    "longitude": 49.4161
+    "longitude": 51.26972222,
+    "provinceName": "کهگیلویه و بویراحمد"
   },
   {
     "id": "ir-121380",
-    "name": "پارس‌آباد",
+    "name": "پارس آباد",
     "aliases": [
+      "پارس آباد",
       "پارس‌آباد",
       "فارس آباد",
       "Pārsābād",
-      "Parsabad",
-      "پارس آباد"
+      "Parsabad"
     ],
     "latitude": 39.6482,
-    "longitude": 47.9174
+    "longitude": 47.9174,
+    "provinceName": "اردبیل"
+  },
+  {
+    "id": "ir-admin-12200011001569",
+    "name": "پارسیان",
+    "aliases": [
+      "پارسیان"
+    ],
+    "latitude": 27.2918,
+    "longitude": 56.1532,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "wiki-48be5b4abe94",
@@ -2656,7 +3270,8 @@ export const iranCities: GeoItem[] = [
       "پارود (راسک)"
     ],
     "latitude": 26.3675,
-    "longitude": 61.29138889
+    "longitude": 61.29138889,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-8eb3c6c5c924",
@@ -2664,19 +3279,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "پاریز"
     ],
-    "latitude": 29.87222222,
-    "longitude": 55.74972222
-  },
-  {
-    "id": "ir-401202",
-    "name": "پاسارگاد",
-    "aliases": [
-      "پاسارگاد",
-      "Pāsārgād",
-      "Pasargad"
-    ],
-    "latitude": 30.20194,
-    "longitude": 53.18
+    "latitude": 29.87214,
+    "longitude": 55.74964,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-05712af2100d",
@@ -2684,8 +3289,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "پاسخن"
     ],
-    "latitude": 28.78948056,
-    "longitude": 54.32151944
+    "latitude": 28.79,
+    "longitude": 54.3218,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-10800022001011",
+    "name": "پاسفید",
+    "aliases": [
+      "پاسفید"
+    ],
+    "latitude": 28.19049,
+    "longitude": 57.30036,
+    "provinceName": "کرمان"
   },
   {
     "id": "ir-9478811",
@@ -2697,7 +3313,18 @@ export const iranCities: GeoItem[] = [
       "مامازان"
     ],
     "latitude": 35.47854,
-    "longitude": 51.6834
+    "longitude": 51.6834,
+    "provinceName": "تهران"
+  },
+  {
+    "id": "ir-admin-1130006002994",
+    "name": "پالیز",
+    "aliases": [
+      "پالیز"
+    ],
+    "latitude": 34.7364875,
+    "longitude": 48.0883394,
+    "provinceName": "همدان"
   },
   {
     "id": "ir-121240",
@@ -2708,7 +3335,8 @@ export const iranCities: GeoItem[] = [
       "Paveh"
     ],
     "latitude": 35.0434,
-    "longitude": 46.3565
+    "longitude": 46.3565,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "wiki-ede3554ae1a9",
@@ -2717,7 +3345,18 @@ export const iranCities: GeoItem[] = [
       "پایین هولار"
     ],
     "latitude": 36.4,
-    "longitude": 53.15
+    "longitude": 53.15,
+    "provinceName": "مازندران"
+  },
+  {
+    "id": "ir-admin-1140003002730",
+    "name": "پردنجان",
+    "aliases": [
+      "پردنجان"
+    ],
+    "latitude": 32.25283,
+    "longitude": 50.599,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "ir-6681051",
@@ -2731,7 +3370,18 @@ export const iranCities: GeoItem[] = [
       "پردیس (تهران)"
     ],
     "latitude": 35.74687,
-    "longitude": 51.81222
+    "longitude": 51.81222,
+    "provinceName": "تهران"
+  },
+  {
+    "id": "ir-admin-12300012002826",
+    "name": "پرند",
+    "aliases": [
+      "پرند"
+    ],
+    "latitude": 35.512,
+    "longitude": 51.0532,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-997007b6ba12",
@@ -2740,8 +3390,40 @@ export const iranCities: GeoItem[] = [
       "پرندک",
       "پرندک (زرندیه)"
     ],
-    "latitude": 35.3625,
-    "longitude": 50.68305556
+    "latitude": 35.3617,
+    "longitude": 50.6796,
+    "provinceName": "مرکزی"
+  },
+  {
+    "id": "ir-admin-10100014001121",
+    "name": "پره سر",
+    "aliases": [
+      "پره سر"
+    ],
+    "latitude": 37.60041,
+    "longitude": 49.07127,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "wiki-270122d7bea7",
+    "name": "پل",
+    "aliases": [
+      "پل",
+      "بندر پل"
+    ],
+    "latitude": 27.0014,
+    "longitude": 55.7295,
+    "provinceName": "هرمزگان"
+  },
+  {
+    "id": "ir-admin-1020008001171",
+    "name": "پل سفید",
+    "aliases": [
+      "پل سفید"
+    ],
+    "latitude": 36.11787,
+    "longitude": 53.05531,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-47896264b0df",
@@ -2751,7 +3433,8 @@ export const iranCities: GeoItem[] = [
       "پلان (چابهار)"
     ],
     "latitude": 25.6,
-    "longitude": 61.05
+    "longitude": 61.05,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "ir-120949",
@@ -2762,7 +3445,8 @@ export const iranCities: GeoItem[] = [
       "پل دختر"
     ],
     "latitude": 33.15249,
-    "longitude": 47.71014
+    "longitude": 47.71014,
+    "provinceName": "لرستان"
   },
   {
     "id": "ir-120954",
@@ -2773,7 +3457,18 @@ export const iranCities: GeoItem[] = [
       "Poldasht"
     ],
     "latitude": 39.348,
-    "longitude": 45.071
+    "longitude": 45.071,
+    "provinceName": "آذربایجان غربی"
+  },
+  {
+    "id": "ir-admin-1300005002981",
+    "name": "پلنگ آباد",
+    "aliases": [
+      "پلنگ آباد"
+    ],
+    "latitude": 35.7342,
+    "longitude": 50.6213,
+    "provinceName": "البرز"
   },
   {
     "id": "wiki-ccbc35879fbb",
@@ -2782,19 +3477,19 @@ export const iranCities: GeoItem[] = [
       "پول",
       "پول (نوشهر)"
     ],
-    "latitude": 36.395,
-    "longitude": 51.59388889
+    "latitude": 36.39511,
+    "longitude": 51.59376,
+    "provinceName": "مازندران"
   },
   {
-    "id": "ir-418575",
-    "name": "پیر بکران",
+    "id": "ir-admin-1160003002127",
+    "name": "پهله",
     "aliases": [
-      "پیر بکران",
-      "Pīr Bakrān",
-      "Pir Bakran"
+      "پهله"
     ],
-    "latitude": 32.46786,
-    "longitude": 51.55969
+    "latitude": 33.00966,
+    "longitude": 46.88439,
+    "provinceName": "ایلام"
   },
   {
     "id": "ir-121110",
@@ -2808,7 +3503,18 @@ export const iranCities: GeoItem[] = [
       "پیرانشہر"
     ],
     "latitude": 36.701,
-    "longitude": 45.1413
+    "longitude": 45.1413,
+    "provinceName": "آذربایجان غربی"
+  },
+  {
+    "id": "ir-admin-1010005001007",
+    "name": "پیربازار",
+    "aliases": [
+      "پیربازار"
+    ],
+    "latitude": 37.3435,
+    "longitude": 49.54807,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-376256ff0c2a",
@@ -2817,7 +3523,8 @@ export const iranCities: GeoItem[] = [
       "پیربکران"
     ],
     "latitude": 32.46861111,
-    "longitude": 51.55777778
+    "longitude": 51.55777778,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-888cb9729041",
@@ -2825,17 +3532,20 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "پیرتاج"
     ],
-    "latitude": 35.76666667,
-    "longitude": 48.16666667
+    "latitude": 35.7717,
+    "longitude": 48.11984,
+    "provinceName": "کردستان"
   },
   {
     "id": "wiki-c59f2c33b925",
-    "name": "پیش‌قلعه",
+    "name": "پیش قلعه",
     "aliases": [
+      "پیش قلعه",
       "پیش‌قلعه"
     ],
-    "latitude": 37.65194444,
-    "longitude": 57.00194444
+    "latitude": 37.65206,
+    "longitude": 57.00195,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "ir-120972",
@@ -2848,7 +3558,8 @@ export const iranCities: GeoItem[] = [
       "پیچوا"
     ],
     "latitude": 35.308,
-    "longitude": 51.7267
+    "longitude": 51.7267,
+    "provinceName": "تهران"
   },
   {
     "id": "ir-1159975",
@@ -2859,16 +3570,49 @@ export const iranCities: GeoItem[] = [
       "Pishin"
     ],
     "latitude": 26.07937,
-    "longitude": 61.75403
+    "longitude": 61.75403,
+    "provinceName": "سیستان و بلوچستان"
+  },
+  {
+    "id": "ir-admin-12700011002765",
+    "name": "تاتار علیا",
+    "aliases": [
+      "تاتار علیا"
+    ],
+    "latitude": 37.11111,
+    "longitude": 55.04804,
+    "provinceName": "گلستان"
+  },
+  {
+    "id": "ir-admin-10500012002185",
+    "name": "تازه آباد",
+    "aliases": [
+      "تازه آباد"
+    ],
+    "latitude": 34.7387,
+    "longitude": 46.1496,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "wiki-43517222a3b8",
-    "name": "تازه‌شهر",
+    "name": "تازه شهر",
     "aliases": [
+      "تازه شهر",
       "تازه‌شهر"
     ],
-    "latitude": 38.17555556,
-    "longitude": 44.69194444
+    "latitude": 38.1757,
+    "longitude": 44.6921,
+    "provinceName": "آذربایجان غربی"
+  },
+  {
+    "id": "ir-admin-12400012002492",
+    "name": "تازه کندانگوت",
+    "aliases": [
+      "تازه کندانگوت"
+    ],
+    "latitude": 39.0443,
+    "longitude": 47.7453,
+    "provinceName": "اردبیل"
   },
   {
     "id": "wiki-ec2ecbeb632f",
@@ -2877,7 +3621,8 @@ export const iranCities: GeoItem[] = [
       "تازیان پایین"
     ],
     "latitude": 27.29166667,
-    "longitude": 56.15333333
+    "longitude": 56.15333333,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "ir-113491",
@@ -2888,7 +3633,8 @@ export const iranCities: GeoItem[] = [
       "Takestan"
     ],
     "latitude": 36.07057,
-    "longitude": 49.69571
+    "longitude": 49.69571,
+    "provinceName": "قزوین"
   },
   {
     "id": "ir-1159384",
@@ -2900,7 +3646,8 @@ export const iranCities: GeoItem[] = [
       "تایب آباد"
     ],
     "latitude": 34.74,
-    "longitude": 60.7756
+    "longitude": 60.7756,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-113646",
@@ -2911,7 +3658,8 @@ export const iranCities: GeoItem[] = [
       "تەورێز"
     ],
     "latitude": 38.08,
-    "longitude": 46.2919
+    "longitude": 46.2919,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-113514",
@@ -2922,7 +3670,18 @@ export const iranCities: GeoItem[] = [
       "Tajrish"
     ],
     "latitude": 35.8044,
-    "longitude": 51.4256
+    "longitude": 51.4256,
+    "provinceName": "تهران"
+  },
+  {
+    "id": "ir-admin-1220002002088",
+    "name": "تخت",
+    "aliases": [
+      "تخت"
+    ],
+    "latitude": 27.5012,
+    "longitude": 56.6362,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "wiki-59a8c6f41ed1",
@@ -2931,7 +3690,18 @@ export const iranCities: GeoItem[] = [
       "تخت سلیمان"
     ],
     "latitude": 36.603171,
-    "longitude": 47.235949
+    "longitude": 47.235949,
+    "provinceName": "آذربایجان غربی"
+  },
+  {
+    "id": "ir-admin-10600017001061",
+    "name": "تراز",
+    "aliases": [
+      "تراز"
+    ],
+    "latitude": 32.4166,
+    "longitude": 49.1426,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-1159362",
@@ -2942,7 +3712,8 @@ export const iranCities: GeoItem[] = [
       "Torbat-e Jam"
     ],
     "latitude": 35.244,
-    "longitude": 60.6225
+    "longitude": 60.6225,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-112646",
@@ -2953,7 +3724,8 @@ export const iranCities: GeoItem[] = [
       "Torbat-e Heydariyeh"
     ],
     "latitude": 35.27401,
-    "longitude": 59.21949
+    "longitude": 59.21949,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-988dac713c09",
@@ -2962,8 +3734,9 @@ export const iranCities: GeoItem[] = [
       "ترک",
       "ترک (میانه)"
     ],
-    "latitude": 37.65,
-    "longitude": 47.75
+    "latitude": 37.6161,
+    "longitude": 47.7716,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-123b038afc66",
@@ -2971,8 +3744,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "ترکالکی"
     ],
-    "latitude": 32.242778,
-    "longitude": 48.848611
+    "latitude": 32.2442,
+    "longitude": 48.8465,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-5b470bf75631",
@@ -2980,8 +3754,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "ترکمانچای"
     ],
-    "latitude": 37.58527778,
-    "longitude": 47.38972222
+    "latitude": 37.5853,
+    "longitude": 47.3896,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-6e84f7e5d8c3",
@@ -2989,8 +3764,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "تسوج"
     ],
-    "latitude": 38.31694444,
-    "longitude": 45.35916667
+    "latitude": 38.31625,
+    "longitude": 45.35953,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-4e566f26031b",
@@ -2999,7 +3775,8 @@ export const iranCities: GeoItem[] = [
       "تشان"
     ],
     "latitude": 30.86666667,
-    "longitude": 50.21666667
+    "longitude": 50.21666667,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-113632",
@@ -3009,7 +3786,8 @@ export const iranCities: GeoItem[] = [
       "Taft"
     ],
     "latitude": 31.74384,
-    "longitude": 54.20278
+    "longitude": 54.20278,
+    "provinceName": "یزد"
   },
   {
     "id": "ir-113636",
@@ -3019,7 +3797,8 @@ export const iranCities: GeoItem[] = [
       "Tafresh"
     ],
     "latitude": 34.69307,
-    "longitude": 50.01601
+    "longitude": 50.01601,
+    "provinceName": "مرکزی"
   },
   {
     "id": "ir-113508",
@@ -3030,7 +3809,18 @@ export const iranCities: GeoItem[] = [
       "Takab"
     ],
     "latitude": 36.4009,
-    "longitude": 47.1133
+    "longitude": 47.1133,
+    "provinceName": "آذربایجان غربی"
+  },
+  {
+    "id": "ir-admin-10000013002941",
+    "name": "تلخاب",
+    "aliases": [
+      "تلخاب"
+    ],
+    "latitude": 34.71265,
+    "longitude": 49.64989,
+    "provinceName": "مرکزی"
   },
   {
     "id": "wiki-152f00af97ad",
@@ -3038,8 +3828,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "تم شولی"
     ],
-    "latitude": 29.55,
-    "longitude": 54.01666667
+    "latitude": 29.5915,
+    "longitude": 54.04849,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-3228abf8fd27",
@@ -3049,7 +3840,8 @@ export const iranCities: GeoItem[] = [
       "تنب بزرگ (شهر)"
     ],
     "latitude": 26.25083333,
-    "longitude": 55.30055556
+    "longitude": 55.30055556,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "ir-112656",
@@ -3060,7 +3852,8 @@ export const iranCities: GeoItem[] = [
       "Tonekabon"
     ],
     "latitude": 36.81626,
-    "longitude": 50.87376
+    "longitude": 50.87376,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-274da370faad",
@@ -3069,7 +3862,8 @@ export const iranCities: GeoItem[] = [
       "تنکمان"
     ],
     "latitude": 35.93333333,
-    "longitude": 50.56666667
+    "longitude": 50.56666667,
+    "provinceName": "البرز"
   },
   {
     "id": "wiki-fc073a85a08d",
@@ -3077,17 +3871,30 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "تنگ ارم"
     ],
-    "latitude": 29.11666667,
-    "longitude": 51.53333333
+    "latitude": 29.1522,
+    "longitude": 51.5258,
+    "provinceName": "بوشهر"
   },
   {
     "id": "wiki-f79e9fd2e068",
-    "name": "توپ‌آغاج (بیجار)",
+    "name": "توپ آغاج",
     "aliases": [
+      "توپ آغاج",
       "توپ‌آغاج (بیجار)"
     ],
     "latitude": 36,
-    "longitude": 47.78333333
+    "longitude": 47.78333333,
+    "provinceName": "کردستان"
+  },
+  {
+    "id": "ir-admin-1010006002229",
+    "name": "توتکابن",
+    "aliases": [
+      "توتکابن"
+    ],
+    "latitude": 36.8928,
+    "longitude": 49.5277,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-85d538fa13fc",
@@ -3096,7 +3903,18 @@ export const iranCities: GeoItem[] = [
       "توجردی"
     ],
     "latitude": 29.92588569,
-    "longitude": 53.97072419
+    "longitude": 53.97072419,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-11600011002574",
+    "name": "توحید",
+    "aliases": [
+      "توحید"
+    ],
+    "latitude": 27.82775,
+    "longitude": 52.85789,
+    "provinceName": "ایلام"
   },
   {
     "id": "wiki-03d088b35af2",
@@ -3104,8 +3922,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "تودشک"
     ],
-    "latitude": 32.66666667,
-    "longitude": 52.63333333
+    "latitude": 32.7207,
+    "longitude": 52.6709,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-8c95dbad5d28",
@@ -3113,8 +3932,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "توره"
     ],
-    "latitude": 34.0508,
-    "longitude": 49.2953
+    "latitude": 34.0445,
+    "longitude": 49.2887,
+    "provinceName": "مرکزی"
   },
   {
     "id": "ir-112422",
@@ -3126,7 +3946,8 @@ export const iranCities: GeoItem[] = [
       "Tuyserkan"
     ],
     "latitude": 34.551,
-    "longitude": 48.44353
+    "longitude": 48.44353,
+    "provinceName": "همدان"
   },
   {
     "id": "ir-112931",
@@ -3138,17 +3959,19 @@ export const iranCities: GeoItem[] = [
       "تہران",
       "طهران"
     ],
-    "latitude": 35.69439,
-    "longitude": 51.42151
+    "latitude": 35.75,
+    "longitude": 51.5148,
+    "provinceName": "تهران"
   },
   {
-    "id": "wiki-229dfc3a8d2b",
-    "name": "تیتکان",
+    "id": "ir-admin-1150001001056",
+    "name": "تیتکان بزنوید",
     "aliases": [
-      "تیتکان"
+      "تیتکان بزنوید"
     ],
-    "latitude": 32.83333333,
-    "longitude": 49.63333333
+    "latitude": 33.404087,
+    "longitude": 49.691703,
+    "provinceName": "لرستان"
   },
   {
     "id": "wiki-e606a6762922",
@@ -3157,7 +3980,8 @@ export const iranCities: GeoItem[] = [
       "تیتکانلو"
     ],
     "latitude": 37.25,
-    "longitude": 58.25
+    "longitude": 58.25,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "ir-418446",
@@ -3168,7 +3992,8 @@ export const iranCities: GeoItem[] = [
       "Tiran"
     ],
     "latitude": 32.70328,
-    "longitude": 51.15381
+    "longitude": 51.15381,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-9b3b6734fd16",
@@ -3177,16 +4002,19 @@ export const iranCities: GeoItem[] = [
       "تیرور"
     ],
     "latitude": 27.34,
-    "longitude": 56.955833
+    "longitude": 56.955833,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "wiki-3127d907925d",
-    "name": "تیکمه‌داش",
+    "name": "تیکمه داش",
     "aliases": [
+      "تیکمه داش",
       "تیکمه‌داش"
     ],
-    "latitude": 37.72583333,
-    "longitude": 46.93777778
+    "latitude": 37.7259,
+    "longitude": 46.9379,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-3a2c8f19094d",
@@ -3195,8 +4023,9 @@ export const iranCities: GeoItem[] = [
       "تیمورلو",
       "تیمورلو (آذرشهر)"
     ],
-    "latitude": 37.86666667,
-    "longitude": 45.93333333
+    "latitude": 37.8055,
+    "longitude": 45.8989,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-3589bacc9596",
@@ -3204,8 +4033,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "ثمرین"
     ],
-    "latitude": 38.35583333,
-    "longitude": 48.135
+    "latitude": 38.3558,
+    "longitude": 48.135,
+    "provinceName": "اردبیل"
   },
   {
     "id": "ir-130524",
@@ -3216,30 +4046,18 @@ export const iranCities: GeoItem[] = [
       "Jajarm"
     ],
     "latitude": 36.95012,
-    "longitude": 56.38005
+    "longitude": 56.38005,
+    "provinceName": "خراسان شمالی"
   },
   {
-    "id": "ir-124914",
-    "name": "جاریان",
+    "id": "ir-admin-11100024002191",
+    "name": "جالق",
     "aliases": [
-      "جاریان",
-      "Manūjān",
-      "Manujan",
-      "منوجان"
+      "جالق"
     ],
-    "latitude": 27.39893,
-    "longitude": 57.49722
-  },
-  {
-    "id": "ir-130276",
-    "name": "جاسک",
-    "aliases": [
-      "جاسک",
-      "Jask",
-      "بندر جاسک"
-    ],
-    "latitude": 25.64533,
-    "longitude": 57.77552
+    "latitude": 27.60287,
+    "longitude": 62.71023,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-bed94def4ece",
@@ -3248,7 +4066,8 @@ export const iranCities: GeoItem[] = [
       "جاورسیان"
     ],
     "latitude": 34.25722222,
-    "longitude": 49.32333333
+    "longitude": 49.32333333,
+    "provinceName": "مرکزی"
   },
   {
     "id": "wiki-3273cc1db6a4",
@@ -3256,8 +4075,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "جایزان"
     ],
-    "latitude": 30.88333056,
-    "longitude": 49.85
+    "latitude": 30.87506,
+    "longitude": 49.85292,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-c2a9571bf844",
@@ -3265,8 +4085,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "جبالبارز"
     ],
-    "latitude": 28.51666667,
-    "longitude": 58.43333333
+    "latitude": 28.9064,
+    "longitude": 57.8856,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-3e46fa5e9bfb",
@@ -3274,17 +4095,29 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "جزینک"
     ],
-    "latitude": 30.89055556,
-    "longitude": 61.56972222
+    "latitude": 30.8909,
+    "longitude": 61.5706,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
-    "id": "wiki-c4a0eac702c0",
-    "name": "جعفرآباد (ایلام)",
+    "id": "ir-admin-1240002002209",
+    "name": "جعفرآباد",
     "aliases": [
-      "جعفرآباد (ایلام)"
+      "جعفرآباد"
+    ],
+    "latitude": 39.4357,
+    "longitude": 48.0946,
+    "provinceName": "اردبیل"
+  },
+  {
+    "id": "ir-admin-1160001002974",
+    "name": "جعفراباد",
+    "aliases": [
+      "جعفراباد"
     ],
     "latitude": 33.50472222,
-    "longitude": 46.53916667
+    "longitude": 46.53916667,
+    "provinceName": "ایلام"
   },
   {
     "id": "wiki-3f0491ef5d89",
@@ -3293,8 +4126,9 @@ export const iranCities: GeoItem[] = [
       "جعفریه",
       "جعفریه (قم)"
     ],
-    "latitude": 34.78944444,
-    "longitude": 50.57472222
+    "latitude": 34.7747,
+    "longitude": 50.5169,
+    "provinceName": "قم"
   },
   {
     "id": "wiki-c591b69162a1",
@@ -3303,8 +4137,9 @@ export const iranCities: GeoItem[] = [
       "جغتای",
       "جغتای (خراسان رضوی)"
     ],
-    "latitude": 36.63611111,
-    "longitude": 57.07277778
+    "latitude": 36.63619,
+    "longitude": 57.07284,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-1e538383d6df",
@@ -3313,17 +4148,30 @@ export const iranCities: GeoItem[] = [
       "جلفا",
       "جلفا (آذربایجان شرقی)"
     ],
-    "latitude": 38.93527778,
-    "longitude": 45.64305556
+    "latitude": 38.93788,
+    "longitude": 45.63329,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-786c201e0f02",
-    "name": "جلیل‌آباد (ورامین)",
+    "name": "جلیل‌آباد",
     "aliases": [
+      "جلیل‌آباد",
       "جلیل‌آباد (ورامین)"
     ],
-    "latitude": 35.34333333,
-    "longitude": 51.78638889
+    "latitude": 35.34324,
+    "longitude": 51.78639,
+    "provinceName": "تهران"
+  },
+  {
+    "id": "ir-admin-1270005002018",
+    "name": "جلین",
+    "aliases": [
+      "جلین"
+    ],
+    "latitude": 36.8503,
+    "longitude": 54.5351,
+    "provinceName": "گلستان"
   },
   {
     "id": "ir-130451",
@@ -3335,28 +4183,50 @@ export const iranCities: GeoItem[] = [
       "ولایت"
     ],
     "latitude": 27.82977,
-    "longitude": 52.32518
+    "longitude": 52.32518,
+    "provinceName": "بوشهر"
   },
   {
-    "id": "wiki-b399797b3a55",
-    "name": "جنت‌آباد",
+    "id": "ir-admin-1220009002625",
+    "name": "جناح",
     "aliases": [
-      "جنت‌آباد",
-      "جنت‌آباد (صالح‌آباد)"
+      "جناح"
     ],
-    "latitude": 35.59833056,
-    "longitude": 61.14111111
+    "latitude": 27.02016,
+    "longitude": 54.28398,
+    "provinceName": "هرمزگان"
+  },
+  {
+    "id": "ir-admin-10900040002980",
+    "name": "جنت آباد",
+    "aliases": [
+      "جنت آباد"
+    ],
+    "latitude": 36.48499,
+    "longitude": 57.63326,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-6976849",
-    "name": "جنت‌شهر",
+    "name": "جنت شهر",
     "aliases": [
-      "جنت‌شهر",
       "جنت شهر",
+      "جنت‌شهر",
       "Jannat Shahr"
     ],
-    "latitude": 28.65449,
-    "longitude": 54.68495
+    "latitude": 28.6549,
+    "longitude": 54.6838,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-10600020002716",
+    "name": "جنت مکان",
+    "aliases": [
+      "جنت مکان"
+    ],
+    "latitude": 32.1847,
+    "longitude": 48.81514,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-9e25eeee8a53",
@@ -3364,8 +4234,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "جندق"
     ],
-    "latitude": 34.04166667,
-    "longitude": 54.41527778
+    "latitude": 34.03863,
+    "longitude": 54.41431,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-1060008002983",
+    "name": "جندی شاپور",
+    "aliases": [
+      "جندی شاپور"
+    ],
+    "latitude": 32.3058058,
+    "longitude": 48.5135114,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-8eea6b91f82b",
@@ -3374,8 +4255,9 @@ export const iranCities: GeoItem[] = [
       "جنگل",
       "جنگل (رشتخوار)"
     ],
-    "latitude": 34.70333333,
-    "longitude": 59.22277778
+    "latitude": 34.70319,
+    "longitude": 59.22322,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-c6d7976e6b4d",
@@ -3384,8 +4266,9 @@ export const iranCities: GeoItem[] = [
       "جوادآباد",
       "جوادآباد (ورامین)"
     ],
-    "latitude": 35.20944444,
-    "longitude": 51.67527778
+    "latitude": 35.2133,
+    "longitude": 51.67023,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-1b4009e7fd3b",
@@ -3394,7 +4277,19 @@ export const iranCities: GeoItem[] = [
       "جوادیه الهیه"
     ],
     "latitude": 31.01472222,
-    "longitude": 55.56166667
+    "longitude": 55.56166667,
+    "provinceName": "کرمان"
+  },
+  {
+    "id": "wiki-c39c0193290d",
+    "name": "جوان قلعه",
+    "aliases": [
+      "جوان قلعه",
+      "جوان‌قلعه"
+    ],
+    "latitude": 37.49666667,
+    "longitude": 45.97333333,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-25883",
@@ -3405,16 +4300,8 @@ export const iranCities: GeoItem[] = [
       "Javanrud"
     ],
     "latitude": 34.8067,
-    "longitude": 46.4913
-  },
-  {
-    "id": "wiki-c39c0193290d",
-    "name": "جوان‌قلعه",
-    "aliases": [
-      "جوان‌قلعه"
-    ],
-    "latitude": 37.49666667,
-    "longitude": 45.97333333
+    "longitude": 46.4913,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "wiki-3da42b3e7169",
@@ -3423,7 +4310,8 @@ export const iranCities: GeoItem[] = [
       "جوپار"
     ],
     "latitude": 30.06555556,
-    "longitude": 57.115
+    "longitude": 57.115,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-2042a0115523",
@@ -3432,7 +4320,8 @@ export const iranCities: GeoItem[] = [
       "جورقان"
     ],
     "latitude": 34.8833,
-    "longitude": 48.55
+    "longitude": 48.55,
+    "provinceName": "همدان"
   },
   {
     "id": "wiki-af745363a7ce",
@@ -3441,7 +4330,8 @@ export const iranCities: GeoItem[] = [
       "جوزدان"
     ],
     "latitude": 32.55666667,
-    "longitude": 51.3725
+    "longitude": 51.3725,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-10afc680d5e5",
@@ -3450,7 +4340,8 @@ export const iranCities: GeoItem[] = [
       "جوزم"
     ],
     "latitude": 30.50888889,
-    "longitude": 55.03
+    "longitude": 55.03,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-1f1f670ad3fe",
@@ -3458,8 +4349,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "جوشقان قالی"
     ],
-    "latitude": 33.58580556,
-    "longitude": 51.21138889
+    "latitude": 33.5888,
+    "longitude": 51.212,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-8e4f5e81c15e",
@@ -3467,8 +4359,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "جوکار"
     ],
-    "latitude": 34.43277778,
-    "longitude": 48.68555556
+    "latitude": 34.4323,
+    "longitude": 48.6862,
+    "provinceName": "همدان"
+  },
+  {
+    "id": "ir-admin-10600026002920",
+    "name": "جولکی",
+    "aliases": [
+      "جولکی"
+    ],
+    "latitude": 30.82065,
+    "longitude": 49.88616,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-129956",
@@ -3479,22 +4382,8 @@ export const iranCities: GeoItem[] = [
       "Junqan"
     ],
     "latitude": 32.15145,
-    "longitude": 50.6875
-  },
-  {
-    "id": "ir-125489",
-    "name": "جوهوی",
-    "aliases": [
-      "جوهوی",
-      "Mādavān",
-      "Madavan",
-      "مادوان",
-      "مادوان سفلی",
-      "مادوان پائین",
-      "مدوان پاعین"
-    ],
-    "latitude": 30.71525,
-    "longitude": 51.54131
+    "longitude": 50.6875,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "ir-129933",
@@ -3505,7 +4394,30 @@ export const iranCities: GeoItem[] = [
       "Juybar"
     ],
     "latitude": 36.64088,
-    "longitude": 52.91206
+    "longitude": 52.91206,
+    "provinceName": "مازندران"
+  },
+  {
+    "id": "ir-admin-10700037002183",
+    "name": "جویم",
+    "aliases": [
+      "جویم"
+    ],
+    "latitude": 28.2548,
+    "longitude": 53.98112,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-130531",
+    "name": "جهرم",
+    "aliases": [
+      "جهرم",
+      "دو",
+      "Jahrom"
+    ],
+    "latitude": 28.5,
+    "longitude": 53.5605,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-6925362",
@@ -3516,22 +4428,28 @@ export const iranCities: GeoItem[] = [
       "Jiroft"
     ],
     "latitude": 28.67806,
-    "longitude": 57.74056
+    "longitude": 57.74056,
+    "provinceName": "کرمان"
   },
   {
-    "id": "ir-1161724",
-    "name": "چابهار",
+    "id": "ir-admin-1010006002138",
+    "name": "جیرنده",
     "aliases": [
-      "چابهار",
-      "Chabahar",
-      "بندر چابهار",
-      "تشابهار",
-      "چابہار",
-      "چاه بهار",
-      "چاہ بہار"
+      "جیرنده"
     ],
-    "latitude": 25.2919,
-    "longitude": 60.643
+    "latitude": 36.70008,
+    "longitude": 49.79176,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-1010007001135",
+    "name": "چابکسر",
+    "aliases": [
+      "چابکسر"
+    ],
+    "latitude": 36.97372,
+    "longitude": 50.5701,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-7de28e5aa7f3",
@@ -3539,8 +4457,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "چاپشلو"
     ],
-    "latitude": 37.35166667,
-    "longitude": 59.07666667
+    "latitude": 37.35174,
+    "longitude": 59.0767,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-2e3b2cf5c355",
@@ -3548,8 +4467,30 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "چادگان"
     ],
-    "latitude": 32.76833333,
-    "longitude": 50.62861111
+    "latitude": 32.76825,
+    "longitude": 50.62873,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "wiki-d4d1fb0adca0",
+    "name": "چارک",
+    "aliases": [
+      "چارک",
+      "بندر چارک"
+    ],
+    "latitude": 26.73049,
+    "longitude": 54.27483,
+    "provinceName": "هرمزگان"
+  },
+  {
+    "id": "ir-admin-10100010002076",
+    "name": "چاف و چمخاله",
+    "aliases": [
+      "چاف و چمخاله"
+    ],
+    "latitude": 37.2112,
+    "longitude": 50.2112,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-0088dfd13f11",
@@ -3557,8 +4498,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "چالانچولان"
     ],
-    "latitude": 33.66388889,
-    "longitude": 48.90694444
+    "latitude": 33.66407,
+    "longitude": 48.90747,
+    "provinceName": "لرستان"
   },
   {
     "id": "ir-139223",
@@ -3569,7 +4511,8 @@ export const iranCities: GeoItem[] = [
       "Chalus"
     ],
     "latitude": 36.655,
-    "longitude": 51.4204
+    "longitude": 51.4204,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-3a10cf74d6c9",
@@ -3578,7 +4521,24 @@ export const iranCities: GeoItem[] = [
       "چانف"
     ],
     "latitude": 26.3845,
-    "longitude": 60.3025
+    "longitude": 60.3025,
+    "provinceName": "سیستان و بلوچستان"
+  },
+  {
+    "id": "ir-1161724",
+    "name": "چاه بهار",
+    "aliases": [
+      "چاه بهار",
+      "چابهار",
+      "Chabahar",
+      "بندر چابهار",
+      "تشابهار",
+      "چابہار",
+      "چاہ بہار"
+    ],
+    "latitude": 25.2919,
+    "longitude": 60.643,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-ba2c929a2817",
@@ -3587,26 +4547,41 @@ export const iranCities: GeoItem[] = [
       "چاه دادخدا",
       "چاه دادخدا (قلعه‌گنج)"
     ],
-    "latitude": 27.28611111,
-    "longitude": 58.26555556
+    "latitude": 27.29129,
+    "longitude": 58.24809,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-e3fd32109a7b",
-    "name": "چاه‌مبارک",
+    "name": "چاه مبارک",
     "aliases": [
+      "چاه مبارک",
       "چاه‌مبارک"
     ],
     "latitude": 27.36583056,
-    "longitude": 52.79028056
+    "longitude": 52.79028056,
+    "provinceName": "بوشهر"
+  },
+  {
+    "id": "ir-admin-1080009001009",
+    "name": "چاه مرید",
+    "aliases": [
+      "چاه مرید"
+    ],
+    "latitude": 27.9462,
+    "longitude": 57.5612,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-087c2acecc92",
-    "name": "چاه‌ورز",
+    "name": "چاه ورز",
     "aliases": [
+      "چاه ورز",
       "چاه‌ورز"
     ],
-    "latitude": 27.43259461,
-    "longitude": 53.43769039
+    "latitude": 27.4311,
+    "longitude": 53.4363,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-94b3fb4add2b",
@@ -3614,8 +4589,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "چترود"
     ],
-    "latitude": 30.60388889,
-    "longitude": 56.91027778
+    "latitude": 30.6012,
+    "longitude": 56.9088,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-e5b50c97b06a",
@@ -3624,8 +4600,9 @@ export const iranCities: GeoItem[] = [
       "چخماق",
       "چخماق (زاوه)"
     ],
-    "latitude": 35.271667,
-    "longitude": 59.831944
+    "latitude": 35.27168,
+    "longitude": 59.83186,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-138989",
@@ -3638,7 +4615,8 @@ export const iranCities: GeoItem[] = [
       "تل گرد"
     ],
     "latitude": 30.75561,
-    "longitude": 50.74522
+    "longitude": 50.74522,
+    "provinceName": "کهگیلویه و بویراحمد"
   },
   {
     "id": "ir-418905",
@@ -3649,7 +4627,8 @@ export const iranCities: GeoItem[] = [
       "Charmahin"
     ],
     "latitude": 32.33892,
-    "longitude": 51.19474
+    "longitude": 51.19474,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-99b58d831c0f",
@@ -3658,8 +4637,9 @@ export const iranCities: GeoItem[] = [
       "چشمه شیرین",
       "چشمه شیرین (بدره)"
     ],
-    "latitude": 33.27361111,
-    "longitude": 47.16083333
+    "latitude": 33.27362,
+    "longitude": 47.16074,
+    "provinceName": "ایلام"
   },
   {
     "id": "ir-138381",
@@ -3672,8 +4652,9 @@ export const iranCities: GeoItem[] = [
       "چقابک",
       "چقادک"
     ],
-    "latitude": 28.986,
-    "longitude": 51.0364
+    "latitude": 28.988,
+    "longitude": 51.0358,
+    "provinceName": "بوشهر"
   },
   {
     "id": "wiki-80f4d20da819",
@@ -3681,8 +4662,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "چغامیش"
     ],
-    "latitude": 32.20916667,
-    "longitude": 48.54611111
+    "latitude": 32.20917,
+    "longitude": 48.54568,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-3f36cf780186",
@@ -3690,8 +4672,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "چقابل"
     ],
-    "latitude": 33.28083333,
-    "longitude": 47.50888889
+    "latitude": 33.28175,
+    "longitude": 47.50979,
+    "provinceName": "لرستان"
   },
   {
     "id": "wiki-88c76e831e1e",
@@ -3700,16 +4683,38 @@ export const iranCities: GeoItem[] = [
       "چکنه"
     ],
     "latitude": 36.81777778,
-    "longitude": 58.50416667
+    "longitude": 58.50416667,
+    "provinceName": "خراسان رضوی"
   },
   {
-    "id": "wiki-8c5741e94d4d",
-    "name": "چگردک",
+    "id": "ir-admin-11100012002914",
+    "name": "چگرد",
     "aliases": [
-      "چگردک"
+      "چگرد"
     ],
-    "latitude": 27.08693889,
-    "longitude": 59.11888889
+    "latitude": 27.482325,
+    "longitude": 59.446555,
+    "provinceName": "سیستان و بلوچستان"
+  },
+  {
+    "id": "ir-admin-1140006002360",
+    "name": "چلگرد",
+    "aliases": [
+      "چلگرد"
+    ],
+    "latitude": 32.4672,
+    "longitude": 50.12229,
+    "provinceName": "چهارمحال و بختیاری"
+  },
+  {
+    "id": "ir-admin-1140003002806",
+    "name": "چلیچه",
+    "aliases": [
+      "چلیچه"
+    ],
+    "latitude": 32.23107,
+    "longitude": 50.62878,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "wiki-2ae21f23dff4",
@@ -3717,8 +4722,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "چم پلک"
     ],
-    "latitude": 33.70472222,
-    "longitude": 47.79166667
+    "latitude": 33.7046,
+    "longitude": 47.7916,
+    "provinceName": "لرستان"
+  },
+  {
+    "id": "ir-admin-1060002002802",
+    "name": "چم گلک",
+    "aliases": [
+      "چم گلک"
+    ],
+    "latitude": 32.44485,
+    "longitude": 48.44249,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-eb5624d70cc8",
@@ -3727,8 +4743,9 @@ export const iranCities: GeoItem[] = [
       "چمران",
       "چمران (بندر ماهشهر)"
     ],
-    "latitude": 30.70833333,
-    "longitude": 49.16361111
+    "latitude": 30.708,
+    "longitude": 49.1635,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-8839",
@@ -3739,8 +4756,9 @@ export const iranCities: GeoItem[] = [
       "Chamestan",
       "چماستان"
     ],
-    "latitude": 36.47822,
-    "longitude": 52.11835
+    "latitude": 36.4774,
+    "longitude": 52.1167,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-418911",
@@ -3751,7 +4769,8 @@ export const iranCities: GeoItem[] = [
       "Chamgordan"
     ],
     "latitude": 32.39333,
-    "longitude": 51.33943
+    "longitude": 51.33943,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-c2e43e8f9ec8",
@@ -3759,8 +4778,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "چمن سلطان"
     ],
-    "latitude": 33.28806111,
-    "longitude": 49.89361111
+    "latitude": 33.28813,
+    "longitude": 49.89309,
+    "provinceName": "لرستان"
   },
   {
     "id": "wiki-96050b26f0b4",
@@ -3770,7 +4790,8 @@ export const iranCities: GeoItem[] = [
       "چنار (کلات)"
     ],
     "latitude": 36.69166667,
-    "longitude": 59.97666667
+    "longitude": 59.97666667,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-138742",
@@ -3781,16 +4802,19 @@ export const iranCities: GeoItem[] = [
       "Chenaran"
     ],
     "latitude": 36.64546,
-    "longitude": 59.12123
+    "longitude": 59.12123,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-a24569af5bf2",
-    "name": "چناران‌شهر",
+    "name": "چناران شهر",
     "aliases": [
+      "چناران شهر",
       "چناران‌شهر"
     ],
     "latitude": 37.39944444,
-    "longitude": 57.54
+    "longitude": 57.54,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "wiki-b5bd8ffe895d",
@@ -3799,7 +4823,8 @@ export const iranCities: GeoItem[] = [
       "چناره"
     ],
     "latitude": 35.63333333,
-    "longitude": 46.30527778
+    "longitude": 46.30527778,
+    "provinceName": "کردستان"
   },
   {
     "id": "wiki-cdda6865782f",
@@ -3807,8 +4832,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "چوار"
     ],
-    "latitude": 33.69527778,
-    "longitude": 46.29777778
+    "latitude": 33.6953,
+    "longitude": 46.2979,
+    "provinceName": "ایلام"
+  },
+  {
+    "id": "ir-admin-1010004002585",
+    "name": "چوبر",
+    "aliases": [
+      "چوبر"
+    ],
+    "latitude": 38.1795,
+    "longitude": 48.892,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-cd7ec4181f87",
@@ -3816,30 +4852,53 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "چورزق"
     ],
-    "latitude": 37.00055556,
-    "longitude": 48.77722222
+    "latitude": 36.99802,
+    "longitude": 48.77802,
+    "provinceName": "زنجان"
+  },
+  {
+    "id": "ir-admin-10100017001060",
+    "name": "چوکام",
+    "aliases": [
+      "چوکام"
+    ],
+    "latitude": 37.38249,
+    "longitude": 49.61476,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-1060001002010",
+    "name": "چویبده",
+    "aliases": [
+      "چویبده"
+    ],
+    "latitude": 30.2035,
+    "longitude": 48.5538,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-41672",
-    "name": "چهار باغ",
+    "name": "چهارباغ",
     "aliases": [
+      "چهارباغ",
       "چهار باغ",
       "Chahārbāgh",
       "Chaharbagh",
       "چهار دانگه"
     ],
     "latitude": 35.8389,
-    "longitude": 50.8481
+    "longitude": 50.8481,
+    "provinceName": "البرز"
   },
   {
-    "id": "wiki-aad954de5d78",
-    "name": "چهارباغ",
+    "id": "ir-admin-10400018002232",
+    "name": "چهاربرج",
     "aliases": [
-      "چهارباغ",
-      "چهارباغ (البرز)"
+      "چهاربرج"
     ],
-    "latitude": 35.83888889,
-    "longitude": 50.84805556
+    "latitude": 36.44112,
+    "longitude": 46.68879,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-54c337b69093",
@@ -3849,19 +4908,8 @@ export const iranCities: GeoItem[] = [
       "چهاردانگه (اسلام‌شهر)"
     ],
     "latitude": 35.60305556,
-    "longitude": 51.30972222
-  },
-  {
-    "id": "ir-139706",
-    "name": "چهاردنگه",
-    "aliases": [
-      "چهاردنگه",
-      "Chahār Dangeh",
-      "Chahar Dangeh",
-      "چهار دانگه"
-    ],
-    "latitude": 35.6031,
-    "longitude": 51.3098
+    "longitude": 51.30972222,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-329a5dd8d7c4",
@@ -3869,22 +4917,49 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "چیتاب"
     ],
-    "latitude": 30.795,
-    "longitude": 51.32555556
+    "latitude": 30.79394,
+    "longitude": 51.32658,
+    "provinceName": "کهگیلویه و بویراحمد"
   },
   {
     "id": "ir-132382",
-    "name": "حاجی‌آباد",
+    "name": "حاجی آباد",
     "aliases": [
-      "حاجی‌آباد",
       "حاجی آباد",
+      "حاجی‌آباد",
+      "Ḩājjīābād",
+      "Hajjiabad",
+      "حاجی‌آباد (زیرکوه)",
+      "حاجی‌آباد (هرمزگان)"
+    ],
+    "latitude": 28.35735,
+    "longitude": 54.42335,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-1220008001566",
+    "name": "حاجی آباد",
+    "aliases": [
+      "حاجی آباد",
+      "حاجی‌آباد",
       "Ḩājjīābād",
       "Hajjiabad",
       "حاجی‌آباد (زیرکوه)",
       "حاجی‌آباد (هرمزگان)"
     ],
     "latitude": 28.3091,
-    "longitude": 55.9017
+    "longitude": 55.9017,
+    "provinceName": "هرمزگان"
+  },
+  {
+    "id": "ir-admin-1290009002347",
+    "name": "حاجی آباد",
+    "aliases": [
+      "حاجی آباد"
+    ],
+    "latitude": 33.60496,
+    "longitude": 59.9934,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "wiki-99f1a47f9742",
@@ -3892,18 +4967,31 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "حاجیلار"
     ],
-    "latitude": 38.86583333,
-    "longitude": 45.09388889
+    "latitude": 38.8659,
+    "longitude": 45.0938,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-ab150ea98efb",
-    "name": "حبیب‌آباد",
+    "name": "حبیب آباد",
     "aliases": [
+      "حبیب آباد",
       "حبیب‌آباد",
       "حبیب‌آباد (برخوار)"
     ],
-    "latitude": 32.83166667,
-    "longitude": 51.77611111
+    "latitude": 32.8277,
+    "longitude": 51.7757,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-10600014002649",
+    "name": "حر",
+    "aliases": [
+      "حر"
+    ],
+    "latitude": 32.1449,
+    "longitude": 48.39109,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-8959d5ae0bf3",
@@ -3911,8 +4999,39 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "حسامی"
     ],
-    "latitude": 29.96936589,
-    "longitude": 53.87376
+    "latitude": 29.96919,
+    "longitude": 53.87416,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-1070003002082",
+    "name": "حسن آباد",
+    "aliases": [
+      "حسن آباد"
+    ],
+    "latitude": 30.5206,
+    "longitude": 52.4562,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-10900028001023",
+    "name": "حسن آباد",
+    "aliases": [
+      "حسن آباد"
+    ],
+    "latitude": 36.62223,
+    "longitude": 59.74391,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-admin-11000026002187",
+    "name": "حسن اباد",
+    "aliases": [
+      "حسن اباد"
+    ],
+    "latitude": 32.3269,
+    "longitude": 52.1583,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-131831",
@@ -3928,28 +5047,20 @@ export const iranCities: GeoItem[] = [
       "حسن‌آباد (کلات)",
       "حسن‌آباد (اقلید)"
     ],
-    "latitude": 35.36732,
-    "longitude": 51.23498
-  },
-  {
-    "id": "ir-12153294",
-    "name": "حسین آباد قرقی",
-    "aliases": [
-      "حسین آباد قرقی",
-      "Ḩoseynābād-e Qorqī",
-      "Hoseynabad-e Qorqi"
-    ],
-    "latitude": 36.39961,
-    "longitude": 59.67709
+    "latitude": 35.5919,
+    "longitude": 51.3836,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-cd256f11b454",
-    "name": "حسین‌آباد (سنندج)",
+    "name": "حسین آباد",
     "aliases": [
+      "حسین آباد",
       "حسین‌آباد (سنندج)"
     ],
-    "latitude": 35.55,
-    "longitude": 47.15
+    "latitude": 35.09225,
+    "longitude": 47.02723,
+    "provinceName": "کردستان"
   },
   {
     "id": "wiki-0197ea42251b",
@@ -3958,27 +5069,32 @@ export const iranCities: GeoItem[] = [
       "حسینیه",
       "حسینیه (اندیمشک)"
     ],
-    "latitude": 32.683056,
-    "longitude": 48.245
+    "latitude": 32.656,
+    "longitude": 48.2034,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-65c5053ea2bd",
-    "name": "حصار گرم‌خان",
+    "name": "حصارگرمخان",
     "aliases": [
+      "حصارگرمخان",
       "حصار گرم‌خان"
     ],
     "latitude": 37.51944444,
-    "longitude": 57.4825
+    "longitude": 57.4825,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "wiki-86bc080d38dc",
-    "name": "حکم‌آباد",
+    "name": "حکم آباد",
     "aliases": [
+      "حکم آباد",
       "حکم‌آباد",
       "حکم‌آباد (جوین)"
     ],
-    "latitude": 36.63111111,
-    "longitude": 57.60083056
+    "latitude": 36.6312,
+    "longitude": 57.6007,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-22c2c8037379",
@@ -3987,8 +5103,29 @@ export const iranCities: GeoItem[] = [
       "حلب",
       "حلب (زنجان)"
     ],
-    "latitude": 36.29444444,
-    "longitude": 48.05972222
+    "latitude": 36.2953,
+    "longitude": 48.0595,
+    "provinceName": "زنجان"
+  },
+  {
+    "id": "ir-admin-1060008002035",
+    "name": "حمزه",
+    "aliases": [
+      "حمزه"
+    ],
+    "latitude": 32.3919,
+    "longitude": 48.5791,
+    "provinceName": "خوزستان"
+  },
+  {
+    "id": "ir-admin-1210005002163",
+    "name": "حمیدیا",
+    "aliases": [
+      "حمیدیا"
+    ],
+    "latitude": 31.8254,
+    "longitude": 54.3937,
+    "provinceName": "یزد"
   },
   {
     "id": "ir-132105",
@@ -4000,7 +5137,18 @@ export const iranCities: GeoItem[] = [
       "حمیدیه (خوزستان)"
     ],
     "latitude": 31.48285,
-    "longitude": 48.4332
+    "longitude": 48.4332,
+    "provinceName": "خوزستان"
+  },
+  {
+    "id": "ir-admin-1050001002411",
+    "name": "حمیل",
+    "aliases": [
+      "حمیل"
+    ],
+    "latitude": 33.9376,
+    "longitude": 46.7737,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "wiki-5022be411698",
@@ -4009,17 +5157,49 @@ export const iranCities: GeoItem[] = [
       "حنا",
       "حنا (سمیرم)"
     ],
-    "latitude": 31.19888889,
-    "longitude": 51.72472222
+    "latitude": 31.19874,
+    "longitude": 51.72323,
+    "provinceName": "اصفهان"
   },
   {
-    "id": "wiki-0f689786f921",
-    "name": "خارگ",
+    "id": "ir-admin-1010004002584",
+    "name": "حویق",
     "aliases": [
-      "خارگ"
+      "حویق"
     ],
-    "latitude": 29.26138889,
-    "longitude": 50.33055556
+    "latitude": 38.1479,
+    "longitude": 48.8946,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-1080007002086",
+    "name": "خاتون آباد",
+    "aliases": [
+      "خاتون آباد"
+    ],
+    "latitude": 30.0077,
+    "longitude": 55.4205,
+    "provinceName": "کرمان"
+  },
+  {
+    "id": "ir-admin-1180001001516",
+    "name": "خارک",
+    "aliases": [
+      "خارک"
+    ],
+    "latitude": 29.26139,
+    "longitude": 50.33056,
+    "provinceName": "بوشهر"
+  },
+  {
+    "id": "ir-admin-10300024002398",
+    "name": "خاروانا",
+    "aliases": [
+      "خاروانا"
+    ],
+    "latitude": 38.6851,
+    "longitude": 46.1698,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-1160571",
@@ -4030,7 +5210,8 @@ export const iranCities: GeoItem[] = [
       "Khash"
     ],
     "latitude": 28.22107,
-    "longitude": 61.21582
+    "longitude": 61.21582,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-6d2b74ef2530",
@@ -4039,7 +5220,8 @@ export const iranCities: GeoItem[] = [
       "خاکعلی"
     ],
     "latitude": 36.12833333,
-    "longitude": 50.17638889
+    "longitude": 50.17638889,
+    "provinceName": "قزوین"
   },
   {
     "id": "wiki-5563da009554",
@@ -4047,8 +5229,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "خالدآباد"
     ],
-    "latitude": 33.70583333,
-    "longitude": 51.97777778
+    "latitude": 33.6998,
+    "longitude": 51.9883,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-cd46046ec2df",
@@ -4056,8 +5239,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "خامنه"
     ],
-    "latitude": 38.19333333,
-    "longitude": 45.63083333
+    "latitude": 38.1934,
+    "longitude": 45.6309,
+    "provinceName": "آذربایجان شرقی"
+  },
+  {
+    "id": "ir-admin-12700011001183",
+    "name": "خان ببین",
+    "aliases": [
+      "خان ببین"
+    ],
+    "latitude": 37.01225,
+    "longitude": 54.98772,
+    "provinceName": "گلستان"
   },
   {
     "id": "wiki-84ff79f0089f",
@@ -4067,7 +5261,8 @@ export const iranCities: GeoItem[] = [
       "خانلق (شیروان)"
     ],
     "latitude": 37.42293889,
-    "longitude": 57.93931944
+    "longitude": 57.93931944,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "wiki-6a8069d85632",
@@ -4075,41 +5270,50 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "خانوک"
     ],
-    "latitude": 30.72277778,
-    "longitude": 56.78027778
+    "latitude": 30.7174,
+    "longitude": 56.7759,
+    "provinceName": "کرمان"
   },
   {
-    "id": "ir-32895",
-    "name": "خاور شهر",
+    "id": "ir-admin-1070007002057",
+    "name": "خانه زنیان",
     "aliases": [
-      "خاور شهر",
-      "Khāvar Shahr",
-      "Khavar Shahr",
-      "شهرک خاور شهر"
+      "خانه زنیان"
     ],
-    "latitude": 35.55597,
-    "longitude": 51.55892
+    "latitude": 29.6717,
+    "longitude": 52.152,
+    "provinceName": "فارس"
   },
   {
-    "id": "ir-8421803",
-    "name": "خبر آباد",
+    "id": "ir-admin-10700012002776",
+    "name": "خانیمن",
     "aliases": [
-      "خبر آباد",
-      "Khabarābād",
-      "Khabarabad",
-      "خیر آباد"
+      "خانیمن"
     ],
-    "latitude": 35.54263,
-    "longitude": 51.14813
+    "latitude": 30.349,
+    "longitude": 52.24327,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-10700034001300",
+    "name": "خاوران",
+    "aliases": [
+      "خاوران"
+    ],
+    "latitude": 28.93825,
+    "longitude": 53.31304,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-6edec750ffa6",
-    "name": "خداجو",
+    "name": "خداجو(خراجو)",
     "aliases": [
+      "خداجو(خراجو)",
       "خداجو"
     ],
-    "latitude": 37.31305556,
-    "longitude": 46.53055556
+    "latitude": 37.3131,
+    "longitude": 46.5305,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-127613",
@@ -4120,7 +5324,8 @@ export const iranCities: GeoItem[] = [
       "Kherameh"
     ],
     "latitude": 29.49896,
-    "longitude": 53.31199
+    "longitude": 53.31199,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-5fce1f3d6a59",
@@ -4128,20 +5333,32 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "خرانق"
     ],
-    "latitude": 32.34611111,
-    "longitude": 54.66583333
+    "latitude": 32.3462,
+    "longitude": 54.66575,
+    "provinceName": "یزد"
+  },
+  {
+    "id": "ir-admin-1020005001162",
+    "name": "خرم آباد",
+    "aliases": [
+      "خرم آباد"
+    ],
+    "latitude": 36.78265,
+    "longitude": 50.87224,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-127349",
-    "name": "خرم‌آباد",
+    "name": "خرم آباد",
     "aliases": [
+      "خرم آباد",
       "خرم‌آباد",
       "Khorramabad",
-      "خرم آباد",
       "خرم‌آباد (تنکابن)"
     ],
     "latitude": 33.48778,
-    "longitude": 48.35583
+    "longitude": 48.35583,
+    "provinceName": "لرستان"
   },
   {
     "id": "ir-41210",
@@ -4151,7 +5368,8 @@ export const iranCities: GeoItem[] = [
       "Khorramdarreh"
     ],
     "latitude": 36.20777,
-    "longitude": 49.19527
+    "longitude": 49.19527,
+    "provinceName": "زنجان"
   },
   {
     "id": "wiki-0471a035bc40",
@@ -4160,8 +5378,9 @@ export const iranCities: GeoItem[] = [
       "خرمدشت",
       "خرمدشت (تاکستان)"
     ],
-    "latitude": 35.92472222,
-    "longitude": 49.51583333
+    "latitude": 35.9295,
+    "longitude": 49.5117,
+    "provinceName": "قزوین"
   },
   {
     "id": "ir-127319",
@@ -4174,7 +5393,8 @@ export const iranCities: GeoItem[] = [
       "خرمشھر"
     ],
     "latitude": 30.44079,
-    "longitude": 48.18428
+    "longitude": 48.18428,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-6a9a75ebf265",
@@ -4183,27 +5403,20 @@ export const iranCities: GeoItem[] = [
       "خرو",
       "خرو (زبرخان)"
     ],
-    "latitude": 36.16861111,
-    "longitude": 59.05083333
-  },
-  {
-    "id": "ir-127219",
-    "name": "خسرو شهر",
-    "aliases": [
-      "خسرو شهر",
-      "Khosrowshahr"
-    ],
-    "latitude": 37.9497,
-    "longitude": 46.0528
+    "latitude": 35.46265,
+    "longitude": 58.05727,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-b3c2b531b1e1",
-    "name": "خسروآباد (پردیس)",
+    "name": "خسروآباد",
     "aliases": [
+      "خسروآباد",
       "خسروآباد (پردیس)"
     ],
-    "latitude": 35.75527778,
-    "longitude": 51.70027778
+    "latitude": 35.75081,
+    "longitude": 51.7003,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-014987cba2b3",
@@ -4212,7 +5425,28 @@ export const iranCities: GeoItem[] = [
       "خسروشاه"
     ],
     "latitude": 37.94972222,
-    "longitude": 46.05277778
+    "longitude": 46.05277778,
+    "provinceName": "آذربایجان شرقی"
+  },
+  {
+    "id": "ir-admin-10700010002109",
+    "name": "خشت",
+    "aliases": [
+      "خشت"
+    ],
+    "latitude": 29.5679,
+    "longitude": 51.3395,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-1010005001125",
+    "name": "خشکبیجار",
+    "aliases": [
+      "خشکبیجار"
+    ],
+    "latitude": 37.37389,
+    "longitude": 49.75842,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-bee2534cc830",
@@ -4222,7 +5456,8 @@ export const iranCities: GeoItem[] = [
       "خشکرود (زرندیه)"
     ],
     "latitude": 35.39833333,
-    "longitude": 50.33388889
+    "longitude": 50.33388889,
+    "provinceName": "مرکزی"
   },
   {
     "id": "wiki-b318d333ccb3",
@@ -4231,17 +5466,20 @@ export const iranCities: GeoItem[] = [
       "خضرآباد",
       "خضرآباد (اشکذر)"
     ],
-    "latitude": 31.86583333,
-    "longitude": 53.95277778
+    "latitude": 31.8657,
+    "longitude": 53.9529,
+    "provinceName": "یزد"
   },
   {
     "id": "wiki-8a9f310d9378",
-    "name": "خضری دشت‌بیاض",
+    "name": "خضری دشت بیاض",
     "aliases": [
+      "خضری دشت بیاض",
       "خضری دشت‌بیاض"
     ],
-    "latitude": 34.02277778,
-    "longitude": 58.81277778
+    "latitude": 34.0217,
+    "longitude": 58.8141,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "ir-128008",
@@ -4254,31 +5492,45 @@ export const iranCities: GeoItem[] = [
       "خلخال (اردبیل)"
     ],
     "latitude": 37.61837,
-    "longitude": 48.52928
+    "longitude": 48.52928,
+    "provinceName": "اردبیل"
+  },
+  {
+    "id": "ir-admin-1040007002734",
+    "name": "خلیفان",
+    "aliases": [
+      "خلیفان"
+    ],
+    "latitude": 36.5076,
+    "longitude": 45.7967,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "ir-128025",
-    "name": "خلیل‌آباد",
+    "name": "خلیل آباد",
     "aliases": [
-      "خلیل‌آباد",
       "خلیل آباد",
+      "خلیل‌آباد",
       "Khalīlābād",
       "Khalilabad",
       "خلیل‌آباد (ایران)"
     ],
     "latitude": 35.25395,
-    "longitude": 58.28566
+    "longitude": 58.28566,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-13590593",
-    "name": "خلیل‌شهر",
+    "name": "خلیل شهر",
     "aliases": [
+      "خلیل شهر",
       "خلیل‌شهر",
       "Khalīl Shahr",
       "Khalil Shahr"
     ],
-    "latitude": 36.7022,
-    "longitude": 53.64203
+    "latitude": 36.7013,
+    "longitude": 53.6402,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-15eb95129c89",
@@ -4286,8 +5538,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "خمارلو"
     ],
-    "latitude": 39.14888889,
-    "longitude": 47.03472222
+    "latitude": 39.15889,
+    "longitude": 47.03288,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-127415",
@@ -4298,7 +5551,8 @@ export const iranCities: GeoItem[] = [
       "Khomam"
     ],
     "latitude": 37.39016,
-    "longitude": 49.65846
+    "longitude": 49.65846,
+    "provinceName": "گیلان"
   },
   {
     "id": "ir-127992",
@@ -4311,7 +5565,8 @@ export const iranCities: GeoItem[] = [
       "بندرخمیر"
     ],
     "latitude": 26.9521,
-    "longitude": 55.5851
+    "longitude": 55.5851,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "ir-127403",
@@ -4321,7 +5576,35 @@ export const iranCities: GeoItem[] = [
       "Khomeyn"
     ],
     "latitude": 33.63889,
-    "longitude": 50.08003
+    "longitude": 50.08003,
+    "provinceName": "مرکزی"
+  },
+  {
+    "id": "ir-418710",
+    "name": "خمینی شهر",
+    "aliases": [
+      "خمینی شهر",
+      "سده",
+      "خمینی‌شهر",
+      "Khomeynī Shahr",
+      "Khomeyni Shahr",
+      "مهربین",
+      "سده (خواف)",
+      "سده (اقلید)"
+    ],
+    "latitude": 32.6856,
+    "longitude": 51.53609,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-10600011002794",
+    "name": "خنافره",
+    "aliases": [
+      "خنافره"
+    ],
+    "latitude": 30.6326669,
+    "longitude": 48.6331848,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-127382",
@@ -4331,7 +5614,18 @@ export const iranCities: GeoItem[] = [
       "Khonj"
     ],
     "latitude": 27.8913,
-    "longitude": 53.4344
+    "longitude": 53.4344,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-10000013002773",
+    "name": "خنجین",
+    "aliases": [
+      "خنجین"
+    ],
+    "latitude": 34.74611,
+    "longitude": 49.51889,
+    "provinceName": "مرکزی"
   },
   {
     "id": "wiki-a5668430f595",
@@ -4339,8 +5633,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "خنداب"
     ],
-    "latitude": 34.39277778,
-    "longitude": 49.18388889
+    "latitude": 34.3928,
+    "longitude": 49.1841,
+    "provinceName": "مرکزی"
   },
   {
     "id": "wiki-9a6eb12f6a87",
@@ -4349,7 +5644,8 @@ export const iranCities: GeoItem[] = [
       "خواجو شهر"
     ],
     "latitude": 29.26722222,
-    "longitude": 55.82611111
+    "longitude": 55.82611111,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-dcfd3ef4c5af",
@@ -4358,8 +5654,9 @@ export const iranCities: GeoItem[] = [
       "خواجه",
       "خواجه (هریس)"
     ],
-    "latitude": 38.15083333,
-    "longitude": 46.58138889
+    "latitude": 38.1529,
+    "longitude": 46.5828,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-32dfa6c7f3da",
@@ -4369,7 +5666,8 @@ export const iranCities: GeoItem[] = [
       "خواجه جمالی (بختگان)"
     ],
     "latitude": 29.81490381,
-    "longitude": 53.84343211
+    "longitude": 53.84343211,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-1160544",
@@ -4380,7 +5678,8 @@ export const iranCities: GeoItem[] = [
       "Khvaf"
     ],
     "latitude": 34.57232,
-    "longitude": 60.14404
+    "longitude": 60.14404,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-127033",
@@ -4391,7 +5690,19 @@ export const iranCities: GeoItem[] = [
       "Khansar"
     ],
     "latitude": 33.22052,
-    "longitude": 50.31497
+    "longitude": 50.31497,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "wiki-e07b7db0bb9d",
+    "name": "خور",
+    "aliases": [
+      "خور",
+      "خور (فارس)"
+    ],
+    "latitude": 27.64666667,
+    "longitude": 54.34388889,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-8907e6b4307c",
@@ -4400,18 +5711,9 @@ export const iranCities: GeoItem[] = [
       "خور",
       "خور (اصفهان)"
     ],
-    "latitude": 33.775,
-    "longitude": 55.08333333
-  },
-  {
-    "id": "wiki-e07b7db0bb9d",
-    "name": "خور (فارس)",
-    "aliases": [
-      "خور (فارس)",
-      "خور"
-    ],
-    "latitude": 27.64666667,
-    "longitude": 54.34388889
+    "latitude": 33.77512,
+    "longitude": 55.08329,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-418699",
@@ -4421,8 +5723,9 @@ export const iranCities: GeoItem[] = [
       "Khowrzūq",
       "Khowrzuq"
     ],
-    "latitude": 32.778,
-    "longitude": 51.64685
+    "latitude": 32.7823,
+    "longitude": 51.6544,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-d3a925114207",
@@ -4431,7 +5734,8 @@ export const iranCities: GeoItem[] = [
       "خورسند"
     ],
     "latitude": 30.15333333,
-    "longitude": 55.08833333
+    "longitude": 55.08833333,
+    "provinceName": "کرمان"
   },
   {
     "id": "ir-127014",
@@ -4442,7 +5746,8 @@ export const iranCities: GeoItem[] = [
       "Khurmuj"
     ],
     "latitude": 28.6543,
-    "longitude": 51.38
+    "longitude": 51.38,
+    "provinceName": "بوشهر"
   },
   {
     "id": "wiki-077f38529afd",
@@ -4452,7 +5757,8 @@ export const iranCities: GeoItem[] = [
       "خوزی (مهر)"
     ],
     "latitude": 27.44801981,
-    "longitude": 52.97237281
+    "longitude": 52.97237281,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-ba9214b8bb6a",
@@ -4460,46 +5766,42 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "خوسف"
     ],
-    "latitude": 32.78083333,
-    "longitude": 58.89055556
-  },
-  {
-    "id": "ir-1160907",
-    "name": "خوشاب",
-    "aliases": [
-      "خوشاب",
-      "Jālq",
-      "Jalq"
-    ],
-    "latitude": 27.60287,
-    "longitude": 62.71023
+    "latitude": 32.78108,
+    "longitude": 58.89002,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "wiki-903bb6d2ba6c",
-    "name": "خوش‌رودپی",
+    "name": "خوش رودپی",
     "aliases": [
+      "خوش رودپی",
       "خوش‌رودپی"
     ],
     "latitude": 36.36944444,
-    "longitude": 52.56527778
+    "longitude": 52.56527778,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-dac6f760ad92",
-    "name": "خوشه‌مهر",
+    "name": "خوشه مهر",
     "aliases": [
+      "خوشه مهر",
       "خوشه‌مهر"
     ],
     "latitude": 37.30972222,
-    "longitude": 46.14
+    "longitude": 46.14,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-e927184220f9",
-    "name": "خومه‌زار",
+    "name": "خومه زار",
     "aliases": [
+      "خومه زار",
       "خومه‌زار"
     ],
-    "latitude": 30.00833333,
-    "longitude": 51.57666667
+    "latitude": 30.009,
+    "longitude": 51.5738,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-126972",
@@ -4510,7 +5812,8 @@ export const iranCities: GeoItem[] = [
       "Khuy"
     ],
     "latitude": 38.5503,
-    "longitude": 44.9521
+    "longitude": 44.9521,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-b0720cfc2422",
@@ -4520,7 +5823,8 @@ export const iranCities: GeoItem[] = [
       "خیرآباد (خرامه)"
     ],
     "latitude": 29.56366219,
-    "longitude": 53.07528111
+    "longitude": 53.07528111,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-baa806014cbb",
@@ -4529,7 +5833,8 @@ export const iranCities: GeoItem[] = [
       "خیرگو"
     ],
     "latitude": 27.51528056,
-    "longitude": 53.25108056
+    "longitude": 53.25108056,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-68bffb3e6e7c",
@@ -4537,8 +5842,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دابودشت"
     ],
-    "latitude": 36.48444444,
-    "longitude": 52.45166667
+    "latitude": 36.4793,
+    "longitude": 52.4497,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-137956",
@@ -4550,7 +5856,8 @@ export const iranCities: GeoItem[] = [
       "داراب ٢"
     ],
     "latitude": 28.75171,
-    "longitude": 54.54065
+    "longitude": 54.54065,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-137929",
@@ -4562,7 +5869,8 @@ export const iranCities: GeoItem[] = [
       "فریدن"
     ],
     "latitude": 32.98741,
-    "longitude": 50.4108
+    "longitude": 50.4108,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-bb4c60a34d7c",
@@ -4571,7 +5879,8 @@ export const iranCities: GeoItem[] = [
       "دارخوین"
     ],
     "latitude": 30.74388889,
-    "longitude": 48.42416667
+    "longitude": 48.42416667,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-f72b867ad72a",
@@ -4581,17 +5890,29 @@ export const iranCities: GeoItem[] = [
       "داریان (شبستر)"
     ],
     "latitude": 38.21611111,
-    "longitude": 45.62861111
+    "longitude": 45.62861111,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-945279098c4b",
-    "name": "داریان (فارس)",
+    "name": "داریان",
     "aliases": [
-      "داریان (فارس)",
-      "داریان"
+      "داریان",
+      "داریان (فارس)"
     ],
-    "latitude": 29.5625,
-    "longitude": 52.93055556
+    "latitude": 29.5601,
+    "longitude": 52.9223,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-1020006001069",
+    "name": "دالخانی",
+    "aliases": [
+      "دالخانی"
+    ],
+    "latitude": 36.8342651,
+    "longitude": 50.7345727,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-bb0b17f24dec",
@@ -4599,8 +5920,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دالکی"
     ],
-    "latitude": 29.42944444,
-    "longitude": 51.29305556
+    "latitude": 29.4294,
+    "longitude": 51.2931,
+    "provinceName": "بوشهر"
   },
   {
     "id": "ir-138025",
@@ -4611,7 +5933,8 @@ export const iranCities: GeoItem[] = [
       "Damghan"
     ],
     "latitude": 36.1679,
-    "longitude": 54.34292
+    "longitude": 54.34292,
+    "provinceName": "سمنان"
   },
   {
     "id": "wiki-401b06912fb3",
@@ -4620,8 +5943,9 @@ export const iranCities: GeoItem[] = [
       "دامنه",
       "دامنه (فریدن)"
     ],
-    "latitude": 33.0175,
-    "longitude": 50.48888889
+    "latitude": 33.01616,
+    "longitude": 50.48862,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-c3c1ba74de2c",
@@ -4629,8 +5953,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دانسفهان"
     ],
-    "latitude": 35.81083333,
-    "longitude": 49.74222222
+    "latitude": 35.81151,
+    "longitude": 49.74315,
+    "provinceName": "قزوین"
+  },
+  {
+    "id": "ir-admin-1000001002536",
+    "name": "داودآباد",
+    "aliases": [
+      "داودآباد"
+    ],
+    "latitude": 34.2922,
+    "longitude": 49.8553,
+    "provinceName": "مرکزی"
   },
   {
     "id": "wiki-82b2af136a99",
@@ -4638,8 +5973,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "داورزن"
     ],
-    "latitude": 36.35166667,
-    "longitude": 56.87833333
+    "latitude": 36.35088,
+    "longitude": 56.87547,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-3d18570c201a",
@@ -4647,8 +5983,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دبیران"
     ],
-    "latitude": 28.40611111,
-    "longitude": 54.18777778
+    "latitude": 28.4064,
+    "longitude": 54.1884,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-38141fca3b7a",
@@ -4656,8 +5993,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "درب بهشت"
     ],
-    "latitude": 29.24166667,
-    "longitude": 57.32527778
+    "latitude": 29.2332,
+    "longitude": 57.3372,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-e88fe21e117d",
@@ -4665,8 +6003,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "درب گنبد"
     ],
-    "latitude": 33.68944444,
-    "longitude": 47.15138889
+    "latitude": 33.6894,
+    "longitude": 47.1514,
+    "provinceName": "لرستان"
   },
   {
     "id": "wiki-9893d175c31d",
@@ -4674,8 +6013,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "درجزین"
     ],
-    "latitude": 35.65361111,
-    "longitude": 53.33777778
+    "latitude": 35.6539,
+    "longitude": 53.338,
+    "provinceName": "سمنان"
   },
   {
     "id": "ir-418896",
@@ -4685,8 +6025,19 @@ export const iranCities: GeoItem[] = [
       "Dorcheh Pīāz",
       "Dorcheh Piaz"
     ],
-    "latitude": 32.61528,
-    "longitude": 51.55556
+    "latitude": 32.61668,
+    "longitude": 51.55724,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-1290003002897",
+    "name": "درح",
+    "aliases": [
+      "درح"
+    ],
+    "latitude": 32.2879,
+    "longitude": 60.4955,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "wiki-4f5856deaecc",
@@ -4695,7 +6046,8 @@ export const iranCities: GeoItem[] = [
       "درق"
     ],
     "latitude": 36.96944444,
-    "longitude": 56.26111111
+    "longitude": 56.26111111,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "ir-137585",
@@ -4706,7 +6058,8 @@ export const iranCities: GeoItem[] = [
       "دره گز"
     ],
     "latitude": 37.44447,
-    "longitude": 59.10809
+    "longitude": 59.10809,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-137782",
@@ -4717,8 +6070,9 @@ export const iranCities: GeoItem[] = [
       "Dargahan",
       "بندر درگهان"
     ],
-    "latitude": 26.96316,
-    "longitude": 56.06278
+    "latitude": 26.9675,
+    "longitude": 56.0778,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "wiki-343235ef118e",
@@ -4727,21 +6081,9 @@ export const iranCities: GeoItem[] = [
       "درود",
       "درود (زبرخان)"
     ],
-    "latitude": 36.13944444,
-    "longitude": 59.11722222
-  },
-  {
-    "id": "ir-8384992",
-    "name": "درویشه",
-    "aliases": [
-      "درویشه",
-      "Darvīsheh",
-      "Darvisheh",
-      "درویش آباد",
-      "درویشیه"
-    ],
-    "latitude": 31.24386,
-    "longitude": 48.66603
+    "latitude": 36.1387,
+    "longitude": 59.1162,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-137436",
@@ -4749,11 +6091,11 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دره شهر",
       "Darreh Shahr",
-      "دەڕەشار",
-      "شهرستان دره شهر"
+      "دەڕەشار"
     ],
     "latitude": 33.14447,
-    "longitude": 47.3799
+    "longitude": 47.3799,
+    "provinceName": "ایلام"
   },
   {
     "id": "wiki-8a15150d730b",
@@ -4761,8 +6103,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دزج"
     ],
-    "latitude": 35.06361111,
-    "longitude": 47.96611111
+    "latitude": 35.06405,
+    "longitude": 47.96609,
+    "provinceName": "کردستان"
   },
   {
     "id": "ir-136256",
@@ -4773,7 +6116,8 @@ export const iranCities: GeoItem[] = [
       "دیزفول"
     ],
     "latitude": 32.38114,
-    "longitude": 48.40581
+    "longitude": 48.40581,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-1bbe1d6b77ba",
@@ -4781,8 +6125,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دژکرد"
     ],
-    "latitude": 30.72316689,
-    "longitude": 51.954873
+    "latitude": 30.72077,
+    "longitude": 51.95906,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-dd570bf309b5",
@@ -4792,7 +6137,8 @@ export const iranCities: GeoItem[] = [
       "دستجرد (قم)"
     ],
     "latitude": 34.5519444,
-    "longitude": 50.2483333
+    "longitude": 50.2483333,
+    "provinceName": "قم"
   },
   {
     "id": "ir-418886",
@@ -4802,8 +6148,39 @@ export const iranCities: GeoItem[] = [
       "Dastgerd",
       "دستگرد (برخوار)"
     ],
-    "latitude": 32.80208,
-    "longitude": 51.66361
+    "latitude": 32.8016,
+    "longitude": 51.664,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-1140007002729",
+    "name": "دستنا",
+    "aliases": [
+      "دستنا"
+    ],
+    "latitude": 32.05834,
+    "longitude": 50.77051,
+    "provinceName": "چهارمحال و بختیاری"
+  },
+  {
+    "id": "ir-admin-1160003001063",
+    "name": "دشت عباس",
+    "aliases": [
+      "دشت عباس"
+    ],
+    "latitude": 32.4145,
+    "longitude": 47.8245,
+    "provinceName": "ایلام"
+  },
+  {
+    "id": "ir-admin-1140005002808",
+    "name": "دشتک",
+    "aliases": [
+      "دشتک"
+    ],
+    "latitude": 32.16295,
+    "longitude": 50.45324,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "wiki-46fc4ad669b6",
@@ -4812,18 +6189,19 @@ export const iranCities: GeoItem[] = [
       "دشتکار",
       "دشتکار (بردسیر)"
     ],
-    "latitude": 29.90722222,
-    "longitude": 56.66305556
+    "latitude": 29.9073,
+    "longitude": 56.663,
+    "provinceName": "کرمان"
   },
   {
-    "id": "wiki-fd5e1df5edf8",
+    "id": "ir-admin-12200011002751",
     "name": "دشتی",
     "aliases": [
-      "دشتی",
-      "دشتی (پارسیان)"
+      "دشتی"
     ],
-    "latitude": 27.17806111,
-    "longitude": 53.00471944
+    "latitude": 27.291836,
+    "longitude": 56.153164,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "wiki-1b878827c15e",
@@ -4832,7 +6210,8 @@ export const iranCities: GeoItem[] = [
       "دلبران"
     ],
     "latitude": 35.24583333,
-    "longitude": 47.98583333
+    "longitude": 47.98583333,
+    "provinceName": "کردستان"
   },
   {
     "id": "wiki-1703dfebf331",
@@ -4841,8 +6220,19 @@ export const iranCities: GeoItem[] = [
       "دلگشا",
       "دلگشا (ملکشاهی)"
     ],
-    "latitude": 33.40583333,
-    "longitude": 46.59472222
+    "latitude": 33.4056,
+    "longitude": 46.5945,
+    "provinceName": "ایلام"
+  },
+  {
+    "id": "ir-admin-12700011002195",
+    "name": "دلند",
+    "aliases": [
+      "دلند"
+    ],
+    "latitude": 37.0355,
+    "longitude": 55.0492,
+    "provinceName": "گلستان"
   },
   {
     "id": "wiki-4eb1cfdcd78f",
@@ -4850,8 +6240,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دلوار"
     ],
-    "latitude": 28.7625,
-    "longitude": 51.06972222
+    "latitude": 28.7629,
+    "longitude": 51.0719,
+    "provinceName": "بوشهر"
   },
   {
     "id": "ir-136399",
@@ -4863,7 +6254,8 @@ export const iranCities: GeoItem[] = [
       "دلیجان (مرکزی)"
     ],
     "latitude": 33.9905,
-    "longitude": 50.6838
+    "longitude": 50.6838,
+    "provinceName": "مرکزی"
   },
   {
     "id": "ir-138042",
@@ -4876,7 +6268,18 @@ export const iranCities: GeoItem[] = [
       "دماوند (شهر)"
     ],
     "latitude": 35.71842,
-    "longitude": 52.06958
+    "longitude": 52.06958,
+    "provinceName": "تهران"
+  },
+  {
+    "id": "ir-admin-1130008002357",
+    "name": "دمق",
+    "aliases": [
+      "دمق"
+    ],
+    "latitude": 35.44235,
+    "longitude": 48.82322,
+    "provinceName": "همدان"
   },
   {
     "id": "wiki-a1554aca9f79",
@@ -4884,39 +6287,20 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دندی"
     ],
-    "latitude": 36.54944444,
-    "longitude": 47.62638889
-  },
-  {
-    "id": "ir-130531",
-    "name": "دو",
-    "aliases": [
-      "دو",
-      "Jahrom",
-      "جهرم"
-    ],
-    "latitude": 28.5,
-    "longitude": 53.5605
-  },
-  {
-    "id": "ir-138226",
-    "name": "دوبران",
-    "aliases": [
-      "دوبران",
-      "Dabīrān",
-      "Dabiran"
-    ],
-    "latitude": 28.40612,
-    "longitude": 54.18797
+    "latitude": 36.5542,
+    "longitude": 47.6208,
+    "provinceName": "زنجان"
   },
   {
     "id": "wiki-ed2252fa7890",
-    "name": "دوبرجی",
+    "name": "دو برجی",
     "aliases": [
+      "دو برجی",
       "دوبرجی"
     ],
     "latitude": 28.30719881,
-    "longitude": 55.19239869
+    "longitude": 55.19239869,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-a68aa3f66826",
@@ -4925,7 +6309,8 @@ export const iranCities: GeoItem[] = [
       "دوراهک"
     ],
     "latitude": 27.94611111,
-    "longitude": 51.95972222
+    "longitude": 51.95972222,
+    "provinceName": "بوشهر"
   },
   {
     "id": "ir-135878",
@@ -4936,7 +6321,8 @@ export const iranCities: GeoItem[] = [
       "Dorud"
     ],
     "latitude": 33.49218,
-    "longitude": 49.0616
+    "longitude": 49.0616,
+    "provinceName": "لرستان"
   },
   {
     "id": "wiki-0cf88fb42bda",
@@ -4945,7 +6331,8 @@ export const iranCities: GeoItem[] = [
       "دوزدوزان"
     ],
     "latitude": 37.94972222,
-    "longitude": 47.12
+    "longitude": 47.12,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-6891fc15d363",
@@ -4953,8 +6340,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دوزه"
     ],
-    "latitude": 28.701389,
-    "longitude": 52.961111
+    "latitude": 28.7014,
+    "longitude": 52.96136,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-1270007002883",
+    "name": "دوزین",
+    "aliases": [
+      "دوزین"
+    ],
+    "latitude": 37.12614,
+    "longitude": 55.57906,
+    "provinceName": "گلستان"
   },
   {
     "id": "wiki-723a331c246f",
@@ -4962,67 +6360,90 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دوساری"
     ],
-    "latitude": 28.425,
-    "longitude": 57.9425
+    "latitude": 28.4292,
+    "longitude": 57.9424,
+    "provinceName": "کرمان"
   },
   {
-    "id": "ir-404592",
-    "name": "دوشا",
+    "id": "ir-admin-11100011002514",
+    "name": "دوست محمد",
     "aliases": [
-      "دوشا",
-      "Vaḩīdīyeh",
-      "Vahidiyeh",
-      "وحیدیه",
-      "وحیدیه غربی",
-      "وحیدییه"
+      "دوست محمد"
     ],
-    "latitude": 35.71445,
-    "longitude": 51.47086
+    "latitude": 31.1447,
+    "longitude": 61.7925,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
-    "id": "wiki-c30f0e574b5b",
+    "id": "ir-136014",
     "name": "دوگنبدان",
     "aliases": [
-      "دوگنبدان"
+      "دوگنبدان",
+      "گچساران",
+      "Dogonbadan",
+      "دو گنبدان"
     ],
-    "latitude": 30.35861111,
-    "longitude": 50.79805556
+    "latitude": 30.3586,
+    "longitude": 50.7981,
+    "provinceName": "کهگیلویه و بویراحمد"
+  },
+  {
+    "id": "ir-admin-10900035002135",
+    "name": "دولت آباد",
+    "aliases": [
+      "دولت آباد"
+    ],
+    "latitude": 35.28219,
+    "longitude": 59.51972,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-418868",
-    "name": "دولت‌آباد",
+    "name": "دولت آباد",
     "aliases": [
-      "دولت‌آباد",
       "دولت آباد",
+      "دولت‌آباد",
       "Dowlatābād",
       "Dowlatabad",
       "دولت‌آباد (برخوار)",
       "دولت‌آباد (زاوه)"
     ],
     "latitude": 32.79978,
-    "longitude": 51.69553
+    "longitude": 51.69553,
+    "provinceName": "اصفهان"
   },
   {
-    "id": "ir-137025",
-    "name": "ده بید",
+    "id": "ir-admin-1110003002915",
+    "name": "ده رییس",
     "aliases": [
-      "ده بید",
-      "Şafāshahr",
-      "Safashahr",
-      "صفاشهر"
-    ],
-    "latitude": 30.6131,
-    "longitude": 53.1954
-  },
-  {
-    "id": "wiki-8d045712c512",
-    "name": "ده رئیس",
-    "aliases": [
-      "ده رئیس",
-      "ده رئیس (خاش)"
+      "ده رییس"
     ],
     "latitude": 27.67138889,
-    "longitude": 61.02833056
+    "longitude": 61.02833056,
+    "provinceName": "سیستان و بلوچستان"
+  },
+  {
+    "id": "wiki-985e076466ef",
+    "name": "ده سرخ",
+    "aliases": [
+      "ده سرخ",
+      "ده‌سرخ",
+      "ده‌سرخ (مبارکه)"
+    ],
+    "latitude": 32.40984,
+    "longitude": 51.66466,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "wiki-87491a800a5f",
+    "name": "ده کهان",
+    "aliases": [
+      "ده کهان",
+      "دهکهان"
+    ],
+    "latitude": 27.72444444,
+    "longitude": 57.56944444,
+    "provinceName": "کرمان"
   },
   {
     "id": "ir-137057",
@@ -5033,7 +6454,25 @@ export const iranCities: GeoItem[] = [
       "Dehaqan"
     ],
     "latitude": 31.93986,
-    "longitude": 51.64731
+    "longitude": 51.64731,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-1220007001574",
+    "name": "دهبارز",
+    "aliases": [
+      "دهبارز",
+      "روگن",
+      "Rūdān",
+      "Rudan",
+      "بالا شهر",
+      "بالا شهر ده بارز",
+      "رودان",
+      "قلعۀ ده بارز"
+    ],
+    "latitude": 27.442002,
+    "longitude": 57.191918,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "wiki-ac140162cd08",
@@ -5042,8 +6481,9 @@ export const iranCities: GeoItem[] = [
       "دهبکری",
       "دهبکری (بم)"
     ],
-    "latitude": 29.05222222,
-    "longitude": 57.91
+    "latitude": 29.0523,
+    "longitude": 57.91,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-d89053f64338",
@@ -5051,8 +6491,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دهج"
     ],
-    "latitude": 30.69277778,
-    "longitude": 54.87777778
+    "latitude": 30.6908,
+    "longitude": 54.8777,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-452ee6c85ba2",
@@ -5060,8 +6501,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دهدز"
     ],
-    "latitude": 31.70972222,
-    "longitude": 50.28833333
+    "latitude": 31.7096,
+    "longitude": 50.28827,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-136987",
@@ -5072,7 +6514,8 @@ export const iranCities: GeoItem[] = [
       "دهدست"
     ],
     "latitude": 30.79337,
-    "longitude": 50.56508
+    "longitude": 50.56508,
+    "provinceName": "کهگیلویه و بویراحمد"
   },
   {
     "id": "wiki-2933b1015f50",
@@ -5080,30 +6523,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دهرم"
     ],
-    "latitude": 28.49193889,
-    "longitude": 52.30471944
-  },
-  {
-    "id": "ir-31321",
-    "name": "دهرود",
-    "aliases": [
-      "دهرود",
-      "Dehrūd",
-      "Dehrud",
-      "ده رود"
-    ],
-    "latitude": 36.35028,
-    "longitude": 59.65657
-  },
-  {
-    "id": "wiki-985e076466ef",
-    "name": "ده‌سرخ",
-    "aliases": [
-      "ده‌سرخ",
-      "ده‌سرخ (مبارکه)"
-    ],
-    "latitude": 32.45,
-    "longitude": 51.71666667
+    "latitude": 28.4921,
+    "longitude": 52.3037,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-77111901afb3",
@@ -5111,8 +6533,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دهق"
     ],
-    "latitude": 33.10444444,
-    "longitude": 50.95888889
+    "latitude": 33.105,
+    "longitude": 50.963,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-6305159da92c",
@@ -5121,16 +6544,8 @@ export const iranCities: GeoItem[] = [
       "دهکویه"
     ],
     "latitude": 27.85361111,
-    "longitude": 54.42361111
-  },
-  {
-    "id": "wiki-87491a800a5f",
-    "name": "دهکهان",
-    "aliases": [
-      "دهکهان"
-    ],
-    "latitude": 27.72444444,
-    "longitude": 57.56944444
+    "longitude": 54.42361111,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-dfd17979558d",
@@ -5138,8 +6553,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دهگلان"
     ],
-    "latitude": 35.27777778,
-    "longitude": 47.41833333
+    "latitude": 35.278,
+    "longitude": 47.4184,
+    "provinceName": "کردستان"
   },
   {
     "id": "ir-136702",
@@ -5152,16 +6568,19 @@ export const iranCities: GeoItem[] = [
       "ده لوان"
     ],
     "latitude": 32.6941,
-    "longitude": 47.2679
+    "longitude": 47.2679,
+    "provinceName": "ایلام"
   },
   {
     "id": "wiki-db244061b076",
-    "name": "دهنو اسلام‌آباد",
+    "name": "دهنو اسلام آباد",
     "aliases": [
+      "دهنو اسلام آباد",
       "دهنو اسلام‌آباد"
     ],
     "latitude": 28.79027778,
-    "longitude": 59.1275
+    "longitude": 59.1275,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-392073872ee0",
@@ -5169,17 +6588,20 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دیباج"
     ],
-    "latitude": 36.426944,
-    "longitude": 54.223611
+    "latitude": 36.4283,
+    "longitude": 54.2295,
+    "provinceName": "سمنان"
   },
   {
     "id": "wiki-2c4934dbf01d",
-    "name": "دیزج حسین‌بیگ",
+    "name": "دیزج حسین بیگ",
     "aliases": [
+      "دیزج حسین بیگ",
       "دیزج حسین‌بیگ"
     ],
-    "latitude": 38.46971944,
-    "longitude": 45.61333056
+    "latitude": 38.4669,
+    "longitude": 45.6176,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-924db44f7ed5",
@@ -5187,8 +6609,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دیزج دیز"
     ],
-    "latitude": 38.46166667,
-    "longitude": 45.02444444
+    "latitude": 38.4619,
+    "longitude": 45.02447,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "ir-418875",
@@ -5198,8 +6621,9 @@ export const iranCities: GeoItem[] = [
       "Dīzīcheh",
       "Dizicheh"
     ],
-    "latitude": 32.38753,
-    "longitude": 51.51022
+    "latitude": 32.3829,
+    "longitude": 51.5128,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-2711ac7d9293",
@@ -5207,8 +6631,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دیشموک"
     ],
-    "latitude": 31.29722222,
-    "longitude": 50.39888889
+    "latitude": 31.2998,
+    "longitude": 50.41026,
+    "provinceName": "کهگیلویه و بویراحمد"
+  },
+  {
+    "id": "ir-admin-10100015002329",
+    "name": "دیلمان",
+    "aliases": [
+      "دیلمان"
+    ],
+    "latitude": 36.88887,
+    "longitude": 49.90568,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-a89d7618a6c1",
@@ -5218,7 +6653,8 @@ export const iranCities: GeoItem[] = [
       "دینور (شهر)"
     ],
     "latitude": 34.58416667,
-    "longitude": 47.44194444
+    "longitude": 47.44194444,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "ir-136156",
@@ -5229,7 +6665,8 @@ export const iranCities: GeoItem[] = [
       "Divandarreh"
     ],
     "latitude": 35.9139,
-    "longitude": 47.0239
+    "longitude": 47.0239,
+    "provinceName": "کردستان"
   },
   {
     "id": "wiki-59320dfbf5f0",
@@ -5237,8 +6674,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "دیهوک"
     ],
-    "latitude": 33.29388889,
-    "longitude": 57.51861111
+    "latitude": 33.29399,
+    "longitude": 57.51859,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "ir-119010",
@@ -5249,7 +6687,8 @@ export const iranCities: GeoItem[] = [
       "Rabor"
     ],
     "latitude": 29.2912,
-    "longitude": 56.9131
+    "longitude": 56.9131,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-778b6b0e20a1",
@@ -5258,8 +6697,9 @@ export const iranCities: GeoItem[] = [
       "رادکان",
       "رادکان (چناران)"
     ],
-    "latitude": 36.80027778,
-    "longitude": 59.01277778
+    "latitude": 36.80027,
+    "longitude": 59.01277,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-e739569ee65e",
@@ -5268,8 +6708,9 @@ export const iranCities: GeoItem[] = [
       "راز",
       "راز (راز و جرگلان)"
     ],
-    "latitude": 37.93388889,
-    "longitude": 57.1125
+    "latitude": 37.93395,
+    "longitude": 57.1126,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "wiki-a76b7a930f7b",
@@ -5277,8 +6718,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "رازقان"
     ],
-    "latitude": 35.33083333,
-    "longitude": 49.95333333
+    "latitude": 35.3313,
+    "longitude": 49.9556,
+    "provinceName": "مرکزی"
   },
   {
     "id": "wiki-f4791b9d1829",
@@ -5286,8 +6728,21 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "رازمیان"
     ],
-    "latitude": 36.54083333,
-    "longitude": 50.2125
+    "latitude": 36.5411,
+    "longitude": 50.2117,
+    "provinceName": "قزوین"
+  },
+  {
+    "id": "ir-admin-1110008002461",
+    "name": "راسک",
+    "aliases": [
+      "راسک",
+      "پارود",
+      "پارود (راسک)"
+    ],
+    "latitude": 26.23682,
+    "longitude": 61.39901,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-934375b35741",
@@ -5296,7 +6751,8 @@ export const iranCities: GeoItem[] = [
       "رامجرد"
     ],
     "latitude": 30.075,
-    "longitude": 52.5925
+    "longitude": 52.5925,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-117773",
@@ -5307,7 +6763,8 @@ export const iranCities: GeoItem[] = [
       "Ramsar"
     ],
     "latitude": 36.91796,
-    "longitude": 50.64802
+    "longitude": 50.64802,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-118805",
@@ -5319,7 +6776,8 @@ export const iranCities: GeoItem[] = [
       "خلف آباد"
     ],
     "latitude": 30.89315,
-    "longitude": 49.40787
+    "longitude": 49.40787,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-118826",
@@ -5330,7 +6788,28 @@ export const iranCities: GeoItem[] = [
       "Ramhormoz"
     ],
     "latitude": 31.27997,
-    "longitude": 49.60351
+    "longitude": 49.60351,
+    "provinceName": "خوزستان"
+  },
+  {
+    "id": "ir-admin-12700011001184",
+    "name": "رامیان",
+    "aliases": [
+      "رامیان"
+    ],
+    "latitude": 37.01598,
+    "longitude": 55.14123,
+    "provinceName": "گلستان"
+  },
+  {
+    "id": "ir-admin-10100013002519",
+    "name": "رانکوه",
+    "aliases": [
+      "رانکوه"
+    ],
+    "latitude": 37.0509,
+    "longitude": 50.2358,
+    "provinceName": "گیلان"
   },
   {
     "id": "ir-118704",
@@ -5341,16 +6820,8 @@ export const iranCities: GeoItem[] = [
       "Ravar"
     ],
     "latitude": 31.26562,
-    "longitude": 56.80545
-  },
-  {
-    "id": "wiki-37a9f92bb874",
-    "name": "راوند",
-    "aliases": [
-      "راوند"
-    ],
-    "latitude": 34.01916667,
-    "longitude": 51.34444444
+    "longitude": 56.80545,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-e86f532dd087",
@@ -5359,8 +6830,19 @@ export const iranCities: GeoItem[] = [
       "راین",
       "راین (کرمان)"
     ],
-    "latitude": 29.59777778,
-    "longitude": 57.43861111
+    "latitude": 29.5981,
+    "longitude": 57.4365,
+    "provinceName": "کرمان"
+  },
+  {
+    "id": "ir-admin-1050002002196",
+    "name": "رباط",
+    "aliases": [
+      "رباط"
+    ],
+    "latitude": 34.2687,
+    "longitude": 46.804,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "wiki-b10bfd2f412d",
@@ -5368,8 +6850,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "رباط سنگ"
     ],
-    "latitude": 35.54583333,
-    "longitude": 59.19361111
+    "latitude": 35.54572,
+    "longitude": 59.19357,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-118367",
@@ -5381,17 +6864,50 @@ export const iranCities: GeoItem[] = [
       "Robat Karim"
     ],
     "latitude": 35.4846,
-    "longitude": 51.0829
+    "longitude": 51.0829,
+    "provinceName": "تهران"
+  },
+  {
+    "id": "ir-admin-1040004002547",
+    "name": "ربط",
+    "aliases": [
+      "ربط"
+    ],
+    "latitude": 36.2092,
+    "longitude": 45.5542,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-24ef747aaceb",
-    "name": "رحمت‌آباد",
+    "name": "رحمت آباد",
     "aliases": [
+      "رحمت آباد",
       "رحمت‌آباد",
       "رحمت‌آباد (زرقان)"
     ],
-    "latitude": 29.63153056,
-    "longitude": 53.03161111
+    "latitude": 29.6336,
+    "longitude": 53.0312,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-10800017001013",
+    "name": "رحمت آباد",
+    "aliases": [
+      "رحمت آباد"
+    ],
+    "latitude": 28.64462,
+    "longitude": 59.06018,
+    "provinceName": "کرمان"
+  },
+  {
+    "id": "ir-admin-1010007001136",
+    "name": "رحیم آباد",
+    "aliases": [
+      "رحیم آباد"
+    ],
+    "latitude": 37.03247,
+    "longitude": 50.32647,
+    "provinceName": "گیلان"
   },
   {
     "id": "ir-118681",
@@ -5401,7 +6917,8 @@ export const iranCities: GeoItem[] = [
       "Razan"
     ],
     "latitude": 35.38625,
-    "longitude": 49.0334
+    "longitude": 49.0334,
+    "provinceName": "همدان"
   },
   {
     "id": "wiki-f2d969063905",
@@ -5410,8 +6927,9 @@ export const iranCities: GeoItem[] = [
       "رزوه",
       "رزوه (چادگان)"
     ],
-    "latitude": 32.83611111,
-    "longitude": 50.56888889
+    "latitude": 32.83602,
+    "longitude": 50.56967,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-bdf711bbc5f6",
@@ -5420,8 +6938,9 @@ export const iranCities: GeoItem[] = [
       "رستاق",
       "رستاق (داراب)"
     ],
-    "latitude": 28.44624011,
-    "longitude": 55.07603389
+    "latitude": 28.4486,
+    "longitude": 55.0726,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-118314",
@@ -5431,8 +6950,9 @@ export const iranCities: GeoItem[] = [
       "Rostamābād",
       "Rostamabad"
     ],
-    "latitude": 36.90222,
-    "longitude": 49.49748
+    "latitude": 36.8974,
+    "longitude": 49.4916,
+    "provinceName": "گیلان"
   },
   {
     "id": "ir-118302",
@@ -5445,7 +6965,8 @@ export const iranCities: GeoItem[] = [
       "رستم کولا"
     ],
     "latitude": 36.67784,
-    "longitude": 53.42859
+    "longitude": 53.42859,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-118743",
@@ -5456,7 +6977,8 @@ export const iranCities: GeoItem[] = [
       "ڕەشت"
     ],
     "latitude": 37.27611,
-    "longitude": 49.58862
+    "longitude": 49.58862,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-64b17a8215ca",
@@ -5464,8 +6986,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "رشتخوار"
     ],
-    "latitude": 34.975,
-    "longitude": 59.62472222
+    "latitude": 34.97512,
+    "longitude": 59.62482,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-394611e2a0fb",
@@ -5474,8 +6997,9 @@ export const iranCities: GeoItem[] = [
       "رضوان",
       "رضوان (میامی)"
     ],
-    "latitude": 37.18711111,
-    "longitude": 55.79619444
+    "latitude": 37.18488,
+    "longitude": 55.79825,
+    "provinceName": "سمنان"
   },
   {
     "id": "ir-118532",
@@ -5488,7 +7012,18 @@ export const iranCities: GeoItem[] = [
       "رضوانشهر (تیران و کرون)"
     ],
     "latitude": 37.54947,
-    "longitude": 49.13736
+    "longitude": 49.13736,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-11000019002573",
+    "name": "رضوانشهر",
+    "aliases": [
+      "رضوانشهر"
+    ],
+    "latitude": 32.7032,
+    "longitude": 51.105,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-2f5b13d217c1",
@@ -5497,8 +7032,9 @@ export const iranCities: GeoItem[] = [
       "رضویه",
       "رضویه (مشهد)"
     ],
-    "latitude": 36.205833,
-    "longitude": 59.769722
+    "latitude": 36.2065,
+    "longitude": 59.7698,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-c53194e2a23e",
@@ -5508,7 +7044,8 @@ export const iranCities: GeoItem[] = [
       "رضی (مشگین‌شهر)"
     ],
     "latitude": 38.62777778,
-    "longitude": 48.09416667
+    "longitude": 48.09416667,
+    "provinceName": "اردبیل"
   },
   {
     "id": "ir-118994",
@@ -5519,7 +7056,18 @@ export const iranCities: GeoItem[] = [
       "Rafsanjan"
     ],
     "latitude": 30.4067,
-    "longitude": 55.9939
+    "longitude": 55.9939,
+    "provinceName": "کرمان"
+  },
+  {
+    "id": "ir-admin-10600023002313",
+    "name": "رفیع",
+    "aliases": [
+      "رفیع"
+    ],
+    "latitude": 31.5957,
+    "longitude": 47.8946,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-ac53da00cd79",
@@ -5528,7 +7076,8 @@ export const iranCities: GeoItem[] = [
       "رمشک"
     ],
     "latitude": 26.83111111,
-    "longitude": 58.80666667
+    "longitude": 58.80666667,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-2c08e4fa2e23",
@@ -5537,19 +7086,8 @@ export const iranCities: GeoItem[] = [
       "رمکان"
     ],
     "latitude": 26.86472222,
-    "longitude": 56.0375
-  },
-  {
-    "id": "ir-418521",
-    "name": "رنان",
-    "aliases": [
-      "رنان",
-      "Rehnān",
-      "Rehnan",
-      "رهنان"
-    ],
-    "latitude": 32.68325,
-    "longitude": 51.60158
+    "longitude": 56.0375,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "ir-118705",
@@ -5560,16 +7098,58 @@ export const iranCities: GeoItem[] = [
       "Ravansar"
     ],
     "latitude": 34.7153,
-    "longitude": 46.6533
+    "longitude": 46.6533,
+    "provinceName": "کرمانشاه"
   },
   {
-    "id": "wiki-0ea871174c7d",
-    "name": "رودآب",
+    "id": "ir-admin-10600010002929",
+    "name": "رود زرد ماشین",
     "aliases": [
-      "رودآب"
+      "رود زرد ماشین"
     ],
-    "latitude": 35.61638889,
-    "longitude": 57.30277778
+    "latitude": 31.36876,
+    "longitude": 49.7206,
+    "provinceName": "خوزستان"
+  },
+  {
+    "id": "ir-admin-1090008002245",
+    "name": "روداب",
+    "aliases": [
+      "روداب"
+    ],
+    "latitude": 36.0212,
+    "longitude": 57.3119,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-admin-1010006001132",
+    "name": "رودبار",
+    "aliases": [
+      "رودبار"
+    ],
+    "latitude": 36.8211,
+    "longitude": 49.4264,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-10800015002325",
+    "name": "رودبار",
+    "aliases": [
+      "رودبار"
+    ],
+    "latitude": 28.02899,
+    "longitude": 57.9961,
+    "provinceName": "کرمان"
+  },
+  {
+    "id": "ir-admin-10100011002386",
+    "name": "رودبنه",
+    "aliases": [
+      "رودبنه"
+    ],
+    "latitude": 37.2549,
+    "longitude": 50.0039,
+    "provinceName": "گیلان"
   },
   {
     "id": "ir-118191",
@@ -5580,7 +7160,8 @@ export const iranCities: GeoItem[] = [
       "Rudsar"
     ],
     "latitude": 37.13696,
-    "longitude": 50.29174
+    "longitude": 50.29174,
+    "provinceName": "گیلان"
   },
   {
     "id": "ir-118223",
@@ -5592,8 +7173,19 @@ export const iranCities: GeoItem[] = [
       "رودیان",
       "رود هن"
     ],
-    "latitude": 35.73338,
-    "longitude": 51.90587
+    "latitude": 35.7348,
+    "longitude": 51.9064,
+    "provinceName": "تهران"
+  },
+  {
+    "id": "ir-admin-1200003002775",
+    "name": "رودیان",
+    "aliases": [
+      "رودیان"
+    ],
+    "latitude": 36.41825,
+    "longitude": 54.97622,
+    "provinceName": "سمنان"
   },
   {
     "id": "wiki-9dbd527218e4",
@@ -5602,24 +7194,9 @@ export const iranCities: GeoItem[] = [
       "روشناوند",
       "روشناوند (گناباد)"
     ],
-    "latitude": 34.46666667,
-    "longitude": 58.91166667
-  },
-  {
-    "id": "ir-120351",
-    "name": "روگن",
-    "aliases": [
-      "روگن",
-      "Rūdān",
-      "Rudan",
-      "بالا شهر",
-      "بالا شهر ده بارز",
-      "دهبارز",
-      "رودان",
-      "قلعۀ ده بارز"
-    ],
-    "latitude": 27.44194,
-    "longitude": 57.19198
+    "latitude": 34.46655,
+    "longitude": 58.91165,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-c383de60dd73",
@@ -5627,8 +7204,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "رونیز"
     ],
-    "latitude": 29.19194444,
-    "longitude": 53.76861111
+    "latitude": 29.192,
+    "longitude": 53.7687,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-06ce0fec0dc7",
@@ -5638,7 +7216,8 @@ export const iranCities: GeoItem[] = [
       "رویان (نور)"
     ],
     "latitude": 36.56861111,
-    "longitude": 51.96694444
+    "longitude": 51.96694444,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-2690b790c721",
@@ -5646,26 +7225,49 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "رویدر"
     ],
-    "latitude": 27.465,
-    "longitude": 55.42166667
+    "latitude": 27.42168,
+    "longitude": 55.4808,
+    "provinceName": "هرمزگان"
   },
   {
-    "id": "wiki-f5601aabf908",
-    "name": "ریحان‌شهر",
+    "id": "ir-admin-1230003002115",
+    "name": "ری",
     "aliases": [
-      "ریحان‌شهر"
+      "ری"
     ],
-    "latitude": 30.91027778,
-    "longitude": 56.56888889
+    "latitude": 35.59354,
+    "longitude": 51.43997,
+    "provinceName": "تهران"
   },
   {
-    "id": "wiki-0107587076e5",
-    "name": "ریژآو",
+    "id": "ir-admin-10500013002760",
+    "name": "ریجاب",
     "aliases": [
-      "ریژآو"
+      "ریجاب"
     ],
-    "latitude": 34.47138889,
-    "longitude": 45.98222222
+    "latitude": 34.46982,
+    "longitude": 45.98817,
+    "provinceName": "کرمانشاه"
+  },
+  {
+    "id": "ir-admin-1080005002600",
+    "name": "ریحان",
+    "aliases": [
+      "ریحان"
+    ],
+    "latitude": 30.82099,
+    "longitude": 56.55138,
+    "provinceName": "کرمان"
+  },
+  {
+    "id": "ir-admin-1180009002662",
+    "name": "ریز",
+    "aliases": [
+      "ریز"
+    ],
+    "latitude": 28.0517,
+    "longitude": 52.0837,
+    "provinceName": "بوشهر"
   },
   {
     "id": "wiki-7335e2bc3628",
@@ -5674,7 +7276,8 @@ export const iranCities: GeoItem[] = [
       "ریگ ملک"
     ],
     "latitude": 28.75444444,
-    "longitude": 61.6975
+    "longitude": 61.6975,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-db10b786bd6c",
@@ -5682,8 +7285,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "رینه"
     ],
-    "latitude": 35.88166667,
-    "longitude": 52.17
+    "latitude": 35.90278,
+    "longitude": 52.19222,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-7acbd3a98fe3",
@@ -5691,8 +7295,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "ریواده"
     ],
-    "latitude": 36.7925,
-    "longitude": 57.11333056
+    "latitude": 36.79243,
+    "longitude": 57.11133,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-6599c70328f7",
@@ -5700,8 +7305,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "ریوش"
     ],
-    "latitude": 35.47527778,
-    "longitude": 58.45722222
+    "latitude": 35.47521,
+    "longitude": 58.45733,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-561a54cecbf0",
@@ -5710,8 +7316,9 @@ export const iranCities: GeoItem[] = [
       "ریوند",
       "ریوند (داورزن)"
     ],
-    "latitude": 36.23193889,
-    "longitude": 57.3375
+    "latitude": 36.23233,
+    "longitude": 57.33714,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-1113217",
@@ -5722,19 +7329,8 @@ export const iranCities: GeoItem[] = [
       "Zabol"
     ],
     "latitude": 31.0306,
-    "longitude": 61.4949
-  },
-  {
-    "id": "ir-1159306",
-    "name": "زابلی",
-    "aliases": [
-      "زابلی",
-      "Mehrestān",
-      "Mehrestan",
-      "مهرستان"
-    ],
-    "latitude": 27.131,
-    "longitude": 61.67445
+    "longitude": 61.4949,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "ir-111407",
@@ -5747,7 +7343,8 @@ export const iranCities: GeoItem[] = [
       "زارج"
     ],
     "latitude": 31.99111,
-    "longitude": 54.23194
+    "longitude": 54.23194,
+    "provinceName": "یزد"
   },
   {
     "id": "wiki-4777b8eaa80d",
@@ -5756,7 +7353,38 @@ export const iranCities: GeoItem[] = [
       "زازران"
     ],
     "latitude": 32.6025,
-    "longitude": 51.49694444
+    "longitude": 51.49694444,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-1150003002361",
+    "name": "زاغه",
+    "aliases": [
+      "زاغه"
+    ],
+    "latitude": 33.4999,
+    "longitude": 48.706,
+    "provinceName": "لرستان"
+  },
+  {
+    "id": "ir-admin-10600021002928",
+    "name": "زاووت",
+    "aliases": [
+      "زاووت"
+    ],
+    "latitude": 32.4039447,
+    "longitude": 49.6886828,
+    "provinceName": "خوزستان"
+  },
+  {
+    "id": "ir-admin-10000010001108",
+    "name": "زاویه",
+    "aliases": [
+      "زاویه"
+    ],
+    "latitude": 35.383,
+    "longitude": 50.5644,
+    "provinceName": "مرکزی"
   },
   {
     "id": "ir-1159301",
@@ -5767,7 +7395,8 @@ export const iranCities: GeoItem[] = [
       "زاہدان"
     ],
     "latitude": 29.4963,
-    "longitude": 60.8629
+    "longitude": 60.8629,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-abfc8cab97c2",
@@ -5775,18 +7404,21 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "زاهدشهر"
     ],
-    "latitude": 28.74843461,
-    "longitude": 53.80410631
+    "latitude": 28.75001,
+    "longitude": 53.80216,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-0bec618dc9d8",
-    "name": "زاینده‌رود",
+    "name": "زاینده رود",
     "aliases": [
+      "زاینده رود",
       "زاینده‌رود",
       "زاینده‌رود (لنجان)"
     ],
     "latitude": 32.39277778,
-    "longitude": 51.29361111
+    "longitude": 51.29361111,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-41d9f44a49c6",
@@ -5796,7 +7428,18 @@ export const iranCities: GeoItem[] = [
       "زرآباد (خوی)"
     ],
     "latitude": 38.85,
-    "longitude": 44.61666667
+    "longitude": 44.61666667,
+    "provinceName": "آذربایجان غربی"
+  },
+  {
+    "id": "ir-admin-11100026002739",
+    "name": "زرآباد",
+    "aliases": [
+      "زرآباد"
+    ],
+    "latitude": 25.58263,
+    "longitude": 59.36161,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "ir-111327",
@@ -5807,7 +7450,8 @@ export const iranCities: GeoItem[] = [
       "Zarqan"
     ],
     "latitude": 29.77237,
-    "longitude": 52.71891
+    "longitude": 52.71891,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-55c314b9b367",
@@ -5817,7 +7461,8 @@ export const iranCities: GeoItem[] = [
       "زرگر (بابل)"
     ],
     "latitude": 36.55,
-    "longitude": 52.53333333
+    "longitude": 52.53333333,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-111421",
@@ -5827,7 +7472,8 @@ export const iranCities: GeoItem[] = [
       "Zarand"
     ],
     "latitude": 30.81271,
-    "longitude": 56.56399
+    "longitude": 56.56399,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-fd5aa06435da",
@@ -5835,8 +7481,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "زرنق"
     ],
-    "latitude": 38.09111111,
-    "longitude": 47.08277778
+    "latitude": 38.0923,
+    "longitude": 47.0829,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-43b198380074",
@@ -5844,29 +7491,43 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "زرنه"
     ],
-    "latitude": 33.9,
-    "longitude": 46.13333333
+    "latitude": 33.9285,
+    "longitude": 46.1826,
+    "provinceName": "ایلام"
   },
   {
     "id": "wiki-54639f80b1cd",
-    "name": "زرین‌آباد",
+    "name": "زرین آباد",
     "aliases": [
+      "زرین آباد",
       "زرین‌آباد"
     ],
-    "latitude": 36.425,
-    "longitude": 48.28194444
+    "latitude": 36.42622,
+    "longitude": 48.28158,
+    "provinceName": "زنجان"
+  },
+  {
+    "id": "ir-admin-1190003002376",
+    "name": "زرین رود",
+    "aliases": [
+      "زرین رود"
+    ],
+    "latitude": 35.7565,
+    "longitude": 48.4812,
+    "provinceName": "زنجان"
   },
   {
     "id": "ir-418418",
-    "name": "زرین‌شهر",
+    "name": "زرین شهر",
     "aliases": [
-      "زرین‌شهر",
       "زرین شهر",
+      "زرین‌شهر",
       "Zarrīn Shahr",
       "Zarrin Shahr"
     ],
     "latitude": 32.39057,
-    "longitude": 51.37654
+    "longitude": 51.37654,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-70a435856133",
@@ -5874,8 +7535,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "زرینه"
     ],
-    "latitude": 36.11666667,
-    "longitude": 47.11666667
+    "latitude": 36.06104,
+    "longitude": 46.9198,
+    "provinceName": "کردستان"
   },
   {
     "id": "ir-111453",
@@ -5885,17 +7547,40 @@ export const iranCities: GeoItem[] = [
       "Zanjan"
     ],
     "latitude": 36.67642,
-    "longitude": 48.49628
+    "longitude": 48.49628,
+    "provinceName": "زنجان"
+  },
+  {
+    "id": "ir-admin-1130002002658",
+    "name": "زنگنه",
+    "aliases": [
+      "زنگنه"
+    ],
+    "latitude": 34.14426,
+    "longitude": 48.98516,
+    "provinceName": "همدان"
+  },
+  {
+    "id": "ir-admin-10700012002961",
+    "name": "زنگی آباد",
+    "aliases": [
+      "زنگی آباد"
+    ],
+    "latitude": 29.97596,
+    "longitude": 52.85408,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-ac1dea0b5722",
-    "name": "زنگی‌آباد",
+    "name": "زنگی آباد",
     "aliases": [
+      "زنگی آباد",
       "زنگی‌آباد",
       "زنگی‌آباد (کرمان)"
     ],
-    "latitude": 30.41027778,
-    "longitude": 56.91722222
+    "latitude": 30.4102,
+    "longitude": 56.9172,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-b057f176a31c",
@@ -5903,8 +7588,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "زنوز"
     ],
-    "latitude": 38.58805556,
-    "longitude": 45.83027778
+    "latitude": 38.588,
+    "longitude": 45.8302,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-0790a517081c",
@@ -5912,8 +7598,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "زواره"
     ],
-    "latitude": 33.44888889,
-    "longitude": 52.49361111
+    "latitude": 33.44686,
+    "longitude": 52.4926,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-ff764b79fa3d",
@@ -5922,8 +7609,19 @@ export const iranCities: GeoItem[] = [
       "زهان",
       "زهان (زیرکوه)"
     ],
-    "latitude": 33.41388889,
-    "longitude": 59.79777778
+    "latitude": 33.4227,
+    "longitude": 59.8126,
+    "provinceName": "خراسان جنوبی"
+  },
+  {
+    "id": "ir-admin-1240005002880",
+    "name": "زهرا",
+    "aliases": [
+      "زهرا"
+    ],
+    "latitude": 39.0472,
+    "longitude": 48.292,
+    "provinceName": "اردبیل"
   },
   {
     "id": "wiki-fb2abab3518d",
@@ -5933,7 +7631,8 @@ export const iranCities: GeoItem[] = [
       "زهره (هندیجان)"
     ],
     "latitude": 30.46916944,
-    "longitude": 49.68443889
+    "longitude": 49.68443889,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-1159302",
@@ -5943,7 +7642,18 @@ export const iranCities: GeoItem[] = [
       "Zehak"
     ],
     "latitude": 30.894,
-    "longitude": 61.6804
+    "longitude": 61.6804,
+    "provinceName": "سیستان و بلوچستان"
+  },
+  {
+    "id": "ir-admin-10800025002821",
+    "name": "زهکلوت",
+    "aliases": [
+      "زهکلوت"
+    ],
+    "latitude": 27.79256,
+    "longitude": 58.58682,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-68e6fef6d85e",
@@ -5952,8 +7662,9 @@ export const iranCities: GeoItem[] = [
       "زهوکی",
       "زهوکی (میناب)"
     ],
-    "latitude": 27.03333333,
-    "longitude": 57.1
+    "latitude": 27.07671,
+    "longitude": 57.06437,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "wiki-216b9c137216",
@@ -5962,8 +7673,9 @@ export const iranCities: GeoItem[] = [
       "زیار",
       "زیار (اصفهان)"
     ],
-    "latitude": 32.50944444,
-    "longitude": 51.93777778
+    "latitude": 32.5095,
+    "longitude": 51.93766,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-ff6a97efe074",
@@ -5971,8 +7683,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "زیاران"
     ],
-    "latitude": 36.15,
-    "longitude": 50.48333333
+    "latitude": 36.12013,
+    "longitude": 50.52916,
+    "provinceName": "قزوین"
   },
   {
     "id": "wiki-3a228b9afbd3",
@@ -5982,7 +7695,8 @@ export const iranCities: GeoItem[] = [
       "زیارت (شیروان)"
     ],
     "latitude": 37.443889,
-    "longitude": 57.890278
+    "longitude": 57.890278,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "wiki-db3ddd55c7b5",
@@ -5990,8 +7704,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "زیارتعلی"
     ],
-    "latitude": 27.74222222,
-    "longitude": 57.22388889
+    "latitude": 27.7415,
+    "longitude": 57.2264,
+    "provinceName": "هرمزگان"
+  },
+  {
+    "id": "ir-admin-11000017002572",
+    "name": "زیباشهر",
+    "aliases": [
+      "زیباشهر"
+    ],
+    "latitude": 32.38244,
+    "longitude": 51.56779,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-487ca6802bee",
@@ -5999,20 +7724,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "زیدآباد"
     ],
-    "latitude": 29.65,
-    "longitude": 55.58333333
-  },
-  {
-    "id": "ir-11725",
-    "name": "زیر آب",
-    "aliases": [
-      "زیر آب",
-      "Zīr Āb",
-      "Zir Ab",
-      "بالا زیراب"
-    ],
-    "latitude": 36.1797,
-    "longitude": 52.97348
+    "latitude": 29.59995,
+    "longitude": 55.53697,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-b056d0eeeb72",
@@ -6020,21 +7734,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "زیرآب"
     ],
-    "latitude": 36.17972222,
-    "longitude": 52.97694444
+    "latitude": 36.16541,
+    "longitude": 52.97608,
+    "provinceName": "مازندران"
   },
   {
-    "id": "ir-118024",
-    "name": "سادات شهر",
+    "id": "ir-admin-12400012001065",
+    "name": "زیوه",
     "aliases": [
-      "سادات شهر",
-      "Katālem va Sādāt Shahr",
-      "Katalem va Sadat Shahr",
-      "سادات محله",
-      "سادات محله سخت سر"
+      "زیوه"
     ],
-    "latitude": 36.88879,
-    "longitude": 50.6964
+    "latitude": 39.1239,
+    "longitude": 47.6527,
+    "provinceName": "اردبیل"
   },
   {
     "id": "wiki-39d3fce6d553",
@@ -6043,8 +7755,9 @@ export const iranCities: GeoItem[] = [
       "ساربوک",
       "ساربوک (قصرقند)"
     ],
-    "latitude": 26.23333333,
-    "longitude": 60.56666667
+    "latitude": 26.1933,
+    "longitude": 60.5964,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-c0ae7aa251c8",
@@ -6053,8 +7766,9 @@ export const iranCities: GeoItem[] = [
       "ساروق",
       "ساروق (اراک)"
     ],
-    "latitude": 34.41166667,
-    "longitude": 49.50416667
+    "latitude": 34.4082,
+    "longitude": 49.5082,
+    "provinceName": "مرکزی"
   },
   {
     "id": "ir-116996",
@@ -6065,7 +7779,18 @@ export const iranCities: GeoItem[] = [
       "ساری، ایران"
     ],
     "latitude": 36.56332,
-    "longitude": 53.06009
+    "longitude": 53.06009,
+    "provinceName": "مازندران"
+  },
+  {
+    "id": "ir-admin-1060008002416",
+    "name": "سالند",
+    "aliases": [
+      "سالند"
+    ],
+    "latitude": 32.4968,
+    "longitude": 48.8342,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-117627",
@@ -6076,7 +7801,8 @@ export const iranCities: GeoItem[] = [
       "Saman"
     ],
     "latitude": 32.45014,
-    "longitude": 50.91092
+    "longitude": 50.91092,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "wiki-31ecf73893e3",
@@ -6085,7 +7811,8 @@ export const iranCities: GeoItem[] = [
       "سامن"
     ],
     "latitude": 34.20916667,
-    "longitude": 48.70583333
+    "longitude": 48.70583333,
+    "provinceName": "همدان"
   },
   {
     "id": "ir-116667",
@@ -6096,19 +7823,8 @@ export const iranCities: GeoItem[] = [
       "Saveh"
     ],
     "latitude": 35.0213,
-    "longitude": 50.3566
-  },
-  {
-    "id": "ir-7082152",
-    "name": "سایبان گلی",
-    "aliases": [
-      "سایبان گلی",
-      "Golbahār",
-      "Golbahar",
-      "شهرک گلبهار"
-    ],
-    "latitude": 36.56976,
-    "longitude": 59.1904
+    "longitude": 50.3566,
+    "provinceName": "مرکزی"
   },
   {
     "id": "ir-118063",
@@ -6118,7 +7834,8 @@ export const iranCities: GeoItem[] = [
       "Sabzevar"
     ],
     "latitude": 36.2126,
-    "longitude": 57.68191
+    "longitude": 57.68191,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-131ab4ef141c",
@@ -6128,7 +7845,8 @@ export const iranCities: GeoItem[] = [
       "سپیدار (بویراحمد)"
     ],
     "latitude": 30.59861111,
-    "longitude": 51.36611111
+    "longitude": 51.36611111,
+    "provinceName": "کهگیلویه و بویراحمد"
   },
   {
     "id": "wiki-8bde7f6e06c7",
@@ -6137,8 +7855,9 @@ export const iranCities: GeoItem[] = [
       "سپیددشت",
       "سپیددشت (خرم‌آباد)"
     ],
-    "latitude": 33.21833333,
-    "longitude": 48.88333333
+    "latitude": 33.43771,
+    "longitude": 48.22534,
+    "provinceName": "لرستان"
   },
   {
     "id": "wiki-9f900a33e371",
@@ -6147,7 +7866,8 @@ export const iranCities: GeoItem[] = [
       "سجاس"
     ],
     "latitude": 36.23805556,
-    "longitude": 48.54805556
+    "longitude": 48.54805556,
+    "provinceName": "زنجان"
   },
   {
     "id": "wiki-478c7a3f5331",
@@ -6155,35 +7875,39 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "سجزی"
     ],
-    "latitude": 32.69083333,
-    "longitude": 52.12416667
+    "latitude": 32.6907,
+    "longitude": 52.1243,
+    "provinceName": "اصفهان"
   },
   {
-    "id": "ir-418710",
+    "id": "ir-admin-1070003002297",
     "name": "سده",
     "aliases": [
-      "سده",
-      "خمینی‌شهر",
-      "Khomeynī Shahr",
-      "Khomeyni Shahr",
-      "خمینی شهر",
-      "مهربین",
-      "سده (خواف)",
-      "سده (اقلید)"
+      "سده"
     ],
-    "latitude": 32.6856,
-    "longitude": 51.53609
+    "latitude": 30.71066,
+    "longitude": 52.17579,
+    "provinceName": "فارس"
   },
   {
-    "id": "ir-120931",
-    "name": "سر پل ذهاب",
+    "id": "ir-admin-10900019001021",
+    "name": "سده",
     "aliases": [
-      "سر پل ذهاب",
-      "Sarpol-e Z̄ahāb",
-      "Sarpol-e Zahab"
+      "سده"
     ],
-    "latitude": 34.46109,
-    "longitude": 45.86264
+    "latitude": 34.82894,
+    "longitude": 59.88956,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-admin-11000012001432",
+    "name": "سده لنجان",
+    "aliases": [
+      "سده لنجان"
+    ],
+    "latitude": 32.37872,
+    "longitude": 51.31601,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-011a68ce4b97",
@@ -6192,7 +7916,8 @@ export const iranCities: GeoItem[] = [
       "سرآسیاب یوسفی"
     ],
     "latitude": 31.03666667,
-    "longitude": 50.21694444
+    "longitude": 50.21694444,
+    "provinceName": "کهگیلویه و بویراحمد"
   },
   {
     "id": "ir-117368",
@@ -6204,7 +7929,18 @@ export const iranCities: GeoItem[] = [
       "سراب (آذربایجان شرقی)"
     ],
     "latitude": 37.9408,
-    "longitude": 47.5367
+    "longitude": 47.5367,
+    "provinceName": "آذربایجان شرقی"
+  },
+  {
+    "id": "ir-admin-1160006002056",
+    "name": "سراب باغ",
+    "aliases": [
+      "سراب باغ"
+    ],
+    "latitude": 32.8985,
+    "longitude": 47.5729,
+    "provinceName": "ایلام"
   },
   {
     "id": "wiki-acbf0c00467f",
@@ -6212,21 +7948,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "سراب حمام"
     ],
-    "latitude": 33.10916667,
-    "longitude": 47.69305556
+    "latitude": 33.11457,
+    "longitude": 47.6934,
+    "provinceName": "لرستان"
   },
   {
-    "id": "ir-46663",
-    "name": "سرابتاوه",
+    "id": "ir-admin-11500010002255",
+    "name": "سراب دوره",
     "aliases": [
-      "سرابتاوه",
-      "Sarāb-e Tāveh",
-      "Sarab-e Taveh",
-      "سراب تاوه سفلی",
-      "سراب تاوۀ پائین"
+      "سراب دوره"
     ],
-    "latitude": 30.59808,
-    "longitude": 51.57677
+    "latitude": 33.5639,
+    "longitude": 48.0221,
+    "provinceName": "لرستان"
   },
   {
     "id": "ir-117304",
@@ -6237,7 +7971,8 @@ export const iranCities: GeoItem[] = [
       "Sarableh"
     ],
     "latitude": 33.76772,
-    "longitude": 46.56578
+    "longitude": 46.56578,
+    "provinceName": "ایلام"
   },
   {
     "id": "ir-1159713",
@@ -6248,7 +7983,8 @@ export const iranCities: GeoItem[] = [
       "Saravan"
     ],
     "latitude": 27.37089,
-    "longitude": 62.33096
+    "longitude": 62.33096,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "ir-117232",
@@ -6259,7 +7995,18 @@ export const iranCities: GeoItem[] = [
       "Sarayan"
     ],
     "latitude": 33.86017,
-    "longitude": 58.52166
+    "longitude": 58.52166,
+    "provinceName": "خراسان جنوبی"
+  },
+  {
+    "id": "ir-admin-11100023002499",
+    "name": "سرباز",
+    "aliases": [
+      "سرباز"
+    ],
+    "latitude": 26.63228,
+    "longitude": 61.25787,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-0dd352376257",
@@ -6267,17 +8014,22 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "سربیشه"
     ],
-    "latitude": 32.57555556,
-    "longitude": 59.79833333
+    "latitude": 32.57566,
+    "longitude": 59.79821,
+    "provinceName": "خراسان جنوبی"
   },
   {
-    "id": "wiki-200658b8f8e1",
+    "id": "ir-120931",
     "name": "سرپل ذهاب",
     "aliases": [
-      "سرپل ذهاب"
+      "سرپل ذهاب",
+      "سر پل ذهاب",
+      "Sarpol-e Z̄ahāb",
+      "Sarpol-e Zahab"
     ],
-    "latitude": 34.4613889,
-    "longitude": 45.8647222
+    "latitude": 34.46109,
+    "longitude": 45.86264,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "wiki-aedade5c5a71",
@@ -6286,7 +8038,18 @@ export const iranCities: GeoItem[] = [
       "سرجنگل"
     ],
     "latitude": 28.88305556,
-    "longitude": 60.405
+    "longitude": 60.405,
+    "provinceName": "سیستان و بلوچستان"
+  },
+  {
+    "id": "ir-admin-10200018002395",
+    "name": "سرخرود",
+    "aliases": [
+      "سرخرود"
+    ],
+    "latitude": 36.6713,
+    "longitude": 52.4492,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-1159716",
@@ -6296,7 +8059,28 @@ export const iranCities: GeoItem[] = [
       "Sarakhs"
     ],
     "latitude": 36.5449,
-    "longitude": 61.1577
+    "longitude": 61.1577,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-admin-1270005002508",
+    "name": "سرخنکلاته",
+    "aliases": [
+      "سرخنکلاته"
+    ],
+    "latitude": 36.89149,
+    "longitude": 54.56875,
+    "provinceName": "گلستان"
+  },
+  {
+    "id": "ir-admin-1140005002809",
+    "name": "سرخون",
+    "aliases": [
+      "سرخون"
+    ],
+    "latitude": 31.75014,
+    "longitude": 50.55012,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "wiki-4df81d8acd79",
@@ -6304,8 +8088,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "سرخه"
     ],
-    "latitude": 35.46333333,
-    "longitude": 53.21388889
+    "latitude": 35.4633,
+    "longitude": 53.214,
+    "provinceName": "سمنان"
   },
   {
     "id": "wiki-1c9810ff0708",
@@ -6314,7 +8099,8 @@ export const iranCities: GeoItem[] = [
       "سرداران"
     ],
     "latitude": 32.021389,
-    "longitude": 48.792778
+    "longitude": 48.792778,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-117096",
@@ -6326,8 +8112,9 @@ export const iranCities: GeoItem[] = [
       "سرد رد",
       "سردارود"
     ],
-    "latitude": 38.02613,
-    "longitude": 46.14763
+    "latitude": 38.0279,
+    "longitude": 46.1474,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-117111",
@@ -6338,7 +8125,38 @@ export const iranCities: GeoItem[] = [
       "سردشت (بشاگرد)"
     ],
     "latitude": 36.1552,
-    "longitude": 45.4788
+    "longitude": 45.4788,
+    "provinceName": "آذربایجان غربی"
+  },
+  {
+    "id": "ir-admin-1060006002500",
+    "name": "سردشت",
+    "aliases": [
+      "سردشت"
+    ],
+    "latitude": 30.3267,
+    "longitude": 50.2208,
+    "provinceName": "خوزستان"
+  },
+  {
+    "id": "ir-admin-1140004002840",
+    "name": "سردشت",
+    "aliases": [
+      "سردشت"
+    ],
+    "latitude": 31.45493,
+    "longitude": 50.77117,
+    "provinceName": "چهارمحال و بختیاری"
+  },
+  {
+    "id": "ir-admin-12200013002061",
+    "name": "سردشت",
+    "aliases": [
+      "سردشت"
+    ],
+    "latitude": 26.45574,
+    "longitude": 57.90271,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "wiki-e39762a3a055",
@@ -6346,8 +8164,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "سرعین"
     ],
-    "latitude": 38.15138889,
-    "longitude": 48.07083333
+    "latitude": 38.15022,
+    "longitude": 48.07068,
+    "provinceName": "اردبیل"
   },
   {
     "id": "wiki-1b6e6b56a6c9",
@@ -6356,7 +8175,8 @@ export const iranCities: GeoItem[] = [
       "سرفاریاب"
     ],
     "latitude": 30.826944,
-    "longitude": 50.772222
+    "longitude": 50.772222,
+    "provinceName": "کهگیلویه و بویراحمد"
   },
   {
     "id": "wiki-601b7cec7bf2",
@@ -6365,16 +8185,38 @@ export const iranCities: GeoItem[] = [
       "سرکان"
     ],
     "latitude": 34.59946,
-    "longitude": 48.44335
+    "longitude": 48.44335,
+    "provinceName": "همدان"
   },
   {
-    "id": "wiki-5fd296557f46",
+    "id": "ir-admin-1220008002092",
+    "name": "سرگز",
+    "aliases": [
+      "سرگز"
+    ],
+    "latitude": 28.4217,
+    "longitude": 55.7017,
+    "provinceName": "هرمزگان"
+  },
+  {
+    "id": "ir-admin-1050008002413",
     "name": "سرمست",
     "aliases": [
       "سرمست"
     ],
-    "latitude": 34.50527778,
-    "longitude": 47.84111111
+    "latitude": 34.0266,
+    "longitude": 46.329,
+    "provinceName": "کرمانشاه"
+  },
+  {
+    "id": "ir-admin-1040001002404",
+    "name": "سرو",
+    "aliases": [
+      "سرو"
+    ],
+    "latitude": 37.727,
+    "longitude": 44.6424,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-ef42a45adb68",
@@ -6382,8 +8224,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "سروآباد"
     ],
-    "latitude": 35.3125,
-    "longitude": 46.36666667
+    "latitude": 35.3126,
+    "longitude": 46.3669,
+    "provinceName": "کردستان"
   },
   {
     "id": "ir-116725",
@@ -6394,7 +8237,28 @@ export const iranCities: GeoItem[] = [
       "Sarvestan"
     ],
     "latitude": 29.2735,
-    "longitude": 53.2203
+    "longitude": 53.2203,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-1120005001461",
+    "name": "سریش آباد",
+    "aliases": [
+      "سریش آباد"
+    ],
+    "latitude": 35.2478,
+    "longitude": 47.7789,
+    "provinceName": "کردستان"
+  },
+  {
+    "id": "ir-admin-1050005002594",
+    "name": "سطر",
+    "aliases": [
+      "سطر"
+    ],
+    "latitude": 34.8127,
+    "longitude": 47.4613,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "ir-118123",
@@ -6405,45 +8269,61 @@ export const iranCities: GeoItem[] = [
       "Sa'adat Shahr"
     ],
     "latitude": 30.07921,
-    "longitude": 53.13464
+    "longitude": 53.13464,
+    "provinceName": "فارس"
   },
   {
-    "id": "ir-117814",
-    "name": "سعید آباد",
+    "id": "ir-admin-1180003001519",
+    "name": "سعد آباد",
     "aliases": [
-      "سعید آباد",
-      "Sa‘īdābād",
-      "Sa'idabad"
+      "سعد آباد"
     ],
-    "latitude": 35.6677,
-    "longitude": 51.1858
+    "latitude": 29.3848,
+    "longitude": 51.1166,
+    "provinceName": "بوشهر"
   },
   {
     "id": "wiki-9298b9d87385",
-    "name": "سعیدآباد (پردیس)",
+    "name": "سعیدآباد",
     "aliases": [
+      "سعیدآباد",
       "سعیدآباد (پردیس)"
     ],
     "latitude": 35.73388889,
-    "longitude": 51.70138889
+    "longitude": 51.70138889,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-51ee1563a185",
-    "name": "سفیدسنگ",
+    "name": "سفید سنگ",
     "aliases": [
+      "سفید سنگ",
       "سفیدسنگ"
     ],
-    "latitude": 35.659444,
-    "longitude": 60.094722
+    "latitude": 35.65934,
+    "longitude": 60.09459,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-2e3d8dcb4b66",
-    "name": "سفیدشهر",
+    "name": "سفید شهر",
     "aliases": [
+      "سفید شهر",
       "سفیدشهر"
     ],
-    "latitude": 34.1263889,
-    "longitude": 51.3516667
+    "latitude": 34.0125,
+    "longitude": 51.4529,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-1140001002306",
+    "name": "سفیددشت",
+    "aliases": [
+      "سفیددشت"
+    ],
+    "latitude": 32.13244,
+    "longitude": 51.18226,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "ir-117392",
@@ -6458,7 +8338,8 @@ export const iranCities: GeoItem[] = [
       "سەقز"
     ],
     "latitude": 36.24992,
-    "longitude": 46.2735
+    "longitude": 46.2735,
+    "provinceName": "کردستان"
   },
   {
     "id": "wiki-db890390759d",
@@ -6467,7 +8348,8 @@ export const iranCities: GeoItem[] = [
       "سگزآباد"
     ],
     "latitude": 35.77305556,
-    "longitude": 49.93777778
+    "longitude": 49.93777778,
+    "provinceName": "قزوین"
   },
   {
     "id": "wiki-4623657427b6",
@@ -6475,8 +8357,39 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "سلامی"
     ],
-    "latitude": 34.74388889,
-    "longitude": 59.97555556
+    "latitude": 34.7448,
+    "longitude": 59.9786,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-admin-10600010002921",
+    "name": "سلطان آباد",
+    "aliases": [
+      "سلطان آباد"
+    ],
+    "latitude": 31.04741,
+    "longitude": 49.69939,
+    "provinceName": "خوزستان"
+  },
+  {
+    "id": "ir-admin-10900038002343",
+    "name": "سلطان آباد",
+    "aliases": [
+      "سلطان آباد"
+    ],
+    "latitude": 36.40352,
+    "longitude": 58.03894,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-admin-10700029002782",
+    "name": "سلطان شهر",
+    "aliases": [
+      "سلطان شهر"
+    ],
+    "latitude": 29.499027,
+    "longitude": 53.311923,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-65329ab01838",
@@ -6484,8 +8397,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "سلطانیه"
     ],
-    "latitude": 36.43472194,
-    "longitude": 48.7975
+    "latitude": 36.43318,
+    "longitude": 48.79471,
+    "provinceName": "زنجان"
   },
   {
     "id": "wiki-0c91dc85ade4",
@@ -6493,8 +8407,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "سلفچگان"
     ],
-    "latitude": 34.48333056,
-    "longitude": 50.45
+    "latitude": 34.47752,
+    "longitude": 50.45922,
+    "provinceName": "قم"
   },
   {
     "id": "ir-117656",
@@ -6505,16 +8420,19 @@ export const iranCities: GeoItem[] = [
       "Salmas"
     ],
     "latitude": 38.1973,
-    "longitude": 44.7653
+    "longitude": 44.7653,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-d3661f324fcc",
-    "name": "سلمان‌شهر",
+    "name": "سلمان شهر",
     "aliases": [
+      "سلمان شهر",
       "سلمان‌شهر"
     ],
-    "latitude": 36.70333333,
-    "longitude": 51.19583333
+    "latitude": 36.7051,
+    "longitude": 51.196,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-897741949e95",
@@ -6523,7 +8441,8 @@ export const iranCities: GeoItem[] = [
       "سماله"
     ],
     "latitude": 32.20111111,
-    "longitude": 48.86055556
+    "longitude": 48.86055556,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-116402",
@@ -6533,7 +8452,8 @@ export const iranCities: GeoItem[] = [
       "Semnan"
     ],
     "latitude": 35.57691,
-    "longitude": 53.39205
+    "longitude": 53.39205,
+    "provinceName": "سمنان"
   },
   {
     "id": "ir-116406",
@@ -6544,16 +8464,19 @@ export const iranCities: GeoItem[] = [
       "Semirom"
     ],
     "latitude": 31.41667,
-    "longitude": 51.56667
+    "longitude": 51.56667,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-891d228e0508",
-    "name": "سمیع‌آباد",
+    "name": "سمیع آباد",
     "aliases": [
+      "سمیع آباد",
       "سمیع‌آباد"
     ],
-    "latitude": 35.14861111,
-    "longitude": 60.90416667
+    "latitude": 35.14643,
+    "longitude": 60.90302,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-6bf477cf56a8",
@@ -6563,19 +8486,8 @@ export const iranCities: GeoItem[] = [
       "سنته (سقز)"
     ],
     "latitude": 36.16666667,
-    "longitude": 46.51666667
-  },
-  {
-    "id": "ir-116388",
-    "name": "سنجان",
-    "aliases": [
-      "سنجان",
-      "Senjān",
-      "Senjan",
-      "فنجان"
-    ],
-    "latitude": 34.05285,
-    "longitude": 49.62144
+    "longitude": 46.51666667,
+    "provinceName": "کردستان"
   },
   {
     "id": "wiki-a4fe4eea7375",
@@ -6583,8 +8495,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "سنخواست"
     ],
-    "latitude": 37.09916667,
-    "longitude": 56.85194444
+    "latitude": 37.0997,
+    "longitude": 56.8492,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "wiki-33dfc916d205",
@@ -6592,8 +8505,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "سندرک"
     ],
-    "latitude": 26.83611111,
-    "longitude": 57.42444444
+    "latitude": 26.8371,
+    "longitude": 57.4254,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "ir-114049",
@@ -6603,7 +8517,8 @@ export const iranCities: GeoItem[] = [
       "Sonqor"
     ],
     "latitude": 34.78187,
-    "longitude": 47.59945
+    "longitude": 47.59945,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "ir-1159729",
@@ -6614,8 +8529,19 @@ export const iranCities: GeoItem[] = [
       "Sangan",
       "سنگان (خواف)"
     ],
-    "latitude": 34.39851,
-    "longitude": 60.25798
+    "latitude": 34.3995,
+    "longitude": 60.2571,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-admin-1270003002837",
+    "name": "سنگدوین",
+    "aliases": [
+      "سنگدوین"
+    ],
+    "latitude": 36.99745,
+    "longitude": 54.85658,
+    "provinceName": "گلستان"
   },
   {
     "id": "ir-117461",
@@ -6625,18 +8551,8 @@ export const iranCities: GeoItem[] = [
       "Sangar"
     ],
     "latitude": 37.17938,
-    "longitude": 49.69378
-  },
-  {
-    "id": "ir-7100777",
-    "name": "سنگسر",
-    "aliases": [
-      "سنگسر",
-      "Mahdishahr",
-      "مهدیشهر"
-    ],
-    "latitude": 35.71071,
-    "longitude": 53.35394
+    "longitude": 49.69378,
+    "provinceName": "گیلان"
   },
   {
     "id": "ir-117574",
@@ -6649,7 +8565,28 @@ export const iranCities: GeoItem[] = [
       "سنه"
     ],
     "latitude": 35.31495,
-    "longitude": 46.99883
+    "longitude": 46.99883,
+    "provinceName": "کردستان"
+  },
+  {
+    "id": "ir-admin-1140002002614",
+    "name": "سودجان",
+    "aliases": [
+      "سودجان"
+    ],
+    "latitude": 32.52186,
+    "longitude": 50.39903,
+    "provinceName": "چهارمحال و بختیاری"
+  },
+  {
+    "id": "ir-admin-11100014002174",
+    "name": "سوران",
+    "aliases": [
+      "سوران"
+    ],
+    "latitude": 27.2855,
+    "longitude": 61.9965,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "ir-113732",
@@ -6660,7 +8597,8 @@ export const iranCities: GeoItem[] = [
       "Sureshjan"
     ],
     "latitude": 32.3164,
-    "longitude": 50.67707
+    "longitude": 50.67707,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "wiki-ab16dd5e6aef",
@@ -6668,8 +8606,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "سورک"
     ],
-    "latitude": 36.595,
-    "longitude": 53.2075
+    "latitude": 36.59488,
+    "longitude": 53.20762,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-97e8e8267c28",
@@ -6678,7 +8617,18 @@ export const iranCities: GeoItem[] = [
       "سورمق"
     ],
     "latitude": 31.03333333,
-    "longitude": 52.83333333
+    "longitude": 52.83333333,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-11500011002972",
+    "name": "سوری",
+    "aliases": [
+      "سوری"
+    ],
+    "latitude": 33.33181,
+    "longitude": 47.37586,
+    "provinceName": "لرستان"
   },
   {
     "id": "wiki-fd5d88211515",
@@ -6687,7 +8637,8 @@ export const iranCities: GeoItem[] = [
       "سوزا"
     ],
     "latitude": 26.78083333,
-    "longitude": 56.06305556
+    "longitude": 56.06305556,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "ir-137268",
@@ -6698,7 +8649,8 @@ export const iranCities: GeoItem[] = [
       "Susangerd"
     ],
     "latitude": 31.5635,
-    "longitude": 48.18958
+    "longitude": 48.18958,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-2ba831dcf173",
@@ -6707,8 +8659,9 @@ export const iranCities: GeoItem[] = [
       "سوق",
       "سوق (کهگیلویه)"
     ],
-    "latitude": 30.85861111,
-    "longitude": 50.45805556
+    "latitude": 30.85831,
+    "longitude": 50.45818,
+    "provinceName": "کهگیلویه و بویراحمد"
   },
   {
     "id": "wiki-1318f03ed679",
@@ -6716,8 +8669,21 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "سومار"
     ],
-    "latitude": 33.86666667,
-    "longitude": 45.66666667
+    "latitude": 33.8862,
+    "longitude": 45.6388,
+    "provinceName": "کرمانشاه"
+  },
+  {
+    "id": "wiki-4cd4aebe38dc",
+    "name": "سه قلعه",
+    "aliases": [
+      "سه قلعه",
+      "سه‌قلعه",
+      "سه‌قلعه (شهر)"
+    ],
+    "latitude": 33.66779,
+    "longitude": 58.39728,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "wiki-affde43c9054",
@@ -6725,18 +8691,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "سهرورد"
     ],
-    "latitude": 36.07194444,
-    "longitude": 48.44
-  },
-  {
-    "id": "wiki-4cd4aebe38dc",
-    "name": "سه‌قلعه",
-    "aliases": [
-      "سه‌قلعه",
-      "سه‌قلعه (شهر)"
-    ],
-    "latitude": 33.66777778,
-    "longitude": 58.39722222
+    "latitude": 36.0706,
+    "longitude": 48.4416,
+    "provinceName": "زنجان"
   },
   {
     "id": "ir-13631338",
@@ -6747,7 +8704,18 @@ export const iranCities: GeoItem[] = [
       "سهند (اسکو)"
     ],
     "latitude": 37.95104,
-    "longitude": 46.1103
+    "longitude": 46.1103,
+    "provinceName": "آذربایجان شرقی"
+  },
+  {
+    "id": "ir-admin-1170004001511",
+    "name": "سی سخت",
+    "aliases": [
+      "سی سخت"
+    ],
+    "latitude": 30.86393,
+    "longitude": 51.4559,
+    "provinceName": "کهگیلویه و بویراحمد"
   },
   {
     "id": "wiki-34f43d78960a",
@@ -6756,8 +8724,9 @@ export const iranCities: GeoItem[] = [
       "سیاه منصور",
       "سیاه‌منصور (دزفول)"
     ],
-    "latitude": 32.32888889,
-    "longitude": 48.49777778
+    "latitude": 32.33165,
+    "longitude": 48.49534,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-114489",
@@ -6768,7 +8737,28 @@ export const iranCities: GeoItem[] = [
       "Siahkal"
     ],
     "latitude": 37.15328,
-    "longitude": 49.87136
+    "longitude": 49.87136,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-11100014001027",
+    "name": "سیب",
+    "aliases": [
+      "سیب"
+    ],
+    "latitude": 27.2412,
+    "longitude": 62.07508,
+    "provinceName": "سیستان و بلوچستان"
+  },
+  {
+    "id": "ir-admin-1270002002975",
+    "name": "سیجوال",
+    "aliases": [
+      "سیجوال"
+    ],
+    "latitude": 36.88276,
+    "longitude": 54.11542,
+    "provinceName": "گلستان"
   },
   {
     "id": "wiki-ad0ed4aee40b",
@@ -6777,8 +8767,9 @@ export const iranCities: GeoItem[] = [
       "سیدآباد",
       "سیدآباد (چناران)"
     ],
-    "latitude": 36.75,
-    "longitude": 58.956944
+    "latitude": 36.64875,
+    "longitude": 59.26473,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-aebea472941d",
@@ -6787,8 +8778,20 @@ export const iranCities: GeoItem[] = [
       "سیدان",
       "سیدان (مرودشت)"
     ],
-    "latitude": 30.00416667,
-    "longitude": 53.00666667
+    "latitude": 30.00399,
+    "longitude": 53.00581,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "wiki-d51fbe322e86",
+    "name": "سیراف",
+    "aliases": [
+      "سیراف",
+      "بندر سیراف"
+    ],
+    "latitude": 27.66583333,
+    "longitude": 52.34611111,
+    "provinceName": "بوشهر"
   },
   {
     "id": "ir-114259",
@@ -6798,7 +8801,8 @@ export const iranCities: GeoItem[] = [
       "Sirjan"
     ],
     "latitude": 29.45137,
-    "longitude": 55.6809
+    "longitude": 55.6809,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-5cf0ca7517bb",
@@ -6806,8 +8810,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "سیردان"
     ],
-    "latitude": 36.64722222,
-    "longitude": 49.19166667
+    "latitude": 36.6466,
+    "longitude": 49.1917,
+    "provinceName": "قزوین"
   },
   {
     "id": "wiki-d586ff70ace0",
@@ -6816,7 +8821,8 @@ export const iranCities: GeoItem[] = [
       "سیرکان"
     ],
     "latitude": 26.82888889,
-    "longitude": 62.64055556
+    "longitude": 62.64055556,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-6b29f5f45ff8",
@@ -6825,7 +8831,18 @@ export const iranCities: GeoItem[] = [
       "سیریز"
     ],
     "latitude": 30.99805556,
-    "longitude": 55.995
+    "longitude": 55.995,
+    "provinceName": "کرمان"
+  },
+  {
+    "id": "ir-admin-12200012002267",
+    "name": "سیریک",
+    "aliases": [
+      "سیریک"
+    ],
+    "latitude": 26.5055,
+    "longitude": 57.122,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "wiki-6aafd08ac6ed",
@@ -6833,8 +8850,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "سیس"
     ],
-    "latitude": 38.19972222,
-    "longitude": 45.8125
+    "latitude": 38.1997,
+    "longitude": 45.8124,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-3ce6bf44c34f",
@@ -6843,7 +8861,21 @@ export const iranCities: GeoItem[] = [
       "سیلوانه"
     ],
     "latitude": 37.42222222,
-    "longitude": 44.85333333
+    "longitude": 44.85333333,
+    "provinceName": "آذربایجان غربی"
+  },
+  {
+    "id": "ir-128392",
+    "name": "سیمین شهر",
+    "aliases": [
+      "سیمین شهر",
+      "کتوک",
+      "Sīmīn Shahr",
+      "Simin Shahr"
+    ],
+    "latitude": 37.01422,
+    "longitude": 54.23004,
+    "provinceName": "گلستان"
   },
   {
     "id": "wiki-181747c6cc33",
@@ -6852,7 +8884,8 @@ export const iranCities: GeoItem[] = [
       "سیمینه"
     ],
     "latitude": 36.72972222,
-    "longitude": 46.15111111
+    "longitude": 46.15111111,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-67885a8f1760",
@@ -6862,29 +8895,33 @@ export const iranCities: GeoItem[] = [
       "سین (برخوار)"
     ],
     "latitude": 32.83333333,
-    "longitude": 51.65
+    "longitude": 51.65,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-116326",
-    "name": "سیه‌چشمه",
+    "name": "سیه چشمه",
     "aliases": [
-      "سیه‌چشمه",
       "سیه چشمه",
+      "سیه‌چشمه",
       "Seyah Cheshmeh",
       "سیاه چشمه",
       "قره اینی"
     ],
     "latitude": 39.06508,
-    "longitude": 44.38416
+    "longitude": 44.38416,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-284f2a23715e",
-    "name": "سیه‌رود",
+    "name": "سیه رود",
     "aliases": [
+      "سیه رود",
       "سیه‌رود"
     ],
-    "latitude": 38.8575,
-    "longitude": 46.03888889
+    "latitude": 38.8694,
+    "longitude": 46.0023,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-6131eedf8690",
@@ -6894,7 +8931,8 @@ export const iranCities: GeoItem[] = [
       "شاپورآباد (برخوار)"
     ],
     "latitude": 32.84333333,
-    "longitude": 51.74305556
+    "longitude": 51.74305556,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-116102",
@@ -6905,7 +8943,8 @@ export const iranCities: GeoItem[] = [
       "Shadegan"
     ],
     "latitude": 30.64924,
-    "longitude": 48.66497
+    "longitude": 48.66497,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-e4d134e1d4c3",
@@ -6914,8 +8953,9 @@ export const iranCities: GeoItem[] = [
       "شادمهر",
       "شادمهر (مه‌ولات)"
     ],
-    "latitude": 35.17277778,
-    "longitude": 59.03638889
+    "latitude": 35.1716,
+    "longitude": 59.0367,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-142567",
@@ -6926,7 +8966,8 @@ export const iranCities: GeoItem[] = [
       "Shazand"
     ],
     "latitude": 33.93132,
-    "longitude": 49.40629
+    "longitude": 49.40629,
+    "provinceName": "مرکزی"
   },
   {
     "id": "ir-115615",
@@ -6936,8 +8977,9 @@ export const iranCities: GeoItem[] = [
       "Shāl",
       "Shal"
     ],
-    "latitude": 35.89814,
-    "longitude": 49.76906
+    "latitude": 35.898,
+    "longitude": 49.7701,
+    "provinceName": "قزوین"
   },
   {
     "id": "wiki-a0de3e2e5dbb",
@@ -6946,7 +8988,8 @@ export const iranCities: GeoItem[] = [
       "شامکان"
     ],
     "latitude": 35.99693889,
-    "longitude": 58.19638889
+    "longitude": 58.19638889,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-7d4a48e56d02",
@@ -6954,8 +8997,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "شاندیز"
     ],
-    "latitude": 36.39527778,
-    "longitude": 59.29638889
+    "latitude": 36.3959,
+    "longitude": 59.2986,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-9a536256e70e",
@@ -6964,7 +9008,18 @@ export const iranCities: GeoItem[] = [
       "شاوور"
     ],
     "latitude": 32.05611111,
-    "longitude": 48.30527778
+    "longitude": 48.30527778,
+    "provinceName": "خوزستان"
+  },
+  {
+    "id": "ir-admin-1150001002877",
+    "name": "شاهپوراباد",
+    "aliases": [
+      "شاهپوراباد"
+    ],
+    "latitude": 33.2489264,
+    "longitude": 49.7026204,
+    "provinceName": "لرستان"
   },
   {
     "id": "ir-406472",
@@ -6977,8 +9032,19 @@ export const iranCities: GeoItem[] = [
       "علی آباد شهید آباد",
       "علیاباد درازه"
     ],
-    "latitude": 35.5729,
-    "longitude": 51.085
+    "latitude": 35.5735,
+    "longitude": 51.0868,
+    "provinceName": "تهران"
+  },
+  {
+    "id": "ir-admin-1210005002126",
+    "name": "شاهدیه",
+    "aliases": [
+      "شاهدیه"
+    ],
+    "latitude": 31.94136,
+    "longitude": 54.28271,
+    "provinceName": "یزد"
   },
   {
     "id": "ir-135423",
@@ -6990,7 +9056,18 @@ export const iranCities: GeoItem[] = [
       "امامشهر"
     ],
     "latitude": 36.41819,
-    "longitude": 54.97628
+    "longitude": 54.97628,
+    "provinceName": "سمنان"
+  },
+  {
+    "id": "ir-admin-11300010001064",
+    "name": "شاهنجرین",
+    "aliases": [
+      "شاهنجرین"
+    ],
+    "latitude": 35.30779,
+    "longitude": 49.17155,
+    "provinceName": "همدان"
   },
   {
     "id": "wiki-59d54c9d9c43",
@@ -7000,31 +9077,34 @@ export const iranCities: GeoItem[] = [
       "شاهو (روانسر)"
     ],
     "latitude": 34.94083333,
-    "longitude": 46.45861111
+    "longitude": 46.45861111,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "ir-117793",
-    "name": "شاهین‌دژ",
+    "name": "شاهین دژ",
     "aliases": [
-      "شاهین‌دژ",
       "شاهین دژ",
+      "شاهین‌دژ",
       "Shāhīn Dezh",
       "Shahin Dezh"
     ],
     "latitude": 36.6793,
-    "longitude": 46.5669
+    "longitude": 46.5669,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "ir-417472",
-    "name": "شاهین‌شهر",
+    "name": "شاهین شهر",
     "aliases": [
-      "شاهین‌شهر",
       "شاهین شهر",
+      "شاهین‌شهر",
       "Shāhīn Shahr",
       "Shahin Shahr"
     ],
     "latitude": 32.85788,
-    "longitude": 51.5529
+    "longitude": 51.5529,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-319d903e3a89",
@@ -7034,7 +9114,8 @@ export const iranCities: GeoItem[] = [
       "شباب (چرداول)"
     ],
     "latitude": 33.74805556,
-    "longitude": 46.6375
+    "longitude": 46.6375,
+    "provinceName": "ایلام"
   },
   {
     "id": "wiki-365a245b9aa4",
@@ -7044,7 +9125,8 @@ export const iranCities: GeoItem[] = [
       "شبانکاره (دشتستان)"
     ],
     "latitude": 29.47222222,
-    "longitude": 50.99527778
+    "longitude": 50.99527778,
+    "provinceName": "بوشهر"
   },
   {
     "id": "ir-116126",
@@ -7054,7 +9136,8 @@ export const iranCities: GeoItem[] = [
       "Shabestar"
     ],
     "latitude": 38.1804,
-    "longitude": 45.7028
+    "longitude": 45.7028,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-36278",
@@ -7062,11 +9145,11 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "شرافت",
       "Sharāfat",
-      "Sharafat",
-      "شهرک شهید شرافت"
+      "Sharafat"
     ],
     "latitude": 32.0877,
-    "longitude": 48.7684
+    "longitude": 48.7684,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-9704f4fb343f",
@@ -7074,8 +9157,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "شربیان"
     ],
-    "latitude": 37.88166667,
-    "longitude": 47.10111111
+    "latitude": 37.8817,
+    "longitude": 47.1012,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-b364a97964ce",
@@ -7083,8 +9167,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "شرفخانه"
     ],
-    "latitude": 38.17166667,
-    "longitude": 45.48194444
+    "latitude": 38.17706,
+    "longitude": 45.48815,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-67803733ba57",
@@ -7093,20 +9178,36 @@ export const iranCities: GeoItem[] = [
       "شروینه"
     ],
     "latitude": 34.82805556,
-    "longitude": 46.35777778
+    "longitude": 46.35777778,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "ir-115382",
-    "name": "شریف‌آباد",
+    "name": "شریف آباد",
     "aliases": [
+      "شریف آباد",
       "شریف‌آباد",
       "شریفیه",
+      "Sharīfābād",
+      "Sharifabad"
+    ],
+    "latitude": 35.42698,
+    "longitude": 51.78456,
+    "provinceName": "تهران"
+  },
+  {
+    "id": "ir-admin-1260005002040",
+    "name": "شریفیه",
+    "aliases": [
+      "شریفیه",
+      "شریف‌آباد",
       "Sharīfābād",
       "Sharifabad",
       "شریف آباد"
     ],
     "latitude": 36.21167,
-    "longitude": 50.14999
+    "longitude": 50.14999,
+    "provinceName": "قزوین"
   },
   {
     "id": "wiki-a165c313455e",
@@ -7114,8 +9215,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "ششتمد"
     ],
-    "latitude": 35.95972222,
-    "longitude": 57.76666667
+    "latitude": 35.95969,
+    "longitude": 57.76673,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-ff8d3b90c63b",
@@ -7123,8 +9225,49 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "ششده"
     ],
-    "latitude": 28.94863481,
-    "longitude": 53.99550531
+    "latitude": 28.94729,
+    "longitude": 53.99469,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-10100012001141",
+    "name": "شفت",
+    "aliases": [
+      "شفت"
+    ],
+    "latitude": 37.1702,
+    "longitude": 49.3998,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-10100010002141",
+    "name": "شلمان",
+    "aliases": [
+      "شلمان"
+    ],
+    "latitude": 37.1551,
+    "longitude": 50.21464,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-1140007002153",
+    "name": "شلمزار",
+    "aliases": [
+      "شلمزار"
+    ],
+    "latitude": 32.0465,
+    "longitude": 50.81639,
+    "provinceName": "چهارمحال و بختیاری"
+  },
+  {
+    "id": "ir-admin-1060008002100",
+    "name": "شمس آباد",
+    "aliases": [
+      "شمس آباد"
+    ],
+    "latitude": 32.29844,
+    "longitude": 48.42913,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-33c59b2054f8",
@@ -7133,7 +9276,8 @@ export const iranCities: GeoItem[] = [
       "شمشک"
     ],
     "latitude": 36.011362,
-    "longitude": 51.49093611
+    "longitude": 51.49093611,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-aa2f5cf84fdd",
@@ -7142,8 +9286,19 @@ export const iranCities: GeoItem[] = [
       "شمیل",
       "شمیل (بندرعباس)"
     ],
-    "latitude": 27.50055556,
-    "longitude": 56.86472222
+    "latitude": 27.5098,
+    "longitude": 56.8477,
+    "provinceName": "هرمزگان"
+  },
+  {
+    "id": "ir-admin-1180004002050",
+    "name": "شنبه",
+    "aliases": [
+      "شنبه"
+    ],
+    "latitude": 28.39565,
+    "longitude": 51.76366,
+    "provinceName": "بوشهر"
   },
   {
     "id": "wiki-84072cc406e6",
@@ -7151,8 +9306,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "شندآباد"
     ],
-    "latitude": 38.13833333,
-    "longitude": 45.61138889
+    "latitude": 38.14373,
+    "longitude": 45.62973,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-c10c002cae2c",
@@ -7160,8 +9316,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "شوسف"
     ],
-    "latitude": 31.80472222,
-    "longitude": 60.01
+    "latitude": 31.8035,
+    "longitude": 60.0099,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "ir-114593",
@@ -7172,7 +9329,8 @@ export const iranCities: GeoItem[] = [
       "Shush"
     ],
     "latitude": 32.1942,
-    "longitude": 48.2436
+    "longitude": 48.2436,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-114584",
@@ -7183,7 +9341,8 @@ export const iranCities: GeoItem[] = [
       "Shushtar"
     ],
     "latitude": 32.04972,
-    "longitude": 48.84843
+    "longitude": 48.84843,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-401118",
@@ -7195,7 +9354,8 @@ export const iranCities: GeoItem[] = [
       "Showt"
     ],
     "latitude": 39.2192,
-    "longitude": 44.77
+    "longitude": 44.77,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-7108069513b7",
@@ -7203,17 +9363,20 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "شوقان"
     ],
-    "latitude": 37.34194444,
-    "longitude": 56.88694444
+    "latitude": 37.3419,
+    "longitude": 56.8868,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "wiki-81ea927330f6",
-    "name": "شول‌آباد",
+    "name": "شول آباد",
     "aliases": [
+      "شول آباد",
       "شول‌آباد"
     ],
-    "latitude": 33.18,
-    "longitude": 49.18
+    "latitude": 33.1854,
+    "longitude": 49.1907,
+    "provinceName": "لرستان"
   },
   {
     "id": "wiki-d3bf90ffd086",
@@ -7222,7 +9385,18 @@ export const iranCities: GeoItem[] = [
       "شویشه"
     ],
     "latitude": 35.35666667,
-    "longitude": 46.67777778
+    "longitude": 46.67777778,
+    "provinceName": "کردستان"
+  },
+  {
+    "id": "ir-admin-1000007002774",
+    "name": "شهباز",
+    "aliases": [
+      "شهباز"
+    ],
+    "latitude": 33.8803531,
+    "longitude": 49.5338705,
+    "provinceName": "مرکزی"
   },
   {
     "id": "wiki-fa07eee11f32",
@@ -7230,90 +9404,30 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "شهداد"
     ],
-    "latitude": 30.4175,
-    "longitude": 57.70666667
+    "latitude": 30.4196,
+    "longitude": 57.7024,
+    "provinceName": "کرمان"
   },
   {
-    "id": "wiki-9945727def3c",
-    "name": "شهر ابریشم",
+    "id": "ir-admin-1060008002417",
+    "name": "شهر امام",
     "aliases": [
-      "شهر ابریشم",
-      "ابریشم (فلاورجان)"
+      "شهر امام"
     ],
-    "latitude": 32.555,
-    "longitude": 51.57305556
+    "latitude": 32.2275706,
+    "longitude": 48.4260136,
+    "provinceName": "خوزستان"
   },
   {
-    "id": "ir-127243",
-    "name": "شهر امام خمینی",
+    "id": "wiki-90235769035c",
+    "name": "شهر زو",
     "aliases": [
-      "شهر امام خمینی",
-      "Shahr-e Emām",
-      "Shahr-e Emam",
-      "شهرک امام خمینی"
+      "شهر زو",
+      "شهرزو"
     ],
-    "latitude": 32.22767,
-    "longitude": 48.42596
-  },
-  {
-    "id": "ir-115781",
-    "name": "شهر بابک",
-    "aliases": [
-      "شهر بابک",
-      "Shahr-e Bābak",
-      "Shahr-e Babak"
-    ],
-    "latitude": 30.1165,
-    "longitude": 55.1186
-  },
-  {
-    "id": "ir-32909",
-    "name": "شهر جدید اندیشه",
-    "aliases": [
-      "شهر جدید اندیشه",
-      "Shahre Jadide Andisheh"
-    ],
-    "latitude": 35.6803,
-    "longitude": 51.0193
-  },
-  {
-    "id": "ir-6659672",
-    "name": "شهر جدید پرند",
-    "aliases": [
-      "شهر جدید پرند",
-      "Parand",
-      "محل احداث شهرک مسکونی پرند"
-    ],
-    "latitude": 35.47195,
-    "longitude": 50.97547
-  },
-  {
-    "id": "wiki-8bacb4ea59a8",
-    "name": "شهر جدید تیس",
-    "aliases": [
-      "شهر جدید تیس"
-    ],
-    "latitude": 25.45527778,
-    "longitude": 60.48805556
-  },
-  {
-    "id": "wiki-ba2bb78b21e9",
-    "name": "شهر جدید رامشار",
-    "aliases": [
-      "شهر جدید رامشار"
-    ],
-    "latitude": 30.70916667,
-    "longitude": 61.38916667
-  },
-  {
-    "id": "ir-8535197",
-    "name": "شهر جدید مهستان",
-    "aliases": [
-      "شهر جدید مهستان",
-      "Mehestan"
-    ],
-    "latitude": 35.98907,
-    "longitude": 50.74512
+    "latitude": 36.9812,
+    "longitude": 59.5434,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-6653052",
@@ -7326,7 +9440,18 @@ export const iranCities: GeoItem[] = [
       "صدرا شیراز"
     ],
     "latitude": 29.79972,
-    "longitude": 52.50215
+    "longitude": 52.50215,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "wiki-00c889d0554b",
+    "name": "شهر کهنه",
+    "aliases": [
+      "شهر کهنه"
+    ],
+    "latitude": 37.14053,
+    "longitude": 58.39121,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-f771ccf6afcd",
@@ -7335,8 +9460,22 @@ export const iranCities: GeoItem[] = [
       "شهرآباد",
       "شهرآباد (بردسکن)"
     ],
-    "latitude": 35.14666667,
-    "longitude": 57.93083333
+    "latitude": 35.1491,
+    "longitude": 57.9357,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-115781",
+    "name": "شهربابک",
+    "aliases": [
+      "شهربابک",
+      "شهر بابک",
+      "Shahr-e Bābak",
+      "Shahr-e Babak"
+    ],
+    "latitude": 30.1165,
+    "longitude": 55.1186,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-ca6da8cf9af5",
@@ -7344,17 +9483,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "شهرپیر"
     ],
-    "latitude": 28.31027778,
-    "longitude": 54.33472222
-  },
-  {
-    "id": "wiki-90235769035c",
-    "name": "شهرزو",
-    "aliases": [
-      "شهرزو"
-    ],
-    "latitude": 36.75,
-    "longitude": 59.934167
+    "latitude": 28.31043,
+    "longitude": 54.33473,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-418533",
@@ -7366,98 +9497,8 @@ export const iranCities: GeoItem[] = [
       "Shahreza"
     ],
     "latitude": 32.00877,
-    "longitude": 51.86407
-  },
-  {
-    "id": "ir-115802",
-    "name": "شهرک",
-    "aliases": [
-      "شهرک",
-      "Kīān",
-      "Kian",
-      "شهر کیان",
-      "کیان"
-    ],
-    "latitude": 32.28418,
-    "longitude": 50.89202
-  },
-  {
-    "id": "ir-400791",
-    "name": "شهرک احمد آباد مستوفی",
-    "aliases": [
-      "شهرک احمد آباد مستوفی",
-      "Aḥmad Ābād Mostūfī",
-      "Ahmad Abad Mostufi"
-    ],
-    "latitude": 35.63957,
-    "longitude": 51.21273
-  },
-  {
-    "id": "ir-6663569",
-    "name": "شهرک الهیه",
-    "aliases": [
-      "شهرک الهیه",
-      "Shahrak-e Pardīsān",
-      "Shahrak-e Pardisan",
-      "شهرک پردیسان"
-    ],
-    "latitude": 34.55734,
-    "longitude": 50.80201
-  },
-  {
-    "id": "ir-6648117",
-    "name": "شهرک شهید چمران",
-    "aliases": [
-      "شهرک شهید چمران",
-      "Chamrān",
-      "Chamran"
-    ],
-    "latitude": 30.70838,
-    "longitude": 49.16266
-  },
-  {
-    "id": "ir-32843",
-    "name": "شهرک صالح آباد",
-    "aliases": [
-      "شهرک صالح آباد",
-      "Ṣāleḥīeh",
-      "Salehieh"
-    ],
-    "latitude": 35.50527,
-    "longitude": 51.19142
-  },
-  {
-    "id": "ir-45628",
-    "name": "شهرک طالقانی",
-    "aliases": [
-      "شهرک طالقانی",
-      "Shahrak-e Ţāleqānī",
-      "Shahrak-e Taleqani"
-    ],
-    "latitude": 30.835,
-    "longitude": 50.19873
-  },
-  {
-    "id": "ir-362",
-    "name": "شهرک غرب",
-    "aliases": [
-      "شهرک غرب",
-      "Shahrak-e Qods",
-      "شهرک قدس"
-    ],
-    "latitude": 35.75936,
-    "longitude": 51.37601
-  },
-  {
-    "id": "ir-41589",
-    "name": "شهرک مهندسی زراعی",
-    "aliases": [
-      "شهرک مهندسی زراعی",
-      "Shahrak-e Mohandesī-ye Zerā‘ī",
-      "Shahrak-e Mohandesi-ye Zera'i"
-    ],
-    "latitude": 35.772,
-    "longitude": 50.956
+    "longitude": 51.86407,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-115770",
@@ -7468,17 +9509,8 @@ export const iranCities: GeoItem[] = [
       "Shahr-e Kord"
     ],
     "latitude": 32.32612,
-    "longitude": 50.8572
-  },
-  {
-    "id": "wiki-00c889d0554b",
-    "name": "شهرکهنه",
-    "aliases": [
-      "شهرکهنه",
-      "شهرکهنه (قوچان)"
-    ],
-    "latitude": 37.14055556,
-    "longitude": 58.39111111
+    "longitude": 50.8572,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "ir-143860",
@@ -7489,7 +9521,8 @@ export const iranCities: GeoItem[] = [
       "Shahriar"
     ],
     "latitude": 35.65884,
-    "longitude": 51.05775
+    "longitude": 51.05775,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-f5abf3ac20fe",
@@ -7497,8 +9530,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "شهمیرزاد"
     ],
-    "latitude": 35.77277778,
-    "longitude": 53.32861111
+    "latitude": 35.76896,
+    "longitude": 53.33436,
+    "provinceName": "سمنان"
+  },
+  {
+    "id": "ir-admin-1060008002927",
+    "name": "شهیون",
+    "aliases": [
+      "شهیون"
+    ],
+    "latitude": 32.6146622,
+    "longitude": 48.5879958,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-6648621",
@@ -7509,7 +9553,8 @@ export const iranCities: GeoItem[] = [
       "Sheyban"
     ],
     "latitude": 31.40794,
-    "longitude": 48.7946
+    "longitude": 48.7946,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-115019",
@@ -7519,7 +9564,18 @@ export const iranCities: GeoItem[] = [
       "Shiraz"
     ],
     "latitude": 29.61031,
-    "longitude": 52.53113
+    "longitude": 52.53113,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-10200027001173",
+    "name": "شیرگاه",
+    "aliases": [
+      "شیرگاه"
+    ],
+    "latitude": 36.2987,
+    "longitude": 52.89021,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-114930",
@@ -7530,7 +9586,8 @@ export const iranCities: GeoItem[] = [
       "Shirvan"
     ],
     "latitude": 37.39669,
-    "longitude": 57.92952
+    "longitude": 57.92952,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "ir-114242",
@@ -7543,16 +9600,19 @@ export const iranCities: GeoItem[] = [
       "پائین شیرود"
     ],
     "latitude": 36.85035,
-    "longitude": 50.80322
+    "longitude": 50.80322,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-f91693b427fc",
-    "name": "شیرین‌سو",
+    "name": "شیرین سو",
     "aliases": [
+      "شیرین سو",
       "شیرین‌سو"
     ],
-    "latitude": 35.49277778,
-    "longitude": 48.45055556
+    "latitude": 35.4926,
+    "longitude": 48.4515,
+    "provinceName": "همدان"
   },
   {
     "id": "wiki-42fd9e7736b2",
@@ -7562,27 +9622,69 @@ export const iranCities: GeoItem[] = [
       "شیرینو (کنگان)"
     ],
     "latitude": 27.62528056,
-    "longitude": 52.47443889
+    "longitude": 52.47443889,
+    "provinceName": "بوشهر"
   },
   {
-    "id": "wiki-f49105ebf7d7",
-    "name": "صالح‌آباد",
+    "id": "ir-admin-1120003002502",
+    "name": "صاحب",
     "aliases": [
-      "صالح‌آباد",
-      "صالح‌آباد (خراسان رضوی)"
+      "صاحب"
     ],
-    "latitude": 35.688056,
-    "longitude": 61.095556
+    "latitude": 36.2025,
+    "longitude": 46.4609,
+    "provinceName": "کردستان"
+  },
+  {
+    "id": "ir-admin-12700014002884",
+    "name": "صادق آباد",
+    "aliases": [
+      "صادق آباد"
+    ],
+    "latitude": 37.37584,
+    "longitude": 55.67449,
+    "provinceName": "گلستان"
+  },
+  {
+    "id": "ir-admin-10900040001362",
+    "name": "صالح آباد",
+    "aliases": [
+      "صالح آباد"
+    ],
+    "latitude": 36.18959,
+    "longitude": 57.69779,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-187e97a34e90",
-    "name": "صالح‌آباد (همدان)",
+    "name": "صالح آباد",
     "aliases": [
-      "صالح‌آباد (همدان)",
+      "صالح آباد",
+      "صالح‌آباد (همدان)"
+    ],
+    "latitude": 34.9216,
+    "longitude": 48.3431,
+    "provinceName": "همدان"
+  },
+  {
+    "id": "ir-admin-1160005001509",
+    "name": "صالح آباد",
+    "aliases": [
       "صالح آباد"
     ],
-    "latitude": 34.92361111,
-    "longitude": 48.3425
+    "latitude": 33.4694,
+    "longitude": 46.1889,
+    "provinceName": "ایلام"
+  },
+  {
+    "id": "ir-admin-10600020002009",
+    "name": "صالح شهر",
+    "aliases": [
+      "صالح شهر"
+    ],
+    "latitude": 32.212,
+    "longitude": 48.6722,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-a1cde22b6b89",
@@ -7592,16 +9694,35 @@ export const iranCities: GeoItem[] = [
       "صالحیه (بهارستان)"
     ],
     "latitude": 35.50777778,
-    "longitude": 51.18583333
+    "longitude": 51.18583333,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-377e25e6eb24",
-    "name": "صایین‌قلعه",
+    "name": "صایین قلعه",
     "aliases": [
+      "صایین قلعه",
       "صایین‌قلعه"
     ],
     "latitude": 36.29944444,
-    "longitude": 49.07444444
+    "longitude": 49.07444444,
+    "provinceName": "زنجان"
+  },
+  {
+    "id": "ir-6672633",
+    "name": "صباشهر",
+    "aliases": [
+      "صباشهر",
+      "قاسم‌آباد",
+      "Şabbāshahr",
+      "Sabbashahr",
+      "قاسم آباد",
+      "قاسم‌آباد (خواف)",
+      "قاسم‌آباد (بمپور)"
+    ],
+    "latitude": 35.5825,
+    "longitude": 51.113,
+    "provinceName": "تهران"
   },
   {
     "id": "ir-117835",
@@ -7613,7 +9734,8 @@ export const iranCities: GeoItem[] = [
       "صحنه (کرمانشاه)"
     ],
     "latitude": 34.4813,
-    "longitude": 47.6908
+    "longitude": 47.6908,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "ir-114196",
@@ -7623,17 +9745,9 @@ export const iranCities: GeoItem[] = [
       "Şoghād",
       "Soghad"
     ],
-    "latitude": 31.19295,
-    "longitude": 52.51802
-  },
-  {
-    "id": "wiki-ea3013ee609a",
-    "name": "صفائیه",
-    "aliases": [
-      "صفائیه"
-    ],
-    "latitude": 30.82777778,
-    "longitude": 55.81222222
+    "latitude": 31.19262,
+    "longitude": 52.51881,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-13645766",
@@ -7643,8 +9757,62 @@ export const iranCities: GeoItem[] = [
       "Ṣafādasht",
       "Safadasht"
     ],
-    "latitude": 35.69244,
-    "longitude": 50.84828
+    "latitude": 35.6924,
+    "longitude": 50.8483,
+    "provinceName": "تهران"
+  },
+  {
+    "id": "ir-137025",
+    "name": "صفاشهر",
+    "aliases": [
+      "صفاشهر",
+      "ده بید",
+      "Şafāshahr",
+      "Safashahr"
+    ],
+    "latitude": 30.6131,
+    "longitude": 53.1954,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-1080004002085",
+    "name": "صفاییه",
+    "aliases": [
+      "صفاییه"
+    ],
+    "latitude": 30.8265,
+    "longitude": 55.8105,
+    "provinceName": "کرمان"
+  },
+  {
+    "id": "ir-admin-1060008002418",
+    "name": "صفی آباد",
+    "aliases": [
+      "صفی آباد"
+    ],
+    "latitude": 32.26299,
+    "longitude": 48.41865,
+    "provinceName": "خوزستان"
+  },
+  {
+    "id": "ir-admin-1280009002430",
+    "name": "صفی آباد",
+    "aliases": [
+      "صفی آباد"
+    ],
+    "latitude": 36.6954,
+    "longitude": 57.92838,
+    "provinceName": "خراسان شمالی"
+  },
+  {
+    "id": "ir-admin-1140006002839",
+    "name": "صمصامی",
+    "aliases": [
+      "صمصامی"
+    ],
+    "latitude": 32.16731,
+    "longitude": 50.27478,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "wiki-7635917de70a",
@@ -7654,7 +9822,8 @@ export const iranCities: GeoItem[] = [
       "صوفیان (شبستر)"
     ],
     "latitude": 38.2775,
-    "longitude": 45.98055556
+    "longitude": 45.98055556,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-113860",
@@ -7665,16 +9834,38 @@ export const iranCities: GeoItem[] = [
       "Sowme'eh Sara"
     ],
     "latitude": 37.30134,
-    "longitude": 49.31504
+    "longitude": 49.31504,
+    "provinceName": "گیلان"
   },
   {
-    "id": "wiki-ce6a490a5cd7",
-    "name": "ضیاءآباد",
+    "id": "ir-admin-10600030002596",
+    "name": "صیدون",
     "aliases": [
-      "ضیاءآباد"
+      "صیدون"
     ],
-    "latitude": 35.99305556,
-    "longitude": 49.4475
+    "latitude": 31.36682,
+    "longitude": 50.08335,
+    "provinceName": "خوزستان"
+  },
+  {
+    "id": "ir-admin-1260002002158",
+    "name": "ضیاآباد",
+    "aliases": [
+      "ضیاآباد"
+    ],
+    "latitude": 35.99325,
+    "longitude": 49.44638,
+    "provinceName": "قزوین"
+  },
+  {
+    "id": "ir-admin-1010008001059",
+    "name": "ضیابر",
+    "aliases": [
+      "ضیابر"
+    ],
+    "latitude": 37.4261,
+    "longitude": 49.2459,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-8da13c7e6704",
@@ -7684,7 +9875,18 @@ export const iranCities: GeoItem[] = [
       "طاد (فلاورجان)"
     ],
     "latitude": 32.46666667,
-    "longitude": 51.51666667
+    "longitude": 51.51666667,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-1140002002359",
+    "name": "طاقانک",
+    "aliases": [
+      "طاقانک"
+    ],
+    "latitude": 32.22392,
+    "longitude": 50.83904,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "wiki-839d3cd5bcdb",
@@ -7692,8 +9894,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "طالخونچه"
     ],
-    "latitude": 32.26277778,
-    "longitude": 51.56222222
+    "latitude": 32.2662,
+    "longitude": 51.5639,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-6f89e638f293",
@@ -7701,8 +9904,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "طالقان"
     ],
-    "latitude": 36.17444444,
-    "longitude": 50.76916667
+    "latitude": 36.17449,
+    "longitude": 50.76908,
+    "provinceName": "البرز"
+  },
+  {
+    "id": "ir-admin-1010008001058",
+    "name": "طاهرگوراب",
+    "aliases": [
+      "طاهرگوراب"
+    ],
+    "latitude": 37.38337,
+    "longitude": 49.22692,
+    "provinceName": "گیلان"
   },
   {
     "id": "ir-113659",
@@ -7713,7 +9927,8 @@ export const iranCities: GeoItem[] = [
       "شہرستان طبس"
     ],
     "latitude": 33.59586,
-    "longitude": 56.92437
+    "longitude": 56.92437,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "wiki-a6c94e86c4d8",
@@ -7722,7 +9937,8 @@ export const iranCities: GeoItem[] = [
       "طبس مسینا"
     ],
     "latitude": 32.806944,
-    "longitude": 60.222222
+    "longitude": 60.222222,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "wiki-79346c62a3f4",
@@ -7730,8 +9946,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "طبقده"
     ],
-    "latitude": 36.76333056,
-    "longitude": 53.19888889
+    "latitude": 36.76125,
+    "longitude": 53.20371,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-8cff0ead4bba",
@@ -7740,8 +9957,20 @@ export const iranCities: GeoItem[] = [
       "طبل",
       "طبل (قشم)"
     ],
-    "latitude": 26.75694444,
-    "longitude": 55.72555556
+    "latitude": 26.757,
+    "longitude": 55.7256,
+    "provinceName": "هرمزگان"
+  },
+  {
+    "id": "wiki-2d78274b3bdc",
+    "name": "طرق رود",
+    "aliases": [
+      "طرق رود",
+      "طرق‌رود"
+    ],
+    "latitude": 33.35361111,
+    "longitude": 51.79916667,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-112616",
@@ -7752,16 +9981,8 @@ export const iranCities: GeoItem[] = [
       "Torqabeh"
     ],
     "latitude": 36.3104,
-    "longitude": 59.3735
-  },
-  {
-    "id": "wiki-2d78274b3bdc",
-    "name": "طرق‌رود",
-    "aliases": [
-      "طرق‌رود"
-    ],
-    "latitude": 33.35361111,
-    "longitude": 51.79916667
+    "longitude": 59.3735,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-d9a90f59282d",
@@ -7770,8 +9991,9 @@ export const iranCities: GeoItem[] = [
       "طسوج",
       "طسوج (کوار)"
     ],
-    "latitude": 29.26944444,
-    "longitude": 52.69916667
+    "latitude": 29.26691,
+    "longitude": 52.69946,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-fc8e14b513a3",
@@ -7780,19 +10002,21 @@ export const iranCities: GeoItem[] = [
       "عاشقلو"
     ],
     "latitude": 38.98666667,
-    "longitude": 46.7
+    "longitude": 46.7,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-8522943",
-    "name": "عالی‌شهر",
+    "name": "عالی شهر",
     "aliases": [
-      "عالی‌شهر",
       "عالی شهر",
+      "عالی‌شهر",
       "‘Ālī Shahr",
       "'Ali Shahr"
     ],
     "latitude": 28.93125,
-    "longitude": 51.06571
+    "longitude": 51.06571,
+    "provinceName": "بوشهر"
   },
   {
     "id": "ir-145303",
@@ -7803,30 +10027,54 @@ export const iranCities: GeoItem[] = [
       "'Abas Abad"
     ],
     "latitude": 36.72769,
-    "longitude": 51.10574
+    "longitude": 51.10574,
+    "provinceName": "مازندران"
+  },
+  {
+    "id": "ir-admin-10800017001014",
+    "name": "عباس آباد سردار",
+    "aliases": [
+      "عباس آباد سردار"
+    ],
+    "latitude": 28.668815,
+    "longitude": 59.073365,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-257adfcc73d5",
-    "name": "عبدل‌آباد",
+    "name": "عبدل آباد",
     "aliases": [
+      "عبدل آباد",
       "عبدل‌آباد",
       "عبدل‌آباد (مه‌ولات)"
     ],
-    "latitude": 35.06444444,
-    "longitude": 58.78833333
+    "latitude": 35.06422,
+    "longitude": 58.78726,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-144443",
-    "name": "عجب‌شیر",
+    "name": "عجب شیر",
     "aliases": [
+      "عجب شیر",
       "عجب‌شیر",
       "اجبشهر",
       "Ajab Shīr",
-      "Ajab Shir",
-      "عجب شیر"
+      "Ajab Shir"
     ],
     "latitude": 37.4776,
-    "longitude": 45.8943
+    "longitude": 45.8943,
+    "provinceName": "آذربایجان شرقی"
+  },
+  {
+    "id": "ir-admin-10600012002968",
+    "name": "عرب حسن",
+    "aliases": [
+      "عرب حسن"
+    ],
+    "latitude": 31.83265,
+    "longitude": 48.89707,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-ff76881af581",
@@ -7836,7 +10084,8 @@ export const iranCities: GeoItem[] = [
       "عسگران (تیران و کرون)"
     ],
     "latitude": 32.86416667,
-    "longitude": 50.85333333
+    "longitude": 50.85333333,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-142857",
@@ -7849,7 +10098,38 @@ export const iranCities: GeoItem[] = [
       "بندر عسلو"
     ],
     "latitude": 27.47383,
-    "longitude": 52.60782
+    "longitude": 52.60782,
+    "provinceName": "بوشهر"
+  },
+  {
+    "id": "ir-admin-10900045002438",
+    "name": "عشق آباد",
+    "aliases": [
+      "عشق آباد"
+    ],
+    "latitude": 36.87584,
+    "longitude": 58.40308,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-admin-12900011002345",
+    "name": "عشق آباد",
+    "aliases": [
+      "عشق آباد"
+    ],
+    "latitude": 34.36633,
+    "longitude": 56.92993,
+    "provinceName": "خراسان جنوبی"
+  },
+  {
+    "id": "ir-admin-1260001002991",
+    "name": "عصمت آباد",
+    "aliases": [
+      "عصمت آباد"
+    ],
+    "latitude": 35.848,
+    "longitude": 50.065,
+    "provinceName": "قزوین"
   },
   {
     "id": "wiki-732942b849cf",
@@ -7858,19 +10138,8 @@ export const iranCities: GeoItem[] = [
       "عقدا"
     ],
     "latitude": 32.44083333,
-    "longitude": 53.62972222
-  },
-  {
-    "id": "ir-8080737",
-    "name": "علائین",
-    "aliases": [
-      "علائین",
-      "Shahrak-e ‘Alā’īn",
-      "Shahrak-e 'Ala'in",
-      "شهرک علائین"
-    ],
-    "latitude": 35.58231,
-    "longitude": 51.45559
+    "longitude": 53.62972222,
+    "provinceName": "یزد"
   },
   {
     "id": "wiki-57b6dfc2bbdf",
@@ -7878,8 +10147,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "علامرودشت"
     ],
-    "latitude": 27.62611111,
-    "longitude": 53
+    "latitude": 27.6248,
+    "longitude": 52.9976,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-144263",
@@ -7889,7 +10159,53 @@ export const iranCities: GeoItem[] = [
       "Alavijeh"
     ],
     "latitude": 33.0548,
-    "longitude": 51.08331
+    "longitude": 51.08331,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-10800023001012",
+    "name": "علی  آباد",
+    "aliases": [
+      "علی  آباد"
+    ],
+    "latitude": 28.351,
+    "longitude": 56.4098,
+    "provinceName": "کرمان"
+  },
+  {
+    "id": "ir-admin-1080003002953",
+    "name": "علی آباد",
+    "aliases": [
+      "علی آباد"
+    ],
+    "latitude": 28.96664,
+    "longitude": 57.89989,
+    "provinceName": "کرمان"
+  },
+  {
+    "id": "ir-144038",
+    "name": "علی آباد",
+    "aliases": [
+      "علی آباد",
+      "علی‌آباد",
+      "'Alī Ābād-e Katūl",
+      "'Ali Abad-e Katul",
+      "علی آباد کتول",
+      "علی‌آباد (جیرفت)"
+    ],
+    "latitude": 36.91011,
+    "longitude": 54.86737,
+    "provinceName": "گلستان"
+  },
+  {
+    "id": "ir-admin-1130002001091",
+    "name": "علی آباددمق",
+    "aliases": [
+      "علی آباددمق"
+    ],
+    "latitude": 34.53173,
+    "longitude": 48.60515,
+    "provinceName": "همدان"
   },
   {
     "id": "wiki-9824d0b18451",
@@ -7899,21 +10215,8 @@ export const iranCities: GeoItem[] = [
       "علی‌اکبر (شهر)"
     ],
     "latitude": 30.93911806,
-    "longitude": 61.328365
-  },
-  {
-    "id": "ir-144038",
-    "name": "علی‌آباد",
-    "aliases": [
-      "علی‌آباد",
-      "علی آباد",
-      "'Alī Ābād-e Katūl",
-      "'Ali Abad-e Katul",
-      "علی آباد کتول",
-      "علی‌آباد (جیرفت)"
-    ],
-    "latitude": 36.91011,
-    "longitude": 54.86737
+    "longitude": 61.328365,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-0bf8de8a3162",
@@ -7923,16 +10226,19 @@ export const iranCities: GeoItem[] = [
       "علیشاه (شبستر)"
     ],
     "latitude": 38.14166667,
-    "longitude": 45.83444444
+    "longitude": 45.83444444,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-49636d475cb4",
-    "name": "عمادشهر",
+    "name": "عماد شهر",
     "aliases": [
+      "عماد شهر",
       "عمادشهر"
     ],
     "latitude": 27.44747289,
-    "longitude": 53.86021781
+    "longitude": 53.86021781,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-a204fd923798",
@@ -7942,18 +10248,21 @@ export const iranCities: GeoItem[] = [
       "عنبر (مسجدسلیمان)"
     ],
     "latitude": 32.26277778,
-    "longitude": 49.01333333
+    "longitude": 49.01333333,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-143471",
-    "name": "عنبر آباد",
+    "name": "عنبرآباد",
     "aliases": [
+      "عنبرآباد",
       "عنبر آباد",
       "‘Anbarābād",
       "'Anbarabad"
     ],
     "latitude": 28.4759,
-    "longitude": 57.848
+    "longitude": 57.848,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-11e762c9cf20",
@@ -7962,19 +10271,18 @@ export const iranCities: GeoItem[] = [
       "عنبران"
     ],
     "latitude": 38.4875,
-    "longitude": 48.43194444
+    "longitude": 48.43194444,
+    "provinceName": "اردبیل"
   },
   {
-    "id": "ir-42517",
-    "name": "عین دو",
+    "id": "ir-admin-1000006001111",
+    "name": "غرق آباد",
     "aliases": [
-      "عین دو",
-      "‘Eyn-e Do",
-      "'Eyn-e Do",
-      "سید کریم"
+      "غرق آباد"
     ],
-    "latitude": 31.3456,
-    "longitude": 48.60063
+    "latitude": 35.10862,
+    "longitude": 49.83181,
+    "provinceName": "مرکزی"
   },
   {
     "id": "wiki-062103c42c2d",
@@ -7982,8 +10290,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "غلامان"
     ],
-    "latitude": 38.0575,
-    "longitude": 57.142222
+    "latitude": 38.05739,
+    "longitude": 57.14272,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "ir-134762",
@@ -7994,7 +10303,8 @@ export const iranCities: GeoItem[] = [
       "Farsan"
     ],
     "latitude": 32.25694,
-    "longitude": 50.56095
+    "longitude": 50.56095,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "wiki-eac852e2fa88",
@@ -8002,8 +10312,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "فارغان"
     ],
-    "latitude": 28.009444,
-    "longitude": 56.253333
+    "latitude": 28.0095,
+    "longitude": 56.2532,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "ir-134745",
@@ -8014,7 +10325,8 @@ export const iranCities: GeoItem[] = [
       "Faruj"
     ],
     "latitude": 37.23121,
-    "longitude": 58.219
+    "longitude": 58.219,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "wiki-190e6d5a0c26",
@@ -8023,8 +10335,19 @@ export const iranCities: GeoItem[] = [
       "فاروق",
       "فاروق (مرودشت)"
     ],
-    "latitude": 29.9625,
-    "longitude": 53.04638889
+    "latitude": 29.96352,
+    "longitude": 53.04509,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-10800022002429",
+    "name": "فاریاب",
+    "aliases": [
+      "فاریاب"
+    ],
+    "latitude": 28.0987,
+    "longitude": 57.23181,
+    "provinceName": "کرمان"
   },
   {
     "id": "ir-134636",
@@ -8035,7 +10358,18 @@ export const iranCities: GeoItem[] = [
       "Fazelabad"
     ],
     "latitude": 36.89802,
-    "longitude": 54.74963
+    "longitude": 54.74963,
+    "provinceName": "گلستان"
+  },
+  {
+    "id": "ir-admin-10700021002966",
+    "name": "فال",
+    "aliases": [
+      "فال"
+    ],
+    "latitude": 27.6295,
+    "longitude": 52.7,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-134906",
@@ -8046,27 +10380,52 @@ export const iranCities: GeoItem[] = [
       "Famenin"
     ],
     "latitude": 35.11593,
-    "longitude": 48.97336
-  },
-  {
-    "id": "wiki-67d3312bb18c",
-    "name": "فتح‌آباد",
-    "aliases": [
-      "فتح‌آباد",
-      "فتح‌آباد (سمیرم)"
-    ],
-    "latitude": 31.65,
-    "longitude": 51.58333333
+    "longitude": 48.97336,
+    "provinceName": "همدان"
   },
   {
     "id": "wiki-31bc9bb81339",
-    "name": "فتح‌آباد (مرودشت)",
+    "name": "فتح آباد",
     "aliases": [
+      "فتح آباد",
       "فتح‌آباد (مرودشت)",
       "فتح‌آباد"
     ],
-    "latitude": 29.939941,
-    "longitude": 52.79922289
+    "latitude": 29.93851,
+    "longitude": 52.79941,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "wiki-67d3312bb18c",
+    "name": "فتح آباد",
+    "aliases": [
+      "فتح آباد",
+      "فتح‌آباد",
+      "فتح‌آباد (سمیرم)"
+    ],
+    "latitude": 31.60157,
+    "longitude": 51.54215,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-10600014002718",
+    "name": "فتح المبین",
+    "aliases": [
+      "فتح المبین"
+    ],
+    "latitude": 32.3189,
+    "longitude": 48.1841,
+    "provinceName": "خوزستان"
+  },
+  {
+    "id": "ir-admin-1240004002704",
+    "name": "فخراباد",
+    "aliases": [
+      "فخراباد"
+    ],
+    "latitude": 38.5278,
+    "longitude": 47.8643,
+    "provinceName": "اردبیل"
   },
   {
     "id": "wiki-c2f4977d9bc1",
@@ -8074,19 +10433,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "فدامی"
     ],
-    "latitude": 28.21552519,
-    "longitude": 55.133631
+    "latitude": 28.2155,
+    "longitude": 55.1336,
+    "provinceName": "فارس"
   },
   {
-    "id": "ir-418850",
-    "name": "فرادنبه",
+    "id": "ir-admin-1140001001479",
+    "name": "فرادبنه",
     "aliases": [
-      "فرادنبه",
-      "Farādonbeh",
-      "Faradonbeh"
+      "فرادبنه"
     ],
-    "latitude": 32.0084,
-    "longitude": 51.2121
+    "latitude": 31.965255,
+    "longitude": 51.287275,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "ir-134781",
@@ -8097,20 +10456,42 @@ export const iranCities: GeoItem[] = [
       "Farrashband"
     ],
     "latitude": 28.86012,
-    "longitude": 52.09452
+    "longitude": 52.09452,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-1270009002835",
+    "name": "فراغی",
+    "aliases": [
+      "فراغی"
+    ],
+    "latitude": 37.379013,
+    "longitude": 55.492977,
+    "provinceName": "گلستان"
+  },
+  {
+    "id": "ir-admin-1020007002874",
+    "name": "فرح آباد",
+    "aliases": [
+      "فرح آباد"
+    ],
+    "latitude": 36.79064,
+    "longitude": 53.11076,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-120678",
-    "name": "فرخ‌شهر",
+    "name": "فرخ شهر",
     "aliases": [
+      "فرخ شهر",
       "فرخ‌شهر",
       "قترخ",
       "Farrokh Shahr",
-      "فرخ شهر",
       "قهفرخ"
     ],
     "latitude": 32.27174,
-    "longitude": 50.98008
+    "longitude": 50.98008,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "wiki-fe406a585977",
@@ -8119,21 +10500,35 @@ export const iranCities: GeoItem[] = [
       "فرخی",
       "فرخی (خور و بیابانک)"
     ],
-    "latitude": 33.85,
-    "longitude": 54.95
+    "latitude": 33.8449,
+    "longitude": 54.9471,
+    "provinceName": "اصفهان"
   },
   {
-    "id": "ir-33069",
+    "id": "ir-admin-1290007001373",
     "name": "فردوس",
     "aliases": [
       "فردوس",
+      "اسلامیه",
+      "اسلامیه (فردوس)"
+    ],
+    "latitude": 34.0185,
+    "longitude": 58.17222,
+    "provinceName": "خراسان جنوبی"
+  },
+  {
+    "id": "ir-33069",
+    "name": "فردوسیه",
+    "aliases": [
       "فردوسیه",
+      "فردوس",
       "Ferdowsīyeh",
       "Ferdowsiyeh",
       "برات آباد"
     ],
     "latitude": 35.6011,
-    "longitude": 51.0645
+    "longitude": 51.0645,
+    "provinceName": "تهران"
   },
   {
     "id": "ir-6657205",
@@ -8143,8 +10538,9 @@ export const iranCities: GeoItem[] = [
       "Fardīs",
       "Fardis"
     ],
-    "latitude": 35.7555,
-    "longitude": 50.9967
+    "latitude": 35.7292,
+    "longitude": 50.98483,
+    "provinceName": "البرز"
   },
   {
     "id": "wiki-4f2c65ab6602",
@@ -8152,8 +10548,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "فرسفج"
     ],
-    "latitude": 34.48638889,
-    "longitude": 48.28583333
+    "latitude": 34.4866,
+    "longitude": 48.286,
+    "provinceName": "همدان"
   },
   {
     "id": "wiki-481b8fe4ce09",
@@ -8162,7 +10559,8 @@ export const iranCities: GeoItem[] = [
       "فرگ قلعه"
     ],
     "latitude": 35.22194444,
-    "longitude": 58.55777778
+    "longitude": 58.55777778,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-824f8bd863e9",
@@ -8170,22 +10568,24 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "فرمهین"
     ],
-    "latitude": 34.50388889,
-    "longitude": 49.68444444
+    "latitude": 34.50383,
+    "longitude": 49.68437,
+    "provinceName": "مرکزی"
   },
   {
     "id": "ir-134598",
-    "name": "فرن آباد",
+    "name": "فرون‌آباد",
     "aliases": [
+      "فرون‌آباد",
       "فرن آباد",
       "Ferūnābād",
       "Ferunabad",
-      "شهرک فرون آباد",
       "فرون آباد",
       "فروان آباد"
     ],
     "latitude": 35.5156,
-    "longitude": 51.6232
+    "longitude": 51.6232,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-626e9db4fb74",
@@ -8193,33 +10593,37 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "فرهادگرد"
     ],
-    "latitude": 35.76583333,
-    "longitude": 59.73361111
+    "latitude": 35.7665,
+    "longitude": 59.7345,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-134601",
-    "name": "فریدون‌شهر",
+    "name": "فریدونشهر",
     "aliases": [
+      "فریدونشهر",
       "فریدون‌شهر",
       "فریدون شهر",
       "Fereydūnshahr",
       "Fereydunshahr"
     ],
     "latitude": 32.94195,
-    "longitude": 50.11991
+    "longitude": 50.11991,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-134602",
-    "name": "فریدون‌کنار",
+    "name": "فریدونکنار",
     "aliases": [
-      "فریدون‌کنار",
       "فریدونکنار",
+      "فریدون‌کنار",
       "Fereydūn Kenār",
       "Fereydun Kenar",
       "فریدون کنار"
     ],
     "latitude": 36.68489,
-    "longitude": 52.51917
+    "longitude": 52.51917,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-8d5ba5c3d36e",
@@ -8228,8 +10632,9 @@ export const iranCities: GeoItem[] = [
       "فریم",
       "فریم (ساری)"
     ],
-    "latitude": 36.17305556,
-    "longitude": 53.26805556
+    "latitude": 36.1758,
+    "longitude": 53.2654,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-77847608a0d6",
@@ -8237,8 +10642,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "فریمان"
     ],
-    "latitude": 35.70694444,
-    "longitude": 59.85
+    "latitude": 35.70685,
+    "longitude": 59.85006,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-134721",
@@ -8249,7 +10655,18 @@ export const iranCities: GeoItem[] = [
       "Fasa"
     ],
     "latitude": 28.9383,
-    "longitude": 53.6482
+    "longitude": 53.6482,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-1230004001582",
+    "name": "فشم",
+    "aliases": [
+      "فشم"
+    ],
+    "latitude": 35.9301,
+    "longitude": 51.5264,
+    "provinceName": "تهران"
   },
   {
     "id": "ir-418851",
@@ -8261,7 +10678,8 @@ export const iranCities: GeoItem[] = [
       "ملاورجان"
     ],
     "latitude": 32.5553,
-    "longitude": 51.50973
+    "longitude": 51.50973,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-134894",
@@ -8272,27 +10690,21 @@ export const iranCities: GeoItem[] = [
       "Fannuj"
     ],
     "latitude": 26.57527,
-    "longitude": 59.64144
+    "longitude": 59.64144,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "ir-418838",
-    "name": "فولاد شهر",
+    "name": "فولادشهر",
     "aliases": [
+      "فولادشهر",
       "فولاد شهر",
       "Fūlād Shahr",
       "Fulad Shahr"
     ],
     "latitude": 32.48664,
-    "longitude": 51.39673
-  },
-  {
-    "id": "wiki-6982ebf1c6ec",
-    "name": "فولادشهر",
-    "aliases": [
-      "فولادشهر"
-    ],
-    "latitude": 32.48666667,
-    "longitude": 51.39666667
+    "longitude": 51.39673,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-134441",
@@ -8303,7 +10715,18 @@ export const iranCities: GeoItem[] = [
       "Fuman"
     ],
     "latitude": 37.224,
-    "longitude": 49.3125
+    "longitude": 49.3125,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-10800019002317",
+    "name": "فهرج",
+    "aliases": [
+      "فهرج"
+    ],
+    "latitude": 28.9502,
+    "longitude": 58.885,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-a02794d309df",
@@ -8312,18 +10735,32 @@ export const iranCities: GeoItem[] = [
       "فیرورق"
     ],
     "latitude": 38.58,
-    "longitude": 44.83583333
+    "longitude": 44.8359,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "ir-134518",
-    "name": "فیروز آباد",
+    "name": "فیروزآباد",
     "aliases": [
+      "فیروزآباد",
       "فیروز آباد",
       "Fīrūzābād",
       "Firuzabad"
     ],
     "latitude": 28.84459,
-    "longitude": 52.57151
+    "longitude": 52.57151,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "wiki-85bfc6465666",
+    "name": "فیروزآباد",
+    "aliases": [
+      "فیروزآباد",
+      "فیروزآباد (سلسله)"
+    ],
+    "latitude": 33.79563,
+    "longitude": 48.26507,
+    "provinceName": "لرستان"
   },
   {
     "id": "wiki-f107a7f32ac9",
@@ -8333,17 +10770,18 @@ export const iranCities: GeoItem[] = [
       "فیروزآباد (کوثر)"
     ],
     "latitude": 37.58722222,
-    "longitude": 48.22833333
+    "longitude": 48.22833333,
+    "provinceName": "اردبیل"
   },
   {
-    "id": "wiki-85bfc6465666",
-    "name": "فیروزآباد (سلسله)",
+    "id": "ir-admin-1130003002206",
+    "name": "فیروزان",
     "aliases": [
-      "فیروزآباد (سلسله)",
-      "فیروزآباد"
+      "فیروزان"
     ],
-    "latitude": 33.89777778,
-    "longitude": 48.10416667
+    "latitude": 34.36078,
+    "longitude": 48.11538,
+    "provinceName": "همدان"
   },
   {
     "id": "ir-134462",
@@ -8355,17 +10793,42 @@ export const iranCities: GeoItem[] = [
       "فیروزکوه (تهران)"
     ],
     "latitude": 35.75674,
-    "longitude": 52.77062
+    "longitude": 52.77062,
+    "provinceName": "تهران"
+  },
+  {
+    "id": "wiki-7cf2b78ff4b4",
+    "name": "فیروزه",
+    "aliases": [
+      "فیروزه",
+      "همت‌آباد",
+      "همت‌آباد (فیروزه)"
+    ],
+    "latitude": 36.28639,
+    "longitude": 58.58586,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-994369e6b1c9",
-    "name": "فیض‌آباد",
+    "name": "فیض آباد",
     "aliases": [
+      "فیض آباد",
       "فیض‌آباد",
       "فیض‌آباد (مه‌ولات)"
     ],
-    "latitude": 35.01888889,
-    "longitude": 58.78333333
+    "latitude": 35.01891,
+    "longitude": 58.78343,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-admin-1140003002938",
+    "name": "فیل آباد",
+    "aliases": [
+      "فیل آباد"
+    ],
+    "latitude": 32.30253,
+    "longitude": 50.49722,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "wiki-9acdc699400d",
@@ -8374,70 +10837,95 @@ export const iranCities: GeoItem[] = [
       "فین",
       "فین (هرمزگان)"
     ],
-    "latitude": 27.63222222,
-    "longitude": 55.88527778
-  },
-  {
-    "id": "ir-120695",
-    "name": "قائم‌شهر",
-    "aliases": [
-      "قائم‌شهر",
-      "قائم شهر",
-      "Qā’em Shahr",
-      "Qa'em Shahr"
-    ],
-    "latitude": 36.46671,
-    "longitude": 52.86762
-  },
-  {
-    "id": "ir-7451195",
-    "name": "قائمیه",
-    "aliases": [
-      "قائمیه",
-      "Qā’emīyeh",
-      "Qa'emiyeh",
-      "چنار شاهیجان"
-    ],
-    "latitude": 29.85176,
-    "longitude": 51.5879
-  },
-  {
-    "id": "ir-120694",
-    "name": "قائن",
-    "aliases": [
-      "قائن",
-      "Qā’en",
-      "Qa'en",
-      "قاین"
-    ],
-    "latitude": 33.72654,
-    "longitude": 59.18439
+    "latitude": 27.631,
+    "longitude": 55.8953,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "ir-120724",
-    "name": "قادر آباد",
+    "name": "قادرآباد",
     "aliases": [
+      "قادرآباد",
       "قادر آباد",
       "Qāderābād",
       "Qaderabad"
     ],
     "latitude": 30.2778,
-    "longitude": 53.26569
+    "longitude": 53.26569,
+    "provinceName": "فارس"
   },
   {
-    "id": "ir-6672633",
-    "name": "قاسم‌آباد",
+    "id": "ir-admin-10900019002439",
+    "name": "قاسم آباد",
     "aliases": [
-      "قاسم‌آباد",
-      "صباشهر",
-      "Şabbāshahr",
-      "Sabbashahr",
-      "قاسم آباد",
-      "قاسم‌آباد (خواف)",
-      "قاسم‌آباد (بمپور)"
+      "قاسم آباد"
     ],
-    "latitude": 35.58026,
-    "longitude": 51.11392
+    "latitude": 34.35853,
+    "longitude": 59.86217,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-admin-11100020001028",
+    "name": "قاسم آباد",
+    "aliases": [
+      "قاسم آباد"
+    ],
+    "latitude": 27.17927,
+    "longitude": 60.3293,
+    "provinceName": "سیستان و بلوچستان"
+  },
+  {
+    "id": "ir-admin-1280006002567",
+    "name": "قاضی",
+    "aliases": [
+      "قاضی"
+    ],
+    "latitude": 37.49699,
+    "longitude": 56.74721,
+    "provinceName": "خراسان شمالی"
+  },
+  {
+    "id": "ir-admin-1250002001062",
+    "name": "قاهان",
+    "aliases": [
+      "قاهان"
+    ],
+    "latitude": 34.72448,
+    "longitude": 50.26325,
+    "provinceName": "قم"
+  },
+  {
+    "id": "ir-admin-10200010001176",
+    "name": "قایم شهر",
+    "aliases": [
+      "قایم شهر"
+    ],
+    "latitude": 36.46671,
+    "longitude": 52.86762,
+    "provinceName": "مازندران"
+  },
+  {
+    "id": "ir-admin-10700033002108",
+    "name": "قایمیه",
+    "aliases": [
+      "قایمیه"
+    ],
+    "latitude": 29.61919,
+    "longitude": 51.6535,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-120694",
+    "name": "قاین",
+    "aliases": [
+      "قاین",
+      "قائن",
+      "Qā’en",
+      "Qa'en"
+    ],
+    "latitude": 33.72654,
+    "longitude": 59.18439,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "ir-120292",
@@ -8446,13 +10934,13 @@ export const iranCities: GeoItem[] = [
       "قدس",
       "Qods",
       "شهر قدس",
-      "شهرک قدس",
       "قلعه حسن خان",
       "قلعه هسن",
       "کرج"
     ],
     "latitude": 35.7214,
-    "longitude": 51.109
+    "longitude": 51.109,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-7dade5b3d065",
@@ -8461,8 +10949,9 @@ export const iranCities: GeoItem[] = [
       "قدمگاه",
       "قدمگاه (زبرخان)"
     ],
-    "latitude": 36.10638889,
-    "longitude": 59.06083333
+    "latitude": 36.1063,
+    "longitude": 59.0597,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-32767",
@@ -8472,7 +10961,18 @@ export const iranCities: GeoItem[] = [
       "Qarchak"
     ],
     "latitude": 35.42873,
-    "longitude": 51.57757
+    "longitude": 51.57757,
+    "provinceName": "تهران"
+  },
+  {
+    "id": "ir-admin-1270005002868",
+    "name": "قرق",
+    "aliases": [
+      "قرق"
+    ],
+    "latitude": 36.88998,
+    "longitude": 54.71254,
+    "provinceName": "گلستان"
   },
   {
     "id": "wiki-db48e6c37e2a",
@@ -8480,19 +10980,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "قرقری"
     ],
-    "latitude": 31.31666667,
-    "longitude": 61.68333333
-  },
-  {
-    "id": "ir-12153299",
-    "name": "قرقی سفلی",
-    "aliases": [
-      "قرقی سفلی",
-      "Qorqī-ye Soflá",
-      "Qorqi-ye Sofla"
-    ],
-    "latitude": 36.39276,
-    "longitude": 59.67332
+    "latitude": 31.2675,
+    "longitude": 61.715,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "ir-119161",
@@ -8502,7 +10992,8 @@ export const iranCities: GeoItem[] = [
       "Qorveh"
     ],
     "latitude": 35.1664,
-    "longitude": 47.80564
+    "longitude": 47.80564,
+    "provinceName": "کردستان"
   },
   {
     "id": "wiki-18f8dbece092",
@@ -8510,48 +11001,46 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "قروه درگزین"
     ],
-    "latitude": 35.30888889,
-    "longitude": 49.10111111
+    "latitude": 35.30954,
+    "longitude": 49.10023,
+    "provinceName": "همدان"
+  },
+  {
+    "id": "wiki-b37cb3d2958a",
+    "name": "قره آغاج",
+    "aliases": [
+      "قره آغاج",
+      "قره‌آغاج",
+      "قره‌آغاج (آذربایجان شرقی)"
+    ],
+    "latitude": 37.2187,
+    "longitude": 47.2167,
+    "provinceName": "آذربایجان شرقی"
+  },
+  {
+    "id": "wiki-be4bf38b9a5a",
+    "name": "قره بلاغ",
+    "aliases": [
+      "قره بلاغ",
+      "قره‌بلاغ",
+      "قره‌بلاغ (فسا)"
+    ],
+    "latitude": 28.90518889,
+    "longitude": 54.13178056,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-119730",
-    "name": "قره ضیاء الدین",
+    "name": "قره ضیاءالدین",
     "aliases": [
+      "قره ضیاءالدین",
       "قره ضیاء الدین",
       "Qarah Ẕīā’ od Dīn",
       "Qarah Zia' od Din"
     ],
     "latitude": 38.8915,
-    "longitude": 45.0255
-  },
-  {
-    "id": "wiki-b37cb3d2958a",
-    "name": "قره‌آغاج",
-    "aliases": [
-      "قره‌آغاج",
-      "قره‌آغاج (آذربایجان شرقی)"
-    ],
-    "latitude": 37.12888889,
-    "longitude": 46.97527778
-  },
-  {
-    "id": "wiki-be4bf38b9a5a",
-    "name": "قره‌بلاغ",
-    "aliases": [
-      "قره‌بلاغ",
-      "قره‌بلاغ (فسا)"
-    ],
-    "latitude": 28.90518889,
-    "longitude": 54.13178056
-  },
-  {
-    "id": "wiki-1878088d8e43",
-    "name": "قره‌ضیاءالدین",
-    "aliases": [
-      "قره‌ضیاءالدین"
-    ],
-    "latitude": 38.89138889,
-    "longitude": 45.02555556
+    "longitude": 45.0255,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "ir-119505",
@@ -8562,16 +11051,19 @@ export const iranCities: GeoItem[] = [
       "قەزوین"
     ],
     "latitude": 36.26877,
-    "longitude": 50.0041
+    "longitude": 50.0041,
+    "provinceName": "قزوین"
   },
   {
     "id": "wiki-13d2d8623624",
-    "name": "قشلاق (آبیک)",
+    "name": "قشلاق",
     "aliases": [
+      "قشلاق",
       "قشلاق (آبیک)"
     ],
-    "latitude": 36.01527778,
-    "longitude": 50.42222222
+    "latitude": 36.01361,
+    "longitude": 50.42323,
+    "provinceName": "قزوین"
   },
   {
     "id": "ir-119374",
@@ -8582,7 +11074,8 @@ export const iranCities: GeoItem[] = [
       "قشم (شهر)"
     ],
     "latitude": 26.9492,
-    "longitude": 56.2691
+    "longitude": 56.2691,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "wiki-c5f20d918d1a",
@@ -8590,19 +11083,22 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "قصابه"
     ],
-    "latitude": 38.38944444,
-    "longitude": 47.50444444
+    "latitude": 38.38879,
+    "longitude": 47.54541,
+    "provinceName": "اردبیل"
   },
   {
     "id": "ir-119586",
-    "name": "قصر شیرین",
+    "name": "قصرشیرین",
     "aliases": [
+      "قصرشیرین",
       "قصر شیرین",
       "Qaşr-e Shīrīn",
       "Qasr-e Shirin"
     ],
     "latitude": 34.5156,
-    "longitude": 45.5791
+    "longitude": 45.5791,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "ir-1159877",
@@ -8612,17 +11108,40 @@ export const iranCities: GeoItem[] = [
       "Qaşr-e Qand",
       "Qasr-e Qand"
     ],
-    "latitude": 26.24833,
-    "longitude": 60.7525
+    "latitude": 26.23244,
+    "longitude": 60.73932,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-e2c452bb9451",
-    "name": "قطب‌آباد",
+    "name": "قطب آباد",
     "aliases": [
+      "قطب آباد",
       "قطب‌آباد"
     ],
-    "latitude": 28.64027778,
-    "longitude": 53.63833333
+    "latitude": 28.6393,
+    "longitude": 53.6378,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-10700014002058",
+    "name": "قطرویه",
+    "aliases": [
+      "قطرویه"
+    ],
+    "latitude": 29.1461,
+    "longitude": 54.7027,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-1040003002044",
+    "name": "قطور",
+    "aliases": [
+      "قطور"
+    ],
+    "latitude": 38.4714,
+    "longitude": 44.4085,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-c4ec858f8fee",
@@ -8632,7 +11151,19 @@ export const iranCities: GeoItem[] = [
       "قلعه (کرمانشاه)"
     ],
     "latitude": 34.735,
-    "longitude": 46.89638889
+    "longitude": 46.89638889,
+    "provinceName": "کرمانشاه"
+  },
+  {
+    "id": "wiki-953de08d0ecd",
+    "name": "قلعه تل",
+    "aliases": [
+      "قلعه تل",
+      "قلعه‌تل"
+    ],
+    "latitude": 31.63055556,
+    "longitude": 49.89111111,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-61258a302f0c",
@@ -8641,17 +11172,19 @@ export const iranCities: GeoItem[] = [
       "قلعه خواجه",
       "قلعه خواجه (اندیکا)"
     ],
-    "latitude": 32.20638889,
-    "longitude": 49.44361111
+    "latitude": 32.20622,
+    "longitude": 49.44526,
+    "provinceName": "خوزستان"
   },
   {
-    "id": "wiki-8d3f36691131",
-    "name": "قلعه رئیسی",
+    "id": "ir-admin-1170002002479",
+    "name": "قلعه رییسی",
     "aliases": [
-      "قلعه رئیسی"
+      "قلعه رییسی"
     ],
     "latitude": 31.19,
-    "longitude": 50.441944
+    "longitude": 50.441944,
+    "provinceName": "کهگیلویه و بویراحمد"
   },
   {
     "id": "wiki-03d2e3b5d009",
@@ -8660,8 +11193,21 @@ export const iranCities: GeoItem[] = [
       "قلعه قاضی",
       "قلعه قاضی (بندرعباس)"
     ],
-    "latitude": 27.44472222,
-    "longitude": 56.54777778
+    "latitude": 27.4456,
+    "longitude": 56.545,
+    "provinceName": "هرمزگان"
+  },
+  {
+    "id": "ir-admin-10800016002176",
+    "name": "قلعه گنج",
+    "aliases": [
+      "قلعه گنج",
+      "چاه دادخدا",
+      "چاه دادخدا (قلعه‌گنج)"
+    ],
+    "latitude": 27.5236,
+    "longitude": 57.8811,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-bee47c7d378b",
@@ -8669,44 +11215,42 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "قلعه ممبی"
     ],
-    "latitude": 31.10972222,
-    "longitude": 50.11777778
-  },
-  {
-    "id": "wiki-953de08d0ecd",
-    "name": "قلعه‌تل",
-    "aliases": [
-      "قلعه‌تل"
-    ],
-    "latitude": 31.63055556,
-    "longitude": 49.89111111
-  },
-  {
-    "id": "wiki-ea4c0611ecfe",
-    "name": "قلعه‌نو (ری)",
-    "aliases": [
-      "قلعه‌نو (ری)"
-    ],
-    "latitude": 35.5125,
-    "longitude": 51.515278
+    "latitude": 31.10948,
+    "longitude": 50.11667,
+    "provinceName": "کهگیلویه و بویراحمد"
   },
   {
     "id": "wiki-054a37f0871d",
-    "name": "قلعه‌نو علیا",
+    "name": "قلعه نو علیا",
     "aliases": [
+      "قلعه نو علیا",
       "قلعه‌نو علیا"
     ],
-    "latitude": 35.09861111,
-    "longitude": 60.15888889
+    "latitude": 35.098644,
+    "longitude": 60.158816,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "wiki-ea4c0611ecfe",
+    "name": "قلعه‌نو",
+    "aliases": [
+      "قلعه‌نو",
+      "قلعه‌نو (ری)"
+    ],
+    "latitude": 35.53317,
+    "longitude": 51.40499,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-5949c9b442d1",
-    "name": "قلندرآباد",
+    "name": "قلندر آباد",
     "aliases": [
+      "قلندر آباد",
       "قلندرآباد"
     ],
-    "latitude": 35.599167,
-    "longitude": 59.95
+    "latitude": 35.5994,
+    "longitude": 59.9499,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-119208",
@@ -8717,7 +11261,8 @@ export const iranCities: GeoItem[] = [
       "قوم"
     ],
     "latitude": 34.6401,
-    "longitude": 50.8764
+    "longitude": 50.8764,
+    "provinceName": "قم"
   },
   {
     "id": "wiki-469006d69321",
@@ -8725,8 +11270,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "قمصر"
     ],
-    "latitude": 33.75333333,
-    "longitude": 51.43194444
+    "latitude": 33.7537,
+    "longitude": 51.4326,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-13665079",
@@ -8736,8 +11282,9 @@ export const iranCities: GeoItem[] = [
       "Qanavāt",
       "Qanavat"
     ],
-    "latitude": 34.61331,
-    "longitude": 51.02563
+    "latitude": 34.6137,
+    "longitude": 51.0246,
+    "provinceName": "قم"
   },
   {
     "id": "ir-119115",
@@ -8748,7 +11295,28 @@ export const iranCities: GeoItem[] = [
       "Quchan"
     ],
     "latitude": 37.106,
-    "longitude": 58.50955
+    "longitude": 58.50955,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-admin-1000004002541",
+    "name": "قورچی باشی",
+    "aliases": [
+      "قورچی باشی"
+    ],
+    "latitude": 33.67544,
+    "longitude": 49.87753,
+    "provinceName": "مرکزی"
+  },
+  {
+    "id": "ir-admin-1040001002150",
+    "name": "قوشچی",
+    "aliases": [
+      "قوشچی"
+    ],
+    "latitude": 37.9922,
+    "longitude": 45.0382,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-cc6e2514799a",
@@ -8757,7 +11325,8 @@ export const iranCities: GeoItem[] = [
       "قوشخانه"
     ],
     "latitude": 37.71666667,
-    "longitude": 57.71666667
+    "longitude": 57.71666667,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "wiki-45a263ca0f38",
@@ -8765,8 +11334,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "قهاوند"
     ],
-    "latitude": 34.86027778,
-    "longitude": 49.00472222
+    "latitude": 34.8595,
+    "longitude": 49.0033,
+    "provinceName": "همدان"
   },
   {
     "id": "wiki-81685826cf13",
@@ -8774,8 +11344,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "قهجاورستان"
     ],
-    "latitude": 32.70361111,
-    "longitude": 51.83805556
+    "latitude": 32.7041,
+    "longitude": 51.833,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-418571",
@@ -8785,8 +11356,19 @@ export const iranCities: GeoItem[] = [
       "Qahderījān",
       "Qahderijan"
     ],
-    "latitude": 32.5773,
-    "longitude": 51.45367
+    "latitude": 32.5771,
+    "longitude": 51.4539,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-1290002002051",
+    "name": "قهستان",
+    "aliases": [
+      "قهستان"
+    ],
+    "latitude": 33.1495,
+    "longitude": 59.7166,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "ir-400833",
@@ -8797,12 +11379,11 @@ export const iranCities: GeoItem[] = [
       "Qīāmdasht",
       "Qiamdasht",
       "شاهین شهر",
-      "شهرک قیام دشت",
-      "شهرک قیامدشت",
       "قیام دشت"
     ],
     "latitude": 35.5237,
-    "longitude": 51.6505
+    "longitude": 51.6505,
+    "provinceName": "تهران"
   },
   {
     "id": "ir-119369",
@@ -8816,8 +11397,9 @@ export const iranCities: GeoItem[] = [
       "گیدار پلنمنار",
       "قیدار (خدابنده)"
     ],
-    "latitude": 36.11472,
-    "longitude": 48.59111
+    "latitude": 36.11949,
+    "longitude": 48.59089,
+    "provinceName": "زنجان"
   },
   {
     "id": "ir-119264",
@@ -8829,7 +11411,18 @@ export const iranCities: GeoItem[] = [
       "قیر و کارزین"
     ],
     "latitude": 28.4825,
-    "longitude": 53.0346
+    "longitude": 53.0346,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-1140005002807",
+    "name": "کاج",
+    "aliases": [
+      "کاج"
+    ],
+    "latitude": 32.05819,
+    "longitude": 50.58286,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "wiki-eada8edcfc27",
@@ -8838,7 +11431,8 @@ export const iranCities: GeoItem[] = [
       "کاخک"
     ],
     "latitude": 34.14972222,
-    "longitude": 58.63916667
+    "longitude": 58.63916667,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-ebbbc66b7dc9",
@@ -8847,17 +11441,20 @@ export const iranCities: GeoItem[] = [
       "کارچان",
       "کارچان (اراک)"
     ],
-    "latitude": 34.09944444,
-    "longitude": 49.93333333
+    "latitude": 34.09961,
+    "longitude": 49.93321,
+    "provinceName": "مرکزی"
   },
   {
     "id": "wiki-af11f255424e",
-    "name": "کارزین",
+    "name": "کارزین/فتح آباد",
     "aliases": [
+      "کارزین/فتح آباد",
       "کارزین"
     ],
     "latitude": 28.40976511,
-    "longitude": 53.106353
+    "longitude": 53.106353,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-72b0b8a1a387",
@@ -8867,7 +11464,8 @@ export const iranCities: GeoItem[] = [
       "کاریز (تایباد)"
     ],
     "latitude": 34.81277778,
-    "longitude": 60.82416667
+    "longitude": 60.82416667,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-128321",
@@ -8877,8 +11475,9 @@ export const iranCities: GeoItem[] = [
       "Kāzerūn",
       "Kazerun"
     ],
-    "latitude": 29.61919,
-    "longitude": 51.6535
+    "latitude": 29.61926,
+    "longitude": 51.65343,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-128476",
@@ -8887,8 +11486,9 @@ export const iranCities: GeoItem[] = [
       "کاشان",
       "Kashan"
     ],
-    "latitude": 33.98237,
-    "longitude": 51.42769
+    "latitude": 34.00228,
+    "longitude": 51.43879,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-128447",
@@ -8899,17 +11499,20 @@ export const iranCities: GeoItem[] = [
       "Kashmar"
     ],
     "latitude": 35.23831,
-    "longitude": 58.46558
+    "longitude": 58.46558,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-38f1a03bf049",
-    "name": "کاظم‌آباد",
+    "name": "کاظم آباد",
     "aliases": [
+      "کاظم آباد",
       "کاظم‌آباد",
       "کاظم‌آباد (کرمان)"
     ],
-    "latitude": 30.56666667,
-    "longitude": 56.845
+    "latitude": 30.56659,
+    "longitude": 56.84509,
+    "provinceName": "کرمان"
   },
   {
     "id": "ir-129569",
@@ -8920,7 +11523,8 @@ export const iranCities: GeoItem[] = [
       "Kaki"
     ],
     "latitude": 28.33861,
-    "longitude": 51.52361
+    "longitude": 51.52361,
+    "provinceName": "بوشهر"
   },
   {
     "id": "wiki-aaf9c3af1a4b",
@@ -8929,7 +11533,8 @@ export const iranCities: GeoItem[] = [
       "کامفیروز"
     ],
     "latitude": 30.32,
-    "longitude": 52.19666667
+    "longitude": 52.19666667,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-80de13d5b620",
@@ -8938,7 +11543,8 @@ export const iranCities: GeoItem[] = [
       "کامو و چوگان"
     ],
     "latitude": 33.58861111,
-    "longitude": 51.21194444
+    "longitude": 51.21194444,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-128905",
@@ -8949,48 +11555,52 @@ export const iranCities: GeoItem[] = [
       "Kamyaran"
     ],
     "latitude": 34.79535,
-    "longitude": 46.93682
+    "longitude": 46.93682,
+    "provinceName": "کردستان"
   },
   {
     "id": "wiki-2f5397a21c14",
-    "name": "کانی‌دینار",
+    "name": "کانی دینار",
     "aliases": [
+      "کانی دینار",
       "کانی‌دینار"
     ],
-    "latitude": 35.46194444,
-    "longitude": 46.21138889
+    "latitude": 35.4644,
+    "longitude": 46.2081,
+    "provinceName": "کردستان"
+  },
+  {
+    "id": "ir-admin-1120001002458",
+    "name": "کانی سور",
+    "aliases": [
+      "کانی سور"
+    ],
+    "latitude": 36.0583,
+    "longitude": 45.7481,
+    "provinceName": "کردستان"
   },
   {
     "id": "ir-129904",
-    "name": "کبودر آهنگ",
+    "name": "کبودرآهنگ",
     "aliases": [
+      "کبودرآهنگ",
       "کبودر آهنگ",
       "Kabūdarāhang",
       "Kabudarahang"
     ],
     "latitude": 35.20924,
-    "longitude": 48.72341
+    "longitude": 48.72341,
+    "provinceName": "همدان"
   },
   {
-    "id": "ir-128392",
-    "name": "کتوک",
+    "id": "ir-admin-1020006001168",
+    "name": "کتالم و سادات شهر",
     "aliases": [
-      "کتوک",
-      "Sīmīn Shahr",
-      "Simin Shahr",
-      "سیمین شهر"
+      "کتالم و سادات شهر"
     ],
-    "latitude": 37.01422,
-    "longitude": 54.23004
-  },
-  {
-    "id": "wiki-207f4afa9f2e",
-    "name": "کتیج",
-    "aliases": [
-      "کتیج"
-    ],
-    "latitude": 26.72328,
-    "longitude": 59.13611
+    "latitude": 36.8812,
+    "longitude": 50.7112,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-f67b71b966a0",
@@ -8998,8 +11608,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "کجور"
     ],
-    "latitude": 36.38333333,
-    "longitude": 51.78333333
+    "latitude": 36.384,
+    "longitude": 51.7286,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-bfff8c787e6a",
@@ -9008,7 +11619,8 @@ export const iranCities: GeoItem[] = [
       "کدکن"
     ],
     "latitude": 35.58472222,
-    "longitude": 58.87805556
+    "longitude": 58.87805556,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-128747",
@@ -9020,7 +11632,8 @@ export const iranCities: GeoItem[] = [
       "کەرەج"
     ],
     "latitude": 35.83266,
-    "longitude": 50.99155
+    "longitude": 50.99155,
+    "provinceName": "البرز"
   },
   {
     "id": "wiki-503648bd2d1f",
@@ -9029,8 +11642,9 @@ export const iranCities: GeoItem[] = [
       "کردکندی",
       "کردکندی (بستان‌آباد)"
     ],
-    "latitude": 37.96028056,
-    "longitude": 46.95806111
+    "latitude": 37.95667,
+    "longitude": 46.95583,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-126572",
@@ -9043,7 +11657,8 @@ export const iranCities: GeoItem[] = [
       "کرد کوی"
     ],
     "latitude": 36.79307,
-    "longitude": 54.11214
+    "longitude": 54.11214,
+    "provinceName": "گلستان"
   },
   {
     "id": "wiki-aa8767d37bc0",
@@ -9051,8 +11666,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "کرسف"
     ],
-    "latitude": 36.04472222,
-    "longitude": 48.505
+    "latitude": 36.04529,
+    "longitude": 48.50493,
+    "provinceName": "زنجان"
+  },
+  {
+    "id": "ir-admin-11300010002870",
+    "name": "کرفس",
+    "aliases": [
+      "کرفس"
+    ],
+    "latitude": 35.36319,
+    "longitude": 49.29875,
+    "provinceName": "همدان"
   },
   {
     "id": "wiki-f323030e678a",
@@ -9060,8 +11686,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "کرکوند"
     ],
-    "latitude": 32.34222222,
-    "longitude": 51.44666667
+    "latitude": 32.3461,
+    "longitude": 51.4474,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-b3dedb3dae39",
@@ -9070,8 +11697,9 @@ export const iranCities: GeoItem[] = [
       "کرگان",
       "کرگان (میناب)"
     ],
-    "latitude": 26.934167,
-    "longitude": 56.918056
+    "latitude": 26.93417,
+    "longitude": 56.91806,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "ir-128234",
@@ -9081,7 +11709,8 @@ export const iranCities: GeoItem[] = [
       "Kerman"
     ],
     "latitude": 30.28321,
-    "longitude": 57.07879
+    "longitude": 57.07879,
+    "provinceName": "کرمان"
   },
   {
     "id": "ir-128226",
@@ -9092,37 +11721,48 @@ export const iranCities: GeoItem[] = [
       "استان کرمانشاه"
     ],
     "latitude": 34.31417,
-    "longitude": 47.065
+    "longitude": 47.065,
+    "provinceName": "کرمانشاه"
   },
   {
-    "id": "wiki-1f3d3826f49b",
-    "name": "کرند غرب",
+    "id": "ir-admin-10500013001255",
+    "name": "کرند",
     "aliases": [
-      "کرند غرب"
+      "کرند"
     ],
-    "latitude": 34.28416667,
-    "longitude": 46.24222222
+    "latitude": 34.2842,
+    "longitude": 46.2423,
+    "provinceName": "کرمانشاه"
   },
   {
-    "id": "ir-128748",
-    "name": "کرهرود",
+    "id": "ir-admin-1270006001030",
+    "name": "کرند",
     "aliases": [
-      "کرهرود",
-      "Karahrūd",
-      "Karahrud"
+      "کرند"
     ],
-    "latitude": 34.06095,
-    "longitude": 49.64462
+    "latitude": 37.9592,
+    "longitude": 55.51709,
+    "provinceName": "گلستان"
   },
   {
-    "id": "ir-31213",
-    "name": "کشف",
+    "id": "ir-admin-10700032002557",
+    "name": "کره ای",
     "aliases": [
-      "کشف",
-      "Kashaf"
+      "کره ای"
     ],
-    "latitude": 36.36973,
-    "longitude": 59.57793
+    "latitude": 30.03009,
+    "longitude": 53.71567,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-10400011002407",
+    "name": "کشاورز",
+    "aliases": [
+      "کشاورز"
+    ],
+    "latitude": 36.8355,
+    "longitude": 46.3574,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "ir-126501",
@@ -9137,28 +11777,29 @@ export const iranCities: GeoItem[] = [
       "کشک سرای",
       "کغک سرای"
     ],
-    "latitude": 38.45838,
-    "longitude": 45.56708
+    "latitude": 38.4586,
+    "longitude": 45.5673,
+    "provinceName": "آذربایجان شرقی"
   },
   {
-    "id": "wiki-a4e91c307c97",
-    "name": "کشکوئیه",
+    "id": "ir-admin-1080001001008",
+    "name": "کشکوییه",
     "aliases": [
-      "کشکوئیه"
+      "کشکوییه"
+    ],
+    "latitude": 30.5263,
+    "longitude": 55.6424,
+    "provinceName": "کرمان"
+  },
+  {
+    "id": "ir-admin-1080004002319",
+    "name": "کشکوییه",
+    "aliases": [
+      "کشکوییه"
     ],
     "latitude": 30.52888889,
-    "longitude": 55.64583333
-  },
-  {
-    "id": "ir-129543",
-    "name": "کلا چای",
-    "aliases": [
-      "کلا چای",
-      "Kalā Chāy",
-      "Kala Chay"
-    ],
-    "latitude": 37.07961,
-    "longitude": 50.39642
+    "longitude": 55.64583333,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-2d9b0b0938cb",
@@ -9166,8 +11807,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "کلات"
     ],
-    "latitude": 36.99527778,
-    "longitude": 59.76083333
+    "latitude": 36.99532,
+    "longitude": 59.76472,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-admin-1200001002759",
+    "name": "کلاته",
+    "aliases": [
+      "کلاته"
+    ],
+    "latitude": 36.35654,
+    "longitude": 54.14487,
+    "provinceName": "سمنان"
   },
   {
     "id": "wiki-f89e7fa2f0c9",
@@ -9175,8 +11827,22 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "کلاته خیج"
     ],
-    "latitude": 36.67111111,
-    "longitude": 55.2975
+    "latitude": 36.67111,
+    "longitude": 55.29739,
+    "provinceName": "سمنان"
+  },
+  {
+    "id": "ir-129543",
+    "name": "کلاچای",
+    "aliases": [
+      "کلاچای",
+      "کلا چای",
+      "Kalā Chāy",
+      "Kala Chay"
+    ],
+    "latitude": 37.07961,
+    "longitude": 50.39642,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-c949e4c1d2cc",
@@ -9184,8 +11850,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "کلارآباد"
     ],
-    "latitude": 36.70111111,
-    "longitude": 51.25444444
+    "latitude": 36.67954,
+    "longitude": 51.24006,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-8781",
@@ -9196,7 +11863,8 @@ export const iranCities: GeoItem[] = [
       "Kalardasht"
     ],
     "latitude": 36.51094,
-    "longitude": 51.17343
+    "longitude": 51.17343,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-129512",
@@ -9207,7 +11875,8 @@ export const iranCities: GeoItem[] = [
       "Kalaleh"
     ],
     "latitude": 37.37899,
-    "longitude": 55.493
+    "longitude": 55.493,
+    "provinceName": "گلستان"
   },
   {
     "id": "wiki-81c9415f40ba",
@@ -9216,8 +11885,9 @@ export const iranCities: GeoItem[] = [
       "کلمه",
       "کلمه (دشتستان)"
     ],
-    "latitude": 28.94333333,
-    "longitude": 51.45944444
+    "latitude": 28.9437,
+    "longitude": 51.4582,
+    "provinceName": "بوشهر"
   },
   {
     "id": "wiki-7dda8f12980a",
@@ -9225,8 +11895,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "کلوانق"
     ],
-    "latitude": 38.10027778,
-    "longitude": 46.98944444
+    "latitude": 38.1035,
+    "longitude": 46.9922,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-fa52a8a93af4",
@@ -9235,7 +11906,8 @@ export const iranCities: GeoItem[] = [
       "کلور"
     ],
     "latitude": 37.38888889,
-    "longitude": 48.72055556
+    "longitude": 48.72055556,
+    "provinceName": "اردبیل"
   },
   {
     "id": "wiki-ca226d047ba1",
@@ -9243,8 +11915,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "کلیبر"
     ],
-    "latitude": 38.86666667,
-    "longitude": 47.03333333
+    "latitude": 38.86509,
+    "longitude": 47.03909,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-418723",
@@ -9255,23 +11928,25 @@ export const iranCities: GeoItem[] = [
       "Kelīshād va Sūdarjān",
       "Kelishad va Sudarjan"
     ],
-    "latitude": 32.55118,
-    "longitude": 51.52758
+    "latitude": 32.5647,
+    "longitude": 51.5234,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-41548",
-    "name": "کمال‌شهر",
+    "name": "کمال شهر",
     "aliases": [
+      "کمال شهر",
       "کمال‌شهر",
       "کمالشهر",
       "Kamālshahr",
       "Kamalshahr",
       "قرنطینۀ کمال آباد",
-      "کمال آباد",
-      "کمال شهر"
+      "کمال آباد"
     ],
-    "latitude": 35.86187,
-    "longitude": 50.87424
+    "latitude": 35.8625,
+    "longitude": 50.8805,
+    "provinceName": "البرز"
   },
   {
     "id": "wiki-c8c086edf613",
@@ -9279,8 +11954,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "کمشچه"
     ],
-    "latitude": 32.90527778,
-    "longitude": 51.80972222
+    "latitude": 32.9055,
+    "longitude": 51.8093,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-4892627f2d6e",
@@ -9289,7 +11965,8 @@ export const iranCities: GeoItem[] = [
       "کمه"
     ],
     "latitude": 31.06833333,
-    "longitude": 51.59277778
+    "longitude": 51.59277778,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-5097b65de1e2",
@@ -9297,8 +11974,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "کمیجان"
     ],
-    "latitude": 34.72138889,
-    "longitude": 49.32666667
+    "latitude": 34.72142,
+    "longitude": 49.32653,
+    "provinceName": "مرکزی"
   },
   {
     "id": "wiki-4944c44bb75b",
@@ -9307,7 +11985,8 @@ export const iranCities: GeoItem[] = [
       "کنارتخته"
     ],
     "latitude": 29.53555556,
-    "longitude": 51.39583333
+    "longitude": 51.39583333,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-1160500",
@@ -9318,7 +11997,8 @@ export const iranCities: GeoItem[] = [
       "Konarak"
     ],
     "latitude": 25.3604,
-    "longitude": 60.3995
+    "longitude": 60.3995,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-8517badbe38d",
@@ -9328,7 +12008,21 @@ export const iranCities: GeoItem[] = [
       "کندر (خلیل‌آباد)"
     ],
     "latitude": 35.21194444,
-    "longitude": 58.15166667
+    "longitude": 58.15166667,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-141666",
+    "name": "کنگ",
+    "aliases": [
+      "کنگ",
+      "بندر کنگ",
+      "Bandar-e Kong",
+      "بندر گنگ"
+    ],
+    "latitude": 26.59775,
+    "longitude": 54.93694,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "ir-128831",
@@ -9339,7 +12033,8 @@ export const iranCities: GeoItem[] = [
       "Kangavar"
     ],
     "latitude": 34.5043,
-    "longitude": 47.9653
+    "longitude": 47.9653,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "ir-44439",
@@ -9350,7 +12045,8 @@ export const iranCities: GeoItem[] = [
       "Kavar"
     ],
     "latitude": 29.20505,
-    "longitude": 52.69043
+    "longitude": 52.69043,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-5df994b4ad50",
@@ -9360,18 +12056,38 @@ export const iranCities: GeoItem[] = [
       "کوپن (رستم)"
     ],
     "latitude": 30.333441,
-    "longitude": 51.287822
+    "longitude": 51.287822,
+    "provinceName": "فارس"
   },
   {
-    "id": "ir-126082",
-    "name": "کوت عبدالله",
+    "id": "ir-admin-1060009002795",
+    "name": "کوت سیدنعیم",
     "aliases": [
-      "کوت عبدالله",
-      "Kūt-e ‘Abdollāh",
-      "Kut-e 'Abdollah"
+      "کوت سیدنعیم"
+    ],
+    "latitude": 31.45798,
+    "longitude": 48.38148,
+    "provinceName": "خوزستان"
+  },
+  {
+    "id": "ir-admin-10600027002790",
+    "name": "کوت عبداله",
+    "aliases": [
+      "کوت عبداله"
     ],
     "latitude": 31.23917,
-    "longitude": 48.65639
+    "longitude": 48.65639,
+    "provinceName": "خوزستان"
+  },
+  {
+    "id": "ir-admin-1010005001127",
+    "name": "کوچصفهان",
+    "aliases": [
+      "کوچصفهان"
+    ],
+    "latitude": 37.27818,
+    "longitude": 49.77169,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-602483b2d0ca",
@@ -9379,8 +12095,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "کوراییم"
     ],
-    "latitude": 37.955,
-    "longitude": 48.235556
+    "latitude": 37.9552,
+    "longitude": 48.2356,
+    "provinceName": "اردبیل"
   },
   {
     "id": "wiki-108cee96e524",
@@ -9389,8 +12106,9 @@ export const iranCities: GeoItem[] = [
       "کوره",
       "کوره (اوز)"
     ],
-    "latitude": 27.919855,
-    "longitude": 53.79613311
+    "latitude": 27.91918,
+    "longitude": 53.7964,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-6453baa69802",
@@ -9398,17 +12116,20 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "کوزران"
     ],
-    "latitude": 34.49638889,
-    "longitude": 46.59888889
+    "latitude": 34.4958,
+    "longitude": 46.59908,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "wiki-010fbb9a6078",
-    "name": "کوزه‌کنان",
+    "name": "کوزه کنان",
     "aliases": [
+      "کوزه کنان",
       "کوزه‌کنان"
     ],
-    "latitude": 38.19111111,
-    "longitude": 45.57944444
+    "latitude": 38.1911,
+    "longitude": 45.5795,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-418678",
@@ -9420,16 +12141,38 @@ export const iranCities: GeoItem[] = [
       "کوشک (خمینی‌شهر)"
     ],
     "latitude": 32.64219,
-    "longitude": 51.49955
+    "longitude": 51.49955,
+    "provinceName": "اصفهان"
   },
   {
-    "id": "wiki-96ffe5950732",
+    "id": "ir-admin-12200011002004",
     "name": "کوشکنار",
     "aliases": [
       "کوشکنار"
     ],
-    "latitude": 27.25111111,
-    "longitude": 52.86666667
+    "latitude": 27.291865,
+    "longitude": 56.153135,
+    "provinceName": "هرمزگان"
+  },
+  {
+    "id": "ir-admin-10100010001144",
+    "name": "کومله",
+    "aliases": [
+      "کومله"
+    ],
+    "latitude": 37.15495,
+    "longitude": 50.17357,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-10800014001336",
+    "name": "کوهبنان",
+    "aliases": [
+      "کوهبنان"
+    ],
+    "latitude": 31.41029,
+    "longitude": 56.28255,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-0a06a316c5e4",
@@ -9438,8 +12181,9 @@ export const iranCities: GeoItem[] = [
       "کوهپایه",
       "کوهپایه (اصفهان)"
     ],
-    "latitude": 32.715,
-    "longitude": 52.43888889
+    "latitude": 32.7138,
+    "longitude": 52.4405,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-126409",
@@ -9450,7 +12194,8 @@ export const iranCities: GeoItem[] = [
       "Kuhdasht"
     ],
     "latitude": 33.53335,
-    "longitude": 47.60999
+    "longitude": 47.60999,
+    "provinceName": "لرستان"
   },
   {
     "id": "wiki-9399df7411f4",
@@ -9459,26 +12204,60 @@ export const iranCities: GeoItem[] = [
       "کوهسار",
       "کوهسار (البرز)"
     ],
-    "latitude": 35.95611111,
-    "longitude": 50.79583333
+    "latitude": 35.9627,
+    "longitude": 50.7921,
+    "provinceName": "البرز"
   },
   {
-    "id": "wiki-6b847847c570",
-    "name": "کوهیج",
+    "id": "ir-admin-12200012002815",
+    "name": "کوهستک",
     "aliases": [
-      "کوهیج"
+      "کوهستک"
     ],
-    "latitude": 27.19083333,
-    "longitude": 54.16388889
+    "latitude": 26.8021,
+    "longitude": 57.0267,
+    "provinceName": "هرمزگان"
+  },
+  {
+    "id": "ir-admin-1150006002364",
+    "name": "کوهنانی",
+    "aliases": [
+      "کوهنانی"
+    ],
+    "latitude": 33.40259,
+    "longitude": 47.3273,
+    "provinceName": "لرستان"
+  },
+  {
+    "id": "ir-admin-10700025002710",
+    "name": "کوهنجان",
+    "aliases": [
+      "کوهنجان"
+    ],
+    "latitude": 29.2303,
+    "longitude": 52.95894,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-2b0b84c2ec27",
-    "name": "کوهی‌خیل",
+    "name": "کوهی خیل",
     "aliases": [
+      "کوهی خیل",
       "کوهی‌خیل"
     ],
-    "latitude": 36.68888889,
-    "longitude": 52.91027778
+    "latitude": 36.6879,
+    "longitude": 52.9118,
+    "provinceName": "مازندران"
+  },
+  {
+    "id": "ir-admin-1220009002960",
+    "name": "کوهیچ",
+    "aliases": [
+      "کوهیچ"
+    ],
+    "latitude": 27.1909,
+    "longitude": 54.16377,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "wiki-968d2332e093",
@@ -9488,7 +12267,8 @@ export const iranCities: GeoItem[] = [
       "کوهین (قزوین)"
     ],
     "latitude": 36.36888889,
-    "longitude": 49.66361111
+    "longitude": 49.66361111,
+    "provinceName": "قزوین"
   },
   {
     "id": "wiki-f8d5f076efc0",
@@ -9496,8 +12276,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "کهریزسنگ"
     ],
-    "latitude": 32.62666667,
-    "longitude": 51.48083333
+    "latitude": 32.6288,
+    "longitude": 51.4809,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-129664",
@@ -9508,8 +12289,9 @@ export const iranCities: GeoItem[] = [
       "Kahrizak",
       "کهریزک مندکان"
     ],
-    "latitude": 35.3465,
-    "longitude": 51.84418
+    "latitude": 35.5173,
+    "longitude": 51.3619,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-ce86579fcf60",
@@ -9518,17 +12300,20 @@ export const iranCities: GeoItem[] = [
       "کهک",
       "کهک (قم)"
     ],
-    "latitude": 34.39388889,
-    "longitude": 50.86416667
+    "latitude": 34.3938,
+    "longitude": 50.8643,
+    "provinceName": "قم"
   },
   {
     "id": "wiki-20e4fa8fa916",
-    "name": "کهن‌آباد",
+    "name": "کهن آباد",
     "aliases": [
+      "کهن آباد",
       "کهن‌آباد"
     ],
-    "latitude": 35.22222222,
-    "longitude": 52.52138889
+    "latitude": 35.2223,
+    "longitude": 52.52139,
+    "provinceName": "سمنان"
   },
   {
     "id": "ir-6961608",
@@ -9539,7 +12324,18 @@ export const iranCities: GeoItem[] = [
       "Kahnuj"
     ],
     "latitude": 27.94034,
-    "longitude": 57.69983
+    "longitude": 57.69983,
+    "provinceName": "کرمان"
+  },
+  {
+    "id": "ir-admin-12200010001088",
+    "name": "کهورستان",
+    "aliases": [
+      "کهورستان"
+    ],
+    "latitude": 27.2105,
+    "longitude": 55.5557,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "wiki-aa6fc6d6c6c3",
@@ -9547,8 +12343,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "کیاسر"
     ],
-    "latitude": 36.23805556,
-    "longitude": 53.54111111
+    "latitude": 36.2381,
+    "longitude": 53.54101,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-126952",
@@ -9559,8 +12356,9 @@ export const iranCities: GeoItem[] = [
       "Kiashahr",
       "بندر کیاشهر"
     ],
-    "latitude": 37.42047,
-    "longitude": 49.94692
+    "latitude": 37.4189,
+    "longitude": 49.9488,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-7d7916731143",
@@ -9569,8 +12367,32 @@ export const iranCities: GeoItem[] = [
       "کیاکلا",
       "کیاکلا (سیمرغ)"
     ],
-    "latitude": 36.58027778,
-    "longitude": 52.81527778
+    "latitude": 36.58028,
+    "longitude": 52.81253,
+    "provinceName": "مازندران"
+  },
+  {
+    "id": "ir-115802",
+    "name": "کیان",
+    "aliases": [
+      "کیان",
+      "Kīān",
+      "Kian",
+      "شهر کیان"
+    ],
+    "latitude": 32.28418,
+    "longitude": 50.89202,
+    "provinceName": "چهارمحال و بختیاری"
+  },
+  {
+    "id": "ir-admin-10800014002110",
+    "name": "کیانشهر",
+    "aliases": [
+      "کیانشهر"
+    ],
+    "latitude": 31.1555,
+    "longitude": 56.3803,
+    "provinceName": "کرمان"
   },
   {
     "id": "ir-126914",
@@ -9582,7 +12404,8 @@ export const iranCities: GeoItem[] = [
       "کیش (شهر)"
     ],
     "latitude": 26.55778,
-    "longitude": 54.01944
+    "longitude": 54.01944,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "wiki-7ae3c71b7ea3",
@@ -9590,8 +12413,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "کیلان"
     ],
-    "latitude": 35.55027778,
-    "longitude": 52.16805556
+    "latitude": 35.5505,
+    "longitude": 52.1684,
+    "provinceName": "تهران"
   },
   {
     "id": "ir-134282",
@@ -9602,18 +12426,8 @@ export const iranCities: GeoItem[] = [
       "Galikesh"
     ],
     "latitude": 37.27259,
-    "longitude": 55.43394
-  },
-  {
-    "id": "ir-133852",
-    "name": "گاوبندی",
-    "aliases": [
-      "گاوبندی",
-      "Pārsiān",
-      "Parsian"
-    ],
-    "latitude": 27.2083,
-    "longitude": 53.0361
+    "longitude": 55.43394,
+    "provinceName": "گلستان"
   },
   {
     "id": "wiki-a905d90b3b48",
@@ -9621,30 +12435,40 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "گتاب"
     ],
-    "latitude": 36.41861111,
-    "longitude": 52.65083333
+    "latitude": 36.4317,
+    "longitude": 52.6579,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-133884",
     "name": "گتوند",
     "aliases": [
       "گتوند",
-      "Gotvand",
-      "شهرستان گتوند"
+      "Gotvand"
     ],
     "latitude": 32.24585,
-    "longitude": 48.81315
+    "longitude": 48.81315,
+    "provinceName": "خوزستان"
   },
   {
-    "id": "ir-136014",
-    "name": "گچساران",
+    "id": "ir-admin-11100019002913",
+    "name": "گتیج",
     "aliases": [
-      "گچساران",
-      "Dogonbadan",
-      "دو گنبدان"
+      "گتیج"
     ],
-    "latitude": 30.3586,
-    "longitude": 50.7981
+    "latitude": 26.72328,
+    "longitude": 59.13611,
+    "provinceName": "سیستان و بلوچستان"
+  },
+  {
+    "id": "ir-admin-1150006002257",
+    "name": "گراب",
+    "aliases": [
+      "گراب"
+    ],
+    "latitude": 33.47507,
+    "longitude": 47.25155,
+    "provinceName": "لرستان"
   },
   {
     "id": "wiki-bbfeee13ad80",
@@ -9652,8 +12476,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "گراب سفلی"
     ],
-    "latitude": 30.94722222,
-    "longitude": 50.88777778
+    "latitude": 30.94085,
+    "longitude": 50.89637,
+    "provinceName": "کهگیلویه و بویراحمد"
   },
   {
     "id": "ir-133595",
@@ -9664,19 +12489,18 @@ export const iranCities: GeoItem[] = [
       "Gerash"
     ],
     "latitude": 27.66966,
-    "longitude": 54.13586
+    "longitude": 54.13586,
+    "provinceName": "فارس"
   },
   {
-    "id": "ir-13664979",
-    "name": "گرجی سفلی",
+    "id": "ir-admin-11000016001597",
+    "name": "گرگاب",
     "aliases": [
-      "گرجی سفلی",
-      "Gorjī-ye Soflá",
-      "Gorji-ye Sofla",
-      "گرجی پایین"
+      "گرگاب"
     ],
-    "latitude": 36.35636,
-    "longitude": 59.66004
+    "latitude": 32.86591,
+    "longitude": 51.59732,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-132892",
@@ -9689,7 +12513,8 @@ export const iranCities: GeoItem[] = [
       "گورگان"
     ],
     "latitude": 36.8427,
-    "longitude": 54.44391
+    "longitude": 54.44391,
+    "provinceName": "گلستان"
   },
   {
     "id": "wiki-24b726a8c9ac",
@@ -9699,17 +12524,19 @@ export const iranCities: GeoItem[] = [
       "گرماب (فیروزه)"
     ],
     "latitude": 36.2375,
-    "longitude": 58.43027778
+    "longitude": 58.43027778,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-3c3c36847ddf",
-    "name": "گرماب (خدابنده)",
+    "name": "گرماب",
     "aliases": [
-      "گرماب (خدابنده)",
-      "گرماب"
+      "گرماب",
+      "گرماب (خدابنده)"
     ],
-    "latitude": 35.84861111,
-    "longitude": 48.19527778
+    "latitude": 35.84881,
+    "longitude": 48.19602,
+    "provinceName": "زنجان"
   },
   {
     "id": "ir-400773",
@@ -9719,8 +12546,9 @@ export const iranCities: GeoItem[] = [
       "Garmdarreh",
       "گرمدره پائین"
     ],
-    "latitude": 35.74803,
-    "longitude": 51.06865
+    "latitude": 35.751,
+    "longitude": 51.066,
+    "provinceName": "البرز"
   },
   {
     "id": "ir-133964",
@@ -9733,7 +12561,8 @@ export const iranCities: GeoItem[] = [
       "شهر قشلاق"
     ],
     "latitude": 35.21824,
-    "longitude": 52.34085
+    "longitude": 52.34085,
+    "provinceName": "سمنان"
   },
   {
     "id": "wiki-4db4fbdcd4ad",
@@ -9741,8 +12570,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "گرمه"
     ],
-    "latitude": 36.98694444,
-    "longitude": 56.28944444
+    "latitude": 36.987,
+    "longitude": 56.28942,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "ir-133972",
@@ -9753,17 +12583,18 @@ export const iranCities: GeoItem[] = [
       "Germi"
     ],
     "latitude": 39.0215,
-    "longitude": 48.0801
+    "longitude": 48.0801,
+    "provinceName": "اردبیل"
   },
   {
-    "id": "ir-418830",
-    "name": "گز",
+    "id": "ir-admin-12200012002724",
+    "name": "گروک",
     "aliases": [
-      "گز",
-      "Gaz-e Borkhar"
+      "گروک"
     ],
-    "latitude": 32.80482,
-    "longitude": 51.62087
+    "latitude": 26.5892,
+    "longitude": 57.093,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "wiki-82e154749a77",
@@ -9771,8 +12602,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "گزبرخوار"
     ],
-    "latitude": 32.80472222,
-    "longitude": 51.62083333
+    "latitude": 32.8126,
+    "longitude": 51.6212,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-2076e90c7411",
@@ -9780,8 +12612,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "گزنک"
     ],
-    "latitude": 35.90361111,
-    "longitude": 52.22527778
+    "latitude": 35.9038,
+    "longitude": 52.2247,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-13299b798421",
@@ -9790,8 +12623,9 @@ export const iranCities: GeoItem[] = [
       "گزیک",
       "گزیک (درمیان)"
     ],
-    "latitude": 33,
-    "longitude": 60.22666944
+    "latitude": 33.02612,
+    "longitude": 59.45988,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "wiki-71a48a090367",
@@ -9801,7 +12635,20 @@ export const iranCities: GeoItem[] = [
       "گشت (سراوان)"
     ],
     "latitude": 27.7875,
-    "longitude": 61.955
+    "longitude": 61.955,
+    "provinceName": "سیستان و بلوچستان"
+  },
+  {
+    "id": "wiki-ca3c2bb96512",
+    "name": "گل تپه",
+    "aliases": [
+      "گل تپه",
+      "‌ گل‌تپه",
+      "گل‌تپه (کبودرآهنگ)"
+    ],
+    "latitude": 35.21861111,
+    "longitude": 48.20611111,
+    "provinceName": "همدان"
   },
   {
     "id": "wiki-62c0195f59f4",
@@ -9810,7 +12657,8 @@ export const iranCities: GeoItem[] = [
       "گلباف"
     ],
     "latitude": 29.885,
-    "longitude": 57.73055556
+    "longitude": 57.7305,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-fbd664214587",
@@ -9818,8 +12666,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "گلبهار"
     ],
-    "latitude": 36.57111111,
-    "longitude": 59.19472222
+    "latitude": 36.56976,
+    "longitude": 59.1904,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-133037",
@@ -9830,7 +12679,8 @@ export const iranCities: GeoItem[] = [
       "Golpayegan"
     ],
     "latitude": 33.4537,
-    "longitude": 50.28836
+    "longitude": 50.28836,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-418556",
@@ -9841,7 +12691,18 @@ export const iranCities: GeoItem[] = [
       "گلدشت (نجف‌آباد)"
     ],
     "latitude": 32.62837,
-    "longitude": 51.43926
+    "longitude": 51.43926,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-10800010002241",
+    "name": "گلزار",
+    "aliases": [
+      "گلزار"
+    ],
+    "latitude": 29.7111,
+    "longitude": 57.0373,
+    "provinceName": "کرمان"
   },
   {
     "id": "ir-13665053",
@@ -9853,7 +12714,8 @@ export const iranCities: GeoItem[] = [
       "گلسار (البرز)"
     ],
     "latitude": 35.90967,
-    "longitude": 50.77532
+    "longitude": 50.77532,
+    "provinceName": "البرز"
   },
   {
     "id": "ir-32900",
@@ -9861,11 +12723,11 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "گلستان",
       "Golestān",
-      "Golestan",
-      "شهرک گلستان"
+      "Golestan"
     ],
     "latitude": 35.5183,
-    "longitude": 51.1819
+    "longitude": 51.1819,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-443d11916ee7",
@@ -9874,8 +12736,9 @@ export const iranCities: GeoItem[] = [
       "گلشن",
       "گلشن (دهاقان)"
     ],
-    "latitude": 31.55111111,
-    "longitude": 51.46411111
+    "latitude": 31.9355,
+    "longitude": 51.7523,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-f59b6625fb43",
@@ -9885,17 +12748,20 @@ export const iranCities: GeoItem[] = [
       "گلشهر (گلپایگان)"
     ],
     "latitude": 33.50527778,
-    "longitude": 50.46277778
+    "longitude": 50.46277778,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-8a16095d9f42",
-    "name": "گل‌گیر",
+    "name": "گلگیر",
     "aliases": [
+      "گلگیر",
       "گل‌گیر",
       "گل‌گیر (شهر)"
     ],
     "latitude": 31.76472222,
-    "longitude": 49.4975
+    "longitude": 49.4975,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-04711234868a",
@@ -9904,8 +12770,19 @@ export const iranCities: GeoItem[] = [
       "گلمکان",
       "گلمکان (گلبهار)"
     ],
-    "latitude": 36.48083333,
-    "longitude": 59.15722222
+    "latitude": 36.4818,
+    "longitude": 59.1595,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-admin-11100012002451",
+    "name": "گلمورتی",
+    "aliases": [
+      "گلمورتی"
+    ],
+    "latitude": 27.48232,
+    "longitude": 59.44656,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "ir-134255",
@@ -9916,33 +12793,59 @@ export const iranCities: GeoItem[] = [
       "Galugah",
       "گلوگاه (بابل)"
     ],
+    "latitude": 36.3115,
+    "longitude": 52.6253,
+    "provinceName": "مازندران"
+  },
+  {
+    "id": "ir-admin-10200022001157",
+    "name": "گلوگاه",
+    "aliases": [
+      "گلوگاه",
+      "Galūgāh",
+      "Galugah",
+      "گلوگاه (بابل)"
+    ],
     "latitude": 36.72734,
-    "longitude": 53.80888
+    "longitude": 53.80888,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-134296",
-    "name": "گله‌دار",
+    "name": "گله دار",
     "aliases": [
-      "گله‌دار",
       "گله دار",
+      "گله‌دار",
       "Galehdār",
       "Galehdar",
       "گله‌دار (مهر)"
     ],
     "latitude": 27.6595,
-    "longitude": 52.6575
+    "longitude": 52.6575,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-12700012002885",
+    "name": "گلیداغ",
+    "aliases": [
+      "گلیداغ"
+    ],
+    "latitude": 37.64115,
+    "longitude": 55.9448,
+    "provinceName": "گلستان"
   },
   {
     "id": "ir-40047",
-    "name": "گمیشان",
+    "name": "گمیش تپه",
     "aliases": [
+      "گمیش تپه",
       "گمیشان",
       "Gomīshān",
-      "Gomishan",
-      "گمیش تپه"
+      "Gomishan"
     ],
     "latitude": 37.0718,
-    "longitude": 54.07654
+    "longitude": 54.07654,
+    "provinceName": "گلستان"
   },
   {
     "id": "ir-132961",
@@ -9953,19 +12856,52 @@ export const iranCities: GeoItem[] = [
       "Gonabad"
     ],
     "latitude": 34.35287,
-    "longitude": 58.68365
+    "longitude": 58.68365,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-132938",
-    "name": "گنبد قابوس",
+    "name": "گنبدکاووس",
     "aliases": [
+      "گنبدکاووس",
       "گنبد قابوس",
       "Gonbad-e Kāvūs",
       "Gonbad-e Kavus",
       "گنبد کاووس"
     ],
     "latitude": 37.25004,
-    "longitude": 55.16721
+    "longitude": 55.16721,
+    "provinceName": "گلستان"
+  },
+  {
+    "id": "ir-admin-10800024002822",
+    "name": "گنبکی",
+    "aliases": [
+      "گنبکی"
+    ],
+    "latitude": 28.72242,
+    "longitude": 58.86416,
+    "provinceName": "کرمان"
+  },
+  {
+    "id": "ir-admin-1140001002152",
+    "name": "گندمان",
+    "aliases": [
+      "گندمان"
+    ],
+    "latitude": 31.86553,
+    "longitude": 51.15435,
+    "provinceName": "چهارمحال و بختیاری"
+  },
+  {
+    "id": "ir-admin-1140003002805",
+    "name": "گوجان",
+    "aliases": [
+      "گوجان"
+    ],
+    "latitude": 32.24563,
+    "longitude": 50.54189,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "wiki-e32eae51e80c",
@@ -9974,7 +12910,18 @@ export const iranCities: GeoItem[] = [
       "گودین"
     ],
     "latitude": 34.5,
-    "longitude": 48.06666944
+    "longitude": 48.06666944,
+    "provinceName": "کرمانشاه"
+  },
+  {
+    "id": "ir-admin-1010008002328",
+    "name": "گوراب زرمیخ",
+    "aliases": [
+      "گوراب زرمیخ"
+    ],
+    "latitude": 37.29325,
+    "longitude": 49.23756,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-5699da89ae90",
@@ -9983,7 +12930,18 @@ export const iranCities: GeoItem[] = [
       "گوریه"
     ],
     "latitude": 31.85694444,
-    "longitude": 48.75666667
+    "longitude": 48.75666667,
+    "provinceName": "خوزستان"
+  },
+  {
+    "id": "ir-admin-11900010001084",
+    "name": "گوزلدره‌ سفلی",
+    "aliases": [
+      "گوزلدره‌ سفلی"
+    ],
+    "latitude": 36.433198,
+    "longitude": 48.794692,
+    "provinceName": "زنجان"
   },
   {
     "id": "wiki-13056c1a6575",
@@ -9992,8 +12950,9 @@ export const iranCities: GeoItem[] = [
       "گوگ تپه",
       "گوگ‌تپه (مهاباد)"
     ],
-    "latitude": 36.87222222,
-    "longitude": 45.805
+    "latitude": 36.8722,
+    "longitude": 45.805,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "ir-133831",
@@ -10005,8 +12964,9 @@ export const iranCities: GeoItem[] = [
       "گاوکان",
       "گاوگان"
     ],
-    "latitude": 37.7831,
-    "longitude": 45.904
+    "latitude": 37.7818,
+    "longitude": 45.9038,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-bdd0296b2e16",
@@ -10015,7 +12975,8 @@ export const iranCities: GeoItem[] = [
       "گوگد"
     ],
     "latitude": 33.47555556,
-    "longitude": 50.3525
+    "longitude": 50.3525,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-88a241ccb8fb",
@@ -10024,7 +12985,28 @@ export const iranCities: GeoItem[] = [
       "گوهران"
     ],
     "latitude": 26.595,
-    "longitude": 57.896667
+    "longitude": 57.896667,
+    "provinceName": "هرمزگان"
+  },
+  {
+    "id": "ir-admin-1140007002358",
+    "name": "گهرو",
+    "aliases": [
+      "گهرو"
+    ],
+    "latitude": 32.00319,
+    "longitude": 50.88537,
+    "provinceName": "چهارمحال و بختیاری"
+  },
+  {
+    "id": "ir-admin-10500013002409",
+    "name": "گهواره",
+    "aliases": [
+      "گهواره"
+    ],
+    "latitude": 34.34412,
+    "longitude": 46.41718,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "wiki-7cc2652eaadb",
@@ -10032,8 +13014,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "گیان"
     ],
-    "latitude": 34.17805556,
-    "longitude": 48.24416667
+    "latitude": 34.1772,
+    "longitude": 48.2446,
+    "provinceName": "همدان"
   },
   {
     "id": "wiki-257f6ce89946",
@@ -10041,8 +13024,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "گیلانغرب"
     ],
-    "latitude": 34.14222222,
-    "longitude": 45.92027778
+    "latitude": 34.1421,
+    "longitude": 45.9203,
+    "provinceName": "کرمانشاه"
+  },
+  {
+    "id": "ir-admin-1190008001085",
+    "name": "گیلوان",
+    "aliases": [
+      "گیلوان"
+    ],
+    "latitude": 36.79416,
+    "longitude": 49.13054,
+    "provinceName": "زنجان"
   },
   {
     "id": "wiki-82529abe3cde",
@@ -10050,8 +13044,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "گیوی"
     ],
-    "latitude": 37.61666944,
-    "longitude": 48.51666944
+    "latitude": 37.68585,
+    "longitude": 48.34204,
+    "provinceName": "اردبیل"
   },
   {
     "id": "wiki-35213f513b65",
@@ -10060,7 +13055,8 @@ export const iranCities: GeoItem[] = [
       "لاجان"
     ],
     "latitude": 36.80861111,
-    "longitude": 45.265
+    "longitude": 45.265,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-9284039ae45b",
@@ -10068,8 +13064,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "لادیز"
     ],
-    "latitude": 28.9125,
-    "longitude": 61.2875
+    "latitude": 28.93134,
+    "longitude": 61.31486,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "ir-125877",
@@ -10081,7 +13078,8 @@ export const iranCities: GeoItem[] = [
       "شهر قدیم لار"
     ],
     "latitude": 27.68336,
-    "longitude": 54.34172
+    "longitude": 54.34172,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-57e43b819ea3",
@@ -10090,8 +13088,29 @@ export const iranCities: GeoItem[] = [
       "لاریجان",
       "لاریجان (خداآفرین)"
     ],
-    "latitude": 39.31694444,
-    "longitude": 47.28777778
+    "latitude": 39.3041,
+    "longitude": 47.1983,
+    "provinceName": "آذربایجان شرقی"
+  },
+  {
+    "id": "ir-admin-10200021001093",
+    "name": "لاریم",
+    "aliases": [
+      "لاریم"
+    ],
+    "latitude": 36.7187,
+    "longitude": 52.93811,
+    "provinceName": "مازندران"
+  },
+  {
+    "id": "ir-admin-1220004001034",
+    "name": "لافت",
+    "aliases": [
+      "لافت"
+    ],
+    "latitude": 26.896,
+    "longitude": 55.7584,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "ir-125961",
@@ -10103,7 +13122,8 @@ export const iranCities: GeoItem[] = [
       "Lalejin"
     ],
     "latitude": 34.9746,
-    "longitude": 48.4758
+    "longitude": 48.4751,
+    "provinceName": "همدان"
   },
   {
     "id": "wiki-0f659274b315",
@@ -10113,7 +13133,8 @@ export const iranCities: GeoItem[] = [
       "لاله‌زار (بردسیر)"
     ],
     "latitude": 29.52166667,
-    "longitude": 56.81833333
+    "longitude": 56.81833333,
+    "provinceName": "کرمان"
   },
   {
     "id": "ir-125938",
@@ -10125,7 +13146,8 @@ export const iranCities: GeoItem[] = [
       "دشت لالی"
     ],
     "latitude": 32.32981,
-    "longitude": 49.09324
+    "longitude": 49.09324,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-125926",
@@ -10135,7 +13157,8 @@ export const iranCities: GeoItem[] = [
       "Lamerd"
     ],
     "latitude": 27.334,
-    "longitude": 53.179
+    "longitude": 53.179,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-4e192657ed94",
@@ -10143,8 +13166,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "لاهرود"
     ],
-    "latitude": 38.51083333,
-    "longitude": 47.83222222
+    "latitude": 38.5081,
+    "longitude": 47.8317,
+    "provinceName": "اردبیل"
   },
   {
     "id": "ir-126015",
@@ -10155,16 +13179,39 @@ export const iranCities: GeoItem[] = [
       "Lahijan"
     ],
     "latitude": 37.20416,
-    "longitude": 50.00919
+    "longitude": 50.00919,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-1030003001068",
+    "name": "لاهیجان",
+    "aliases": [
+      "لاهیجان"
+    ],
+    "latitude": 37.9849,
+    "longitude": 46.0863,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-633b58c65cf1",
-    "name": "لایبید",
+    "name": "لای بید",
     "aliases": [
+      "لای بید",
       "لایبید"
     ],
-    "latitude": 33.48333333,
-    "longitude": 50.71666667
+    "latitude": 33.4597,
+    "longitude": 50.69433,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-10700030002421",
+    "name": "لپویی",
+    "aliases": [
+      "لپویی"
+    ],
+    "latitude": 29.7997,
+    "longitude": 52.6504,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-125609",
@@ -10176,17 +13223,30 @@ export const iranCities: GeoItem[] = [
       "لرد جن"
     ],
     "latitude": 31.51338,
-    "longitude": 50.82672
+    "longitude": 50.82672,
+    "provinceName": "چهارمحال و بختیاری"
+  },
+  {
+    "id": "ir-admin-1010005001128",
+    "name": "لشت نشاء",
+    "aliases": [
+      "لشت نشاء"
+    ],
+    "latitude": 37.36124,
+    "longitude": 49.86108,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-113f18a87ab7",
-    "name": "لطف‌آباد",
+    "name": "لطف آباد",
     "aliases": [
+      "لطف آباد",
       "لطف‌آباد",
       "لطف‌آباد (درگز)"
     ],
-    "latitude": 37.518056,
-    "longitude": 59.340833
+    "latitude": 37.51796,
+    "longitude": 59.34073,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-72b8871bfa19",
@@ -10195,7 +13255,8 @@ export const iranCities: GeoItem[] = [
       "لطیفی"
     ],
     "latitude": 27.69,
-    "longitude": 54.38694444
+    "longitude": 54.38694444,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-4124fe15e225",
@@ -10203,8 +13264,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "لمزان"
     ],
-    "latitude": 27.045,
-    "longitude": 54.89083056
+    "latitude": 27.04303,
+    "longitude": 54.89056,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "ir-125726",
@@ -10214,7 +13276,8 @@ export const iranCities: GeoItem[] = [
       "Landeh"
     ],
     "latitude": 30.98215,
-    "longitude": 50.4206
+    "longitude": 50.4206,
+    "provinceName": "کهگیلویه و بویراحمد"
   },
   {
     "id": "ir-125897",
@@ -10225,7 +13288,8 @@ export const iranCities: GeoItem[] = [
       "Langarud"
     ],
     "latitude": 37.19548,
-    "longitude": 50.15263
+    "longitude": 50.15263,
+    "provinceName": "گیلان"
   },
   {
     "id": "ir-490",
@@ -10235,8 +13299,9 @@ export const iranCities: GeoItem[] = [
       "Lavāsān",
       "Lavasan"
     ],
-    "latitude": 35.82159,
-    "longitude": 51.64444
+    "latitude": 35.8205,
+    "longitude": 51.6321,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-e6f6e7026209",
@@ -10244,8 +13309,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "لوجلی"
     ],
-    "latitude": 37.60805556,
-    "longitude": 57.8575
+    "latitude": 37.6069,
+    "longitude": 57.8574,
+    "provinceName": "خراسان شمالی"
   },
   {
     "id": "ir-125585",
@@ -10255,8 +13321,19 @@ export const iranCities: GeoItem[] = [
       "Lowshān",
       "Lowshan"
     ],
-    "latitude": 36.62981,
-    "longitude": 49.51282
+    "latitude": 36.66063,
+    "longitude": 49.53673,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-1010005002075",
+    "name": "لولمان",
+    "aliases": [
+      "لولمان"
+    ],
+    "latitude": 37.2552,
+    "longitude": 49.815,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-e1b3b5c50bf9",
@@ -10264,8 +13341,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "لومار"
     ],
-    "latitude": 33.56805556,
-    "longitude": 46.81388889
+    "latitude": 33.56522,
+    "longitude": 46.814,
+    "provinceName": "ایلام"
   },
   {
     "id": "ir-125790",
@@ -10276,7 +13354,8 @@ export const iranCities: GeoItem[] = [
       "Lavandevil"
     ],
     "latitude": 38.30954,
-    "longitude": 48.87244
+    "longitude": 48.87244,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-2d41fd1fb72d",
@@ -10285,7 +13364,18 @@ export const iranCities: GeoItem[] = [
       "لیردف"
     ],
     "latitude": 25.63805556,
-    "longitude": 58.86527778
+    "longitude": 58.86527778,
+    "provinceName": "هرمزگان"
+  },
+  {
+    "id": "ir-admin-1010004002381",
+    "name": "لیسار",
+    "aliases": [
+      "لیسار"
+    ],
+    "latitude": 37.95646,
+    "longitude": 48.90811,
+    "provinceName": "گیلان"
   },
   {
     "id": "ir-125688",
@@ -10297,25 +13387,29 @@ export const iranCities: GeoItem[] = [
       "لیکک بهمنی"
     ],
     "latitude": 30.8949,
-    "longitude": 50.0931
+    "longitude": 50.0931,
+    "provinceName": "کهگیلویه و بویراحمد"
   },
   {
-    "id": "wiki-1b58ef5c6a3e",
+    "id": "ir-admin-10300028002296",
     "name": "لیلان",
     "aliases": [
       "لیلان"
     ],
-    "latitude": 37.01333333,
-    "longitude": 46.20527778
+    "latitude": 38.669,
+    "longitude": 46.2113,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-f0fa1aae20ec",
-    "name": "مادرسلیمان",
+    "name": "مادر سلیمان",
     "aliases": [
+      "مادر سلیمان",
       "مادرسلیمان"
     ],
-    "latitude": 30.25,
-    "longitude": 53.21666667
+    "latitude": 30.19091,
+    "longitude": 53.17451,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-1619771e5fa8",
@@ -10323,8 +13417,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "مارگون"
     ],
-    "latitude": 30.99277778,
-    "longitude": 51.08361111
+    "latitude": 30.99237,
+    "longitude": 51.08253,
+    "provinceName": "کهگیلویه و بویراحمد"
   },
   {
     "id": "wiki-b06afc3cbbb8",
@@ -10333,7 +13428,8 @@ export const iranCities: GeoItem[] = [
       "ماژان"
     ],
     "latitude": 32.58361111,
-    "longitude": 59.02166944
+    "longitude": 59.02166944,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "wiki-7fb6ca8d3df0",
@@ -10342,7 +13438,8 @@ export const iranCities: GeoItem[] = [
       "ماژین"
     ],
     "latitude": 32.95330556,
-    "longitude": 47.78980556
+    "longitude": 47.78980556,
+    "provinceName": "ایلام"
   },
   {
     "id": "ir-141015",
@@ -10354,7 +13451,28 @@ export const iranCities: GeoItem[] = [
       "بازار ماسال"
     ],
     "latitude": 37.3631,
-    "longitude": 49.1329
+    "longitude": 49.1329,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-1010009001143",
+    "name": "ماسوله",
+    "aliases": [
+      "ماسوله"
+    ],
+    "latitude": 37.1551,
+    "longitude": 48.99,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-1010009002804",
+    "name": "ماکلوان",
+    "aliases": [
+      "ماکلوان"
+    ],
+    "latitude": 37.1894,
+    "longitude": 49.1887,
+    "provinceName": "گیلان"
   },
   {
     "id": "ir-125205",
@@ -10366,7 +13484,18 @@ export const iranCities: GeoItem[] = [
       "ماکۆ"
     ],
     "latitude": 39.28992,
-    "longitude": 44.46035
+    "longitude": 44.46035,
+    "provinceName": "آذربایجان غربی"
+  },
+  {
+    "id": "ir-admin-11400011002472",
+    "name": "مال خلیفه",
+    "aliases": [
+      "مال خلیفه"
+    ],
+    "latitude": 31.2908,
+    "longitude": 51.26026,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "wiki-a1b3f9ecd924",
@@ -10374,8 +13503,32 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "مالوجه"
     ],
-    "latitude": 35.33333333,
-    "longitude": 48
+    "latitude": 35.30167,
+    "longitude": 47.97441,
+    "provinceName": "کردستان"
+  },
+  {
+    "id": "ir-6657461",
+    "name": "مامونیه",
+    "aliases": [
+      "مامونیه",
+      "مأمونیه",
+      "Māmūnīyeh",
+      "Mamuniyeh"
+    ],
+    "latitude": 35.30454,
+    "longitude": 50.49934,
+    "provinceName": "مرکزی"
+  },
+  {
+    "id": "ir-admin-1190009002207",
+    "name": "ماه نشان",
+    "aliases": [
+      "ماه نشان"
+    ],
+    "latitude": 36.7444,
+    "longitude": 47.6725,
+    "provinceName": "زنجان"
   },
   {
     "id": "ir-125427",
@@ -10386,7 +13539,8 @@ export const iranCities: GeoItem[] = [
       "Mahan"
     ],
     "latitude": 30.05943,
-    "longitude": 57.29198
+    "longitude": 57.29198,
+    "provinceName": "کرمان"
   },
   {
     "id": "ir-124838",
@@ -10398,48 +13552,29 @@ export const iranCities: GeoItem[] = [
       "مرد آباد"
     ],
     "latitude": 35.7282,
-    "longitude": 50.8134
+    "longitude": 50.8134,
+    "provinceName": "البرز"
   },
   {
-    "id": "wiki-76ad1b2dc248",
-    "name": "مؤمن‌آباد",
+    "id": "ir-admin-10700020002012",
+    "name": "مبارک آباد دیز",
     "aliases": [
-      "مؤمن‌آباد",
-      "مؤمن‌آباد (ازنا)"
+      "مبارک آباد دیز"
     ],
-    "latitude": 33.5975,
-    "longitude": 49.52111111
-  },
-  {
-    "id": "ir-6657461",
-    "name": "مأمونیه",
-    "aliases": [
-      "مأمونیه",
-      "مامونیه",
-      "Māmūnīyeh",
-      "Mamuniyeh"
-    ],
-    "latitude": 35.30454,
-    "longitude": 50.49934
-  },
-  {
-    "id": "wiki-4eb9bf321b6f",
-    "name": "مبارک‌آباد",
-    "aliases": [
-      "مبارک‌آباد",
-      "مبارک‌آباد (قیر و کارزین)"
-    ],
-    "latitude": 28.35958911,
-    "longitude": 53.32818561
+    "latitude": 28.482573,
+    "longitude": 53.034527,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-0086c0829afd",
-    "name": "مبارک‌شهر",
+    "name": "مبارک شهر",
     "aliases": [
+      "مبارک شهر",
       "مبارک‌شهر"
     ],
     "latitude": 37.18333333,
-    "longitude": 46.05833333
+    "longitude": 46.05833333,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-418625",
@@ -10450,18 +13585,18 @@ export const iranCities: GeoItem[] = [
       "Mobarakeh"
     ],
     "latitude": 32.34612,
-    "longitude": 51.50205
+    "longitude": 51.50205,
+    "provinceName": "اصفهان"
   },
   {
-    "id": "ir-7465130",
-    "name": "مجتمع مسکونی نامجو",
+    "id": "ir-admin-11000017001599",
+    "name": "مجلسی",
     "aliases": [
-      "مجتمع مسکونی نامجو",
-      "Mojtame‘-e Maskūnī-ye Nāmjū",
-      "Mojtame'-e Maskuni-ye Namju"
+      "مجلسی"
     ],
-    "latitude": 35.4723,
-    "longitude": 51.724
+    "latitude": 32.19891,
+    "longitude": 51.5,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-344c61a81c70",
@@ -10469,8 +13604,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "مجن"
     ],
-    "latitude": 36.48,
-    "longitude": 54.64583333
+    "latitude": 36.4797,
+    "longitude": 54.6484,
+    "provinceName": "سمنان"
   },
   {
     "id": "wiki-a0ba1e998657",
@@ -10479,7 +13615,8 @@ export const iranCities: GeoItem[] = [
       "مجومرد"
     ],
     "latitude": 32.02138889,
-    "longitude": 54.1975
+    "longitude": 54.1975,
+    "provinceName": "یزد"
   },
   {
     "id": "ir-125438",
@@ -10490,19 +13627,19 @@ export const iranCities: GeoItem[] = [
       "Mahallat"
     ],
     "latitude": 33.91108,
-    "longitude": 50.45317
+    "longitude": 50.45317,
+    "provinceName": "مرکزی"
   },
   {
-    "id": "ir-400771",
-    "name": "محمد شهر",
+    "id": "wiki-589935cec8aa",
+    "name": "محمدآباد",
     "aliases": [
-      "محمد شهر",
-      "Moḩammad Shahr",
-      "Mohammad Shahr",
-      "محمد آباد"
+      "محمدآباد",
+      "محمدآباد (ریگان)"
     ],
-    "latitude": 35.763,
-    "longitude": 50.9171
+    "latitude": 28.66877,
+    "longitude": 59.07341,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-dcf3040b5290",
@@ -10511,28 +13648,20 @@ export const iranCities: GeoItem[] = [
       "محمدآباد",
       "محمدآباد (جرقویه)"
     ],
-    "latitude": 32.31971944,
-    "longitude": 52.10083056
-  },
-  {
-    "id": "wiki-589935cec8aa",
-    "name": "محمدآباد (ریگان)",
-    "aliases": [
-      "محمدآباد (ریگان)",
-      "محمدآباد"
-    ],
-    "latitude": 28.66888889,
-    "longitude": 59.07333056
+    "latitude": 32.3251,
+    "longitude": 52.111,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-261f9f387ff3",
-    "name": "محمدآباد (هامون)",
+    "name": "محمدآباد",
     "aliases": [
-      "محمدآباد (هامون)",
-      "محمدآباد"
+      "محمدآباد",
+      "محمدآباد (هامون)"
     ],
-    "latitude": 30.88555556,
-    "longitude": 61.46361111
+    "latitude": 31.1278,
+    "longitude": 61.5681,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-dcee23e3dcaf",
@@ -10541,7 +13670,22 @@ export const iranCities: GeoItem[] = [
       "محمدان"
     ],
     "latitude": 27.20027778,
-    "longitude": 60.56
+    "longitude": 60.56,
+    "provinceName": "سیستان و بلوچستان"
+  },
+  {
+    "id": "ir-400771",
+    "name": "محمدشهر",
+    "aliases": [
+      "محمدشهر",
+      "محمد شهر",
+      "Moḩammad Shahr",
+      "Mohammad Shahr",
+      "محمد آباد"
+    ],
+    "latitude": 35.763,
+    "longitude": 50.9171,
+    "provinceName": "البرز"
   },
   {
     "id": "wiki-9c8e9ab0408d",
@@ -10551,7 +13695,8 @@ export const iranCities: GeoItem[] = [
       "محمدی (سراوان)"
     ],
     "latitude": 27.331963,
-    "longitude": 62.387832
+    "longitude": 62.387832,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-05587a2a8a0e",
@@ -10559,8 +13704,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "محمدیار"
     ],
-    "latitude": 36.98611111,
-    "longitude": 45.51694444
+    "latitude": 36.9842,
+    "longitude": 45.5168,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "ir-6659981",
@@ -10570,12 +13716,12 @@ export const iranCities: GeoItem[] = [
       "زیباشهر",
       "Moḩammadīyeh",
       "Mohammadiyeh",
-      "شهرک محمدیه",
       "زیباشهر (مبارکه)",
       "محمدیه (قزوین)"
     ],
     "latitude": 36.22374,
-    "longitude": 50.18247
+    "longitude": 50.18247,
+    "provinceName": "قزوین"
   },
   {
     "id": "wiki-4d942751e743",
@@ -10584,29 +13730,21 @@ export const iranCities: GeoItem[] = [
       "محمله"
     ],
     "latitude": 27.81666667,
-    "longitude": 53.1
+    "longitude": 53.1,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-125328",
-    "name": "محمود آباد",
+    "name": "محمودآباد",
     "aliases": [
+      "محمودآباد",
       "محمود آباد",
       "Maḩmūdābād",
       "Mahmudabad"
     ],
     "latitude": 36.63191,
-    "longitude": 52.26286
-  },
-  {
-    "id": "ir-125330",
-    "name": "محمود آباد نمونه",
-    "aliases": [
-      "محمود آباد نمونه",
-      "Maḩmūdābād Nemūneh",
-      "Mahmudabad Nemuneh"
-    ],
-    "latitude": 36.28967,
-    "longitude": 49.9014
+    "longitude": 52.26286,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-3a981c64acbc",
@@ -10615,38 +13753,31 @@ export const iranCities: GeoItem[] = [
       "محمودآباد",
       "محمودآباد (شاهین‌دژ)"
     ],
-    "latitude": 36.71944444,
-    "longitude": 46.51444444
+    "latitude": 36.7178,
+    "longitude": 46.5244,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-d7033c407f1c",
-    "name": "محمودآباد نمونه",
+    "name": "محمودآبادنمونه",
     "aliases": [
+      "محمودآبادنمونه",
       "محمودآباد نمونه"
     ],
-    "latitude": 36.28861111,
-    "longitude": 49.90194444
+    "latitude": 36.2912,
+    "longitude": 49.9211,
+    "provinceName": "قزوین"
   },
   {
     "id": "wiki-91bf4df0bfd7",
-    "name": "محی‌آباد",
+    "name": "محی آباد",
     "aliases": [
+      "محی آباد",
       "محی‌آباد"
     ],
     "latitude": 30.08555556,
-    "longitude": 57.17
-  },
-  {
-    "id": "ir-8717127",
-    "name": "مراد آباد",
-    "aliases": [
-      "مراد آباد",
-      "Komb-e Morādābād",
-      "Komb-e Moradabad",
-      "کمب مراد آباد"
-    ],
-    "latitude": 25.284,
-    "longitude": 60.69812
+    "longitude": 57.17,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-4a3491d735af",
@@ -10655,8 +13786,9 @@ export const iranCities: GeoItem[] = [
       "مرادلو",
       "مرادلو (مشگین‌شهر)"
     ],
-    "latitude": 38.747222,
-    "longitude": 47.747778
+    "latitude": 38.7466,
+    "longitude": 47.7459,
+    "provinceName": "اردبیل"
   },
   {
     "id": "ir-124877",
@@ -10667,18 +13799,28 @@ export const iranCities: GeoItem[] = [
       "Maragheh"
     ],
     "latitude": 37.39206,
-    "longitude": 46.23909
+    "longitude": 46.23909,
+    "provinceName": "آذربایجان شرقی"
   },
   {
-    "id": "ir-32996",
-    "name": "مرتضی گرد",
+    "id": "ir-admin-12700012002498",
+    "name": "مراوه",
     "aliases": [
-      "مرتضی گرد",
-      "Morteẕá Gerd",
-      "Morteza Gerd"
+      "مراوه"
     ],
-    "latitude": 35.6025,
-    "longitude": 51.3496
+    "latitude": 37.9041,
+    "longitude": 55.95596,
+    "provinceName": "گلستان"
+  },
+  {
+    "id": "ir-admin-1010008002140",
+    "name": "مرجقل",
+    "aliases": [
+      "مرجقل"
+    ],
+    "latitude": 37.2761,
+    "longitude": 49.3764,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-240e175b5c15",
@@ -10686,17 +13828,20 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "مردهک"
     ],
-    "latitude": 28.35111111,
-    "longitude": 58.15888889
+    "latitude": 28.3517,
+    "longitude": 58.1587,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-7959eb687815",
-    "name": "مرزن‌آباد",
+    "name": "مرزن آباد",
     "aliases": [
+      "مرزن آباد",
       "مرزن‌آباد"
     ],
-    "latitude": 36.45305556,
-    "longitude": 51.30055556
+    "latitude": 36.454,
+    "longitude": 51.3006,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-cce2af4dc1ce",
@@ -10704,8 +13849,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "مرزیکلا"
     ],
-    "latitude": 36.365,
-    "longitude": 52.73444444
+    "latitude": 36.36512,
+    "longitude": 52.73439,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-11d0c342f8ca",
@@ -10714,7 +13860,8 @@ export const iranCities: GeoItem[] = [
       "مرگنلر"
     ],
     "latitude": 39.15027778,
-    "longitude": 44.95305556
+    "longitude": 44.95305556,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "ir-124862",
@@ -10724,7 +13871,8 @@ export const iranCities: GeoItem[] = [
       "Marand"
     ],
     "latitude": 38.4329,
-    "longitude": 45.7749
+    "longitude": 45.7749,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-124721",
@@ -10734,7 +13882,18 @@ export const iranCities: GeoItem[] = [
       "Marvdasht"
     ],
     "latitude": 29.87407,
-    "longitude": 52.80258
+    "longitude": 52.80258,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-12100012001557",
+    "name": "مروست",
+    "aliases": [
+      "مروست"
+    ],
+    "latitude": 30.47833,
+    "longitude": 54.21167,
+    "provinceName": "یزد"
   },
   {
     "id": "wiki-c27f19320584",
@@ -10742,8 +13901,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "مریانج"
     ],
-    "latitude": 34.83083333,
-    "longitude": 48.45916667
+    "latitude": 34.8306,
+    "longitude": 48.4614,
+    "provinceName": "همدان"
   },
   {
     "id": "ir-124778",
@@ -10756,7 +13916,8 @@ export const iranCities: GeoItem[] = [
       "قلعۀ مریوان"
     ],
     "latitude": 35.51829,
-    "longitude": 46.18298
+    "longitude": 46.18298,
+    "provinceName": "کردستان"
   },
   {
     "id": "wiki-7c91a75c54b6",
@@ -10765,17 +13926,19 @@ export const iranCities: GeoItem[] = [
       "مزایجان",
       "مزایجان (بوانات)"
     ],
-    "latitude": 30.29229769,
-    "longitude": 53.802393
+    "latitude": 30.2936,
+    "longitude": 53.8022,
+    "provinceName": "فارس"
   },
   {
-    "id": "wiki-60870ed4cd28",
-    "name": "مزداوند",
+    "id": "ir-admin-10900020002607",
+    "name": "مزدآوند",
     "aliases": [
-      "مزداوند"
+      "مزدآوند"
     ],
-    "latitude": 36.15611111,
-    "longitude": 60.53083333
+    "latitude": 36.1557,
+    "longitude": 60.5292,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-d5ff95dc647a",
@@ -10783,8 +13946,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "مزرج"
     ],
-    "latitude": 37.15111111,
-    "longitude": 58.55583056
+    "latitude": 37.15159,
+    "longitude": 58.55089,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-admin-1270003002836",
+    "name": "مزرعه",
+    "aliases": [
+      "مزرعه"
+    ],
+    "latitude": 36.95426,
+    "longitude": 54.85626,
+    "provinceName": "گلستان"
   },
   {
     "id": "wiki-b4881d2b2b3d",
@@ -10793,7 +13967,8 @@ export const iranCities: GeoItem[] = [
       "مس سرچشمه"
     ],
     "latitude": 29.99277778,
-    "longitude": 55.795
+    "longitude": 55.795,
+    "provinceName": "کرمان"
   },
   {
     "id": "ir-124620",
@@ -10805,7 +13980,8 @@ export const iranCities: GeoItem[] = [
       "مسجد سلیمان"
     ],
     "latitude": 31.9364,
-    "longitude": 49.3039
+    "longitude": 49.3039,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-dfc92977d394",
@@ -10814,8 +13990,9 @@ export const iranCities: GeoItem[] = [
       "مشراگه",
       "مشراگه (رامشیر)"
     ],
-    "latitude": 31.00944444,
-    "longitude": 49.43833333
+    "latitude": 31.00939,
+    "longitude": 49.43749,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-e33fc7988f49",
@@ -10824,7 +14001,19 @@ export const iranCities: GeoItem[] = [
       "مشکات"
     ],
     "latitude": 34.17666667,
-    "longitude": 51.265
+    "longitude": 51.265,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "wiki-0bdab489d4bb",
+    "name": "مشکان",
+    "aliases": [
+      "مشکان",
+      "مشکان (نی‌ریز)"
+    ],
+    "latitude": 29.4765,
+    "longitude": 54.3343,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-0f88df97fe68",
@@ -10833,18 +14022,9 @@ export const iranCities: GeoItem[] = [
       "مشکان",
       "مشکان (خوشاب)"
     ],
-    "latitude": 36.53333056,
-    "longitude": 58.1475
-  },
-  {
-    "id": "wiki-0bdab489d4bb",
-    "name": "مشکان (نی‌ریز)",
-    "aliases": [
-      "مشکان (نی‌ریز)",
-      "مشکان"
-    ],
-    "latitude": 29.47694444,
-    "longitude": 54.33138889
+    "latitude": 36.53325,
+    "longitude": 58.14661,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-123205",
@@ -10858,19 +14038,21 @@ export const iranCities: GeoItem[] = [
       "مشگین آباد"
     ],
     "latitude": 35.74988,
-    "longitude": 50.94376
+    "longitude": 50.94376,
+    "provinceName": "البرز"
   },
   {
     "id": "ir-124210",
-    "name": "مشگین‌شهر",
+    "name": "مشگین شهر",
     "aliases": [
-      "مشگین‌شهر",
       "مشگین شهر",
+      "مشگین‌شهر",
       "Meshgīn Shahr",
       "Meshgin Shahr"
     ],
     "latitude": 38.399,
-    "longitude": 47.682
+    "longitude": 47.682,
+    "provinceName": "اردبیل"
   },
   {
     "id": "ir-124665",
@@ -10883,7 +14065,18 @@ export const iranCities: GeoItem[] = [
       "مەشھەد"
     ],
     "latitude": 36.29807,
-    "longitude": 59.60567
+    "longitude": 59.60567,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-admin-10900016002526",
+    "name": "مشهد ثامن",
+    "aliases": [
+      "مشهد ثامن"
+    ],
+    "latitude": 36.298075,
+    "longitude": 59.605665,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-83873bb64e4e",
@@ -10891,8 +14084,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "مشهد ریزه"
     ],
-    "latitude": 34.79222222,
-    "longitude": 60.505
+    "latitude": 34.7488,
+    "longitude": 60.6447,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-admin-10700026002337",
+    "name": "مصیری",
+    "aliases": [
+      "مصیری"
+    ],
+    "latitude": 30.24493,
+    "longitude": 51.52158,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-be223a578fa3",
@@ -10902,7 +14106,8 @@ export const iranCities: GeoItem[] = [
       "مظفری (کوار)"
     ],
     "latitude": 29.19020989,
-    "longitude": 52.789316
+    "longitude": 52.789316,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-8a0a65042cdd",
@@ -10911,16 +14116,19 @@ export const iranCities: GeoItem[] = [
       "معزآباد جابری"
     ],
     "latitude": 29.48194444,
-    "longitude": 53.36805556
+    "longitude": 53.36805556,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-95761680344c",
-    "name": "معلم‌کلایه",
+    "name": "معلم کلایه",
     "aliases": [
+      "معلم کلایه",
       "معلم‌کلایه"
     ],
-    "latitude": 36.45166667,
-    "longitude": 50.47527778
+    "latitude": 36.4516,
+    "longitude": 50.4752,
+    "provinceName": "قزوین"
   },
   {
     "id": "wiki-c6916312d9dc",
@@ -10928,22 +14136,29 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "معمولان"
     ],
-    "latitude": 33.36666667,
-    "longitude": 47.95
+    "latitude": 33.3793,
+    "longitude": 47.9596,
+    "provinceName": "لرستان"
   },
   {
-    "id": "ir-125206",
-    "name": "مکو",
+    "id": "ir-admin-1240006002029",
+    "name": "مغان سر",
     "aliases": [
-      "مکو",
-      "Makū",
-      "Maku",
-      "ماهکوه",
-      "ماکویه",
-      "مکن"
+      "مغان سر"
     ],
-    "latitude": 27.8486,
-    "longitude": 52.423
+    "latitude": 39.64829,
+    "longitude": 47.91731,
+    "provinceName": "اردبیل"
+  },
+  {
+    "id": "ir-admin-1060007002334",
+    "name": "مقاومت",
+    "aliases": [
+      "مقاومت"
+    ],
+    "latitude": 31.3712,
+    "longitude": 48.6321,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-d59a4d4686bc",
@@ -10951,8 +14166,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "ملاثانی"
     ],
-    "latitude": 31.585,
-    "longitude": 48.885
+    "latitude": 31.5847,
+    "longitude": 48.88587,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-125188",
@@ -10964,7 +14180,8 @@ export const iranCities: GeoItem[] = [
       "Malard"
     ],
     "latitude": 35.6659,
-    "longitude": 50.9767
+    "longitude": 50.9767,
+    "provinceName": "تهران"
   },
   {
     "id": "ir-125185",
@@ -10975,21 +14192,18 @@ export const iranCities: GeoItem[] = [
       "Malayer"
     ],
     "latitude": 34.30158,
-    "longitude": 48.82166
+    "longitude": 48.82166,
+    "provinceName": "همدان"
   },
   {
-    "id": "ir-41466",
-    "name": "ملک‌آباد",
+    "id": "ir-admin-10900016002437",
+    "name": "ملک آباد",
     "aliases": [
-      "ملک‌آباد",
-      "ملک آباد",
-      "Malekābād",
-      "Malekabad",
-      "ملکاباد حمام لو",
-      "ملک‌آباد (مشهد)"
+      "ملک آباد"
     ],
-    "latitude": 35.8164,
-    "longitude": 50.8228
+    "latitude": 36.43188,
+    "longitude": 59.5818,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-125112",
@@ -11001,7 +14215,8 @@ export const iranCities: GeoItem[] = [
       "ملک کندی"
     ],
     "latitude": 37.14258,
-    "longitude": 46.10345
+    "longitude": 46.10345,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-125035",
@@ -11013,7 +14228,28 @@ export const iranCities: GeoItem[] = [
       "ماماگان"
     ],
     "latitude": 37.843,
-    "longitude": 45.9757
+    "longitude": 45.9757,
+    "provinceName": "آذربایجان شرقی"
+  },
+  {
+    "id": "ir-admin-1060008002967",
+    "name": "منتظران",
+    "aliases": [
+      "منتظران"
+    ],
+    "latitude": 32.4114608,
+    "longitude": 48.3504045,
+    "provinceName": "خوزستان"
+  },
+  {
+    "id": "ir-admin-1140004002731",
+    "name": "منج",
+    "aliases": [
+      "منج"
+    ],
+    "latitude": 31.53523,
+    "longitude": 50.6256,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "ir-124967",
@@ -11023,8 +14259,9 @@ export const iranCities: GeoItem[] = [
       "Manjīl",
       "Manjil"
     ],
-    "latitude": 36.74445,
-    "longitude": 49.40082
+    "latitude": 36.7448,
+    "longitude": 49.4,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-bd1b0ad0e0f0",
@@ -11034,7 +14271,8 @@ export const iranCities: GeoItem[] = [
       "منصوریه (بهبهان)"
     ],
     "latitude": 30.62944444,
-    "longitude": 50.3025
+    "longitude": 50.3025,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-584f51da48ba",
@@ -11043,8 +14281,22 @@ export const iranCities: GeoItem[] = [
       "منظریه",
       "منظریه (شهرضا)"
     ],
-    "latitude": 31.94583333,
-    "longitude": 51.87194444
+    "latitude": 31.9467,
+    "longitude": 51.8715,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-124914",
+    "name": "منوجان",
+    "aliases": [
+      "منوجان",
+      "جاریان",
+      "Manūjān",
+      "Manujan"
+    ],
+    "latitude": 27.39893,
+    "longitude": 57.49722,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-5d6934a82842",
@@ -11053,7 +14305,8 @@ export const iranCities: GeoItem[] = [
       "موچش"
     ],
     "latitude": 35.05583333,
-    "longitude": 47.15138889
+    "longitude": 47.15138889,
+    "provinceName": "کردستان"
   },
   {
     "id": "wiki-6a2546521a4f",
@@ -11061,8 +14314,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "مود"
     ],
-    "latitude": 32.70805556,
-    "longitude": 59.52333333
+    "latitude": 32.7064,
+    "longitude": 59.5244,
+    "provinceName": "خراسان جنوبی"
   },
   {
     "id": "wiki-7e035e45925a",
@@ -11070,8 +14324,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "مورموری"
     ],
-    "latitude": 32.72611111,
-    "longitude": 47.67833333
+    "latitude": 32.7262,
+    "longitude": 47.6784,
+    "provinceName": "ایلام"
   },
   {
     "id": "wiki-93b95213c3d5",
@@ -11080,7 +14335,20 @@ export const iranCities: GeoItem[] = [
       "موسیان"
     ],
     "latitude": 32.52222222,
-    "longitude": 47.37527778
+    "longitude": 47.37527778,
+    "provinceName": "ایلام"
+  },
+  {
+    "id": "wiki-76ad1b2dc248",
+    "name": "مومن آباد",
+    "aliases": [
+      "مومن آباد",
+      "مؤمن‌آباد",
+      "مؤمن‌آباد (ازنا)"
+    ],
+    "latitude": 33.59385,
+    "longitude": 49.52314,
+    "provinceName": "لرستان"
   },
   {
     "id": "ir-125446",
@@ -11093,7 +14361,18 @@ export const iranCities: GeoItem[] = [
       "مهاباد (اردستان)"
     ],
     "latitude": 36.7631,
-    "longitude": 45.7222
+    "longitude": 45.7222,
+    "provinceName": "آذربایجان غربی"
+  },
+  {
+    "id": "ir-admin-1100001002214",
+    "name": "مهاباد",
+    "aliases": [
+      "مهاباد"
+    ],
+    "latitude": 33.5252,
+    "longitude": 52.2133,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-6746932",
@@ -11101,29 +14380,57 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "مهاجران",
       "Mahājerān",
-      "Mahajeran",
-      "محدوده شهر جدید مهاجران"
+      "Mahajeran"
     ],
-    "latitude": 34.05042,
-    "longitude": 49.43498
+    "latitude": 34.0177,
+    "longitude": 49.4019,
+    "provinceName": "مرکزی"
   },
   {
     "id": "wiki-2233ed3e079a",
-    "name": "مهاجران (بهار)",
+    "name": "مهاجران",
     "aliases": [
+      "مهاجران",
       "مهاجران (بهار)"
     ],
     "latitude": 35.07388889,
-    "longitude": 48.61666667
+    "longitude": 48.61666667,
+    "provinceName": "همدان"
   },
   {
-    "id": "wiki-a59de612145a",
-    "name": "مهدی‌شهر",
+    "id": "ir-7100777",
+    "name": "مهدی شهر",
     "aliases": [
-      "مهدی‌شهر"
+      "مهدی شهر",
+      "سنگسر",
+      "Mahdishahr",
+      "مهدیشهر"
     ],
-    "latitude": 35.71083333,
-    "longitude": 53.35388889
+    "latitude": 35.71071,
+    "longitude": 53.35394,
+    "provinceName": "سمنان"
+  },
+  {
+    "id": "ir-admin-10700021002211",
+    "name": "مهر",
+    "aliases": [
+      "مهر",
+      "خوزی",
+      "خوزی (مهر)"
+    ],
+    "latitude": 27.5521,
+    "longitude": 52.88157,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-1160008002745",
+    "name": "مهر",
+    "aliases": [
+      "مهر"
+    ],
+    "latitude": 33.437,
+    "longitude": 46.461,
+    "provinceName": "ایلام"
   },
   {
     "id": "ir-124291",
@@ -11135,7 +14442,8 @@ export const iranCities: GeoItem[] = [
       "منسور آباد"
     ],
     "latitude": 33.1222,
-    "longitude": 46.1646
+    "longitude": 46.1646,
+    "provinceName": "ایلام"
   },
   {
     "id": "ir-124298",
@@ -11146,8 +14454,9 @@ export const iranCities: GeoItem[] = [
       "Mehraban",
       "مهروان"
     ],
-    "latitude": 38.0813,
-    "longitude": 47.13169
+    "latitude": 38.0807,
+    "longitude": 47.1318,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-8081539cd222",
@@ -11155,8 +14464,22 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "مهردشت"
     ],
-    "latitude": 31.02277778,
-    "longitude": 53.35638889
+    "latitude": 31.0245,
+    "longitude": 53.3488,
+    "provinceName": "یزد"
+  },
+  {
+    "id": "ir-1159306",
+    "name": "مهرستان",
+    "aliases": [
+      "مهرستان",
+      "زابلی",
+      "Mehrestān",
+      "Mehrestan"
+    ],
+    "latitude": 27.131,
+    "longitude": 61.67445,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "ir-124274",
@@ -11167,7 +14490,18 @@ export const iranCities: GeoItem[] = [
       "Mahriz"
     ],
     "latitude": 31.58428,
-    "longitude": 54.4428
+    "longitude": 54.4428,
+    "provinceName": "یزد"
+  },
+  {
+    "id": "ir-admin-1300002002664",
+    "name": "مهستان",
+    "aliases": [
+      "مهستان"
+    ],
+    "latitude": 35.962046,
+    "longitude": 50.679854,
+    "provinceName": "البرز"
   },
   {
     "id": "wiki-4870b1e7eb75",
@@ -11176,8 +14510,9 @@ export const iranCities: GeoItem[] = [
       "میامی",
       "میامی (سمنان)"
     ],
-    "latitude": 36.41083333,
-    "longitude": 55.65027778
+    "latitude": 36.41092,
+    "longitude": 55.65018,
+    "provinceName": "سمنان"
   },
   {
     "id": "ir-124085",
@@ -11189,7 +14524,8 @@ export const iranCities: GeoItem[] = [
       "Miandoab"
     ],
     "latitude": 36.96667,
-    "longitude": 46.10961
+    "longitude": 46.10961,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-85d8afe638cc",
@@ -11197,8 +14533,29 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "میانرود"
     ],
-    "latitude": 32.47,
-    "longitude": 49.11138889
+    "latitude": 32.1539,
+    "longitude": 48.4393,
+    "provinceName": "خوزستان"
+  },
+  {
+    "id": "ir-admin-1070008002829",
+    "name": "میانشهر",
+    "aliases": [
+      "میانشهر"
+    ],
+    "latitude": 28.7175,
+    "longitude": 53.85763,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-10600016002969",
+    "name": "میانکوه",
+    "aliases": [
+      "میانکوه"
+    ],
+    "latitude": 30.78964,
+    "longitude": 49.73428,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-124082",
@@ -11210,7 +14567,8 @@ export const iranCities: GeoItem[] = [
       "میانه (آذربایجان شرقی)"
     ],
     "latitude": 37.421,
-    "longitude": 47.715
+    "longitude": 47.715,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-124193",
@@ -11220,16 +14578,18 @@ export const iranCities: GeoItem[] = [
       "Meybod"
     ],
     "latitude": 32.25014,
-    "longitude": 54.01658
+    "longitude": 54.01658,
+    "provinceName": "یزد"
   },
   {
-    "id": "wiki-27a77a073704",
-    "name": "میداوود",
+    "id": "ir-admin-10600015002720",
+    "name": "میداود",
     "aliases": [
-      "میداوود"
+      "میداود"
     ],
-    "latitude": 31.39148806,
-    "longitude": 49.83969111
+    "latitude": 31.37467,
+    "longitude": 49.8182,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-9463baf57e04",
@@ -11237,18 +14597,30 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "میرآباد"
     ],
-    "latitude": 36.40527778,
-    "longitude": 45.37194444
+    "latitude": 36.4053,
+    "longitude": 45.372,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-a4d4d9861303",
-    "name": "میرآباد (ثلاث باباجانی)",
+    "name": "میرآباد",
     "aliases": [
-      "میرآباد (ثلاث باباجانی)",
-      "میرآباد"
+      "میرآباد",
+      "میرآباد (ثلاث باباجانی)"
     ],
     "latitude": 34.73333333,
-    "longitude": 46.25
+    "longitude": 46.25,
+    "provinceName": "کرمانشاه"
+  },
+  {
+    "id": "ir-admin-11100017001452",
+    "name": "میرجاوه",
+    "aliases": [
+      "میرجاوه"
+    ],
+    "latitude": 29.0148,
+    "longitude": 61.44959,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-50beadb2a564",
@@ -11256,8 +14628,39 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "میلاجرد"
     ],
-    "latitude": 34.62194444,
-    "longitude": 49.2075
+    "latitude": 34.62206,
+    "longitude": 49.20798,
+    "provinceName": "مرکزی"
+  },
+  {
+    "id": "ir-admin-1070009001314",
+    "name": "میمند",
+    "aliases": [
+      "میمند"
+    ],
+    "latitude": 28.8666,
+    "longitude": 52.7485,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-11000016001408",
+    "name": "میمه",
+    "aliases": [
+      "میمه"
+    ],
+    "latitude": 33.4467,
+    "longitude": 51.1734,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-1160003001504",
+    "name": "میمه",
+    "aliases": [
+      "میمه"
+    ],
+    "latitude": 33.2278,
+    "longitude": 46.9196,
+    "provinceName": "ایلام"
   },
   {
     "id": "ir-123941",
@@ -11268,7 +14671,18 @@ export const iranCities: GeoItem[] = [
       "Minab"
     ],
     "latitude": 27.13104,
-    "longitude": 57.08716
+    "longitude": 57.08716,
+    "provinceName": "هرمزگان"
+  },
+  {
+    "id": "ir-admin-1100008002997",
+    "name": "مینادشت",
+    "aliases": [
+      "مینادشت"
+    ],
+    "latitude": 32.49277,
+    "longitude": 51.43866,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-123927",
@@ -11279,7 +14693,8 @@ export const iranCities: GeoItem[] = [
       "Minudasht"
     ],
     "latitude": 37.23015,
-    "longitude": 55.37211
+    "longitude": 55.37211,
+    "provinceName": "گلستان"
   },
   {
     "id": "wiki-dfe651d67e90",
@@ -11287,19 +14702,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "مینوشهر"
     ],
-    "latitude": 30.35,
-    "longitude": 48.21666667
-  },
-  {
-    "id": "ir-122869",
-    "name": "نائین",
-    "aliases": [
-      "نائین",
-      "Nā’īn",
-      "Na'in"
-    ],
-    "latitude": 32.86004,
-    "longitude": 53.08693
+    "latitude": 30.3534,
+    "longitude": 48.217,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-0525eee51e56",
@@ -11308,7 +14713,28 @@ export const iranCities: GeoItem[] = [
       "نازک علیا"
     ],
     "latitude": 39.01166667,
-    "longitude": 45.05888889
+    "longitude": 45.05888889,
+    "provinceName": "آذربایجان غربی"
+  },
+  {
+    "id": "ir-admin-1140007002154",
+    "name": "ناغان",
+    "aliases": [
+      "ناغان"
+    ],
+    "latitude": 31.93561,
+    "longitude": 50.73176,
+    "provinceName": "چهارمحال و بختیاری"
+  },
+  {
+    "id": "ir-admin-1140002002471",
+    "name": "نافچ",
+    "aliases": [
+      "نافچ"
+    ],
+    "latitude": 32.42447,
+    "longitude": 50.78661,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "wiki-ec1ad21ae0cd",
@@ -11316,29 +14742,43 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "نالوس"
     ],
-    "latitude": 36.98333333,
-    "longitude": 45.14388889
+    "latitude": 36.9835,
+    "longitude": 45.1432,
+    "provinceName": "آذربایجان غربی"
+  },
+  {
+    "id": "ir-admin-11000013001435",
+    "name": "نایین",
+    "aliases": [
+      "نایین"
+    ],
+    "latitude": 32.86004,
+    "longitude": 53.08693,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-418606",
-    "name": "نجف‌آباد",
+    "name": "نجف آباد",
     "aliases": [
-      "نجف‌آباد",
       "نجف آباد",
+      "نجف‌آباد",
       "Najafābād",
       "Najafabad"
     ],
     "latitude": 32.63464,
-    "longitude": 51.36525
+    "longitude": 51.36525,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-e82f34abdf92",
-    "name": "نجف‌شهر",
+    "name": "نجف شهر",
     "aliases": [
+      "نجف شهر",
       "نجف‌شهر"
     ],
-    "latitude": 29.38333333,
-    "longitude": 55.71722222
+    "latitude": 29.3897,
+    "longitude": 55.7203,
+    "provinceName": "کرمان"
   },
   {
     "id": "ir-122787",
@@ -11349,7 +14789,8 @@ export const iranCities: GeoItem[] = [
       "Nakhl-e Taqi"
     ],
     "latitude": 27.49752,
-    "longitude": 52.58653
+    "longitude": 52.58653,
+    "provinceName": "بوشهر"
   },
   {
     "id": "wiki-60edd7961ee5",
@@ -11358,7 +14799,8 @@ export const iranCities: GeoItem[] = [
       "ندوشن"
     ],
     "latitude": 32.03,
-    "longitude": 53.55
+    "longitude": 53.55,
+    "provinceName": "یزد"
   },
   {
     "id": "wiki-ef28ced8cbfb",
@@ -11367,7 +14809,8 @@ export const iranCities: GeoItem[] = [
       "نراق"
     ],
     "latitude": 34.01111111,
-    "longitude": 50.83777778
+    "longitude": 50.83777778,
+    "provinceName": "مرکزی"
   },
   {
     "id": "wiki-20650322a0a8",
@@ -11375,8 +14818,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "نرجه"
     ],
-    "latitude": 35.99083333,
-    "longitude": 49.62472222
+    "latitude": 36.00082,
+    "longitude": 49.61534,
+    "provinceName": "قزوین"
+  },
+  {
+    "id": "ir-admin-10800021002338",
+    "name": "نرماشیر",
+    "aliases": [
+      "نرماشیر"
+    ],
+    "latitude": 28.95216,
+    "longitude": 58.69773,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-43f4129c9349",
@@ -11385,7 +14839,8 @@ export const iranCities: GeoItem[] = [
       "نسر"
     ],
     "latitude": 35.52388889,
-    "longitude": 59.44222222
+    "longitude": 59.44222222,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-6672634",
@@ -11397,7 +14852,8 @@ export const iranCities: GeoItem[] = [
       "اکبر آباد"
     ],
     "latitude": 35.56504,
-    "longitude": 51.16332
+    "longitude": 51.16332,
+    "provinceName": "تهران"
   },
   {
     "id": "wiki-1bb9f31d3738",
@@ -11406,7 +14862,8 @@ export const iranCities: GeoItem[] = [
       "نشتارود"
     ],
     "latitude": 36.75416667,
-    "longitude": 51.01027778
+    "longitude": 51.01027778,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-5fbee5ee02e4",
@@ -11414,8 +14871,20 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "نشتیفان"
     ],
-    "latitude": 34.43444444,
-    "longitude": 60.1775
+    "latitude": 34.43453,
+    "longitude": 60.17753,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "wiki-c0da9bc581bc",
+    "name": "نصرآباد",
+    "aliases": [
+      "نصرآباد",
+      "نصرآباد (تربت جام)"
+    ],
+    "latitude": 35.41798,
+    "longitude": 60.31619,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-96366a6357ef",
@@ -11424,42 +14893,19 @@ export const iranCities: GeoItem[] = [
       "نصرآباد",
       "نصرآباد (جرقویه)"
     ],
-    "latitude": 32.27944444,
-    "longitude": 52.06305556
+    "latitude": 32.2795,
+    "longitude": 52.0632,
+    "provinceName": "اصفهان"
   },
   {
-    "id": "wiki-c0da9bc581bc",
-    "name": "نصرآباد (تربت جام)",
+    "id": "ir-admin-1110005002454",
+    "name": "نصرت آباد",
     "aliases": [
-      "نصرآباد (تربت جام)",
-      "نصرآباد"
+      "نصرت آباد"
     ],
-    "latitude": 35.41805556,
-    "longitude": 60.31611111
-  },
-  {
-    "id": "ir-10065",
-    "name": "نصرت‌آباد",
-    "aliases": [
-      "نصرت‌آباد",
-      "نصرت آباد",
-      "Noşratābād",
-      "Nosratabad",
-      "نصرت‌آباد (زاهدان)"
-    ],
-    "latitude": 36.16271,
-    "longitude": 50.10051
-  },
-  {
-    "id": "ir-122544",
-    "name": "نصیر آباد",
-    "aliases": [
-      "نصیر آباد",
-      "Nasirshahr",
-      "نصیر آباد قاجار"
-    ],
-    "latitude": 35.49209,
-    "longitude": 51.13836
+    "latitude": 29.85895,
+    "longitude": 59.98055,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-8e411c3c7c83",
@@ -11468,7 +14914,8 @@ export const iranCities: GeoItem[] = [
       "نصیرشهر"
     ],
     "latitude": 35.49194444,
-    "longitude": 51.13972222
+    "longitude": 51.13972222,
+    "provinceName": "تهران"
   },
   {
     "id": "ir-122491",
@@ -11479,37 +14926,33 @@ export const iranCities: GeoItem[] = [
       "Natanz"
     ],
     "latitude": 33.51118,
-    "longitude": 51.91808
+    "longitude": 51.91808,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-2a952135b6ec",
-    "name": "نظام‌شهر",
+    "name": "نظام شهر",
     "aliases": [
+      "نظام شهر",
       "نظام‌شهر"
     ],
     "latitude": 28.91611111,
-    "longitude": 58.55027778
+    "longitude": 58.55027778,
+    "provinceName": "کرمان"
   },
   {
     "id": "ir-122438",
-    "name": "نظر آباد",
+    "name": "نظرآباد",
     "aliases": [
+      "نظرآباد",
       "نظر آباد",
       "Naz̧arābād",
       "Nazarabad",
       "نظراباد بزرگ"
     ],
     "latitude": 35.95411,
-    "longitude": 50.60607
-  },
-  {
-    "id": "wiki-74547e1551ae",
-    "name": "نظرآباد",
-    "aliases": [
-      "نظرآباد"
-    ],
-    "latitude": 35.95222222,
-    "longitude": 50.6075
+    "longitude": 50.60607,
+    "provinceName": "البرز"
   },
   {
     "id": "wiki-fe999c2f5e5b",
@@ -11517,8 +14960,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "نظرکهریزی"
     ],
-    "latitude": 37.34666667,
-    "longitude": 46.76277778
+    "latitude": 37.347,
+    "longitude": 46.763,
+    "provinceName": "آذربایجان شرقی"
+  },
+  {
+    "id": "ir-admin-10300014001083",
+    "name": "نظرلو",
+    "aliases": [
+      "نظرلو"
+    ],
+    "latitude": 38.1796,
+    "longitude": 45.9125,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-122375",
@@ -11530,7 +14984,8 @@ export const iranCities: GeoItem[] = [
       "نقاب (جوین)"
     ],
     "latitude": 36.70792,
-    "longitude": 57.42146
+    "longitude": 57.42146,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-122698",
@@ -11540,7 +14995,18 @@ export const iranCities: GeoItem[] = [
       "Naqadeh"
     ],
     "latitude": 36.9553,
-    "longitude": 45.388
+    "longitude": 45.388,
+    "provinceName": "آذربایجان غربی"
+  },
+  {
+    "id": "ir-admin-1140001002706",
+    "name": "نقنه",
+    "aliases": [
+      "نقنه"
+    ],
+    "latitude": 31.93242,
+    "longitude": 51.32933,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "ir-122397",
@@ -11554,7 +15020,8 @@ export const iranCities: GeoItem[] = [
       "نیکا"
     ],
     "latitude": 36.65079,
-    "longitude": 53.29905
+    "longitude": 53.29905,
+    "provinceName": "مازندران"
   },
   {
     "id": "wiki-79346dc64c13",
@@ -11564,7 +15031,38 @@ export const iranCities: GeoItem[] = [
       "نگار (بردسیر)"
     ],
     "latitude": 29.85722222,
-    "longitude": 56.80027778
+    "longitude": 56.80027778,
+    "provinceName": "کرمان"
+  },
+  {
+    "id": "ir-admin-11100022001444",
+    "name": "نگور",
+    "aliases": [
+      "نگور"
+    ],
+    "latitude": 25.38882,
+    "longitude": 61.13834,
+    "provinceName": "سیستان و بلوچستان"
+  },
+  {
+    "id": "ir-admin-12700010002640",
+    "name": "نگین شهر",
+    "aliases": [
+      "نگین شهر"
+    ],
+    "latitude": 37.13886,
+    "longitude": 55.16441,
+    "provinceName": "گلستان"
+  },
+  {
+    "id": "ir-admin-1040004002922",
+    "name": "نلاس",
+    "aliases": [
+      "نلاس"
+    ],
+    "latitude": 36.2644,
+    "longitude": 45.4934,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "ir-122721",
@@ -11575,7 +15073,8 @@ export const iranCities: GeoItem[] = [
       "Namin"
     ],
     "latitude": 38.4269,
-    "longitude": 48.4839
+    "longitude": 48.4839,
+    "provinceName": "اردبیل"
   },
   {
     "id": "wiki-a03df8a4d150",
@@ -11583,8 +15082,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "نوبران"
     ],
-    "latitude": 35.12916667,
-    "longitude": 49.70888889
+    "latitude": 35.12929,
+    "longitude": 49.70908,
+    "provinceName": "مرکزی"
   },
   {
     "id": "wiki-3b35c07a3097",
@@ -11592,8 +15092,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "نوبندگان"
     ],
-    "latitude": 28.85416667,
-    "longitude": 53.82583333
+    "latitude": 28.8546,
+    "longitude": 53.8259,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-77e600b57ec4",
@@ -11601,8 +15102,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "نوجین"
     ],
-    "latitude": 29.12333056,
-    "longitude": 52.01111111
+    "latitude": 29.1225,
+    "longitude": 52.0151,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-9c7e3f3dda07",
@@ -11610,8 +15112,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "نوخندان"
     ],
-    "latitude": 37.52027778,
-    "longitude": 58.98916667
+    "latitude": 37.5201,
+    "longitude": 58.9893,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-fe42fc8b8e02",
@@ -11620,7 +15123,8 @@ export const iranCities: GeoItem[] = [
       "نودان"
     ],
     "latitude": 29.80138889,
-    "longitude": 51.69416667
+    "longitude": 51.69416667,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-06b7e8acd41a",
@@ -11628,8 +15132,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "نودژ"
     ],
-    "latitude": 27.54638889,
-    "longitude": 57.445
+    "latitude": 27.5267,
+    "longitude": 57.4575,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-d8e3882954e9",
@@ -11637,8 +15142,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "نودشه"
     ],
-    "latitude": 35.182686,
-    "longitude": 46.253222
+    "latitude": 35.1808,
+    "longitude": 46.2544,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "wiki-fc75c2da9637",
@@ -11646,8 +15152,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "نوده انقلاب"
     ],
-    "latitude": 36.465,
-    "longitude": 57.64028056
+    "latitude": 36.46516,
+    "longitude": 57.64032,
+    "provinceName": "خراسان رضوی"
+  },
+  {
+    "id": "ir-admin-12700010002581",
+    "name": "نوده خاندوز",
+    "aliases": [
+      "نوده خاندوز"
+    ],
+    "latitude": 37.0764,
+    "longitude": 55.2625,
+    "provinceName": "گلستان"
   },
   {
     "id": "ir-113797",
@@ -11660,28 +15177,31 @@ export const iranCities: GeoItem[] = [
       "سولهده"
     ],
     "latitude": 36.57168,
-    "longitude": 52.0153
+    "longitude": 52.0153,
+    "provinceName": "مازندران"
+  },
+  {
+    "id": "ir-admin-10700013001325",
+    "name": "نورآباد",
+    "aliases": [
+      "نورآباد"
+    ],
+    "latitude": 30.11405,
+    "longitude": 51.52174,
+    "provinceName": "فارس"
   },
   {
     "id": "ir-24851",
-    "name": "نور آباد",
+    "name": "نورآباد",
     "aliases": [
+      "نورآباد",
       "نور آباد",
       "Nūrābād",
       "Nurabad"
     ],
     "latitude": 34.0734,
-    "longitude": 47.9725
-  },
-  {
-    "id": "wiki-e11cc02783d0",
-    "name": "نورآباد",
-    "aliases": [
-      "نورآباد",
-      "نورآباد (دلفان)"
-    ],
-    "latitude": 34.07222222,
-    "longitude": 47.97361111
+    "longitude": 47.9725,
+    "provinceName": "لرستان"
   },
   {
     "id": "wiki-55f3affce6f6",
@@ -11690,7 +15210,8 @@ export const iranCities: GeoItem[] = [
       "نوربهار"
     ],
     "latitude": 35.93777778,
-    "longitude": 48.79472222
+    "longitude": 48.79472222,
+    "provinceName": "زنجان"
   },
   {
     "id": "wiki-7c7423872e7e",
@@ -11698,21 +15219,23 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "نوسود"
     ],
-    "latitude": 35.16972222,
-    "longitude": 46.20305556
+    "latitude": 35.1613,
+    "longitude": 46.2042,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "ir-121890",
-    "name": "نوش‌آباد",
+    "name": "نوش آباد",
     "aliases": [
+      "نوش آباد",
       "نوش‌آباد",
       "گل آرا",
       "Nūshābād",
-      "Nushabad",
-      "نوش آباد"
+      "Nushabad"
     ],
     "latitude": 34.0797,
-    "longitude": 51.4368
+    "longitude": 51.4368,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-121959",
@@ -11722,16 +15245,38 @@ export const iranCities: GeoItem[] = [
       "Nowshahr"
     ],
     "latitude": 36.64852,
-    "longitude": 51.49621
+    "longitude": 51.49621,
+    "provinceName": "مازندران"
   },
   {
-    "id": "wiki-4450d4f5a5bd",
-    "name": "نوشین‌شهر",
+    "id": "ir-admin-1040001002151",
+    "name": "نوشین",
     "aliases": [
-      "نوشین‌شهر"
+      "نوشین"
     ],
-    "latitude": 37.73472222,
-    "longitude": 45.05111111
+    "latitude": 37.7345,
+    "longitude": 45.0511,
+    "provinceName": "آذربایجان غربی"
+  },
+  {
+    "id": "ir-admin-11100021002452",
+    "name": "نوک آباد",
+    "aliases": [
+      "نوک آباد"
+    ],
+    "latitude": 28.5397,
+    "longitude": 60.7595,
+    "provinceName": "سیستان و بلوچستان"
+  },
+  {
+    "id": "ir-admin-1270001002194",
+    "name": "نوکنده",
+    "aliases": [
+      "نوکنده"
+    ],
+    "latitude": 36.74,
+    "longitude": 53.9095,
+    "provinceName": "گلستان"
   },
   {
     "id": "ir-122915",
@@ -11742,7 +15287,8 @@ export const iranCities: GeoItem[] = [
       "Nahavand"
     ],
     "latitude": 34.19088,
-    "longitude": 48.37446
+    "longitude": 48.37446,
+    "provinceName": "همدان"
   },
   {
     "id": "ir-1160120",
@@ -11753,7 +15299,21 @@ export const iranCities: GeoItem[] = [
       "Nehbandan"
     ],
     "latitude": 31.54185,
-    "longitude": 60.03648
+    "longitude": 60.03648,
+    "provinceName": "خراسان جنوبی"
+  },
+  {
+    "id": "ir-122289",
+    "name": "نی ریز",
+    "aliases": [
+      "نی ریز",
+      "نیریز",
+      "Neyrīz",
+      "Neyriz"
+    ],
+    "latitude": 29.1988,
+    "longitude": 54.3278,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-649e9ce518c5",
@@ -11762,7 +15322,18 @@ export const iranCities: GeoItem[] = [
       "نیاسر"
     ],
     "latitude": 33.97277778,
-    "longitude": 51.14888889
+    "longitude": 51.14888889,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-1210003001556",
+    "name": "نیر",
+    "aliases": [
+      "نیر"
+    ],
+    "latitude": 31.48628,
+    "longitude": 54.13135,
+    "provinceName": "یزد"
   },
   {
     "id": "wiki-48442ea78158",
@@ -11770,19 +15341,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "نیر"
     ],
-    "latitude": 38.03472222,
-    "longitude": 47.99861111
-  },
-  {
-    "id": "ir-122289",
-    "name": "نیریز",
-    "aliases": [
-      "نیریز",
-      "Neyrīz",
-      "Neyriz"
-    ],
-    "latitude": 29.1988,
-    "longitude": 54.3278
+    "latitude": 38.0346,
+    "longitude": 47.9986,
+    "provinceName": "اردبیل"
   },
   {
     "id": "ir-122285",
@@ -11795,36 +15356,53 @@ export const iranCities: GeoItem[] = [
       "نیشاپور"
     ],
     "latitude": 36.21329,
-    "longitude": 58.79575
+    "longitude": 58.79575,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-865f873bd3d8",
-    "name": "نیک‌آباد",
+    "name": "نیک آباد",
     "aliases": [
+      "نیک آباد",
       "نیک‌آباد"
     ],
-    "latitude": 32.30305556,
-    "longitude": 52.20583333
+    "latitude": 32.303,
+    "longitude": 52.2057,
+    "provinceName": "اصفهان"
+  },
+  {
+    "id": "ir-admin-1190004002764",
+    "name": "نیک پی",
+    "aliases": [
+      "نیک پی"
+    ],
+    "latitude": 36.8505,
+    "longitude": 48.17826,
+    "provinceName": "زنجان"
   },
   {
     "id": "ir-1160110",
-    "name": "نیکشهر",
+    "name": "نیک شهر",
     "aliases": [
+      "نیک شهر",
       "نیکشهر",
       "Nīkshahr",
       "Nikshahr"
     ],
     "latitude": 26.2258,
-    "longitude": 60.2143
+    "longitude": 60.2143,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-04db01c487cb",
-    "name": "نیل‌شهر",
+    "name": "نیل شهر",
     "aliases": [
+      "نیل شهر",
       "نیل‌شهر"
     ],
     "latitude": 35.12638889,
-    "longitude": 60.7725
+    "longitude": 60.7725,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "wiki-4486d5b28db9",
@@ -11833,16 +15411,28 @@ export const iranCities: GeoItem[] = [
       "نیمبلوک"
     ],
     "latitude": 33.91083333,
-    "longitude": 58.93111111
+    "longitude": 58.93111111,
+    "provinceName": "خراسان جنوبی"
   },
   {
-    "id": "wiki-b93ac4f298bf",
-    "name": "والاشهر",
+    "id": "ir-admin-1000009001116",
+    "name": "نیمور",
     "aliases": [
-      "والاشهر"
+      "نیمور"
     ],
-    "latitude": 29.28666667,
-    "longitude": 51.94222222
+    "latitude": 33.8393,
+    "longitude": 50.4638,
+    "provinceName": "مرکزی"
+  },
+  {
+    "id": "ir-admin-1010007001139",
+    "name": "واجارگاه",
+    "aliases": [
+      "واجارگاه"
+    ],
+    "latitude": 37.03876,
+    "longitude": 50.40571,
+    "provinceName": "گیلان"
   },
   {
     "id": "wiki-2336f8e081dc",
@@ -11850,8 +15440,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "وایقان"
     ],
-    "latitude": 38.12944444,
-    "longitude": 45.71305556
+    "latitude": 38.1305,
+    "longitude": 45.7129,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-6651758",
@@ -11861,8 +15452,9 @@ export const iranCities: GeoItem[] = [
       "Vaḩdattīyeh",
       "Vahdattiyeh"
     ],
-    "latitude": 29.48431,
-    "longitude": 51.2306
+    "latitude": 29.4831,
+    "longitude": 51.237,
+    "provinceName": "بوشهر"
   },
   {
     "id": "ir-8420881",
@@ -11873,7 +15465,8 @@ export const iranCities: GeoItem[] = [
       "Vahidiyeh"
     ],
     "latitude": 35.60709,
-    "longitude": 51.03457
+    "longitude": 51.03457,
+    "provinceName": "تهران"
   },
   {
     "id": "ir-112214",
@@ -11884,7 +15477,28 @@ export const iranCities: GeoItem[] = [
       "Varamin"
     ],
     "latitude": 35.3242,
-    "longitude": 51.6457
+    "longitude": 51.6457,
+    "provinceName": "تهران"
+  },
+  {
+    "id": "ir-admin-10700021002559",
+    "name": "وراوی",
+    "aliases": [
+      "وراوی"
+    ],
+    "latitude": 27.4669,
+    "longitude": 53.0501,
+    "provinceName": "فارس"
+  },
+  {
+    "id": "ir-admin-1140009002732",
+    "name": "وردنجان",
+    "aliases": [
+      "وردنجان"
+    ],
+    "latitude": 32.47395,
+    "longitude": 50.76828,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "wiki-681b353c4ca4",
@@ -11892,8 +15506,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "ورزقان"
     ],
-    "latitude": 38.50972222,
-    "longitude": 46.65444444
+    "latitude": 38.67549,
+    "longitude": 46.11205,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-112124",
@@ -11904,7 +15519,8 @@ export const iranCities: GeoItem[] = [
       "ورزنه (اصفهان)"
     ],
     "latitude": 33.54218,
-    "longitude": 50.50106
+    "longitude": 50.50106,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-418444",
@@ -11914,8 +15530,9 @@ export const iranCities: GeoItem[] = [
       "Varnāmkhvāst",
       "Varnamkhvast"
     ],
-    "latitude": 32.3564,
-    "longitude": 51.3787
+    "latitude": 32.3589,
+    "longitude": 51.3788,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-c0502cf5ac7e",
@@ -11923,8 +15540,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "وزوان"
     ],
-    "latitude": 33.41666667,
-    "longitude": 51.17972222
+    "latitude": 33.4184,
+    "longitude": 51.1847,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-e73fe32dd82e",
@@ -11934,7 +15552,8 @@ export const iranCities: GeoItem[] = [
       "ونایی (بروجرد)"
     ],
     "latitude": 33.91527778,
-    "longitude": 48.59138889
+    "longitude": 48.59138889,
+    "provinceName": "لرستان"
   },
   {
     "id": "wiki-5bf978b6afbd",
@@ -11943,8 +15562,9 @@ export const iranCities: GeoItem[] = [
       "ونک",
       "ونک (سمیرم)"
     ],
-    "latitude": 31.5275,
-    "longitude": 51.32556111
+    "latitude": 31.5274,
+    "longitude": 51.32551,
+    "provinceName": "اصفهان"
   },
   {
     "id": "ir-112029",
@@ -11954,7 +15574,8 @@ export const iranCities: GeoItem[] = [
       "Veys"
     ],
     "latitude": 31.48595,
-    "longitude": 48.87515
+    "longitude": 48.87515,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-c5e3c0cd2216",
@@ -11962,8 +15583,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "ویست"
     ],
-    "latitude": 33.34861111,
-    "longitude": 50.11305556
+    "latitude": 33.34779,
+    "longitude": 50.11478,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-8174e7aa1759",
@@ -11972,7 +15594,18 @@ export const iranCities: GeoItem[] = [
       "ویسیان"
     ],
     "latitude": 33.5,
-    "longitude": 48.03333333
+    "longitude": 48.03333333,
+    "provinceName": "لرستان"
+  },
+  {
+    "id": "ir-admin-10200016002394",
+    "name": "هادی شهر",
+    "aliases": [
+      "هادی شهر"
+    ],
+    "latitude": 36.6416925,
+    "longitude": 52.6272276,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-35017",
@@ -11984,7 +15617,18 @@ export const iranCities: GeoItem[] = [
       "هادی شهر"
     ],
     "latitude": 38.8479,
-    "longitude": 45.6623
+    "longitude": 45.6623,
+    "provinceName": "آذربایجان شرقی"
+  },
+  {
+    "id": "ir-admin-1140002002838",
+    "name": "هارونی",
+    "aliases": [
+      "هارونی"
+    ],
+    "latitude": 32.39166,
+    "longitude": 50.56996,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "wiki-d52dee5aad3c",
@@ -11993,7 +15637,18 @@ export const iranCities: GeoItem[] = [
       "هجدک"
     ],
     "latitude": 30.77666667,
-    "longitude": 56.99305556
+    "longitude": 56.99305556,
+    "provinceName": "کرمان"
+  },
+  {
+    "id": "ir-admin-10200020002748",
+    "name": "هچیرود",
+    "aliases": [
+      "هچیرود"
+    ],
+    "latitude": 36.68483,
+    "longitude": 51.34433,
+    "provinceName": "مازندران"
   },
   {
     "id": "ir-113556",
@@ -12005,7 +15660,8 @@ export const iranCities: GeoItem[] = [
       "شهر هرات"
     ],
     "latitude": 30.05407,
-    "longitude": 54.37294
+    "longitude": 54.37294,
+    "provinceName": "یزد"
   },
   {
     "id": "ir-131962",
@@ -12016,7 +15672,8 @@ export const iranCities: GeoItem[] = [
       "Harsin"
     ],
     "latitude": 34.2721,
-    "longitude": 47.5861
+    "longitude": 47.5861,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "wiki-46b2e79a8206",
@@ -12025,8 +15682,9 @@ export const iranCities: GeoItem[] = [
       "هرمز",
       "هرمز (شهر)"
     ],
-    "latitude": 27.095,
-    "longitude": 56.45277778
+    "latitude": 27.0955,
+    "longitude": 56.4527,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "wiki-af88e0ea232c",
@@ -12034,8 +15692,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "هرند"
     ],
-    "latitude": 32.56222222,
-    "longitude": 52.43722222
+    "latitude": 32.56531,
+    "longitude": 52.43654,
+    "provinceName": "اصفهان"
   },
   {
     "id": "wiki-782623b88cc7",
@@ -12044,8 +15703,9 @@ export const iranCities: GeoItem[] = [
       "هریس",
       "هریس (آذربایجان شرقی)"
     ],
-    "latitude": 38.24805556,
-    "longitude": 47.11666667
+    "latitude": 38.24816,
+    "longitude": 47.11678,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "wiki-fb7a0a5545f3",
@@ -12054,27 +15714,42 @@ export const iranCities: GeoItem[] = [
       "هزارکانیان"
     ],
     "latitude": 35.76666667,
-    "longitude": 46.83333333
+    "longitude": 46.83333333,
+    "provinceName": "کردستان"
   },
   {
     "id": "wiki-aafbec0b166c",
-    "name": "هشت‌بندی",
+    "name": "هشتبندی",
     "aliases": [
+      "هشتبندی",
       "هشت‌بندی"
     ],
     "latitude": 27.15555556,
-    "longitude": 57.43055556
+    "longitude": 57.43055556,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "ir-113343",
-    "name": "هشتپر",
+    "name": "هشتپر (تالش)",
     "aliases": [
+      "هشتپر (تالش)",
       "هشتپر",
       "Hashtpar",
       "هشتپر توالش"
     ],
     "latitude": 37.79658,
-    "longitude": 48.90521
+    "longitude": 48.90521,
+    "provinceName": "گیلان"
+  },
+  {
+    "id": "ir-admin-1240003002164",
+    "name": "هشتجین",
+    "aliases": [
+      "هشتجین"
+    ],
+    "latitude": 37.3469,
+    "longitude": 48.4854,
+    "provinceName": "اردبیل"
   },
   {
     "id": "ir-142554",
@@ -12085,7 +15760,8 @@ export const iranCities: GeoItem[] = [
       "Hashtrud"
     ],
     "latitude": 37.4779,
-    "longitude": 47.0508
+    "longitude": 47.0508,
+    "provinceName": "آذربایجان شرقی"
   },
   {
     "id": "ir-131691",
@@ -12096,16 +15772,8 @@ export const iranCities: GeoItem[] = [
       "هشتجرد"
     ],
     "latitude": 35.962,
-    "longitude": 50.6799
-  },
-  {
-    "id": "wiki-c647f594deb3",
-    "name": "هشجین",
-    "aliases": [
-      "هشجین"
-    ],
-    "latitude": 37.35972222,
-    "longitude": 48.31611111
+    "longitude": 50.6799,
+    "provinceName": "البرز"
   },
   {
     "id": "wiki-81ddcaa381fd",
@@ -12114,19 +15782,21 @@ export const iranCities: GeoItem[] = [
       "هفت چشمه",
       "هفت‌چشمه (دلفان)"
     ],
-    "latitude": 34.20805556,
-    "longitude": 47.76333333
+    "latitude": 34.1113,
+    "longitude": 47.97725,
+    "provinceName": "لرستان"
   },
   {
     "id": "ir-132428",
-    "name": "هفتکل",
+    "name": "هفتگل",
     "aliases": [
+      "هفتگل",
       "هفتکل",
-      "Haftkel",
-      "هفتگل"
+      "Haftkel"
     ],
     "latitude": 31.44686,
-    "longitude": 49.52951
+    "longitude": 49.52951,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-132458",
@@ -12137,7 +15807,8 @@ export const iranCities: GeoItem[] = [
       "Hafshejan"
     ],
     "latitude": 32.22662,
-    "longitude": 50.79314
+    "longitude": 50.79314,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "wiki-f5b682dd56f3",
@@ -12146,7 +15817,8 @@ export const iranCities: GeoItem[] = [
       "هلشی"
     ],
     "latitude": 34.11083333,
-    "longitude": 47.08972222
+    "longitude": 47.08972222,
+    "provinceName": "کرمانشاه"
   },
   {
     "id": "wiki-c21b2699b479",
@@ -12155,28 +15827,32 @@ export const iranCities: GeoItem[] = [
       "هماشهر",
       "هماشهر (سپیدان)"
     ],
-    "latitude": 30.11166944,
-    "longitude": 52.08278056
+    "latitude": 30.1189,
+    "longitude": 52.0865,
+    "provinceName": "فارس"
   },
   {
     "id": "wiki-b7aac73d4e76",
-    "name": "هماشهر (سیرجان)",
+    "name": "هماشهر",
     "aliases": [
-      "هماشهر (سیرجان)",
-      "هماشهر"
+      "هماشهر",
+      "هماشهر (سیرجان)"
     ],
     "latitude": 29.64416667,
-    "longitude": 55.81555556
+    "longitude": 55.81555556,
+    "provinceName": "کرمان"
   },
   {
-    "id": "wiki-7cf2b78ff4b4",
-    "name": "همت‌آباد",
+    "id": "ir-admin-10900033002066",
+    "name": "همت آباد",
     "aliases": [
+      "همت آباد",
       "همت‌آباد",
       "همت‌آباد (فیروزه)"
     ],
     "latitude": 36.29861111,
-    "longitude": 58.46388889
+    "longitude": 58.46388889,
+    "provinceName": "خراسان رضوی"
   },
   {
     "id": "ir-132144",
@@ -12187,19 +15863,8 @@ export const iranCities: GeoItem[] = [
       "Hamadan"
     ],
     "latitude": 34.79922,
-    "longitude": 48.51456
-  },
-  {
-    "id": "ir-33054",
-    "name": "همدانک",
-    "aliases": [
-      "همدانک",
-      "Hamadānak",
-      "Hamadanak",
-      "همدانگ"
-    ],
-    "latitude": 35.5429,
-    "longitude": 51.1398
+    "longitude": 48.51456,
+    "provinceName": "همدان"
   },
   {
     "id": "wiki-2a56964c5231",
@@ -12207,8 +15872,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "هندودر"
     ],
-    "latitude": 33.77916667,
-    "longitude": 49.23111111
+    "latitude": 33.7804,
+    "longitude": 49.2308,
+    "provinceName": "مرکزی"
   },
   {
     "id": "ir-131559",
@@ -12219,7 +15885,8 @@ export const iranCities: GeoItem[] = [
       "Hendijan"
     ],
     "latitude": 30.2363,
-    "longitude": 49.7119
+    "longitude": 49.7119,
+    "provinceName": "خوزستان"
   },
   {
     "id": "wiki-6c189be2042e",
@@ -12228,26 +15895,19 @@ export const iranCities: GeoItem[] = [
       "هنزا",
       "هنزا (رابر)"
     ],
-    "latitude": 29.30138889,
-    "longitude": 57.18972222
+    "latitude": 29.30128,
+    "longitude": 57.18961,
+    "provinceName": "کرمان"
   },
   {
-    "id": "wiki-518ff878aa34",
-    "name": "هنگویه",
+    "id": "ir-admin-1220009002959",
+    "name": "هنگوییه",
     "aliases": [
-      "هنگویه"
+      "هنگوییه"
     ],
     "latitude": 27.07,
-    "longitude": 54.00777778
-  },
-  {
-    "id": "wiki-1b78e9873b8e",
-    "name": "هور پاسفید",
-    "aliases": [
-      "هور پاسفید"
-    ],
-    "latitude": 28.19138889,
-    "longitude": 57.30416667
+    "longitude": 54.00777778,
+    "provinceName": "هرمزگان"
   },
   {
     "id": "wiki-3dd8c4e7f74f",
@@ -12255,8 +15915,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "هوراند"
     ],
-    "latitude": 38.85916667,
-    "longitude": 47.36861111
+    "latitude": 38.86125,
+    "longitude": 47.36797,
+    "provinceName": "آذربایجان شرقی"
+  },
+  {
+    "id": "ir-admin-1140008002918",
+    "name": "هوره",
+    "aliases": [
+      "هوره"
+    ],
+    "latitude": 32.56055,
+    "longitude": 50.85347,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "ir-130821",
@@ -12266,7 +15937,8 @@ export const iranCities: GeoItem[] = [
       "Hoveyzeh"
     ],
     "latitude": 31.4619,
-    "longitude": 48.074
+    "longitude": 48.074,
+    "provinceName": "خوزستان"
   },
   {
     "id": "ir-131343",
@@ -12276,8 +15948,9 @@ export const iranCities: GeoItem[] = [
       "Hīdaj",
       "Hidaj"
     ],
-    "latitude": 36.2563,
-    "longitude": 49.13261
+    "latitude": 36.2521,
+    "longitude": 49.1303,
+    "provinceName": "زنجان"
   },
   {
     "id": "wiki-0ce4add34288",
@@ -12286,7 +15959,8 @@ export const iranCities: GeoItem[] = [
       "هیدوچ"
     ],
     "latitude": 27.00055556,
-    "longitude": 62.11694444
+    "longitude": 62.11694444,
+    "provinceName": "سیستان و بلوچستان"
   },
   {
     "id": "wiki-faa156cd06dc",
@@ -12295,8 +15969,9 @@ export const iranCities: GeoItem[] = [
       "هیر",
       "هیر (اردبیل)"
     ],
-    "latitude": 38.07861111,
-    "longitude": 48.505
+    "latitude": 38.0785,
+    "longitude": 48.5041,
+    "provinceName": "اردبیل"
   },
   {
     "id": "ir-66093",
@@ -12308,7 +15983,8 @@ export const iranCities: GeoItem[] = [
       "یسوج"
     ],
     "latitude": 30.66824,
-    "longitude": 51.58796
+    "longitude": 51.58796,
+    "provinceName": "کهگیلویه و بویراحمد"
   },
   {
     "id": "wiki-8d5588d1c789",
@@ -12316,8 +15992,9 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "یاسوکند"
     ],
-    "latitude": 36.33333333,
-    "longitude": 47.7
+    "latitude": 36.2838,
+    "longitude": 47.74635,
+    "provinceName": "کردستان"
   },
   {
     "id": "wiki-71ca92df299c",
@@ -12325,8 +16002,19 @@ export const iranCities: GeoItem[] = [
     "aliases": [
       "یامچی"
     ],
-    "latitude": 38.52333333,
-    "longitude": 45.63777778
+    "latitude": 38.5223,
+    "longitude": 45.6404,
+    "provinceName": "آذربایجان شرقی"
+  },
+  {
+    "id": "ir-admin-1140009002919",
+    "name": "یان چشمه",
+    "aliases": [
+      "یان چشمه"
+    ],
+    "latitude": 32.66865,
+    "longitude": 50.72643,
+    "provinceName": "چهارمحال و بختیاری"
   },
   {
     "id": "ir-111822",
@@ -12336,7 +16024,18 @@ export const iranCities: GeoItem[] = [
       "Yazd"
     ],
     "latitude": 31.89722,
-    "longitude": 54.3675
+    "longitude": 54.3675,
+    "provinceName": "یزد"
+  },
+  {
+    "id": "ir-admin-1210005001017",
+    "name": "یزد_منطقه تاریخی",
+    "aliases": [
+      "یزد_منطقه تاریخی"
+    ],
+    "latitude": 31.897268,
+    "longitude": 54.367452,
+    "provinceName": "یزد"
   },
   {
     "id": "wiki-6af90a5f56d1",
@@ -12346,31 +16045,29 @@ export const iranCities: GeoItem[] = [
       "یزدانشهر (زرند)"
     ],
     "latitude": 30.86666667,
-    "longitude": 56.4
-  },
-  {
-    "id": "ir-32723",
-    "name": "یستگاه گرمسار",
-    "aliases": [
-      "یستگاه گرمسار",
-      "Īstgāh-e Rāh Āhan-e Garmsār",
-      "Istgah-e Rah Ahan-e Garmsar",
-      "ایستگاه راهاهن گرمسار",
-      "ایستگاه گرمسار",
-      "یستگاه راه آهن گرمسار",
-      "یستگاه راهاهن گرمسار"
-    ],
-    "latitude": 35.23455,
-    "longitude": 52.30942
+    "longitude": 56.4,
+    "provinceName": "کرمان"
   },
   {
     "id": "wiki-6af9d0defb3f",
-    "name": "یکه‌سعود",
+    "name": "یکه سعود",
     "aliases": [
+      "یکه سعود",
       "یکه‌سعود"
     ],
     "latitude": 38.16666667,
-    "longitude": 56.68333333
+    "longitude": 56.68333333,
+    "provinceName": "خراسان شمالی"
+  },
+  {
+    "id": "ir-admin-12700014001070",
+    "name": "ینقاق",
+    "aliases": [
+      "ینقاق"
+    ],
+    "latitude": 37.29776,
+    "longitude": 55.36988,
+    "provinceName": "گلستان"
   },
   {
     "id": "wiki-ec457e77b1ff",
@@ -12379,7 +16076,8 @@ export const iranCities: GeoItem[] = [
       "یولاگلدی"
     ],
     "latitude": 39.23333333,
-    "longitude": 44.8
+    "longitude": 44.8,
+    "provinceName": "آذربایجان غربی"
   },
   {
     "id": "wiki-1cb342bec359",
@@ -12388,6 +16086,7 @@ export const iranCities: GeoItem[] = [
       "یونسی"
     ],
     "latitude": 34.80527778,
-    "longitude": 58.4375
+    "longitude": 58.4375,
+    "provinceName": "خراسان رضوی"
   }
 ];

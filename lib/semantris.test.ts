@@ -1,10 +1,19 @@
 import { describe, expect, it } from "vitest";
-import { applySemantrisMove, applySemantrisTick, createSemantrisState, semantrisClueRejection, type SemantrisState } from "./semantris";
+import { applySemantrisMove, applySemantrisTick, createSemantrisState, readSemantrisState, semantrisClueRejection, type SemantrisState } from "./semantris";
+import { semantrisCategories } from "./data/semantris-categories";
 import { fairnessInstructions, parseSemantrisFairness } from "./semantris-judge";
 const words = ["یک", "دو", "سه", "چهار", "پنج", "شش", "هفت", "هشت"];
 function state(targetWord: string): SemantrisState { return { words, targetWord, score: 0, cleared: 0, moves: 0, combo: 0, gameOver: false, lastDropAt: new Date().toISOString(), wave: { categoryId: "fruits", queue: ["سیب", "موز"], position: 0 }, clues: [], usedClues: [], pendingWords: [], correctHits: 0 }; }
 describe("Semantris category waves", () => {
   it("prepares fifteen random words from the selected category for each wave", () => { expect(createSemantrisState().wave.queue).toHaveLength(15); });
+  it("does not include the retired foreign actresses category", () => { expect(semantrisCategories.some((category) => category.id === "foreign_actresses")).toBe(false); });
+  it("repairs an old wave while preserving the running board and score", () => {
+    const old = { ...createSemantrisState(), score: 140, wave: { categoryId: "foreign_actresses", queue: ["مریل استریپ"], position: 0 } };
+    const resumed = readSemantrisState(old)!;
+    expect(resumed.wave.categoryId).not.toBe("foreign_actresses");
+    expect(resumed.words).toEqual(old.words);
+    expect(resumed.score).toBe(140);
+  });
 });
 
 describe("Semantris deletion zone", () => {

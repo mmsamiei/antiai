@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 
 export const SESSION_COOKIE = "anti_ai_user_id";
 
@@ -14,8 +14,7 @@ export function createSessionValue(userId: string): string {
   return `${userId}.${signature}`;
 }
 
-export function currentUserId(): string | null {
-  const value = cookies().get(SESSION_COOKIE)?.value;
+function userIdFromSession(value?: string): string | null {
   if (!value) return null;
   const separator = value.lastIndexOf(".");
   if (separator < 1) return null;
@@ -24,4 +23,12 @@ export function currentUserId(): string | null {
   const expected = Buffer.from(crypto.createHmac("sha256", sessionKey()).update(userId).digest("hex"), "hex");
   if (actual.length !== expected.length || !crypto.timingSafeEqual(actual, expected)) return null;
   return userId;
+}
+
+export function currentUserId(): string | null {
+  const cookieUserId = userIdFromSession(cookies().get(SESSION_COOKIE)?.value);
+  if (cookieUserId) return cookieUserId;
+  const authorization = headers().get("authorization");
+  if (!authorization?.startsWith("Bearer ")) return null;
+  return userIdFromSession(authorization.slice(7).trim());
 }

@@ -3,11 +3,16 @@
 ## Project overview
 
 Anti AI Games is a Persian, RTL Telegram Mini App built with Next.js 14, React,
-TypeScript, Prisma, and PostgreSQL. It currently exposes three playable games:
+TypeScript, Prisma, and PostgreSQL. It currently exposes four playable games:
 
 - `IRAN_CITY`: guess a hidden Iranian city.
 - `COUNTRY`: guess a hidden country using capital-to-capital proximity.
-- `ADJECTIVE_RAIN`: submit three valid Persian synonyms within 30 seconds.
+- `SEMANTRIS`: rank words using semantic clues.
+- `LETTER_DUEL`: compete with another player to make a valid Persian word.
+
+`ADJECTIVE_RAIN` and legacy `ADJECTIVE` are retired: do not allow starting,
+resuming, guessing, or surrendering these games. Preserve their code, database
+rows, profile history, and historical leaderboard access.
 
 The application is deployed below a configurable base path and is designed to
 run inside Telegram. Development mode provides a local demo login.
@@ -60,9 +65,10 @@ active session per game type in normal operation. API responses must use
 `serializeGame`; do not expose `targetId` or the hidden target while a game is
 active.
 
-Geographic games store stable dataset item IDs. Their displayed rank is based
-on Haversine distance to the target. The exact target has rank `0`; rank `1`
-means the nearest *other* item. Preserve this convention in API and UI changes.
+Geographic games store stable dataset item IDs and rank guesses by Haversine
+distance. Exact targets have stored rank `0`; non-winning public ranks start at
+`2` so rank `1` cannot be mistaken for a win. Preserve this convention in API
+and UI changes.
 
 `ADJECTIVE_RAIN` stores the prompt ID in `GameSession.targetId`. Seeded examples
 are judged locally; other submissions are sent to JEV and cached in

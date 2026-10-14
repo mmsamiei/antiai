@@ -5,6 +5,7 @@ import { prisma } from "@/lib/prisma";
 export const dynamic = "force-dynamic";
 
 const ONLINE_WINDOW_MS = 50_000;
+const DUEL_WAITING_WINDOW_MS = 30_000;
 
 export async function POST(request: Request) {
   const userId = currentUserId();
@@ -26,5 +27,13 @@ export async function POST(request: Request) {
     })
   ]);
 
-  return NextResponse.json({ onlineCount }, { headers: { "Cache-Control": "no-store" } });
+  const randomDuelWaiting = Boolean(await prisma.letterDuelConnection.findFirst({
+    where: {
+      mode: "RANDOM", status: "WAITING", playerTwoId: null,
+      playerOneId: { not: userId },
+      playerOneHeartbeat: { gte: new Date(now.getTime() - DUEL_WAITING_WINDOW_MS) }
+    },
+    select: { id: true }
+  }));
+  return NextResponse.json({ onlineCount, randomDuelWaiting }, { headers: { "Cache-Control": "no-store" } });
 }

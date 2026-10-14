@@ -1,6 +1,7 @@
 import type { GameType } from "@prisma/client";
 import { countries } from "./data/countries";
 import { iranCities } from "./data/iran-cities";
+import { countryDescriptions } from "./data/country-descriptions";
 
 export type GeoItem = {
   id: string;
@@ -10,11 +11,12 @@ export type GeoItem = {
   longitude: number;
   emoji?: string;
   detail?: string;
+  provinceName?: string;
 };
 
 export type GameItem = GeoItem;
 
-export const DATASET_VERSION = "2026-10-01-v3";
+export const DATASET_VERSION = "2026-10-06-iran-admin-v3.1.2";
 
 export function normalizePersian(value: string): string {
   return value
@@ -79,11 +81,13 @@ export function proximityRank(type: GameType, guess: GameItem, target: GameItem)
   return 1 + datasetFor(type).filter((item) => item.id !== target.id && haversineDistance(item, target) < distance - 1e-9).length;
 }
 
-export function publicItem(item: GameItem) {
+export function publicItem(item: GameItem, includeDescription = false) {
   return {
     id: item.id,
     name: item.name,
     emoji: item.emoji,
-    detail: item.detail
+    detail: item.detail,
+    provinceName: item.provinceName,
+    ...(includeDescription && countryDescriptions[item.id] ? { description: countryDescriptions[item.id] } : {})
   };
 }

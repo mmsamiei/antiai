@@ -112,11 +112,30 @@ const geoNamesIranCities = iranRows.map((row) => {
 const capitalRows = readGeoNames(capitalsPath).filter((row) => row.featureCode === "PPLC");
 const capitalByCountry = new Map(capitalRows.map((row) => [row.countryCode, row]));
 const countryRows = JSON.parse(fs.readFileSync(countriesPath, "utf8"));
+const countryDescriptionsPath = path.join(projectRoot, "scripts/data/country-descriptions.fa.json");
+const countryDescriptions = JSON.parse(fs.readFileSync(countryDescriptionsPath, "utf8"));
 
-const canonicalIranCitiesPath = path.join(process.cwd(), "scripts/data/iran-cities-canonical.json");
-const iranCities = fs.existsSync(canonicalIranCitiesPath)
-  ? JSON.parse(fs.readFileSync(canonicalIranCitiesPath, "utf8"))
-  : geoNamesIranCities;
+const iranAdminSnapshotDir = path.join(projectRoot, "scripts/data/iran-admin-v3.1.2");
+const officialIranCities = JSON.parse(fs.readFileSync(path.join(iranAdminSnapshotDir, "cities-filtered.json"), "utf8"));
+const numberedUrbanZones = officialIranCities.filter((city) => /[0-9۰-۹]\s*$/.test(city.name));
+if (numberedUrbanZones.length !== 20) throw new Error(`Unexpected numbered urban-zone count: ${numberedUrbanZones.length}`);
+const playableOfficialCities = officialIranCities.filter((city) => !/[0-9۰-۹]\s*$/.test(city.name));
+if (playableOfficialCities.length !== 1461) throw new Error(`Unexpected official city count: ${playableOfficialCities.length}`);
+const officialIds = new Set(playableOfficialCities.map((city) => String(city.id)));
+const coordinateRows = JSON.parse(fs.readFileSync(path.join(iranAdminSnapshotDir, "city-coordinates.json"), "utf8"));
+const runtimeIds = new Set();
+const runtimeCoordinates = new Set();
+const iranCities = coordinateRows.map((row) => {
+  if (!officialIds.has(String(row.officialId))) throw new Error(`Unknown official city ID: ${row.officialId}`);
+  if (runtimeIds.has(row.id)) throw new Error(`Duplicate runtime city ID: ${row.id}`);
+  if (!Number.isFinite(row.latitude) || !Number.isFinite(row.longitude)) throw new Error(`Invalid coordinates for ${row.name}`);
+  const coordinateKey = `${row.latitude},${row.longitude}`;
+  if (runtimeCoordinates.has(coordinateKey)) throw new Error(`Duplicate city coordinates: ${coordinateKey}`);
+  runtimeIds.add(row.id);
+  runtimeCoordinates.add(coordinateKey);
+  return { id: row.id, name: row.name, aliases: row.aliases, latitude: row.latitude, longitude: row.longitude, provinceName: row.provinceName };
+});
+if (iranCities.length !== 1461 || runtimeIds.size !== 1461) throw new Error(`Incomplete Iran city coordinates: ${iranCities.length}`);
 
 const countries = countryRows
   .filter((country) => country.unMember || ["VA", "PS"].includes(country.cca2))
@@ -144,10 +163,17 @@ const countries = countryRows
   .sort((a, b) => a.name.localeCompare(b.name, "fa"));
 
 function writeDataset(filename, exportName, rows) {
-  const banner = "// Generated from GeoNames and mledoze/countries. Do not edit manually.\n";
+  const banner = filename === "iran-cities.ts"
+    ? "// Generated from Iran administrative divisions v3.1.2 and audited coordinates. Do not edit manually.\n"
+    : "// Generated from GeoNames and mledoze/countries. Do not edit manually.\n";
   const body = `${banner}import type { GeoItem } from \"../geo\";\n\nexport const ${exportName}: GeoItem[] = ${JSON.stringify(rows, null, 2)};\n`;
   fs.writeFileSync(path.join(projectRoot, "lib/data", filename), body);
 }
+
+const countryIds = new Set(countries.map((country) => country.id));
+const missingDescriptions = [...countryIds].filter((id) => !(countryDescriptions[id]?.description || countryDescriptions[id])?.trim());
+const extraDescriptions = Object.keys(countryDescriptions).filter((id) => !countryIds.has(id));
+if (missingDescriptions.length || extraDescriptions.length) throw new Error(`Country descriptions mismatch: missing=${missingDescriptions.join(",")} extra=${extraDescriptions.join(",")}`);
 
 writeDataset("iran-cities.ts", "iranCities", iranCities);
 writeDataset("countries.ts", "countries", countries);

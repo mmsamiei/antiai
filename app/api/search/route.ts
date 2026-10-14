@@ -11,5 +11,5 @@ export async function GET(request: Request) {
   const type = parseGameType(params.get("type"));
   const query = params.get("q") || "";
   if (!type || query.length > 80) return NextResponse.json({ items: [] });
-  return NextResponse.json({ items: searchItems(type, query).map(publicItem) }, { headers: { "Cache-Control": "no-store" } });
+  return NextResponse.json({ items: searchItems(type, query).map((item) => publicItem(item)) }, { headers: { "Cache-Control": "no-store" } });
 }

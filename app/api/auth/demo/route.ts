@@ -9,7 +9,8 @@ export async function POST() {
     create: { id: "local-demo", firstName: "بازیکن", username: "local_demo" },
     update: {}
   });
-  const response = NextResponse.json({ user: { id: user.id, first_name: user.firstName, username: user.username } });
-  response.cookies.set(SESSION_COOKIE, createSessionValue(user.id), { httpOnly: true, sameSite: "lax", maxAge: 60 * 60 * 24 * 30 });
+  const session = createSessionValue(user.id);
+  const response = NextResponse.json({ user: { id: user.id, first_name: user.firstName, username: user.username }, session });
+  response.cookies.set(SESSION_COOKIE, session, { httpOnly: true, sameSite: "lax", path: process.env.NEXT_PUBLIC_BASE_PATH || "/", maxAge: 60 * 60 * 24 * 30 });
   return response;
 }

@@ -3,6 +3,7 @@ import { Prisma } from "@prisma/client";
 import { currentUserId } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { parseLeaderboardGameType } from "@/lib/game-service";
+import { phraseWeekStart } from "@/lib/phrase-hunt-schedule";
 import { readSemantrisState } from "@/lib/semantris";
 
 export const dynamic = "force-dynamic";
@@ -31,6 +32,30 @@ export async function GET(request: Request) {
     ...(type ? { type } : {}),
     ...(period === "week" ? { finishedAt: { gte: startOfWeekUtc() } } : {})
   };
+
+  if (type === "PHRASE_HUNT") {
+    const totals = await prisma.$queryRaw<{ userId: string; totalScore: number; games: number }[]>(Prisma.sql`
+      SELECT g."userId", SUM(ROUND(best.score::numeric, 2))::double precision AS "totalScore", COUNT(*)::int AS games
+      FROM "GameSession" g
+      JOIN "PhraseHuntChallenge" c ON c.id = g."phraseChallengeId"
+      JOIN (SELECT "gameId", MAX(score) AS score FROM "PhraseHuntGuess" GROUP BY "gameId") best ON best."gameId" = g.id
+      WHERE g.type = 'PHRASE_HUNT'
+        ${period === "week" ? Prisma.sql`AND c."startsAt" >= ${phraseWeekStart()}` : Prisma.empty}
+      GROUP BY g."userId"
+      ORDER BY SUM(ROUND(best.score::numeric, 2)) DESC, g."userId" ASC
+    `);
+    const topIds = totals.slice(0, 50).map(row => row.userId);
+    if (!topIds.includes(userId) && totals.some(row => row.userId === userId)) topIds.push(userId);
+    const users = await prisma.user.findMany({ where: { id: { in: topIds } } });
+    const userMap = new Map(users.map(user => [user.id, user]));
+    const rows = totals.map((row, index) => ({
+      rank: index + 1, userId: row.userId, displayName: displayName(userMap.get(row.userId)),
+      photoUrl: userMap.get(row.userId)?.photoUrl, games: row.games, totalScore: Number(row.totalScore.toFixed(2)),
+      wins: 0, averageGuesses: 0, bestGame: 0, isMe: row.userId === userId,
+    }));
+    return NextResponse.json({ rows: rows.slice(0, 50), me: rows.find(row => row.isMe) || null,
+      period, mode: "total", type, minimumWins: 0, timeZone: "Asia/Tehran" }, { headers: { "Cache-Control": "no-store" } });
+  }
 
   if (type === "LETTER_DUEL") {
     const groups = await prisma.gameSession.groupBy({

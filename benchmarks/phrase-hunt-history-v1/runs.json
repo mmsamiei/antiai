@@ -1,0 +1,1622 @@
+[
+  {
+    "repeat": 1,
+    "variant": "control",
+    "phrase": "باغ",
+    "score": 48.76,
+    "answer": {
+      "type": "score",
+      "score": 1.97,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.96,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.97
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 1,
+    "variant": "history_only",
+    "phrase": "باغ",
+    "score": 50.74,
+    "answer": {
+      "type": "score",
+      "score": 2.05,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.89,
+        "3": 0.07,
+        "4": 0.01
+      },
+      "confidence": 0.9
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 1,
+    "variant": "control",
+    "phrase": "باغ میوه",
+    "score": 45.29,
+    "answer": {
+      "type": "score",
+      "score": 1.83,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.18,
+        "2": 0.81,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.84
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 1,
+    "variant": "history_calibrated",
+    "phrase": "باغ",
+    "score": 50.74,
+    "answer": {
+      "type": "score",
+      "score": 2.05,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.88,
+        "3": 0.07,
+        "4": 0.01
+      },
+      "confidence": 0.89
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 1,
+    "variant": "history_only",
+    "phrase": "باغ میوه",
+    "score": 48.76,
+    "answer": {
+      "type": "score",
+      "score": 1.97,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.09,
+        "2": 0.85,
+        "3": 0.06,
+        "4": 0
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 1,
+    "variant": "history_calibrated",
+    "phrase": "باغ میوه",
+    "score": 48.76,
+    "answer": {
+      "type": "score",
+      "score": 1.97,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.1,
+        "2": 0.83,
+        "3": 0.07,
+        "4": 0
+      },
+      "confidence": 0.86
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 2,
+    "variant": "history_calibrated",
+    "phrase": "باغ",
+    "score": 50.24,
+    "answer": {
+      "type": "score",
+      "score": 2.03,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.91,
+        "3": 0.05,
+        "4": 0.01
+      },
+      "confidence": 0.92
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 2,
+    "variant": "history_only",
+    "phrase": "باغ میوه",
+    "score": 49.01,
+    "answer": {
+      "type": "score",
+      "score": 1.98,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.09,
+        "2": 0.84,
+        "3": 0.07,
+        "4": 0
+      },
+      "confidence": 0.87
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 2,
+    "variant": "history_calibrated",
+    "phrase": "باغ میوه",
+    "score": 49.75,
+    "answer": {
+      "type": "score",
+      "score": 2.01,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.08,
+        "2": 0.83,
+        "3": 0.09,
+        "4": 0
+      },
+      "confidence": 0.86
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 2,
+    "variant": "control",
+    "phrase": "باغ",
+    "score": 48.76,
+    "answer": {
+      "type": "score",
+      "score": 1.97,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.95,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.96
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 2,
+    "variant": "history_only",
+    "phrase": "باغ",
+    "score": 50.99,
+    "answer": {
+      "type": "score",
+      "score": 2.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.89,
+        "3": 0.07,
+        "4": 0.01
+      },
+      "confidence": 0.9
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 2,
+    "variant": "control",
+    "phrase": "باغ میوه",
+    "score": 46.04,
+    "answer": {
+      "type": "score",
+      "score": 1.86,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.15,
+        "2": 0.84,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.87
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 3,
+    "variant": "control",
+    "phrase": "باغ میوه",
+    "score": 45.79,
+    "answer": {
+      "type": "score",
+      "score": 1.85,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.16,
+        "2": 0.82,
+        "3": 0.02,
+        "4": 0
+      },
+      "confidence": 0.85
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 3,
+    "variant": "control",
+    "phrase": "باغ",
+    "score": 49.01,
+    "answer": {
+      "type": "score",
+      "score": 1.98,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.96,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.97
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 3,
+    "variant": "history_only",
+    "phrase": "باغ",
+    "score": 50.99,
+    "answer": {
+      "type": "score",
+      "score": 2.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.89,
+        "3": 0.07,
+        "4": 0.01
+      },
+      "confidence": 0.9
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 3,
+    "variant": "history_only",
+    "phrase": "باغ میوه",
+    "score": 49.01,
+    "answer": {
+      "type": "score",
+      "score": 1.98,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.08,
+        "2": 0.86,
+        "3": 0.06,
+        "4": 0
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 3,
+    "variant": "history_calibrated",
+    "phrase": "باغ",
+    "score": 51.23,
+    "answer": {
+      "type": "score",
+      "score": 2.07,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.89,
+        "3": 0.07,
+        "4": 0.01
+      },
+      "confidence": 0.9
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 3,
+    "variant": "history_calibrated",
+    "phrase": "باغ میوه",
+    "score": 49.75,
+    "answer": {
+      "type": "score",
+      "score": 2.01,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.09,
+        "2": 0.81,
+        "3": 0.1,
+        "4": 0
+      },
+      "confidence": 0.84
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 4,
+    "variant": "history_calibrated",
+    "phrase": "باغ",
+    "score": 50.49,
+    "answer": {
+      "type": "score",
+      "score": 2.04,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.91,
+        "3": 0.05,
+        "4": 0.01
+      },
+      "confidence": 0.92
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 4,
+    "variant": "history_calibrated",
+    "phrase": "باغ میوه",
+    "score": 49.01,
+    "answer": {
+      "type": "score",
+      "score": 1.98,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.1,
+        "2": 0.82,
+        "3": 0.08,
+        "4": 0
+      },
+      "confidence": 0.85
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 4,
+    "variant": "history_only",
+    "phrase": "باغ میوه",
+    "score": 49.75,
+    "answer": {
+      "type": "score",
+      "score": 2.01,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.08,
+        "2": 0.84,
+        "3": 0.08,
+        "4": 0
+      },
+      "confidence": 0.87
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 4,
+    "variant": "history_only",
+    "phrase": "باغ",
+    "score": 51.73,
+    "answer": {
+      "type": "score",
+      "score": 2.09,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.87,
+        "3": 0.09,
+        "4": 0.01
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 4,
+    "variant": "control",
+    "phrase": "باغ میوه",
+    "score": 46.28,
+    "answer": {
+      "type": "score",
+      "score": 1.87,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.15,
+        "2": 0.83,
+        "3": 0.02,
+        "4": 0
+      },
+      "confidence": 0.86
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 4,
+    "variant": "control",
+    "phrase": "باغ",
+    "score": 48.76,
+    "answer": {
+      "type": "score",
+      "score": 1.97,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.95,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.96
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 5,
+    "variant": "control",
+    "phrase": "باغ",
+    "score": 49.01,
+    "answer": {
+      "type": "score",
+      "score": 1.98,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.96,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.97
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 5,
+    "variant": "control",
+    "phrase": "باغ میوه",
+    "score": 46.28,
+    "answer": {
+      "type": "score",
+      "score": 1.87,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.14,
+        "2": 0.85,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 5,
+    "variant": "history_only",
+    "phrase": "باغ",
+    "score": 50.24,
+    "answer": {
+      "type": "score",
+      "score": 2.03,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.91,
+        "3": 0.05,
+        "4": 0.01
+      },
+      "confidence": 0.92
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 5,
+    "variant": "history_only",
+    "phrase": "باغ میوه",
+    "score": 49.75,
+    "answer": {
+      "type": "score",
+      "score": 2.01,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.07,
+        "2": 0.85,
+        "3": 0.08,
+        "4": 0
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 5,
+    "variant": "history_calibrated",
+    "phrase": "باغ میوه",
+    "score": 49.25,
+    "answer": {
+      "type": "score",
+      "score": 1.99,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.09,
+        "2": 0.83,
+        "3": 0.08,
+        "4": 0
+      },
+      "confidence": 0.86
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 5,
+    "variant": "history_calibrated",
+    "phrase": "باغ",
+    "score": 50.74,
+    "answer": {
+      "type": "score",
+      "score": 2.05,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.9,
+        "3": 0.06,
+        "4": 0.01
+      },
+      "confidence": 0.91
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 6,
+    "variant": "history_calibrated",
+    "phrase": "باغ",
+    "score": 50.49,
+    "answer": {
+      "type": "score",
+      "score": 2.04,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.9,
+        "3": 0.06,
+        "4": 0.01
+      },
+      "confidence": 0.91
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 6,
+    "variant": "history_only",
+    "phrase": "باغ میوه",
+    "score": 49.5,
+    "answer": {
+      "type": "score",
+      "score": 2,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.07,
+        "2": 0.86,
+        "3": 0.07,
+        "4": 0
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 6,
+    "variant": "history_calibrated",
+    "phrase": "باغ میوه",
+    "score": 49.25,
+    "answer": {
+      "type": "score",
+      "score": 1.99,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.11,
+        "2": 0.8,
+        "3": 0.09,
+        "4": 0
+      },
+      "confidence": 0.83
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 6,
+    "variant": "history_only",
+    "phrase": "باغ",
+    "score": 50.74,
+    "answer": {
+      "type": "score",
+      "score": 2.05,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.89,
+        "3": 0.07,
+        "4": 0.01
+      },
+      "confidence": 0.9
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 6,
+    "variant": "control",
+    "phrase": "باغ میوه",
+    "score": 46.78,
+    "answer": {
+      "type": "score",
+      "score": 1.89,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.13,
+        "2": 0.86,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 6,
+    "variant": "control",
+    "phrase": "باغ",
+    "score": 48.76,
+    "answer": {
+      "type": "score",
+      "score": 1.97,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.95,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.96
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 7,
+    "variant": "history_only",
+    "phrase": "باغ",
+    "score": 51.48,
+    "answer": {
+      "type": "score",
+      "score": 2.08,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.87,
+        "3": 0.09,
+        "4": 0.01
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 7,
+    "variant": "control",
+    "phrase": "باغ",
+    "score": 49.01,
+    "answer": {
+      "type": "score",
+      "score": 1.98,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.95,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.96
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 7,
+    "variant": "control",
+    "phrase": "باغ میوه",
+    "score": 45.79,
+    "answer": {
+      "type": "score",
+      "score": 1.85,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.16,
+        "2": 0.83,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.86
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 7,
+    "variant": "history_only",
+    "phrase": "باغ میوه",
+    "score": 48.51,
+    "answer": {
+      "type": "score",
+      "score": 1.96,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.09,
+        "2": 0.86,
+        "3": 0.05,
+        "4": 0
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 7,
+    "variant": "history_calibrated",
+    "phrase": "باغ",
+    "score": 50.99,
+    "answer": {
+      "type": "score",
+      "score": 2.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.02,
+        "2": 0.9,
+        "3": 0.07,
+        "4": 0.01
+      },
+      "confidence": 0.91
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 7,
+    "variant": "history_calibrated",
+    "phrase": "باغ میوه",
+    "score": 49.25,
+    "answer": {
+      "type": "score",
+      "score": 1.99,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.1,
+        "2": 0.81,
+        "3": 0.09,
+        "4": 0
+      },
+      "confidence": 0.84
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 8,
+    "variant": "history_calibrated",
+    "phrase": "باغ",
+    "score": 50.74,
+    "answer": {
+      "type": "score",
+      "score": 2.05,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.9,
+        "3": 0.06,
+        "4": 0.01
+      },
+      "confidence": 0.91
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 8,
+    "variant": "history_only",
+    "phrase": "باغ میوه",
+    "score": 49.5,
+    "answer": {
+      "type": "score",
+      "score": 2,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.08,
+        "2": 0.84,
+        "3": 0.08,
+        "4": 0
+      },
+      "confidence": 0.87
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 8,
+    "variant": "history_calibrated",
+    "phrase": "باغ میوه",
+    "score": 49.01,
+    "answer": {
+      "type": "score",
+      "score": 1.98,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.1,
+        "2": 0.81,
+        "3": 0.08,
+        "4": 0
+      },
+      "confidence": 0.85
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 8,
+    "variant": "history_only",
+    "phrase": "باغ",
+    "score": 50.99,
+    "answer": {
+      "type": "score",
+      "score": 2.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.89,
+        "3": 0.07,
+        "4": 0.01
+      },
+      "confidence": 0.9
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 8,
+    "variant": "control",
+    "phrase": "باغ",
+    "score": 49.01,
+    "answer": {
+      "type": "score",
+      "score": 1.98,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.95,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.96
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 8,
+    "variant": "control",
+    "phrase": "باغ میوه",
+    "score": 46.04,
+    "answer": {
+      "type": "score",
+      "score": 1.86,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.15,
+        "2": 0.84,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.87
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 9,
+    "variant": "history_only",
+    "phrase": "باغ",
+    "score": 51.23,
+    "answer": {
+      "type": "score",
+      "score": 2.07,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.88,
+        "3": 0.08,
+        "4": 0.01
+      },
+      "confidence": 0.89
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 9,
+    "variant": "control",
+    "phrase": "باغ میوه",
+    "score": 45.79,
+    "answer": {
+      "type": "score",
+      "score": 1.85,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.16,
+        "2": 0.83,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.86
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 9,
+    "variant": "control",
+    "phrase": "باغ",
+    "score": 49.01,
+    "answer": {
+      "type": "score",
+      "score": 1.98,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.96,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.97
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 9,
+    "variant": "history_calibrated",
+    "phrase": "باغ میوه",
+    "score": 49.5,
+    "answer": {
+      "type": "score",
+      "score": 2,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.1,
+        "2": 0.8,
+        "3": 0.1,
+        "4": 0
+      },
+      "confidence": 0.83
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 9,
+    "variant": "history_only",
+    "phrase": "باغ میوه",
+    "score": 49.01,
+    "answer": {
+      "type": "score",
+      "score": 1.98,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.09,
+        "2": 0.84,
+        "3": 0.07,
+        "4": 0
+      },
+      "confidence": 0.87
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 9,
+    "variant": "history_calibrated",
+    "phrase": "باغ",
+    "score": 50.99,
+    "answer": {
+      "type": "score",
+      "score": 2.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.88,
+        "3": 0.07,
+        "4": 0.02
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 10,
+    "variant": "history_only",
+    "phrase": "باغ میوه",
+    "score": 49.01,
+    "answer": {
+      "type": "score",
+      "score": 1.98,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.08,
+        "2": 0.86,
+        "3": 0.06,
+        "4": 0
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 10,
+    "variant": "history_calibrated",
+    "phrase": "باغ میوه",
+    "score": 49.01,
+    "answer": {
+      "type": "score",
+      "score": 1.98,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.1,
+        "2": 0.82,
+        "3": 0.08,
+        "4": 0
+      },
+      "confidence": 0.85
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 10,
+    "variant": "history_calibrated",
+    "phrase": "باغ",
+    "score": 50.99,
+    "answer": {
+      "type": "score",
+      "score": 2.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.89,
+        "3": 0.07,
+        "4": 0.01
+      },
+      "confidence": 0.9
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 10,
+    "variant": "control",
+    "phrase": "باغ",
+    "score": 48.76,
+    "answer": {
+      "type": "score",
+      "score": 1.97,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.95,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.96
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 10,
+    "variant": "control",
+    "phrase": "باغ میوه",
+    "score": 45.79,
+    "answer": {
+      "type": "score",
+      "score": 1.85,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.16,
+        "2": 0.83,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.86
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 10,
+    "variant": "history_only",
+    "phrase": "باغ",
+    "score": 50.49,
+    "answer": {
+      "type": "score",
+      "score": 2.04,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.9,
+        "3": 0.06,
+        "4": 0.01
+      },
+      "confidence": 0.91
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  }
+]

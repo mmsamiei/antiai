@@ -7,12 +7,15 @@
     "build": "next build",
     "start": "next start",
     "bot": "node scripts/bot.mjs",
+    "word-weaver-worker": "tsx scripts/word-weaver-worker.ts",
+    "phrase-hunt-announcement-worker": "tsx scripts/phrase-hunt-announcement-worker.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate deploy",
     "data:letter-duel": "node scripts/generate-letter-duel-lexicon.mjs",
-    "data:country-descriptions": "node scripts/generate-country-descriptions.mjs"
+    "data:country-descriptions": "node scripts/generate-country-descriptions.mjs",
+    "test:word-weaver-integration": "tsx scripts/test-word-weaver-integration.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.16.2",
@@ -21,6 +24,7 @@
     "next": "^14.2.32",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "tsx": "^4.23.15",
     "zod": "^3.25.76"
   },
   "devDependencies": {

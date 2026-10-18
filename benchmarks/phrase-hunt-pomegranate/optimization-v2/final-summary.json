@@ -1,0 +1,358 @@
+{
+  "target": "راز باغ انار",
+  "winner": "choiceConciseFa2",
+  "promptSha256": "10826621b4b28409ba5c1babc1d1f36a7fbf351f878e367d73d985dcc8ece926",
+  "referenceSha256": "434f09c5660ab1ddcab95795f37dce1f3924086cfd23f87117b91f11c7b690c3",
+  "repetitions": 3,
+  "calls": 150,
+  "MAE": 3.726666666666667,
+  "score": 96.27333333333333,
+  "within5": 40,
+  "total": 50,
+  "relationsPassed": 24,
+  "relationsTotal": 24,
+  "checks": [
+    {
+      "a": "باغ",
+      "b": "باغ میوه",
+      "type": "less",
+      "aScore": 50.0,
+      "bScore": 60.0,
+      "passed": true
+    },
+    {
+      "a": "باغ میوه",
+      "b": "باغ انار",
+      "type": "less",
+      "aScore": 60.0,
+      "bScore": 75.0,
+      "passed": true
+    },
+    {
+      "a": "باغ",
+      "b": "باغ سیب",
+      "type": "less",
+      "aScore": 50.0,
+      "bScore": 60.0,
+      "passed": true
+    },
+    {
+      "a": "باغ سیب",
+      "b": "باغ انار",
+      "type": "less",
+      "aScore": 60.0,
+      "bScore": 75.0,
+      "passed": true
+    },
+    {
+      "a": "باغ",
+      "b": "باغ گلابی",
+      "type": "less",
+      "aScore": 50.0,
+      "bScore": 60.0,
+      "passed": true
+    },
+    {
+      "a": "باغ گلابی",
+      "b": "باغ انار",
+      "type": "less",
+      "aScore": 60.0,
+      "bScore": 75.0,
+      "passed": true
+    },
+    {
+      "a": "باغ",
+      "b": "باغ آلبالو",
+      "type": "less",
+      "aScore": 50.0,
+      "bScore": 60.0,
+      "passed": true
+    },
+    {
+      "a": "باغ آلبالو",
+      "b": "باغ انار",
+      "type": "less",
+      "aScore": 60.0,
+      "bScore": 75.0,
+      "passed": true
+    },
+    {
+      "a": "باغ سیب",
+      "b": "باغ گلابی",
+      "type": "equal",
+      "tolerance": 5,
+      "aScore": 60.0,
+      "bScore": 60.0,
+      "passed": true
+    },
+    {
+      "a": "باغ سیب",
+      "b": "باغ آلبالو",
+      "type": "equal",
+      "tolerance": 5,
+      "aScore": 60.0,
+      "bScore": 60.0,
+      "passed": true
+    },
+    {
+      "a": "باغ گلابی",
+      "b": "باغ آلبالو",
+      "type": "equal",
+      "tolerance": 5,
+      "aScore": 60.0,
+      "bScore": 60.0,
+      "passed": true
+    },
+    {
+      "a": "انار",
+      "b": "درخت انار",
+      "type": "less",
+      "aScore": 50.0,
+      "bScore": 60.0,
+      "passed": true
+    },
+    {
+      "a": "درخت انار",
+      "b": "باغ انار",
+      "type": "less",
+      "aScore": 60.0,
+      "bScore": 75.0,
+      "passed": true
+    },
+    {
+      "a": "باغ انار",
+      "b": "انارستان",
+      "type": "equal",
+      "tolerance": 5,
+      "aScore": 75.0,
+      "bScore": 75.0,
+      "passed": true
+    },
+    {
+      "a": "باغ انار",
+      "b": "بستان انار",
+      "type": "equal",
+      "tolerance": 5,
+      "aScore": 75.0,
+      "bScore": 75.0,
+      "passed": true
+    },
+    {
+      "a": "باغ انار",
+      "b": "garden of pomegranates",
+      "type": "equal",
+      "tolerance": 5,
+      "aScore": 75.0,
+      "bScore": 75.0,
+      "passed": true
+    },
+    {
+      "a": "باغ انار",
+      "b": "باغ انار ساوه",
+      "type": "equal",
+      "tolerance": 5,
+      "aScore": 75.0,
+      "bScore": 75.0,
+      "passed": true
+    },
+    {
+      "a": "باغ انار",
+      "b": "باغ انار شیراز",
+      "type": "equal",
+      "tolerance": 5,
+      "aScore": 75.0,
+      "bScore": 75.0,
+      "passed": true
+    },
+    {
+      "a": "باغ انار ساوه",
+      "b": "باغ انار شیراز",
+      "type": "equal",
+      "tolerance": 5,
+      "aScore": 75.0,
+      "bScore": 75.0,
+      "passed": true
+    },
+    {
+      "a": "راز",
+      "b": "راز باغ",
+      "type": "less",
+      "aScore": 50.0,
+      "bScore": 75.0,
+      "passed": true
+    },
+    {
+      "a": "راز باغ",
+      "b": "راز باغ میوه",
+      "type": "less",
+      "aScore": 75.0,
+      "bScore": 85.0,
+      "passed": true
+    },
+    {
+      "a": "راز باغ میوه",
+      "b": "راز انارستان",
+      "type": "less",
+      "aScore": 85.0,
+      "bScore": 98.0,
+      "passed": true
+    },
+    {
+      "a": "باغ بدون انار",
+      "b": "باغ",
+      "type": "less",
+      "aScore": 45.0,
+      "bScore": 50.0,
+      "passed": true
+    },
+    {
+      "a": "باغ انار بی‌راز",
+      "b": "باغ انار",
+      "type": "less",
+      "aScore": 45.0,
+      "bScore": 75.0,
+      "passed": true
+    }
+  ],
+  "perRun": [
+    {
+      "MAE": 3.66,
+      "within5": 41,
+      "relationsPassed": 24
+    },
+    {
+      "MAE": 3.98,
+      "within5": 41,
+      "relationsPassed": 24
+    },
+    {
+      "MAE": 3.66,
+      "within5": 41,
+      "relationsPassed": 24
+    }
+  ],
+  "baseline": {
+    "MAE": 12.5066,
+    "score": 87.4934,
+    "within5": 11,
+    "relationsPassed": 13,
+    "relationsTotal": 24
+  },
+  "variants": [
+    {
+      "variant": "choice10",
+      "MAE": 5.3,
+      "within5": 35,
+      "relationsPassed": 21
+    },
+    {
+      "variant": "choiceCalibrated10",
+      "MAE": 3.98,
+      "within5": 39,
+      "relationsPassed": 21
+    },
+    {
+      "variant": "choiceConciseFa",
+      "MAE": 5.02,
+      "within5": 37,
+      "relationsPassed": 20
+    },
+    {
+      "variant": "choiceConciseFa2",
+      "MAE": 3.66,
+      "within5": 41,
+      "relationsPassed": 24
+    },
+    {
+      "variant": "choiceConciseFa3",
+      "MAE": 4.96,
+      "within5": 37,
+      "relationsPassed": 22
+    },
+    {
+      "variant": "choiceContext10",
+      "MAE": 4.7,
+      "within5": 33,
+      "relationsPassed": 19
+    },
+    {
+      "variant": "choiceNested10",
+      "MAE": 3.96,
+      "within5": 41,
+      "relationsPassed": 21
+    },
+    {
+      "variant": "choiceRefined10",
+      "MAE": 4.96,
+      "within5": 36,
+      "relationsPassed": 22
+    },
+    {
+      "variant": "choiceSemantic10",
+      "MAE": 3.46,
+      "within5": 41,
+      "relationsPassed": 21
+    },
+    {
+      "variant": "choiceSemantic10b",
+      "MAE": 3.32,
+      "within5": 43,
+      "relationsPassed": 22
+    },
+    {
+      "variant": "contextual10",
+      "MAE": 5.769999999999999,
+      "within5": 27,
+      "relationsPassed": 19
+    },
+    {
+      "variant": "fewshot10",
+      "MAE": 5.7925999999999975,
+      "within5": 27,
+      "relationsPassed": 20
+    },
+    {
+      "variant": "fewshot5",
+      "MAE": 6.285200000000002,
+      "within5": 29,
+      "relationsPassed": 21
+    },
+    {
+      "variant": "fewshotContext5",
+      "MAE": 6.095200000000002,
+      "within5": 25,
+      "relationsPassed": 17
+    },
+    {
+      "variant": "rubric10",
+      "MAE": 6.9222,
+      "within5": 25,
+      "relationsPassed": 20
+    },
+    {
+      "variant": "rubric10persian",
+      "MAE": 5.666999999999998,
+      "within5": 28,
+      "relationsPassed": 18
+    },
+    {
+      "variant": "rubric10refined",
+      "MAE": 6.9698,
+      "within5": 20,
+      "relationsPassed": 19
+    },
+    {
+      "variant": "rubric5explicit",
+      "MAE": 6.813,
+      "within5": 28,
+      "relationsPassed": 20
+    }
+  ],
+  "limitations": [
+    "Exploratory optimization on a single known target; all 50 samples used for development, no held-out estimate.",
+    "Reference scores are subjective assistant-authored game-design judgments.",
+    "Winner changes output primitive from score to choice and uses discrete score bands. Improvements are not attributable to wording alone.",
+    "Few-shot examples use different targets but were selected while inspecting this benchmark.",
+    "No production judge, cache, or game state was changed."
+  ]
+}

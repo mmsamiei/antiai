@@ -26,9 +26,12 @@ function userIdFromSession(value?: string): string | null {
 }
 
 export function currentUserId(): string | null {
-  const cookieUserId = userIdFromSession(cookies().get(SESSION_COOKIE)?.value);
-  if (cookieUserId) return cookieUserId;
+  // Telegram accounts can share browser cookies, but each app window has its
+  // own signed token. An explicit token must never fall back to another account.
   const authorization = headers().get("authorization");
-  if (!authorization?.startsWith("Bearer ")) return null;
-  return userIdFromSession(authorization.slice(7).trim());
+  if (authorization !== null) {
+    if (!authorization.startsWith("Bearer ")) return null;
+    return userIdFromSession(authorization.slice(7).trim());
+  }
+  return userIdFromSession(cookies().get(SESSION_COOKIE)?.value);
 }

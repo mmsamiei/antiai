@@ -1,0 +1,7201 @@
+[
+  {
+    "position": 1,
+    "player": 0,
+    "phrase": "دستکاری روانی",
+    "score": 68.8,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.78,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.3,
+            "3": 0.53,
+            "4": 0.14
+          },
+          "confidence": 0.58
+        }
+      },
+      "usage": {
+        "input_tokens": 645,
+        "output_tokens": 17,
+        "cost": 0.00002709
+      },
+      "id": "gen-dec-1792350445-Zz7nLXNKSvQNRtS2Sxew",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 317,
+    "previousGuesses": [],
+    "selectionCounts": {
+      "globalTop": 0,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 2,
+    "player": 1,
+    "phrase": "جنگ مسلحانه",
+    "score": 31.19,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.26,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.07,
+            "1": 0.63,
+            "2": 0.29,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.68
+        }
+      },
+      "usage": {
+        "input_tokens": 679,
+        "output_tokens": 17,
+        "cost": 0.000028518
+      },
+      "id": "gen-dec-1792350445-SSD8VYrUJDdBplLGwYL1",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 681,
+    "previousGuesses": [
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 1,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 3,
+    "player": 2,
+    "phrase": "دشمن",
+    "score": 27.97,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.13,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.12,
+            "1": 0.64,
+            "2": 0.23,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.69
+        }
+      },
+      "usage": {
+        "input_tokens": 708,
+        "output_tokens": 17,
+        "cost": 0.000029736
+      },
+      "id": "gen-dec-1792350446-vrdyEx2o874ZwtLw0eZl",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 283,
+    "previousGuesses": [
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 2,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 4,
+    "player": 0,
+    "phrase": "عملیات روانی",
+    "score": 88.11,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.56,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.05,
+            "3": 0.33,
+            "4": 0.62
+          },
+          "confidence": 0.64
+        }
+      },
+      "usage": {
+        "input_tokens": 744,
+        "output_tokens": 17,
+        "cost": 0.000031248
+      },
+      "id": "gen-dec-1792350446-Qumq6TYOoCKjvaury0TJ",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 696,
+    "previousGuesses": [
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 3,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 5,
+    "player": 1,
+    "phrase": "جنگ",
+    "score": 48.76,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.97,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.09,
+            "2": 0.84,
+            "3": 0.05,
+            "4": 0.01
+          },
+          "confidence": 0.85
+        }
+      },
+      "usage": {
+        "input_tokens": 772,
+        "output_tokens": 17,
+        "cost": 0.000032424
+      },
+      "id": "gen-dec-1792350447-JgnA5FMRptHRH1461DX9",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 255,
+    "previousGuesses": [
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 4,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 6,
+    "player": 2,
+    "phrase": "مهندسی افکار",
+    "score": 72.77,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.94,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.21,
+            "3": 0.54,
+            "4": 0.22
+          },
+          "confidence": 0.59
+        }
+      },
+      "usage": {
+        "input_tokens": 808,
+        "output_tokens": 17,
+        "cost": 0.000033936
+      },
+      "id": "gen-dec-1792350447-T7AnHT6BXtEQGXI04qmT",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 745,
+    "previousGuesses": [
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 5,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 7,
+    "player": 0,
+    "phrase": "تخریب روحیه",
+    "score": 63.36,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.56,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.5,
+            "3": 0.38,
+            "4": 0.1
+          },
+          "confidence": 0.5
+        }
+      },
+      "usage": {
+        "input_tokens": 843,
+        "output_tokens": 17,
+        "cost": 0.000035406
+      },
+      "id": "gen-dec-1792350448-1tjybNVYgRBcJWmrJk0J",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 318,
+    "previousGuesses": [
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 6,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 8,
+    "player": 1,
+    "phrase": "جنگ نرم",
+    "score": 84.65,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.42,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.02,
+            "2": 0.09,
+            "3": 0.31,
+            "4": 0.57
+          },
+          "confidence": 0.51
+        }
+      },
+      "usage": {
+        "input_tokens": 872,
+        "output_tokens": 17,
+        "cost": 0.000036624
+      },
+      "id": "gen-dec-1792350448-fpjXAvb3P1OUmsktcanN",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 699,
+    "previousGuesses": [
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 7,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 9,
+    "player": 2,
+    "phrase": "psychological warfare",
+    "score": 92.81,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.75,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.04,
+            "1": 0.01,
+            "2": 0.01,
+            "3": 0.02,
+            "4": 0.92
+          },
+          "confidence": 0.81
+        }
+      },
+      "usage": {
+        "input_tokens": 902,
+        "output_tokens": 17,
+        "cost": 0.000037884
+      },
+      "id": "gen-dec-1792350449-Xh7FO5FZd7Pd5r4DnDlR",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 286,
+    "previousGuesses": [
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 8,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 10,
+    "player": 0,
+    "phrase": "شایعه پراکنی برای تضعیف دشمن",
+    "score": 74.5,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.01,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.21,
+            "3": 0.56,
+            "4": 0.23
+          },
+          "confidence": 0.63
+        }
+      },
+      "usage": {
+        "input_tokens": 949,
+        "output_tokens": 17,
+        "cost": 0.000039858
+      },
+      "id": "gen-dec-1792350449-XIwb7UQHp424joRwPmi5",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 679,
+    "previousGuesses": [
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 9,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 11,
+    "player": 1,
+    "phrase": "باغ انار",
+    "score": 1.98,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.08,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.96,
+            "1": 0.03,
+            "2": 0,
+            "3": 0,
+            "4": 0.01
+          },
+          "confidence": 0.94
+        }
+      },
+      "usage": {
+        "input_tokens": 980,
+        "output_tokens": 17,
+        "cost": 0.00004116
+      },
+      "id": "gen-dec-1792350450-hE84GgevR89nffiuSr8q",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 312,
+    "previousGuesses": [
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 10,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 12,
+    "player": 2,
+    "phrase": "روحیه",
+    "score": 44.3,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.79,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.22,
+            "2": 0.74,
+            "3": 0.02,
+            "4": 0.01
+          },
+          "confidence": 0.77
+        }
+      },
+      "usage": {
+        "input_tokens": 1009,
+        "output_tokens": 17,
+        "cost": 0.000042378
+      },
+      "id": "gen-dec-1792350450-gysNNwa7BDYwAx4AtGsI",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 694,
+    "previousGuesses": [
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 11,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 13,
+    "player": 0,
+    "phrase": "جنگ رسانه ای",
+    "score": 59.65,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.41,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.06,
+            "2": 0.53,
+            "3": 0.34,
+            "4": 0.07
+          },
+          "confidence": 0.55
+        }
+      },
+      "usage": {
+        "input_tokens": 1038,
+        "output_tokens": 17,
+        "cost": 0.000043596
+      },
+      "id": "gen-dec-1792350451-vCZc0xkKXQLu8vXKRhbg",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 282,
+    "previousGuesses": [
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 12,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 14,
+    "player": 1,
+    "phrase": "تهدید",
+    "score": 43.56,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.76,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.25,
+            "2": 0.68,
+            "3": 0.04,
+            "4": 0.01
+          },
+          "confidence": 0.71
+        }
+      },
+      "usage": {
+        "input_tokens": 1068,
+        "output_tokens": 17,
+        "cost": 0.000044856
+      },
+      "id": "gen-dec-1792350451-tjKvHuOQ0bgfiaHYQVpS",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 717,
+    "previousGuesses": [
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 13,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 15,
+    "player": 2,
+    "phrase": "نبرد اعصاب",
+    "score": 79.2,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.2,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.03,
+            "2": 0.15,
+            "3": 0.38,
+            "4": 0.43
+          },
+          "confidence": 0.33
+        }
+      },
+      "usage": {
+        "input_tokens": 1102,
+        "output_tokens": 17,
+        "cost": 0.000046284
+      },
+      "id": "gen-dec-1792350452-Q01uPpPs7GsR6w1gQLDe",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 305,
+    "previousGuesses": [
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 14,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 16,
+    "player": 0,
+    "phrase": "اضطراب",
+    "score": 33.66,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.36,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.07,
+            "1": 0.52,
+            "2": 0.4,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.59
+        }
+      },
+      "usage": {
+        "input_tokens": 1132,
+        "output_tokens": 17,
+        "cost": 0.000047544
+      },
+      "id": "gen-dec-1792350452-c4utfWoBsBrPmiGEoPU3",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 688,
+    "previousGuesses": [
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 15,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 17,
+    "player": 1,
+    "phrase": "ترساندن دشمن",
+    "score": 61.38,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.48,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.58,
+            "3": 0.29,
+            "4": 0.11
+          },
+          "confidence": 0.56
+        }
+      },
+      "usage": {
+        "input_tokens": 1168,
+        "output_tokens": 17,
+        "cost": 0.000049056
+      },
+      "id": "gen-dec-1792350453-ZRXtHR7iJq0sBc4OEqMW",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 314,
+    "previousGuesses": [
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 16,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 18,
+    "player": 2,
+    "phrase": "ترس",
+    "score": 41.33,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.67,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.31,
+            "2": 0.66,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.7
+        }
+      },
+      "usage": {
+        "input_tokens": 1196,
+        "output_tokens": 17,
+        "cost": 0.000050232
+      },
+      "id": "gen-dec-1792350453-ifL7cWgIVuaEWvO5rwY1",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 679,
+    "previousGuesses": [
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 17,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 19,
+    "player": 0,
+    "phrase": "فریب",
+    "score": 45.29,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.83,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.23,
+            "2": 0.67,
+            "3": 0.06,
+            "4": 0.02
+          },
+          "confidence": 0.69
+        }
+      },
+      "usage": {
+        "input_tokens": 1225,
+        "output_tokens": 17,
+        "cost": 0.00005145
+      },
+      "id": "gen-dec-1792350454-yzTQ3lnX6TXrjOtF8iQu",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 283,
+    "previousGuesses": [
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 18,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 20,
+    "player": 1,
+    "phrase": "تبلیغات",
+    "score": 42.82,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.73,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.29,
+            "2": 0.62,
+            "3": 0.05,
+            "4": 0.01
+          },
+          "confidence": 0.65
+        }
+      },
+      "usage": {
+        "input_tokens": 1257,
+        "output_tokens": 17,
+        "cost": 0.000052794
+      },
+      "id": "gen-dec-1792350454-aAFmeU7Z2RRmKcOLtAg6",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 715,
+    "previousGuesses": [
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 19,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 21,
+    "player": 2,
+    "phrase": "تضعیف روحیه",
+    "score": 57.42,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.32,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.68,
+            "3": 0.23,
+            "4": 0.06
+          },
+          "confidence": 0.68
+        }
+      },
+      "usage": {
+        "input_tokens": 1292,
+        "output_tokens": 17,
+        "cost": 0.000054264
+      },
+      "id": "gen-dec-1792350455-ioXsulazYXIrG6r6hCtz",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 256,
+    "previousGuesses": [
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 20,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 22,
+    "player": 0,
+    "phrase": "تبلیغات جنگی",
+    "score": 54.95,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.22,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.11,
+            "2": 0.6,
+            "3": 0.22,
+            "4": 0.06
+          },
+          "confidence": 0.61
+        }
+      },
+      "usage": {
+        "input_tokens": 1328,
+        "output_tokens": 17,
+        "cost": 0.000055776
+      },
+      "id": "gen-dec-1792350455-vV6FeJOZNpM1OxZIKzYq",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 723,
+    "previousGuesses": [
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 21,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 23,
+    "player": 1,
+    "phrase": "جنگ اطلاعاتی",
+    "score": 59.9,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.42,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.1,
+            "2": 0.45999999999999996,
+            "3": 0.33,
+            "4": 0.1
+          },
+          "confidence": 0.46
+        }
+      },
+      "usage": {
+        "input_tokens": 1364,
+        "output_tokens": 17,
+        "cost": 0.000057288
+      },
+      "id": "gen-dec-1792350456-rVKbbaSO64SADpgH7tnF",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 279,
+    "previousGuesses": [
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 22,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 24,
+    "player": 2,
+    "phrase": "روانی",
+    "score": 48.26,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.95,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.1,
+            "2": 0.83,
+            "3": 0.04,
+            "4": 0.02
+          },
+          "confidence": 0.83
+        }
+      },
+      "usage": {
+        "input_tokens": 1393,
+        "output_tokens": 17,
+        "cost": 0.000058506
+      },
+      "id": "gen-dec-1792350456-ysSciBqGx4E36iw9hta0",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 720,
+    "previousGuesses": [
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 23,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 25,
+    "player": 0,
+    "phrase": "بمباران",
+    "score": 21.04,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.85,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.32,
+            "1": 0.55,
+            "2": 0.11,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.6
+        }
+      },
+      "usage": {
+        "input_tokens": 1425,
+        "output_tokens": 17,
+        "cost": 0.00005985
+      },
+      "id": "gen-dec-1792350457-nAHeHoduSNNLA51eokfu",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 293,
+    "previousGuesses": [
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 24,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 26,
+    "player": 1,
+    "phrase": "نبرد روانی",
+    "score": 95.78,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.87,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.01,
+            "2": 0.01,
+            "3": 0.06,
+            "4": 0.91
+          },
+          "confidence": 0.88
+        }
+      },
+      "usage": {
+        "input_tokens": 1459,
+        "output_tokens": 17,
+        "cost": 0.000061278
+      },
+      "id": "gen-dec-1792350457-dzaPg2Dp8wrJQ2JgNL1t",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 698,
+    "previousGuesses": [
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 25,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 27,
+    "player": 2,
+    "phrase": "جنگ روانشناختی",
+    "score": 97.02,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.92,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0,
+            "2": 0,
+            "3": 0.03,
+            "4": 0.96
+          },
+          "confidence": 0.94
+        }
+      },
+      "usage": {
+        "input_tokens": 1497,
+        "output_tokens": 17,
+        "cost": 0.000062874
+      },
+      "id": "gen-dec-1792350458-4T3AbXQZuChk5ZNAAkzD",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 261,
+    "previousGuesses": [
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 26,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 28,
+    "player": 0,
+    "phrase": "فریب دشمن",
+    "score": 51.48,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.08,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.11,
+            "2": 0.71,
+            "3": 0.14,
+            "4": 0.03
+          },
+          "confidence": 0.72
+        }
+      },
+      "usage": {
+        "input_tokens": 1530,
+        "output_tokens": 17,
+        "cost": 0.00006426
+      },
+      "id": "gen-dec-1792350458-oYgkCkrj92plR8gjwBNh",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 745,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 27,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 29,
+    "player": 1,
+    "phrase": "جنگ روانی علیه دشمن",
+    "score": 95.78,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.87,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.08,
+            "4": 0.9
+          },
+          "confidence": 0.88
+        }
+      },
+      "usage": {
+        "input_tokens": 1568,
+        "output_tokens": 17,
+        "cost": 0.000065856
+      },
+      "id": "gen-dec-1792350459-gp3o26ghcXZHLrxufGtQ",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 253,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 28,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 30,
+    "player": 2,
+    "phrase": "جنگ نظامی",
+    "score": 33.66,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.36,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.09,
+            "1": 0.49,
+            "2": 0.4,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.55
+        }
+      },
+      "usage": {
+        "input_tokens": 1602,
+        "output_tokens": 17,
+        "cost": 0.000067284
+      },
+      "id": "gen-dec-1792350459-kRusdqTIS9eri6GbmX3W",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 728,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 29,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 31,
+    "player": 0,
+    "phrase": "پروپاگاندا",
+    "score": 51.48,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.08,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.12,
+            "2": 0.68,
+            "3": 0.15,
+            "4": 0.04
+          },
+          "confidence": 0.69
+        }
+      },
+      "usage": {
+        "input_tokens": 1637,
+        "output_tokens": 17,
+        "cost": 0.000068754
+      },
+      "id": "gen-dec-1792350460-5BJooujLZhbFTLhhwYIx",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 260,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 30,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 32,
+    "player": 1,
+    "phrase": "جنگ اعصاب",
+    "score": 69.05,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.79,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.08,
+            "2": 0.3,
+            "3": 0.33,
+            "4": 0.28
+          },
+          "confidence": 0.36
+        }
+      },
+      "usage": {
+        "input_tokens": 1670,
+        "output_tokens": 17,
+        "cost": 0.00007014
+      },
+      "id": "gen-dec-1792350460-ZOi2eY5NOfoeoa5pEZOD",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 721,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "پروپاگاندا",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 31,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 33,
+    "player": 2,
+    "phrase": "حمله روانی",
+    "score": 75.49,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.05,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.21,
+            "3": 0.49,
+            "4": 0.29
+          },
+          "confidence": 0.57
+        }
+      },
+      "usage": {
+        "input_tokens": 1704,
+        "output_tokens": 17,
+        "cost": 0.000071568
+      },
+      "id": "gen-dec-1792350461-EWBsUhdZS5xHKrBplsuN",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 266,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "جنگ اعصاب",
+        "score_out_of_100": 69.05
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "پروپاگاندا",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 32,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 34,
+    "player": 0,
+    "phrase": "عملیات فریب",
+    "score": 52.72,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.13,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.12,
+            "2": 0.65,
+            "3": 0.17,
+            "4": 0.05
+          },
+          "confidence": 0.66
+        }
+      },
+      "usage": {
+        "input_tokens": 1740,
+        "output_tokens": 17,
+        "cost": 0.00007308
+      },
+      "id": "gen-dec-1792350461-8KlMIcr45duIW5qU7KOs",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 712,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "حمله روانی",
+        "score_out_of_100": 75.49
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "جنگ اعصاب",
+        "score_out_of_100": 69.05
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "پروپاگاندا",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 33,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 35,
+    "player": 1,
+    "phrase": "حمله نظامی",
+    "score": 19.8,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.8,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.27,
+            "1": 0.68,
+            "2": 0.05,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.73
+        }
+      },
+      "usage": {
+        "input_tokens": 1775,
+        "output_tokens": 17,
+        "cost": 0.00007455
+      },
+      "id": "gen-dec-1792350462-oPG0kMoXYfN2KjxJ1O9o",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 272,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "حمله روانی",
+        "score_out_of_100": 75.49
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "جنگ اعصاب",
+        "score_out_of_100": 69.05
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "عملیات فریب",
+        "score_out_of_100": 52.72
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "پروپاگاندا",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 34,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 36,
+    "player": 2,
+    "phrase": "روانشناسی",
+    "score": 41.83,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.69,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.29,
+            "2": 0.6,
+            "3": 0.04,
+            "4": 0.02
+          },
+          "confidence": 0.61
+        }
+      },
+      "usage": {
+        "input_tokens": 1808,
+        "output_tokens": 17,
+        "cost": 0.000075936
+      },
+      "id": "gen-dec-1792350462-nQAJdgVlKLbpo6Xud2mG",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 755,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "حمله روانی",
+        "score_out_of_100": 75.49
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "جنگ اعصاب",
+        "score_out_of_100": 69.05
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "عملیات فریب",
+        "score_out_of_100": 52.72
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "پروپاگاندا",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "حمله نظامی",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 35,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 37,
+    "player": 0,
+    "phrase": "جنگ سرد",
+    "score": 32.18,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.3,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.13,
+            "1": 0.54,
+            "2": 0.27,
+            "3": 0.04,
+            "4": 0.02
+          },
+          "confidence": 0.55
+        }
+      },
+      "usage": {
+        "input_tokens": 1837,
+        "output_tokens": 17,
+        "cost": 0.000077154
+      },
+      "id": "gen-dec-1792350463-93eGpAkrIImJtwJUN0rw",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 278,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "حمله روانی",
+        "score_out_of_100": 75.49
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "جنگ اعصاب",
+        "score_out_of_100": 69.05
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "عملیات فریب",
+        "score_out_of_100": 52.72
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "پروپاگاندا",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "روانشناسی",
+        "score_out_of_100": 41.83
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "حمله نظامی",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 36,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 38,
+    "player": 1,
+    "phrase": "شایعه",
+    "score": 43.81,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.77,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.23,
+            "2": 0.71,
+            "3": 0.03,
+            "4": 0.01
+          },
+          "confidence": 0.73
+        }
+      },
+      "usage": {
+        "input_tokens": 1867,
+        "output_tokens": 17,
+        "cost": 0.000078414
+      },
+      "id": "gen-dec-1792350463-OdKTC72KMZwz7o5eb5GS",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 670,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "حمله روانی",
+        "score_out_of_100": 75.49
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "جنگ اعصاب",
+        "score_out_of_100": 69.05
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "عملیات فریب",
+        "score_out_of_100": 52.72
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "پروپاگاندا",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "روانشناسی",
+        "score_out_of_100": 41.83
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ سرد",
+        "score_out_of_100": 32.18
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "حمله نظامی",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 37,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 39,
+    "player": 2,
+    "phrase": "مذاکره",
+    "score": 13.12,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.53,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.53,
+            "1": 0.43,
+            "2": 0.03,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.57
+        }
+      },
+      "usage": {
+        "input_tokens": 1898,
+        "output_tokens": 17,
+        "cost": 0.000079716
+      },
+      "id": "gen-dec-1792350464-kCR1n0CmUnUaEysxOwJW",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 256,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "حمله روانی",
+        "score_out_of_100": 75.49
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "جنگ اعصاب",
+        "score_out_of_100": 69.05
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "عملیات فریب",
+        "score_out_of_100": 52.72
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "پروپاگاندا",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "شایعه",
+        "score_out_of_100": 43.81
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "روانشناسی",
+        "score_out_of_100": 41.83
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ سرد",
+        "score_out_of_100": 32.18
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "حمله نظامی",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 38,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 40,
+    "player": 0,
+    "phrase": "یخچال",
+    "score": 0.99,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.04,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.98,
+            "1": 0.02,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.98
+        }
+      },
+      "usage": {
+        "input_tokens": 1928,
+        "output_tokens": 17,
+        "cost": 0.000080976
+      },
+      "id": "gen-dec-1792350464-m0b5JeQGjX3jJzhY56KJ",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 731,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "حمله روانی",
+        "score_out_of_100": 75.49
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "جنگ اعصاب",
+        "score_out_of_100": 69.05
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "عملیات فریب",
+        "score_out_of_100": 52.72
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "پروپاگاندا",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "شایعه",
+        "score_out_of_100": 43.81
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "روانشناسی",
+        "score_out_of_100": 41.83
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ سرد",
+        "score_out_of_100": 32.18
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "حمله نظامی",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "مذاکره",
+        "score_out_of_100": 13.12
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 39,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 41,
+    "player": 1,
+    "phrase": "سرباز",
+    "score": 15.84,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.64,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.44,
+            "1": 0.49,
+            "2": 0.07,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.57
+        }
+      },
+      "usage": {
+        "input_tokens": 1957,
+        "output_tokens": 17,
+        "cost": 0.000082194
+      },
+      "id": "gen-dec-1792350465-RqgzOxBHAAD6Xlz3VxC2",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 397,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "حمله روانی",
+        "score_out_of_100": 75.49
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "جنگ اعصاب",
+        "score_out_of_100": 69.05
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "عملیات فریب",
+        "score_out_of_100": 52.72
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "پروپاگاندا",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "شایعه",
+        "score_out_of_100": 43.81
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "روانشناسی",
+        "score_out_of_100": 41.83
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ سرد",
+        "score_out_of_100": 32.18
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "حمله نظامی",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "مذاکره",
+        "score_out_of_100": 13.12
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      },
+      {
+        "guess": "یخچال",
+        "score_out_of_100": 0.99
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 40,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 42,
+    "player": 2,
+    "phrase": "ایجاد ترس در دشمن",
+    "score": 61.13,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.47,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.58,
+            "3": 0.27,
+            "4": 0.12
+          },
+          "confidence": 0.55
+        }
+      },
+      "usage": {
+        "input_tokens": 1995,
+        "output_tokens": 17,
+        "cost": 0.00008379
+      },
+      "id": "gen-dec-1792350465-gOvtBYah95QEGZkdMCxp",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 569,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "حمله روانی",
+        "score_out_of_100": 75.49
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "جنگ اعصاب",
+        "score_out_of_100": 69.05
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "عملیات فریب",
+        "score_out_of_100": 52.72
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "پروپاگاندا",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "شایعه",
+        "score_out_of_100": 43.81
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "روانشناسی",
+        "score_out_of_100": 41.83
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ سرد",
+        "score_out_of_100": 32.18
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "حمله نظامی",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "سرباز",
+        "score_out_of_100": 15.84
+      },
+      {
+        "guess": "مذاکره",
+        "score_out_of_100": 13.12
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      },
+      {
+        "guess": "یخچال",
+        "score_out_of_100": 0.99
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 41,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 43,
+    "player": 0,
+    "phrase": "شایعه پراکنی",
+    "score": 49.01,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.98,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.11,
+            "2": 0.79,
+            "3": 0.08,
+            "4": 0.01
+          },
+          "confidence": 0.81
+        }
+      },
+      "usage": {
+        "input_tokens": 2032,
+        "output_tokens": 17,
+        "cost": 0.000085344
+      },
+      "id": "gen-dec-1792350466-p3clq6KH1ZsdRgp6anmL",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 359,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "حمله روانی",
+        "score_out_of_100": 75.49
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "جنگ اعصاب",
+        "score_out_of_100": 69.05
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "ایجاد ترس در دشمن",
+        "score_out_of_100": 61.13
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "عملیات فریب",
+        "score_out_of_100": 52.72
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "پروپاگاندا",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "شایعه",
+        "score_out_of_100": 43.81
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "روانشناسی",
+        "score_out_of_100": 41.83
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ سرد",
+        "score_out_of_100": 32.18
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "حمله نظامی",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "سرباز",
+        "score_out_of_100": 15.84
+      },
+      {
+        "guess": "مذاکره",
+        "score_out_of_100": 13.12
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      },
+      {
+        "guess": "یخچال",
+        "score_out_of_100": 0.99
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 42,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 44,
+    "player": 1,
+    "phrase": "جنگ روانی در فوتبال",
+    "score": 87.37,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.53,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.01,
+            "2": 0.08,
+            "3": 0.26,
+            "4": 0.64
+          },
+          "confidence": 0.59
+        }
+      },
+      "usage": {
+        "input_tokens": 2067,
+        "output_tokens": 17,
+        "cost": 0.000086814
+      },
+      "id": "gen-dec-1792350466-sKITO5E7JMNB7E6RwqHM",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 636,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "حمله روانی",
+        "score_out_of_100": 75.49
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "جنگ اعصاب",
+        "score_out_of_100": 69.05
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "ایجاد ترس در دشمن",
+        "score_out_of_100": 61.13
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "عملیات فریب",
+        "score_out_of_100": 52.72
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "پروپاگاندا",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "شایعه پراکنی",
+        "score_out_of_100": 49.01
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "شایعه",
+        "score_out_of_100": 43.81
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "روانشناسی",
+        "score_out_of_100": 41.83
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ سرد",
+        "score_out_of_100": 32.18
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "حمله نظامی",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "سرباز",
+        "score_out_of_100": 15.84
+      },
+      {
+        "guess": "مذاکره",
+        "score_out_of_100": 13.12
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      },
+      {
+        "guess": "یخچال",
+        "score_out_of_100": 0.99
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 43,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 45,
+    "player": 2,
+    "phrase": "ارعاب",
+    "score": 45.29,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.83,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.23,
+            "2": 0.65,
+            "3": 0.06,
+            "4": 0.03
+          },
+          "confidence": 0.66
+        }
+      },
+      "usage": {
+        "input_tokens": 2097,
+        "output_tokens": 17,
+        "cost": 0.000088074
+      },
+      "id": "gen-dec-1792350467-vHozA4pNSa4eGQvA39Wc",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 306,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ روانی در فوتبال",
+        "score_out_of_100": 87.37
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "حمله روانی",
+        "score_out_of_100": 75.49
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "جنگ اعصاب",
+        "score_out_of_100": 69.05
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "ایجاد ترس در دشمن",
+        "score_out_of_100": 61.13
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "عملیات فریب",
+        "score_out_of_100": 52.72
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "پروپاگاندا",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "شایعه پراکنی",
+        "score_out_of_100": 49.01
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "شایعه",
+        "score_out_of_100": 43.81
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "روانشناسی",
+        "score_out_of_100": 41.83
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ سرد",
+        "score_out_of_100": 32.18
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "حمله نظامی",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "سرباز",
+        "score_out_of_100": 15.84
+      },
+      {
+        "guess": "مذاکره",
+        "score_out_of_100": 13.12
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      },
+      {
+        "guess": "یخچال",
+        "score_out_of_100": 0.99
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 44,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 46,
+    "player": 0,
+    "phrase": "آرامش",
+    "score": 6.19,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.25,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.77,
+            "1": 0.22,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.8
+        }
+      },
+      "usage": {
+        "input_tokens": 2127,
+        "output_tokens": 17,
+        "cost": 0.000089334
+      },
+      "id": "gen-dec-1792350467-Atc0T0M6iEzQF0zNNxvp",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 647,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ روانی در فوتبال",
+        "score_out_of_100": 87.37
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "حمله روانی",
+        "score_out_of_100": 75.49
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "جنگ اعصاب",
+        "score_out_of_100": 69.05
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "ایجاد ترس در دشمن",
+        "score_out_of_100": 61.13
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "عملیات فریب",
+        "score_out_of_100": 52.72
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "پروپاگاندا",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "شایعه پراکنی",
+        "score_out_of_100": 49.01
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "ارعاب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "شایعه",
+        "score_out_of_100": 43.81
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "روانشناسی",
+        "score_out_of_100": 41.83
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ سرد",
+        "score_out_of_100": 32.18
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "حمله نظامی",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "سرباز",
+        "score_out_of_100": 15.84
+      },
+      {
+        "guess": "مذاکره",
+        "score_out_of_100": 13.12
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      },
+      {
+        "guess": "یخچال",
+        "score_out_of_100": 0.99
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 45,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 47,
+    "player": 1,
+    "phrase": "جنگل",
+    "score": 15.35,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.62,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.53,
+            "1": 0.32,
+            "2": 0.13,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.46
+        }
+      },
+      "usage": {
+        "input_tokens": 2155,
+        "output_tokens": 17,
+        "cost": 0.00009051
+      },
+      "id": "gen-dec-1792350468-dGjIWcC5OcTaovgYt9Zq",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 271,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ روانی در فوتبال",
+        "score_out_of_100": 87.37
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "حمله روانی",
+        "score_out_of_100": 75.49
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "جنگ اعصاب",
+        "score_out_of_100": 69.05
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "ایجاد ترس در دشمن",
+        "score_out_of_100": 61.13
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "عملیات فریب",
+        "score_out_of_100": 52.72
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "پروپاگاندا",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "شایعه پراکنی",
+        "score_out_of_100": 49.01
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "ارعاب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "شایعه",
+        "score_out_of_100": 43.81
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "روانشناسی",
+        "score_out_of_100": 41.83
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ سرد",
+        "score_out_of_100": 32.18
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "حمله نظامی",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "سرباز",
+        "score_out_of_100": 15.84
+      },
+      {
+        "guess": "مذاکره",
+        "score_out_of_100": 13.12
+      },
+      {
+        "guess": "آرامش",
+        "score_out_of_100": 6.19
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      },
+      {
+        "guess": "یخچال",
+        "score_out_of_100": 0.99
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 46,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 48,
+    "player": 2,
+    "phrase": "تبلیغات تجاری",
+    "score": 25,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.01,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.17,
+            "1": 0.65,
+            "2": 0.17,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.7
+        }
+      },
+      "usage": {
+        "input_tokens": 2192,
+        "output_tokens": 17,
+        "cost": 0.000092064
+      },
+      "id": "gen-dec-1792350468-mVmN7hVwo62kfThQA2CK",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 738,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ روانی در فوتبال",
+        "score_out_of_100": 87.37
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "حمله روانی",
+        "score_out_of_100": 75.49
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "جنگ اعصاب",
+        "score_out_of_100": 69.05
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "ایجاد ترس در دشمن",
+        "score_out_of_100": 61.13
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "عملیات فریب",
+        "score_out_of_100": 52.72
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "پروپاگاندا",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "شایعه پراکنی",
+        "score_out_of_100": 49.01
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "ارعاب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "شایعه",
+        "score_out_of_100": 43.81
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "روانشناسی",
+        "score_out_of_100": 41.83
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ سرد",
+        "score_out_of_100": 32.18
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "حمله نظامی",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "سرباز",
+        "score_out_of_100": 15.84
+      },
+      {
+        "guess": "جنگل",
+        "score_out_of_100": 15.35
+      },
+      {
+        "guess": "مذاکره",
+        "score_out_of_100": 13.12
+      },
+      {
+        "guess": "آرامش",
+        "score_out_of_100": 6.19
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      },
+      {
+        "guess": "یخچال",
+        "score_out_of_100": 0.99
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 47,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 49,
+    "player": 0,
+    "phrase": "دستکاری افکار",
+    "score": 59.4,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.4,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.05,
+            "2": 0.58,
+            "3": 0.29,
+            "4": 0.08
+          },
+          "confidence": 0.58
+        }
+      },
+      "usage": {
+        "input_tokens": 2226,
+        "output_tokens": 17,
+        "cost": 0.000093492
+      },
+      "id": "gen-dec-1792350469-8f9Upxc9zSouK2swvAea",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 277,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ روانی در فوتبال",
+        "score_out_of_100": 87.37
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "حمله روانی",
+        "score_out_of_100": 75.49
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "جنگ اعصاب",
+        "score_out_of_100": 69.05
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "ایجاد ترس در دشمن",
+        "score_out_of_100": 61.13
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "عملیات فریب",
+        "score_out_of_100": 52.72
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "پروپاگاندا",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "شایعه پراکنی",
+        "score_out_of_100": 49.01
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "ارعاب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "شایعه",
+        "score_out_of_100": 43.81
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "روانشناسی",
+        "score_out_of_100": 41.83
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ سرد",
+        "score_out_of_100": 32.18
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "تبلیغات تجاری",
+        "score_out_of_100": 25
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "حمله نظامی",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "سرباز",
+        "score_out_of_100": 15.84
+      },
+      {
+        "guess": "جنگل",
+        "score_out_of_100": 15.35
+      },
+      {
+        "guess": "مذاکره",
+        "score_out_of_100": 13.12
+      },
+      {
+        "guess": "آرامش",
+        "score_out_of_100": 6.19
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      },
+      {
+        "guess": "یخچال",
+        "score_out_of_100": 0.99
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 48,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  },
+  {
+    "position": 50,
+    "player": 1,
+    "phrase": "جنگ روانی",
+    "score": 98.01,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.96,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0.99
+          },
+          "confidence": 0.97
+        }
+      },
+      "usage": {
+        "input_tokens": 2258,
+        "output_tokens": 17,
+        "cost": 0.000094836
+      },
+      "id": "gen-dec-1792350469-pS7hdiT6tMeiQan4dme8",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 672,
+    "previousGuesses": [
+      {
+        "guess": "جنگ روانشناختی",
+        "score_out_of_100": 97.02
+      },
+      {
+        "guess": "جنگ روانی علیه دشمن",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "نبرد روانی",
+        "score_out_of_100": 95.78
+      },
+      {
+        "guess": "psychological warfare",
+        "score_out_of_100": 92.81
+      },
+      {
+        "guess": "عملیات روانی",
+        "score_out_of_100": 88.11
+      },
+      {
+        "guess": "جنگ روانی در فوتبال",
+        "score_out_of_100": 87.37
+      },
+      {
+        "guess": "جنگ نرم",
+        "score_out_of_100": 84.65
+      },
+      {
+        "guess": "نبرد اعصاب",
+        "score_out_of_100": 79.2
+      },
+      {
+        "guess": "حمله روانی",
+        "score_out_of_100": 75.49
+      },
+      {
+        "guess": "شایعه پراکنی برای تضعیف دشمن",
+        "score_out_of_100": 74.5
+      },
+      {
+        "guess": "مهندسی افکار",
+        "score_out_of_100": 72.77
+      },
+      {
+        "guess": "جنگ اعصاب",
+        "score_out_of_100": 69.05
+      },
+      {
+        "guess": "دستکاری روانی",
+        "score_out_of_100": 68.8
+      },
+      {
+        "guess": "تخریب روحیه",
+        "score_out_of_100": 63.36
+      },
+      {
+        "guess": "ترساندن دشمن",
+        "score_out_of_100": 61.38
+      },
+      {
+        "guess": "ایجاد ترس در دشمن",
+        "score_out_of_100": 61.13
+      },
+      {
+        "guess": "جنگ اطلاعاتی",
+        "score_out_of_100": 59.9
+      },
+      {
+        "guess": "جنگ رسانه ای",
+        "score_out_of_100": 59.65
+      },
+      {
+        "guess": "دستکاری افکار",
+        "score_out_of_100": 59.4
+      },
+      {
+        "guess": "تضعیف روحیه",
+        "score_out_of_100": 57.42
+      },
+      {
+        "guess": "تبلیغات جنگی",
+        "score_out_of_100": 54.95
+      },
+      {
+        "guess": "عملیات فریب",
+        "score_out_of_100": 52.72
+      },
+      {
+        "guess": "فریب دشمن",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "پروپاگاندا",
+        "score_out_of_100": 51.48
+      },
+      {
+        "guess": "شایعه پراکنی",
+        "score_out_of_100": 49.01
+      },
+      {
+        "guess": "جنگ",
+        "score_out_of_100": 48.76
+      },
+      {
+        "guess": "روانی",
+        "score_out_of_100": 48.26
+      },
+      {
+        "guess": "ارعاب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "فریب",
+        "score_out_of_100": 45.29
+      },
+      {
+        "guess": "روحیه",
+        "score_out_of_100": 44.3
+      },
+      {
+        "guess": "شایعه",
+        "score_out_of_100": 43.81
+      },
+      {
+        "guess": "تهدید",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "تبلیغات",
+        "score_out_of_100": 42.82
+      },
+      {
+        "guess": "روانشناسی",
+        "score_out_of_100": 41.83
+      },
+      {
+        "guess": "ترس",
+        "score_out_of_100": 41.33
+      },
+      {
+        "guess": "اضطراب",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ نظامی",
+        "score_out_of_100": 33.66
+      },
+      {
+        "guess": "جنگ سرد",
+        "score_out_of_100": 32.18
+      },
+      {
+        "guess": "جنگ مسلحانه",
+        "score_out_of_100": 31.19
+      },
+      {
+        "guess": "دشمن",
+        "score_out_of_100": 27.97
+      },
+      {
+        "guess": "تبلیغات تجاری",
+        "score_out_of_100": 25
+      },
+      {
+        "guess": "بمباران",
+        "score_out_of_100": 21.04
+      },
+      {
+        "guess": "حمله نظامی",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "سرباز",
+        "score_out_of_100": 15.84
+      },
+      {
+        "guess": "جنگل",
+        "score_out_of_100": 15.35
+      },
+      {
+        "guess": "مذاکره",
+        "score_out_of_100": 13.12
+      },
+      {
+        "guess": "آرامش",
+        "score_out_of_100": 6.19
+      },
+      {
+        "guess": "باغ انار",
+        "score_out_of_100": 1.98
+      },
+      {
+        "guess": "یخچال",
+        "score_out_of_100": 0.99
+      }
+    ],
+    "selectionCounts": {
+      "globalTop": 49,
+      "userTop": 0,
+      "randomOthers": 0,
+      "globalFill": 0
+    }
+  }
+]

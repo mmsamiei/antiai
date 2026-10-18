@@ -45,9 +45,11 @@ async function request<T>(url: string, init?: RequestInit): Promise<T> {
 export default function LetterDuel({
   onExit,
   setError,
+  onOpenProfile,
 }: {
   onExit: () => void;
   setError: (message: string) => void;
+  onOpenProfile: (userId: string) => void;
 }) {
   const [duel, setDuel] = useState<DuelState | null>(null),
     [loading, setLoading] = useState(true),
@@ -264,12 +266,17 @@ export default function LetterDuel({
         </button>
       </div>
       <div className="duel-score">
-        <DuelPlayer user={duel.me} score={duel.myScore} />
+        <DuelPlayer
+          user={duel.me}
+          score={duel.myScore}
+          onOpenProfile={onOpenProfile}
+        />
         <b>—</b>
         <DuelPlayer
           user={duel.opponent}
           score={duel.opponentScore}
           disconnected={!duel.opponentConnected}
+          onOpenProfile={onOpenProfile}
         />
       </div>
       {!duel.opponentConnected && (
@@ -394,16 +401,28 @@ function DuelPlayer({
   user,
   score,
   disconnected = false,
+  onOpenProfile,
 }: {
   user: DuelUser | null;
   score: number;
   disconnected?: boolean;
+  onOpenProfile: (userId: string) => void;
 }) {
   return (
     <div className={disconnected ? "offline" : ""}>
-      {user?.photoUrl ? <img src={user.photoUrl} alt="" /> : <span>👤</span>}
-      <b>{user?.name || "منتظر…"}</b>
-      {user?.username && <small>@{user.username}</small>}
+      {user ? (
+        <button
+          className="duel-profile-trigger"
+          onClick={() => onOpenProfile(user.id)}
+          aria-label={`نمایش پروفایل ${user.name}`}
+        >
+          {user.photoUrl ? <img src={user.photoUrl} alt="" /> : <span>👤</span>}
+          <b>{user.name}</b>
+          {user.username && <small>@{user.username}</small>}
+        </button>
+      ) : (
+        <><span>👤</span><b>منتظر…</b></>
+      )}
       <strong>{score.toLocaleString("fa-IR")}</strong>
     </div>
   );

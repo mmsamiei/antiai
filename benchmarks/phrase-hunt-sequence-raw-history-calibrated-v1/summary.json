@@ -1,0 +1,132 @@
+{
+  "target": "راز باغ انار",
+  "calls": 25,
+  "entries": [
+    {
+      "position": 1,
+      "phrase": "جاندار",
+      "score": 8.66
+    },
+    {
+      "position": 2,
+      "phrase": "اشیا",
+      "score": 14.6
+    },
+    {
+      "position": 3,
+      "phrase": "مفهوم",
+      "score": 29.95
+    },
+    {
+      "position": 4,
+      "phrase": "هنر",
+      "score": 22.77
+    },
+    {
+      "position": 5,
+      "phrase": "فناوری",
+      "score": 13.12
+    },
+    {
+      "position": 6,
+      "phrase": "کشاورزی",
+      "score": 33.66
+    },
+    {
+      "position": 7,
+      "phrase": "خوراکی",
+      "score": 25
+    },
+    {
+      "position": 8,
+      "phrase": "میوه",
+      "score": 44.06
+    },
+    {
+      "position": 9,
+      "phrase": "درخت",
+      "score": 47.77
+    },
+    {
+      "position": 10,
+      "phrase": "گلابی",
+      "score": 40.84
+    },
+    {
+      "position": 11,
+      "phrase": "برگ",
+      "score": 38.12
+    },
+    {
+      "position": 12,
+      "phrase": "ریشه",
+      "score": 44.06
+    },
+    {
+      "position": 13,
+      "phrase": "خاک",
+      "score": 34.65
+    },
+    {
+      "position": 14,
+      "phrase": "سیب",
+      "score": 46.04
+    },
+    {
+      "position": 15,
+      "phrase": "کریسمس",
+      "score": 7.92
+    },
+    {
+      "position": 16,
+      "phrase": "کاج",
+      "score": 39.11
+    },
+    {
+      "position": 17,
+      "phrase": "باغ",
+      "score": 54.2
+    },
+    {
+      "position": 18,
+      "phrase": "باغ میوه",
+      "score": 54.2
+    },
+    {
+      "position": 19,
+      "phrase": "باغچه",
+      "score": 52.72
+    },
+    {
+      "position": 20,
+      "phrase": "باغستان",
+      "score": 59.9
+    },
+    {
+      "position": 21,
+      "phrase": "باغ انگور",
+      "score": 55.19
+    },
+    {
+      "position": 22,
+      "phrase": "باغ پرتقال",
+      "score": 56.68
+    },
+    {
+      "position": 23,
+      "phrase": "دیوار باغ",
+      "score": 42.82
+    },
+    {
+      "position": 24,
+      "phrase": "ویلا",
+      "score": 15.35
+    },
+    {
+      "position": 25,
+      "phrase": "نگهبان",
+      "score": 19.55
+    }
+  ],
+  "method": "25 chronological independent HTTP calls. One score question per request. Entire prior replay history passed as previous_guesses with raw public scores from this run. No pairwise questions, no numeric postprocessing other than standard raw/4*99 display conversion, no future guesses, no historical production scores sent. No production state or cache writes. Only instruction change relative to raw-history-v1: explicitly use previous_guesses to maintain score consistency. Each replay generates its own history, so later score differences include propagated history differences as well as instruction effects. One replay only."
+}

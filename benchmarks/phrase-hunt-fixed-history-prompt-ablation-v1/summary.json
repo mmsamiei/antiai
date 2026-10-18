@@ -1,0 +1,140 @@
+{
+  "short_calibrated": {
+    "garden": {
+      "n": 10,
+      "scores": [
+        53.46,
+        53.96,
+        53.21,
+        54.7,
+        53.21,
+        54.45,
+        52.22,
+        53.46,
+        52.97,
+        53.71
+      ],
+      "mean": 53.53499999999999,
+      "variance": 0.46766500000000166,
+      "standardDeviation": 0.6838603658642616,
+      "sampleVariance": 0.5196277777777796,
+      "min": 52.22,
+      "max": 54.7
+    },
+    "fruit": {
+      "n": 10,
+      "scores": [
+        54.2,
+        54.2,
+        55.19,
+        55.69,
+        52.97,
+        54.95,
+        53.96,
+        54.95,
+        55.44,
+        55.44
+      ],
+      "mean": 54.699,
+      "variance": 0.6480889999999986,
+      "standardDeviation": 0.8050397505713607,
+      "sampleVariance": 0.7200988888888874,
+      "min": 52.97,
+      "max": 55.69
+    },
+    "fruitMinusFixedGarden": {
+      "n": 10,
+      "scores": [
+        2.97,
+        2.97,
+        3.96,
+        4.46,
+        1.74,
+        3.72,
+        2.73,
+        3.72,
+        4.21,
+        4.21
+      ],
+      "mean": 3.469,
+      "variance": 0.6480889999999999,
+      "standardDeviation": 0.8050397505713615,
+      "sampleVariance": 0.7200988888888887,
+      "min": 1.74,
+      "max": 4.46
+    },
+    "fruitAboveFixedGarden": 10,
+    "fruitEqualFixedGarden": 0,
+    "fruitBelowFixedGarden": 0,
+    "fruitMeanMinusRescoredGardenMean": 1.1640000000000086
+  },
+  "game_context": {
+    "garden": {
+      "n": 10,
+      "scores": [
+        60.14,
+        58.66,
+        61.38,
+        61.13,
+        62.37,
+        60.64,
+        61.63,
+        62.62,
+        59.15,
+        60.14
+      ],
+      "mean": 60.786,
+      "variance": 1.5108440000000012,
+      "standardDeviation": 1.2291639434998087,
+      "sampleVariance": 1.6787155555555568,
+      "min": 58.66,
+      "max": 62.62
+    },
+    "fruit": {
+      "n": 10,
+      "scores": [
+        59.4,
+        58.16,
+        57.67,
+        57.17,
+        58.91,
+        57.92,
+        59.65,
+        58.91,
+        57.67,
+        56.68
+      ],
+      "mean": 58.214,
+      "variance": 0.8561839999999975,
+      "standardDeviation": 0.9253021128258584,
+      "sampleVariance": 0.9513155555555528,
+      "min": 56.68,
+      "max": 59.65
+    },
+    "fruitMinusFixedGarden": {
+      "n": 10,
+      "scores": [
+        8.17,
+        6.93,
+        6.44,
+        5.94,
+        7.68,
+        6.69,
+        8.42,
+        7.68,
+        6.44,
+        5.45
+      ],
+      "mean": 6.984,
+      "variance": 0.8561839999999996,
+      "standardDeviation": 0.9253021128258595,
+      "sampleVariance": 0.9513155555555551,
+      "min": 5.45,
+      "max": 8.42
+    },
+    "fruitAboveFixedGarden": 10,
+    "fruitEqualFixedGarden": 0,
+    "fruitBelowFixedGarden": 0,
+    "fruitMeanMinusRescoredGardenMean": -2.5720000000000027
+  }
+}

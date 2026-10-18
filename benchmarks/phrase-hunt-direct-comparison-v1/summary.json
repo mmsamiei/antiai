@@ -1,0 +1,152 @@
+{
+  "garden_first": {
+    "n": 10,
+    "counts": {
+      "باغ": 0,
+      "باغ میوه": 10,
+      "equal": 0
+    },
+    "choices": [
+      "B_CLOSER",
+      "B_CLOSER",
+      "B_CLOSER",
+      "B_CLOSER",
+      "B_CLOSER",
+      "B_CLOSER",
+      "B_CLOSER",
+      "B_CLOSER",
+      "B_CLOSER",
+      "B_CLOSER"
+    ],
+    "probabilities": [
+      {
+        "A_CLOSER": 0.37,
+        "B_CLOSER": 0.6,
+        "EQUAL": 0.03
+      },
+      {
+        "A_CLOSER": 0.4,
+        "B_CLOSER": 0.57,
+        "EQUAL": 0.03
+      },
+      {
+        "A_CLOSER": 0.4,
+        "B_CLOSER": 0.57,
+        "EQUAL": 0.03
+      },
+      {
+        "A_CLOSER": 0.41,
+        "B_CLOSER": 0.56,
+        "EQUAL": 0.03
+      },
+      {
+        "A_CLOSER": 0.35,
+        "B_CLOSER": 0.62,
+        "EQUAL": 0.03
+      },
+      {
+        "A_CLOSER": 0.4,
+        "B_CLOSER": 0.57,
+        "EQUAL": 0.03
+      },
+      {
+        "A_CLOSER": 0.37,
+        "B_CLOSER": 0.61,
+        "EQUAL": 0.02
+      },
+      {
+        "A_CLOSER": 0.36,
+        "B_CLOSER": 0.61,
+        "EQUAL": 0.03
+      },
+      {
+        "A_CLOSER": 0.35,
+        "B_CLOSER": 0.62,
+        "EQUAL": 0.03
+      },
+      {
+        "A_CLOSER": 0.38,
+        "B_CLOSER": 0.59,
+        "EQUAL": 0.03
+      }
+    ],
+    "servedModels": [
+      "typesafe/jev-1.13-20260917"
+    ]
+  },
+  "fruit_first": {
+    "n": 10,
+    "counts": {
+      "باغ": 0,
+      "باغ میوه": 10,
+      "equal": 0
+    },
+    "choices": [
+      "A_CLOSER",
+      "A_CLOSER",
+      "A_CLOSER",
+      "A_CLOSER",
+      "A_CLOSER",
+      "A_CLOSER",
+      "A_CLOSER",
+      "A_CLOSER",
+      "A_CLOSER",
+      "A_CLOSER"
+    ],
+    "probabilities": [
+      {
+        "A_CLOSER": 0.67,
+        "B_CLOSER": 0.29,
+        "EQUAL": 0.04
+      },
+      {
+        "A_CLOSER": 0.66,
+        "B_CLOSER": 0.3,
+        "EQUAL": 0.04
+      },
+      {
+        "A_CLOSER": 0.65,
+        "B_CLOSER": 0.3,
+        "EQUAL": 0.05
+      },
+      {
+        "A_CLOSER": 0.69,
+        "B_CLOSER": 0.26,
+        "EQUAL": 0.05
+      },
+      {
+        "A_CLOSER": 0.65,
+        "B_CLOSER": 0.3,
+        "EQUAL": 0.05
+      },
+      {
+        "A_CLOSER": 0.61,
+        "B_CLOSER": 0.34,
+        "EQUAL": 0.05
+      },
+      {
+        "A_CLOSER": 0.66,
+        "B_CLOSER": 0.29,
+        "EQUAL": 0.05
+      },
+      {
+        "A_CLOSER": 0.69,
+        "B_CLOSER": 0.27,
+        "EQUAL": 0.04
+      },
+      {
+        "A_CLOSER": 0.73,
+        "B_CLOSER": 0.23,
+        "EQUAL": 0.04
+      },
+      {
+        "A_CLOSER": 0.65,
+        "B_CLOSER": 0.3,
+        "EQUAL": 0.05
+      }
+    ],
+    "servedModels": [
+      "typesafe/jev-1.13-20260917"
+    ]
+  }
+}

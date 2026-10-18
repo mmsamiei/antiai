@@ -1,0 +1,278 @@
+{
+  "entries": [
+    {
+      "position": 1,
+      "phrase": "جاندار",
+      "originalPhrase": "جاندار",
+      "storedProductionScore": 14.6,
+      "independentScore": 6.19,
+      "windowRawScore": 6.68,
+      "finalScore": 6.68,
+      "feasible": true
+    },
+    {
+      "position": 2,
+      "phrase": "اشیا",
+      "originalPhrase": "اشیا",
+      "storedProductionScore": 15.35,
+      "independentScore": 6.93,
+      "windowRawScore": 15.1,
+      "finalScore": 5.68,
+      "feasible": true
+    },
+    {
+      "position": 3,
+      "phrase": "مفهوم",
+      "originalPhrase": "مفهوم",
+      "storedProductionScore": 23.27,
+      "independentScore": 17.33,
+      "windowRawScore": 21.78,
+      "finalScore": 4.68,
+      "feasible": true
+    },
+    {
+      "position": 4,
+      "phrase": "هنر",
+      "originalPhrase": "هنر",
+      "storedProductionScore": 20.29,
+      "independentScore": 9.41,
+      "windowRawScore": 17.57,
+      "finalScore": 3.68,
+      "feasible": true
+    },
+    {
+      "position": 5,
+      "phrase": "فناوری",
+      "originalPhrase": "فناوری",
+      "storedProductionScore": 11.39,
+      "independentScore": 2.97,
+      "windowRawScore": 11.63,
+      "finalScore": 2.68,
+      "feasible": true
+    },
+    {
+      "position": 6,
+      "phrase": "کشاورزی",
+      "originalPhrase": "کشاورزی",
+      "storedProductionScore": 41.58,
+      "independentScore": 22.77,
+      "windowRawScore": 34.65,
+      "finalScore": 34.65,
+      "feasible": true
+    },
+    {
+      "position": 7,
+      "phrase": "خوراکی",
+      "originalPhrase": "خوراکی",
+      "storedProductionScore": 30.94,
+      "independentScore": 15.84,
+      "windowRawScore": 25.99,
+      "finalScore": 1.68,
+      "feasible": true
+    },
+    {
+      "position": 8,
+      "phrase": "میوه",
+      "originalPhrase": "میوه",
+      "storedProductionScore": 44.55,
+      "independentScore": 32.92,
+      "windowRawScore": 40.34,
+      "finalScore": 33.65,
+      "feasible": true
+    },
+    {
+      "position": 9,
+      "phrase": "درخت",
+      "originalPhrase": "درخت",
+      "storedProductionScore": 45.05,
+      "independentScore": 34.65,
+      "windowRawScore": 44.06,
+      "finalScore": 32.65,
+      "feasible": true
+    },
+    {
+      "position": 10,
+      "phrase": "گلابی",
+      "originalPhrase": "گلابی",
+      "storedProductionScore": 32.92,
+      "independentScore": 11.39,
+      "windowRawScore": 33.91,
+      "finalScore": 31.65,
+      "feasible": true
+    },
+    {
+      "position": 11,
+      "phrase": "برگ",
+      "originalPhrase": "برگ",
+      "storedProductionScore": 32.18,
+      "independentScore": 16.58,
+      "windowRawScore": 33.41,
+      "finalScore": 3.01,
+      "feasible": false
+    },
+    {
+      "position": 12,
+      "phrase": "ریشه",
+      "originalPhrase": "ریشه",
+      "storedProductionScore": 32.67,
+      "independentScore": 16.83,
+      "windowRawScore": 37.87,
+      "finalScore": 3.46,
+      "feasible": false
+    },
+    {
+      "position": 13,
+      "phrase": "خاک",
+      "originalPhrase": "خاک",
+      "storedProductionScore": 36.38,
+      "independentScore": 18.07,
+      "windowRawScore": 33.66,
+      "finalScore": 2.72,
+      "feasible": false
+    },
+    {
+      "position": 14,
+      "phrase": "سیب",
+      "originalPhrase": "سیب",
+      "storedProductionScore": 34.65,
+      "independentScore": 18.56,
+      "windowRawScore": 37.37,
+      "finalScore": 34.65,
+      "feasible": false
+    },
+    {
+      "position": 15,
+      "phrase": "کریسمس",
+      "originalPhrase": "کریسمس",
+      "storedProductionScore": 11.63,
+      "independentScore": 4.46,
+      "windowRawScore": 8.17,
+      "finalScore": 0.68,
+      "feasible": true
+    },
+    {
+      "position": 16,
+      "phrase": "کاج",
+      "originalPhrase": "کاج",
+      "storedProductionScore": 21.53,
+      "independentScore": 5.69,
+      "windowRawScore": 26.48,
+      "finalScore": 26.48,
+      "feasible": true
+    },
+    {
+      "position": 17,
+      "phrase": "باغ",
+      "originalPhrase": "باغ",
+      "storedProductionScore": 65.59,
+      "independentScore": 49.01,
+      "windowRawScore": 52.22,
+      "finalScore": 52.22,
+      "feasible": true
+    },
+    {
+      "position": 18,
+      "phrase": "باغ میوه",
+      "originalPhrase": "باغ میوه",
+      "storedProductionScore": 54.95,
+      "independentScore": 45.79,
+      "windowRawScore": 50.24,
+      "finalScore": 53.22,
+      "feasible": true
+    },
+    {
+      "position": 19,
+      "phrase": "باغچه",
+      "originalPhrase": "باغچه",
+      "storedProductionScore": 49.5,
+      "independentScore": 39.6,
+      "windowRawScore": 50.74,
+      "finalScore": 50.74,
+      "feasible": true
+    },
+    {
+      "position": 20,
+      "phrase": "باغستان",
+      "originalPhrase": "باغستان",
+      "storedProductionScore": 46.04,
+      "independentScore": 38.36,
+      "windowRawScore": 51.48,
+      "finalScore": 51.48,
+      "feasible": false
+    },
+    {
+      "position": 21,
+      "phrase": "باغ انگور",
+      "originalPhrase": "باغ انگور",
+      "storedProductionScore": 50,
+      "independentScore": 40.1,
+      "windowRawScore": 50,
+      "finalScore": 51.85,
+      "feasible": false
+    },
+    {
+      "position": 22,
+      "phrase": "باغ پرتقال",
+      "originalPhrase": "باغ پرتقال",
+      "storedProductionScore": 47.52,
+      "independentScore": 37.62,
+      "windowRawScore": 48.02,
+      "finalScore": 52.03,
+      "feasible": false
+    },
+    {
+      "position": 23,
+      "phrase": "دیوار باغ",
+      "originalPhrase": "دیوار باغ",
+      "storedProductionScore": 45.54,
+      "independentScore": 36.63,
+      "windowRawScore": 42.82,
+      "finalScore": 42.82,
+      "feasible": true
+    },
+    {
+      "position": 24,
+      "phrase": "ویلا",
+      "originalPhrase": "ویلا",
+      "storedProductionScore": 23.76,
+      "independentScore": 10.4,
+      "windowRawScore": 15.1,
+      "finalScore": 15.1,
+      "feasible": true
+    },
+    {
+      "position": 25,
+      "phrase": "نگهبان",
+      "originalPhrase": "نگهبان",
+      "storedProductionScore": 30.94,
+      "independentScore": 12.62,
+      "windowRawScore": 19.06,
+      "finalScore": 14.1,
+      "feasible": true
+    }
+  ],
+  "calls": {
+    "control": 25,
+    "replay": 25,
+    "total": 50
+  },
+  "comparisonQuestions": 164,
+  "satisfiedComparisons": 147,
+  "infeasibleSteps": [
+    11,
+    12,
+    13,
+    14,
+    20,
+    21,
+    22
+  ],
+  "adjustedSteps": 17,
+  "limitations": [
+    "One purposively selected sequence and one replay; not an overall accuracy estimate",
+    "Constraint satisfaction is enforced by postprocessing and is not independent evidence of semantic correctness",
+    "One-point gap and two-point equality tolerance are design choices, not model-estimated distances",
+    "Initial score and local history affect subsequent numeric scale",
+    "Historical production scores used a different prompt; independent control is the matched baseline"
+  ]
+}

@@ -1,0 +1,2195 @@
+[
+  {
+    "round": 0,
+    "n": 1,
+    "phrase": "شرینی",
+    "warmup": true,
+    "requestBytes": 1172,
+    "requestSha256": "3aef51a29ed32decb29e2aa70f3c3c146fcd9613284076b824dbc63d4875bf29",
+    "at": "2026-10-18T18:42:00.249Z",
+    "elapsedMs": 1817.7040330171585,
+    "headersMs": 1783.9623230099678,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.81,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.38,
+            "1": 0.45999999999999996,
+            "2": 0.14,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.52
+        }
+      },
+      "usage": {
+        "input_tokens": 668,
+        "output_tokens": 17,
+        "cost": 0.000028056
+      },
+      "id": "gen-dec-1792348919-WgwZvH6GMsyymY04EdLH",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 20.05
+  },
+  {
+    "round": 1,
+    "n": 50,
+    "phrase": "شرینی",
+    "warmup": false,
+    "requestBytes": 3885,
+    "requestSha256": "97460ba8606205597008cf28a78f390d8d1d291f85d0924694dd5e9ca8f791fc",
+    "at": "2026-10-18T18:42:00.555Z",
+    "elapsedMs": 300.8252349793911,
+    "headersMs": 292.19719499349594,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.53,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.54,
+            "1": 0.39,
+            "2": 0.05,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.53
+        }
+      },
+      "usage": {
+        "input_tokens": 2247,
+        "output_tokens": 17,
+        "cost": 0.000094374
+      },
+      "id": "gen-dec-1792348920-g3Vwk2BiWb2tAe5XcLiN",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 13.12
+  },
+  {
+    "round": 1,
+    "n": 1000,
+    "phrase": "شرینی",
+    "warmup": false,
+    "requestBytes": 54403,
+    "requestSha256": "bfec273ca279255121a74fd2a21bca3242b48c8dd2a4255f50000cec03e0235a",
+    "at": "2026-10-18T18:42:01.166Z",
+    "elapsedMs": 602.2283159792423,
+    "headersMs": 589.401378005743,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.47,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.6,
+            "1": 0.35,
+            "2": 0.04,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.62
+        }
+      },
+      "usage": {
+        "input_tokens": 32267,
+        "output_tokens": 17,
+        "cost": 0.001355214
+      },
+      "id": "gen-dec-1792348920-ZhQdgcZguMCvoWUMXptl",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 11.63
+  },
+  {
+    "round": 1,
+    "n": 100,
+    "phrase": "شرینی",
+    "warmup": false,
+    "requestBytes": 6642,
+    "requestSha256": "4284100f5943d2c26f6bf2dd29e711a78f312e1be6980e80485d3791095b2d50",
+    "at": "2026-10-18T18:42:01.522Z",
+    "elapsedMs": 352.10585498809814,
+    "headersMs": 344.4465969800949,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.52,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.57,
+            "1": 0.37,
+            "2": 0.04,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.57
+        }
+      },
+      "usage": {
+        "input_tokens": 3860,
+        "output_tokens": 17,
+        "cost": 0.00016212
+      },
+      "id": "gen-dec-1792348921-rbzyNsJfbnuHirfivTlf",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 12.87
+  },
+  {
+    "round": 1,
+    "n": 10,
+    "phrase": "شرینی",
+    "warmup": false,
+    "requestBytes": 1736,
+    "requestSha256": "99919d87c7d659dc74b770c62d554009afdd0ede5517e0819d0ef8e2c01e7e7f",
+    "at": "2026-10-18T18:42:02.153Z",
+    "elapsedMs": 627.1052500009537,
+    "headersMs": 620.4214099943638,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.49,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.62,
+            "1": 0.32,
+            "2": 0.04,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.61
+        }
+      },
+      "usage": {
+        "input_tokens": 989,
+        "output_tokens": 17,
+        "cost": 0.000041538
+      },
+      "id": "gen-dec-1792348921-NEsQnKShrvpUYauzuNDu",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 12.13
+  },
+  {
+    "round": 1,
+    "n": 1,
+    "phrase": "شرینی",
+    "warmup": false,
+    "requestBytes": 1172,
+    "requestSha256": "3aef51a29ed32decb29e2aa70f3c3c146fcd9613284076b824dbc63d4875bf29",
+    "at": "2026-10-18T18:42:02.479Z",
+    "elapsedMs": 324.70325297117233,
+    "headersMs": 318.5268909931183,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.82,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.39,
+            "1": 0.44,
+            "2": 0.14,
+            "3": 0.02,
+            "4": 0.01
+          },
+          "confidence": 0.5
+        }
+      },
+      "usage": {
+        "input_tokens": 668,
+        "output_tokens": 17,
+        "cost": 0.000028056
+      },
+      "id": "gen-dec-1792348922-7jNcFugT2k1skXoApQed",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 20.29
+  },
+  {
+    "round": 2,
+    "n": 100,
+    "phrase": "کاراته",
+    "warmup": false,
+    "requestBytes": 6644,
+    "requestSha256": "5f89f688c71118e252ca2980d12b93f3340e2096b96ccd915734969d80622c00",
+    "at": "2026-10-18T18:42:03.151Z",
+    "elapsedMs": 671.0142860114574,
+    "headersMs": 665.9675390124321,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.19,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.88,
+            "1": 0.08,
+            "2": 0.01,
+            "3": 0.01,
+            "4": 0.02
+          },
+          "confidence": 0.82
+        }
+      },
+      "usage": {
+        "input_tokens": 3861,
+        "output_tokens": 17,
+        "cost": 0.000162162
+      },
+      "id": "gen-dec-1792348922-iC6kKEB4VQMDoACOodvF",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 4.7
+  },
+  {
+    "round": 2,
+    "n": 50,
+    "phrase": "کاراته",
+    "warmup": false,
+    "requestBytes": 3887,
+    "requestSha256": "abe9c7692fae8a8f39501ceedf97efc56ddc6afc6925feb024d0b0c286a9231e",
+    "at": "2026-10-18T18:42:03.460Z",
+    "elapsedMs": 305.40912398695946,
+    "headersMs": 302.2873649895191,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.12,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.91,
+            "1": 0.08,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.92
+        }
+      },
+      "usage": {
+        "input_tokens": 2248,
+        "output_tokens": 17,
+        "cost": 0.000094416
+      },
+      "id": "gen-dec-1792348923-OhETHerT9cbJ8hbZoSXG",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 2.97
+  },
+  {
+    "round": 2,
+    "n": 1,
+    "phrase": "کاراته",
+    "warmup": false,
+    "requestBytes": 1174,
+    "requestSha256": "678ecc74ac8820068f6ac86b9e70485a42daccfbd1ccb02a01b7bdd34637d55b",
+    "at": "2026-10-18T18:42:04.155Z",
+    "elapsedMs": 691.4774180054665,
+    "headersMs": 683.6856490075588,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.27,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.78,
+            "1": 0.18,
+            "2": 0.03,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.77
+        }
+      },
+      "usage": {
+        "input_tokens": 669,
+        "output_tokens": 17,
+        "cost": 0.000028098
+      },
+      "id": "gen-dec-1792348923-h6gR9jZ9Bks9SsYrIDT4",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 6.68
+  },
+  {
+    "round": 2,
+    "n": 1000,
+    "phrase": "کاراته",
+    "warmup": false,
+    "requestBytes": 54405,
+    "requestSha256": "70cb8f88fa933e4664f1224d26b49f3de6925a49f359142cbea7fce30fa2f11f",
+    "at": "2026-10-18T18:42:05.156Z",
+    "elapsedMs": 995.4042359888554,
+    "headersMs": 991.9424040019512,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.15,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.91,
+            "1": 0.06,
+            "2": 0.01,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.88
+        }
+      },
+      "usage": {
+        "input_tokens": 32268,
+        "output_tokens": 17,
+        "cost": 0.001355256
+      },
+      "id": "gen-dec-1792348924-2wkjyyIypdXco5W8Ltg7",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 3.71
+  },
+  {
+    "round": 2,
+    "n": 10,
+    "phrase": "کاراته",
+    "warmup": false,
+    "requestBytes": 1738,
+    "requestSha256": "d850ef86004e1c673e3e7c3cb2c43de5c9ac4bc005e9cf5fc23aec1ef53d9165",
+    "at": "2026-10-18T18:42:05.445Z",
+    "elapsedMs": 283.9070700109005,
+    "headersMs": 276.23015999794006,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.19,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.88,
+            "1": 0.09,
+            "2": 0.01,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.85
+        }
+      },
+      "usage": {
+        "input_tokens": 990,
+        "output_tokens": 17,
+        "cost": 0.00004158
+      },
+      "id": "gen-dec-1792348925-7a6G2InWlDnLpcVH3kbr",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 4.7
+  },
+  {
+    "round": 3,
+    "n": 50,
+    "phrase": "باغ انارهای سرخ",
+    "warmup": false,
+    "requestBytes": 3903,
+    "requestSha256": "52367543becebdb55bd286e498a94d4c90d9501d8f7d4cdb6e69335743f4f7af",
+    "at": "2026-10-18T18:42:06.152Z",
+    "elapsedMs": 704.5747010111809,
+    "headersMs": 701.5534730255604,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.18,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.07,
+            "2": 0.69,
+            "3": 0.2,
+            "4": 0.03
+          },
+          "confidence": 0.71
+        }
+      },
+      "usage": {
+        "input_tokens": 2255,
+        "output_tokens": 17,
+        "cost": 0.00009471
+      },
+      "id": "gen-dec-1792348925-Pd2sNy9Tg39LlSabQnZ1",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 53.96
+  },
+  {
+    "round": 3,
+    "n": 1,
+    "phrase": "باغ انارهای سرخ",
+    "warmup": false,
+    "requestBytes": 1190,
+    "requestSha256": "1a25af6db9c05ff4f0f6d826ac60a9511278c628ef2d086cd2e449afb8257595",
+    "at": "2026-10-18T18:42:06.427Z",
+    "elapsedMs": 272.98533698916435,
+    "headersMs": 269.1714809834957,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.08,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.12,
+            "2": 0.67,
+            "3": 0.18,
+            "4": 0.02
+          },
+          "confidence": 0.7
+        }
+      },
+      "usage": {
+        "input_tokens": 676,
+        "output_tokens": 17,
+        "cost": 0.000028392
+      },
+      "id": "gen-dec-1792348926-BGOJ4IOgWBGTovKO6GOh",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 51.48
+  },
+  {
+    "round": 3,
+    "n": 10,
+    "phrase": "باغ انارهای سرخ",
+    "warmup": false,
+    "requestBytes": 1754,
+    "requestSha256": "c9989fe02e6c3253cd4efa6148fdb1404c148339f758079bdafbd8b371c7ab1f",
+    "at": "2026-10-18T18:42:07.154Z",
+    "elapsedMs": 724.7110909819603,
+    "headersMs": 719.8924979865551,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.25,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.08,
+            "2": 0.61,
+            "3": 0.27,
+            "4": 0.03
+          },
+          "confidence": 0.64
+        }
+      },
+      "usage": {
+        "input_tokens": 997,
+        "output_tokens": 17,
+        "cost": 0.000041874
+      },
+      "id": "gen-dec-1792348926-J1KMiE3Z9M97AIVTMVQ8",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 55.69
+  },
+  {
+    "round": 3,
+    "n": 1000,
+    "phrase": "باغ انارهای سرخ",
+    "warmup": false,
+    "requestBytes": 54421,
+    "requestSha256": "00498a1e68e18a1c523ecbd47d6dd0f0453da91fb91788e52c670dcdfb41c0b0",
+    "at": "2026-10-18T18:42:08.152Z",
+    "elapsedMs": 992.5258740186691,
+    "headersMs": 987.0747990012169,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.2,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.06,
+            "2": 0.71,
+            "3": 0.21,
+            "4": 0.02
+          },
+          "confidence": 0.74
+        }
+      },
+      "usage": {
+        "input_tokens": 32275,
+        "output_tokens": 17,
+        "cost": 0.00135555
+      },
+      "id": "gen-dec-1792348927-jfCQAf4cJeuxMTk1fnWm",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 54.45
+  },
+  {
+    "round": 3,
+    "n": 100,
+    "phrase": "باغ انارهای سرخ",
+    "warmup": false,
+    "requestBytes": 6660,
+    "requestSha256": "39525970c5cdace6e579f047bb192883e3c0a93dba457e7e0535e305ffa82a28",
+    "at": "2026-10-18T18:42:08.478Z",
+    "elapsedMs": 321.7386189997196,
+    "headersMs": 317.41678300499916,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.17,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.07,
+            "2": 0.69,
+            "3": 0.2,
+            "4": 0.03
+          },
+          "confidence": 0.71
+        }
+      },
+      "usage": {
+        "input_tokens": 3868,
+        "output_tokens": 17,
+        "cost": 0.000162456
+      },
+      "id": "gen-dec-1792348928-I0l2UgwKinVAtYDWJ68I",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 53.71
+  },
+  {
+    "round": 4,
+    "n": 1,
+    "phrase": "اناااار",
+    "warmup": false,
+    "requestBytes": 1176,
+    "requestSha256": "15c0c554202d25cf9a8fe765bed9db6bdb77d8dab478163780be63a221b417b2",
+    "at": "2026-10-18T18:42:09.147Z",
+    "elapsedMs": 668.232381016016,
+    "headersMs": 666.0759190022945,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.92,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.11,
+            "2": 0.85,
+            "3": 0.04,
+            "4": 0
+          },
+          "confidence": 0.88
+        }
+      },
+      "usage": {
+        "input_tokens": 670,
+        "output_tokens": 17,
+        "cost": 0.00002814
+      },
+      "id": "gen-dec-1792348928-bAVa4TyuTrLQLtNtJkXj",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 47.52
+  },
+  {
+    "round": 4,
+    "n": 100,
+    "phrase": "اناااار",
+    "warmup": false,
+    "requestBytes": 6646,
+    "requestSha256": "92902f2387109d21d433d70c183d12d6d4dd4da8c812478cca2b8dc1d43057b7",
+    "at": "2026-10-18T18:42:09.453Z",
+    "elapsedMs": 302.1445699930191,
+    "headersMs": 298.22409600019455,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.82,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.18,
+            "2": 0.75,
+            "3": 0.03,
+            "4": 0.01
+          },
+          "confidence": 0.76
+        }
+      },
+      "usage": {
+        "input_tokens": 3862,
+        "output_tokens": 17,
+        "cost": 0.000162204
+      },
+      "id": "gen-dec-1792348929-RozynXbzLtg2s2u5YqiO",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 45.05
+  },
+  {
+    "round": 4,
+    "n": 1000,
+    "phrase": "اناااار",
+    "warmup": false,
+    "requestBytes": 54407,
+    "requestSha256": "a29c3be3b7225b4f8f75b5df16df3ce18894502a8e4f4275bbc4c587934c4569",
+    "at": "2026-10-18T18:42:10.153Z",
+    "elapsedMs": 696.0428780019283,
+    "headersMs": 690.7817499935627,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.8,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.18,
+            "2": 0.76,
+            "3": 0.02,
+            "4": 0.01
+          },
+          "confidence": 0.77
+        }
+      },
+      "usage": {
+        "input_tokens": 32269,
+        "output_tokens": 17,
+        "cost": 0.001355298
+      },
+      "id": "gen-dec-1792348929-8wUTlCVsItRRWnoyduTz",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 44.55
+  },
+  {
+    "round": 4,
+    "n": 50,
+    "phrase": "اناااار",
+    "warmup": false,
+    "requestBytes": 3889,
+    "requestSha256": "ce7373cb2805e32fc161c41192c7f59bd7ccac7b4d6334d4122ea17ca56d0a4a",
+    "at": "2026-10-18T18:42:10.440Z",
+    "elapsedMs": 284.85794100165367,
+    "headersMs": 278.1862690150738,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.83,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.18,
+            "2": 0.74,
+            "3": 0.03,
+            "4": 0.02
+          },
+          "confidence": 0.74
+        }
+      },
+      "usage": {
+        "input_tokens": 2249,
+        "output_tokens": 17,
+        "cost": 0.000094458
+      },
+      "id": "gen-dec-1792348930-0r4K4U8bh1vUyrtoDteQ",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 45.29
+  },
+  {
+    "round": 4,
+    "n": 10,
+    "phrase": "اناااار",
+    "warmup": false,
+    "requestBytes": 1740,
+    "requestSha256": "1a8bd0f2c8fc3734dba7c54862e4fe0bbaba8b702894344290a455d15283a3fd",
+    "at": "2026-10-18T18:42:11.147Z",
+    "elapsedMs": 705.7340280115604,
+    "headersMs": 703.527656018734,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.79,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.21,
+            "2": 0.73,
+            "3": 0.02,
+            "4": 0.01
+          },
+          "confidence": 0.74
+        }
+      },
+      "usage": {
+        "input_tokens": 991,
+        "output_tokens": 17,
+        "cost": 0.000041622
+      },
+      "id": "gen-dec-1792348930-dUnf8oDhSX3lKjlTX9MC",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 44.3
+  },
+  {
+    "round": 5,
+    "n": 10,
+    "phrase": "گلستان",
+    "warmup": false,
+    "requestBytes": 1738,
+    "requestSha256": "04042e11b7ced3963dd3dac90ac846081b6bdc036c1bc42a2641f16f0bf8ba70",
+    "at": "2026-10-18T18:42:11.434Z",
+    "elapsedMs": 284.3960839807987,
+    "headersMs": 282.32990899682045,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.31,
+            "1": 0.47000000000000003,
+            "2": 0.16,
+            "3": 0.04,
+            "4": 0.02
+          },
+          "confidence": 0.49
+        }
+      },
+      "usage": {
+        "input_tokens": 990,
+        "output_tokens": 17,
+        "cost": 0.00004158
+      },
+      "id": "gen-dec-1792348931-IOnkcrJ14pDd4lduVMEI",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 24.75
+  },
+  {
+    "round": 5,
+    "n": 1000,
+    "phrase": "گلستان",
+    "warmup": false,
+    "requestBytes": 54405,
+    "requestSha256": "b404d71d94e2e1cc504cd0cef385a39949973f298ce59f939a4870850a5e8fc5",
+    "at": "2026-10-18T18:42:12.150Z",
+    "elapsedMs": 707.322753995657,
+    "headersMs": 703.4316770136356,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.19,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.21,
+            "1": 0.45,
+            "2": 0.29,
+            "3": 0.03,
+            "4": 0.02
+          },
+          "confidence": 0.48
+        }
+      },
+      "usage": {
+        "input_tokens": 32268,
+        "output_tokens": 17,
+        "cost": 0.001355256
+      },
+      "id": "gen-dec-1792348931-A9b8I8O9o5E26YZnxpOJ",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 29.45
+  },
+  {
+    "round": 5,
+    "n": 100,
+    "phrase": "گلستان",
+    "warmup": false,
+    "requestBytes": 6644,
+    "requestSha256": "56187cebda828bef2196a7d7a889bcf0d4739b48bb8b103a1d14267d19a35bb5",
+    "at": "2026-10-18T18:42:12.446Z",
+    "elapsedMs": 292.13037699460983,
+    "headersMs": 290.45637598633766,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.95,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.32,
+            "1": 0.47000000000000003,
+            "2": 0.17,
+            "3": 0.02,
+            "4": 0.02
+          },
+          "confidence": 0.51
+        }
+      },
+      "usage": {
+        "input_tokens": 3861,
+        "output_tokens": 17,
+        "cost": 0.000162162
+      },
+      "id": "gen-dec-1792348932-e25FIA1xwn9mzMKL01ra",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 23.51
+  },
+  {
+    "round": 5,
+    "n": 1,
+    "phrase": "گلستان",
+    "warmup": false,
+    "requestBytes": 1174,
+    "requestSha256": "e2ae304afbf0f3c9cc580b7251d545ae779e29095c642d29ad8368894205aa14",
+    "at": "2026-10-18T18:42:13.151Z",
+    "elapsedMs": 702.9249159991741,
+    "headersMs": 696.6931140124798,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.91,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.3,
+            "1": 0.53,
+            "2": 0.14,
+            "3": 0.02,
+            "4": 0.01
+          },
+          "confidence": 0.57
+        }
+      },
+      "usage": {
+        "input_tokens": 669,
+        "output_tokens": 17,
+        "cost": 0.000028098
+      },
+      "id": "gen-dec-1792348932-PNcAHi57BR9LgIsHfuxS",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 22.52
+  },
+  {
+    "round": 5,
+    "n": 50,
+    "phrase": "گلستان",
+    "warmup": false,
+    "requestBytes": 3887,
+    "requestSha256": "993622b5a2d30df3709f40359664ad594b10259d5492ef3578149c1aee6669f6",
+    "at": "2026-10-18T18:42:13.505Z",
+    "elapsedMs": 349.7787719964981,
+    "headersMs": 346.7564930021763,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.01,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.33,
+            "1": 0.43,
+            "2": 0.16,
+            "3": 0.04,
+            "4": 0.04
+          },
+          "confidence": 0.42
+        }
+      },
+      "usage": {
+        "input_tokens": 2248,
+        "output_tokens": 17,
+        "cost": 0.000094416
+      },
+      "id": "gen-dec-1792348933-K4oX0t5698TOL1FwWKp3",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 25
+  },
+  {
+    "round": 6,
+    "n": 1,
+    "phrase": "جشن",
+    "warmup": false,
+    "requestBytes": 1168,
+    "requestSha256": "dad157af05d6ccec809c1b823ee071b7f09e04c8ff25e98c7f0f7b5dffeef140",
+    "at": "2026-10-18T18:42:14.146Z",
+    "elapsedMs": 639.5451509952545,
+    "headersMs": 638.1370609998703,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.59,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.49,
+            "1": 0.44,
+            "2": 0.06,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.51
+        }
+      },
+      "usage": {
+        "input_tokens": 666,
+        "output_tokens": 17,
+        "cost": 0.000027972
+      },
+      "id": "gen-dec-1792348933-MYYvPBmqT0Aoj4Wg6Fqh",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 14.6
+  },
+  {
+    "round": 6,
+    "n": 100,
+    "phrase": "جشن",
+    "warmup": false,
+    "requestBytes": 6638,
+    "requestSha256": "3292a477baf7ba765ad255514c4456f73c169c11f8243aeca1d4c9ba8cdf2c03",
+    "at": "2026-10-18T18:42:14.456Z",
+    "elapsedMs": 306.2832300066948,
+    "headersMs": 304.44160798192024,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.43,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.64,
+            "1": 0.31,
+            "2": 0.03,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.63
+        }
+      },
+      "usage": {
+        "input_tokens": 3858,
+        "output_tokens": 17,
+        "cost": 0.000162036
+      },
+      "id": "gen-dec-1792348934-Q1H2P1zQfrZZ6f05avlk",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 10.64
+  },
+  {
+    "round": 6,
+    "n": 1000,
+    "phrase": "جشن",
+    "warmup": false,
+    "requestBytes": 54399,
+    "requestSha256": "ef03efbf8c17d20c9378c74f0fb0b55f5e3741cac099266dc02d8e7be0117093",
+    "at": "2026-10-18T18:42:15.152Z",
+    "elapsedMs": 688.1501690149307,
+    "headersMs": 684.8278770148754,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.48,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.61,
+            "1": 0.31,
+            "2": 0.06,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.58
+        }
+      },
+      "usage": {
+        "input_tokens": 32265,
+        "output_tokens": 17,
+        "cost": 0.00135513
+      },
+      "id": "gen-dec-1792348934-2P6C3Es45jTC3xB1ovZR",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 11.88
+  },
+  {
+    "round": 6,
+    "n": 10,
+    "phrase": "جشن",
+    "warmup": false,
+    "requestBytes": 1732,
+    "requestSha256": "6fc293a9867d65d59ff85878b582355ac5fd487fc51c92091645228106715173",
+    "at": "2026-10-18T18:42:15.476Z",
+    "elapsedMs": 319.74226999282837,
+    "headersMs": 311.6738030016422,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.55,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.55,
+            "1": 0.38,
+            "2": 0.05,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.54
+        }
+      },
+      "usage": {
+        "input_tokens": 987,
+        "output_tokens": 17,
+        "cost": 0.000041454
+      },
+      "id": "gen-dec-1792348935-UnA1qq4eKIUzORDA3fj6",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 13.61
+  },
+  {
+    "round": 6,
+    "n": 50,
+    "phrase": "جشن",
+    "warmup": false,
+    "requestBytes": 3881,
+    "requestSha256": "9fb2f3757ef00536f22b18d21437681e74118d3d78f834aa9edb783b7f183c8f",
+    "at": "2026-10-18T18:42:16.151Z",
+    "elapsedMs": 673.2460049986839,
+    "headersMs": 668.5186820030212,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.38,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.68,
+            "1": 0.28,
+            "2": 0.02,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.68
+        }
+      },
+      "usage": {
+        "input_tokens": 2245,
+        "output_tokens": 17,
+        "cost": 0.00009429
+      },
+      "id": "gen-dec-1792348935-Pw7IVtoUDXqJvK1ZZ9eo",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 9.41
+  },
+  {
+    "round": 7,
+    "n": 1000,
+    "phrase": "دلبرا",
+    "warmup": false,
+    "requestBytes": 54403,
+    "requestSha256": "d59249c43d094ade7ff1fdea3cf73305fa082865ab04b33ae3d2e2225f8413cd",
+    "at": "2026-10-18T18:42:17.148Z",
+    "elapsedMs": 989.3100779950619,
+    "headersMs": 986.5958629846573,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.52,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.68,
+            "1": 0.21,
+            "2": 0.05,
+            "3": 0.02,
+            "4": 0.04
+          },
+          "confidence": 0.56
+        }
+      },
+      "usage": {
+        "input_tokens": 32267,
+        "output_tokens": 17,
+        "cost": 0.001355214
+      },
+      "id": "gen-dec-1792348936-gPgvd0P1TaBKkJ4xg1W3",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 12.87
+  },
+  {
+    "round": 7,
+    "n": 50,
+    "phrase": "دلبرا",
+    "warmup": false,
+    "requestBytes": 3885,
+    "requestSha256": "195b8679cf43f0f05e421720dccea4755a2f6634c999af06699e8ae74ebff063",
+    "at": "2026-10-18T18:42:17.517Z",
+    "elapsedMs": 366.8448089957237,
+    "headersMs": 363.0692220032215,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.65,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.59,
+            "1": 0.27,
+            "2": 0.07,
+            "3": 0.03,
+            "4": 0.04
+          },
+          "confidence": 0.45
+        }
+      },
+      "usage": {
+        "input_tokens": 2247,
+        "output_tokens": 17,
+        "cost": 0.000094374
+      },
+      "id": "gen-dec-1792348937-NuzSngOJyeWt8Z17IJmL",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 16.09
+  },
+  {
+    "round": 7,
+    "n": 10,
+    "phrase": "دلبرا",
+    "warmup": false,
+    "requestBytes": 1736,
+    "requestSha256": "ef704b20a895dfdec62601f87068f985b52fc677b3c722e9d7e8cbe7a53094e3",
+    "at": "2026-10-18T18:42:18.147Z",
+    "elapsedMs": 625.5123119950294,
+    "headersMs": 623.6125310063362,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.62,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.59,
+            "1": 0.28,
+            "2": 0.06,
+            "3": 0.03,
+            "4": 0.04
+          },
+          "confidence": 0.46
+        }
+      },
+      "usage": {
+        "input_tokens": 989,
+        "output_tokens": 17,
+        "cost": 0.000041538
+      },
+      "id": "gen-dec-1792348937-Ic1ngwvXOpv5mUFDLjqX",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 15.35
+  },
+  {
+    "round": 7,
+    "n": 100,
+    "phrase": "دلبرا",
+    "warmup": false,
+    "requestBytes": 6642,
+    "requestSha256": "e869e2bad74d6ed6f0dac37d72314a936a3db149c2d0139fdfd331af60b2d7c8",
+    "at": "2026-10-18T18:42:18.452Z",
+    "elapsedMs": 298.62109100818634,
+    "headersMs": 296.8035030066967,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.69,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.59,
+            "1": 0.26,
+            "2": 0.07,
+            "3": 0.03,
+            "4": 0.05
+          },
+          "confidence": 0.42
+        }
+      },
+      "usage": {
+        "input_tokens": 3860,
+        "output_tokens": 17,
+        "cost": 0.00016212
+      },
+      "id": "gen-dec-1792348938-1cIgp7kdKrmr4jqBKqSl",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 17.08
+  },
+  {
+    "round": 7,
+    "n": 1,
+    "phrase": "دلبرا",
+    "warmup": false,
+    "requestBytes": 1172,
+    "requestSha256": "90c3c006b82bc04220617026401afb25d19124bf02e207be469a1cf14e568a17",
+    "at": "2026-10-18T18:42:19.149Z",
+    "elapsedMs": 694.9855890274048,
+    "headersMs": 691.2575630247593,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.6,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.55,
+            "1": 0.35,
+            "2": 0.08,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.52
+        }
+      },
+      "usage": {
+        "input_tokens": 668,
+        "output_tokens": 17,
+        "cost": 0.000028056
+      },
+      "id": "gen-dec-1792348938-98fdyQvSWWsZkiwQ8kDk",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 14.85
+  },
+  {
+    "round": 8,
+    "n": 50,
+    "phrase": "شاعر",
+    "warmup": false,
+    "requestBytes": 3883,
+    "requestSha256": "424800cb5e600458aa564b2e7aa936e832a446b55eb50773d165e9e75c5d7aed",
+    "at": "2026-10-18T18:42:19.453Z",
+    "elapsedMs": 279.18377900123596,
+    "headersMs": 277.7535369992256,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.56,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.56,
+            "1": 0.36,
+            "2": 0.06,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.54
+        }
+      },
+      "usage": {
+        "input_tokens": 2246,
+        "output_tokens": 17,
+        "cost": 0.000094332
+      },
+      "id": "gen-dec-1792348939-E7kWOojVqPeJrLcHLLjU",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 13.86
+  },
+  {
+    "round": 8,
+    "n": 1,
+    "phrase": "شاعر",
+    "warmup": false,
+    "requestBytes": 1170,
+    "requestSha256": "15b0c4ec124a7a11fdb01dd84416bb63f9c7b636faca78b31a23721c392c967e",
+    "at": "2026-10-18T18:42:20.147Z",
+    "elapsedMs": 690.1013599932194,
+    "headersMs": 687.6279309988022,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.54,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.55,
+            "1": 0.38,
+            "2": 0.05,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.54
+        }
+      },
+      "usage": {
+        "input_tokens": 667,
+        "output_tokens": 17,
+        "cost": 0.000028014
+      },
+      "id": "gen-dec-1792348939-5s8gNXdprGEyjpI5aK1L",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 13.37
+  },
+  {
+    "round": 8,
+    "n": 10,
+    "phrase": "شاعر",
+    "warmup": false,
+    "requestBytes": 1734,
+    "requestSha256": "37699b9a9f00e9a248e85ce83740532a29c15c7d74e818dc1e77b0f2b48c6bde",
+    "at": "2026-10-18T18:42:20.458Z",
+    "elapsedMs": 304.5315589904785,
+    "headersMs": 302.875422000885,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.54,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.6,
+            "1": 0.32,
+            "2": 0.05,
+            "3": 0.02,
+            "4": 0.01
+          },
+          "confidence": 0.57
+        }
+      },
+      "usage": {
+        "input_tokens": 988,
+        "output_tokens": 17,
+        "cost": 0.000041496
+      },
+      "id": "gen-dec-1792348940-7y4n9MJVSqhe6XDUirV9",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 13.37
+  },
+  {
+    "round": 8,
+    "n": 1000,
+    "phrase": "شاعر",
+    "warmup": false,
+    "requestBytes": 54401,
+    "requestSha256": "e90dc0cf9dfcf24e548d0016d17d6172b1565f70f9a1f98bb3241a6634279f24",
+    "at": "2026-10-18T18:42:21.149Z",
+    "elapsedMs": 684.7143069803715,
+    "headersMs": 681.39142999053,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.48,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.59,
+            "1": 0.34,
+            "2": 0.05,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.57
+        }
+      },
+      "usage": {
+        "input_tokens": 32266,
+        "output_tokens": 17,
+        "cost": 0.001355172
+      },
+      "id": "gen-dec-1792348940-BVi6x63HF4nllHJyHcE5",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 11.88
+  },
+  {
+    "round": 8,
+    "n": 100,
+    "phrase": "شاعر",
+    "warmup": false,
+    "requestBytes": 6640,
+    "requestSha256": "d853f0e8670d5ebf1af7eaabeaff041617fe5dd28b2e16b6ce60d952c4881843",
+    "at": "2026-10-18T18:42:21.467Z",
+    "elapsedMs": 311.79231798648834,
+    "headersMs": 309.68201699852943,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.51,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.59,
+            "1": 0.33,
+            "2": 0.06,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.57
+        }
+      },
+      "usage": {
+        "input_tokens": 3859,
+        "output_tokens": 17,
+        "cost": 0.000162078
+      },
+      "id": "gen-dec-1792348941-Xjy2cJGzTvQrev2vhJtf",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 12.62
+  },
+  {
+    "round": 9,
+    "n": 100,
+    "phrase": "میوه چینی",
+    "warmup": false,
+    "requestBytes": 6649,
+    "requestSha256": "0edf310cee1ff33eba4daf22f2bbb405b44f814400ba89cd75d87ab7cc9d6dc2",
+    "at": "2026-10-18T18:42:22.150Z",
+    "elapsedMs": 677.9750110208988,
+    "headersMs": 674.0552110075951,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.65,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.44,
+            "1": 0.49,
+            "2": 0.06,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.57
+        }
+      },
+      "usage": {
+        "input_tokens": 3864,
+        "output_tokens": 17,
+        "cost": 0.000162288
+      },
+      "id": "gen-dec-1792348941-BgaaYpTP2EzdiF5XMtqz",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 16.09
+  },
+  {
+    "round": 9,
+    "n": 10,
+    "phrase": "میوه چینی",
+    "warmup": false,
+    "requestBytes": 1743,
+    "requestSha256": "76e4b936cdc7e394d8a17da27dea5884a5750cd2958545caa86b1c0ad81937bf",
+    "at": "2026-10-18T18:42:22.436Z",
+    "elapsedMs": 283.21824100613594,
+    "headersMs": 281.1803129911423,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.66,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.47,
+            "1": 0.44,
+            "2": 0.07,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.46
+        }
+      },
+      "usage": {
+        "input_tokens": 993,
+        "output_tokens": 17,
+        "cost": 0.000041706
+      },
+      "id": "gen-dec-1792348942-4SLdOsYFNo8Hqc2KPQhv",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 16.34
+  },
+  {
+    "round": 9,
+    "n": 1000,
+    "phrase": "میوه چینی",
+    "warmup": false,
+    "requestBytes": 54410,
+    "requestSha256": "4a513d19939cf4f9499e6c0350a0ca63685ce80eb1dca8c96bcf3698455391b5",
+    "at": "2026-10-18T18:42:23.149Z",
+    "elapsedMs": 704.0742079913616,
+    "headersMs": 700.763552993536,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.71,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.41,
+            "1": 0.49,
+            "2": 0.09,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.57
+        }
+      },
+      "usage": {
+        "input_tokens": 32271,
+        "output_tokens": 17,
+        "cost": 0.001355382
+      },
+      "id": "gen-dec-1792348942-xpa9CJWe7M86rNj3dqXj",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 17.57
+  },
+  {
+    "round": 9,
+    "n": 50,
+    "phrase": "میوه چینی",
+    "warmup": false,
+    "requestBytes": 3892,
+    "requestSha256": "b7d8a8fea301a4b2293ba9c1b10ce620f653173ff911f7afa50c267a2629df71",
+    "at": "2026-10-18T18:42:23.448Z",
+    "elapsedMs": 291.6313059926033,
+    "headersMs": 285.93004500865936,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.59,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.47,
+            "1": 0.48,
+            "2": 0.04,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.56
+        }
+      },
+      "usage": {
+        "input_tokens": 2251,
+        "output_tokens": 17,
+        "cost": 0.000094542
+      },
+      "id": "gen-dec-1792348943-P3v1Wv7w5fm8SE5AGNQI",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 14.6
+  },
+  {
+    "round": 9,
+    "n": 1,
+    "phrase": "میوه چینی",
+    "warmup": false,
+    "requestBytes": 1179,
+    "requestSha256": "496c1e480ce88de8b55370e03ab428fa3f59b1c3ab039d5ff27ee4ea10a03234",
+    "at": "2026-10-18T18:42:24.146Z",
+    "elapsedMs": 694.4233109951019,
+    "headersMs": 692.7402679920197,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.94,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.35,
+            "1": 0.45,
+            "2": 0.14,
+            "3": 0.03,
+            "4": 0.03
+          },
+          "confidence": 0.47
+        }
+      },
+      "usage": {
+        "input_tokens": 672,
+        "output_tokens": 17,
+        "cost": 0.000028224
+      },
+      "id": "gen-dec-1792348943-3VU5DO1L8E76cTEGOvtu",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 23.27
+  },
+  {
+    "round": 10,
+    "n": 1000,
+    "phrase": "انار دزدی",
+    "warmup": false,
+    "requestBytes": 54410,
+    "requestSha256": "1a82695a786c81a76c2d6c7f0793d01daedfd379271b942d45b0516d6d641dfa",
+    "at": "2026-10-18T18:42:25.148Z",
+    "elapsedMs": 992.4139970242977,
+    "headersMs": 988.8962280154228,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.28,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.14,
+            "1": 0.46,
+            "2": 0.37,
+            "3": 0.02,
+            "4": 0.01
+          },
+          "confidence": 0.52
+        }
+      },
+      "usage": {
+        "input_tokens": 32270,
+        "output_tokens": 17,
+        "cost": 0.00135534
+      },
+      "id": "gen-dec-1792348944-P1Fl8CiWDVBTlJeThQMt",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 31.68
+  },
+  {
+    "round": 10,
+    "n": 10,
+    "phrase": "انار دزدی",
+    "warmup": false,
+    "requestBytes": 1743,
+    "requestSha256": "8e789e665440f02e169731feb581d87ab7351030e81e4762c48cabbdb0705ee5",
+    "at": "2026-10-18T18:42:25.422Z",
+    "elapsedMs": 268.74467900395393,
+    "headersMs": 265.8959020078182,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.39,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.1,
+            "1": 0.47,
+            "2": 0.39,
+            "3": 0.03,
+            "4": 0.01
+          },
+          "confidence": 0.52
+        }
+      },
+      "usage": {
+        "input_tokens": 992,
+        "output_tokens": 17,
+        "cost": 0.000041664
+      },
+      "id": "gen-dec-1792348945-5LrjEIFSLNoBZuleGOMW",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 34.4
+  },
+  {
+    "round": 10,
+    "n": 100,
+    "phrase": "انار دزدی",
+    "warmup": false,
+    "requestBytes": 6649,
+    "requestSha256": "936c09383f008098d12010f0271d8f72d39422b22eaf788d5a9ac57dd3654a1e",
+    "at": "2026-10-18T18:42:26.149Z",
+    "elapsedMs": 719.4674179852009,
+    "headersMs": 716.1742709875107,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.21,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.16,
+            "1": 0.51,
+            "2": 0.3,
+            "3": 0.02,
+            "4": 0.01
+          },
+          "confidence": 0.56
+        }
+      },
+      "usage": {
+        "input_tokens": 3863,
+        "output_tokens": 17,
+        "cost": 0.000162246
+      },
+      "id": "gen-dec-1792348945-VDXzFUgXBonYLcHmnLd6",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 29.95
+  },
+  {
+    "round": 10,
+    "n": 1,
+    "phrase": "انار دزدی",
+    "warmup": false,
+    "requestBytes": 1179,
+    "requestSha256": "5f38b1751d7eac4a6967500f7f0204071b9ff6b81506af9d784065c1622d7466",
+    "at": "2026-10-18T18:42:26.454Z",
+    "elapsedMs": 300.4752669930458,
+    "headersMs": 296.6823309957981,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.24,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.09,
+            "1": 0.6,
+            "2": 0.3,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.66
+        }
+      },
+      "usage": {
+        "input_tokens": 671,
+        "output_tokens": 17,
+        "cost": 0.000028182
+      },
+      "id": "gen-dec-1792348946-3KSMzlRU1HCYSpT608Ky",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 30.69
+  },
+  {
+    "round": 10,
+    "n": 50,
+    "phrase": "انار دزدی",
+    "warmup": false,
+    "requestBytes": 3892,
+    "requestSha256": "e0faf6584cf730d61bc859a3d8bba39acb2fbad4dc17dd116c889b0fe46bd2b2",
+    "at": "2026-10-18T18:42:27.148Z",
+    "elapsedMs": 690.7632000148296,
+    "headersMs": 687.6131220161915,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.3,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.12,
+            "1": 0.49,
+            "2": 0.36,
+            "3": 0.02,
+            "4": 0.01
+          },
+          "confidence": 0.54
+        }
+      },
+      "usage": {
+        "input_tokens": 2250,
+        "output_tokens": 17,
+        "cost": 0.0000945
+      },
+      "id": "gen-dec-1792348946-8SySVfaZg0iGGP8feuLj",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 32.18
+  }
+]

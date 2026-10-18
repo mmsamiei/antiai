@@ -14,6 +14,7 @@ enum GameType {
   ADJECTIVE_RAIN
   SEMANTRIS
   LETTER_DUEL
+  PHRASE_HUNT
 }
 
 enum GameStatus {
@@ -56,11 +57,15 @@ model User {
   lastName                         String?
   username                         String?
   photoUrl                         String?
+  phraseHuntOnboardedAt            DateTime?
+  wordWeaverOnboardedAt            DateTime?
   games                            GameSession[]
   presence                         OnlinePresence?
   letterDuelConnectionsAsPlayerOne LetterDuelConnection[] @relation("LetterDuelPlayerOne")
   letterDuelConnectionsAsPlayerTwo LetterDuelConnection[] @relation("LetterDuelPlayerTwo")
   letterDuelSubmissions            LetterDuelSubmission[]
+  wordWeaverPresence               WordWeaverPresence[]
+  wordWeaverEntries                WordWeaverEntry[]
   createdAt                        DateTime               @default(now())
   updatedAt                        DateTime               @updatedAt
 }
@@ -75,26 +80,113 @@ model OnlinePresence {
 }
 
 model GameSession {
-  id                String           @id @default(cuid())
+  id                String               @id @default(cuid())
   userId            String
   type              GameType
   targetId          String
   datasetVersion    String
-  status            GameStatus       @default(ACTIVE)
-  guessesCount      Int              @default(0)
-  startedAt         DateTime         @default(now())
+  status            GameStatus           @default(ACTIVE)
+  guessesCount      Int                  @default(0)
+  startedAt         DateTime             @default(now())
   finishedAt        DateTime?
   semantrisState    Json?
   letterDuelRoundId String?
   duelOwnScore      Int?
   duelOpponentScore Int?
-  user              User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user              User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
   guesses           Guess[]
-  letterDuelRound   LetterDuelRound? @relation(fields: [letterDuelRoundId], references: [id], onDelete: Cascade)
+  phraseGuesses     PhraseHuntGuess[]
+  phraseChallengeId String?
+  phraseChallenge   PhraseHuntChallenge? @relation(fields: [phraseChallengeId], references: [id], onDelete: Restrict)
+  letterDuelRound   LetterDuelRound?     @relation(fields: [letterDuelRoundId], references: [id], onDelete: Cascade)
 
+  @@unique([userId, phraseChallengeId])
   @@index([userId, type, status])
   @@index([type, status, finishedAt])
   @@index([userId, targetId])
+  @@index([phraseChallengeId])
+}
+
+model PhraseHuntChallenge {
+  id           String                  @id
+  startsAt     DateTime                @unique
+  endsAt       DateTime
+  targetId     String
+  judgeVersion Int
+  judgeModel   String                  @default("typesafe/jev-1.13")
+  games        GameSession[]
+  announcement PhraseHuntAnnouncement?
+}
+
+enum PhraseHuntAnnouncementStatus {
+  PENDING
+  COMPLETED
+}
+
+enum PhraseHuntAnnouncementDeliveryStatus {
+  PENDING
+  SENDING
+  SENT
+  FAILED
+}
+
+model PhraseHuntNotificationConfig {
+  id             String    @id @default("global")
+  enabledAt      DateTime  @default(now())
+  sendNotBefore  DateTime?
+}
+
+model PhraseHuntAnnouncement {
+  id          String                           @id @default(cuid())
+  challengeId String                           @unique
+  messageText String
+  status      PhraseHuntAnnouncementStatus     @default(PENDING)
+  createdAt   DateTime                         @default(now())
+  completedAt DateTime?
+  challenge   PhraseHuntChallenge              @relation(fields: [challengeId], references: [id], onDelete: Restrict)
+  deliveries  PhraseHuntAnnouncementDelivery[]
+}
+
+model PhraseHuntAnnouncementDelivery {
+  id             String                               @id @default(cuid())
+  announcementId String
+  chatId         String
+  status         PhraseHuntAnnouncementDeliveryStatus @default(PENDING)
+  attempts       Int                                  @default(0)
+  nextAttemptAt  DateTime                             @default(now())
+  leaseUntil     DateTime?
+  sentAt         DateTime?
+  lastError      String?
+  announcement   PhraseHuntAnnouncement               @relation(fields: [announcementId], references: [id], onDelete: Cascade)
+
+  @@unique([announcementId, chatId])
+  @@index([status, nextAttemptAt, leaseUntil])
+}
+
+model PhraseHuntGuess {
+  id         String      @id @default(cuid())
+  gameId     String
+  phrase     String
+  normalized String
+  score      Float
+  createdAt  DateTime    @default(now())
+  game       GameSession @relation(fields: [gameId], references: [id], onDelete: Cascade)
+
+  @@unique([gameId, normalized])
+  @@index([gameId, createdAt])
+}
+
+model PhraseHuntJudgment {
+  id           String   @id @default(cuid())
+  targetId     String
+  phrase       String
+  judgeVersion Int
+  model        String   @default("typesafe/jev-1.13")
+  score        Float
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@unique([targetId, phrase, judgeVersion, model])
 }
 
 model Guess {
@@ -188,4 +280,114 @@ model LetterDuelWordJudgment {
   judgeVersion Int      @default(1)
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
+}
+
+enum WordWeaverRoundStatus {
+  WRITING
+  JUDGING
+  RESULTS
+  CLOSED
+}
+
+enum WordWeaverEntryStatus {
+  PENDING
+  SCORED
+  FAILED
+}
+
+model WordWeaverRoom {
+  id               String    @id @default("public")
+  currentRoundId   String?
+  workerLeaseOwner String?
+  workerLeaseUntil DateTime?
+  updatedAt        DateTime  @updatedAt
+}
+
+model WordWeaverPresence {
+  id         String   @id @default(cuid())
+  userId     String
+  clientId   String
+  lastSeenAt DateTime @default(now())
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, clientId])
+  @@index([lastSeenAt])
+  @@index([userId, lastSeenAt])
+}
+
+model WordWeaverRound {
+  id                   String                @id @default(cuid())
+  number               Int                   @unique @default(autoincrement())
+  status               WordWeaverRoundStatus @default(WRITING)
+  word                 String
+  missionId            String?
+  missionType          String?
+  nextMissionOptions   Json?
+  nextMissionId        String?
+  startedAt            DateTime              @default(now())
+  writeDeadline        DateTime
+  judgeStartedAt       DateTime?
+  revealUntil          DateTime?
+  resolvedAt           DateTime?
+  isSolo               Boolean               @default(false)
+  winnerUserId         String?
+  nextWordPickerUserId String?
+  winningEntryId       String?
+  nextWord             String?
+  judgeModel           String
+  rubricVersion        String
+  entries              WordWeaverEntry[]
+  botTurns             WordWeaverBotTurn[]
+
+  @@index([status, writeDeadline])
+  @@index([status, revealUntil])
+}
+
+model WordWeaverEntry {
+  id               String                @id @default(cuid())
+  roundId          String
+  userId           String?
+  botPersonaId     String?
+  text             String
+  status           WordWeaverEntryStatus @default(PENDING)
+  relevanceScore   Float?
+  originalityScore Float?
+  expressionScore  Float?
+  feedback         String?
+  finalScore       Int?
+  failureMessage   String?
+  judgeAttempts    Int                   @default(0)
+  submittedAt      DateTime              @default(now())
+  lockedAt         DateTime?
+  judgedAt         DateTime?
+  round            WordWeaverRound       @relation(fields: [roundId], references: [id], onDelete: Cascade)
+  user             User?                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([roundId, userId])
+  @@unique([roundId, botPersonaId])
+  @@index([roundId, status])
+  @@index([roundId, finalScore(sort: Desc)])
+}
+
+enum WordWeaverBotTurnStatus {
+  PENDING
+  GENERATING
+  SUBMITTED
+  FAILED
+}
+
+model WordWeaverBotTurn {
+  id            String                  @id @default(cuid())
+  roundId       String
+  personaId     String
+  model         String
+  promptVersion String                  @default("1")
+  status        WordWeaverBotTurnStatus @default(PENDING)
+  attempts      Int                     @default(0)
+  leaseToken    String?
+  leaseUntil    DateTime?
+  round         WordWeaverRound         @relation(fields: [roundId], references: [id], onDelete: Cascade)
+
+  @@unique([roundId, personaId])
+  @@index([roundId, status, leaseUntil])
 }

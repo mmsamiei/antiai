@@ -1,0 +1,362 @@
+[
+  {
+    "repeat": 1,
+    "order": "garden_first",
+    "choice": "B_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "B_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.37,
+        "B_CLOSER": 0.6,
+        "EQUAL": 0.03
+      },
+      "confidence": 0.4
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 1,
+    "order": "fruit_first",
+    "choice": "A_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "A_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.67,
+        "B_CLOSER": 0.29,
+        "EQUAL": 0.04
+      },
+      "confidence": 0.51
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 2,
+    "order": "fruit_first",
+    "choice": "A_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "A_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.66,
+        "B_CLOSER": 0.3,
+        "EQUAL": 0.04
+      },
+      "confidence": 0.49
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 2,
+    "order": "garden_first",
+    "choice": "B_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "B_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.4,
+        "B_CLOSER": 0.57,
+        "EQUAL": 0.03
+      },
+      "confidence": 0.35
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 3,
+    "order": "garden_first",
+    "choice": "B_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "B_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.4,
+        "B_CLOSER": 0.57,
+        "EQUAL": 0.03
+      },
+      "confidence": 0.35
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 3,
+    "order": "fruit_first",
+    "choice": "A_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "A_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.65,
+        "B_CLOSER": 0.3,
+        "EQUAL": 0.05
+      },
+      "confidence": 0.48
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 4,
+    "order": "fruit_first",
+    "choice": "A_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "A_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.69,
+        "B_CLOSER": 0.26,
+        "EQUAL": 0.05
+      },
+      "confidence": 0.53
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 4,
+    "order": "garden_first",
+    "choice": "B_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "B_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.41,
+        "B_CLOSER": 0.56,
+        "EQUAL": 0.03
+      },
+      "confidence": 0.34
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 5,
+    "order": "garden_first",
+    "choice": "B_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "B_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.35,
+        "B_CLOSER": 0.62,
+        "EQUAL": 0.03
+      },
+      "confidence": 0.43
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 5,
+    "order": "fruit_first",
+    "choice": "A_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "A_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.65,
+        "B_CLOSER": 0.3,
+        "EQUAL": 0.05
+      },
+      "confidence": 0.48
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 6,
+    "order": "fruit_first",
+    "choice": "A_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "A_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.61,
+        "B_CLOSER": 0.34,
+        "EQUAL": 0.05
+      },
+      "confidence": 0.41
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 6,
+    "order": "garden_first",
+    "choice": "B_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "B_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.4,
+        "B_CLOSER": 0.57,
+        "EQUAL": 0.03
+      },
+      "confidence": 0.35
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 7,
+    "order": "garden_first",
+    "choice": "B_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "B_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.37,
+        "B_CLOSER": 0.61,
+        "EQUAL": 0.02
+      },
+      "confidence": 0.41
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 7,
+    "order": "fruit_first",
+    "choice": "A_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "A_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.66,
+        "B_CLOSER": 0.29,
+        "EQUAL": 0.05
+      },
+      "confidence": 0.49
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 8,
+    "order": "fruit_first",
+    "choice": "A_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "A_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.69,
+        "B_CLOSER": 0.27,
+        "EQUAL": 0.04
+      },
+      "confidence": 0.53
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 8,
+    "order": "garden_first",
+    "choice": "B_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "B_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.36,
+        "B_CLOSER": 0.61,
+        "EQUAL": 0.03
+      },
+      "confidence": 0.41
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 9,
+    "order": "garden_first",
+    "choice": "B_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "B_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.35,
+        "B_CLOSER": 0.62,
+        "EQUAL": 0.03
+      },
+      "confidence": 0.43
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 9,
+    "order": "fruit_first",
+    "choice": "A_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "A_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.73,
+        "B_CLOSER": 0.23,
+        "EQUAL": 0.04
+      },
+      "confidence": 0.59
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 10,
+    "order": "fruit_first",
+    "choice": "A_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "A_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.65,
+        "B_CLOSER": 0.3,
+        "EQUAL": 0.05
+      },
+      "confidence": 0.48
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 10,
+    "order": "garden_first",
+    "choice": "B_CLOSER",
+    "winner": "باغ میوه",
+    "answer": {
+      "type": "choice",
+      "choice": "B_CLOSER",
+      "probabilities": {
+        "A_CLOSER": 0.38,
+        "B_CLOSER": 0.59,
+        "EQUAL": 0.03
+      },
+      "confidence": 0.38
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  }
+]

@@ -29,12 +29,19 @@ while (true) {
       if (["/start", "/play"].some((command) => message.text?.startsWith(command))) {
         const startPayload = message.text?.startsWith("/start ") ? message.text.slice(7).trim() : "";
         const inviteToken = startPayload.startsWith("duel_") ? startPayload.slice(5) : "";
-        const destination = inviteToken ? `${appUrl}${appUrl.includes("?") ? "&" : "?"}duel=${encodeURIComponent(inviteToken)}` : appUrl;
+        const isPhraseHunt = startPayload === "phrase_hunt";
+        const destinationUrl = new URL(appUrl);
+        if (inviteToken) destinationUrl.searchParams.set("duel", inviteToken);
+        if (isPhraseHunt) {
+          destinationUrl.searchParams.delete("duel");
+          destinationUrl.searchParams.set("game", "phrase_hunt");
+        }
+        const destination = destinationUrl.toString();
         await call("sendMessage", {
           chat_id: message.chat.id,
-          text: inviteToken ? "🎮 *دعوت به بازی دوحرف*\n\nدوستت منتظر است؛ روی دکمه بزن و وارد اتاق شو." : "🧠 *Anti AI Games*\n\nبازی‌هایی برای مغزی که هنوز خودش فکر می‌کند.",
+          text: isPhraseHunt ? "🎯 *به معناجو خوش آمدی!*\n\nعبارت پنهان را حدس بزن؛ هر حدس یک امتیاز نزدیکی معنایی می‌گیرد و کمکت می‌کند به جواب نزدیک‌تر شوی.\n\n🌅 هر روز ساعت ۱۰ صبح و ۱۰ شب به وقت تهران، یک چالش تازه داریم.\n\n👇 برای ورود به چالش فعلی، روی معناجو بزن." : inviteToken ? "🎮 *دعوت به بازی دوحرف*\n\nدوستت منتظر است؛ روی دکمه بزن و وارد اتاق شو." : "🧠 *Anti AI Games*\n\nبازی‌هایی برای مغزی که هنوز خودش فکر می‌کند.",
           parse_mode: "Markdown",
-          reply_markup: { inline_keyboard: [[{ text: inviteToken ? "🔤 ورود به اتاق دوحرف" : "🎮 شروع بازی", web_app: { url: destination } }]] }
+          reply_markup: { inline_keyboard: [[{ text: isPhraseHunt ? "🎯 معناجو" : inviteToken ? "🔤 ورود به اتاق دوحرف" : "🎮 شروع بازی", web_app: { url: destination } }]] }
         });
       }
     }

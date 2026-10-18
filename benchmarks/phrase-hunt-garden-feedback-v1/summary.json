@@ -1,0 +1,46 @@
+{
+  "previous_history": {
+    "mean": 50.913000000000004,
+    "variance": 0.1113409999999991,
+    "standardDeviation": 0.333677988485904,
+    "min": 50.24,
+    "max": 51.48,
+    "belowFruitAnchor": 0,
+    "equalFruitAnchor": 0,
+    "aboveFruitAnchor": 10,
+    "scores": [
+      50.99,
+      50.49,
+      50.99,
+      50.99,
+      50.24,
+      51.23,
+      50.74,
+      50.99,
+      51.48,
+      50.99
+    ]
+  },
+  "with_fruit_history": {
+    "mean": 50.961000000000006,
+    "variance": 0.12794899999999862,
+    "standardDeviation": 0.35769959463214185,
+    "min": 50.24,
+    "max": 51.48,
+    "belowFruitAnchor": 0,
+    "equalFruitAnchor": 0,
+    "aboveFruitAnchor": 10,
+    "scores": [
+      51.48,
+      50.99,
+      50.49,
+      50.99,
+      51.23,
+      50.74,
+      51.23,
+      50.99,
+      51.23,
+      50.24
+    ]
+  }
+}

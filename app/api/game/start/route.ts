@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { currentUserId } from "@/lib/auth";
+import { prisma } from "@/lib/prisma";
 import { activeOrNewGame, parseGameType, serializeGame } from "@/lib/game-service";
 
 export async function POST(request: Request) {
@@ -9,5 +10,6 @@ export async function POST(request: Request) {
   const type = parseGameType(body.type);
   if (!type || type === "LETTER_DUEL") return NextResponse.json({ error: "نوع بازی معتبر نیست" }, { status: 400 });
   const game = await activeOrNewGame(userId, type);
-  return NextResponse.json({ game: serializeGame(game) });
+  const user = type === "PHRASE_HUNT" ? await prisma.user.findUnique({ where: { id: userId }, select: { phraseHuntOnboardedAt: true } }) : null;
+  return NextResponse.json({ game: serializeGame(game), ...(type === "PHRASE_HUNT" ? { onboardingRequired: !user?.phraseHuntOnboardedAt } : {}) });
 }

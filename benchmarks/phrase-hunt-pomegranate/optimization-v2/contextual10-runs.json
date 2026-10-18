@@ -1,0 +1,1702 @@
+[
+  {
+    "phrase": "راز انارستان",
+    "score": 96.36,
+    "answer": {
+      "type": "score",
+      "score": 8.76,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0.01,
+        "8": 0.14,
+        "9": 0.85
+      },
+      "confidence": 0.94
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "سرّ باغ انار",
+    "score": 97.13,
+    "answer": {
+      "type": "score",
+      "score": 8.83,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0.01,
+        "6": 0,
+        "7": 0,
+        "8": 0.06,
+        "9": 0.93
+      },
+      "confidence": 0.96
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز بستان انار",
+    "score": 95.37,
+    "answer": {
+      "type": "score",
+      "score": 8.67,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0.01,
+        "7": 0.02,
+        "8": 0.2,
+        "9": 0.77
+      },
+      "confidence": 0.89
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "the secret of the pomegranate garden",
+    "score": 97.68,
+    "answer": {
+      "type": "score",
+      "score": 8.88,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0.02,
+        "9": 0.97
+      },
+      "confidence": 0.96
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ انار ساوه",
+    "score": 93.5,
+    "answer": {
+      "type": "score",
+      "score": 8.5,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.01,
+        "5": 0,
+        "6": 0,
+        "7": 0.01,
+        "8": 0.37,
+        "9": 0.61
+      },
+      "confidence": 0.82
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ انار شیرین",
+    "score": 93.83,
+    "answer": {
+      "type": "score",
+      "score": 8.53,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.01,
+        "5": 0,
+        "6": 0,
+        "7": 0.01,
+        "8": 0.34,
+        "9": 0.64
+      },
+      "confidence": 0.84
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "کشف راز باغ انار",
+    "score": 96.8,
+    "answer": {
+      "type": "score",
+      "score": 8.8,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0.01,
+        "8": 0.09,
+        "9": 0.9
+      },
+      "confidence": 0.96
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ میوه",
+    "score": 78.65,
+    "answer": {
+      "type": "score",
+      "score": 7.15,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.01,
+        "4": 0,
+        "5": 0,
+        "6": 0.05,
+        "7": 0.68,
+        "8": 0.25,
+        "9": 0.01
+      },
+      "confidence": 0.86
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار",
+    "score": 73.7,
+    "answer": {
+      "type": "score",
+      "score": 6.7,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.03,
+        "5": 0.05,
+        "6": 0.11,
+        "7": 0.78,
+        "8": 0.03,
+        "9": 0
+      },
+      "confidence": 0.87
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "بستان انار",
+    "score": 70.4,
+    "answer": {
+      "type": "score",
+      "score": 6.4,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.02,
+        "4": 0.09,
+        "5": 0.06,
+        "6": 0.14,
+        "7": 0.66,
+        "8": 0.03,
+        "9": 0
+      },
+      "confidence": 0.74
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "garden of pomegranates",
+    "score": 74.69,
+    "answer": {
+      "type": "score",
+      "score": 6.79,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.02,
+        "5": 0.01,
+        "6": 0.11,
+        "7": 0.83,
+        "8": 0.03,
+        "9": 0
+      },
+      "confidence": 0.91
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "انارستان",
+    "score": 61.49,
+    "answer": {
+      "type": "score",
+      "score": 5.59,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.08,
+        "4": 0.2,
+        "5": 0.17,
+        "6": 0.16,
+        "7": 0.37,
+        "8": 0.02,
+        "9": 0
+      },
+      "confidence": 0.42
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغات انار",
+    "score": 66.44,
+    "answer": {
+      "type": "score",
+      "score": 6.04,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.04,
+        "4": 0.11,
+        "5": 0.06,
+        "6": 0.3,
+        "7": 0.48,
+        "8": 0.01,
+        "9": 0
+      },
+      "confidence": 0.63
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار قرمز",
+    "score": 70.95,
+    "answer": {
+      "type": "score",
+      "score": 6.45,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.07,
+        "5": 0.12,
+        "6": 0.11,
+        "7": 0.67,
+        "8": 0.03,
+        "9": 0
+      },
+      "confidence": 0.76
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار شیرین",
+    "score": 70.29,
+    "answer": {
+      "type": "score",
+      "score": 6.39,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.01,
+        "4": 0.07,
+        "5": 0.11,
+        "6": 0.15,
+        "7": 0.64,
+        "8": 0.02,
+        "9": 0
+      },
+      "confidence": 0.74
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "بوستان انار",
+    "score": 71.06,
+    "answer": {
+      "type": "score",
+      "score": 6.46,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.02,
+        "4": 0.09,
+        "5": 0.04,
+        "6": 0.14,
+        "7": 0.69,
+        "8": 0.02,
+        "9": 0
+      },
+      "confidence": 0.76
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار ساوه",
+    "score": 69.52,
+    "answer": {
+      "type": "score",
+      "score": 6.32,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.01,
+        "4": 0.1,
+        "5": 0.09,
+        "6": 0.17,
+        "7": 0.61,
+        "8": 0.02,
+        "9": 0
+      },
+      "confidence": 0.72
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار شیراز",
+    "score": 69.08,
+    "answer": {
+      "type": "score",
+      "score": 6.28,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.01,
+        "4": 0.09,
+        "5": 0.11,
+        "6": 0.19,
+        "7": 0.58,
+        "8": 0.02,
+        "9": 0
+      },
+      "confidence": 0.7
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ",
+    "score": 76.89,
+    "answer": {
+      "type": "score",
+      "score": 6.99,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0.02,
+        "7": 0.91,
+        "8": 0.06999999999999999,
+        "9": 0
+      },
+      "confidence": 0.96
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ سیب",
+    "score": 76.67,
+    "answer": {
+      "type": "score",
+      "score": 6.97,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0.07,
+        "7": 0.84,
+        "8": 0.08,
+        "9": 0.01
+      },
+      "confidence": 0.93
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغچه انار",
+    "score": 66.11,
+    "answer": {
+      "type": "score",
+      "score": 6.01,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.02,
+        "4": 0.13,
+        "5": 0.1,
+        "6": 0.28,
+        "7": 0.45,
+        "8": 0.01,
+        "9": 0
+      },
+      "confidence": 0.62
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز انار",
+    "score": 75.79,
+    "answer": {
+      "type": "score",
+      "score": 6.89,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.01,
+        "5": 0.01,
+        "6": 0.06999999999999999,
+        "7": 0.88,
+        "8": 0.03,
+        "9": 0
+      },
+      "confidence": 0.94
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ راز",
+    "score": 76.23,
+    "answer": {
+      "type": "score",
+      "score": 6.93,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.01,
+        "5": 0,
+        "6": 0.060000000000000005,
+        "7": 0.89,
+        "8": 0.04,
+        "9": 0
+      },
+      "confidence": 0.95
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز جنگل",
+    "score": 60.72,
+    "answer": {
+      "type": "score",
+      "score": 5.52,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.03,
+        "3": 0.06,
+        "4": 0.12,
+        "5": 0.16,
+        "6": 0.42,
+        "7": 0.19,
+        "8": 0.02,
+        "9": 0
+      },
+      "confidence": 0.63
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ سیب",
+    "score": 52.69,
+    "answer": {
+      "type": "score",
+      "score": 4.79,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.03,
+        "3": 0.21,
+        "4": 0.21,
+        "5": 0.07,
+        "6": 0.43,
+        "7": 0.05,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.48
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ میوه",
+    "score": 49.83,
+    "answer": {
+      "type": "score",
+      "score": 4.53,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.01,
+        "3": 0.38,
+        "4": 0.17,
+        "5": 0.05,
+        "6": 0.32,
+        "7": 0.07,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.39
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ گلابی",
+    "score": 53.68,
+    "answer": {
+      "type": "score",
+      "score": 4.88,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.02,
+        "3": 0.19,
+        "4": 0.21,
+        "5": 0.09,
+        "6": 0.43,
+        "7": 0.06,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.51
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ آلبالو",
+    "score": 55.44,
+    "answer": {
+      "type": "score",
+      "score": 5.04,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.02,
+        "3": 0.12,
+        "4": 0.24000000000000002,
+        "5": 0.07,
+        "6": 0.49,
+        "7": 0.06,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.58
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار بی‌راز",
+    "score": 56.32,
+    "answer": {
+      "type": "score",
+      "score": 5.12,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.59,
+        "5": 0.03,
+        "6": 0.06,
+        "7": 0.28,
+        "8": 0.03,
+        "9": 0.01
+      },
+      "confidence": 0.54
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "درخت انار",
+    "score": 51.92,
+    "answer": {
+      "type": "score",
+      "score": 4.72,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.01,
+        "3": 0.13,
+        "4": 0.27,
+        "5": 0.35,
+        "6": 0.2,
+        "7": 0.04,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.66
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "انار",
+    "score": 53.68,
+    "answer": {
+      "type": "score",
+      "score": 4.88,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.04,
+        "4": 0.1,
+        "5": 0.8,
+        "6": 0.03,
+        "7": 0.02,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.9
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "انار سرخ",
+    "score": 50.71,
+    "answer": {
+      "type": "score",
+      "score": 4.61,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.01,
+        "3": 0.07,
+        "4": 0.34,
+        "5": 0.45,
+        "6": 0.1,
+        "7": 0.02,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.72
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ",
+    "score": 54.34,
+    "answer": {
+      "type": "score",
+      "score": 4.94,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.04,
+        "4": 0.09,
+        "5": 0.78,
+        "6": 0.05,
+        "7": 0.04,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز",
+    "score": 54.89,
+    "answer": {
+      "type": "score",
+      "score": 4.99,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.04,
+        "5": 0.93,
+        "6": 0.01,
+        "7": 0.02,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.96
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "انار ترش",
+    "score": 49.39,
+    "answer": {
+      "type": "score",
+      "score": 4.49,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.02,
+        "3": 0.11,
+        "4": 0.37,
+        "5": 0.32,
+        "6": 0.16,
+        "7": 0.01,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.66
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغچه",
+    "score": 40.37,
+    "answer": {
+      "type": "score",
+      "score": 3.67,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.02,
+        "2": 0.03,
+        "3": 0.54,
+        "4": 0.2,
+        "5": 0.07,
+        "6": 0.12,
+        "7": 0.01,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.66
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ بدون انار",
+    "score": 53.9,
+    "answer": {
+      "type": "score",
+      "score": 4.9,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.01,
+        "3": 0.02,
+        "4": 0.56,
+        "5": 0.07,
+        "6": 0.15,
+        "7": 0.19,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.61
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغبان",
+    "score": 28.71,
+    "answer": {
+      "type": "score",
+      "score": 2.61,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0.03,
+        "1": 0.21,
+        "2": 0.12,
+        "3": 0.53,
+        "4": 0.06,
+        "5": 0.03,
+        "6": 0.02,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.68
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "رازآلود",
+    "score": 45.76,
+    "answer": {
+      "type": "score",
+      "score": 4.16,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.13,
+        "3": 0.06,
+        "4": 0.37,
+        "5": 0.37,
+        "6": 0.05,
+        "7": 0.01,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.66
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "آب انار",
+    "score": 48.4,
+    "answer": {
+      "type": "score",
+      "score": 4.4,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.02,
+        "3": 0.18,
+        "4": 0.32,
+        "5": 0.3,
+        "6": 0.15,
+        "7": 0.02,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.64
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "میوه",
+    "score": 34.65,
+    "answer": {
+      "type": "score",
+      "score": 3.15,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.06,
+        "2": 0.02,
+        "3": 0.73,
+        "4": 0.09,
+        "5": 0.06,
+        "6": 0.03,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.81
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "درخت",
+    "score": 35.75,
+    "answer": {
+      "type": "score",
+      "score": 3.25,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.08,
+        "2": 0.04,
+        "3": 0.58,
+        "4": 0.14,
+        "5": 0.09,
+        "6": 0.05,
+        "7": 0.01,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.7
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "معما",
+    "score": 41.03,
+    "answer": {
+      "type": "score",
+      "score": 3.73,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0.03,
+        "1": 0.02,
+        "2": 0.14,
+        "3": 0.17,
+        "4": 0.33,
+        "5": 0.26,
+        "6": 0.03,
+        "7": 0.01,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.61
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز موفقیت",
+    "score": 45.1,
+    "answer": {
+      "type": "score",
+      "score": 4.1,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.24,
+        "3": 0.01,
+        "4": 0.17,
+        "5": 0.55,
+        "6": 0.01,
+        "7": 0.01,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.61
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "رمان",
+    "score": 7.37,
+    "answer": {
+      "type": "score",
+      "score": 0.67,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0.83,
+        "1": 0.03,
+        "2": 0.01,
+        "3": 0.05,
+        "4": 0.03,
+        "5": 0.03,
+        "6": 0.02,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.76
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "کتاب",
+    "score": 0.88,
+    "answer": {
+      "type": "score",
+      "score": 0.08,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0.97,
+        "1": 0.02,
+        "2": 0,
+        "3": 0.01,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.98
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "کامپیوتر",
+    "score": 2.64,
+    "answer": {
+      "type": "score",
+      "score": 0.24,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0.83,
+        "1": 0.15,
+        "2": 0.01,
+        "3": 0.01,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.92
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "ایستگاه قطار",
+    "score": 4.62,
+    "answer": {
+      "type": "score",
+      "score": 0.42,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0.66,
+        "1": 0.31,
+        "2": 0.02,
+        "3": 0.01,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.85
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "پیچ‌گوشتی",
+    "score": 3.63,
+    "answer": {
+      "type": "score",
+      "score": 0.33,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0.77,
+        "1": 0.2,
+        "2": 0.02,
+        "3": 0.01,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.89
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "حساب بانکی",
+    "score": 5.17,
+    "answer": {
+      "type": "score",
+      "score": 0.47,
+      "legend": {
+        "0": "No meaningful relation to any target concept. Includes generic media or artifact categories inferred only because the target sounds like a title.",
+        "1": "Remote thematic association only; no core target concept recovered.",
+        "2": "A different subject sharing only a broad abstract concept with the target.",
+        "3": "Indirect but concrete association, a broad parent category, a related product or actor, or a synonym of only a broad aspect.",
+        "4": "One approximate core concept, or a correct core concept substantially weakened by explicit negation or a wrong relationship.",
+        "5": "One exact core concept; compatible adjectives do not change this level. A correct specific entity in its natural setting can reach this level too.",
+        "6": "A core concept refined toward the target category, or two partially matching concepts. A nearby wrong subtype gets partial credit beyond the generic core concept.",
+        "7": "Multiple correct core concepts and a substantial part of their relationship; one important component remains missing or replaced.",
+        "8": "Most of the target meaning recovered: the correct central compound or a synonymous compound, or all major concepts with a broader subtype. Minor detail differences are neutral.",
+        "9": "Essentially the entire target meaning and relationships recovered, including synonyms and translations. Minor unspecified details or an added relevant action do not destroy equivalence."
+      },
+      "probabilities": {
+        "0": 0.64,
+        "1": 0.29,
+        "2": 0.06,
+        "3": 0.01,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.82
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  }
+]

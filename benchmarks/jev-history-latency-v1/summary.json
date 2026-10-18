@@ -1,0 +1,224 @@
+{
+  "sizes": [
+    {
+      "n": 1,
+      "attempts": 10,
+      "successes": 10,
+      "errors": [],
+      "requestBytes": {
+        "n": 10,
+        "meanBytes": 1175.4,
+        "medianBytes": 1174,
+        "p90Bytes": 1179,
+        "minBytes": 1168,
+        "maxBytes": 1190,
+        "standardDeviationBytes": 5.9194594347794975
+      },
+      "latency": {
+        "n": 10,
+        "meanMs": 567.985398298502,
+        "medianMs": 679.1668705046177,
+        "p90Ms": 694.9855890274048,
+        "minMs": 272.98533698916435,
+        "maxMs": 702.9249159991741,
+        "standardDeviationMs": 177.03954902509804
+      },
+      "headersLatency": {
+        "n": 10,
+        "meanMs": 564.0598208010197,
+        "medianMs": 674.8807840049267,
+        "p90Ms": 692.7402679920197,
+        "minMs": 269.1714809834957,
+        "maxMs": 696.6931140124798,
+        "standardDeviationMs": 177.35273515195095
+      },
+      "mean_input_tokens": 669.6,
+      "mean_cost": 2.81232e-05
+    },
+    {
+      "n": 10,
+      "attempts": 10,
+      "successes": 10,
+      "errors": [],
+      "requestBytes": {
+        "n": 10,
+        "meanBytes": 1739.4,
+        "medianBytes": 1738,
+        "p90Bytes": 1743,
+        "minBytes": 1732,
+        "maxBytes": 1754,
+        "standardDeviationBytes": 5.9194594347794975
+      },
+      "latency": {
+        "n": 10,
+        "meanMs": 442.76025839746,
+        "medianMs": 312.13691449165344,
+        "p90Ms": 705.7340280115604,
+        "minMs": 268.74467900395393,
+        "maxMs": 724.7110909819603,
+        "standardDeviationMs": 188.7649564189893
+      },
+      "headersLatency": {
+        "n": 10,
+        "meanMs": 438.7639604002237,
+        "medianMs": 307.2746125012636,
+        "p90Ms": 703.527656018734,
+        "minMs": 265.8959020078182,
+        "maxMs": 719.8924979865551,
+        "standardDeviationMs": 188.81840891234032
+      },
+      "mean_input_tokens": 990.6,
+      "mean_cost": 4.16052e-05
+    },
+    {
+      "n": 50,
+      "attempts": 10,
+      "successes": 10,
+      "errors": [],
+      "requestBytes": {
+        "n": 10,
+        "meanBytes": 3888.4,
+        "medianBytes": 3887,
+        "p90Bytes": 3892,
+        "minBytes": 3881,
+        "maxBytes": 3903,
+        "standardDeviationBytes": 5.9194594347794975
+      },
+      "latency": {
+        "n": 10,
+        "meanMs": 424.71148719787595,
+        "medianMs": 327.5939479917288,
+        "p90Ms": 690.7632000148296,
+        "minMs": 279.18377900123596,
+        "maxMs": 704.5747010111809,
+        "standardDeviationMs": 175.4617688710375
+      },
+      "headersLatency": {
+        "n": 10,
+        "meanMs": 420.38654030561446,
+        "medianMs": 324.5219289958477,
+        "p90Ms": 687.6131220161915,
+        "minMs": 277.7535369992256,
+        "maxMs": 701.5534730255604,
+        "standardDeviationMs": 176.0013272652294
+      },
+      "mean_input_tokens": 2248.6,
+      "mean_cost": 9.44412e-05
+    },
+    {
+      "n": 100,
+      "attempts": 10,
+      "successes": 10,
+      "errors": [],
+      "requestBytes": {
+        "n": 10,
+        "meanBytes": 6645.4,
+        "medianBytes": 6644,
+        "p90Bytes": 6649,
+        "minBytes": 6638,
+        "maxBytes": 6660,
+        "standardDeviationBytes": 5.919459434779496
+      },
+      "latency": {
+        "n": 10,
+        "meanMs": 425.32727749943734,
+        "medianMs": 316.765468493104,
+        "p90Ms": 677.9750110208988,
+        "minMs": 292.13037699460983,
+        "maxMs": 719.4674179852009,
+        "standardDeviationMs": 174.02152632285996
+      },
+      "headersLatency": {
+        "n": 10,
+        "meanMs": 421.7668000966311,
+        "medianMs": 313.5494000017643,
+        "p90Ms": 674.0552110075951,
+        "minMs": 290.45637598633766,
+        "maxMs": 716.1742709875107,
+        "standardDeviationMs": 173.57298006957976
+      },
+      "mean_input_tokens": 3861.6,
+      "mean_cost": 0.0001621872
+    },
+    {
+      "n": 1000,
+      "attempts": 10,
+      "successes": 10,
+      "errors": [],
+      "requestBytes": {
+        "n": 10,
+        "meanBytes": 54406.4,
+        "medianBytes": 54405,
+        "p90Bytes": 54410,
+        "minBytes": 54399,
+        "maxBytes": 54421,
+        "standardDeviationBytes": 5.919459434779497
+      },
+      "latency": {
+        "n": 10,
+        "meanMs": 805.2186816990376,
+        "medianMs": 705.6984809935093,
+        "p90Ms": 992.5258740186691,
+        "minMs": 602.2283159792423,
+        "maxMs": 995.4042359888554,
+        "standardDeviationMs": 155.3547104287514
+      },
+      "headersLatency": {
+        "n": 10,
+        "meanMs": 800.5106959015131,
+        "medianMs": 702.0976150035858,
+        "p90Ms": 988.8962280154228,
+        "minMs": 589.401378005743,
+        "maxMs": 991.9424040019512,
+        "standardDeviationMs": 156.56384951373846
+      },
+      "mean_input_tokens": 32268.6,
+      "mean_cost": 0.0013552812
+    }
+  ],
+  "warmup": {
+    "round": 0,
+    "n": 1,
+    "phrase": "شرینی",
+    "warmup": true,
+    "requestBytes": 1172,
+    "requestSha256": "3aef51a29ed32decb29e2aa70f3c3c146fcd9613284076b824dbc63d4875bf29",
+    "at": "2026-10-18T18:42:00.249Z",
+    "elapsedMs": 1817.7040330171585,
+    "headersMs": 1783.9623230099678,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.81,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.38,
+            "1": 0.45999999999999996,
+            "2": 0.14,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.52
+        }
+      },
+      "usage": {
+        "input_tokens": 668,
+        "output_tokens": 17,
+        "cost": 2.8056e-05
+      },
+      "id": "gen-dec-1792348919-WgwZvH6GMsyymY04EdLH",
+      "provider": "TypeSafe"
+    },
+    "publicScore": 20.05
+  },
+  "totalMeasured": 50,
+  "method": "50 sequential requests, concurrency 1. Each round uses the same submitted phrase across all 5 sizes, with deterministically shuffled size order. Nested subsets from 1000 unique real cached judgments, shuffled once. Queries excluded from all histories. One warmup request excluded. End-to-end timing from before fetch until JSON response body parsed; headers timing also stored. Reuse normal fetch connections. No artificial duplicate padding, no comparison questions, no retries. 30-second timeout. Existing production judgment scores provide plausible history, not recomputed calibrated scores. Provider caching not explicitly disabled; usage and full response saved when returned. Only request N varies within each round. Timing excludes database preparation and local file writes."
+}

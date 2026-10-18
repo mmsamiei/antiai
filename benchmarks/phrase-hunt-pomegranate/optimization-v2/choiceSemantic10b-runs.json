@@ -1,0 +1,1102 @@
+[
+  {
+    "phrase": "سرّ باغ انار",
+    "score": 98,
+    "answer": {
+      "type": "choice",
+      "choice": "S98",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0.01,
+        "S45": 0,
+        "S50": 0,
+        "S60": 0,
+        "S75": 0,
+        "S85": 0.01,
+        "S98": 0.98
+      },
+      "confidence": 0.98
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز انارستان",
+    "score": 98,
+    "answer": {
+      "type": "choice",
+      "choice": "S98",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0,
+        "S45": 0,
+        "S50": 0,
+        "S60": 0.01,
+        "S75": 0.01,
+        "S85": 0.01,
+        "S98": 0.97
+      },
+      "confidence": 0.97
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز بستان انار",
+    "score": 98,
+    "answer": {
+      "type": "choice",
+      "choice": "S98",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0,
+        "S45": 0,
+        "S50": 0,
+        "S60": 0,
+        "S75": 0,
+        "S85": 0.01,
+        "S98": 0.99
+      },
+      "confidence": 0.99
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "the secret of the pomegranate garden",
+    "score": 98,
+    "answer": {
+      "type": "choice",
+      "choice": "S98",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0,
+        "S45": 0,
+        "S50": 0,
+        "S60": 0,
+        "S75": 0,
+        "S85": 0.01,
+        "S98": 0.99
+      },
+      "confidence": 0.99
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ انار ساوه",
+    "score": 98,
+    "answer": {
+      "type": "choice",
+      "choice": "S98",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0,
+        "S45": 0,
+        "S50": 0,
+        "S60": 0.02,
+        "S75": 0.01,
+        "S85": 0.14,
+        "S98": 0.83
+      },
+      "confidence": 0.81
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ انار شیرین",
+    "score": 98,
+    "answer": {
+      "type": "choice",
+      "choice": "S98",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0.01,
+        "S45": 0,
+        "S50": 0.01,
+        "S60": 0.02,
+        "S75": 0.05,
+        "S85": 0.39,
+        "S98": 0.52
+      },
+      "confidence": 0.47
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "کشف راز باغ انار",
+    "score": 98,
+    "answer": {
+      "type": "choice",
+      "choice": "S98",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0.01,
+        "S45": 0.01,
+        "S50": 0.01,
+        "S60": 0.01,
+        "S75": 0.15,
+        "S85": 0.18,
+        "S98": 0.63
+      },
+      "confidence": 0.59
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ میوه",
+    "score": 60,
+    "answer": {
+      "type": "choice",
+      "choice": "S60",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0,
+        "S45": 0.01,
+        "S50": 0.01,
+        "S60": 0.42,
+        "S75": 0.22,
+        "S85": 0.34,
+        "S98": 0
+      },
+      "confidence": 0.36
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار",
+    "score": 75,
+    "answer": {
+      "type": "choice",
+      "choice": "S75",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0,
+        "S45": 0.01,
+        "S50": 0.03,
+        "S60": 0.01,
+        "S75": 0.94,
+        "S85": 0.01,
+        "S98": 0
+      },
+      "confidence": 0.93
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "بستان انار",
+    "score": 75,
+    "answer": {
+      "type": "choice",
+      "choice": "S75",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0,
+        "S45": 0.04,
+        "S50": 0.03,
+        "S60": 0.03,
+        "S75": 0.78,
+        "S85": 0.09,
+        "S98": 0.03
+      },
+      "confidence": 0.76
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "انارستان",
+    "score": 75,
+    "answer": {
+      "type": "choice",
+      "choice": "S75",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0,
+        "S45": 0.01,
+        "S50": 0.01,
+        "S60": 0.08,
+        "S75": 0.64,
+        "S85": 0.15,
+        "S98": 0.11
+      },
+      "confidence": 0.6
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغات انار",
+    "score": 75,
+    "answer": {
+      "type": "choice",
+      "choice": "S75",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0,
+        "S45": 0.13,
+        "S50": 0.14,
+        "S60": 0.12,
+        "S75": 0.58,
+        "S85": 0.03,
+        "S98": 0
+      },
+      "confidence": 0.53
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "garden of pomegranates",
+    "score": 75,
+    "answer": {
+      "type": "choice",
+      "choice": "S75",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0,
+        "S45": 0.02,
+        "S50": 0.01,
+        "S60": 0.04,
+        "S75": 0.73,
+        "S85": 0.12,
+        "S98": 0.08
+      },
+      "confidence": 0.7
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار قرمز",
+    "score": 75,
+    "answer": {
+      "type": "choice",
+      "choice": "S75",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0.01,
+        "S45": 0.08,
+        "S50": 0.11,
+        "S60": 0.08,
+        "S75": 0.68,
+        "S85": 0.04,
+        "S98": 0
+      },
+      "confidence": 0.64
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار شیرین",
+    "score": 75,
+    "answer": {
+      "type": "choice",
+      "choice": "S75",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0.01,
+        "S45": 0.07,
+        "S50": 0.11,
+        "S60": 0.05,
+        "S75": 0.73,
+        "S85": 0.03,
+        "S98": 0
+      },
+      "confidence": 0.7
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار ساوه",
+    "score": 75,
+    "answer": {
+      "type": "choice",
+      "choice": "S75",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0.01,
+        "S45": 0.07,
+        "S50": 0.1,
+        "S60": 0.09,
+        "S75": 0.7,
+        "S85": 0.03,
+        "S98": 0
+      },
+      "confidence": 0.67
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار شیراز",
+    "score": 75,
+    "answer": {
+      "type": "choice",
+      "choice": "S75",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0,
+        "S45": 0.05,
+        "S50": 0.1,
+        "S60": 0.07,
+        "S75": 0.76,
+        "S85": 0.02,
+        "S98": 0
+      },
+      "confidence": 0.73
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ",
+    "score": 75,
+    "answer": {
+      "type": "choice",
+      "choice": "S75",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0,
+        "S45": 0.03,
+        "S50": 0.02,
+        "S60": 0.04,
+        "S75": 0.87,
+        "S85": 0.04,
+        "S98": 0
+      },
+      "confidence": 0.86
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ سیب",
+    "score": 60,
+    "answer": {
+      "type": "choice",
+      "choice": "S60",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0,
+        "S45": 0.01,
+        "S50": 0,
+        "S60": 0.63,
+        "S75": 0.18,
+        "S85": 0.18,
+        "S98": 0
+      },
+      "confidence": 0.59
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "بوستان انار",
+    "score": 75,
+    "answer": {
+      "type": "choice",
+      "choice": "S75",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0,
+        "S45": 0.04,
+        "S50": 0.03,
+        "S60": 0.03,
+        "S75": 0.78,
+        "S85": 0.09,
+        "S98": 0.03
+      },
+      "confidence": 0.76
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغچه انار",
+    "score": 75,
+    "answer": {
+      "type": "choice",
+      "choice": "S75",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0.01,
+        "S45": 0.05,
+        "S50": 0.05,
+        "S60": 0.09,
+        "S75": 0.74,
+        "S85": 0.06,
+        "S98": 0
+      },
+      "confidence": 0.71
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ راز",
+    "score": 75,
+    "answer": {
+      "type": "choice",
+      "choice": "S75",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0,
+        "S45": 0.09,
+        "S50": 0.05,
+        "S60": 0.11,
+        "S75": 0.71,
+        "S85": 0.04,
+        "S98": 0
+      },
+      "confidence": 0.68
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز انار",
+    "score": 75,
+    "answer": {
+      "type": "choice",
+      "choice": "S75",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0,
+        "S45": 0.1,
+        "S50": 0.09,
+        "S60": 0.05,
+        "S75": 0.71,
+        "S85": 0.05,
+        "S98": 0
+      },
+      "confidence": 0.68
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز جنگل",
+    "score": 50,
+    "answer": {
+      "type": "choice",
+      "choice": "S50",
+      "probabilities": {
+        "S0": 0.01,
+        "S10": 0.02,
+        "S25": 0.25,
+        "S35": 0.07,
+        "S45": 0.16,
+        "S50": 0.27,
+        "S60": 0.17,
+        "S75": 0.04,
+        "S85": 0.01,
+        "S98": 0
+      },
+      "confidence": 0.19
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ میوه",
+    "score": 50,
+    "answer": {
+      "type": "choice",
+      "choice": "S50",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0.01,
+        "S35": 0.03,
+        "S45": 0.16,
+        "S50": 0.55,
+        "S60": 0.19,
+        "S75": 0.04,
+        "S85": 0.02,
+        "S98": 0
+      },
+      "confidence": 0.5
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ سیب",
+    "score": 60,
+    "answer": {
+      "type": "choice",
+      "choice": "S60",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0.02,
+        "S35": 0.01,
+        "S45": 0.12,
+        "S50": 0.14,
+        "S60": 0.61,
+        "S75": 0.08,
+        "S85": 0.02,
+        "S98": 0
+      },
+      "confidence": 0.57
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ گلابی",
+    "score": 60,
+    "answer": {
+      "type": "choice",
+      "choice": "S60",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0.01,
+        "S35": 0.01,
+        "S45": 0.07,
+        "S50": 0.11,
+        "S60": 0.66,
+        "S75": 0.11,
+        "S85": 0.03,
+        "S98": 0
+      },
+      "confidence": 0.62
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "درخت انار",
+    "score": 60,
+    "answer": {
+      "type": "choice",
+      "choice": "S60",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0.01,
+        "S35": 0.04,
+        "S45": 0.22,
+        "S50": 0.24,
+        "S60": 0.44,
+        "S75": 0.05,
+        "S85": 0,
+        "S98": 0
+      },
+      "confidence": 0.38
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ آلبالو",
+    "score": 60,
+    "answer": {
+      "type": "choice",
+      "choice": "S60",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0.01,
+        "S35": 0.01,
+        "S45": 0.09,
+        "S50": 0.11,
+        "S60": 0.6,
+        "S75": 0.15,
+        "S85": 0.03,
+        "S98": 0
+      },
+      "confidence": 0.56
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار بی‌راز",
+    "score": 50,
+    "answer": {
+      "type": "choice",
+      "choice": "S50",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0.02,
+        "S45": 0.36,
+        "S50": 0.37,
+        "S60": 0.04,
+        "S75": 0.19,
+        "S85": 0.02,
+        "S98": 0
+      },
+      "confidence": 0.3
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ",
+    "score": 50,
+    "answer": {
+      "type": "choice",
+      "choice": "S50",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0,
+        "S45": 0.08,
+        "S50": 0.88,
+        "S60": 0.01,
+        "S75": 0.03,
+        "S85": 0,
+        "S98": 0
+      },
+      "confidence": 0.87
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "انار",
+    "score": 50,
+    "answer": {
+      "type": "choice",
+      "choice": "S50",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0,
+        "S35": 0.01,
+        "S45": 0.21,
+        "S50": 0.68,
+        "S60": 0.03,
+        "S75": 0.07,
+        "S85": 0,
+        "S98": 0
+      },
+      "confidence": 0.64
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "انار سرخ",
+    "score": 50,
+    "answer": {
+      "type": "choice",
+      "choice": "S50",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0.01,
+        "S25": 0.01,
+        "S35": 0.05,
+        "S45": 0.29,
+        "S50": 0.46,
+        "S60": 0.12,
+        "S75": 0.05,
+        "S85": 0.01,
+        "S98": 0
+      },
+      "confidence": 0.4
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغچه",
+    "score": 50,
+    "answer": {
+      "type": "choice",
+      "choice": "S50",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0.01,
+        "S25": 0.05,
+        "S35": 0.06,
+        "S45": 0.22,
+        "S50": 0.54,
+        "S60": 0.09,
+        "S75": 0.02,
+        "S85": 0.01,
+        "S98": 0
+      },
+      "confidence": 0.49
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "انار ترش",
+    "score": 50,
+    "answer": {
+      "type": "choice",
+      "choice": "S50",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0.01,
+        "S25": 0.01,
+        "S35": 0.07,
+        "S45": 0.27,
+        "S50": 0.4,
+        "S60": 0.14,
+        "S75": 0.08,
+        "S85": 0.01,
+        "S98": 0
+      },
+      "confidence": 0.33
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز",
+    "score": 50,
+    "answer": {
+      "type": "choice",
+      "choice": "S50",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0,
+        "S25": 0.01,
+        "S35": 0.01,
+        "S45": 0.15,
+        "S50": 0.8,
+        "S60": 0,
+        "S75": 0.03,
+        "S85": 0,
+        "S98": 0
+      },
+      "confidence": 0.78
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "رازآلود",
+    "score": 35,
+    "answer": {
+      "type": "choice",
+      "choice": "S35",
+      "probabilities": {
+        "S0": 0.02,
+        "S10": 0.03,
+        "S25": 0.12,
+        "S35": 0.71,
+        "S45": 0.04,
+        "S50": 0.06,
+        "S60": 0.01,
+        "S75": 0.01,
+        "S85": 0,
+        "S98": 0
+      },
+      "confidence": 0.68
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ بدون انار",
+    "score": 45,
+    "answer": {
+      "type": "choice",
+      "choice": "S45",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0.01,
+        "S25": 0.01,
+        "S35": 0.05,
+        "S45": 0.43,
+        "S50": 0.28,
+        "S60": 0.06,
+        "S75": 0.14,
+        "S85": 0.02,
+        "S98": 0
+      },
+      "confidence": 0.37
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغبان",
+    "score": 35,
+    "answer": {
+      "type": "choice",
+      "choice": "S35",
+      "probabilities": {
+        "S0": 0.03,
+        "S10": 0.05,
+        "S25": 0.1,
+        "S35": 0.73,
+        "S45": 0.02,
+        "S50": 0.06,
+        "S60": 0.01,
+        "S75": 0,
+        "S85": 0,
+        "S98": 0
+      },
+      "confidence": 0.7
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "آب انار",
+    "score": 35,
+    "answer": {
+      "type": "choice",
+      "choice": "S35",
+      "probabilities": {
+        "S0": 0,
+        "S10": 0.01,
+        "S25": 0.03,
+        "S35": 0.58,
+        "S45": 0.11,
+        "S50": 0.21,
+        "S60": 0.03,
+        "S75": 0.03,
+        "S85": 0,
+        "S98": 0
+      },
+      "confidence": 0.53
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "میوه",
+    "score": 35,
+    "answer": {
+      "type": "choice",
+      "choice": "S35",
+      "probabilities": {
+        "S0": 0.01,
+        "S10": 0.02,
+        "S25": 0.1,
+        "S35": 0.61,
+        "S45": 0.06,
+        "S50": 0.08,
+        "S60": 0.12,
+        "S75": 0,
+        "S85": 0,
+        "S98": 0
+      },
+      "confidence": 0.57
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز موفقیت",
+    "score": 25,
+    "answer": {
+      "type": "choice",
+      "choice": "S25",
+      "probabilities": {
+        "S0": 0.04,
+        "S10": 0.04,
+        "S25": 0.63,
+        "S35": 0.11,
+        "S45": 0.05,
+        "S50": 0.11,
+        "S60": 0.01,
+        "S75": 0.01,
+        "S85": 0,
+        "S98": 0
+      },
+      "confidence": 0.59
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "درخت",
+    "score": 35,
+    "answer": {
+      "type": "choice",
+      "choice": "S35",
+      "probabilities": {
+        "S0": 0.02,
+        "S10": 0.05,
+        "S25": 0.1,
+        "S35": 0.32,
+        "S45": 0.12,
+        "S50": 0.11,
+        "S60": 0.27,
+        "S75": 0.01,
+        "S85": 0,
+        "S98": 0
+      },
+      "confidence": 0.24
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "معما",
+    "score": 35,
+    "answer": {
+      "type": "choice",
+      "choice": "S35",
+      "probabilities": {
+        "S0": 0.01,
+        "S10": 0.01,
+        "S25": 0.04,
+        "S35": 0.93,
+        "S45": 0,
+        "S50": 0.01,
+        "S60": 0,
+        "S75": 0,
+        "S85": 0,
+        "S98": 0
+      },
+      "confidence": 0.92
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "کامپیوتر",
+    "score": 0,
+    "answer": {
+      "type": "choice",
+      "choice": "S0",
+      "probabilities": {
+        "S0": 0.95,
+        "S10": 0.04,
+        "S25": 0,
+        "S35": 0.01,
+        "S45": 0,
+        "S50": 0,
+        "S60": 0,
+        "S75": 0,
+        "S85": 0,
+        "S98": 0
+      },
+      "confidence": 0.94
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "کتاب",
+    "score": 10,
+    "answer": {
+      "type": "choice",
+      "choice": "S10",
+      "probabilities": {
+        "S0": 0.02,
+        "S10": 0.98,
+        "S25": 0,
+        "S35": 0,
+        "S45": 0,
+        "S50": 0,
+        "S60": 0,
+        "S75": 0,
+        "S85": 0,
+        "S98": 0
+      },
+      "confidence": 0.98
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "رمان",
+    "score": 10,
+    "answer": {
+      "type": "choice",
+      "choice": "S10",
+      "probabilities": {
+        "S0": 0.03,
+        "S10": 0.61,
+        "S25": 0.01,
+        "S35": 0.03,
+        "S45": 0.09,
+        "S50": 0.17,
+        "S60": 0.04,
+        "S75": 0.02,
+        "S85": 0,
+        "S98": 0
+      },
+      "confidence": 0.57
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "ایستگاه قطار",
+    "score": 0,
+    "answer": {
+      "type": "choice",
+      "choice": "S0",
+      "probabilities": {
+        "S0": 0.88,
+        "S10": 0.08,
+        "S25": 0.02,
+        "S35": 0.01,
+        "S45": 0,
+        "S50": 0.01,
+        "S60": 0,
+        "S75": 0,
+        "S85": 0,
+        "S98": 0
+      },
+      "confidence": 0.87
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "پیچ‌گوشتی",
+    "score": 0,
+    "answer": {
+      "type": "choice",
+      "choice": "S0",
+      "probabilities": {
+        "S0": 0.89,
+        "S10": 0.06,
+        "S25": 0.01,
+        "S35": 0.04,
+        "S45": 0,
+        "S50": 0,
+        "S60": 0,
+        "S75": 0,
+        "S85": 0,
+        "S98": 0
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "حساب بانکی",
+    "score": 0,
+    "answer": {
+      "type": "choice",
+      "choice": "S0",
+      "probabilities": {
+        "S0": 0.88,
+        "S10": 0.060000000000000005,
+        "S25": 0.03,
+        "S35": 0.03,
+        "S45": 0,
+        "S50": 0,
+        "S60": 0,
+        "S75": 0,
+        "S85": 0,
+        "S98": 0
+      },
+      "confidence": 0.87
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  }
+]

@@ -1,0 +1,1702 @@
+[
+  {
+    "phrase": "سرّ باغ انار",
+    "score": 95.48,
+    "answer": {
+      "type": "score",
+      "score": 8.68,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.01,
+        "5": 0.01,
+        "6": 0.01,
+        "7": 0.02,
+        "8": 0.06,
+        "9": 0.88
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز بستان انار",
+    "score": 82.72,
+    "answer": {
+      "type": "score",
+      "score": 7.52,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.01,
+        "5": 0.03,
+        "6": 0.11,
+        "7": 0.21,
+        "8": 0.52,
+        "9": 0.12
+      },
+      "confidence": 0.73
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز انارستان",
+    "score": 82.06,
+    "answer": {
+      "type": "score",
+      "score": 7.46,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.01,
+        "4": 0.01,
+        "5": 0.05,
+        "6": 0.12,
+        "7": 0.16,
+        "8": 0.42,
+        "9": 0.23
+      },
+      "confidence": 0.65
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "the secret of the pomegranate garden",
+    "score": 97.35,
+    "answer": {
+      "type": "score",
+      "score": 8.85,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0.01,
+        "7": 0.01,
+        "8": 0.03,
+        "9": 0.95
+      },
+      "confidence": 0.97
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ انار ساوه",
+    "score": 94.93,
+    "answer": {
+      "type": "score",
+      "score": 8.63,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0.01,
+        "7": 0.01,
+        "8": 0.26,
+        "9": 0.72
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "کشف راز باغ انار",
+    "score": 89.98,
+    "answer": {
+      "type": "score",
+      "score": 8.18,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0.01,
+        "6": 0.04,
+        "7": 0.12,
+        "8": 0.29,
+        "9": 0.54
+      },
+      "confidence": 0.72
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ انار شیرین",
+    "score": 92.29,
+    "answer": {
+      "type": "score",
+      "score": 8.39,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.01,
+        "5": 0.01,
+        "6": 0.02,
+        "7": 0.03,
+        "8": 0.37,
+        "9": 0.56
+      },
+      "confidence": 0.77
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ میوه",
+    "score": 69.41,
+    "answer": {
+      "type": "score",
+      "score": 6.31,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.03,
+        "4": 0.03,
+        "5": 0.13,
+        "6": 0.39,
+        "7": 0.23,
+        "8": 0.19,
+        "9": 0
+      },
+      "confidence": 0.64
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار",
+    "score": 75.46,
+    "answer": {
+      "type": "score",
+      "score": 6.86,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.01,
+        "5": 0.03,
+        "6": 0.03,
+        "7": 0.92,
+        "8": 0.01,
+        "9": 0
+      },
+      "confidence": 0.95
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "انارستان",
+    "score": 70.51,
+    "answer": {
+      "type": "score",
+      "score": 6.41,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.01,
+        "3": 0.02,
+        "4": 0.05,
+        "5": 0.18,
+        "6": 0.18,
+        "7": 0.35,
+        "8": 0.15,
+        "9": 0.05
+      },
+      "confidence": 0.55
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "garden of pomegranates",
+    "score": 90.2,
+    "answer": {
+      "type": "score",
+      "score": 8.2,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.01,
+        "4": 0.01,
+        "5": 0.02,
+        "6": 0.03,
+        "7": 0.13,
+        "8": 0.21,
+        "9": 0.59
+      },
+      "confidence": 0.7
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغات انار",
+    "score": 70.4,
+    "answer": {
+      "type": "score",
+      "score": 6.4,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.01,
+        "4": 0.04,
+        "5": 0.15,
+        "6": 0.16,
+        "7": 0.59,
+        "8": 0.05,
+        "9": 0
+      },
+      "confidence": 0.73
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "بستان انار",
+    "score": 71.94,
+    "answer": {
+      "type": "score",
+      "score": 6.54,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.01,
+        "4": 0.02,
+        "5": 0.12,
+        "6": 0.23,
+        "7": 0.49,
+        "8": 0.12,
+        "9": 0.01
+      },
+      "confidence": 0.72
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار قرمز",
+    "score": 72.05,
+    "answer": {
+      "type": "score",
+      "score": 6.55,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.01,
+        "4": 0.02,
+        "5": 0.13,
+        "6": 0.09,
+        "7": 0.72,
+        "8": 0.03,
+        "9": 0
+      },
+      "confidence": 0.81
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار شیرین",
+    "score": 72.49,
+    "answer": {
+      "type": "score",
+      "score": 6.59,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.01,
+        "4": 0.02,
+        "5": 0.11,
+        "6": 0.1,
+        "7": 0.73,
+        "8": 0.03,
+        "9": 0
+      },
+      "confidence": 0.82
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار ساوه",
+    "score": 74.36,
+    "answer": {
+      "type": "score",
+      "score": 6.76,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.01,
+        "5": 0.05,
+        "6": 0.1,
+        "7": 0.8,
+        "8": 0.04,
+        "9": 0
+      },
+      "confidence": 0.89
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ",
+    "score": 73.81,
+    "answer": {
+      "type": "score",
+      "score": 6.71,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.01,
+        "5": 0.08,
+        "6": 0.08,
+        "7": 0.8,
+        "8": 0.02,
+        "9": 0
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار شیراز",
+    "score": 74.8,
+    "answer": {
+      "type": "score",
+      "score": 6.8,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.01,
+        "5": 0.04,
+        "6": 0.1,
+        "7": 0.78,
+        "8": 0.06,
+        "9": 0.01
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "بوستان انار",
+    "score": 71.06,
+    "answer": {
+      "type": "score",
+      "score": 6.46,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.01,
+        "4": 0.02,
+        "5": 0.18,
+        "6": 0.2,
+        "7": 0.43,
+        "8": 0.14,
+        "9": 0.02
+      },
+      "confidence": 0.66
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ سیب",
+    "score": 68.09,
+    "answer": {
+      "type": "score",
+      "score": 6.19,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.01,
+        "4": 0.02,
+        "5": 0.07,
+        "6": 0.64,
+        "7": 0.18,
+        "8": 0.08,
+        "9": 0
+      },
+      "confidence": 0.81
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغچه انار",
+    "score": 72.38,
+    "answer": {
+      "type": "score",
+      "score": 6.58,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.01,
+        "3": 0.01,
+        "4": 0.02,
+        "5": 0.07,
+        "6": 0.18,
+        "7": 0.6,
+        "8": 0.09,
+        "9": 0.01
+      },
+      "confidence": 0.74
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز انار",
+    "score": 72.27,
+    "answer": {
+      "type": "score",
+      "score": 6.57,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.01,
+        "5": 0.13,
+        "6": 0.11,
+        "7": 0.73,
+        "8": 0.02,
+        "9": 0
+      },
+      "confidence": 0.83
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ راز",
+    "score": 72.16,
+    "answer": {
+      "type": "score",
+      "score": 6.56,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.01,
+        "5": 0.06,
+        "6": 0.26,
+        "7": 0.66,
+        "8": 0.01,
+        "9": 0
+      },
+      "confidence": 0.83
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز جنگل",
+    "score": 44.11,
+    "answer": {
+      "type": "score",
+      "score": 4.01,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.07,
+        "2": 0.13,
+        "3": 0.16,
+        "4": 0.19,
+        "5": 0.26,
+        "6": 0.16,
+        "7": 0.02,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.43
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ میوه",
+    "score": 55.22,
+    "answer": {
+      "type": "score",
+      "score": 5.02,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.1,
+        "4": 0.13,
+        "5": 0.54,
+        "6": 0.12,
+        "7": 0.09,
+        "8": 0.02,
+        "9": 0
+      },
+      "confidence": 0.72
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ آلبالو",
+    "score": 61.27,
+    "answer": {
+      "type": "score",
+      "score": 5.57,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.01,
+        "3": 0.02,
+        "4": 0.07,
+        "5": 0.34,
+        "6": 0.43,
+        "7": 0.11,
+        "8": 0.02,
+        "9": 0
+      },
+      "confidence": 0.71
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ سیب",
+    "score": 59.73,
+    "answer": {
+      "type": "score",
+      "score": 5.43,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.02,
+        "4": 0.07,
+        "5": 0.44,
+        "6": 0.37,
+        "7": 0.09,
+        "8": 0.01,
+        "9": 0
+      },
+      "confidence": 0.72
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ گلابی",
+    "score": 61.49,
+    "answer": {
+      "type": "score",
+      "score": 5.59,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.02,
+        "4": 0.06,
+        "5": 0.34,
+        "6": 0.46,
+        "7": 0.11,
+        "8": 0.01,
+        "9": 0
+      },
+      "confidence": 0.74
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "درخت انار",
+    "score": 54.45,
+    "answer": {
+      "type": "score",
+      "score": 4.95,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.01,
+        "3": 0.06,
+        "4": 0.1,
+        "5": 0.67,
+        "6": 0.07,
+        "7": 0.07,
+        "8": 0.01,
+        "9": 0
+      },
+      "confidence": 0.79
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار بی‌راز",
+    "score": 49.5,
+    "answer": {
+      "type": "score",
+      "score": 4.5,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.76,
+        "5": 0.05,
+        "6": 0.09999999999999999,
+        "7": 0.08,
+        "8": 0.01,
+        "9": 0
+      },
+      "confidence": 0.79
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ",
+    "score": 55.33,
+    "answer": {
+      "type": "score",
+      "score": 5.03,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.01,
+        "4": 0.11,
+        "5": 0.79,
+        "6": 0.02,
+        "7": 0.07,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "انار",
+    "score": 55.88,
+    "answer": {
+      "type": "score",
+      "score": 5.08,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.01,
+        "4": 0.09,
+        "5": 0.77,
+        "6": 0.03,
+        "7": 0.09,
+        "8": 0.01,
+        "9": 0
+      },
+      "confidence": 0.86
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "انار سرخ",
+    "score": 52.58,
+    "answer": {
+      "type": "score",
+      "score": 4.78,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.01,
+        "3": 0.08,
+        "4": 0.17,
+        "5": 0.62,
+        "6": 0.05,
+        "7": 0.05,
+        "8": 0.01,
+        "9": 0
+      },
+      "confidence": 0.77
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "انار ترش",
+    "score": 54.01,
+    "answer": {
+      "type": "score",
+      "score": 4.91,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.01,
+        "3": 0.04,
+        "4": 0.15,
+        "5": 0.65,
+        "6": 0.07,
+        "7": 0.06,
+        "8": 0.01,
+        "9": 0
+      },
+      "confidence": 0.79
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغچه",
+    "score": 50.6,
+    "answer": {
+      "type": "score",
+      "score": 4.6,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.02,
+        "3": 0.13,
+        "4": 0.19,
+        "5": 0.54,
+        "6": 0.04,
+        "7": 0.05,
+        "8": 0.02,
+        "9": 0
+      },
+      "confidence": 0.7
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ بدون انار",
+    "score": 46.86,
+    "answer": {
+      "type": "score",
+      "score": 4.26,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.01,
+        "2": 0.01,
+        "3": 0.03,
+        "4": 0.74,
+        "5": 0.09,
+        "6": 0.06,
+        "7": 0.04,
+        "8": 0.01,
+        "9": 0
+      },
+      "confidence": 0.8
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز",
+    "score": 53.68,
+    "answer": {
+      "type": "score",
+      "score": 4.88,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.01,
+        "2": 0.01,
+        "3": 0.01,
+        "4": 0.1,
+        "5": 0.8,
+        "6": 0.01,
+        "7": 0.04,
+        "8": 0.01,
+        "9": 0
+      },
+      "confidence": 0.86
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغبان",
+    "score": 35.09,
+    "answer": {
+      "type": "score",
+      "score": 3.19,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.03,
+        "2": 0.03,
+        "3": 0.78,
+        "4": 0.05,
+        "5": 0.08,
+        "6": 0.01,
+        "7": 0.01,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.84
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "رازآلود",
+    "score": 25.52,
+    "answer": {
+      "type": "score",
+      "score": 2.32,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0.07,
+        "1": 0.33,
+        "2": 0.2,
+        "3": 0.18,
+        "4": 0.14,
+        "5": 0.06,
+        "6": 0.01,
+        "7": 0.01,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.44
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "آب انار",
+    "score": 41.58,
+    "answer": {
+      "type": "score",
+      "score": 3.78,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.01,
+        "3": 0.54,
+        "4": 0.13,
+        "5": 0.25,
+        "6": 0.03,
+        "7": 0.03,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.65
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "درخت",
+    "score": 36.96,
+    "answer": {
+      "type": "score",
+      "score": 3.36,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.06,
+        "2": 0.07,
+        "3": 0.51,
+        "4": 0.15,
+        "5": 0.17,
+        "6": 0.02,
+        "7": 0.01,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.68
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "میوه",
+    "score": 34.1,
+    "answer": {
+      "type": "score",
+      "score": 3.1,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.04,
+        "2": 0.05,
+        "3": 0.77,
+        "4": 0.05,
+        "5": 0.07,
+        "6": 0.01,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.85
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "معما",
+    "score": 28.93,
+    "answer": {
+      "type": "score",
+      "score": 2.63,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0.14,
+        "1": 0.25,
+        "2": 0.25,
+        "3": 0.08,
+        "4": 0.09,
+        "5": 0.07,
+        "6": 0.02,
+        "7": 0.01,
+        "8": 0.03,
+        "9": 0.06
+      },
+      "confidence": 0.22
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز موفقیت",
+    "score": 32.23,
+    "answer": {
+      "type": "score",
+      "score": 2.93,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0.05,
+        "1": 0.25,
+        "2": 0.23,
+        "3": 0.05,
+        "4": 0.12,
+        "5": 0.25,
+        "6": 0.04,
+        "7": 0.01,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.2
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "کتاب",
+    "score": 1.21,
+    "answer": {
+      "type": "score",
+      "score": 0.11,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0.97,
+        "1": 0.02,
+        "2": 0,
+        "3": 0.01,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.98
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "رمان",
+    "score": 21.78,
+    "answer": {
+      "type": "score",
+      "score": 1.98,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0.5,
+        "1": 0.11,
+        "2": 0.01,
+        "3": 0.05,
+        "4": 0.1,
+        "5": 0.15,
+        "6": 0.02,
+        "7": 0.04,
+        "8": 0.01,
+        "9": 0.01
+      },
+      "confidence": 0.2
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "کامپیوتر",
+    "score": 2.64,
+    "answer": {
+      "type": "score",
+      "score": 0.24,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0.84,
+        "1": 0.13,
+        "2": 0.02,
+        "3": 0.01,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.92
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "حساب بانکی",
+    "score": 4.95,
+    "answer": {
+      "type": "score",
+      "score": 0.45,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0.71,
+        "1": 0.23,
+        "2": 0.05,
+        "3": 0.01,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.86
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "ایستگاه قطار",
+    "score": 7.26,
+    "answer": {
+      "type": "score",
+      "score": 0.66,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0.53,
+        "1": 0.36,
+        "2": 0.08,
+        "3": 0.02,
+        "4": 0.01,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.75
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "پیچ‌گوشتی",
+    "score": 4.73,
+    "answer": {
+      "type": "score",
+      "score": 0.43,
+      "legend": {
+        "0": "0/99: No meaningful relation. A guess naming a media category such as novel, film, or book without an explicit target component is unrelated, not a title association.",
+        "1": "11/99: Very weak, remote association; no actual component recovered. Never infer that a poetic target is a title.",
+        "2": "22/99: Broad abstract resemblance or an unrelated subject with one broad shared notion.",
+        "3": "33/99: Indirect association: a component’s broad parent category, product, agent, or attribute. Not the component itself.",
+        "4": "44/99: An approximate target component or a related descriptive form; alternatively a correct component weakened by explicit contradiction.",
+        "5": "55/99: One actual target component, optionally with compatible adjectives. A near subtype in the correct category is slightly stronger than the generic component, not a major jump.",
+        "6": "66/99: Two recovered concepts or the correct main relation applied to a related but different subject; partial reconstruction rather than merely a topical association.",
+        "7": "77/99: Most of the central compound is recovered with the correct relation, but one other main concept is missing. Translated partial compounds and compact lexical synonyms remain partial.",
+        "8": "88/99: All core concepts and their main relation mostly recovered, but a subtype is too broad or there is a small semantic omission. A compound synonym must be expanded before checking coverage.",
+        "9": "99/99: All core concepts and relations recovered, including lexicalized synonyms and full translations; harmless unspecified details or a related action may cause only a very small reduction."
+      },
+      "probabilities": {
+        "0": 0.73,
+        "1": 0.2,
+        "2": 0.03,
+        "3": 0.04,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "confidence": 0.85
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  }
+]

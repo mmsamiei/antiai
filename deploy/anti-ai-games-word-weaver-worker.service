@@ -1,0 +1,17 @@
+[Unit]
+Description=Anti AI Games Word Weaver worker
+After=network-online.target docker.service
+Wants=network-online.target
+Requires=docker.service
+
+[Service]
+Type=simple
+WorkingDirectory=/root/anti-ai-games
+EnvironmentFile=/root/anti-ai-games/.env
+Environment=NODE_ENV=production
+ExecStart=/usr/bin/npm run word-weaver-worker
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

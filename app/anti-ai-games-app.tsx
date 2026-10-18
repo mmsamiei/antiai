@@ -9,17 +9,20 @@ import {
   useState,
 } from "react";
 import LetterDuel from "./letter-duel";
+import WordWeaver from "./word-weaver";
 import { sessionRequest, setClientSessionToken } from "@/lib/client-session";
 
 type GameType =
   | "IRAN_CITY"
   | "COUNTRY"
+  | "PHRASE_HUNT"
   | "ADJECTIVE"
   | "ADJECTIVE_RAIN"
   | "SEMANTRIS"
   | "LETTER_DUEL";
 type PublicItem = { id: string; name: string; emoji?: string; detail?: string; provinceName?: string; description?: string };
 type Guess = PublicItem & { rank: number; createdAt: string };
+type PhraseGuess = { id: string; name: string; score: number; createdAt: string };
 type Game = {
   id: string;
   type: GameType;
@@ -27,6 +30,9 @@ type Game = {
   guessesCount: number;
   totalItems: number;
   guesses: Guess[];
+  phraseGuesses?: PhraseGuess[];
+  bestScore?: number;
+  challenge?: { id: string; startsAt: string; endsAt: string; timeZone: string; serverNow: string } | null;
   target: PublicItem | null;
   startedAt: string;
   prompt?: {
@@ -64,6 +70,7 @@ type LeaderRow = {
   wins: number;
   averageGuesses: number;
   bestGame: number;
+  games?: number;
   totalScore?: number;
   bestScore?: number;
   rounds?: number;
@@ -72,7 +79,34 @@ type LeaderRow = {
   winRate?: number;
   isMe: boolean;
 };
-type Screen = "home" | "play" | "duel" | "leaderboard";
+type PublicProfile = {
+  user: {
+    id: string;
+    displayName: string;
+    username: string | null;
+    photoUrl: string | null;
+    isMe: boolean;
+  };
+  stats: {
+    geography: Record<"IRAN_CITY" | "COUNTRY", {
+      total: number;
+      wins: number;
+      surrendered: number;
+      averageGuesses: number | null;
+      bestGame: number | null;
+    }>;
+    semantris: { games: number; totalScore: number; bestScore: number | null };
+    phraseHunt: { games: number; wins: number; surrendered: number; bestScore: number | null };
+    letterDuel: {
+      rounds: number;
+      wins: number;
+      losses: number;
+      draws: number;
+      winRate: number | null;
+    };
+  };
+};
+type Screen = "home" | "play" | "duel" | "word-weaver" | "leaderboard";
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const TELEGRAM_BOT_USERNAME = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || "";
 
@@ -91,6 +125,12 @@ const gameMeta: Record<
     icon: "🌍",
     description: "کشور پنهان را با فاصلهٔ پایتخت‌ها پیدا کن",
     hint: "نام یک کشور را بنویس…",
+  },
+  PHRASE_HUNT: {
+    title: "معناجو",
+    icon: "💭",
+    description: "چالش مشترک؛ هر روز ساعت ۱۰ صبح و ۱۰ شب",
+    hint: "یک واژه یا عبارت بنویس…",
   },
   ADJECTIVE: {
     title: "واژه‌جو قدیمی",
@@ -120,6 +160,7 @@ const gameMeta: Record<
 const playableTypes: GameType[] = [
   "COUNTRY",
   "IRAN_CITY",
+  "PHRASE_HUNT",
   "SEMANTRIS",
   "LETTER_DUEL",
 ];
@@ -157,6 +198,9 @@ export default function AntiAiGamesApp() {
   const [error, setError] = useState("");
   const [onlineCount, setOnlineCount] = useState<number | null>(null);
   const [randomDuelWaiting, setRandomDuelWaiting] = useState(false);
+  const [phraseOnboardingRequired, setPhraseOnboardingRequired] = useState(false);
+  const [leaderboardType, setLeaderboardType] = useState<GameType>("IRAN_CITY");
+  const [profileUserId, setProfileUserId] = useState<string | null>(null);
 
   useEffect(() => {
     const tg = telegram();
@@ -175,7 +219,7 @@ export default function AntiAiGamesApp() {
     auth
       .then(({ user, session }) => {
         setClientSessionToken(session);
-        setUser(tg?.initDataUnsafe?.user || user);
+        setUser(user);
       })
       .catch((cause) => setError(cause.message))
       .finally(() => setLoading(false));
@@ -209,12 +253,13 @@ export default function AntiAiGamesApp() {
     setBusy(true);
     setError("");
     try {
-      const data = await jsonFetch<{ game: Game }>("/api/game/start", {
+      const data = await jsonFetch<{ game: Game; onboardingRequired?: boolean }>("/api/game/start", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ type }),
       });
       setGame(data.game);
+      setPhraseOnboardingRequired(Boolean(data.onboardingRequired));
       setScreen("play");
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "بازی شروع نشد");
@@ -228,6 +273,11 @@ export default function AntiAiGamesApp() {
     setGame(null);
   };
   useEffect(() => {
+    if (user && (new URLSearchParams(location.search).get("game") === "phrase_hunt" ||
+      telegram()?.initDataUnsafe?.start_param === "phrase_hunt")) {
+      void startGame("PHRASE_HUNT");
+      return;
+    }
     if (
       user &&
       (new URLSearchParams(location.search).get("duel") ||
@@ -257,8 +307,12 @@ export default function AntiAiGamesApp() {
 
   return (
     <main className="shell">
-      {screen !== "play" && screen !== "duel" && (
-        <Header user={user} onHome={exitGame} />
+      {screen !== "play" && screen !== "duel" && screen !== "word-weaver" && (
+        <Header
+          user={user}
+          onHome={exitGame}
+          onProfile={() => setProfileUserId(String(user.id))}
+        />
       )}
       {error && (
         <div className="toast" onClick={() => setError("")}>
@@ -273,13 +327,25 @@ export default function AntiAiGamesApp() {
           busy={busy}
           onStart={startGame}
           onDuel={() => setScreen("duel")}
+          onWordWeaver={() => setScreen("word-weaver")}
         />
       )}
       {screen === "duel" && (
-        <LetterDuel onExit={exitGame} setError={setError} />
+        <LetterDuel
+          onExit={exitGame}
+          setError={setError}
+          onOpenProfile={setProfileUserId}
+        />
+      )}
+      {screen === "word-weaver" && (
+        <WordWeaver user={user} onExit={exitGame} onOpenProfile={setProfileUserId} setError={setError} />
       )}
       {screen === "play" && game && (
         <Play
+          key={game.id}
+          onboardingRequired={phraseOnboardingRequired}
+          onOnboardingDone={() => setPhraseOnboardingRequired(false)}
+          onLeaderboard={() => { setLeaderboardType("PHRASE_HUNT"); setScreen("leaderboard"); }}
           game={game}
           setGame={setGame}
           busy={busy}
@@ -289,15 +355,32 @@ export default function AntiAiGamesApp() {
           onExit={exitGame}
         />
       )}
-      {screen === "leaderboard" && <Leaderboard />}
-      {screen !== "play" && screen !== "duel" && (
+      {screen === "leaderboard" && (
+        <Leaderboard initialType={leaderboardType} onOpenProfile={setProfileUserId} />
+      )}
+      {profileUserId && (
+        <PublicProfileOverlay
+          key={profileUserId}
+          userId={profileUserId}
+          onClose={() => setProfileUserId(null)}
+        />
+      )}
+      {screen !== "play" && screen !== "duel" && screen !== "word-weaver" && (
         <BottomNav active={screen} onChange={setScreen} />
       )}
     </main>
   );
 }
 
-function Header({ user, onHome }: { user: any; onHome: () => void }) {
+function Header({
+  user,
+  onHome,
+  onProfile,
+}: {
+  user: any;
+  onHome: () => void;
+  onProfile: () => void;
+}) {
   const photo = user?.photo_url || user?.photoUrl;
   return (
     <header className="topbar">
@@ -308,11 +391,17 @@ function Header({ user, onHome }: { user: any; onHome: () => void }) {
           <b>ANTI AI GAMES</b>
         </span>
       </button>
-      {photo ? (
-        <img className="avatar" src={photo} alt="" />
-      ) : (
-        <div className="avatar avatar-fallback">👤</div>
-      )}
+      <button
+        className="profile-avatar-trigger"
+        onClick={onProfile}
+        aria-label="نمایش پروفایل من"
+      >
+        {photo ? (
+          <img className="avatar" src={photo} alt="" />
+        ) : (
+          <span className="avatar avatar-fallback">👤</span>
+        )}
+      </button>
     </header>
   );
 }
@@ -323,12 +412,14 @@ function Home({
   busy,
   onStart,
   onDuel,
+  onWordWeaver,
 }: {
   onlineCount: number | null;
   randomDuelWaiting: boolean;
   busy: boolean;
   onStart: (type: GameType) => void;
   onDuel: () => void;
+  onWordWeaver: () => void;
 }) {
   return (
     <>
@@ -352,9 +443,14 @@ function Home({
         </div>
       </section>
       <section className="game-grid">
+        <button className="game-card word-weaver-game" onClick={onWordWeaver}>
+          <span className="game-icon">✍️</span>
+          <span className="game-copy"><b>واژه‌باف</b><small>تمرین‌های کوتاه واژگانی و تصویرسازی؛ با بقیه رقابت کن</small></span>
+          <span className="game-arrow">←</span>
+        </button>
         {playableTypes.map((type) => (
           <button
-            className={`game-card ${type === "IRAN_CITY" ? "iran" : type === "COUNTRY" ? "world" : type === "SEMANTRIS" ? "semantris" : type === "LETTER_DUEL" ? "duel" : "words"}`}
+            className={`game-card ${type === "IRAN_CITY" ? "iran" : type === "COUNTRY" ? "world" : type === "SEMANTRIS" ? "semantris" : type === "LETTER_DUEL" ? "duel" : type === "PHRASE_HUNT" ? "phrase-hunt" : "words"}`}
             key={type}
             disabled={busy}
             onClick={() => (type === "LETTER_DUEL" ? onDuel() : onStart(type))}
@@ -375,6 +471,7 @@ function Home({
 }
 
 function Play({
+  onboardingRequired, onOnboardingDone, onLeaderboard,
   game,
   setGame,
   busy,
@@ -383,6 +480,9 @@ function Play({
   onNew,
   onExit,
 }: {
+  onboardingRequired: boolean;
+  onOnboardingDone: () => void;
+  onLeaderboard: () => void;
   game: Game;
   setGame: (game: Game) => void;
   busy: boolean;
@@ -394,12 +494,16 @@ function Play({
   const meta = gameMeta[game.type];
   const isAdjectiveRain = game.type === "ADJECTIVE_RAIN";
   const isSemantris = game.type === "SEMANTRIS";
+  const isPhraseHunt = game.type === "PHRASE_HUNT";
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState<PublicItem[]>([]);
   const [selected, setSelected] = useState<PublicItem | null>(null);
   const [secondsLeft, setSecondsLeft] = useState(30);
   const [dropSeconds, setDropSeconds] = useState(10);
-  const [showHelp, setShowHelp] = useState(false);
+  const [showHelp, setShowHelp] = useState(onboardingRequired);
+  const [helpSaving, setHelpSaving] = useState(false);
+  const [challengeSeconds, setChallengeSeconds] = useState(() => game.challenge ? Math.max(0, Math.ceil((Date.parse(game.challenge.endsAt) - Date.parse(game.challenge.serverNow)) / 1000)) : 0);
+  const challengeClock = useMemo(() => ({ serverTime: Date.parse(game.challenge?.serverNow || ""), receivedAt: Date.now() }), [game.challenge?.serverNow]);
   const [semantrisPreview, setSemantrisPreview] = useState<{
     words: string[];
     targetWord: string;
@@ -414,6 +518,48 @@ function Play({
     () => [...game.guesses].sort((a, b) => a.rank - b.rank),
     [game.guesses],
   );
+
+  const sortedPhraseGuesses = useMemo(
+    () => [...(game.phraseGuesses || [])].sort((a, b) => b.score - a.score),
+    [game.phraseGuesses],
+  );
+
+  const closeHelp = async () => {
+    if (helpSaving) return;
+    if (isPhraseHunt && onboardingRequired) {
+      setHelpSaving(true);
+      try {
+        await jsonFetch("/api/phrase-hunt/onboarding", { method: "POST" });
+        onOnboardingDone();
+      } catch (cause) {
+        setError(cause instanceof Error ? cause.message : "دوباره تلاش کن");
+        setHelpSaving(false);
+        return;
+      }
+      setHelpSaving(false);
+    }
+    setShowHelp(false);
+  };
+
+  useEffect(() => {
+    if (!isPhraseHunt || !game.challenge) return;
+    let active = true, inFlight = false, lastAttempt = 0;
+    const duration = Date.parse(game.challenge.endsAt) - challengeClock.serverTime;
+    const update = () => {
+      const remaining = Math.max(0, Math.ceil((duration - (Date.now() - challengeClock.receivedAt)) / 1000));
+      setChallengeSeconds(remaining);
+      if (remaining || busy || inFlight || document.visibilityState !== "visible" || Date.now() - lastAttempt < 10000) return;
+      lastAttempt = Date.now(); inFlight = true;
+      jsonFetch<{ game: Game }>("/api/game?type=PHRASE_HUNT")
+        .then(data => { if (active) setGame(data.game); })
+        .catch(cause => { if (active) setError(cause.message); })
+        .finally(() => { inFlight = false; });
+    };
+    update();
+    const timer = window.setInterval(update, 1000);
+    document.addEventListener("visibilitychange", update);
+    return () => { active = false; window.clearInterval(timer); document.removeEventListener("visibilitychange", update); };
+  }, [isPhraseHunt, game.challenge?.endsAt, challengeClock, busy, setGame, setError]);
 
   useEffect(() => {
     const state = game.semantris;
@@ -462,7 +608,7 @@ function Play({
 
   useEffect(() => {
     if (
-      isAdjectiveRain ||
+      isAdjectiveRain || isPhraseHunt ||
       query.trim().length < 1 ||
       selected?.name === query ||
       game.status !== "ACTIVE"
@@ -484,12 +630,13 @@ function Play({
         .catch(() => setSuggestions([]));
     }, 140);
     return () => clearTimeout(timer);
-  }, [query, selected, game.type, game.status, game.guesses, isAdjectiveRain]);
+  }, [query, selected, game.type, game.status, game.guesses, isAdjectiveRain, isPhraseHunt]);
 
   const submitGuess = async () => {
     if (
-      (!isAdjectiveRain && !isSemantris && !selected) ||
-      ((isAdjectiveRain || isSemantris) && !query.trim()) ||
+      (!isAdjectiveRain && !isSemantris && !isPhraseHunt && !selected) ||
+      ((isAdjectiveRain || isSemantris || isPhraseHunt) && !query.trim()) ||
+      (isPhraseHunt && Boolean(game.challenge) && challengeSeconds <= 0) ||
       busy
     )
       return;
@@ -507,11 +654,13 @@ function Play({
           removeStartIndex: number | null;
           removeEndIndex: number | null;
         };
-      }>("/api/game/guess", {
+      }>(isPhraseHunt ? "/api/phrase-hunt/guess" : "/api/game/guess", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(
-          isSemantris
+          isPhraseHunt
+            ? { gameId: game.id, phrase: query }
+            : isSemantris
             ? { gameId: game.id, clue: query }
             : isAdjectiveRain
               ? { gameId: game.id, word: query }
@@ -618,7 +767,9 @@ function Play({
       setError("لینک مینی‌اپ تلگرام تنظیم نشده است.");
       return;
     }
-    const blocks = game.guesses
+    const blocks = isPhraseHunt
+      ? sortedPhraseGuesses.map((guess) => `${guess.score === 100 ? "🎯" : guess.score >= 70 ? "🟩" : guess.score >= 40 ? "🟨" : "🟥"} ${guess.name} (${guess.score.toLocaleString("fa-IR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })})`)
+      : game.guesses
       .map((guess) =>
         guess.rank === 0
           ? "🎯"
@@ -643,7 +794,18 @@ function Play({
       ? telegram().openTelegramLink(url)
       : window.open(url, "_blank");
   };
-  const help = isSemantris
+  const help = isPhraseHunt
+    ? {
+        title: "راهنمای معناجو",
+        steps: [
+          "برای همه یک عبارت پنهان مشترک انتخاب شده؛ هر واژه یا عبارت کوتاهی را که به ذهنت می‌رسد بنویس.",
+          "چالش هر روز ساعت ۱۰ صبح و ۱۰ شب به وقت تهران عوض می‌شود. تا آن زمان می‌توانی حدس‌هایت را ادامه بدهی.",
+          "امتیاز نزدیکی از صفر تا صد است؛ هم‌معنی و بازگویی نزدیک امتیاز بیشتری می‌گیرد.",
+          "امتیاز فقط راهنماست؛ با نوشتن خود عبارت یا معادل ثبت‌شده برنده می‌شوی و ۱۰۰ می‌گیری.",
+          "فقط بهترین امتیاز هر چالش در مجموع هفتگی و کلی تو حساب می‌شود. برای دیدن پاسخ باید خود عبارت یا معادل ثبت‌شده را پیدا کنی.",
+        ],
+      }
+    : isSemantris
     ? {
         title: "راهنمای معناتریس",
         steps: [
@@ -718,7 +880,7 @@ function Play({
         </div>
       </div>
       {showHelp && (
-        <div className="help-backdrop" onClick={() => setShowHelp(false)}>
+        <div className="help-backdrop" onClick={closeHelp}>
           <div
             className="help-modal"
             role="dialog"
@@ -726,7 +888,7 @@ function Play({
             aria-label={help.title}
             onClick={(event) => event.stopPropagation()}
           >
-            <button className="help-close" onClick={() => setShowHelp(false)}>
+            <button className="help-close" disabled={helpSaving} onClick={closeHelp}>
               ×
             </button>
             <span>{meta.icon}</span>
@@ -738,11 +900,27 @@ function Play({
             </ol>
             <button
               className="primary help-done"
-              onClick={() => setShowHelp(false)}
+              onClick={closeHelp}
+              disabled={helpSaving}
+              autoFocus
             >
-              فهمیدم
+              {helpSaving ? "…" : isPhraseHunt && onboardingRequired ? "شروع کنیم" : "فهمیدم"}
             </button>
           </div>
+        </div>
+      )}
+      {isPhraseHunt && game.challenge && (
+        <div className="phrase-challenge-info">
+          <div><b>چالش مشترک معناجو</b><span>{game.challenge.endsAt === "2026-10-18T19:30:00.000Z" ? "چالش بعدی امشب ساعت ۲۳:۰۰ · به وقت تهران" : "تعویض عبارت: ۱۰ صبح و ۱۰ شب · به وقت تهران"}</span></div>
+          <strong dir="ltr">{[Math.floor(challengeSeconds / 3600), Math.floor(challengeSeconds / 60) % 60, challengeSeconds % 60].map(value => value.toLocaleString("fa-IR", { minimumIntegerDigits: 2 })).join(":")}</strong>
+          <small>تا چالش بعدی</small>
+          <button className="secondary" onClick={onLeaderboard}>جدول رتبه‌بندی</button>
+        </div>
+      )}
+      {isPhraseHunt && (
+        <div className="phrase-hunt-score">
+          <span>بهترین امتیاز نزدیکی</span>
+          <strong>{(game.bestScore || 0).toLocaleString("fa-IR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} از ۱۰۰</strong>
         </div>
       )}
       {isAdjectiveRain && game.prompt && (
@@ -801,9 +979,9 @@ function Play({
             />
             <button
               disabled={
-                (!isAdjectiveRain && !isSemantris && !selected) ||
-                ((isAdjectiveRain || isSemantris) && !query.trim()) ||
-                busy
+                (!isAdjectiveRain && !isSemantris && !isPhraseHunt && !selected) ||
+                ((isAdjectiveRain || isSemantris || isPhraseHunt) && !query.trim()) ||
+                busy || (isPhraseHunt && Boolean(game.challenge) && challengeSeconds <= 0)
               }
               onClick={submitGuess}
             >
@@ -852,6 +1030,8 @@ function Play({
                   : "پیداش کردی!"
                 : isAdjectiveRain
                   ? "هم‌معنی‌های دیگر:"
+                  : isPhraseHunt
+                    ? "عبارت پنهان:"
                   : "پاسخ این بود:"}
           </h2>
           <strong>
@@ -859,6 +1039,8 @@ function Play({
               `${game.semantris?.score.toLocaleString("fa-IR")} امتیاز`
             ) : isAdjectiveRain ? (
               game.prompt?.examples.join(" · ")
+            ) : isPhraseHunt ? (
+              game.target?.name
             ) : (
               <>
                 {game.target?.emoji} {game.target?.name}
@@ -874,11 +1056,11 @@ function Play({
               ? isAdjectiveRain
                 ? `با ${game.guessesCount.toLocaleString("fa-IR")} تلاش به هدف رسیدی.`
                 : `با ${game.guessesCount.toLocaleString("fa-IR")} حدس به جواب رسیدی.`
-              : "بازی بعدی را از نو شروع کن."}
+              : isPhraseHunt ? "بهترین امتیازت برای این چالش ثبت شد؛ منتظر چالش بعدی باش." : "بازی بعدی را از نو شروع کن."}
           </p>
           <div className="finish-actions">
-            <button className="primary" onClick={onNew}>
-              بازی بعدی
+            <button className="primary" onClick={onNew} disabled={isPhraseHunt && challengeSeconds > 0}>
+              {isPhraseHunt ? "چالش بعدی" : "بازی بعدی"}
             </button>
             {game.status === "WON" && (
               <button className="secondary" onClick={share}>
@@ -896,13 +1078,31 @@ function Play({
               ? "واژه‌های تو"
               : "حدس‌ها"}
         </b>
-        {game.status === "ACTIVE" && (
+        {game.status === "ACTIVE" && !isPhraseHunt && (
           <button onClick={() => surrender()} disabled={busy}>
             تسلیم می‌شوم
           </button>
         )}
       </div>
-      {isSemantris && game.semantris ? (
+      {isPhraseHunt ? (
+        (game.phraseGuesses || []).length ? (
+          <div className="guess-list phrase-hunt-history">
+            {sortedPhraseGuesses.map((guess) => (
+              <div className={`guess-row ${rankColor(100 - guess.score, 100)}`} key={guess.id}>
+                <div className="guess-name"><b>{guess.name}</b></div>
+                <div className="rank-copy">
+                  <small>امتیاز نزدیکی</small>
+                  <strong>{guess.score.toLocaleString("fa-IR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong>
+                  <span>از ۱۰۰</span>
+                </div>
+                <div className="rank-bar"><i style={{ width: `${guess.score}%` }} /></div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="empty-state"><span>⌁</span><p>اولین عبارت را حدس بزن؛ امتیاز نزدیکی راهنمایت می‌شود.</p></div>
+        )
+      ) : isSemantris && game.semantris ? (
         <div className="semantris-history semantris-extra">
           {game.semantris.clues.length ? (
             game.semantris.clues
@@ -1067,14 +1267,21 @@ function SemantrisBoard({
   );
 }
 
-function Leaderboard() {
+function Leaderboard({
+  initialType,
+  onOpenProfile,
+}: {
+  initialType: GameType;
+  onOpenProfile: (userId: string) => void;
+}) {
   const [period, setPeriod] = useState<"week" | "all">("week"),
     [mode, setMode] = useState<"effort" | "skill">("effort"),
-    [type, setType] = useState<GameType>("IRAN_CITY");
+    [type, setType] = useState<GameType>(initialType);
   const [rows, setRows] = useState<LeaderRow[]>([]),
     [me, setMe] = useState<LeaderRow | null>(null),
     [loading, setLoading] = useState(true);
   const requestId = useRef(0);
+  const isPhraseHunt = type === "PHRASE_HUNT";
   const isSemantris = type === "SEMANTRIS",
     isDuel = type === "LETTER_DUEL";
   useEffect(() => {
@@ -1093,7 +1300,7 @@ function Leaderboard() {
     };
     setLoading(true);
     load();
-    const timer = type === "SEMANTRIS" ? window.setInterval(load, 20_000) : null;
+    const timer = (type === "SEMANTRIS" || type === "PHRASE_HUNT") ? window.setInterval(load, 20_000) : null;
     const onVisibility = () => { if (document.visibilityState === "visible") load(); };
     document.addEventListener("visibilitychange", onVisibility);
     return () => {
@@ -1128,6 +1335,12 @@ function Leaderboard() {
               کشورجو
             </button>
             <button
+              className={type === "PHRASE_HUNT" ? "active" : ""}
+              onClick={() => setType("PHRASE_HUNT")}
+            >
+              معناجو
+            </button>
+            <button
               className={isSemantris ? "active" : ""}
               onClick={() => setType("SEMANTRIS")}
             >
@@ -1141,6 +1354,7 @@ function Leaderboard() {
             </button>
           </div>
         </div>
+        {!isPhraseHunt && (
         <div className="leader-filter-group">
           <span className="leader-filter-label">رتبه‌بندی</span>
           <div className="leader-toggle">
@@ -1158,6 +1372,7 @@ function Leaderboard() {
             </button>
           </div>
         </div>
+        )}
         <div className="leader-filter-group">
           <span className="leader-filter-label">بازهٔ زمانی</span>
           <div className="leader-toggle">
@@ -1176,7 +1391,8 @@ function Leaderboard() {
           </div>
         </div>
       </div>
-      {mode === "skill" && (
+      {isPhraseHunt && <p className="board-note">مجموع بهترین امتیاز هر چالش · امتیاز چالش جاری هم حساب می‌شود · هفته از شنبه به وقت تهران</p>}
+      {!isPhraseHunt && mode === "skill" && (
         <p className="board-note">
           {isDuel
             ? "نرخ برد = دورهای برده ÷ همهٔ دورها · حداقل ۱۰ دور"
@@ -1200,8 +1416,10 @@ function Leaderboard() {
               key={row.userId}
               row={row}
               mode={mode}
+              phraseHunt={isPhraseHunt}
               semantris={isSemantris}
               duel={isDuel}
+              onOpenProfile={onOpenProfile}
             />
           ))}
         </div>
@@ -1212,8 +1430,10 @@ function Leaderboard() {
           <LeaderRowView
             row={me}
             mode={mode}
+            phraseHunt={isPhraseHunt}
             semantris={isSemantris}
             duel={isDuel}
+            onOpenProfile={onOpenProfile}
           />
         </div>
       )}
@@ -1223,13 +1443,17 @@ function Leaderboard() {
 function LeaderRowView({
   row,
   mode = "effort",
+  phraseHunt = false,
   semantris = false,
   duel = false,
+  onOpenProfile,
 }: {
   row: LeaderRow;
   mode?: "effort" | "skill";
+  phraseHunt?: boolean;
   semantris?: boolean;
   duel?: boolean;
+  onOpenProfile: (userId: string) => void;
 }) {
   const score = duel
     ? mode === "effort"
@@ -1238,7 +1462,7 @@ function LeaderRowView({
     : mode === "effort"
       ? (row.totalScore ?? row.averageGuesses)
       : (row.bestScore ?? row.averageGuesses);
-  const detail = duel
+  const detail = phraseHunt ? `${(row.games || 0).toLocaleString("fa-IR")} چالش` : duel
     ? `${row.wins.toLocaleString("fa-IR")} برد · ${(row.losses || 0).toLocaleString("fa-IR")} باخت · ${(row.draws || 0).toLocaleString("fa-IR")} مساوی`
     : semantris
       ? mode === "effort"
@@ -1247,7 +1471,7 @@ function LeaderRowView({
       : mode === "skill"
         ? row.wins.toLocaleString("fa-IR") + " برد"
         : "میانگین " + row.averageGuesses.toLocaleString("fa-IR") + " حدس";
-  const value = duel
+  const value = phraseHunt ? (row.totalScore || 0).toLocaleString("fa-IR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : duel
     ? mode === "skill"
       ? score.toLocaleString("fa-IR", { maximumFractionDigits: 1 }) + "٪"
       : score.toLocaleString("fa-IR")
@@ -1263,19 +1487,32 @@ function LeaderRowView({
           ? ["🥇", "🥈", "🥉"][row.rank - 1]
           : row.rank.toLocaleString("fa-IR")}
       </span>
-      {row.photoUrl ? (
-        <img src={row.photoUrl} alt="" />
-      ) : (
-        <span className="mini-avatar">👤</span>
-      )}
       <div className="leader-name">
-        <b>{row.displayName}</b>
+        <div className="leader-person">
+          <button
+            className="leader-avatar-button"
+            onClick={() => onOpenProfile(row.userId)}
+            aria-label={`نمایش پروفایل ${row.displayName}`}
+          >
+            {row.photoUrl ? (
+              <img src={row.photoUrl} alt="" />
+            ) : (
+              <span className="mini-avatar">👤</span>
+            )}
+          </button>
+          <button
+            className="leader-name-button"
+            onClick={() => onOpenProfile(row.userId)}
+          >
+            {row.displayName}
+          </button>
+        </div>
         <small>{detail}</small>
       </div>
       <div className="leader-wins">
         <strong>{value}</strong>
         <small>
-          {duel
+          {phraseHunt ? "مجموع امتیاز" : duel
             ? mode === "skill"
               ? "نرخ برد"
               : "دور"
@@ -1288,6 +1525,147 @@ function LeaderRowView({
       </div>
     </div>
   );
+}
+
+function PublicProfileOverlay({
+  userId,
+  onClose,
+}: {
+  userId: string;
+  onClose: () => void;
+}) {
+  const [profile, setProfile] = useState<PublicProfile | null>(null);
+  const [error, setError] = useState("");
+  const [attempt, setAttempt] = useState(0);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    setLoading(true);
+    setError("");
+    setProfile(null);
+    fetch(`${BASE_PATH}/api/users/${encodeURIComponent(userId)}/profile`,
+      sessionRequest({ signal: controller.signal }),
+    )
+      .then(async (response) => {
+        const data = await response.json();
+        if (!response.ok)
+          throw new Error(data.error || "نمایش پروفایل ممکن نشد");
+        return data as PublicProfile;
+      })
+      .then((data) => setProfile(data))
+      .catch((cause) => {
+        if (!controller.signal.aborted)
+          setError(cause instanceof Error ? cause.message : "ارتباط با سرور برقرار نشد");
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) setLoading(false);
+      });
+    return () => controller.abort();
+  }, [attempt, userId]);
+
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [onClose]);
+
+  const message = () => {
+    const username = profile?.user.username?.replace(/^@/, "");
+    if (!username) return;
+    const link = `https://t.me/${encodeURIComponent(username)}`;
+    const tg = telegram();
+    if (tg?.openTelegramLink) tg.openTelegramLink(link);
+    else window.open(link, "_blank", "noopener,noreferrer");
+  };
+
+  return (
+    <div className="profile-overlay" role="dialog" aria-modal="true" aria-label="پروفایل بازیکن">
+      <section className="profile-panel">
+        <div className="play-heading profile-heading">
+          <button className="icon-button" onClick={onClose} aria-label="بازگشت">→</button>
+          <div><small>بازیکن Anti AI Games</small><h1>پروفایل</h1></div>
+        </div>
+        {loading ? (
+          <div className="empty-state">در حال دریافت پروفایل…</div>
+        ) : error ? (
+          <div className="profile-error">
+            <p>{error}</p>
+            <button className="secondary" onClick={() => setAttempt((value) => value + 1)}>تلاش دوباره</button>
+          </div>
+        ) : profile ? (
+          <>
+            <div className="profile-identity">
+              {profile.user.photoUrl ? (
+                <img src={profile.user.photoUrl} alt="" />
+              ) : (
+                <span className="profile-avatar-fallback">👤</span>
+              )}
+              <h2>{profile.user.displayName}</h2>
+              <span>{profile.user.username ? `@${profile.user.username.replace(/^@/, "")}` : "بدون نام کاربری"}</span>
+              {!profile.user.isMe && (
+                profile.user.username ? (
+                  <button className="primary profile-message-button" onClick={message}>پیام دادن در تلگرام</button>
+                ) : (
+                  <button className="secondary profile-message-button" disabled>این بازیکن نام کاربری تلگرام ندارد</button>
+                )
+              )}
+            </div>
+            <h2 className="profile-section-title">آمار بازی‌ها</h2>
+            <div className="profile-stats-grid">
+              <ProfileStatCard title="🇮🇷 شهرجو">
+                <ProfileStat label="بازی تمام‌شده" value={profile.stats.geography.IRAN_CITY.total} />
+                <ProfileStat label="برد" value={profile.stats.geography.IRAN_CITY.wins} />
+                <ProfileStat label="تسلیم" value={profile.stats.geography.IRAN_CITY.surrendered} />
+                <ProfileStat label="میانگین حدس در برد" value={profile.stats.geography.IRAN_CITY.averageGuesses} />
+                <ProfileStat label="کمترین حدس برای برد" value={profile.stats.geography.IRAN_CITY.bestGame} />
+              </ProfileStatCard>
+              <ProfileStatCard title="🌍 کشورجو">
+                <ProfileStat label="بازی تمام‌شده" value={profile.stats.geography.COUNTRY.total} />
+                <ProfileStat label="برد" value={profile.stats.geography.COUNTRY.wins} />
+                <ProfileStat label="تسلیم" value={profile.stats.geography.COUNTRY.surrendered} />
+                <ProfileStat label="میانگین حدس در برد" value={profile.stats.geography.COUNTRY.averageGuesses} />
+                <ProfileStat label="کمترین حدس برای برد" value={profile.stats.geography.COUNTRY.bestGame} />
+              </ProfileStatCard>
+              <ProfileStatCard title="▦ معناتریس">
+                <ProfileStat label="بازی‌ها" value={profile.stats.semantris.games} />
+                <ProfileStat label="مجموع امتیاز" value={profile.stats.semantris.totalScore} />
+                <ProfileStat label="بهترین امتیاز" value={profile.stats.semantris.bestScore} />
+              </ProfileStatCard>
+              <ProfileStatCard title="💭 معناجو">
+                <ProfileStat label="بازی تمام‌شده" value={profile.stats.phraseHunt.games} />
+                <ProfileStat label="برد" value={profile.stats.phraseHunt.wins} />
+                <ProfileStat label="بهترین امتیاز نزدیکی" value={profile.stats.phraseHunt.bestScore === null ? null : profile.stats.phraseHunt.bestScore.toLocaleString("fa-IR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} />
+              </ProfileStatCard>
+              <ProfileStatCard title="🔤 دوحرف">
+                <ProfileStat label="دورهای تمام‌شده" value={profile.stats.letterDuel.rounds} />
+                <ProfileStat label="برد" value={profile.stats.letterDuel.wins} />
+                <ProfileStat label="باخت" value={profile.stats.letterDuel.losses} />
+                <ProfileStat label="مساوی" value={profile.stats.letterDuel.draws} />
+                <ProfileStat label="درصد برد" value={profile.stats.letterDuel.winRate === null ? null : `${(profile.stats.letterDuel.winRate * 100).toLocaleString("fa-IR", { maximumFractionDigits: 1 })}٪`} />
+              </ProfileStatCard>
+            </div>
+          </>
+        ) : null}
+      </section>
+    </div>
+  );
+}
+
+function ProfileStatCard({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return <section className="profile-stat-card"><h3>{title}</h3><div>{children}</div></section>;
+}
+
+function ProfileStat({ label, value }: { label: string; value: number | string | null }) {
+  return <div className="profile-stat-row"><span>{label}</span><b>{value === null ? "—" : typeof value === "number" ? value.toLocaleString("fa-IR", { maximumFractionDigits: 1 }) : value}</b></div>;
 }
 function BottomNav({
   active,

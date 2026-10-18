@@ -1,0 +1,1202 @@
+[
+  {
+    "phrase": "سرّ باغ انار",
+    "score": 96.53,
+    "answer": {
+      "type": "score",
+      "score": 3.9,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.03,
+        "3": 0.03,
+        "4": 0.94
+      },
+      "confidence": 0.93
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز بستان انار",
+    "score": 83.9,
+    "answer": {
+      "type": "score",
+      "score": 3.39,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.07,
+        "3": 0.46,
+        "4": 0.47
+      },
+      "confidence": 0.5
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز انارستان",
+    "score": 84.89,
+    "answer": {
+      "type": "score",
+      "score": 3.43,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.06,
+        "3": 0.42,
+        "4": 0.51
+      },
+      "confidence": 0.53
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "the secret of the pomegranate garden",
+    "score": 98.01,
+    "answer": {
+      "type": "score",
+      "score": 3.96,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.01,
+        "4": 0.99
+      },
+      "confidence": 0.99
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ انار شیرین",
+    "score": 89.6,
+    "answer": {
+      "type": "score",
+      "score": 3.62,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.03,
+        "3": 0.3,
+        "4": 0.67
+      },
+      "confidence": 0.7
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ انار ساوه",
+    "score": 95.54,
+    "answer": {
+      "type": "score",
+      "score": 3.86,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.01,
+        "3": 0.12,
+        "4": 0.87
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "کشف راز باغ انار",
+    "score": 83.66,
+    "answer": {
+      "type": "score",
+      "score": 3.38,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.07,
+        "3": 0.44,
+        "4": 0.48
+      },
+      "confidence": 0.49
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ میوه",
+    "score": 65.84,
+    "answer": {
+      "type": "score",
+      "score": 2.66,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.05,
+        "2": 0.25,
+        "3": 0.7,
+        "4": 0
+      },
+      "confidence": 0.71
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار",
+    "score": 73.51,
+    "answer": {
+      "type": "score",
+      "score": 2.97,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.03,
+        "3": 0.96,
+        "4": 0.01
+      },
+      "confidence": 0.97
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "بستان انار",
+    "score": 71.78,
+    "answer": {
+      "type": "score",
+      "score": 2.9,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.15,
+        "3": 0.77,
+        "4": 0.07
+      },
+      "confidence": 0.8
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "انارستان",
+    "score": 70.54,
+    "answer": {
+      "type": "score",
+      "score": 2.85,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.02,
+        "2": 0.21,
+        "3": 0.65,
+        "4": 0.12
+      },
+      "confidence": 0.69
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار قرمز",
+    "score": 70.29,
+    "answer": {
+      "type": "score",
+      "score": 2.84,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.17,
+        "3": 0.81,
+        "4": 0.01
+      },
+      "confidence": 0.85
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "garden of pomegranates",
+    "score": 91.82,
+    "answer": {
+      "type": "score",
+      "score": 3.71,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.02,
+        "3": 0.24,
+        "4": 0.74
+      },
+      "confidence": 0.77
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغات انار",
+    "score": 71.53,
+    "answer": {
+      "type": "score",
+      "score": 2.89,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.11,
+        "3": 0.86,
+        "4": 0.02
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار ساوه",
+    "score": 72.27,
+    "answer": {
+      "type": "score",
+      "score": 2.92,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.09,
+        "3": 0.9,
+        "4": 0.01
+      },
+      "confidence": 0.92
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار شیرین",
+    "score": 71.28,
+    "answer": {
+      "type": "score",
+      "score": 2.88,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.13,
+        "3": 0.86,
+        "4": 0.01
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار شیراز",
+    "score": 72.02,
+    "answer": {
+      "type": "score",
+      "score": 2.91,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.09,
+        "3": 0.89,
+        "4": 0.02
+      },
+      "confidence": 0.91
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "بوستان انار",
+    "score": 70.79,
+    "answer": {
+      "type": "score",
+      "score": 2.86,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.16,
+        "3": 0.78,
+        "4": 0.05
+      },
+      "confidence": 0.81
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ",
+    "score": 70.79,
+    "answer": {
+      "type": "score",
+      "score": 2.86,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.13,
+        "3": 0.87,
+        "4": 0
+      },
+      "confidence": 0.89
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز باغ سیب",
+    "score": 69.55,
+    "answer": {
+      "type": "score",
+      "score": 2.81,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.02,
+        "2": 0.17,
+        "3": 0.8,
+        "4": 0.01
+      },
+      "confidence": 0.82
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغچه انار",
+    "score": 71.53,
+    "answer": {
+      "type": "score",
+      "score": 2.89,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.12,
+        "3": 0.84,
+        "4": 0.03
+      },
+      "confidence": 0.86
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز انار",
+    "score": 70.54,
+    "answer": {
+      "type": "score",
+      "score": 2.85,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.15,
+        "3": 0.84,
+        "4": 0.01
+      },
+      "confidence": 0.87
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ راز",
+    "score": 70.79,
+    "answer": {
+      "type": "score",
+      "score": 2.86,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.13,
+        "3": 0.87,
+        "4": 0
+      },
+      "confidence": 0.89
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز جنگل",
+    "score": 30.94,
+    "answer": {
+      "type": "score",
+      "score": 1.25,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0.09,
+        "1": 0.62,
+        "2": 0.24,
+        "3": 0.05,
+        "4": 0
+      },
+      "confidence": 0.64
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ سیب",
+    "score": 55.93,
+    "answer": {
+      "type": "score",
+      "score": 2.26,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.06,
+        "2": 0.61,
+        "3": 0.33,
+        "4": 0
+      },
+      "confidence": 0.68
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ میوه",
+    "score": 51.48,
+    "answer": {
+      "type": "score",
+      "score": 2.08,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.12,
+        "2": 0.68,
+        "3": 0.2,
+        "4": 0
+      },
+      "confidence": 0.73
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "درخت انار",
+    "score": 54.45,
+    "answer": {
+      "type": "score",
+      "score": 2.2,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.1,
+        "2": 0.6,
+        "3": 0.3,
+        "4": 0
+      },
+      "confidence": 0.67
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ گلابی",
+    "score": 56.18,
+    "answer": {
+      "type": "score",
+      "score": 2.27,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.07,
+        "2": 0.59,
+        "3": 0.34,
+        "4": 0
+      },
+      "confidence": 0.66
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ آلبالو",
+    "score": 57.42,
+    "answer": {
+      "type": "score",
+      "score": 2.32,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.05,
+        "2": 0.58,
+        "3": 0.37,
+        "4": 0
+      },
+      "confidence": 0.65
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ",
+    "score": 50.99,
+    "answer": {
+      "type": "score",
+      "score": 2.06,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.92,
+        "3": 0.07,
+        "4": 0
+      },
+      "confidence": 0.93
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ انار بی‌راز",
+    "score": 63.86,
+    "answer": {
+      "type": "score",
+      "score": 2.58,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.39,
+        "3": 0.59,
+        "4": 0.01
+      },
+      "confidence": 0.65
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "انار",
+    "score": 55.19,
+    "answer": {
+      "type": "score",
+      "score": 2.23,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.75,
+        "3": 0.24,
+        "4": 0
+      },
+      "confidence": 0.79
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "انار ترش",
+    "score": 50.74,
+    "answer": {
+      "type": "score",
+      "score": 2.05,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.15,
+        "2": 0.63,
+        "3": 0.21,
+        "4": 0
+      },
+      "confidence": 0.68
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "انار سرخ",
+    "score": 51.48,
+    "answer": {
+      "type": "score",
+      "score": 2.08,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.14,
+        "2": 0.62,
+        "3": 0.23,
+        "4": 0
+      },
+      "confidence": 0.68
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغچه",
+    "score": 41.09,
+    "answer": {
+      "type": "score",
+      "score": 1.66,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.43,
+        "2": 0.46,
+        "3": 0.1,
+        "4": 0
+      },
+      "confidence": 0.54
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز",
+    "score": 50.24,
+    "answer": {
+      "type": "score",
+      "score": 2.03,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.03,
+        "2": 0.88,
+        "3": 0.08,
+        "4": 0
+      },
+      "confidence": 0.89
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغ بدون انار",
+    "score": 48.26,
+    "answer": {
+      "type": "score",
+      "score": 1.95,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0.03,
+        "1": 0.15,
+        "2": 0.67,
+        "3": 0.15,
+        "4": 0
+      },
+      "confidence": 0.7
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "رازآلود",
+    "score": 25.49,
+    "answer": {
+      "type": "score",
+      "score": 1.03,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0.26,
+        "1": 0.49,
+        "2": 0.22,
+        "3": 0.03,
+        "4": 0
+      },
+      "confidence": 0.55
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "آب انار",
+    "score": 41.83,
+    "answer": {
+      "type": "score",
+      "score": 1.69,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.35,
+        "2": 0.59,
+        "3": 0.05,
+        "4": 0
+      },
+      "confidence": 0.65
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "باغبان",
+    "score": 26.48,
+    "answer": {
+      "type": "score",
+      "score": 1.07,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0.04,
+        "1": 0.87,
+        "2": 0.07,
+        "3": 0.02,
+        "4": 0
+      },
+      "confidence": 0.88
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "میوه",
+    "score": 28.71,
+    "answer": {
+      "type": "score",
+      "score": 1.16,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0.03,
+        "1": 0.82,
+        "2": 0.12,
+        "3": 0.03,
+        "4": 0
+      },
+      "confidence": 0.82
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "معما",
+    "score": 17.57,
+    "answer": {
+      "type": "score",
+      "score": 0.71,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0.51,
+        "1": 0.36,
+        "2": 0.09,
+        "3": 0.02,
+        "4": 0.02
+      },
+      "confidence": 0.43
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "درخت",
+    "score": 28.71,
+    "answer": {
+      "type": "score",
+      "score": 1.16,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0.04,
+        "1": 0.8,
+        "2": 0.12,
+        "3": 0.04,
+        "4": 0
+      },
+      "confidence": 0.8
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "راز موفقیت",
+    "score": 19.06,
+    "answer": {
+      "type": "score",
+      "score": 0.77,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0.53,
+        "1": 0.19,
+        "2": 0.27,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.37
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "کتاب",
+    "score": 8.91,
+    "answer": {
+      "type": "score",
+      "score": 0.36,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0.65,
+        "1": 0.35,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.71
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "کامپیوتر",
+    "score": 0.5,
+    "answer": {
+      "type": "score",
+      "score": 0.02,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0.98,
+        "1": 0.02,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.98
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "رمان",
+    "score": 35.89,
+    "answer": {
+      "type": "score",
+      "score": 1.45,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0.16,
+        "1": 0.39,
+        "2": 0.3,
+        "3": 0.14,
+        "4": 0.01
+      },
+      "confidence": 0.36
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "حساب بانکی",
+    "score": 0.99,
+    "answer": {
+      "type": "score",
+      "score": 0.04,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0.97,
+        "1": 0.03,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.97
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "ایستگاه قطار",
+    "score": 1.24,
+    "answer": {
+      "type": "score",
+      "score": 0.05,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0.96,
+        "1": 0.04,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.97
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "phrase": "پیچ‌گوشتی",
+    "score": 1.49,
+    "answer": {
+      "type": "score",
+      "score": 0.06,
+      "legend": {
+        "0": "0%: No meaningful connection.",
+        "1": "25%: Indirect association or broad category only.",
+        "2": "50%: One exact core concept recovered.",
+        "3": "75%: Multiple correct core concepts with the right central relationship; an important component still missing.",
+        "4": "99%: Essentially complete target meaning, synonyms and translations included."
+      },
+      "probabilities": {
+        "0": 0.95,
+        "1": 0.05,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.96
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  }
+]

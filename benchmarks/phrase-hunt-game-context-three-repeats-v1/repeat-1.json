@@ -1,0 +1,1901 @@
+[
+  {
+    "repeat": 1,
+    "position": 1,
+    "phrase": "جاندار",
+    "history": [],
+    "score": 9.41,
+    "answer": {
+      "type": "score",
+      "score": 0.38,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.67,
+        "1": 0.27,
+        "2": 0.05,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.69
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 2,
+    "phrase": "اشیا",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      }
+    ],
+    "score": 16.83,
+    "answer": {
+      "type": "score",
+      "score": 0.68,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.43,
+        "1": 0.48,
+        "2": 0.08,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.56
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 3,
+    "phrase": "مفهوم",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      }
+    ],
+    "score": 19.8,
+    "answer": {
+      "type": "score",
+      "score": 0.8,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.4,
+        "1": 0.45,
+        "2": 0.11,
+        "3": 0.03,
+        "4": 0.01
+      },
+      "confidence": 0.5
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 4,
+    "phrase": "هنر",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      }
+    ],
+    "score": 22.28,
+    "answer": {
+      "type": "score",
+      "score": 0.9,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.34,
+        "1": 0.48,
+        "2": 0.13,
+        "3": 0.04,
+        "4": 0.01
+      },
+      "confidence": 0.52
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 5,
+    "phrase": "فناوری",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      }
+    ],
+    "score": 14.11,
+    "answer": {
+      "type": "score",
+      "score": 0.57,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.54,
+        "1": 0.39,
+        "2": 0.06,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.55
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 6,
+    "phrase": "کشاورزی",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      }
+    ],
+    "score": 32.92,
+    "answer": {
+      "type": "score",
+      "score": 1.33,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.15,
+        "1": 0.49,
+        "2": 0.28,
+        "3": 0.06,
+        "4": 0.02
+      },
+      "confidence": 0.49
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 7,
+    "phrase": "خوراکی",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      },
+      {
+        "guess": "کشاورزی",
+        "score_out_of_100": 32.92
+      }
+    ],
+    "score": 25.25,
+    "answer": {
+      "type": "score",
+      "score": 1.02,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.25,
+        "1": 0.51,
+        "2": 0.21,
+        "3": 0.02,
+        "4": 0.01
+      },
+      "confidence": 0.56
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 8,
+    "phrase": "میوه",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      },
+      {
+        "guess": "کشاورزی",
+        "score_out_of_100": 32.92
+      },
+      {
+        "guess": "خوراکی",
+        "score_out_of_100": 25.25
+      }
+    ],
+    "score": 43.56,
+    "answer": {
+      "type": "score",
+      "score": 1.76,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.03,
+        "1": 0.28,
+        "2": 0.61,
+        "3": 0.07,
+        "4": 0.01
+      },
+      "confidence": 0.64
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 9,
+    "phrase": "درخت",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      },
+      {
+        "guess": "کشاورزی",
+        "score_out_of_100": 32.92
+      },
+      {
+        "guess": "خوراکی",
+        "score_out_of_100": 25.25
+      },
+      {
+        "guess": "میوه",
+        "score_out_of_100": 43.56
+      }
+    ],
+    "score": 48.02,
+    "answer": {
+      "type": "score",
+      "score": 1.94,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.18,
+        "2": 0.67,
+        "3": 0.13,
+        "4": 0.01
+      },
+      "confidence": 0.71
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 10,
+    "phrase": "گلابی",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      },
+      {
+        "guess": "کشاورزی",
+        "score_out_of_100": 32.92
+      },
+      {
+        "guess": "خوراکی",
+        "score_out_of_100": 25.25
+      },
+      {
+        "guess": "میوه",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "درخت",
+        "score_out_of_100": 48.02
+      }
+    ],
+    "score": 42.57,
+    "answer": {
+      "type": "score",
+      "score": 1.72,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.04,
+        "1": 0.3,
+        "2": 0.57,
+        "3": 0.08,
+        "4": 0.01
+      },
+      "confidence": 0.6
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 11,
+    "phrase": "برگ",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      },
+      {
+        "guess": "کشاورزی",
+        "score_out_of_100": 32.92
+      },
+      {
+        "guess": "خوراکی",
+        "score_out_of_100": 25.25
+      },
+      {
+        "guess": "میوه",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "درخت",
+        "score_out_of_100": 48.02
+      },
+      {
+        "guess": "گلابی",
+        "score_out_of_100": 42.57
+      }
+    ],
+    "score": 38.12,
+    "answer": {
+      "type": "score",
+      "score": 1.54,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.04,
+        "1": 0.41,
+        "2": 0.53,
+        "3": 0.02,
+        "4": 0
+      },
+      "confidence": 0.57
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 12,
+    "phrase": "ریشه",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      },
+      {
+        "guess": "کشاورزی",
+        "score_out_of_100": 32.92
+      },
+      {
+        "guess": "خوراکی",
+        "score_out_of_100": 25.25
+      },
+      {
+        "guess": "میوه",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "درخت",
+        "score_out_of_100": 48.02
+      },
+      {
+        "guess": "گلابی",
+        "score_out_of_100": 42.57
+      },
+      {
+        "guess": "برگ",
+        "score_out_of_100": 38.12
+      }
+    ],
+    "score": 41.09,
+    "answer": {
+      "type": "score",
+      "score": 1.66,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.05,
+        "1": 0.32,
+        "2": 0.5599999999999999,
+        "3": 0.06,
+        "4": 0.01
+      },
+      "confidence": 0.58
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 13,
+    "phrase": "خاک",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      },
+      {
+        "guess": "کشاورزی",
+        "score_out_of_100": 32.92
+      },
+      {
+        "guess": "خوراکی",
+        "score_out_of_100": 25.25
+      },
+      {
+        "guess": "میوه",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "درخت",
+        "score_out_of_100": 48.02
+      },
+      {
+        "guess": "گلابی",
+        "score_out_of_100": 42.57
+      },
+      {
+        "guess": "برگ",
+        "score_out_of_100": 38.12
+      },
+      {
+        "guess": "ریشه",
+        "score_out_of_100": 41.09
+      }
+    ],
+    "score": 34.9,
+    "answer": {
+      "type": "score",
+      "score": 1.41,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.07,
+        "1": 0.47000000000000003,
+        "2": 0.44,
+        "3": 0.02,
+        "4": 0
+      },
+      "confidence": 0.54
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 14,
+    "phrase": "سیب",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      },
+      {
+        "guess": "کشاورزی",
+        "score_out_of_100": 32.92
+      },
+      {
+        "guess": "خوراکی",
+        "score_out_of_100": 25.25
+      },
+      {
+        "guess": "میوه",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "درخت",
+        "score_out_of_100": 48.02
+      },
+      {
+        "guess": "گلابی",
+        "score_out_of_100": 42.57
+      },
+      {
+        "guess": "برگ",
+        "score_out_of_100": 38.12
+      },
+      {
+        "guess": "ریشه",
+        "score_out_of_100": 41.09
+      },
+      {
+        "guess": "خاک",
+        "score_out_of_100": 34.9
+      }
+    ],
+    "score": 48.51,
+    "answer": {
+      "type": "score",
+      "score": 1.96,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.2,
+        "2": 0.62,
+        "3": 0.15,
+        "4": 0.02
+      },
+      "confidence": 0.66
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 15,
+    "phrase": "کریسمس",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      },
+      {
+        "guess": "کشاورزی",
+        "score_out_of_100": 32.92
+      },
+      {
+        "guess": "خوراکی",
+        "score_out_of_100": 25.25
+      },
+      {
+        "guess": "میوه",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "درخت",
+        "score_out_of_100": 48.02
+      },
+      {
+        "guess": "گلابی",
+        "score_out_of_100": 42.57
+      },
+      {
+        "guess": "برگ",
+        "score_out_of_100": 38.12
+      },
+      {
+        "guess": "ریشه",
+        "score_out_of_100": 41.09
+      },
+      {
+        "guess": "خاک",
+        "score_out_of_100": 34.9
+      },
+      {
+        "guess": "سیب",
+        "score_out_of_100": 48.51
+      }
+    ],
+    "score": 8.66,
+    "answer": {
+      "type": "score",
+      "score": 0.35,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.72,
+        "1": 0.21,
+        "2": 0.05,
+        "3": 0.01,
+        "4": 0.01
+      },
+      "confidence": 0.68
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 16,
+    "phrase": "کاج",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      },
+      {
+        "guess": "کشاورزی",
+        "score_out_of_100": 32.92
+      },
+      {
+        "guess": "خوراکی",
+        "score_out_of_100": 25.25
+      },
+      {
+        "guess": "میوه",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "درخت",
+        "score_out_of_100": 48.02
+      },
+      {
+        "guess": "گلابی",
+        "score_out_of_100": 42.57
+      },
+      {
+        "guess": "برگ",
+        "score_out_of_100": 38.12
+      },
+      {
+        "guess": "ریشه",
+        "score_out_of_100": 41.09
+      },
+      {
+        "guess": "خاک",
+        "score_out_of_100": 34.9
+      },
+      {
+        "guess": "سیب",
+        "score_out_of_100": 48.51
+      },
+      {
+        "guess": "کریسمس",
+        "score_out_of_100": 8.66
+      }
+    ],
+    "score": 36.88,
+    "answer": {
+      "type": "score",
+      "score": 1.49,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.07,
+        "1": 0.43,
+        "2": 0.43,
+        "3": 0.06,
+        "4": 0.01
+      },
+      "confidence": 0.46
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 17,
+    "phrase": "باغ",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      },
+      {
+        "guess": "کشاورزی",
+        "score_out_of_100": 32.92
+      },
+      {
+        "guess": "خوراکی",
+        "score_out_of_100": 25.25
+      },
+      {
+        "guess": "میوه",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "درخت",
+        "score_out_of_100": 48.02
+      },
+      {
+        "guess": "گلابی",
+        "score_out_of_100": 42.57
+      },
+      {
+        "guess": "برگ",
+        "score_out_of_100": 38.12
+      },
+      {
+        "guess": "ریشه",
+        "score_out_of_100": 41.09
+      },
+      {
+        "guess": "خاک",
+        "score_out_of_100": 34.9
+      },
+      {
+        "guess": "سیب",
+        "score_out_of_100": 48.51
+      },
+      {
+        "guess": "کریسمس",
+        "score_out_of_100": 8.66
+      },
+      {
+        "guess": "کاج",
+        "score_out_of_100": 36.88
+      }
+    ],
+    "score": 60.14,
+    "answer": {
+      "type": "score",
+      "score": 2.43,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.02,
+        "2": 0.63,
+        "3": 0.26,
+        "4": 0.09
+      },
+      "confidence": 0.62
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 18,
+    "phrase": "باغ میوه",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      },
+      {
+        "guess": "کشاورزی",
+        "score_out_of_100": 32.92
+      },
+      {
+        "guess": "خوراکی",
+        "score_out_of_100": 25.25
+      },
+      {
+        "guess": "میوه",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "درخت",
+        "score_out_of_100": 48.02
+      },
+      {
+        "guess": "گلابی",
+        "score_out_of_100": 42.57
+      },
+      {
+        "guess": "برگ",
+        "score_out_of_100": 38.12
+      },
+      {
+        "guess": "ریشه",
+        "score_out_of_100": 41.09
+      },
+      {
+        "guess": "خاک",
+        "score_out_of_100": 34.9
+      },
+      {
+        "guess": "سیب",
+        "score_out_of_100": 48.51
+      },
+      {
+        "guess": "کریسمس",
+        "score_out_of_100": 8.66
+      },
+      {
+        "guess": "کاج",
+        "score_out_of_100": 36.88
+      },
+      {
+        "guess": "باغ",
+        "score_out_of_100": 60.14
+      }
+    ],
+    "score": 59.4,
+    "answer": {
+      "type": "score",
+      "score": 2.4,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.56,
+        "3": 0.39,
+        "4": 0.02
+      },
+      "confidence": 0.62
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 19,
+    "phrase": "باغچه",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      },
+      {
+        "guess": "کشاورزی",
+        "score_out_of_100": 32.92
+      },
+      {
+        "guess": "خوراکی",
+        "score_out_of_100": 25.25
+      },
+      {
+        "guess": "میوه",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "درخت",
+        "score_out_of_100": 48.02
+      },
+      {
+        "guess": "گلابی",
+        "score_out_of_100": 42.57
+      },
+      {
+        "guess": "برگ",
+        "score_out_of_100": 38.12
+      },
+      {
+        "guess": "ریشه",
+        "score_out_of_100": 41.09
+      },
+      {
+        "guess": "خاک",
+        "score_out_of_100": 34.9
+      },
+      {
+        "guess": "سیب",
+        "score_out_of_100": 48.51
+      },
+      {
+        "guess": "کریسمس",
+        "score_out_of_100": 8.66
+      },
+      {
+        "guess": "کاج",
+        "score_out_of_100": 36.88
+      },
+      {
+        "guess": "باغ",
+        "score_out_of_100": 60.14
+      },
+      {
+        "guess": "باغ میوه",
+        "score_out_of_100": 59.4
+      }
+    ],
+    "score": 55.93,
+    "answer": {
+      "type": "score",
+      "score": 2.26,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.1,
+        "2": 0.58,
+        "3": 0.27,
+        "4": 0.05
+      },
+      "confidence": 0.61
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 20,
+    "phrase": "باغستان",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      },
+      {
+        "guess": "کشاورزی",
+        "score_out_of_100": 32.92
+      },
+      {
+        "guess": "خوراکی",
+        "score_out_of_100": 25.25
+      },
+      {
+        "guess": "میوه",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "درخت",
+        "score_out_of_100": 48.02
+      },
+      {
+        "guess": "گلابی",
+        "score_out_of_100": 42.57
+      },
+      {
+        "guess": "برگ",
+        "score_out_of_100": 38.12
+      },
+      {
+        "guess": "ریشه",
+        "score_out_of_100": 41.09
+      },
+      {
+        "guess": "خاک",
+        "score_out_of_100": 34.9
+      },
+      {
+        "guess": "سیب",
+        "score_out_of_100": 48.51
+      },
+      {
+        "guess": "کریسمس",
+        "score_out_of_100": 8.66
+      },
+      {
+        "guess": "کاج",
+        "score_out_of_100": 36.88
+      },
+      {
+        "guess": "باغ",
+        "score_out_of_100": 60.14
+      },
+      {
+        "guess": "باغ میوه",
+        "score_out_of_100": 59.4
+      },
+      {
+        "guess": "باغچه",
+        "score_out_of_100": 55.93
+      }
+    ],
+    "score": 56.68,
+    "answer": {
+      "type": "score",
+      "score": 2.29,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.13,
+        "2": 0.47,
+        "3": 0.32,
+        "4": 0.07
+      },
+      "confidence": 0.49
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 21,
+    "phrase": "باغ انگور",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      },
+      {
+        "guess": "کشاورزی",
+        "score_out_of_100": 32.92
+      },
+      {
+        "guess": "خوراکی",
+        "score_out_of_100": 25.25
+      },
+      {
+        "guess": "میوه",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "درخت",
+        "score_out_of_100": 48.02
+      },
+      {
+        "guess": "گلابی",
+        "score_out_of_100": 42.57
+      },
+      {
+        "guess": "برگ",
+        "score_out_of_100": 38.12
+      },
+      {
+        "guess": "ریشه",
+        "score_out_of_100": 41.09
+      },
+      {
+        "guess": "خاک",
+        "score_out_of_100": 34.9
+      },
+      {
+        "guess": "سیب",
+        "score_out_of_100": 48.51
+      },
+      {
+        "guess": "کریسمس",
+        "score_out_of_100": 8.66
+      },
+      {
+        "guess": "کاج",
+        "score_out_of_100": 36.88
+      },
+      {
+        "guess": "باغ",
+        "score_out_of_100": 60.14
+      },
+      {
+        "guess": "باغ میوه",
+        "score_out_of_100": 59.4
+      },
+      {
+        "guess": "باغچه",
+        "score_out_of_100": 55.93
+      },
+      {
+        "guess": "باغستان",
+        "score_out_of_100": 56.68
+      }
+    ],
+    "score": 56.43,
+    "answer": {
+      "type": "score",
+      "score": 2.28,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.07,
+        "2": 0.59,
+        "3": 0.32,
+        "4": 0.02
+      },
+      "confidence": 0.64
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 22,
+    "phrase": "باغ پرتقال",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      },
+      {
+        "guess": "کشاورزی",
+        "score_out_of_100": 32.92
+      },
+      {
+        "guess": "خوراکی",
+        "score_out_of_100": 25.25
+      },
+      {
+        "guess": "میوه",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "درخت",
+        "score_out_of_100": 48.02
+      },
+      {
+        "guess": "گلابی",
+        "score_out_of_100": 42.57
+      },
+      {
+        "guess": "برگ",
+        "score_out_of_100": 38.12
+      },
+      {
+        "guess": "ریشه",
+        "score_out_of_100": 41.09
+      },
+      {
+        "guess": "خاک",
+        "score_out_of_100": 34.9
+      },
+      {
+        "guess": "سیب",
+        "score_out_of_100": 48.51
+      },
+      {
+        "guess": "کریسمس",
+        "score_out_of_100": 8.66
+      },
+      {
+        "guess": "کاج",
+        "score_out_of_100": 36.88
+      },
+      {
+        "guess": "باغ",
+        "score_out_of_100": 60.14
+      },
+      {
+        "guess": "باغ میوه",
+        "score_out_of_100": 59.4
+      },
+      {
+        "guess": "باغچه",
+        "score_out_of_100": 55.93
+      },
+      {
+        "guess": "باغستان",
+        "score_out_of_100": 56.68
+      },
+      {
+        "guess": "باغ انگور",
+        "score_out_of_100": 56.43
+      }
+    ],
+    "score": 57.17,
+    "answer": {
+      "type": "score",
+      "score": 2.31,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.07,
+        "2": 0.58,
+        "3": 0.33,
+        "4": 0.02
+      },
+      "confidence": 0.63
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 23,
+    "phrase": "دیوار باغ",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      },
+      {
+        "guess": "کشاورزی",
+        "score_out_of_100": 32.92
+      },
+      {
+        "guess": "خوراکی",
+        "score_out_of_100": 25.25
+      },
+      {
+        "guess": "میوه",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "درخت",
+        "score_out_of_100": 48.02
+      },
+      {
+        "guess": "گلابی",
+        "score_out_of_100": 42.57
+      },
+      {
+        "guess": "برگ",
+        "score_out_of_100": 38.12
+      },
+      {
+        "guess": "ریشه",
+        "score_out_of_100": 41.09
+      },
+      {
+        "guess": "خاک",
+        "score_out_of_100": 34.9
+      },
+      {
+        "guess": "سیب",
+        "score_out_of_100": 48.51
+      },
+      {
+        "guess": "کریسمس",
+        "score_out_of_100": 8.66
+      },
+      {
+        "guess": "کاج",
+        "score_out_of_100": 36.88
+      },
+      {
+        "guess": "باغ",
+        "score_out_of_100": 60.14
+      },
+      {
+        "guess": "باغ میوه",
+        "score_out_of_100": 59.4
+      },
+      {
+        "guess": "باغچه",
+        "score_out_of_100": 55.93
+      },
+      {
+        "guess": "باغستان",
+        "score_out_of_100": 56.68
+      },
+      {
+        "guess": "باغ انگور",
+        "score_out_of_100": 56.43
+      },
+      {
+        "guess": "باغ پرتقال",
+        "score_out_of_100": 57.17
+      }
+    ],
+    "score": 41.58,
+    "answer": {
+      "type": "score",
+      "score": 1.68,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.04,
+        "1": 0.28,
+        "2": 0.64,
+        "3": 0.04,
+        "4": 0
+      },
+      "confidence": 0.67
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 24,
+    "phrase": "ویلا",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      },
+      {
+        "guess": "کشاورزی",
+        "score_out_of_100": 32.92
+      },
+      {
+        "guess": "خوراکی",
+        "score_out_of_100": 25.25
+      },
+      {
+        "guess": "میوه",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "درخت",
+        "score_out_of_100": 48.02
+      },
+      {
+        "guess": "گلابی",
+        "score_out_of_100": 42.57
+      },
+      {
+        "guess": "برگ",
+        "score_out_of_100": 38.12
+      },
+      {
+        "guess": "ریشه",
+        "score_out_of_100": 41.09
+      },
+      {
+        "guess": "خاک",
+        "score_out_of_100": 34.9
+      },
+      {
+        "guess": "سیب",
+        "score_out_of_100": 48.51
+      },
+      {
+        "guess": "کریسمس",
+        "score_out_of_100": 8.66
+      },
+      {
+        "guess": "کاج",
+        "score_out_of_100": 36.88
+      },
+      {
+        "guess": "باغ",
+        "score_out_of_100": 60.14
+      },
+      {
+        "guess": "باغ میوه",
+        "score_out_of_100": 59.4
+      },
+      {
+        "guess": "باغچه",
+        "score_out_of_100": 55.93
+      },
+      {
+        "guess": "باغستان",
+        "score_out_of_100": 56.68
+      },
+      {
+        "guess": "باغ انگور",
+        "score_out_of_100": 56.43
+      },
+      {
+        "guess": "باغ پرتقال",
+        "score_out_of_100": 57.17
+      },
+      {
+        "guess": "دیوار باغ",
+        "score_out_of_100": 41.58
+      }
+    ],
+    "score": 18.81,
+    "answer": {
+      "type": "score",
+      "score": 0.76,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.41,
+        "1": 0.44,
+        "2": 0.13,
+        "3": 0.02,
+        "4": 0
+      },
+      "confidence": 0.52
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  },
+  {
+    "repeat": 1,
+    "position": 25,
+    "phrase": "نگهبان",
+    "history": [
+      {
+        "guess": "جاندار",
+        "score_out_of_100": 9.41
+      },
+      {
+        "guess": "اشیا",
+        "score_out_of_100": 16.83
+      },
+      {
+        "guess": "مفهوم",
+        "score_out_of_100": 19.8
+      },
+      {
+        "guess": "هنر",
+        "score_out_of_100": 22.28
+      },
+      {
+        "guess": "فناوری",
+        "score_out_of_100": 14.11
+      },
+      {
+        "guess": "کشاورزی",
+        "score_out_of_100": 32.92
+      },
+      {
+        "guess": "خوراکی",
+        "score_out_of_100": 25.25
+      },
+      {
+        "guess": "میوه",
+        "score_out_of_100": 43.56
+      },
+      {
+        "guess": "درخت",
+        "score_out_of_100": 48.02
+      },
+      {
+        "guess": "گلابی",
+        "score_out_of_100": 42.57
+      },
+      {
+        "guess": "برگ",
+        "score_out_of_100": 38.12
+      },
+      {
+        "guess": "ریشه",
+        "score_out_of_100": 41.09
+      },
+      {
+        "guess": "خاک",
+        "score_out_of_100": 34.9
+      },
+      {
+        "guess": "سیب",
+        "score_out_of_100": 48.51
+      },
+      {
+        "guess": "کریسمس",
+        "score_out_of_100": 8.66
+      },
+      {
+        "guess": "کاج",
+        "score_out_of_100": 36.88
+      },
+      {
+        "guess": "باغ",
+        "score_out_of_100": 60.14
+      },
+      {
+        "guess": "باغ میوه",
+        "score_out_of_100": 59.4
+      },
+      {
+        "guess": "باغچه",
+        "score_out_of_100": 55.93
+      },
+      {
+        "guess": "باغستان",
+        "score_out_of_100": 56.68
+      },
+      {
+        "guess": "باغ انگور",
+        "score_out_of_100": 56.43
+      },
+      {
+        "guess": "باغ پرتقال",
+        "score_out_of_100": 57.17
+      },
+      {
+        "guess": "دیوار باغ",
+        "score_out_of_100": 41.58
+      },
+      {
+        "guess": "ویلا",
+        "score_out_of_100": 18.81
+      }
+    ],
+    "score": 26.24,
+    "answer": {
+      "type": "score",
+      "score": 1.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.3,
+        "1": 0.39999999999999997,
+        "2": 0.24,
+        "3": 0.04,
+        "4": 0.02
+      },
+      "confidence": 0.43
+    },
+    "servedModel": "typesafe/jev-1.13-20260917"
+  }
+]

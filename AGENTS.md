@@ -119,11 +119,17 @@ patterns.
 
 - Hidden answers remain server-side until a win or surrender.
 - A geographic answer is correct only when item IDs match, not merely names.
-- A word game is won after three accepted guesses within the time limit.
+- `ADJECTIVE_RAIN` is won after three accepted guesses within its time limit.
+- `PHRASE_HUNT` is won only by the target phrase or a curated normalized alias;
+  JEV scores semantic proximity but never decides whether a guess wins.
 - Previously submitted items cannot be counted twice in one game.
 - Starting a game resumes the current active session before creating another.
-- New targets should avoid a user's previously seen targets until the available
-  pool is exhausted.
+  PHRASE_HUNT instead returns the single session for the current shared Tehran
+  10:00/22:00 Tehran challenge, including a completed session; never reroll it.
+- Personal targets avoid a user's previously seen targets until the pool is
+  exhausted. Shared PHRASE_HUNT targets instead avoid recently used challenge
+  targets globally. Its leaderboard sums one maximum per challenge and includes
+  the active challenge; personal legacy games are excluded.
 
 If a requested change conflicts with one of these invariants, call out the
 conflict before changing behavior.

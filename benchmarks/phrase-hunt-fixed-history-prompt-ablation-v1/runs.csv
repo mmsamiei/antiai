@@ -1,0 +1,41 @@
+﻿repeat,prompt,guess,score
+1,short_calibrated,"باغ",53.46
+1,short_calibrated,"باغ میوه",54.2
+1,game_context,"باغ",60.14
+1,game_context,"باغ میوه",59.4
+2,game_context,"باغ میوه",58.16
+2,game_context,"باغ",58.66
+2,short_calibrated,"باغ میوه",54.2
+2,short_calibrated,"باغ",53.96
+3,short_calibrated,"باغ",53.21
+3,short_calibrated,"باغ میوه",55.19
+3,game_context,"باغ",61.38
+3,game_context,"باغ میوه",57.67
+4,game_context,"باغ میوه",57.17
+4,game_context,"باغ",61.13
+4,short_calibrated,"باغ میوه",55.69
+4,short_calibrated,"باغ",54.7
+5,short_calibrated,"باغ",53.21
+5,short_calibrated,"باغ میوه",52.97
+5,game_context,"باغ",62.37
+5,game_context,"باغ میوه",58.91
+6,game_context,"باغ میوه",57.92
+6,game_context,"باغ",60.64
+6,short_calibrated,"باغ میوه",54.95
+6,short_calibrated,"باغ",54.45
+7,short_calibrated,"باغ",52.22
+7,short_calibrated,"باغ میوه",53.96
+7,game_context,"باغ",61.63
+7,game_context,"باغ میوه",59.65
+8,game_context,"باغ میوه",58.91
+8,game_context,"باغ",62.62
+8,short_calibrated,"باغ میوه",54.95
+8,short_calibrated,"باغ",53.46
+9,short_calibrated,"باغ",52.97
+9,short_calibrated,"باغ میوه",55.44
+9,game_context,"باغ",59.15
+9,game_context,"باغ میوه",57.67
+10,game_context,"باغ میوه",56.68
+10,game_context,"باغ",60.14
+10,short_calibrated,"باغ میوه",55.44
+10,short_calibrated,"باغ",53.71

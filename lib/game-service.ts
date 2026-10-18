@@ -1,10 +1,13 @@
 import type { GameSession, GameType, Guess } from "@prisma/client";
 import { prisma } from "./prisma";
-import { DATASET_VERSION, datasetFor, findItem, publicItem } from "./geo";
+import { DATASET_VERSION, datasetFor, findItem, publicItem, normalizePersian } from "./geo";
 import { wordPrompts, promptById } from "./data/adjective-prompts";
 import { createSemantrisState, publicSemantrisState, readSemantrisState } from "./semantris";
+import { currentPhraseGame } from "./phrase-hunt-challenge";
+import { phraseChallengeTimes } from "./phrase-hunt-schedule";
+import { phraseHuntTargets } from "./data/phrase-hunt-targets";
 
-export const GAME_TYPES = ["IRAN_CITY", "COUNTRY", "SEMANTRIS", "LETTER_DUEL"] as const;
+export const GAME_TYPES = ["IRAN_CITY", "COUNTRY", "PHRASE_HUNT", "SEMANTRIS", "LETTER_DUEL"] as const;
 
 export function parseGameType(value: unknown): GameType | null {
   return typeof value === "string" && GAME_TYPES.includes(value as (typeof GAME_TYPES)[number])
@@ -30,7 +33,19 @@ export function canResumeActiveGame(type: GameType, targetId: string) {
   return type !== "IRAN_CITY" || Boolean(findItem(type, targetId));
 }
 
-export function serializeGame(game: GameSession & { guesses: Guess[] }, revealTarget = false) {
+export function serializeGame(game: GameSession & { guesses: Guess[]; phraseGuesses?: { id: string; phrase: string; score: number; createdAt: Date }[] }, revealTarget = false) {
+  if (game.type === "PHRASE_HUNT") {
+    const target = phraseHuntTargets.find((item) => item.id === game.targetId);
+    return {
+      id: game.id, type: game.type, status: game.status, guessesCount: game.guessesCount,
+      totalItems: 100, startedAt: game.startedAt, finishedAt: game.finishedAt,
+      challenge: game.phraseChallengeId ? phraseChallengeTimes(game.phraseChallengeId) : null,
+      guesses: [],
+      phraseGuesses: (game.phraseGuesses || []).map((guess) => ({ id: guess.id, name: guess.phrase, score: guess.score, createdAt: guess.createdAt })),
+      bestScore: Math.max(0, ...(game.phraseGuesses || []).map((guess) => guess.score)),
+      target: (revealTarget || game.status !== "ACTIVE") && target ? { id: target.id, name: target.phrase } : null,
+    };
+  }
   if (game.type === "SEMANTRIS") {
     const state = readSemantrisState(game.semantrisState) || createSemantrisState();
     return { id: game.id, type: game.type, status: game.status, guessesCount: game.guessesCount, totalItems: 10, startedAt: game.startedAt, finishedAt: game.finishedAt, guesses: [], target: null, semantris: publicSemantrisState(state) };
@@ -68,9 +83,10 @@ export function serializeGame(game: GameSession & { guesses: Guess[] }, revealTa
 
 export async function activeOrNewGame(userId: string, type: GameType) {
   if (isRetiredWordGame(type)) throw new Error("GAME_RETIRED");
+  if (type === "PHRASE_HUNT") return currentPhraseGame(userId);
   const active = await prisma.gameSession.findFirst({
     where: { userId, type, status: "ACTIVE" },
-    include: { guesses: { orderBy: { createdAt: "asc" } } },
+    include: { guesses: { orderBy: { createdAt: "asc" } }, phraseGuesses: { orderBy: { createdAt: "asc" } } },
     orderBy: { startedAt: "desc" }
   });
   if (active && canResumeActiveGame(type, active.targetId)) return active;

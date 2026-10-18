@@ -1,0 +1,5402 @@
+[
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "راز بستان انار",
+    "score": 88.11,
+    "answer": {
+      "type": "score",
+      "score": 3.56,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.04,
+        "3": 0.34,
+        "4": 0.62
+      },
+      "confidence": 0.65
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "سرّ باغ انار",
+    "score": 98.51,
+    "answer": {
+      "type": "score",
+      "score": 3.98,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.01,
+        "4": 0.99
+      },
+      "confidence": 0.99
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "راز انارستان",
+    "score": 85.14,
+    "answer": {
+      "type": "score",
+      "score": 3.44,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.09,
+        "3": 0.34,
+        "4": 0.56
+      },
+      "confidence": 0.54
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "راز باغ انار شیرین",
+    "score": 86.13,
+    "answer": {
+      "type": "score",
+      "score": 3.48,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.02,
+        "3": 0.49,
+        "4": 0.49
+      },
+      "confidence": 0.57
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "راز باغ انار ساوه",
+    "score": 88.36,
+    "answer": {
+      "type": "score",
+      "score": 3.57,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.01,
+        "3": 0.4,
+        "4": 0.59
+      },
+      "confidence": 0.65
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "the secret of the pomegranate garden",
+    "score": 97.27,
+    "answer": {
+      "type": "score",
+      "score": 3.93,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.99
+      },
+      "confidence": 0.97
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "کشف راز باغ انار",
+    "score": 83.9,
+    "answer": {
+      "type": "score",
+      "score": 3.39,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.05,
+        "3": 0.51,
+        "4": 0.44
+      },
+      "confidence": 0.59
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "باغ انار",
+    "score": 61.38,
+    "answer": {
+      "type": "score",
+      "score": 2.48,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.53,
+        "3": 0.46,
+        "4": 0.01
+      },
+      "confidence": 0.6
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "راز باغ میوه",
+    "score": 63.86,
+    "answer": {
+      "type": "score",
+      "score": 2.58,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.41,
+        "3": 0.56,
+        "4": 0.02
+      },
+      "confidence": 0.62
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "انارستان",
+    "score": 52.97,
+    "answer": {
+      "type": "score",
+      "score": 2.14,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.11,
+        "2": 0.67,
+        "3": 0.17,
+        "4": 0.04
+      },
+      "confidence": 0.7
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "بستان انار",
+    "score": 54.95,
+    "answer": {
+      "type": "score",
+      "score": 2.22,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.05,
+        "2": 0.71,
+        "3": 0.22,
+        "4": 0.02
+      },
+      "confidence": 0.74
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "garden of pomegranates",
+    "score": 75.49,
+    "answer": {
+      "type": "score",
+      "score": 3.05,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.15,
+        "3": 0.64,
+        "4": 0.21
+      },
+      "confidence": 0.7
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "باغات انار",
+    "score": 54.45,
+    "answer": {
+      "type": "score",
+      "score": 2.2,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.75,
+        "3": 0.21,
+        "4": 0.01
+      },
+      "confidence": 0.78
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "باغ انار شیرین",
+    "score": 50.99,
+    "answer": {
+      "type": "score",
+      "score": 2.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.09,
+        "2": 0.76,
+        "3": 0.14,
+        "4": 0.01
+      },
+      "confidence": 0.79
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "باغ انار قرمز",
+    "score": 53.46,
+    "answer": {
+      "type": "score",
+      "score": 2.16,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.06,
+        "2": 0.73,
+        "3": 0.2,
+        "4": 0.01
+      },
+      "confidence": 0.77
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "باغ انار شیراز",
+    "score": 57.42,
+    "answer": {
+      "type": "score",
+      "score": 2.32,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.05,
+        "2": 0.6,
+        "3": 0.32,
+        "4": 0.03
+      },
+      "confidence": 0.64
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "باغ انار ساوه",
+    "score": 54.45,
+    "answer": {
+      "type": "score",
+      "score": 2.2,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.07,
+        "2": 0.67,
+        "3": 0.24,
+        "4": 0.02
+      },
+      "confidence": 0.71
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "بوستان انار",
+    "score": 55.44,
+    "answer": {
+      "type": "score",
+      "score": 2.24,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.07,
+        "2": 0.66,
+        "3": 0.24,
+        "4": 0.03
+      },
+      "confidence": 0.69
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "راز باغ سیب",
+    "score": 63.86,
+    "answer": {
+      "type": "score",
+      "score": 2.58,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.39,
+        "3": 0.55,
+        "4": 0.03
+      },
+      "confidence": 0.6
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "راز باغ",
+    "score": 63.36,
+    "answer": {
+      "type": "score",
+      "score": 2.56,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.44,
+        "3": 0.55,
+        "4": 0.01
+      },
+      "confidence": 0.62
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "باغچه انار",
+    "score": 52.72,
+    "answer": {
+      "type": "score",
+      "score": 2.13,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.06,
+        "2": 0.76,
+        "3": 0.17,
+        "4": 0.01
+      },
+      "confidence": 0.79
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "راز انار",
+    "score": 65.34,
+    "answer": {
+      "type": "score",
+      "score": 2.64,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.38,
+        "3": 0.57,
+        "4": 0.04
+      },
+      "confidence": 0.63
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "راز جنگل",
+    "score": 37.87,
+    "answer": {
+      "type": "score",
+      "score": 1.53,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.02,
+        "1": 0.44,
+        "2": 0.53,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.59
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "باغ راز",
+    "score": 55.69,
+    "answer": {
+      "type": "score",
+      "score": 2.25,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.02,
+        "2": 0.71,
+        "3": 0.26,
+        "4": 0.01
+      },
+      "confidence": 0.75
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "باغ میوه",
+    "score": 45.79,
+    "answer": {
+      "type": "score",
+      "score": 1.85,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.16,
+        "2": 0.83,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.86
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "باغ گلابی",
+    "score": 34.9,
+    "answer": {
+      "type": "score",
+      "score": 1.41,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.04,
+        "1": 0.52,
+        "2": 0.44,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.6
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "باغ سیب",
+    "score": 37.87,
+    "answer": {
+      "type": "score",
+      "score": 1.53,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.02,
+        "1": 0.44,
+        "2": 0.54,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.6
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "باغ آلبالو",
+    "score": 38.61,
+    "answer": {
+      "type": "score",
+      "score": 1.56,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.02,
+        "1": 0.41,
+        "2": 0.56,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.62
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "درخت انار",
+    "score": 45.54,
+    "answer": {
+      "type": "score",
+      "score": 1.84,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.17,
+        "2": 0.81,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.85
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "باغ انار بی‌راز",
+    "score": 52.97,
+    "answer": {
+      "type": "score",
+      "score": 2.14,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.13,
+        "2": 0.63,
+        "3": 0.22,
+        "4": 0.02
+      },
+      "confidence": 0.68
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "انار",
+    "score": 49.25,
+    "answer": {
+      "type": "score",
+      "score": 1.99,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.93,
+        "3": 0.03,
+        "4": 0
+      },
+      "confidence": 0.94
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "انار سرخ",
+    "score": 42.57,
+    "answer": {
+      "type": "score",
+      "score": 1.72,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.27,
+        "2": 0.71,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.75
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "باغ",
+    "score": 48.76,
+    "answer": {
+      "type": "score",
+      "score": 1.97,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.95,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.96
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "انار ترش",
+    "score": 37.37,
+    "answer": {
+      "type": "score",
+      "score": 1.51,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.03,
+        "1": 0.44,
+        "2": 0.52,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.57
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "باغچه",
+    "score": 40.59,
+    "answer": {
+      "type": "score",
+      "score": 1.64,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.34,
+        "2": 0.64,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.69
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "راز",
+    "score": 48.51,
+    "answer": {
+      "type": "score",
+      "score": 1.96,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.05,
+        "2": 0.94,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.95
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "باغ بدون انار",
+    "score": 40.34,
+    "answer": {
+      "type": "score",
+      "score": 1.63,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.02,
+        "1": 0.36,
+        "2": 0.6,
+        "3": 0.02,
+        "4": 0
+      },
+      "confidence": 0.65
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "رازآلود",
+    "score": 36.88,
+    "answer": {
+      "type": "score",
+      "score": 1.49,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.05,
+        "1": 0.43,
+        "2": 0.51,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.55
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "باغبان",
+    "score": 31.93,
+    "answer": {
+      "type": "score",
+      "score": 1.29,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.07,
+        "1": 0.58,
+        "2": 0.35,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.65
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "آب انار",
+    "score": 33.41,
+    "answer": {
+      "type": "score",
+      "score": 1.35,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.04,
+        "1": 0.59,
+        "2": 0.37,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.66
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "درخت",
+    "score": 34.4,
+    "answer": {
+      "type": "score",
+      "score": 1.39,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.06,
+        "1": 0.5,
+        "2": 0.44,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.58
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "میوه",
+    "score": 34.65,
+    "answer": {
+      "type": "score",
+      "score": 1.4,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.06,
+        "1": 0.5,
+        "2": 0.44,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.58
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "رمان",
+    "score": 43.31,
+    "answer": {
+      "type": "score",
+      "score": 1.75,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.03,
+        "1": 0.27,
+        "2": 0.64,
+        "3": 0.04,
+        "4": 0.02
+      },
+      "confidence": 0.66
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "راز موفقیت",
+    "score": 23.76,
+    "answer": {
+      "type": "score",
+      "score": 0.96,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.3,
+        "1": 0.46,
+        "2": 0.24,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.55
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "معما",
+    "score": 43.81,
+    "answer": {
+      "type": "score",
+      "score": 1.77,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.04,
+        "1": 0.32,
+        "2": 0.53,
+        "3": 0.06,
+        "4": 0.05
+      },
+      "confidence": 0.53
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "کتاب",
+    "score": 21.04,
+    "answer": {
+      "type": "score",
+      "score": 0.85,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.33,
+        "1": 0.51,
+        "2": 0.16,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.59
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "ایستگاه قطار",
+    "score": 0.74,
+    "answer": {
+      "type": "score",
+      "score": 0.03,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.98,
+        "1": 0.02,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.98
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "کامپیوتر",
+    "score": 0.5,
+    "answer": {
+      "type": "score",
+      "score": 0.02,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.98,
+        "1": 0.02,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.98
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "پیچ‌گوشتی",
+    "score": 1.49,
+    "answer": {
+      "type": "score",
+      "score": 0.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.95,
+        "1": 0.04,
+        "2": 0.01,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.95
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 1,
+    "phrase": "حساب بانکی",
+    "score": 2.72,
+    "answer": {
+      "type": "score",
+      "score": 0.11,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.93,
+        "1": 0.06,
+        "2": 0.01,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.93
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "حساب بانکی",
+    "score": 1.73,
+    "answer": {
+      "type": "score",
+      "score": 0.07,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.95,
+        "1": 0.04,
+        "2": 0.01,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.95
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "پیچ‌گوشتی",
+    "score": 1.24,
+    "answer": {
+      "type": "score",
+      "score": 0.05,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.97,
+        "1": 0.03,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.97
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "ایستگاه قطار",
+    "score": 0.74,
+    "answer": {
+      "type": "score",
+      "score": 0.03,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.97,
+        "1": 0.03,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.97
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "کامپیوتر",
+    "score": 0.74,
+    "answer": {
+      "type": "score",
+      "score": 0.03,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.98,
+        "1": 0.02,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.98
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "رمان",
+    "score": 43.81,
+    "answer": {
+      "type": "score",
+      "score": 1.77,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.02,
+        "1": 0.24,
+        "2": 0.7,
+        "3": 0.03,
+        "4": 0.01
+      },
+      "confidence": 0.72
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "کتاب",
+    "score": 19.31,
+    "answer": {
+      "type": "score",
+      "score": 0.78,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.37,
+        "1": 0.49,
+        "2": 0.14,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.57
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "راز موفقیت",
+    "score": 24.01,
+    "answer": {
+      "type": "score",
+      "score": 0.97,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.31,
+        "1": 0.42,
+        "2": 0.26,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.51
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "درخت",
+    "score": 32.42,
+    "answer": {
+      "type": "score",
+      "score": 1.31,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.09,
+        "1": 0.52,
+        "2": 0.39,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.6
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "معما",
+    "score": 45.29,
+    "answer": {
+      "type": "score",
+      "score": 1.83,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.03,
+        "1": 0.3,
+        "2": 0.54,
+        "3": 0.06,
+        "4": 0.07
+      },
+      "confidence": 0.53
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "آب انار",
+    "score": 35.64,
+    "answer": {
+      "type": "score",
+      "score": 1.44,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.03,
+        "1": 0.5,
+        "2": 0.46,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.57
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "باغبان",
+    "score": 32.42,
+    "answer": {
+      "type": "score",
+      "score": 1.31,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.07,
+        "1": 0.56,
+        "2": 0.37,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.63
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "میوه",
+    "score": 35.64,
+    "answer": {
+      "type": "score",
+      "score": 1.44,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.05,
+        "1": 0.47,
+        "2": 0.48,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.53
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "راز",
+    "score": 48.76,
+    "answer": {
+      "type": "score",
+      "score": 1.97,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.95,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.96
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "رازآلود",
+    "score": 38.12,
+    "answer": {
+      "type": "score",
+      "score": 1.54,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.04,
+        "1": 0.4,
+        "2": 0.55,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.59
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "باغ بدون انار",
+    "score": 42.57,
+    "answer": {
+      "type": "score",
+      "score": 1.72,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.29,
+        "2": 0.67,
+        "3": 0.03,
+        "4": 0
+      },
+      "confidence": 0.72
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "انار ترش",
+    "score": 37.13,
+    "answer": {
+      "type": "score",
+      "score": 1.5,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.02,
+        "1": 0.45,
+        "2": 0.53,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.59
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "انار سرخ",
+    "score": 41.09,
+    "answer": {
+      "type": "score",
+      "score": 1.66,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.32,
+        "2": 0.66,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.71
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "باغچه",
+    "score": 41.33,
+    "answer": {
+      "type": "score",
+      "score": 1.67,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.02,
+        "1": 0.3,
+        "2": 0.67,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.71
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "باغ",
+    "score": 49.01,
+    "answer": {
+      "type": "score",
+      "score": 1.98,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.96,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.97
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "باغ انار بی‌راز",
+    "score": 52.97,
+    "answer": {
+      "type": "score",
+      "score": 2.14,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.13,
+        "2": 0.61,
+        "3": 0.24,
+        "4": 0.02
+      },
+      "confidence": 0.66
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "انار",
+    "score": 49.25,
+    "answer": {
+      "type": "score",
+      "score": 1.99,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.95,
+        "3": 0.02,
+        "4": 0
+      },
+      "confidence": 0.96
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "باغ آلبالو",
+    "score": 39.35,
+    "answer": {
+      "type": "score",
+      "score": 1.59,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.4,
+        "2": 0.58,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.64
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "باغ گلابی",
+    "score": 36.14,
+    "answer": {
+      "type": "score",
+      "score": 1.46,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.02,
+        "1": 0.5,
+        "2": 0.48,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.58
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "درخت انار",
+    "score": 46.28,
+    "answer": {
+      "type": "score",
+      "score": 1.87,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.15,
+        "2": 0.83,
+        "3": 0.02,
+        "4": 0
+      },
+      "confidence": 0.86
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "باغ سیب",
+    "score": 37.13,
+    "answer": {
+      "type": "score",
+      "score": 1.5,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.02,
+        "1": 0.46,
+        "2": 0.52,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.58
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "باغ میوه",
+    "score": 45.79,
+    "answer": {
+      "type": "score",
+      "score": 1.85,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.17,
+        "2": 0.8099999999999999,
+        "3": 0.02,
+        "4": 0
+      },
+      "confidence": 0.84
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "راز جنگل",
+    "score": 37.87,
+    "answer": {
+      "type": "score",
+      "score": 1.53,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.03,
+        "1": 0.43,
+        "2": 0.53,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.58
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "راز انار",
+    "score": 66.08,
+    "answer": {
+      "type": "score",
+      "score": 2.67,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.36,
+        "3": 0.59,
+        "4": 0.04
+      },
+      "confidence": 0.65
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "باغچه انار",
+    "score": 53.46,
+    "answer": {
+      "type": "score",
+      "score": 2.16,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.05,
+        "2": 0.75,
+        "3": 0.19,
+        "4": 0.01
+      },
+      "confidence": 0.78
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "باغ راز",
+    "score": 55.44,
+    "answer": {
+      "type": "score",
+      "score": 2.24,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.02,
+        "2": 0.72,
+        "3": 0.25,
+        "4": 0.01
+      },
+      "confidence": 0.76
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "راز باغ",
+    "score": 63.36,
+    "answer": {
+      "type": "score",
+      "score": 2.56,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.45,
+        "3": 0.54,
+        "4": 0.01
+      },
+      "confidence": 0.62
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "بوستان انار",
+    "score": 55.19,
+    "answer": {
+      "type": "score",
+      "score": 2.23,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.08,
+        "2": 0.64,
+        "3": 0.24,
+        "4": 0.04
+      },
+      "confidence": 0.67
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "راز باغ سیب",
+    "score": 66.08,
+    "answer": {
+      "type": "score",
+      "score": 2.67,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.3,
+        "3": 0.63,
+        "4": 0.04
+      },
+      "confidence": 0.67
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "باغ انار ساوه",
+    "score": 54.2,
+    "answer": {
+      "type": "score",
+      "score": 2.19,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.08,
+        "2": 0.66,
+        "3": 0.24,
+        "4": 0.02
+      },
+      "confidence": 0.7
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "باغ انار شیرین",
+    "score": 51.23,
+    "answer": {
+      "type": "score",
+      "score": 2.07,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.08,
+        "2": 0.77,
+        "3": 0.14,
+        "4": 0.01
+      },
+      "confidence": 0.8
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "باغ انار شیراز",
+    "score": 55.69,
+    "answer": {
+      "type": "score",
+      "score": 2.25,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.07,
+        "2": 0.63,
+        "3": 0.28,
+        "4": 0.02
+      },
+      "confidence": 0.68
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "باغات انار",
+    "score": 52.97,
+    "answer": {
+      "type": "score",
+      "score": 2.14,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.81,
+        "3": 0.16,
+        "4": 0
+      },
+      "confidence": 0.84
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "باغ انار قرمز",
+    "score": 52.97,
+    "answer": {
+      "type": "score",
+      "score": 2.14,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.08,
+        "2": 0.71,
+        "3": 0.2,
+        "4": 0.01
+      },
+      "confidence": 0.75
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "garden of pomegranates",
+    "score": 78.95,
+    "answer": {
+      "type": "score",
+      "score": 3.19,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.09,
+        "3": 0.63,
+        "4": 0.28
+      },
+      "confidence": 0.69
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "انارستان",
+    "score": 50.24,
+    "answer": {
+      "type": "score",
+      "score": 2.03,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.14,
+        "2": 0.71,
+        "3": 0.13,
+        "4": 0.02
+      },
+      "confidence": 0.74
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "بستان انار",
+    "score": 54.7,
+    "answer": {
+      "type": "score",
+      "score": 2.21,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.06,
+        "2": 0.7,
+        "3": 0.22,
+        "4": 0.02
+      },
+      "confidence": 0.73
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "باغ انار",
+    "score": 62.12,
+    "answer": {
+      "type": "score",
+      "score": 2.51,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.51,
+        "3": 0.48,
+        "4": 0.01
+      },
+      "confidence": 0.58
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "راز باغ میوه",
+    "score": 64.35,
+    "answer": {
+      "type": "score",
+      "score": 2.6,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.4,
+        "3": 0.56,
+        "4": 0.03
+      },
+      "confidence": 0.62
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "کشف راز باغ انار",
+    "score": 83.16,
+    "answer": {
+      "type": "score",
+      "score": 3.36,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.04,
+        "3": 0.55,
+        "4": 0.41
+      },
+      "confidence": 0.62
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "راز باغ انار شیرین",
+    "score": 86.38,
+    "answer": {
+      "type": "score",
+      "score": 3.49,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.02,
+        "3": 0.47,
+        "4": 0.51
+      },
+      "confidence": 0.57
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "راز باغ انار ساوه",
+    "score": 89.1,
+    "answer": {
+      "type": "score",
+      "score": 3.6,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.01,
+        "3": 0.37,
+        "4": 0.62
+      },
+      "confidence": 0.68
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "the secret of the pomegranate garden",
+    "score": 97.02,
+    "answer": {
+      "type": "score",
+      "score": 3.92,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.02,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0.98
+      },
+      "confidence": 0.93
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "سرّ باغ انار",
+    "score": 98.51,
+    "answer": {
+      "type": "score",
+      "score": 3.98,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.01,
+        "4": 0.99
+      },
+      "confidence": 0.99
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "راز انارستان",
+    "score": 88.36,
+    "answer": {
+      "type": "score",
+      "score": 3.57,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.06,
+        "3": 0.28,
+        "4": 0.65
+      },
+      "confidence": 0.64
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "pomegranate",
+    "repeat": 2,
+    "phrase": "راز بستان انار",
+    "score": 86.38,
+    "answer": {
+      "type": "score",
+      "score": 3.49,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.06,
+        "3": 0.38,
+        "4": 0.56
+      },
+      "confidence": 0.58
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پای چپ لیونل مسی",
+    "score": 98.75,
+    "answer": {
+      "type": "score",
+      "score": 3.99,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 1
+      },
+      "confidence": 1
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پای چپ مسی",
+    "score": 94.3,
+    "answer": {
+      "type": "score",
+      "score": 3.81,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.01,
+        "3": 0.17,
+        "4": 0.82
+      },
+      "confidence": 0.84
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پای چپ لئو مسی",
+    "score": 98.01,
+    "answer": {
+      "type": "score",
+      "score": 3.96,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.03,
+        "4": 0.97
+      },
+      "confidence": 0.97
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "Lionel Messi's left foot",
+    "score": 94.05,
+    "answer": {
+      "type": "score",
+      "score": 3.8,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.03,
+        "1": 0.01,
+        "2": 0.01,
+        "3": 0.02,
+        "4": 0.93
+      },
+      "confidence": 0.84
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "Messi's left foot",
+    "score": 93.8,
+    "answer": {
+      "type": "score",
+      "score": 3.79,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.03,
+        "1": 0.01,
+        "2": 0.01,
+        "3": 0.04,
+        "4": 0.91
+      },
+      "confidence": 0.82
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پای سمت چپ لیونل مسی",
+    "score": 98.75,
+    "answer": {
+      "type": "score",
+      "score": 3.99,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 1
+      },
+      "confidence": 1
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "شوت با پای چپ لیونل مسی",
+    "score": 74.75,
+    "answer": {
+      "type": "score",
+      "score": 3.02,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.16,
+        "3": 0.64,
+        "4": 0.19
+      },
+      "confidence": 0.69
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پای چپ لیونل مسی آرژانتینی",
+    "score": 92.81,
+    "answer": {
+      "type": "score",
+      "score": 3.75,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.23,
+        "4": 0.77
+      },
+      "confidence": 0.81
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پای چپ قدرتمند لیونل مسی",
+    "score": 92.57,
+    "answer": {
+      "type": "score",
+      "score": 3.74,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.26,
+        "4": 0.74
+      },
+      "confidence": 0.78
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "کف پای چپ لیونل مسی",
+    "score": 83.16,
+    "answer": {
+      "type": "score",
+      "score": 3.36,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.06,
+        "3": 0.51,
+        "4": 0.43
+      },
+      "confidence": 0.59
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "انگشتان پای چپ لیونل مسی",
+    "score": 76.48,
+    "answer": {
+      "type": "score",
+      "score": 3.09,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.12,
+        "3": 0.67,
+        "4": 0.21
+      },
+      "confidence": 0.73
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پای لیونل مسی",
+    "score": 63.86,
+    "answer": {
+      "type": "score",
+      "score": 2.58,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.43,
+        "3": 0.55,
+        "4": 0.02
+      },
+      "confidence": 0.62
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پای چپ یک فوتبالیست",
+    "score": 55.93,
+    "answer": {
+      "type": "score",
+      "score": 2.26,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.68,
+        "3": 0.27,
+        "4": 0.02
+      },
+      "confidence": 0.72
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پای چپ یک بازیکن آرژانتینی",
+    "score": 64.1,
+    "answer": {
+      "type": "score",
+      "score": 2.59,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.41,
+        "3": 0.47,
+        "4": 0.08
+      },
+      "confidence": 0.53
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پاهای لیونل مسی",
+    "score": 56.93,
+    "answer": {
+      "type": "score",
+      "score": 2.3,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.68,
+        "3": 0.3,
+        "4": 0.01
+      },
+      "confidence": 0.72
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پای چپ کریستیانو رونالدو",
+    "score": 51.23,
+    "answer": {
+      "type": "score",
+      "score": 2.07,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.11,
+        "2": 0.7,
+        "3": 0.17,
+        "4": 0.01
+      },
+      "confidence": 0.73
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پای چپ دیگو مارادونا",
+    "score": 48.76,
+    "answer": {
+      "type": "score",
+      "score": 1.97,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.16,
+        "2": 0.69,
+        "3": 0.13,
+        "4": 0.01
+      },
+      "confidence": 0.72
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پای چپ یک انسان",
+    "score": 54.95,
+    "answer": {
+      "type": "score",
+      "score": 2.22,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.72,
+        "3": 0.22,
+        "4": 0.02
+      },
+      "confidence": 0.75
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پای راست لیونل مسی",
+    "score": 59.4,
+    "answer": {
+      "type": "score",
+      "score": 2.4,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.55,
+        "3": 0.37,
+        "4": 0.04
+      },
+      "confidence": 0.59
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "دست چپ لیونل مسی",
+    "score": 53.21,
+    "answer": {
+      "type": "score",
+      "score": 2.15,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.06,
+        "2": 0.73,
+        "3": 0.2,
+        "4": 0.01
+      },
+      "confidence": 0.77
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "دست راست لیونل مسی",
+    "score": 38.36,
+    "answer": {
+      "type": "score",
+      "score": 1.55,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.04,
+        "1": 0.39,
+        "2": 0.55,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.6
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پای چپ",
+    "score": 62.62,
+    "answer": {
+      "type": "score",
+      "score": 2.53,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.51,
+        "3": 0.44,
+        "4": 0.05
+      },
+      "confidence": 0.55
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "کفش پای چپ لیونل مسی",
+    "score": 79.45,
+    "answer": {
+      "type": "score",
+      "score": 3.21,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.09,
+        "3": 0.57,
+        "4": 0.33
+      },
+      "confidence": 0.63
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "کفش لیونل مسی",
+    "score": 42.82,
+    "answer": {
+      "type": "score",
+      "score": 1.73,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.3,
+        "2": 0.66,
+        "3": 0.03,
+        "4": 0
+      },
+      "confidence": 0.71
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پای راست",
+    "score": 42.32,
+    "answer": {
+      "type": "score",
+      "score": 1.71,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.02,
+        "1": 0.3,
+        "2": 0.64,
+        "3": 0.03,
+        "4": 0.01
+      },
+      "confidence": 0.68
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پا",
+    "score": 48.76,
+    "answer": {
+      "type": "score",
+      "score": 1.97,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.95,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.96
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پای انسان",
+    "score": 41.09,
+    "answer": {
+      "type": "score",
+      "score": 1.66,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.33,
+        "2": 0.65,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.7
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "لیونل مسی",
+    "score": 50.24,
+    "answer": {
+      "type": "score",
+      "score": 2.03,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.89,
+        "3": 0.07,
+        "4": 0
+      },
+      "confidence": 0.91
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پای فوتبالیست",
+    "score": 42.32,
+    "answer": {
+      "type": "score",
+      "score": 1.71,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.3,
+        "2": 0.66,
+        "3": 0.03,
+        "4": 0
+      },
+      "confidence": 0.71
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "مسی",
+    "score": 48.02,
+    "answer": {
+      "type": "score",
+      "score": 1.94,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.09,
+        "2": 0.88,
+        "3": 0.03,
+        "4": 0
+      },
+      "confidence": 0.9
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "لئو مسی",
+    "score": 45.05,
+    "answer": {
+      "type": "score",
+      "score": 1.82,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.02,
+        "1": 0.19,
+        "2": 0.76,
+        "3": 0.03,
+        "4": 0
+      },
+      "confidence": 0.78
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "بازیکن آرژانتینی",
+    "score": 33.17,
+    "answer": {
+      "type": "score",
+      "score": 1.34,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.09,
+        "1": 0.51,
+        "2": 0.39,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.58
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "فوتبالیست",
+    "score": 23.76,
+    "answer": {
+      "type": "score",
+      "score": 0.96,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.25,
+        "1": 0.56,
+        "2": 0.19,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.63
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "کریستیانو رونالدو",
+    "score": 11.14,
+    "answer": {
+      "type": "score",
+      "score": 0.45,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.58,
+        "1": 0.4,
+        "2": 0.02,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.63
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "چپ",
+    "score": 49.5,
+    "answer": {
+      "type": "score",
+      "score": 2,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.91,
+        "3": 0.04,
+        "4": 0.01
+      },
+      "confidence": 0.92
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "دیگو مارادونا",
+    "score": 12.62,
+    "answer": {
+      "type": "score",
+      "score": 0.51,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.53,
+        "1": 0.44,
+        "2": 0.03,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.58
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "چپ پا",
+    "score": 69.3,
+    "answer": {
+      "type": "score",
+      "score": 2.8,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.35,
+        "3": 0.47000000000000003,
+        "4": 0.17
+      },
+      "confidence": 0.55
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "فوتبال",
+    "score": 23.27,
+    "answer": {
+      "type": "score",
+      "score": 0.94,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.22,
+        "1": 0.62,
+        "2": 0.16,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.68
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "شوت",
+    "score": 22.52,
+    "answer": {
+      "type": "score",
+      "score": 0.91,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.27,
+        "1": 0.56,
+        "2": 0.16,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.64
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "دریبل",
+    "score": 14.85,
+    "answer": {
+      "type": "score",
+      "score": 0.6,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.48,
+        "1": 0.45,
+        "2": 0.07,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.51
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "گل زدن",
+    "score": 14.11,
+    "answer": {
+      "type": "score",
+      "score": 0.57,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.49,
+        "1": 0.46,
+        "2": 0.05,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.53
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "توپ فوتبال",
+    "score": 14.11,
+    "answer": {
+      "type": "score",
+      "score": 0.57,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.47,
+        "1": 0.49,
+        "2": 0.04,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.57
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "آرژانتین",
+    "score": 17.82,
+    "answer": {
+      "type": "score",
+      "score": 0.72,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.39,
+        "1": 0.51,
+        "2": 0.1,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.59
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "بارسلونا",
+    "score": 16.34,
+    "answer": {
+      "type": "score",
+      "score": 0.66,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.42,
+        "1": 0.51,
+        "2": 0.07,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.59
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "دست چپ",
+    "score": 35.15,
+    "answer": {
+      "type": "score",
+      "score": 1.42,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.05,
+        "1": 0.49,
+        "2": 0.46,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.57
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "جناح چپ سیاسی",
+    "score": 19.06,
+    "answer": {
+      "type": "score",
+      "score": 0.77,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.44,
+        "1": 0.37,
+        "2": 0.19,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.38
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "باغ انار",
+    "score": 0.5,
+    "answer": {
+      "type": "score",
+      "score": 0.02,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.99,
+        "1": 0.01,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.99
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پای میز",
+    "score": 5.69,
+    "answer": {
+      "type": "score",
+      "score": 0.23,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.8,
+        "1": 0.18,
+        "2": 0.02,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.82
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "حساب بانکی",
+    "score": 0.5,
+    "answer": {
+      "type": "score",
+      "score": 0.02,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.99,
+        "1": 0.01,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.99
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 1,
+    "phrase": "پیچ گوشتی",
+    "score": 1.98,
+    "answer": {
+      "type": "score",
+      "score": 0.08,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.95,
+        "1": 0.04,
+        "2": 0.01,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.95
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "حساب بانکی",
+    "score": 0.74,
+    "answer": {
+      "type": "score",
+      "score": 0.03,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.98,
+        "1": 0.02,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.98
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پیچ گوشتی",
+    "score": 1.49,
+    "answer": {
+      "type": "score",
+      "score": 0.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.96,
+        "1": 0.03,
+        "2": 0.01,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.96
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "باغ انار",
+    "score": 0.5,
+    "answer": {
+      "type": "score",
+      "score": 0.02,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.99,
+        "1": 0.01,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.99
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پای میز",
+    "score": 7.43,
+    "answer": {
+      "type": "score",
+      "score": 0.3,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.75,
+        "1": 0.21,
+        "2": 0.04,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.76
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "جناح چپ سیاسی",
+    "score": 19.8,
+    "answer": {
+      "type": "score",
+      "score": 0.8,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.42,
+        "1": 0.38,
+        "2": 0.2,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.35
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "دست چپ",
+    "score": 38.12,
+    "answer": {
+      "type": "score",
+      "score": 1.54,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.04,
+        "1": 0.39,
+        "2": 0.57,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.61
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "بارسلونا",
+    "score": 18.81,
+    "answer": {
+      "type": "score",
+      "score": 0.76,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.35,
+        "1": 0.54,
+        "2": 0.11,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.62
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "توپ فوتبال",
+    "score": 13.86,
+    "answer": {
+      "type": "score",
+      "score": 0.56,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.48,
+        "1": 0.48,
+        "2": 0.04,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.53
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "آرژانتین",
+    "score": 19.55,
+    "answer": {
+      "type": "score",
+      "score": 0.79,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.34,
+        "1": 0.54,
+        "2": 0.12,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.62
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "گل زدن",
+    "score": 13.86,
+    "answer": {
+      "type": "score",
+      "score": 0.56,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.49,
+        "1": 0.47,
+        "2": 0.04,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.54
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "دریبل",
+    "score": 15.1,
+    "answer": {
+      "type": "score",
+      "score": 0.61,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.46,
+        "1": 0.48,
+        "2": 0.06,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.57
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "شوت",
+    "score": 20.05,
+    "answer": {
+      "type": "score",
+      "score": 0.81,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.31,
+        "1": 0.58,
+        "2": 0.11,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.65
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "چپ پا",
+    "score": 68.8,
+    "answer": {
+      "type": "score",
+      "score": 2.78,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.38,
+        "3": 0.42,
+        "4": 0.19
+      },
+      "confidence": 0.51
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "فوتبال",
+    "score": 21.53,
+    "answer": {
+      "type": "score",
+      "score": 0.87,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.27,
+        "1": 0.61,
+        "2": 0.12,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.68
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "چپ",
+    "score": 49.5,
+    "answer": {
+      "type": "score",
+      "score": 2,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.92,
+        "3": 0.03,
+        "4": 0.01
+      },
+      "confidence": 0.93
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "دیگو مارادونا",
+    "score": 13.37,
+    "answer": {
+      "type": "score",
+      "score": 0.54,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.5,
+        "1": 0.47,
+        "2": 0.03,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.56
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "بازیکن آرژانتینی",
+    "score": 34.15,
+    "answer": {
+      "type": "score",
+      "score": 1.38,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.09,
+        "1": 0.48,
+        "2": 0.41,
+        "3": 0.02,
+        "4": 0
+      },
+      "confidence": 0.55
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "کریستیانو رونالدو",
+    "score": 11.63,
+    "answer": {
+      "type": "score",
+      "score": 0.47,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.55,
+        "1": 0.43,
+        "2": 0.02,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.61
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "لئو مسی",
+    "score": 44.3,
+    "answer": {
+      "type": "score",
+      "score": 1.79,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.2,
+        "2": 0.77,
+        "3": 0.02,
+        "4": 0
+      },
+      "confidence": 0.8
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "فوتبالیست",
+    "score": 20.05,
+    "answer": {
+      "type": "score",
+      "score": 0.81,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.34,
+        "1": 0.52,
+        "2": 0.14,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.6
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "مسی",
+    "score": 48.26,
+    "answer": {
+      "type": "score",
+      "score": 1.95,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.07,
+        "2": 0.91,
+        "3": 0.02,
+        "4": 0
+      },
+      "confidence": 0.93
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "لیونل مسی",
+    "score": 50.99,
+    "answer": {
+      "type": "score",
+      "score": 2.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.88,
+        "3": 0.09,
+        "4": 0
+      },
+      "confidence": 0.9
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پای انسان",
+    "score": 39.35,
+    "answer": {
+      "type": "score",
+      "score": 1.59,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.38,
+        "2": 0.6,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.66
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پای فوتبالیست",
+    "score": 42.82,
+    "answer": {
+      "type": "score",
+      "score": 1.73,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.29,
+        "2": 0.67,
+        "3": 0.03,
+        "4": 0
+      },
+      "confidence": 0.72
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پای چپ",
+    "score": 59.9,
+    "answer": {
+      "type": "score",
+      "score": 2.42,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.62,
+        "3": 0.35,
+        "4": 0.03
+      },
+      "confidence": 0.66
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پا",
+    "score": 48.51,
+    "answer": {
+      "type": "score",
+      "score": 1.96,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.96,
+        "3": 0,
+        "4": 0
+      },
+      "confidence": 0.97
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پای راست",
+    "score": 40.59,
+    "answer": {
+      "type": "score",
+      "score": 1.64,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.03,
+        "1": 0.34,
+        "2": 0.6,
+        "3": 0.03,
+        "4": 0
+      },
+      "confidence": 0.64
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "کفش پای چپ لیونل مسی",
+    "score": 80.19,
+    "answer": {
+      "type": "score",
+      "score": 3.24,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.1,
+        "3": 0.53,
+        "4": 0.36
+      },
+      "confidence": 0.6
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "کفش لیونل مسی",
+    "score": 42.32,
+    "answer": {
+      "type": "score",
+      "score": 1.71,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.31,
+        "2": 0.65,
+        "3": 0.03,
+        "4": 0
+      },
+      "confidence": 0.7
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "دست راست لیونل مسی",
+    "score": 37.37,
+    "answer": {
+      "type": "score",
+      "score": 1.51,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.04,
+        "1": 0.42,
+        "2": 0.53,
+        "3": 0.01,
+        "4": 0
+      },
+      "confidence": 0.57
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "دست چپ لیونل مسی",
+    "score": 51.98,
+    "answer": {
+      "type": "score",
+      "score": 2.1,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.07,
+        "2": 0.75,
+        "3": 0.17,
+        "4": 0.01
+      },
+      "confidence": 0.78
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پای راست لیونل مسی",
+    "score": 59.4,
+    "answer": {
+      "type": "score",
+      "score": 2.4,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.55,
+        "3": 0.37,
+        "4": 0.04
+      },
+      "confidence": 0.59
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پای چپ یک انسان",
+    "score": 53.71,
+    "answer": {
+      "type": "score",
+      "score": 2.17,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.75,
+        "3": 0.19,
+        "4": 0.02
+      },
+      "confidence": 0.77
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پای چپ دیگو مارادونا",
+    "score": 50,
+    "answer": {
+      "type": "score",
+      "score": 2.02,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.13,
+        "2": 0.7,
+        "3": 0.15,
+        "4": 0.01
+      },
+      "confidence": 0.73
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پای چپ کریستیانو رونالدو",
+    "score": 51.48,
+    "answer": {
+      "type": "score",
+      "score": 2.08,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.1,
+        "2": 0.73,
+        "3": 0.16,
+        "4": 0.01
+      },
+      "confidence": 0.77
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پای چپ یک بازیکن آرژانتینی",
+    "score": 59.65,
+    "answer": {
+      "type": "score",
+      "score": 2.41,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.05,
+        "2": 0.53,
+        "3": 0.37,
+        "4": 0.05
+      },
+      "confidence": 0.57
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پای لیونل مسی",
+    "score": 63.86,
+    "answer": {
+      "type": "score",
+      "score": 2.58,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.43,
+        "3": 0.56,
+        "4": 0.01
+      },
+      "confidence": 0.63
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پاهای لیونل مسی",
+    "score": 56.68,
+    "answer": {
+      "type": "score",
+      "score": 2.29,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.69,
+        "3": 0.29,
+        "4": 0.01
+      },
+      "confidence": 0.73
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پای چپ یک فوتبالیست",
+    "score": 57.17,
+    "answer": {
+      "type": "score",
+      "score": 2.31,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.65,
+        "3": 0.3,
+        "4": 0.02
+      },
+      "confidence": 0.69
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "شوت با پای چپ لیونل مسی",
+    "score": 75.74,
+    "answer": {
+      "type": "score",
+      "score": 3.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.13,
+        "3": 0.65,
+        "4": 0.21
+      },
+      "confidence": 0.7
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "کف پای چپ لیونل مسی",
+    "score": 85.14,
+    "answer": {
+      "type": "score",
+      "score": 3.44,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.04,
+        "3": 0.48,
+        "4": 0.48
+      },
+      "confidence": 0.57
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "انگشتان پای چپ لیونل مسی",
+    "score": 74.99,
+    "answer": {
+      "type": "score",
+      "score": 3.03,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.15,
+        "3": 0.67,
+        "4": 0.18
+      },
+      "confidence": 0.73
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پای چپ لیونل مسی آرژانتینی",
+    "score": 93.56,
+    "answer": {
+      "type": "score",
+      "score": 3.78,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.2,
+        "4": 0.8
+      },
+      "confidence": 0.83
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پای سمت چپ لیونل مسی",
+    "score": 98.75,
+    "answer": {
+      "type": "score",
+      "score": 3.99,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 1
+      },
+      "confidence": 1
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پای چپ قدرتمند لیونل مسی",
+    "score": 92.32,
+    "answer": {
+      "type": "score",
+      "score": 3.73,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.27,
+        "4": 0.73
+      },
+      "confidence": 0.77
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "Messi's left foot",
+    "score": 94.79,
+    "answer": {
+      "type": "score",
+      "score": 3.83,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.02,
+        "1": 0.01,
+        "2": 0.01,
+        "3": 0.04,
+        "4": 0.92
+      },
+      "confidence": 0.86
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "Lionel Messi's left foot",
+    "score": 94.3,
+    "answer": {
+      "type": "score",
+      "score": 3.81,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0.03,
+        "1": 0.01,
+        "2": 0.01,
+        "3": 0.02,
+        "4": 0.93
+      },
+      "confidence": 0.84
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پای چپ لئو مسی",
+    "score": 97.76,
+    "answer": {
+      "type": "score",
+      "score": 3.95,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.03,
+        "4": 0.97
+      },
+      "confidence": 0.97
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پای چپ لیونل مسی",
+    "score": 99,
+    "answer": {
+      "type": "score",
+      "score": 4,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 1
+      },
+      "confidence": 1
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "dataset": "messi",
+    "repeat": 2,
+    "phrase": "پای چپ مسی",
+    "score": 95.04,
+    "answer": {
+      "type": "score",
+      "score": 3.84,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.01,
+        "3": 0.14,
+        "4": 0.85
+      },
+      "confidence": 0.87
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "successfulCalls": 60,
+  "meanAbsoluteRepeatDifference": 0.6673333333333337,
+  "maxAbsoluteRepeatDifference": 2.969999999999999,
+  "reviewer": "Assistant qualitative review; not independent human ground truth. Judgments depend on game design.",
+  "privacy": "Only guess text and aggregate counts exported; no user identifiers.",
+  "limitations": [
+    "Purposive sample of one target; not overall error rate",
+    "Two repetitions measure limited short-term repeatability",
+    "No exact-target example: exact wins are handled locally, outside JEV",
+    "No changed prompt/model comparison in this benchmark"
+  ]
+}

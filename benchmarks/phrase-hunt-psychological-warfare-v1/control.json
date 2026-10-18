@@ -1,0 +1,1802 @@
+[
+  {
+    "phrase": "جنگ مسلحانه",
+    "score": 32.42,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.31,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.04,
+            "1": 0.62,
+            "2": 0.33,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.68
+        }
+      },
+      "usage": {
+        "input_tokens": 644,
+        "output_tokens": 17,
+        "cost": 0.000027048
+      },
+      "id": "gen-dec-1792350436-owAPya2alIFNbSNyAo8H",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 1066
+  },
+  {
+    "phrase": "دشمن",
+    "score": 28.71,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.16,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.08,
+            "1": 0.68,
+            "2": 0.23,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.74
+        }
+      },
+      "usage": {
+        "input_tokens": 637,
+        "output_tokens": 17,
+        "cost": 0.000026754
+      },
+      "id": "gen-dec-1792350436-ufm2Y33bU4ydusiQdQqi",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 1071
+  },
+  {
+    "phrase": "دستکاری روانی",
+    "score": 66.83,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.7,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.35,
+            "3": 0.5,
+            "4": 0.12
+          },
+          "confidence": 0.56
+        }
+      },
+      "usage": {
+        "input_tokens": 645,
+        "output_tokens": 17,
+        "cost": 0.00002709
+      },
+      "id": "gen-dec-1792350436-PztPgt1U0iJGFTbTxl9P",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 1857
+  },
+  {
+    "phrase": "عملیات روانی",
+    "score": 87.62,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.54,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.07,
+            "3": 0.25,
+            "4": 0.66
+          },
+          "confidence": 0.62
+        }
+      },
+      "usage": {
+        "input_tokens": 644,
+        "output_tokens": 17,
+        "cost": 0.000027048
+      },
+      "id": "gen-dec-1792350437-1FrElSfDmKlUAq7vKj3V",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 300
+  },
+  {
+    "phrase": "جنگ",
+    "score": 50.24,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.03,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.91,
+            "3": 0.05,
+            "4": 0.01
+          },
+          "confidence": 0.92
+        }
+      },
+      "usage": {
+        "input_tokens": 636,
+        "output_tokens": 17,
+        "cost": 0.000026712
+      },
+      "id": "gen-dec-1792350437-0JDMK1KuAVleeUUfqtvr",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 302
+  },
+  {
+    "phrase": "مهندسی افکار",
+    "score": 75.74,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.06,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.2,
+            "3": 0.46,
+            "4": 0.32
+          },
+          "confidence": 0.53
+        }
+      },
+      "usage": {
+        "input_tokens": 644,
+        "output_tokens": 17,
+        "cost": 0.000027048
+      },
+      "id": "gen-dec-1792350437-rIe3EyjhhrwSlKAe5faK",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 316
+  },
+  {
+    "phrase": "جنگ نرم",
+    "score": 77.47,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.13,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.07,
+            "2": 0.16,
+            "3": 0.33,
+            "4": 0.44
+          },
+          "confidence": 0.28
+        }
+      },
+      "usage": {
+        "input_tokens": 637,
+        "output_tokens": 17,
+        "cost": 0.000026754
+      },
+      "id": "gen-dec-1792350437-5ggTsuelCgMQaGJhwvCm",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 636
+  },
+  {
+    "phrase": "psychological warfare",
+    "score": 98.51,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.98,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          },
+          "confidence": 1
+        }
+      },
+      "usage": {
+        "input_tokens": 638,
+        "output_tokens": 17,
+        "cost": 0.000026796
+      },
+      "id": "gen-dec-1792350437-O1iRPZSKrR9SmWqxmyac",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 627
+  },
+  {
+    "phrase": "تخریب روحیه",
+    "score": 66.08,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.67,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.45,
+            "3": 0.4,
+            "4": 0.14
+          },
+          "confidence": 0.42
+        }
+      },
+      "usage": {
+        "input_tokens": 643,
+        "output_tokens": 17,
+        "cost": 0.000027006
+      },
+      "id": "gen-dec-1792350437-sGx4Ctp38bEQS5XegKmJ",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 675
+  },
+  {
+    "phrase": "شایعه پراکنی برای تضعیف دشمن",
+    "score": 67.07,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.71,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.37,
+            "3": 0.54,
+            "4": 0.09
+          },
+          "confidence": 0.62
+        }
+      },
+      "usage": {
+        "input_tokens": 655,
+        "output_tokens": 17,
+        "cost": 0.00002751
+      },
+      "id": "gen-dec-1792350438-DXwroaF4vMJ9ISGSv7rL",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 272
+  },
+  {
+    "phrase": "باغ انار",
+    "score": 0.5,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.02,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.98,
+            "1": 0.02,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.98
+        }
+      },
+      "usage": {
+        "input_tokens": 640,
+        "output_tokens": 17,
+        "cost": 0.00002688
+      },
+      "id": "gen-dec-1792350438-VEinpXUIdmOQhBjJO7RC",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 284
+  },
+  {
+    "phrase": "روحیه",
+    "score": 40.84,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.65,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.35,
+            "2": 0.63,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.68
+        }
+      },
+      "usage": {
+        "input_tokens": 638,
+        "output_tokens": 17,
+        "cost": 0.000026796
+      },
+      "id": "gen-dec-1792350438-NKRNwHeVXiHKPeKZ4xWx",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 294
+  },
+  {
+    "phrase": "جنگ رسانه ای",
+    "score": 61.38,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.48,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.52,
+            "3": 0.38,
+            "4": 0.07
+          },
+          "confidence": 0.54
+        }
+      },
+      "usage": {
+        "input_tokens": 638,
+        "output_tokens": 17,
+        "cost": 0.000026796
+      },
+      "id": "gen-dec-1792350438-YzusIa7Pg0vzDLJaBSB1",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 729
+  },
+  {
+    "phrase": "تهدید",
+    "score": 44.55,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.8,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.22,
+            "2": 0.74,
+            "3": 0.03,
+            "4": 0
+          },
+          "confidence": 0.77
+        }
+      },
+      "usage": {
+        "input_tokens": 638,
+        "output_tokens": 17,
+        "cost": 0.000026796
+      },
+      "id": "gen-dec-1792350438-PVyuaaR4SI4lXBadCM7k",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 710
+  },
+  {
+    "phrase": "نبرد اعصاب",
+    "score": 82.67,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.34,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.12,
+            "3": 0.32,
+            "4": 0.53
+          },
+          "confidence": 0.46
+        }
+      },
+      "usage": {
+        "input_tokens": 642,
+        "output_tokens": 17,
+        "cost": 0.000026964
+      },
+      "id": "gen-dec-1792350438-waomESpKQNoK9A6Ce3xX",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 699
+  },
+  {
+    "phrase": "ترس",
+    "score": 42.32,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.71,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.29,
+            "2": 0.69,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.73
+        }
+      },
+      "usage": {
+        "input_tokens": 636,
+        "output_tokens": 17,
+        "cost": 0.000026712
+      },
+      "id": "gen-dec-1792350439-u0B45UyxGpy252gdQpmY",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 266
+  },
+  {
+    "phrase": "اضطراب",
+    "score": 36.38,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.47,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.49,
+            "2": 0.48,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.57
+        }
+      },
+      "usage": {
+        "input_tokens": 639,
+        "output_tokens": 17,
+        "cost": 0.000026838
+      },
+      "id": "gen-dec-1792350439-wada6lSM9jaqG74RC60B",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 339
+  },
+  {
+    "phrase": "ترساندن دشمن",
+    "score": 60.64,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.45,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.61,
+            "3": 0.3,
+            "4": 0.08
+          },
+          "confidence": 0.61
+        }
+      },
+      "usage": {
+        "input_tokens": 644,
+        "output_tokens": 17,
+        "cost": 0.000027048
+      },
+      "id": "gen-dec-1792350439-fTDHFKAtmABRCjictvhb",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 343
+  },
+  {
+    "phrase": "فریب",
+    "score": 46.28,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.87,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.18,
+            "2": 0.76,
+            "3": 0.05,
+            "4": 0.01
+          },
+          "confidence": 0.79
+        }
+      },
+      "usage": {
+        "input_tokens": 637,
+        "output_tokens": 17,
+        "cost": 0.000026754
+      },
+      "id": "gen-dec-1792350439-UkPd45hFT3LVJrEb9RFk",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 705
+  },
+  {
+    "phrase": "تضعیف روحیه",
+    "score": 60.64,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.45,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.6,
+            "3": 0.31,
+            "4": 0.08
+          },
+          "confidence": 0.6
+        }
+      },
+      "usage": {
+        "input_tokens": 643,
+        "output_tokens": 17,
+        "cost": 0.000027006
+      },
+      "id": "gen-dec-1792350439-z1WVUZ2TcJ4w8tAMYCuO",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 644
+  },
+  {
+    "phrase": "تبلیغات",
+    "score": 46.04,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.86,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.21,
+            "2": 0.71,
+            "3": 0.06,
+            "4": 0.01
+          },
+          "confidence": 0.74
+        }
+      },
+      "usage": {
+        "input_tokens": 640,
+        "output_tokens": 17,
+        "cost": 0.00002688
+      },
+      "id": "gen-dec-1792350439-pM2SuQIw5RYkdZgOMGAM",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 664
+  },
+  {
+    "phrase": "جنگ اطلاعاتی",
+    "score": 63.86,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.58,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.07,
+            "2": 0.37,
+            "3": 0.46,
+            "4": 0.1
+          },
+          "confidence": 0.49
+        }
+      },
+      "usage": {
+        "input_tokens": 644,
+        "output_tokens": 17,
+        "cost": 0.000027048
+      },
+      "id": "gen-dec-1792350440-CNpJKU1aLQydVlFntInP",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 274
+  },
+  {
+    "phrase": "تبلیغات جنگی",
+    "score": 56.43,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.28,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.07,
+            "2": 0.61,
+            "3": 0.27,
+            "4": 0.05
+          },
+          "confidence": 0.63
+        }
+      },
+      "usage": {
+        "input_tokens": 644,
+        "output_tokens": 17,
+        "cost": 0.000027048
+      },
+      "id": "gen-dec-1792350440-0LA3ouO7HeiYV1RYHyIL",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 290
+  },
+  {
+    "phrase": "روانی",
+    "score": 48.76,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.97,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.06,
+            "2": 0.92,
+            "3": 0.02,
+            "4": 0
+          },
+          "confidence": 0.93
+        }
+      },
+      "usage": {
+        "input_tokens": 638,
+        "output_tokens": 17,
+        "cost": 0.000026796
+      },
+      "id": "gen-dec-1792350440-p5KL27fYTI4V2LOyAGIp",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 322
+  },
+  {
+    "phrase": "نبرد روانی",
+    "score": 97.52,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.94,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.03,
+            "4": 0.97
+          },
+          "confidence": 0.97
+        }
+      },
+      "usage": {
+        "input_tokens": 642,
+        "output_tokens": 17,
+        "cost": 0.000026964
+      },
+      "id": "gen-dec-1792350440-6H0QHT8IC2LpnOwvyQ0x",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 711
+  },
+  {
+    "phrase": "جنگ روانشناختی",
+    "score": 97.76,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.95,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.03,
+            "4": 0.97
+          },
+          "confidence": 0.97
+        }
+      },
+      "usage": {
+        "input_tokens": 646,
+        "output_tokens": 17,
+        "cost": 0.000027132
+      },
+      "id": "gen-dec-1792350440-3Cx1gRmqMsqYMgvtPXQZ",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 659
+  },
+  {
+    "phrase": "بمباران",
+    "score": 28.46,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.15,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.13,
+            "1": 0.61,
+            "2": 0.24,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.65
+        }
+      },
+      "usage": {
+        "input_tokens": 640,
+        "output_tokens": 17,
+        "cost": 0.00002688
+      },
+      "id": "gen-dec-1792350440-rNqOg8JXrLuza76Umjy7",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 732
+  },
+  {
+    "phrase": "فریب دشمن",
+    "score": 58.66,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.37,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.64,
+            "3": 0.27,
+            "4": 0.07
+          },
+          "confidence": 0.64
+        }
+      },
+      "usage": {
+        "input_tokens": 641,
+        "output_tokens": 17,
+        "cost": 0.000026922
+      },
+      "id": "gen-dec-1792350441-paqXMsvUpW9zKurXlwrO",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 270
+  },
+  {
+    "phrase": "جنگ نظامی",
+    "score": 41.09,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.66,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.39,
+            "2": 0.54,
+            "3": 0.05,
+            "4": 0.01
+          },
+          "confidence": 0.6
+        }
+      },
+      "usage": {
+        "input_tokens": 642,
+        "output_tokens": 17,
+        "cost": 0.000026964
+      },
+      "id": "gen-dec-1792350441-dfwSSk0ONjWKh0p4pzUt",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 289
+  },
+  {
+    "phrase": "جنگ روانی علیه دشمن",
+    "score": 90.09,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.64,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.34,
+            "4": 0.65
+          },
+          "confidence": 0.7
+        }
+      },
+      "usage": {
+        "input_tokens": 646,
+        "output_tokens": 17,
+        "cost": 0.000027132
+      },
+      "id": "gen-dec-1792350441-EVxWwIzQwG46TEXctS2k",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 307
+  },
+  {
+    "phrase": "حمله روانی",
+    "score": 76.73,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.1,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.19,
+            "3": 0.49,
+            "4": 0.31
+          },
+          "confidence": 0.57
+        }
+      },
+      "usage": {
+        "input_tokens": 642,
+        "output_tokens": 17,
+        "cost": 0.000026964
+      },
+      "id": "gen-dec-1792350441-ZKlNlgRxG2QWuhJkJgzm",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 685
+  },
+  {
+    "phrase": "جنگ اعصاب",
+    "score": 75.24,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.04,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.06,
+            "2": 0.21,
+            "3": 0.35,
+            "4": 0.38
+          },
+          "confidence": 0.21
+        }
+      },
+      "usage": {
+        "input_tokens": 641,
+        "output_tokens": 17,
+        "cost": 0.000026922
+      },
+      "id": "gen-dec-1792350441-RmLOUvicYvlSmeaPuo8S",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 702
+  },
+  {
+    "phrase": "پروپاگاندا",
+    "score": 60.89,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.46,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.55,
+            "3": 0.35,
+            "4": 0.07
+          },
+          "confidence": 0.57
+        }
+      },
+      "usage": {
+        "input_tokens": 643,
+        "output_tokens": 17,
+        "cost": 0.000027006
+      },
+      "id": "gen-dec-1792350441-dk7C0Xpe8l3XPoGEPdUc",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 745
+  },
+  {
+    "phrase": "عملیات فریب",
+    "score": 60.89,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.46,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.04,
+            "2": 0.56,
+            "3": 0.31,
+            "4": 0.09
+          },
+          "confidence": 0.56
+        }
+      },
+      "usage": {
+        "input_tokens": 644,
+        "output_tokens": 17,
+        "cost": 0.000027048
+      },
+      "id": "gen-dec-1792350442-JcFJJZw09uk6rgZBOKjb",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 256
+  },
+  {
+    "phrase": "حمله نظامی",
+    "score": 27.97,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.13,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.06,
+            "1": 0.76,
+            "2": 0.18,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.8
+        }
+      },
+      "usage": {
+        "input_tokens": 643,
+        "output_tokens": 17,
+        "cost": 0.000027006
+      },
+      "id": "gen-dec-1792350442-NBczYnKquSzPUAjFRosN",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 273
+  },
+  {
+    "phrase": "روانشناسی",
+    "score": 39.6,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.6,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.41,
+            "2": 0.55,
+            "3": 0.03,
+            "4": 0
+          },
+          "confidence": 0.62
+        }
+      },
+      "usage": {
+        "input_tokens": 642,
+        "output_tokens": 17,
+        "cost": 0.000026964
+      },
+      "id": "gen-dec-1792350442-TzJs5HqtduM5mFY3IHO6",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 285
+  },
+  {
+    "phrase": "جنگ سرد",
+    "score": 40.34,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.63,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.46,
+            "2": 0.44,
+            "3": 0.07,
+            "4": 0.02
+          },
+          "confidence": 0.46
+        }
+      },
+      "usage": {
+        "input_tokens": 637,
+        "output_tokens": 17,
+        "cost": 0.000026754
+      },
+      "id": "gen-dec-1792350442-WUdp2mo8JI9FqfFrTsqU",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 724
+  },
+  {
+    "phrase": "شایعه",
+    "score": 45.54,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.84,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.18,
+            "2": 0.78,
+            "3": 0.03,
+            "4": 0
+          },
+          "confidence": 0.81
+        }
+      },
+      "usage": {
+        "input_tokens": 638,
+        "output_tokens": 17,
+        "cost": 0.000026796
+      },
+      "id": "gen-dec-1792350442-age5ZfkPHyRDIW3o9JzS",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 708
+  },
+  {
+    "phrase": "مذاکره",
+    "score": 22.52,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.91,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.22,
+            "1": 0.66,
+            "2": 0.12,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.72
+        }
+      },
+      "usage": {
+        "input_tokens": 639,
+        "output_tokens": 17,
+        "cost": 0.000026838
+      },
+      "id": "gen-dec-1792350442-KjsHS2kyhCg6oiixbH1y",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 696
+  },
+  {
+    "phrase": "یخچال",
+    "score": 3.22,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.13,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.89,
+            "1": 0.09,
+            "2": 0.02,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.89
+        }
+      },
+      "usage": {
+        "input_tokens": 638,
+        "output_tokens": 17,
+        "cost": 0.000026796
+      },
+      "id": "gen-dec-1792350443-8c4JfpbFQSMOuSsvxZXf",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 259
+  },
+  {
+    "phrase": "ایجاد ترس در دشمن",
+    "score": 63.36,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.56,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.53,
+            "3": 0.38,
+            "4": 0.09
+          },
+          "confidence": 0.53
+        }
+      },
+      "usage": {
+        "input_tokens": 646,
+        "output_tokens": 17,
+        "cost": 0.000027132
+      },
+      "id": "gen-dec-1792350443-y64Y0ZGuYt3ql0PNbL29",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 271
+  },
+  {
+    "phrase": "سرباز",
+    "score": 24.01,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.97,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.15,
+            "1": 0.73,
+            "2": 0.12,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.77
+        }
+      },
+      "usage": {
+        "input_tokens": 638,
+        "output_tokens": 17,
+        "cost": 0.000026796
+      },
+      "id": "gen-dec-1792350443-FWqNUcZE9tf74rPETuah",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 314
+  },
+  {
+    "phrase": "ارعاب",
+    "score": 52.47,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.12,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.09,
+            "2": 0.72,
+            "3": 0.15000000000000002,
+            "4": 0.04
+          },
+          "confidence": 0.73
+        }
+      },
+      "usage": {
+        "input_tokens": 638,
+        "output_tokens": 17,
+        "cost": 0.000026796
+      },
+      "id": "gen-dec-1792350443-z9ljX5NwMJaXqu3doaoo",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 676
+  },
+  {
+    "phrase": "جنگ روانی در فوتبال",
+    "score": 81.68,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.3,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.08,
+            "3": 0.54,
+            "4": 0.38
+          },
+          "confidence": 0.62
+        }
+      },
+      "usage": {
+        "input_tokens": 643,
+        "output_tokens": 17,
+        "cost": 0.000027006
+      },
+      "id": "gen-dec-1792350443-bX7nLqdWoV6ZkgBKBFwt",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 719
+  },
+  {
+    "phrase": "شایعه پراکنی",
+    "score": 50.99,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.06,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.06,
+            "2": 0.82,
+            "3": 0.11,
+            "4": 0.01
+          },
+          "confidence": 0.84
+        }
+      },
+      "usage": {
+        "input_tokens": 645,
+        "output_tokens": 17,
+        "cost": 0.00002709
+      },
+      "id": "gen-dec-1792350443-n5UN9RaxgPLzIustI9xQ",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 754
+  },
+  {
+    "phrase": "آرامش",
+    "score": 9.65,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.39,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.62,
+            "1": 0.36,
+            "2": 0.02,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.67
+        }
+      },
+      "usage": {
+        "input_tokens": 638,
+        "output_tokens": 17,
+        "cost": 0.000026796
+      },
+      "id": "gen-dec-1792350444-IO5mtDY9CLg2UPaoQejU",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 269
+  },
+  {
+    "phrase": "جنگل",
+    "score": 16.34,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.66,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.43,
+            "1": 0.49,
+            "2": 0.08,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.57
+        }
+      },
+      "usage": {
+        "input_tokens": 637,
+        "output_tokens": 17,
+        "cost": 0.000026754
+      },
+      "id": "gen-dec-1792350444-62rNRfzdgoaSznwQPxn1",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 286
+  },
+  {
+    "phrase": "تبلیغات تجاری",
+    "score": 30.69,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.24,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.07,
+            "1": 0.62,
+            "2": 0.3,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.68
+        }
+      },
+      "usage": {
+        "input_tokens": 645,
+        "output_tokens": 17,
+        "cost": 0.00002709
+      },
+      "id": "gen-dec-1792350444-7xCzoEvtdIHO3RD0e1z9",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 283
+  },
+  {
+    "phrase": "دستکاری افکار",
+    "score": 71.53,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.89,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.27,
+            "3": 0.54,
+            "4": 0.18
+          },
+          "confidence": 0.61
+        }
+      },
+      "usage": {
+        "input_tokens": 645,
+        "output_tokens": 17,
+        "cost": 0.00002709
+      },
+      "id": "gen-dec-1792350444-hWqs1YoBGVSSrM2Hy5RE",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 722
+  },
+  {
+    "phrase": "جنگ روانی",
+    "score": 98.75,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 3.99,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          },
+          "confidence": 1
+        }
+      },
+      "usage": {
+        "input_tokens": 641,
+        "output_tokens": 17,
+        "cost": 0.000026922
+      },
+      "id": "gen-dec-1792350444-jrgMUDMNY0GnODEuZ8Xk",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 702
+  }
+]

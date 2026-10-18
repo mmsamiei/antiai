@@ -1,0 +1,4103 @@
+[
+  {
+    "position": 1,
+    "phrase": "جاندار",
+    "rawScore": 6.68,
+    "finalScore": 6.68,
+    "adjustment": {
+      "score": 6.68,
+      "lower": 0,
+      "upper": 99,
+      "feasible": true,
+      "constraints": []
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.27,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.76,
+            "1": 0.21,
+            "2": 0.03,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.77
+        }
+      },
+      "usage": {
+        "input_tokens": 590,
+        "output_tokens": 17,
+        "cost": 0.00002478
+      },
+      "id": "gen-dec-1792344217-h70cLP55LACE5nFA2qBg",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 306
+  },
+  {
+    "position": 2,
+    "phrase": "اشیا",
+    "rawScore": 15.1,
+    "finalScore": 5.68,
+    "adjustment": {
+      "score": 5.68,
+      "lower": 0,
+      "upper": 5.68,
+      "feasible": true,
+      "constraints": [
+        {
+          "guess": "جاندار",
+          "anchor": 6.68,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 5.68,
+          "satisfied": true
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.61,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.48,
+            "1": 0.46,
+            "2": 0.06,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.52
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.13,
+            "FARTHER": 0.76,
+            "EQUAL": 0.11
+          },
+          "confidence": 0.64
+        }
+      },
+      "usage": {
+        "input_tokens": 881,
+        "output_tokens": 61,
+        "cost": 0.000037002
+      },
+      "id": "gen-dec-1792344217-ok5i9naYEiG9Y9OM6TGu",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 679
+  },
+  {
+    "position": 3,
+    "phrase": "مفهوم",
+    "rawScore": 21.78,
+    "finalScore": 4.68,
+    "adjustment": {
+      "score": 4.68,
+      "lower": 0,
+      "upper": 4.68,
+      "feasible": true,
+      "constraints": [
+        {
+          "guess": "جاندار",
+          "anchor": 6.68,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 5.68,
+          "satisfied": true
+        },
+        {
+          "guess": "اشیا",
+          "anchor": 5.68,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 4.68,
+          "satisfied": true
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.88,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.32,
+            "1": 0.5,
+            "2": 0.16,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.56
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.26,
+            "FARTHER": 0.7,
+            "EQUAL": 0.04
+          },
+          "confidence": 0.55
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.38,
+            "FARTHER": 0.54,
+            "EQUAL": 0.08
+          },
+          "confidence": 0.31
+        }
+      },
+      "usage": {
+        "input_tokens": 1174,
+        "output_tokens": 106,
+        "cost": 0.000049308
+      },
+      "id": "gen-dec-1792344218-VlRhgZOEVllxY8Eue1uP",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 289
+  },
+  {
+    "position": 4,
+    "phrase": "هنر",
+    "rawScore": 17.57,
+    "finalScore": 3.68,
+    "adjustment": {
+      "score": 3.68,
+      "lower": 0,
+      "upper": 3.6799999999999997,
+      "feasible": true,
+      "constraints": [
+        {
+          "guess": "جاندار",
+          "anchor": 6.68,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 5.68,
+          "satisfied": true
+        },
+        {
+          "guess": "اشیا",
+          "anchor": 5.68,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 4.68,
+          "satisfied": true
+        },
+        {
+          "guess": "مفهوم",
+          "anchor": 4.68,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 3.6799999999999997,
+          "satisfied": true
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.71,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.41,
+            "1": 0.5,
+            "2": 0.08,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.57
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.12,
+            "FARTHER": 0.82,
+            "EQUAL": 0.06
+          },
+          "confidence": 0.73
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.19,
+            "FARTHER": 0.73,
+            "EQUAL": 0.08
+          },
+          "confidence": 0.59
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.23,
+            "FARTHER": 0.66,
+            "EQUAL": 0.11
+          },
+          "confidence": 0.49
+        }
+      },
+      "usage": {
+        "input_tokens": 1465,
+        "output_tokens": 151,
+        "cost": 0.00006153
+      },
+      "id": "gen-dec-1792344218-9dIqdCfaXkmTcpaszZ4G",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 706
+  },
+  {
+    "position": 5,
+    "phrase": "فناوری",
+    "rawScore": 11.63,
+    "finalScore": 2.68,
+    "adjustment": {
+      "score": 2.68,
+      "lower": 0,
+      "upper": 2.68,
+      "feasible": true,
+      "constraints": [
+        {
+          "guess": "جاندار",
+          "anchor": 6.68,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 5.68,
+          "satisfied": true
+        },
+        {
+          "guess": "اشیا",
+          "anchor": 5.68,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 4.68,
+          "satisfied": true
+        },
+        {
+          "guess": "مفهوم",
+          "anchor": 4.68,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 3.6799999999999997,
+          "satisfied": true
+        },
+        {
+          "guess": "هنر",
+          "anchor": 3.68,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 2.68,
+          "satisfied": true
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.47,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.58,
+            "1": 0.38,
+            "2": 0.03,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.61
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.04,
+            "FARTHER": 0.93,
+            "EQUAL": 0.03
+          },
+          "confidence": 0.89
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.06,
+            "FARTHER": 0.87,
+            "EQUAL": 0.07
+          },
+          "confidence": 0.8
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.07,
+            "FARTHER": 0.84,
+            "EQUAL": 0.09
+          },
+          "confidence": 0.76
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.06,
+            "FARTHER": 0.86,
+            "EQUAL": 0.08
+          },
+          "confidence": 0.79
+        }
+      },
+      "usage": {
+        "input_tokens": 1759,
+        "output_tokens": 196,
+        "cost": 0.000073878
+      },
+      "id": "gen-dec-1792344219-RI1JZgtQIPmc5GdGTm13",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 324
+  },
+  {
+    "position": 6,
+    "phrase": "کشاورزی",
+    "rawScore": 34.65,
+    "finalScore": 34.65,
+    "adjustment": {
+      "score": 34.65,
+      "lower": 7.68,
+      "upper": 99,
+      "feasible": true,
+      "constraints": [
+        {
+          "guess": "جاندار",
+          "anchor": 6.68,
+          "choice": "CLOSER",
+          "lower": 7.68,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "اشیا",
+          "anchor": 5.68,
+          "choice": "CLOSER",
+          "lower": 6.68,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "مفهوم",
+          "anchor": 4.68,
+          "choice": "CLOSER",
+          "lower": 5.68,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "هنر",
+          "anchor": 3.68,
+          "choice": "CLOSER",
+          "lower": 4.68,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "فناوری",
+          "anchor": 2.68,
+          "choice": "CLOSER",
+          "lower": 3.68,
+          "upper": 99,
+          "satisfied": true
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.4,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.08,
+            "1": 0.49,
+            "2": 0.38,
+            "3": 0.04,
+            "4": 0.01
+          },
+          "confidence": 0.52
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.49,
+            "FARTHER": 0.47,
+            "EQUAL": 0.04
+          },
+          "confidence": 0.23
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.52,
+            "FARTHER": 0.43,
+            "EQUAL": 0.05
+          },
+          "confidence": 0.28
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.51,
+            "FARTHER": 0.43,
+            "EQUAL": 0.06
+          },
+          "confidence": 0.27
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.63,
+            "FARTHER": 0.31,
+            "EQUAL": 0.06
+          },
+          "confidence": 0.45
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.8,
+            "FARTHER": 0.13,
+            "EQUAL": 0.07
+          },
+          "confidence": 0.7
+        }
+      },
+      "usage": {
+        "input_tokens": 2054,
+        "output_tokens": 241,
+        "cost": 0.000086268
+      },
+      "id": "gen-dec-1792344219-yFXBlvbhiQjJljIlqGaV",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 610
+  },
+  {
+    "position": 7,
+    "phrase": "خوراکی",
+    "rawScore": 25.99,
+    "finalScore": 1.68,
+    "adjustment": {
+      "score": 1.68,
+      "lower": 0,
+      "upper": 1.6800000000000002,
+      "feasible": true,
+      "constraints": [
+        {
+          "guess": "جاندار",
+          "anchor": 6.68,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 5.68,
+          "satisfied": true
+        },
+        {
+          "guess": "اشیا",
+          "anchor": 5.68,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 4.68,
+          "satisfied": true
+        },
+        {
+          "guess": "مفهوم",
+          "anchor": 4.68,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 3.6799999999999997,
+          "satisfied": true
+        },
+        {
+          "guess": "هنر",
+          "anchor": 3.68,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 2.68,
+          "satisfied": true
+        },
+        {
+          "guess": "فناوری",
+          "anchor": 2.68,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 1.6800000000000002,
+          "satisfied": true
+        },
+        {
+          "guess": "کشاورزی",
+          "anchor": 34.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 33.65,
+          "satisfied": true
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.05,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.23,
+            "1": 0.53,
+            "2": 0.21,
+            "3": 0.02,
+            "4": 0.01
+          },
+          "confidence": 0.57
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.24,
+            "FARTHER": 0.68,
+            "EQUAL": 0.08
+          },
+          "confidence": 0.52
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.29,
+            "FARTHER": 0.63,
+            "EQUAL": 0.08
+          },
+          "confidence": 0.45
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.27,
+            "FARTHER": 0.66,
+            "EQUAL": 0.07
+          },
+          "confidence": 0.49
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.28,
+            "FARTHER": 0.64,
+            "EQUAL": 0.08
+          },
+          "confidence": 0.46
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.33,
+            "FARTHER": 0.59,
+            "EQUAL": 0.08
+          },
+          "confidence": 0.38
+        },
+        "compare_5": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.07,
+            "FARTHER": 0.92,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.88
+        }
+      },
+      "usage": {
+        "input_tokens": 2349,
+        "output_tokens": 286,
+        "cost": 0.000098658
+      },
+      "id": "gen-dec-1792344220-FB85nZJzP9mEBOjL5noh",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 302
+  },
+  {
+    "position": 8,
+    "phrase": "میوه",
+    "rawScore": 40.34,
+    "finalScore": 33.65,
+    "adjustment": {
+      "score": 33.65,
+      "lower": 7.68,
+      "upper": 33.65,
+      "feasible": true,
+      "constraints": [
+        {
+          "guess": "جاندار",
+          "anchor": 6.68,
+          "choice": "CLOSER",
+          "lower": 7.68,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "اشیا",
+          "anchor": 5.68,
+          "choice": "CLOSER",
+          "lower": 6.68,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "مفهوم",
+          "anchor": 4.68,
+          "choice": "CLOSER",
+          "lower": 5.68,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "هنر",
+          "anchor": 3.68,
+          "choice": "CLOSER",
+          "lower": 4.68,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "فناوری",
+          "anchor": 2.68,
+          "choice": "CLOSER",
+          "lower": 3.68,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "کشاورزی",
+          "anchor": 34.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 33.65,
+          "satisfied": true
+        },
+        {
+          "guess": "خوراکی",
+          "anchor": 1.68,
+          "choice": "CLOSER",
+          "lower": 2.6799999999999997,
+          "upper": 99,
+          "satisfied": true
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.63,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.04,
+            "1": 0.34,
+            "2": 0.59,
+            "3": 0.03,
+            "4": 0
+          },
+          "confidence": 0.62
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.64,
+            "FARTHER": 0.32,
+            "EQUAL": 0.04
+          },
+          "confidence": 0.46
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.71,
+            "FARTHER": 0.26,
+            "EQUAL": 0.03
+          },
+          "confidence": 0.56
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.67,
+            "FARTHER": 0.29,
+            "EQUAL": 0.04
+          },
+          "confidence": 0.51
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.72,
+            "FARTHER": 0.24,
+            "EQUAL": 0.04
+          },
+          "confidence": 0.58
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.85,
+            "FARTHER": 0.12,
+            "EQUAL": 0.03
+          },
+          "confidence": 0.77
+        },
+        "compare_5": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.3,
+            "FARTHER": 0.67,
+            "EQUAL": 0.03
+          },
+          "confidence": 0.51
+        },
+        "compare_6": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.71,
+            "FARTHER": 0.2,
+            "EQUAL": 0.09
+          },
+          "confidence": 0.56
+        }
+      },
+      "usage": {
+        "input_tokens": 2641,
+        "output_tokens": 331,
+        "cost": 0.000110922
+      },
+      "id": "gen-dec-1792344220-uTduHmXsZ23lmNtp20kB",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 693
+  },
+  {
+    "position": 9,
+    "phrase": "درخت",
+    "rawScore": 44.06,
+    "finalScore": 32.65,
+    "adjustment": {
+      "score": 32.65,
+      "lower": 7.68,
+      "upper": 32.65,
+      "feasible": true,
+      "constraints": [
+        {
+          "guess": "جاندار",
+          "anchor": 6.68,
+          "choice": "CLOSER",
+          "lower": 7.68,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "اشیا",
+          "anchor": 5.68,
+          "choice": "CLOSER",
+          "lower": 6.68,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "مفهوم",
+          "anchor": 4.68,
+          "choice": "CLOSER",
+          "lower": 5.68,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "هنر",
+          "anchor": 3.68,
+          "choice": "CLOSER",
+          "lower": 4.68,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "فناوری",
+          "anchor": 2.68,
+          "choice": "CLOSER",
+          "lower": 3.68,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "کشاورزی",
+          "anchor": 34.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 33.65,
+          "satisfied": true
+        },
+        {
+          "guess": "خوراکی",
+          "anchor": 1.68,
+          "choice": "CLOSER",
+          "lower": 2.6799999999999997,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "میوه",
+          "anchor": 33.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 32.65,
+          "satisfied": true
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.78,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.23,
+            "2": 0.71,
+            "3": 0.04,
+            "4": 0
+          },
+          "confidence": 0.74
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.74,
+            "FARTHER": 0.19,
+            "EQUAL": 0.07
+          },
+          "confidence": 0.61
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.88,
+            "FARTHER": 0.1,
+            "EQUAL": 0.02
+          },
+          "confidence": 0.82
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.84,
+            "FARTHER": 0.14,
+            "EQUAL": 0.02
+          },
+          "confidence": 0.76
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.87,
+            "FARTHER": 0.11,
+            "EQUAL": 0.02
+          },
+          "confidence": 0.8
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.96,
+            "FARTHER": 0.03,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.94
+        },
+        "compare_5": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.39,
+            "FARTHER": 0.51,
+            "EQUAL": 0.1
+          },
+          "confidence": 0.27
+        },
+        "compare_6": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.75,
+            "FARTHER": 0.21,
+            "EQUAL": 0.04
+          },
+          "confidence": 0.62
+        },
+        "compare_7": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.42,
+            "FARTHER": 0.48,
+            "EQUAL": 0.1
+          },
+          "confidence": 0.22
+        }
+      },
+      "usage": {
+        "input_tokens": 2934,
+        "output_tokens": 376,
+        "cost": 0.000123228
+      },
+      "id": "gen-dec-1792344221-p44lOv2vOiJCJ8kYD0dF",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 326
+  },
+  {
+    "position": 10,
+    "phrase": "گلابی",
+    "rawScore": 33.91,
+    "finalScore": 31.65,
+    "adjustment": {
+      "score": 31.65,
+      "lower": 6.68,
+      "upper": 31.65,
+      "feasible": true,
+      "constraints": [
+        {
+          "guess": "اشیا",
+          "anchor": 5.68,
+          "choice": "CLOSER",
+          "lower": 6.68,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "مفهوم",
+          "anchor": 4.68,
+          "choice": "CLOSER",
+          "lower": 5.68,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "هنر",
+          "anchor": 3.68,
+          "choice": "CLOSER",
+          "lower": 4.68,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "فناوری",
+          "anchor": 2.68,
+          "choice": "CLOSER",
+          "lower": 3.68,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "کشاورزی",
+          "anchor": 34.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 33.65,
+          "satisfied": true
+        },
+        {
+          "guess": "خوراکی",
+          "anchor": 1.68,
+          "choice": "CLOSER",
+          "lower": 2.6799999999999997,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "میوه",
+          "anchor": 33.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 32.65,
+          "satisfied": true
+        },
+        {
+          "guess": "درخت",
+          "anchor": 32.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 31.65,
+          "satisfied": true
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.37,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.08,
+            "1": 0.49,
+            "2": 0.4,
+            "3": 0.02,
+            "4": 0.01
+          },
+          "confidence": 0.54
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.71,
+            "FARTHER": 0.25,
+            "EQUAL": 0.04
+          },
+          "confidence": 0.56
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.67,
+            "FARTHER": 0.29,
+            "EQUAL": 0.04
+          },
+          "confidence": 0.51
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.77,
+            "FARTHER": 0.2,
+            "EQUAL": 0.03
+          },
+          "confidence": 0.66
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.93,
+            "FARTHER": 0.05,
+            "EQUAL": 0.02
+          },
+          "confidence": 0.89
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.37,
+            "FARTHER": 0.59,
+            "EQUAL": 0.04
+          },
+          "confidence": 0.38
+        },
+        "compare_5": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.63,
+            "FARTHER": 0.15,
+            "EQUAL": 0.22
+          },
+          "confidence": 0.45
+        },
+        "compare_6": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.25,
+            "FARTHER": 0.42,
+            "EQUAL": 0.33
+          },
+          "confidence": 0.13
+        },
+        "compare_7": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.26,
+            "FARTHER": 0.59,
+            "EQUAL": 0.15
+          },
+          "confidence": 0.38
+        }
+      },
+      "usage": {
+        "input_tokens": 2934,
+        "output_tokens": 376,
+        "cost": 0.000123228
+      },
+      "id": "gen-dec-1792344221-wqguyRzcCY1csW9totor",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 665
+  },
+  {
+    "position": 11,
+    "phrase": "برگ",
+    "rawScore": 33.41,
+    "finalScore": 3.01,
+    "adjustment": {
+      "score": 3.01,
+      "lower": 4.68,
+      "upper": 0.6799999999999999,
+      "feasible": false,
+      "constraints": [
+        {
+          "guess": "مفهوم",
+          "anchor": 4.68,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 3.6799999999999997,
+          "satisfied": true
+        },
+        {
+          "guess": "هنر",
+          "anchor": 3.68,
+          "choice": "CLOSER",
+          "lower": 4.68,
+          "upper": 99,
+          "satisfied": false
+        },
+        {
+          "guess": "فناوری",
+          "anchor": 2.68,
+          "choice": "CLOSER",
+          "lower": 3.68,
+          "upper": 99,
+          "satisfied": false
+        },
+        {
+          "guess": "کشاورزی",
+          "anchor": 34.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 33.65,
+          "satisfied": true
+        },
+        {
+          "guess": "خوراکی",
+          "anchor": 1.68,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 0.6799999999999999,
+          "satisfied": false
+        },
+        {
+          "guess": "میوه",
+          "anchor": 33.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 32.65,
+          "satisfied": true
+        },
+        {
+          "guess": "درخت",
+          "anchor": 32.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 31.65,
+          "satisfied": true
+        },
+        {
+          "guess": "گلابی",
+          "anchor": 31.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 30.65,
+          "satisfied": true
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.35,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.09,
+            "1": 0.48,
+            "2": 0.42,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.56
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.43,
+            "FARTHER": 0.52,
+            "EQUAL": 0.05
+          },
+          "confidence": 0.28
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.51,
+            "FARTHER": 0.42,
+            "EQUAL": 0.07
+          },
+          "confidence": 0.27
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.82,
+            "FARTHER": 0.13,
+            "EQUAL": 0.05
+          },
+          "confidence": 0.73
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.16,
+            "FARTHER": 0.8,
+            "EQUAL": 0.04
+          },
+          "confidence": 0.7
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.3,
+            "FARTHER": 0.61,
+            "EQUAL": 0.09
+          },
+          "confidence": 0.41
+        },
+        "compare_5": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.04,
+            "FARTHER": 0.94,
+            "EQUAL": 0.02
+          },
+          "confidence": 0.91
+        },
+        "compare_6": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.05,
+            "FARTHER": 0.92,
+            "EQUAL": 0.03
+          },
+          "confidence": 0.88
+        },
+        "compare_7": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.06,
+            "FARTHER": 0.91,
+            "EQUAL": 0.03
+          },
+          "confidence": 0.86
+        }
+      },
+      "usage": {
+        "input_tokens": 2934,
+        "output_tokens": 376,
+        "cost": 0.000123228
+      },
+      "id": "gen-dec-1792344222-4vcbwLjKCs0T7BXkHTJa",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 292
+  },
+  {
+    "position": 12,
+    "phrase": "ریشه",
+    "rawScore": 37.87,
+    "finalScore": 3.46,
+    "adjustment": {
+      "score": 3.46,
+      "lower": 4.68,
+      "upper": 2.01,
+      "feasible": false,
+      "constraints": [
+        {
+          "guess": "هنر",
+          "anchor": 3.68,
+          "choice": "CLOSER",
+          "lower": 4.68,
+          "upper": 99,
+          "satisfied": false
+        },
+        {
+          "guess": "فناوری",
+          "anchor": 2.68,
+          "choice": "CLOSER",
+          "lower": 3.68,
+          "upper": 99,
+          "satisfied": false
+        },
+        {
+          "guess": "کشاورزی",
+          "anchor": 34.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 33.65,
+          "satisfied": true
+        },
+        {
+          "guess": "خوراکی",
+          "anchor": 1.68,
+          "choice": "CLOSER",
+          "lower": 2.6799999999999997,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "میوه",
+          "anchor": 33.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 32.65,
+          "satisfied": true
+        },
+        {
+          "guess": "درخت",
+          "anchor": 32.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 31.65,
+          "satisfied": true
+        },
+        {
+          "guess": "گلابی",
+          "anchor": 31.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 30.65,
+          "satisfied": true
+        },
+        {
+          "guess": "برگ",
+          "anchor": 3.01,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 2.01,
+          "satisfied": false
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.53,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.4,
+            "2": 0.53,
+            "3": 0.02,
+            "4": 0
+          },
+          "confidence": 0.57
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.65,
+            "FARTHER": 0.25,
+            "EQUAL": 0.1
+          },
+          "confidence": 0.48
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.64,
+            "FARTHER": 0.21,
+            "EQUAL": 0.15
+          },
+          "confidence": 0.46
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.17,
+            "FARTHER": 0.78,
+            "EQUAL": 0.05
+          },
+          "confidence": 0.67
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.52,
+            "FARTHER": 0.35,
+            "EQUAL": 0.13
+          },
+          "confidence": 0.28
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.09,
+            "FARTHER": 0.88,
+            "EQUAL": 0.03
+          },
+          "confidence": 0.82
+        },
+        "compare_5": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.13,
+            "FARTHER": 0.79,
+            "EQUAL": 0.08
+          },
+          "confidence": 0.69
+        },
+        "compare_6": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.14,
+            "FARTHER": 0.79,
+            "EQUAL": 0.07
+          },
+          "confidence": 0.69
+        },
+        "compare_7": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.34,
+            "FARTHER": 0.38,
+            "EQUAL": 0.28
+          },
+          "confidence": 0.07
+        }
+      },
+      "usage": {
+        "input_tokens": 2933,
+        "output_tokens": 376,
+        "cost": 0.000123186
+      },
+      "id": "gen-dec-1792344222-g2LkhIWZRMzSfQUAcWS3",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 657
+  },
+  {
+    "position": 13,
+    "phrase": "خاک",
+    "rawScore": 33.66,
+    "finalScore": 2.72,
+    "adjustment": {
+      "score": 2.72,
+      "lower": 3.68,
+      "upper": 2.01,
+      "feasible": false,
+      "constraints": [
+        {
+          "guess": "فناوری",
+          "anchor": 2.68,
+          "choice": "CLOSER",
+          "lower": 3.68,
+          "upper": 99,
+          "satisfied": false
+        },
+        {
+          "guess": "کشاورزی",
+          "anchor": 34.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 33.65,
+          "satisfied": true
+        },
+        {
+          "guess": "خوراکی",
+          "anchor": 1.68,
+          "choice": "CLOSER",
+          "lower": 2.6799999999999997,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "میوه",
+          "anchor": 33.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 32.65,
+          "satisfied": true
+        },
+        {
+          "guess": "درخت",
+          "anchor": 32.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 31.65,
+          "satisfied": true
+        },
+        {
+          "guess": "گلابی",
+          "anchor": 31.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 30.65,
+          "satisfied": true
+        },
+        {
+          "guess": "برگ",
+          "anchor": 3.01,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 2.01,
+          "satisfied": false
+        },
+        {
+          "guess": "ریشه",
+          "anchor": 3.46,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 2.46,
+          "satisfied": false
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.36,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.07,
+            "1": 0.52,
+            "2": 0.4,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.59
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.7,
+            "FARTHER": 0.17,
+            "EQUAL": 0.13
+          },
+          "confidence": 0.55
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.12,
+            "FARTHER": 0.84,
+            "EQUAL": 0.04
+          },
+          "confidence": 0.76
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.49,
+            "FARTHER": 0.37,
+            "EQUAL": 0.14
+          },
+          "confidence": 0.23
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.05,
+            "FARTHER": 0.93,
+            "EQUAL": 0.02
+          },
+          "confidence": 0.89
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.05,
+            "FARTHER": 0.92,
+            "EQUAL": 0.03
+          },
+          "confidence": 0.88
+        },
+        "compare_5": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.11,
+            "FARTHER": 0.85,
+            "EQUAL": 0.04
+          },
+          "confidence": 0.77
+        },
+        "compare_6": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.17,
+            "FARTHER": 0.64,
+            "EQUAL": 0.19
+          },
+          "confidence": 0.46
+        },
+        "compare_7": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.15,
+            "FARTHER": 0.66,
+            "EQUAL": 0.19
+          },
+          "confidence": 0.49
+        }
+      },
+      "usage": {
+        "input_tokens": 2933,
+        "output_tokens": 376,
+        "cost": 0.000123186
+      },
+      "id": "gen-dec-1792344223-xhc323v6dlPTvhOh4veQ",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 318
+  },
+  {
+    "position": 14,
+    "phrase": "سیب",
+    "rawScore": 37.37,
+    "finalScore": 34.65,
+    "adjustment": {
+      "score": 34.65,
+      "lower": 35.65,
+      "upper": 33.65,
+      "feasible": false,
+      "constraints": [
+        {
+          "guess": "کشاورزی",
+          "anchor": 34.65,
+          "choice": "CLOSER",
+          "lower": 35.65,
+          "upper": 99,
+          "satisfied": false
+        },
+        {
+          "guess": "خوراکی",
+          "anchor": 1.68,
+          "choice": "CLOSER",
+          "lower": 2.6799999999999997,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "میوه",
+          "anchor": 33.65,
+          "choice": "CLOSER",
+          "lower": 34.65,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "درخت",
+          "anchor": 32.65,
+          "choice": "CLOSER",
+          "lower": 33.65,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "گلابی",
+          "anchor": 31.65,
+          "choice": "EQUAL",
+          "lower": 29.65,
+          "upper": 33.65,
+          "satisfied": false
+        },
+        {
+          "guess": "برگ",
+          "anchor": 3.01,
+          "choice": "CLOSER",
+          "lower": 4.01,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "ریشه",
+          "anchor": 3.46,
+          "choice": "CLOSER",
+          "lower": 4.46,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "خاک",
+          "anchor": 2.72,
+          "choice": "CLOSER",
+          "lower": 3.72,
+          "upper": 99,
+          "satisfied": true
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.51,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.47,
+            "2": 0.48,
+            "3": 0.02,
+            "4": 0
+          },
+          "confidence": 0.54
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.7,
+            "FARTHER": 0.25,
+            "EQUAL": 0.05
+          },
+          "confidence": 0.55
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.84,
+            "FARTHER": 0.1,
+            "EQUAL": 0.06
+          },
+          "confidence": 0.76
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.44,
+            "FARTHER": 0.32,
+            "EQUAL": 0.24
+          },
+          "confidence": 0.16
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.56,
+            "FARTHER": 0.35,
+            "EQUAL": 0.09
+          },
+          "confidence": 0.34
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "EQUAL",
+          "probabilities": {
+            "CLOSER": 0.39,
+            "FARTHER": 0.17,
+            "EQUAL": 0.44
+          },
+          "confidence": 0.16
+        },
+        "compare_5": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.86,
+            "FARTHER": 0.11,
+            "EQUAL": 0.03
+          },
+          "confidence": 0.79
+        },
+        "compare_6": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.82,
+            "FARTHER": 0.14,
+            "EQUAL": 0.04
+          },
+          "confidence": 0.73
+        },
+        "compare_7": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.85,
+            "FARTHER": 0.12,
+            "EQUAL": 0.03
+          },
+          "confidence": 0.77
+        }
+      },
+      "usage": {
+        "input_tokens": 2930,
+        "output_tokens": 376,
+        "cost": 0.00012306
+      },
+      "id": "gen-dec-1792344224-mfaMFI2jdhvjjSdogLe7",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 291
+  },
+  {
+    "position": 15,
+    "phrase": "کریسمس",
+    "rawScore": 8.17,
+    "finalScore": 0.68,
+    "adjustment": {
+      "score": 0.68,
+      "lower": 0,
+      "upper": 0.6799999999999999,
+      "feasible": true,
+      "constraints": [
+        {
+          "guess": "خوراکی",
+          "anchor": 1.68,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 0.6799999999999999,
+          "satisfied": true
+        },
+        {
+          "guess": "میوه",
+          "anchor": 33.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 32.65,
+          "satisfied": true
+        },
+        {
+          "guess": "درخت",
+          "anchor": 32.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 31.65,
+          "satisfied": true
+        },
+        {
+          "guess": "گلابی",
+          "anchor": 31.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 30.65,
+          "satisfied": true
+        },
+        {
+          "guess": "برگ",
+          "anchor": 3.01,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 2.01,
+          "satisfied": true
+        },
+        {
+          "guess": "ریشه",
+          "anchor": 3.46,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 2.46,
+          "satisfied": true
+        },
+        {
+          "guess": "خاک",
+          "anchor": 2.72,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 1.7200000000000002,
+          "satisfied": true
+        },
+        {
+          "guess": "سیب",
+          "anchor": 34.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 33.65,
+          "satisfied": true
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.33,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.78,
+            "1": 0.15,
+            "2": 0.05,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.73
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.06,
+            "FARTHER": 0.88,
+            "EQUAL": 0.06
+          },
+          "confidence": 0.82
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.02,
+            "FARTHER": 0.97,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.95
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.02,
+            "FARTHER": 0.97,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.95
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.02,
+            "FARTHER": 0.96,
+            "EQUAL": 0.02
+          },
+          "confidence": 0.94
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.06,
+            "FARTHER": 0.89,
+            "EQUAL": 0.05
+          },
+          "confidence": 0.83
+        },
+        "compare_5": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.05,
+            "FARTHER": 0.91,
+            "EQUAL": 0.04
+          },
+          "confidence": 0.86
+        },
+        "compare_6": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.06,
+            "FARTHER": 0.89,
+            "EQUAL": 0.05
+          },
+          "confidence": 0.83
+        },
+        "compare_7": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.02,
+            "FARTHER": 0.96,
+            "EQUAL": 0.02
+          },
+          "confidence": 0.94
+        }
+      },
+      "usage": {
+        "input_tokens": 2929,
+        "output_tokens": 376,
+        "cost": 0.000123018
+      },
+      "id": "gen-dec-1792344224-7l50N5FQiBSTctzTNwWr",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 625
+  },
+  {
+    "position": 16,
+    "phrase": "کاج",
+    "rawScore": 26.48,
+    "finalScore": 26.48,
+    "adjustment": {
+      "score": 26.48,
+      "lower": 4.46,
+      "upper": 30.65,
+      "feasible": true,
+      "constraints": [
+        {
+          "guess": "میوه",
+          "anchor": 33.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 32.65,
+          "satisfied": true
+        },
+        {
+          "guess": "درخت",
+          "anchor": 32.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 31.65,
+          "satisfied": true
+        },
+        {
+          "guess": "گلابی",
+          "anchor": 31.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 30.65,
+          "satisfied": true
+        },
+        {
+          "guess": "برگ",
+          "anchor": 3.01,
+          "choice": "CLOSER",
+          "lower": 4.01,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "ریشه",
+          "anchor": 3.46,
+          "choice": "CLOSER",
+          "lower": 4.46,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "خاک",
+          "anchor": 2.72,
+          "choice": "CLOSER",
+          "lower": 3.72,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "سیب",
+          "anchor": 34.65,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 33.65,
+          "satisfied": true
+        },
+        {
+          "guess": "کریسمس",
+          "anchor": 0.68,
+          "choice": "CLOSER",
+          "lower": 1.6800000000000002,
+          "upper": 99,
+          "satisfied": true
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.07,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.16,
+            "1": 0.63,
+            "2": 0.2,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.68
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.16,
+            "FARTHER": 0.75,
+            "EQUAL": 0.09
+          },
+          "confidence": 0.62
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.18,
+            "FARTHER": 0.52,
+            "EQUAL": 0.3
+          },
+          "confidence": 0.28
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.12,
+            "FARTHER": 0.78,
+            "EQUAL": 0.1
+          },
+          "confidence": 0.67
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.59,
+            "FARTHER": 0.26,
+            "EQUAL": 0.15
+          },
+          "confidence": 0.38
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.55,
+            "FARTHER": 0.3,
+            "EQUAL": 0.15
+          },
+          "confidence": 0.33
+        },
+        "compare_5": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.51,
+            "FARTHER": 0.35,
+            "EQUAL": 0.14
+          },
+          "confidence": 0.27
+        },
+        "compare_6": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.08,
+            "FARTHER": 0.84,
+            "EQUAL": 0.08
+          },
+          "confidence": 0.76
+        },
+        "compare_7": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.84,
+            "FARTHER": 0.07,
+            "EQUAL": 0.09
+          },
+          "confidence": 0.76
+        }
+      },
+      "usage": {
+        "input_tokens": 2926,
+        "output_tokens": 376,
+        "cost": 0.000122892
+      },
+      "id": "gen-dec-1792344225-ssGLyhsfyvNiJz4V9DX5",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 288
+  },
+  {
+    "position": 17,
+    "phrase": "باغ",
+    "rawScore": 52.22,
+    "finalScore": 52.22,
+    "adjustment": {
+      "score": 52.22,
+      "lower": 35.65,
+      "upper": 99,
+      "feasible": true,
+      "constraints": [
+        {
+          "guess": "درخت",
+          "anchor": 32.65,
+          "choice": "CLOSER",
+          "lower": 33.65,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "گلابی",
+          "anchor": 31.65,
+          "choice": "CLOSER",
+          "lower": 32.65,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "برگ",
+          "anchor": 3.01,
+          "choice": "CLOSER",
+          "lower": 4.01,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "ریشه",
+          "anchor": 3.46,
+          "choice": "CLOSER",
+          "lower": 4.46,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "خاک",
+          "anchor": 2.72,
+          "choice": "CLOSER",
+          "lower": 3.72,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "سیب",
+          "anchor": 34.65,
+          "choice": "CLOSER",
+          "lower": 35.65,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "کریسمس",
+          "anchor": 0.68,
+          "choice": "CLOSER",
+          "lower": 1.6800000000000002,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "کاج",
+          "anchor": 26.48,
+          "choice": "CLOSER",
+          "lower": 27.48,
+          "upper": 99,
+          "satisfied": true
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.11,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.88,
+            "3": 0.1,
+            "4": 0.01
+          },
+          "confidence": 0.89
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.92,
+            "FARTHER": 0.05,
+            "EQUAL": 0.03
+          },
+          "confidence": 0.88
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.96,
+            "FARTHER": 0.03,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.94
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.98,
+            "FARTHER": 0.01,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.97
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.97,
+            "FARTHER": 0.02,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.95
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.97,
+            "FARTHER": 0.02,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.95
+        },
+        "compare_5": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.93,
+            "FARTHER": 0.05,
+            "EQUAL": 0.02
+          },
+          "confidence": 0.89
+        },
+        "compare_6": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.98,
+            "FARTHER": 0.01,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.97
+        },
+        "compare_7": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.96,
+            "FARTHER": 0.03,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.94
+        }
+      },
+      "usage": {
+        "input_tokens": 2925,
+        "output_tokens": 376,
+        "cost": 0.00012285
+      },
+      "id": "gen-dec-1792344225-LiACUlk38wJB9mc5MXeI",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 643
+  },
+  {
+    "position": 18,
+    "phrase": "باغ میوه",
+    "rawScore": 50.24,
+    "finalScore": 53.22,
+    "adjustment": {
+      "score": 53.22,
+      "lower": 53.22,
+      "upper": 99,
+      "feasible": true,
+      "constraints": [
+        {
+          "guess": "گلابی",
+          "anchor": 31.65,
+          "choice": "CLOSER",
+          "lower": 32.65,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "برگ",
+          "anchor": 3.01,
+          "choice": "CLOSER",
+          "lower": 4.01,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "ریشه",
+          "anchor": 3.46,
+          "choice": "CLOSER",
+          "lower": 4.46,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "خاک",
+          "anchor": 2.72,
+          "choice": "CLOSER",
+          "lower": 3.72,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "سیب",
+          "anchor": 34.65,
+          "choice": "CLOSER",
+          "lower": 35.65,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "کریسمس",
+          "anchor": 0.68,
+          "choice": "CLOSER",
+          "lower": 1.6800000000000002,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "کاج",
+          "anchor": 26.48,
+          "choice": "CLOSER",
+          "lower": 27.48,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "باغ",
+          "anchor": 52.22,
+          "choice": "CLOSER",
+          "lower": 53.22,
+          "upper": 99,
+          "satisfied": true
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.03,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.04,
+            "2": 0.89,
+            "3": 0.07,
+            "4": 0
+          },
+          "confidence": 0.91
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.96,
+            "FARTHER": 0.03,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.94
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.99,
+            "FARTHER": 0.01,
+            "EQUAL": 0
+          },
+          "confidence": 0.98
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.99,
+            "FARTHER": 0.01,
+            "EQUAL": 0
+          },
+          "confidence": 0.98
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.99,
+            "FARTHER": 0.01,
+            "EQUAL": 0
+          },
+          "confidence": 0.98
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.89,
+            "FARTHER": 0.08,
+            "EQUAL": 0.03
+          },
+          "confidence": 0.83
+        },
+        "compare_5": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.99,
+            "FARTHER": 0.01,
+            "EQUAL": 0
+          },
+          "confidence": 0.98
+        },
+        "compare_6": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.97,
+            "FARTHER": 0.02,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.95
+        },
+        "compare_7": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.58,
+            "FARTHER": 0.26,
+            "EQUAL": 0.16
+          },
+          "confidence": 0.37
+        }
+      },
+      "usage": {
+        "input_tokens": 2929,
+        "output_tokens": 376,
+        "cost": 0.000123018
+      },
+      "id": "gen-dec-1792344226-hAHzkJ5wbojKudHctivs",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 269
+  },
+  {
+    "position": 19,
+    "phrase": "باغچه",
+    "rawScore": 50.74,
+    "finalScore": 50.74,
+    "adjustment": {
+      "score": 50.74,
+      "lower": 35.65,
+      "upper": 51.22,
+      "feasible": true,
+      "constraints": [
+        {
+          "guess": "برگ",
+          "anchor": 3.01,
+          "choice": "CLOSER",
+          "lower": 4.01,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "ریشه",
+          "anchor": 3.46,
+          "choice": "CLOSER",
+          "lower": 4.46,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "خاک",
+          "anchor": 2.72,
+          "choice": "CLOSER",
+          "lower": 3.72,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "سیب",
+          "anchor": 34.65,
+          "choice": "CLOSER",
+          "lower": 35.65,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "کریسمس",
+          "anchor": 0.68,
+          "choice": "CLOSER",
+          "lower": 1.6800000000000002,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "کاج",
+          "anchor": 26.48,
+          "choice": "CLOSER",
+          "lower": 27.48,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "باغ",
+          "anchor": 52.22,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 51.22,
+          "satisfied": true
+        },
+        {
+          "guess": "باغ میوه",
+          "anchor": 53.22,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 52.22,
+          "satisfied": true
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.05,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.15,
+            "2": 0.66,
+            "3": 0.15,
+            "4": 0.03
+          },
+          "confidence": 0.68
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.95,
+            "FARTHER": 0.03,
+            "EQUAL": 0.02
+          },
+          "confidence": 0.92
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.92,
+            "FARTHER": 0.06,
+            "EQUAL": 0.02
+          },
+          "confidence": 0.88
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.91,
+            "FARTHER": 0.06,
+            "EQUAL": 0.03
+          },
+          "confidence": 0.86
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.88,
+            "FARTHER": 0.1,
+            "EQUAL": 0.02
+          },
+          "confidence": 0.82
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.97,
+            "FARTHER": 0.02,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.95
+        },
+        "compare_5": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.83,
+            "FARTHER": 0.12,
+            "EQUAL": 0.05
+          },
+          "confidence": 0.74
+        },
+        "compare_6": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.13,
+            "FARTHER": 0.74,
+            "EQUAL": 0.13
+          },
+          "confidence": 0.61
+        },
+        "compare_7": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.1,
+            "FARTHER": 0.83,
+            "EQUAL": 0.07
+          },
+          "confidence": 0.74
+        }
+      },
+      "usage": {
+        "input_tokens": 2929,
+        "output_tokens": 376,
+        "cost": 0.000123018
+      },
+      "id": "gen-dec-1792344226-MjdixdE9R2cCYIxngnM8",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 726
+  },
+  {
+    "position": 20,
+    "phrase": "باغستان",
+    "rawScore": 51.48,
+    "finalScore": 51.48,
+    "adjustment": {
+      "score": 51.48,
+      "lower": 51.74,
+      "upper": 51.22,
+      "feasible": false,
+      "constraints": [
+        {
+          "guess": "ریشه",
+          "anchor": 3.46,
+          "choice": "CLOSER",
+          "lower": 4.46,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "خاک",
+          "anchor": 2.72,
+          "choice": "CLOSER",
+          "lower": 3.72,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "سیب",
+          "anchor": 34.65,
+          "choice": "CLOSER",
+          "lower": 35.65,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "کریسمس",
+          "anchor": 0.68,
+          "choice": "CLOSER",
+          "lower": 1.6800000000000002,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "کاج",
+          "anchor": 26.48,
+          "choice": "CLOSER",
+          "lower": 27.48,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "باغ",
+          "anchor": 52.22,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 51.22,
+          "satisfied": false
+        },
+        {
+          "guess": "باغ میوه",
+          "anchor": 53.22,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 52.22,
+          "satisfied": true
+        },
+        {
+          "guess": "باغچه",
+          "anchor": 50.74,
+          "choice": "CLOSER",
+          "lower": 51.74,
+          "upper": 99,
+          "satisfied": false
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.08,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.13,
+            "2": 0.67,
+            "3": 0.14,
+            "4": 0.05
+          },
+          "confidence": 0.68
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.96,
+            "FARTHER": 0.03,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.94
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.97,
+            "FARTHER": 0.02,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.95
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.85,
+            "FARTHER": 0.12,
+            "EQUAL": 0.03
+          },
+          "confidence": 0.77
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.99,
+            "FARTHER": 0.01,
+            "EQUAL": 0
+          },
+          "confidence": 0.98
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.93,
+            "FARTHER": 0.05,
+            "EQUAL": 0.02
+          },
+          "confidence": 0.89
+        },
+        "compare_5": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.22,
+            "FARTHER": 0.45,
+            "EQUAL": 0.33
+          },
+          "confidence": 0.18
+        },
+        "compare_6": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.22,
+            "FARTHER": 0.49,
+            "EQUAL": 0.29
+          },
+          "confidence": 0.23
+        },
+        "compare_7": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.37,
+            "FARTHER": 0.36,
+            "EQUAL": 0.27
+          },
+          "confidence": 0.06
+        }
+      },
+      "usage": {
+        "input_tokens": 2934,
+        "output_tokens": 376,
+        "cost": 0.000123228
+      },
+      "id": "gen-dec-1792344227-uPBOCACOPNCteSgEz27l",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 300
+  },
+  {
+    "position": 21,
+    "phrase": "باغ انگور",
+    "rawScore": 50,
+    "finalScore": 51.85,
+    "adjustment": {
+      "score": 51.85,
+      "lower": 53.22,
+      "upper": 50.48,
+      "feasible": false,
+      "constraints": [
+        {
+          "guess": "خاک",
+          "anchor": 2.72,
+          "choice": "CLOSER",
+          "lower": 3.72,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "سیب",
+          "anchor": 34.65,
+          "choice": "CLOSER",
+          "lower": 35.65,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "کریسمس",
+          "anchor": 0.68,
+          "choice": "CLOSER",
+          "lower": 1.6800000000000002,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "کاج",
+          "anchor": 26.48,
+          "choice": "CLOSER",
+          "lower": 27.48,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "باغ",
+          "anchor": 52.22,
+          "choice": "CLOSER",
+          "lower": 53.22,
+          "upper": 99,
+          "satisfied": false
+        },
+        {
+          "guess": "باغ میوه",
+          "anchor": 53.22,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 52.22,
+          "satisfied": true
+        },
+        {
+          "guess": "باغچه",
+          "anchor": 50.74,
+          "choice": "CLOSER",
+          "lower": 51.74,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "باغستان",
+          "anchor": 51.48,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 50.48,
+          "satisfied": false
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 2.02,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.09,
+            "2": 0.8,
+            "3": 0.1,
+            "4": 0.01
+          },
+          "confidence": 0.82
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.97,
+            "FARTHER": 0.02,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.95
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.86,
+            "FARTHER": 0.09,
+            "EQUAL": 0.05
+          },
+          "confidence": 0.79
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.98,
+            "FARTHER": 0.01,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.97
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.95,
+            "FARTHER": 0.03,
+            "EQUAL": 0.02
+          },
+          "confidence": 0.92
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.44,
+            "FARTHER": 0.34,
+            "EQUAL": 0.22
+          },
+          "confidence": 0.16
+        },
+        "compare_5": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.18,
+            "FARTHER": 0.59,
+            "EQUAL": 0.23
+          },
+          "confidence": 0.38
+        },
+        "compare_6": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.55,
+            "FARTHER": 0.25,
+            "EQUAL": 0.2
+          },
+          "confidence": 0.33
+        },
+        "compare_7": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.23,
+            "FARTHER": 0.54,
+            "EQUAL": 0.23
+          },
+          "confidence": 0.31
+        }
+      },
+      "usage": {
+        "input_tokens": 2939,
+        "output_tokens": 376,
+        "cost": 0.000123438
+      },
+      "id": "gen-dec-1792344227-fao47KF8c7ThYYyLSWFF",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 653
+  },
+  {
+    "position": 22,
+    "phrase": "باغ پرتقال",
+    "rawScore": 48.02,
+    "finalScore": 52.03,
+    "adjustment": {
+      "score": 52.03,
+      "lower": 53.22,
+      "upper": 50.85,
+      "feasible": false,
+      "constraints": [
+        {
+          "guess": "سیب",
+          "anchor": 34.65,
+          "choice": "CLOSER",
+          "lower": 35.65,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "کریسمس",
+          "anchor": 0.68,
+          "choice": "CLOSER",
+          "lower": 1.6800000000000002,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "کاج",
+          "anchor": 26.48,
+          "choice": "CLOSER",
+          "lower": 27.48,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "باغ",
+          "anchor": 52.22,
+          "choice": "CLOSER",
+          "lower": 53.22,
+          "upper": 99,
+          "satisfied": false
+        },
+        {
+          "guess": "باغ میوه",
+          "anchor": 53.22,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 52.22,
+          "satisfied": true
+        },
+        {
+          "guess": "باغچه",
+          "anchor": 50.74,
+          "choice": "CLOSER",
+          "lower": 51.74,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "باغستان",
+          "anchor": 51.48,
+          "choice": "EQUAL",
+          "lower": 49.48,
+          "upper": 53.48,
+          "satisfied": true
+        },
+        {
+          "guess": "باغ انگور",
+          "anchor": 51.85,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 50.85,
+          "satisfied": false
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.94,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.13,
+            "2": 0.81,
+            "3": 0.06,
+            "4": 0
+          },
+          "confidence": 0.84
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.77,
+            "FARTHER": 0.08,
+            "EQUAL": 0.15
+          },
+          "confidence": 0.66
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.97,
+            "FARTHER": 0.02,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.95
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.93,
+            "FARTHER": 0.04,
+            "EQUAL": 0.03
+          },
+          "confidence": 0.89
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.4,
+            "FARTHER": 0.36,
+            "EQUAL": 0.24
+          },
+          "confidence": 0.1
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.24,
+            "FARTHER": 0.46,
+            "EQUAL": 0.3
+          },
+          "confidence": 0.19
+        },
+        "compare_5": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.59,
+            "FARTHER": 0.22,
+            "EQUAL": 0.19
+          },
+          "confidence": 0.38
+        },
+        "compare_6": {
+          "type": "choice",
+          "choice": "EQUAL",
+          "probabilities": {
+            "CLOSER": 0.33,
+            "FARTHER": 0.31,
+            "EQUAL": 0.36
+          },
+          "confidence": 0.04
+        },
+        "compare_7": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.1,
+            "FARTHER": 0.5,
+            "EQUAL": 0.4
+          },
+          "confidence": 0.25
+        }
+      },
+      "usage": {
+        "input_tokens": 2947,
+        "output_tokens": 376,
+        "cost": 0.000123774
+      },
+      "id": "gen-dec-1792344228-OP5jHuuRnl0p9IGcVtTU",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 292
+  },
+  {
+    "position": 23,
+    "phrase": "دیوار باغ",
+    "rawScore": 42.82,
+    "finalScore": 42.82,
+    "adjustment": {
+      "score": 42.82,
+      "lower": 27.48,
+      "upper": 49.74,
+      "feasible": true,
+      "constraints": [
+        {
+          "guess": "کریسمس",
+          "anchor": 0.68,
+          "choice": "CLOSER",
+          "lower": 1.6800000000000002,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "کاج",
+          "anchor": 26.48,
+          "choice": "CLOSER",
+          "lower": 27.48,
+          "upper": 99,
+          "satisfied": true
+        },
+        {
+          "guess": "باغ",
+          "anchor": 52.22,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 51.22,
+          "satisfied": true
+        },
+        {
+          "guess": "باغ میوه",
+          "anchor": 53.22,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 52.22,
+          "satisfied": true
+        },
+        {
+          "guess": "باغچه",
+          "anchor": 50.74,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 49.74,
+          "satisfied": true
+        },
+        {
+          "guess": "باغستان",
+          "anchor": 51.48,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 50.48,
+          "satisfied": true
+        },
+        {
+          "guess": "باغ انگور",
+          "anchor": 51.85,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 50.85,
+          "satisfied": true
+        },
+        {
+          "guess": "باغ پرتقال",
+          "anchor": 52.03,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 51.03,
+          "satisfied": true
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.73,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.25,
+            "2": 0.71,
+            "3": 0.02,
+            "4": 0
+          },
+          "confidence": 0.74
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.92,
+            "FARTHER": 0.06,
+            "EQUAL": 0.02
+          },
+          "confidence": 0.88
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "CLOSER",
+          "probabilities": {
+            "CLOSER": 0.79,
+            "FARTHER": 0.14,
+            "EQUAL": 0.07
+          },
+          "confidence": 0.69
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.08,
+            "FARTHER": 0.77,
+            "EQUAL": 0.15
+          },
+          "confidence": 0.66
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.04,
+            "FARTHER": 0.93,
+            "EQUAL": 0.03
+          },
+          "confidence": 0.89
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.11,
+            "FARTHER": 0.74,
+            "EQUAL": 0.15
+          },
+          "confidence": 0.61
+        },
+        "compare_5": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.07,
+            "FARTHER": 0.82,
+            "EQUAL": 0.11
+          },
+          "confidence": 0.73
+        },
+        "compare_6": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.04,
+            "FARTHER": 0.9,
+            "EQUAL": 0.06
+          },
+          "confidence": 0.85
+        },
+        "compare_7": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.05,
+            "FARTHER": 0.88,
+            "EQUAL": 0.07
+          },
+          "confidence": 0.82
+        }
+      },
+      "usage": {
+        "input_tokens": 2952,
+        "output_tokens": 376,
+        "cost": 0.000123984
+      },
+      "id": "gen-dec-1792344229-EHVC4XM4ufhD0FQ9O1X2",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 999
+  },
+  {
+    "position": 24,
+    "phrase": "ویلا",
+    "rawScore": 15.1,
+    "finalScore": 15.1,
+    "adjustment": {
+      "score": 15.1,
+      "lower": 0,
+      "upper": 25.48,
+      "feasible": true,
+      "constraints": [
+        {
+          "guess": "کاج",
+          "anchor": 26.48,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 25.48,
+          "satisfied": true
+        },
+        {
+          "guess": "باغ",
+          "anchor": 52.22,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 51.22,
+          "satisfied": true
+        },
+        {
+          "guess": "باغ میوه",
+          "anchor": 53.22,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 52.22,
+          "satisfied": true
+        },
+        {
+          "guess": "باغچه",
+          "anchor": 50.74,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 49.74,
+          "satisfied": true
+        },
+        {
+          "guess": "باغستان",
+          "anchor": 51.48,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 50.48,
+          "satisfied": true
+        },
+        {
+          "guess": "باغ انگور",
+          "anchor": 51.85,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 50.85,
+          "satisfied": true
+        },
+        {
+          "guess": "باغ پرتقال",
+          "anchor": 52.03,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 51.03,
+          "satisfied": true
+        },
+        {
+          "guess": "دیوار باغ",
+          "anchor": 42.82,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 41.82,
+          "satisfied": true
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.61,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.49,
+            "1": 0.42,
+            "2": 0.08,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.49
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.06,
+            "FARTHER": 0.88,
+            "EQUAL": 0.06
+          },
+          "confidence": 0.82
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.01,
+            "FARTHER": 0.99,
+            "EQUAL": 0
+          },
+          "confidence": 0.98
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.01,
+            "FARTHER": 0.99,
+            "EQUAL": 0
+          },
+          "confidence": 0.98
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.01,
+            "FARTHER": 0.98,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.97
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.01,
+            "FARTHER": 0.98,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.97
+        },
+        "compare_5": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.01,
+            "FARTHER": 0.98,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.97
+        },
+        "compare_6": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.01,
+            "FARTHER": 0.98,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.97
+        },
+        "compare_7": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.02,
+            "FARTHER": 0.97,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.95
+        }
+      },
+      "usage": {
+        "input_tokens": 2951,
+        "output_tokens": 376,
+        "cost": 0.000123942
+      },
+      "id": "gen-dec-1792344229-P4Uapi87TVyIElFEyRFy",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 572
+  },
+  {
+    "position": 25,
+    "phrase": "نگهبان",
+    "rawScore": 19.06,
+    "finalScore": 14.1,
+    "adjustment": {
+      "score": 14.1,
+      "lower": 0,
+      "upper": 14.1,
+      "feasible": true,
+      "constraints": [
+        {
+          "guess": "باغ",
+          "anchor": 52.22,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 51.22,
+          "satisfied": true
+        },
+        {
+          "guess": "باغ میوه",
+          "anchor": 53.22,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 52.22,
+          "satisfied": true
+        },
+        {
+          "guess": "باغچه",
+          "anchor": 50.74,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 49.74,
+          "satisfied": true
+        },
+        {
+          "guess": "باغستان",
+          "anchor": 51.48,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 50.48,
+          "satisfied": true
+        },
+        {
+          "guess": "باغ انگور",
+          "anchor": 51.85,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 50.85,
+          "satisfied": true
+        },
+        {
+          "guess": "باغ پرتقال",
+          "anchor": 52.03,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 51.03,
+          "satisfied": true
+        },
+        {
+          "guess": "دیوار باغ",
+          "anchor": 42.82,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 41.82,
+          "satisfied": true
+        },
+        {
+          "guess": "ویلا",
+          "anchor": 15.1,
+          "choice": "FARTHER",
+          "lower": 0,
+          "upper": 14.1,
+          "satisfied": true
+        }
+      ]
+    },
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.77,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.35,
+            "1": 0.55,
+            "2": 0.1,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.62
+        },
+        "compare_0": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.02,
+            "FARTHER": 0.98,
+            "EQUAL": 0
+          },
+          "confidence": 0.97
+        },
+        "compare_1": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.02,
+            "FARTHER": 0.97,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.95
+        },
+        "compare_2": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.03,
+            "FARTHER": 0.96,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.94
+        },
+        "compare_3": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.02,
+            "FARTHER": 0.97,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.95
+        },
+        "compare_4": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.03,
+            "FARTHER": 0.96,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.94
+        },
+        "compare_5": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.03,
+            "FARTHER": 0.96,
+            "EQUAL": 0.01
+          },
+          "confidence": 0.94
+        },
+        "compare_6": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.05,
+            "FARTHER": 0.91,
+            "EQUAL": 0.04
+          },
+          "confidence": 0.86
+        },
+        "compare_7": {
+          "type": "choice",
+          "choice": "FARTHER",
+          "probabilities": {
+            "CLOSER": 0.21,
+            "FARTHER": 0.61,
+            "EQUAL": 0.18
+          },
+          "confidence": 0.41
+        }
+      },
+      "usage": {
+        "input_tokens": 2953,
+        "output_tokens": 376,
+        "cost": 0.000124026
+      },
+      "id": "gen-dec-1792344230-ZDtJ0fcTiHI4mG1bZhXa",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 271
+  }
+]

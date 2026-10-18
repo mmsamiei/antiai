@@ -1,0 +1,431 @@
+{
+  "target": "راز باغ انار",
+  "repetitions": 3,
+  "calls": 75,
+  "varianceDefinition": "Population variance (divide by 3); score units squared.",
+  "entries": [
+    {
+      "position": 1,
+      "phrase": "جاندار",
+      "scores": [
+        8.91,
+        8.42,
+        7.67
+      ],
+      "mean": 8.333333333333334,
+      "variance": 0.2600222222222223,
+      "standardDeviation": 0.5099237415753677,
+      "sampleVariance": 0.39003333333333345,
+      "min": 7.67,
+      "max": 8.91
+    },
+    {
+      "position": 2,
+      "phrase": "اشیا",
+      "scores": [
+        14.6,
+        14.6,
+        16.34
+      ],
+      "mean": 15.18,
+      "variance": 0.6728000000000002,
+      "standardDeviation": 0.8202438661763952,
+      "sampleVariance": 1.0092000000000003,
+      "min": 14.6,
+      "max": 16.34
+    },
+    {
+      "position": 3,
+      "phrase": "مفهوم",
+      "scores": [
+        25.74,
+        23.76,
+        26.48
+      ],
+      "mean": 25.326666666666668,
+      "variance": 1.318488888888887,
+      "standardDeviation": 1.1482547142898596,
+      "sampleVariance": 1.9777333333333305,
+      "min": 23.76,
+      "max": 26.48
+    },
+    {
+      "position": 4,
+      "phrase": "هنر",
+      "scores": [
+        20.54,
+        23.51,
+        21.78
+      ],
+      "mean": 21.94333333333333,
+      "variance": 1.483488888888891,
+      "standardDeviation": 1.2179855864865115,
+      "sampleVariance": 2.2252333333333367,
+      "min": 20.54,
+      "max": 23.51
+    },
+    {
+      "position": 5,
+      "phrase": "فناوری",
+      "scores": [
+        11.63,
+        13.61,
+        13.86
+      ],
+      "mean": 13.033333333333333,
+      "variance": 0.9950888888888877,
+      "standardDeviation": 0.9975414221419017,
+      "sampleVariance": 1.4926333333333315,
+      "min": 11.63,
+      "max": 13.86
+    },
+    {
+      "position": 6,
+      "phrase": "کشاورزی",
+      "scores": [
+        33.91,
+        34.9,
+        34.15
+      ],
+      "mean": 34.32,
+      "variance": 0.17780000000000054,
+      "standardDeviation": 0.42166337284616096,
+      "sampleVariance": 0.2667000000000008,
+      "min": 33.91,
+      "max": 34.9
+    },
+    {
+      "position": 7,
+      "phrase": "خوراکی",
+      "scores": [
+        27.23,
+        26.24,
+        27.72
+      ],
+      "mean": 27.063333333333333,
+      "variance": 0.37895555555555593,
+      "standardDeviation": 0.6155936610748651,
+      "sampleVariance": 0.5684333333333339,
+      "min": 26.24,
+      "max": 27.72
+    },
+    {
+      "position": 8,
+      "phrase": "میوه",
+      "scores": [
+        44.3,
+        43.31,
+        44.3
+      ],
+      "mean": 43.97,
+      "variance": 0.21779999999999775,
+      "standardDeviation": 0.46669047558311894,
+      "sampleVariance": 0.3266999999999966,
+      "min": 43.31,
+      "max": 44.3
+    },
+    {
+      "position": 9,
+      "phrase": "درخت",
+      "scores": [
+        47.27,
+        48.26,
+        48.51
+      ],
+      "mean": 48.01333333333333,
+      "variance": 0.28668888888888633,
+      "standardDeviation": 0.5354333654983469,
+      "sampleVariance": 0.4300333333333295,
+      "min": 47.27,
+      "max": 48.51
+    },
+    {
+      "position": 10,
+      "phrase": "گلابی",
+      "scores": [
+        41.09,
+        39.85,
+        41.09
+      ],
+      "mean": 40.67666666666667,
+      "variance": 0.34168888888889,
+      "standardDeviation": 0.5845416057808802,
+      "sampleVariance": 0.512533333333335,
+      "min": 39.85,
+      "max": 41.09
+    },
+    {
+      "position": 11,
+      "phrase": "برگ",
+      "scores": [
+        36.63,
+        36.88,
+        37.37
+      ],
+      "mean": 36.96,
+      "variance": 0.09446666666666526,
+      "standardDeviation": 0.30735430152621135,
+      "sampleVariance": 0.14169999999999788,
+      "min": 36.63,
+      "max": 37.37
+    },
+    {
+      "position": 12,
+      "phrase": "ریشه",
+      "scores": [
+        43.07,
+        44.06,
+        44.55
+      ],
+      "mean": 43.89333333333334,
+      "variance": 0.3789555555555544,
+      "standardDeviation": 0.6155936610748639,
+      "sampleVariance": 0.5684333333333316,
+      "min": 43.07,
+      "max": 44.55
+    },
+    {
+      "position": 13,
+      "phrase": "خاک",
+      "scores": [
+        35.39,
+        35.39,
+        34.4
+      ],
+      "mean": 35.06,
+      "variance": 0.21780000000000088,
+      "standardDeviation": 0.4666904755831223,
+      "sampleVariance": 0.3267000000000013,
+      "min": 34.4,
+      "max": 35.39
+    },
+    {
+      "position": 14,
+      "phrase": "سیب",
+      "scores": [
+        44.8,
+        44.55,
+        44.8
+      ],
+      "mean": 44.71666666666666,
+      "variance": 0.01388888888888889,
+      "standardDeviation": 0.11785113019775792,
+      "sampleVariance": 0.020833333333333336,
+      "min": 44.55,
+      "max": 44.8
+    },
+    {
+      "position": 15,
+      "phrase": "کریسمس",
+      "scores": [
+        6.44,
+        6.68,
+        9.9
+      ],
+      "mean": 7.673333333333335,
+      "variance": 2.4886222222222227,
+      "standardDeviation": 1.5775367578038308,
+      "sampleVariance": 3.7329333333333343,
+      "min": 6.44,
+      "max": 9.9
+    },
+    {
+      "position": 16,
+      "phrase": "کاج",
+      "scores": [
+        38.12,
+        37.87,
+        38.12
+      ],
+      "mean": 38.03666666666666,
+      "variance": 0.01388888888888889,
+      "standardDeviation": 0.11785113019775792,
+      "sampleVariance": 0.020833333333333336,
+      "min": 37.87,
+      "max": 38.12
+    },
+    {
+      "position": 17,
+      "phrase": "باغ",
+      "scores": [
+        57.42,
+        53.21,
+        53.21
+      ],
+      "mean": 54.61333333333334,
+      "variance": 3.9386888888888905,
+      "standardDeviation": 1.9846130325302438,
+      "sampleVariance": 5.908033333333336,
+      "min": 53.21,
+      "max": 57.42
+    },
+    {
+      "position": 18,
+      "phrase": "باغ میوه",
+      "scores": [
+        55.19,
+        55.69,
+        55.44
+      ],
+      "mean": 55.44,
+      "variance": 0.041666666666666664,
+      "standardDeviation": 0.2041241452319315,
+      "sampleVariance": 0.0625,
+      "min": 55.19,
+      "max": 55.69
+    },
+    {
+      "position": 19,
+      "phrase": "باغچه",
+      "scores": [
+        51.48,
+        51.23,
+        51.73
+      ],
+      "mean": 51.48,
+      "variance": 0.041666666666666664,
+      "standardDeviation": 0.2041241452319315,
+      "sampleVariance": 0.0625,
+      "min": 51.23,
+      "max": 51.73
+    },
+    {
+      "position": 20,
+      "phrase": "باغستان",
+      "scores": [
+        56.18,
+        54.7,
+        56.68
+      ],
+      "mean": 55.85333333333333,
+      "variance": 0.7067555555555532,
+      "standardDeviation": 0.8406875493044685,
+      "sampleVariance": 1.0601333333333298,
+      "min": 54.7,
+      "max": 56.68
+    },
+    {
+      "position": 21,
+      "phrase": "باغ انگور",
+      "scores": [
+        55.44,
+        55.19,
+        55.69
+      ],
+      "mean": 55.44,
+      "variance": 0.041666666666666664,
+      "standardDeviation": 0.2041241452319315,
+      "sampleVariance": 0.0625,
+      "min": 55.19,
+      "max": 55.69
+    },
+    {
+      "position": 22,
+      "phrase": "باغ پرتقال",
+      "scores": [
+        57.17,
+        58.16,
+        55.69
+      ],
+      "mean": 57.00666666666666,
+      "variance": 1.030155555555555,
+      "standardDeviation": 1.0149657903375635,
+      "sampleVariance": 1.5452333333333326,
+      "min": 55.69,
+      "max": 58.16
+    },
+    {
+      "position": 23,
+      "phrase": "دیوار باغ",
+      "scores": [
+        44.06,
+        45.05,
+        42.08
+      ],
+      "mean": 43.73,
+      "variance": 1.5245999999999997,
+      "standardDeviation": 1.2347469376354006,
+      "sampleVariance": 2.2868999999999997,
+      "min": 42.08,
+      "max": 45.05
+    },
+    {
+      "position": 24,
+      "phrase": "ویلا",
+      "scores": [
+        14.36,
+        13.12,
+        16.09
+      ],
+      "mean": 14.523333333333332,
+      "variance": 1.4834888888888897,
+      "standardDeviation": 1.2179855864865108,
+      "sampleVariance": 2.2252333333333345,
+      "min": 13.12,
+      "max": 16.09
+    },
+    {
+      "position": 25,
+      "phrase": "نگهبان",
+      "scores": [
+        21.04,
+        22.03,
+        20.05
+      ],
+      "mean": 21.040000000000003,
+      "variance": 0.6534000000000003,
+      "standardDeviation": 0.808331615118449,
+      "sampleVariance": 0.9801000000000004,
+      "min": 20.05,
+      "max": 22.03
+    }
+  ],
+  "comparison": {
+    "garden": {
+      "position": 17,
+      "phrase": "باغ",
+      "scores": [
+        57.42,
+        53.21,
+        53.21
+      ],
+      "mean": 54.61333333333334,
+      "variance": 3.9386888888888905,
+      "standardDeviation": 1.9846130325302438,
+      "sampleVariance": 5.908033333333336,
+      "min": 53.21,
+      "max": 57.42
+    },
+    "fruit": {
+      "position": 18,
+      "phrase": "باغ میوه",
+      "scores": [
+        55.19,
+        55.69,
+        55.44
+      ],
+      "mean": 55.44,
+      "variance": 0.041666666666666664,
+      "standardDeviation": 0.2041241452319315,
+      "sampleVariance": 0.0625,
+      "min": 55.19,
+      "max": 55.69
+    },
+    "fruitMinusGarden": {
+      "scores": [
+        -2.23,
+        2.48,
+        2.23
+      ],
+      "mean": 0.8266666666666667,
+      "variance": 4.682022222222223,
+      "standardDeviation": 2.1637981010764897,
+      "sampleVariance": 7.023033333333334,
+      "min": -2.23,
+      "max": 2.48
+    },
+    "fruitHigher": 2,
+    "equal": 0,
+    "fruitLower": 1
+  }
+}

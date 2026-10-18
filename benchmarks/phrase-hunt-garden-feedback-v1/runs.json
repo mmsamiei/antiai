@@ -1,0 +1,522 @@
+[
+  {
+    "repeat": 1,
+    "variant": "previous_history",
+    "score": 50.99,
+    "answer": {
+      "type": "score",
+      "score": 2.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.89,
+        "3": 0.07,
+        "4": 0.01
+      },
+      "confidence": 0.9
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 1,
+    "variant": "with_fruit_history",
+    "score": 51.48,
+    "answer": {
+      "type": "score",
+      "score": 2.08,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.02,
+        "2": 0.88,
+        "3": 0.09,
+        "4": 0.01
+      },
+      "confidence": 0.89
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 2,
+    "variant": "with_fruit_history",
+    "score": 50.99,
+    "answer": {
+      "type": "score",
+      "score": 2.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.88,
+        "3": 0.08,
+        "4": 0.01
+      },
+      "confidence": 0.89
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 2,
+    "variant": "previous_history",
+    "score": 50.49,
+    "answer": {
+      "type": "score",
+      "score": 2.04,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.91,
+        "3": 0.05,
+        "4": 0.01
+      },
+      "confidence": 0.92
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 3,
+    "variant": "previous_history",
+    "score": 50.99,
+    "answer": {
+      "type": "score",
+      "score": 2.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.02,
+        "2": 0.9,
+        "3": 0.07,
+        "4": 0.01
+      },
+      "confidence": 0.91
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 3,
+    "variant": "with_fruit_history",
+    "score": 50.49,
+    "answer": {
+      "type": "score",
+      "score": 2.04,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.9,
+        "3": 0.06,
+        "4": 0.01
+      },
+      "confidence": 0.91
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 4,
+    "variant": "with_fruit_history",
+    "score": 50.99,
+    "answer": {
+      "type": "score",
+      "score": 2.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.02,
+        "2": 0.9,
+        "3": 0.07,
+        "4": 0.01
+      },
+      "confidence": 0.91
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 4,
+    "variant": "previous_history",
+    "score": 50.99,
+    "answer": {
+      "type": "score",
+      "score": 2.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.89,
+        "3": 0.07,
+        "4": 0.01
+      },
+      "confidence": 0.9
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 5,
+    "variant": "previous_history",
+    "score": 50.24,
+    "answer": {
+      "type": "score",
+      "score": 2.03,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.91,
+        "3": 0.05,
+        "4": 0.01
+      },
+      "confidence": 0.92
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 5,
+    "variant": "with_fruit_history",
+    "score": 51.23,
+    "answer": {
+      "type": "score",
+      "score": 2.07,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.88,
+        "3": 0.08,
+        "4": 0.01
+      },
+      "confidence": 0.89
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 6,
+    "variant": "with_fruit_history",
+    "score": 50.74,
+    "answer": {
+      "type": "score",
+      "score": 2.05,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.04,
+        "2": 0.88,
+        "3": 0.07,
+        "4": 0.01
+      },
+      "confidence": 0.89
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 6,
+    "variant": "previous_history",
+    "score": 51.23,
+    "answer": {
+      "type": "score",
+      "score": 2.07,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.88,
+        "3": 0.08,
+        "4": 0.01
+      },
+      "confidence": 0.89
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 7,
+    "variant": "previous_history",
+    "score": 50.74,
+    "answer": {
+      "type": "score",
+      "score": 2.05,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.9,
+        "3": 0.06,
+        "4": 0.01
+      },
+      "confidence": 0.91
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 7,
+    "variant": "with_fruit_history",
+    "score": 51.23,
+    "answer": {
+      "type": "score",
+      "score": 2.07,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.02,
+        "2": 0.9,
+        "3": 0.07,
+        "4": 0.01
+      },
+      "confidence": 0.91
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 8,
+    "variant": "with_fruit_history",
+    "score": 50.99,
+    "answer": {
+      "type": "score",
+      "score": 2.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.88,
+        "3": 0.08,
+        "4": 0.01
+      },
+      "confidence": 0.89
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 8,
+    "variant": "previous_history",
+    "score": 50.99,
+    "answer": {
+      "type": "score",
+      "score": 2.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.88,
+        "3": 0.08,
+        "4": 0.01
+      },
+      "confidence": 0.89
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 9,
+    "variant": "previous_history",
+    "score": 51.48,
+    "answer": {
+      "type": "score",
+      "score": 2.08,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.02,
+        "2": 0.89,
+        "3": 0.08,
+        "4": 0.01
+      },
+      "confidence": 0.9
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 9,
+    "variant": "with_fruit_history",
+    "score": 51.23,
+    "answer": {
+      "type": "score",
+      "score": 2.07,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.88,
+        "3": 0.08,
+        "4": 0.01
+      },
+      "confidence": 0.89
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 10,
+    "variant": "with_fruit_history",
+    "score": 50.24,
+    "answer": {
+      "type": "score",
+      "score": 2.03,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.91,
+        "3": 0.05,
+        "4": 0.01
+      },
+      "confidence": 0.92
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  },
+  {
+    "repeat": 10,
+    "variant": "previous_history",
+    "score": 50.99,
+    "answer": {
+      "type": "score",
+      "score": 2.06,
+      "legend": {
+        "0": "بی‌ارتباط",
+        "1": "ارتباط ضعیف",
+        "2": "بخشی از مفهوم درست",
+        "3": "بیشتر مفهوم درست",
+        "4": "تقریباً همان معنا"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.03,
+        "2": 0.89,
+        "3": 0.07,
+        "4": 0.01
+      },
+      "confidence": 0.9
+    },
+    "servedModel": "typesafe/jev-1.13-20260917",
+    "attempt": 1
+  }
+]

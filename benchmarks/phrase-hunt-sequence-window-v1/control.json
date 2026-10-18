@@ -1,0 +1,927 @@
+[
+  {
+    "position": 1,
+    "phrase": "جاندار",
+    "score": 6.19,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.25,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.81,
+            "1": 0.15,
+            "2": 0.03,
+            "3": 0,
+            "4": 0.01
+          },
+          "confidence": 0.79
+        }
+      },
+      "usage": {
+        "input_tokens": 581,
+        "output_tokens": 17,
+        "cost": 0.000024402
+      },
+      "id": "gen-dec-1792344204-V4ReZaxWjQ3mMc2UPROQ",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 1958
+  },
+  {
+    "position": 2,
+    "phrase": "اشیا",
+    "score": 6.93,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.28,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.76,
+            "1": 0.2,
+            "2": 0.04,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.77
+        }
+      },
+      "usage": {
+        "input_tokens": 579,
+        "output_tokens": 17,
+        "cost": 0.000024318
+      },
+      "id": "gen-dec-1792344205-GN9ni8f5olYUayGI9Hwb",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 336
+  },
+  {
+    "position": 3,
+    "phrase": "مفهوم",
+    "score": 17.33,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.7,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.45,
+            "1": 0.42,
+            "2": 0.11,
+            "3": 0.01,
+            "4": 0.01
+          },
+          "confidence": 0.41
+        }
+      },
+      "usage": {
+        "input_tokens": 580,
+        "output_tokens": 17,
+        "cost": 0.00002436
+      },
+      "id": "gen-dec-1792344205-SGezbqFbaP974BCFPMM8",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 615
+  },
+  {
+    "position": 4,
+    "phrase": "هنر",
+    "score": 9.41,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.38,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.7,
+            "1": 0.26,
+            "2": 0.04,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.72
+        }
+      },
+      "usage": {
+        "input_tokens": 578,
+        "output_tokens": 17,
+        "cost": 0.000024276
+      },
+      "id": "gen-dec-1792344206-vlsx5E0pwQhBcsPY5PSL",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 372
+  },
+  {
+    "position": 5,
+    "phrase": "فناوری",
+    "score": 2.97,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.12,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.9,
+            "1": 0.09,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.91
+        }
+      },
+      "usage": {
+        "input_tokens": 581,
+        "output_tokens": 17,
+        "cost": 0.000024402
+      },
+      "id": "gen-dec-1792344206-8fTMWtObsMRevJHL1ZDU",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 605
+  },
+  {
+    "position": 6,
+    "phrase": "کشاورزی",
+    "score": 22.77,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.92,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.25,
+            "1": 0.59,
+            "2": 0.16,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.66
+        }
+      },
+      "usage": {
+        "input_tokens": 582,
+        "output_tokens": 17,
+        "cost": 0.000024444
+      },
+      "id": "gen-dec-1792344207-8HGI6q0quZZwrN4JLAQK",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 367
+  },
+  {
+    "position": 7,
+    "phrase": "خوراکی",
+    "score": 15.84,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.64,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.47000000000000003,
+            "1": 0.44,
+            "2": 0.09,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.48
+        }
+      },
+      "usage": {
+        "input_tokens": 581,
+        "output_tokens": 17,
+        "cost": 0.000024402
+      },
+      "id": "gen-dec-1792344207-XEtHJyWxTkRycOuPu3ek",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 630
+  },
+  {
+    "position": 8,
+    "phrase": "میوه",
+    "score": 32.92,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.33,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.07,
+            "1": 0.54,
+            "2": 0.39,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.62
+        }
+      },
+      "usage": {
+        "input_tokens": 579,
+        "output_tokens": 17,
+        "cost": 0.000024318
+      },
+      "id": "gen-dec-1792344208-yBowCuEV5rzItsmg8kMl",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 295
+  },
+  {
+    "position": 9,
+    "phrase": "درخت",
+    "score": 34.65,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.4,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.07,
+            "1": 0.47,
+            "2": 0.46,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.56
+        }
+      },
+      "usage": {
+        "input_tokens": 579,
+        "output_tokens": 17,
+        "cost": 0.000024318
+      },
+      "id": "gen-dec-1792344208-Rhple3uTQDyoMnSgWtUn",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 704
+  },
+  {
+    "position": 10,
+    "phrase": "گلابی",
+    "score": 11.39,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.46,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.58,
+            "1": 0.38,
+            "2": 0.04,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.62
+        }
+      },
+      "usage": {
+        "input_tokens": 580,
+        "output_tokens": 17,
+        "cost": 0.00002436
+      },
+      "id": "gen-dec-1792344209-SHoAC4uQWQLevPXUyGHD",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 322
+  },
+  {
+    "position": 11,
+    "phrase": "برگ",
+    "score": 16.58,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.67,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.44,
+            "1": 0.45,
+            "2": 0.11,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.54
+        }
+      },
+      "usage": {
+        "input_tokens": 578,
+        "output_tokens": 17,
+        "cost": 0.000024276
+      },
+      "id": "gen-dec-1792344209-GPNVt7PXMKXEzY59nEDL",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 653
+  },
+  {
+    "position": 12,
+    "phrase": "ریشه",
+    "score": 16.83,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.68,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.44,
+            "1": 0.45,
+            "2": 0.11,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.54
+        }
+      },
+      "usage": {
+        "input_tokens": 579,
+        "output_tokens": 17,
+        "cost": 0.000024318
+      },
+      "id": "gen-dec-1792344210-DUTWYh0i0haxoOVeIyoM",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 306
+  },
+  {
+    "position": 13,
+    "phrase": "خاک",
+    "score": 18.07,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.73,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.4,
+            "1": 0.48,
+            "2": 0.12,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.57
+        }
+      },
+      "usage": {
+        "input_tokens": 578,
+        "output_tokens": 17,
+        "cost": 0.000024276
+      },
+      "id": "gen-dec-1792344210-VxNqzYJmxYBdzQzmYprX",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 715
+  },
+  {
+    "position": 14,
+    "phrase": "سیب",
+    "score": 18.56,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.75,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.33,
+            "1": 0.6,
+            "2": 0.07,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.67
+        }
+      },
+      "usage": {
+        "input_tokens": 578,
+        "output_tokens": 17,
+        "cost": 0.000024276
+      },
+      "id": "gen-dec-1792344211-OCK3blmABxatOs424LEK",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 325
+  },
+  {
+    "position": 15,
+    "phrase": "کریسمس",
+    "score": 4.46,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.18,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.85,
+            "1": 0.12,
+            "2": 0.02,
+            "3": 0,
+            "4": 0.01
+          },
+          "confidence": 0.83
+        }
+      },
+      "usage": {
+        "input_tokens": 581,
+        "output_tokens": 17,
+        "cost": 0.000024402
+      },
+      "id": "gen-dec-1792344211-KRk2VqdA3xptdZxLsSCI",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 663
+  },
+  {
+    "position": 16,
+    "phrase": "کاج",
+    "score": 5.69,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.23,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.8,
+            "1": 0.17,
+            "2": 0.03,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.81
+        }
+      },
+      "usage": {
+        "input_tokens": 578,
+        "output_tokens": 17,
+        "cost": 0.000024276
+      },
+      "id": "gen-dec-1792344212-61AOTZMEAit4Ff9ygp1W",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 325
+  },
+  {
+    "position": 17,
+    "phrase": "باغ",
+    "score": 49.01,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.98,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.96,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.97
+        }
+      },
+      "usage": {
+        "input_tokens": 578,
+        "output_tokens": 17,
+        "cost": 0.000024276
+      },
+      "id": "gen-dec-1792344212-kASBAkMDHMX1eUgwvDkm",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 663
+  },
+  {
+    "position": 18,
+    "phrase": "باغ میوه",
+    "score": 45.79,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.85,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.16,
+            "2": 0.83,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.86
+        }
+      },
+      "usage": {
+        "input_tokens": 583,
+        "output_tokens": 17,
+        "cost": 0.000024486
+      },
+      "id": "gen-dec-1792344213-7Fm3XwWR2Gt9GAdeLYJU",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 283
+  },
+  {
+    "position": 19,
+    "phrase": "باغچه",
+    "score": 39.6,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.6,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.37,
+            "2": 0.6,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.65
+        }
+      },
+      "usage": {
+        "input_tokens": 580,
+        "output_tokens": 17,
+        "cost": 0.00002436
+      },
+      "id": "gen-dec-1792344213-CxFLg2I4x7jxVB0fG7wB",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 716
+  },
+  {
+    "position": 20,
+    "phrase": "باغستان",
+    "score": 38.36,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.55,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.04,
+            "1": 0.39,
+            "2": 0.56,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.6
+        }
+      },
+      "usage": {
+        "input_tokens": 582,
+        "output_tokens": 17,
+        "cost": 0.000024444
+      },
+      "id": "gen-dec-1792344214-289i7t0xzHKbcjEXFMUe",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 293
+  },
+  {
+    "position": 21,
+    "phrase": "باغ انگور",
+    "score": 40.1,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.62,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.37,
+            "2": 0.61,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.67
+        }
+      },
+      "usage": {
+        "input_tokens": 583,
+        "output_tokens": 17,
+        "cost": 0.000024486
+      },
+      "id": "gen-dec-1792344214-WxHFkjiN3AJ46ssytQ3Z",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 701
+  },
+  {
+    "position": 22,
+    "phrase": "باغ پرتقال",
+    "score": 37.62,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.52,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.45,
+            "2": 0.52,
+            "3": 0.01,
+            "4": 0
+          },
+          "confidence": 0.58
+        }
+      },
+      "usage": {
+        "input_tokens": 585,
+        "output_tokens": 17,
+        "cost": 0.00002457
+      },
+      "id": "gen-dec-1792344215-izQTh3BHqyy61yTmHYpr",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 306
+  },
+  {
+    "position": 23,
+    "phrase": "دیوار باغ",
+    "score": 36.63,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 1.48,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.46,
+            "2": 0.51,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.57
+        }
+      },
+      "usage": {
+        "input_tokens": 583,
+        "output_tokens": 17,
+        "cost": 0.000024486
+      },
+      "id": "gen-dec-1792344215-XbxF0SBGbZjJ2YV4DBrA",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 685
+  },
+  {
+    "position": 24,
+    "phrase": "ویلا",
+    "score": 10.4,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.42,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.67,
+            "1": 0.27,
+            "2": 0.06,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.68
+        }
+      },
+      "usage": {
+        "input_tokens": 579,
+        "output_tokens": 17,
+        "cost": 0.000024318
+      },
+      "id": "gen-dec-1792344216-Ts5WXPeoo3j3F1Dqh4a9",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 336
+  },
+  {
+    "position": 25,
+    "phrase": "نگهبان",
+    "score": 12.62,
+    "response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "score": {
+          "type": "score",
+          "score": 0.51,
+          "legend": {
+            "0": "بی‌ارتباط",
+            "1": "ارتباط ضعیف",
+            "2": "بخشی از مفهوم درست",
+            "3": "بیشتر مفهوم درست",
+            "4": "تقریباً همان معنا"
+          },
+          "probabilities": {
+            "0": 0.59,
+            "1": 0.33,
+            "2": 0.08,
+            "3": 0,
+            "4": 0
+          },
+          "confidence": 0.59
+        }
+      },
+      "usage": {
+        "input_tokens": 581,
+        "output_tokens": 17,
+        "cost": 0.000024402
+      },
+      "id": "gen-dec-1792344216-fOpzFIcSl6Nwyyrob14R",
+      "provider": "TypeSafe"
+    },
+    "elapsedMs": 667
+  }
+]

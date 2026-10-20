@@ -16,6 +16,7 @@ import { useDuelInvitations, InvitationBanner } from "./duel-invitation-manager"
 import { avatarImageUrl } from "@/lib/avatar-url";
 import { BackHandlersContext, useBackHandler, useBrowserBack } from "./back-navigation";
 import { sessionRequest, setClientSessionToken } from "@/lib/client-session";
+import { authenticateTelegram, TelegramLoginError } from "@/lib/telegram-client";
 import { useOnlineUsers } from "@/lib/use-online-users";
 import { hiddenPhraseGuesses, normalizePersian, orderPhraseGuesses } from "@/lib/phrase-hunt-view";
 
@@ -205,6 +206,7 @@ export default function AntiAiGamesApp() {
   const [user, setUser] = useState<any>(null);
   const [game, setGame] = useState<Game | null>(null);
   const [loading, setLoading] = useState(true);
+  const [loginAttempt, setLoginAttempt] = useState(0);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [onlineCount, setOnlineCount] = useState<number | null>(null);
@@ -280,27 +282,23 @@ export default function AntiAiGamesApp() {
   }, [screen, profileUserId, back]);
 
   useEffect(() => {
-    const tg = telegram();
-    tg?.ready();
-    tg?.expand();
-    tg?.setHeaderColor?.("#080b17");
-    tg?.setBackgroundColor?.("#080b17");
-    const initData = tg?.initData;
-    const auth = initData
-      ? jsonFetch<{ user: any; session: string }>("/api/auth/telegram", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ initData }),
-        })
-      : jsonFetch<{ user: any; session: string }>("/api/auth/demo", { method: "POST" });
-    auth
+    const controller = new AbortController();
+    setLoading(true);
+    setError("");
+    authenticateTelegram(controller.signal)
       .then(({ user, session }) => {
+        if (controller.signal.aborted) return;
         setClientSessionToken(session);
         setUser(user);
       })
-      .catch((cause) => setError(cause.message))
-      .finally(() => setLoading(false));
-  }, []);
+      .catch((cause) => {
+        if (controller.signal.aborted) return;
+        console.warn("telegram_login_failed", cause instanceof TelegramLoginError ? cause.code : "UNEXPECTED_ERROR");
+        setError(cause instanceof TelegramLoginError ? cause.message : "ورود به بازی انجام نشد. دوباره تلاش کن.");
+      })
+      .finally(() => { if (!controller.signal.aborted) setLoading(false); });
+    return () => controller.abort();
+  }, [loginAttempt]);
 
   useEffect(() => {
     if (!user) return;
@@ -374,8 +372,8 @@ export default function AntiAiGamesApp() {
       <div className="loading-screen">
         <div className="brand-mark">!</div>
         <strong>ورود به بازی کامل نشد</strong>
-        <span>{error || "مینی‌اپ را از داخل تلگرام باز کن و دوباره تلاش کن."}</span>
-        <button className="primary" onClick={() => location.reload()}>تلاش دوباره</button>
+        <span>{error || "ورود به بازی انجام نشد. دوباره تلاش کن."}</span>
+        <button className="primary" onClick={() => setLoginAttempt(attempt => attempt + 1)}>تلاش دوباره</button>
       </div>
     );
 

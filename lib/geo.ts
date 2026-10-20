@@ -18,21 +18,8 @@ export type GameItem = GeoItem;
 
 export const DATASET_VERSION = "2026-10-06-iran-admin-v3.1.2";
 
-export function normalizePersian(value: string): string {
-  return value
-    .normalize("NFKC")
-    .toLocaleLowerCase("fa")
-    .replaceAll("ي", "ی")
-    .replaceAll("ى", "ی")
-    .replaceAll("ك", "ک")
-    .replace(/[أإٱ]/g, "ا")
-    .replaceAll("ة", "ه")
-    .replace(/[\u064b-\u065f\u0670]/g, "")
-    .replace(/[ـ‌]/g, " ")
-    .replace(/[^\p{L}\p{N}\s]/gu, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
+export { normalizePersian } from "./normalize-persian";
+import { normalizePersian } from "./normalize-persian";
 
 export function datasetFor(type: GameType): GameItem[] {
   if (type === "IRAN_CITY") return iranCities;

@@ -4,6 +4,7 @@ import { currentUserId } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { parseLeaderboardGameType } from "@/lib/game-service";
 import { phraseWeekStart } from "@/lib/phrase-hunt-schedule";
+import { phraseChallengeLeaderboard } from "@/lib/phrase-hunt-leaderboard";
 import { readSemantrisState } from "@/lib/semantris";
 
 export const dynamic = "force-dynamic";
@@ -32,6 +33,13 @@ export async function GET(request: Request) {
     ...(type ? { type } : {}),
     ...(period === "week" ? { finishedAt: { gte: startOfWeekUtc() } } : {})
   };
+
+  if (type === "PHRASE_HUNT" && params.get("period") === "challenge") {
+    const result = await phraseChallengeLeaderboard(userId, params.get("challengeId"));
+    return NextResponse.json(result || { error: "Challenge not found" }, {
+      status: result ? 200 : 404, headers: { "Cache-Control": "no-store" },
+    });
+  }
 
   if (type === "PHRASE_HUNT") {
     const totals = await prisma.$queryRaw<{ userId: string; totalScore: number; games: number }[]>(Prisma.sql`

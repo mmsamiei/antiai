@@ -1,8 +1,9 @@
 import { afterEach, beforeEach, expect, it, vi } from "vitest";
 import { phraseWeekStart } from "@/lib/phrase-hunt-schedule";
-const mocks = vi.hoisted(() => ({ user: vi.fn(), query: vi.fn(), users: vi.fn() }));
+const mocks = vi.hoisted(() => ({ user: vi.fn(), query: vi.fn(), users: vi.fn(), challengeBoard: vi.fn() }));
 vi.mock("@/lib/auth", () => ({ currentUserId: mocks.user }));
 vi.mock("@/lib/prisma", () => ({ prisma: { $queryRaw: mocks.query, user: { findMany: mocks.users } } }));
+vi.mock("@/lib/phrase-hunt-leaderboard", () => ({ phraseChallengeLeaderboard: mocks.challengeBoard }));
 import { GET } from "./route";
 beforeEach(() => {
   vi.clearAllMocks(); vi.useFakeTimers(); vi.setSystemTime(new Date("2026-10-16T12:00Z"));
@@ -25,4 +26,16 @@ it("uses a single total-score criterion even when skill mode is requested", asyn
 it("filters the weekly board by the Tehran Saturday challenge start", async () => {
   await GET(new Request("https://test/api/leaderboard?type=PHRASE_HUNT&period=week"));
   expect(mocks.query.mock.calls[0][0].values).toContainEqual(phraseWeekStart());
+});
+
+it("passes challenge selection with authenticated identity", async () => {
+  mocks.challengeBoard.mockResolvedValue({ rows: [], me: null, period: "challenge" });
+  const r = await GET(new Request("https://test/api/leaderboard?type=PHRASE_HUNT&period=challenge&challengeId=old"));
+  expect(r.status).toBe(200);
+  expect(mocks.challengeBoard).toHaveBeenCalledWith("owner", "old");
+});
+it("returns 404 for unavailable challenge", async () => {
+  mocks.challengeBoard.mockResolvedValue(null);
+  const r = await GET(new Request("https://test/api/leaderboard?type=PHRASE_HUNT&period=challenge&challengeId=future"));
+  expect(r.status).toBe(404);
 });

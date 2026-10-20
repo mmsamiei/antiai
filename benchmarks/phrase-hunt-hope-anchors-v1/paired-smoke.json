@@ -1,0 +1,176 @@
+{
+  "target": "امید واهی",
+  "model": "typesafe/jev-1.13",
+  "startedAt": "2026-10-19T21:20:51.481Z",
+  "method": "12 paired query comparisons, prompt/model identical, alternated request order. Anchored request includes only the 16 fixed examples; plain request has empty previous_guesses. Reference labels are editorial and never sent. Direct API only; no game cache/database.",
+  "anchors": [
+    {
+      "guess": "امید واهی",
+      "score_out_of_100": 100
+    },
+    {
+      "guess": "امید بیهوده",
+      "score_out_of_100": 96
+    },
+    {
+      "guess": "امید پوچ",
+      "score_out_of_100": 95
+    },
+    {
+      "guess": "امید بی‌اساس",
+      "score_out_of_100": 94
+    },
+    {
+      "guess": "امید بی‌پایه",
+      "score_out_of_100": 94
+    },
+    {
+      "guess": "دلخوشی واهی",
+      "score_out_of_100": 91
+    },
+    {
+      "guess": "دلخوشی بی‌پایه",
+      "score_out_of_100": 89
+    },
+    {
+      "guess": "آرزوی محال",
+      "score_out_of_100": 78
+    },
+    {
+      "guess": "خیال خام",
+      "score_out_of_100": 76
+    },
+    {
+      "guess": "سراب",
+      "score_out_of_100": 72
+    },
+    {
+      "guess": "امید",
+      "score_out_of_100": 70
+    },
+    {
+      "guess": "آرزو",
+      "score_out_of_100": 55
+    },
+    {
+      "guess": "ناامیدی",
+      "score_out_of_100": 38
+    },
+    {
+      "guess": "فریب",
+      "score_out_of_100": 27
+    },
+    {
+      "guess": "سامورایی",
+      "score_out_of_100": 0
+    },
+    {
+      "guess": "باغ انار",
+      "score_out_of_100": 0
+    }
+  ],
+  "results": [
+    {
+      "phrase": "امید کاذب",
+      "reference": 97,
+      "band": "near",
+      "plain": 97.76,
+      "anchored": 96.53,
+      "change": -1.23
+    },
+    {
+      "phrase": "امید بی‌پایه",
+      "reference": 94,
+      "band": "near",
+      "plain": 92.32,
+      "anchored": 96.28,
+      "change": 3.96
+    },
+    {
+      "phrase": "امید",
+      "reference": 70,
+      "band": "partial",
+      "plain": 53.96,
+      "anchored": 56.18,
+      "change": 2.22
+    },
+    {
+      "phrase": "سراب",
+      "reference": 72,
+      "band": "partial",
+      "plain": 82.42,
+      "anchored": 64.85,
+      "change": -17.57
+    },
+    {
+      "phrase": "خیال خام",
+      "reference": 76,
+      "band": "near",
+      "plain": 75.49,
+      "anchored": 64.85,
+      "change": -10.64
+    },
+    {
+      "phrase": "آرزوی محال",
+      "reference": 78,
+      "band": "near",
+      "plain": 83.41,
+      "anchored": 69.3,
+      "change": -14.11
+    },
+    {
+      "phrase": "دلخوشی",
+      "reference": 63,
+      "band": "partial",
+      "plain": 61.63,
+      "anchored": 59.9,
+      "change": -1.73
+    },
+    {
+      "phrase": "ناامیدی",
+      "reference": 38,
+      "band": "related",
+      "plain": 40.1,
+      "anchored": 36.14,
+      "change": -3.96
+    },
+    {
+      "phrase": "فریب",
+      "reference": 27,
+      "band": "weak",
+      "plain": 52.47,
+      "anchored": 30.2,
+      "change": -22.27
+    },
+    {
+      "phrase": "شکست",
+      "reference": 18,
+      "band": "weak",
+      "plain": 24.75,
+      "anchored": 27.72,
+      "change": 2.97
+    },
+    {
+      "phrase": "آینده",
+      "reference": 15,
+      "band": "far",
+      "plain": 34.15,
+      "anchored": 31.93,
+      "change": -2.22
+    },
+    {
+      "phrase": "سامورایی",
+      "reference": 0,
+      "band": "unrelated",
+      "plain": 1.24,
+      "anchored": 2.72,
+      "change": 1.48
+    }
+  ],
+  "summary": {
+    "n": 12,
+    "plainMAE": 7.58,
+    "anchoredMAE": 6.76,
+    "meanAbsoluteChange": 7.03
+  }
+}

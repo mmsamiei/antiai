@@ -1,0 +1,1802 @@
+[
+  {
+    "position": 1,
+    "phrase": "آخرین سامورایی در ژاپن",
+    "reference": 96,
+    "band": "near",
+    "score": 93.8,
+    "rawScore": 3.79,
+    "historyCount": 0
+  },
+  {
+    "position": 2,
+    "phrase": "آخرین جنگجوی سامورایی",
+    "reference": 96,
+    "band": "near",
+    "score": 94.3,
+    "rawScore": 3.81,
+    "historyCount": 1
+  },
+  {
+    "position": 3,
+    "phrase": "حماسه سامورایی",
+    "reference": 55,
+    "band": "related",
+    "score": 44.55,
+    "rawScore": 1.8,
+    "historyCount": 2
+  },
+  {
+    "position": 4,
+    "phrase": "مدرنیته در برابر سنت",
+    "reference": 43,
+    "band": "related",
+    "score": 29.7,
+    "rawScore": 1.2,
+    "historyCount": 3
+  },
+  {
+    "position": 5,
+    "phrase": "باغ ژاپنی",
+    "reference": 12,
+    "band": "far",
+    "score": 10.15,
+    "rawScore": 0.41,
+    "historyCount": 4
+  },
+  {
+    "position": 6,
+    "phrase": "کاپیتان آلگرن",
+    "reference": 55,
+    "band": "related",
+    "score": 34.15,
+    "rawScore": 1.38,
+    "historyCount": 5
+  },
+  {
+    "position": 7,
+    "phrase": "آخرین جنگجوی یک دوران",
+    "reference": 78,
+    "band": "near",
+    "score": 77.96,
+    "rawScore": 3.15,
+    "historyCount": 6
+  },
+  {
+    "position": 8,
+    "phrase": "شمشیر در برابر تفنگ",
+    "reference": 41,
+    "band": "related",
+    "score": 58.41,
+    "rawScore": 2.36,
+    "historyCount": 7
+  },
+  {
+    "position": 9,
+    "phrase": "سرنوشت آخرین سامورایی",
+    "reference": 90,
+    "band": "near",
+    "score": 89.35,
+    "rawScore": 3.61,
+    "historyCount": 8
+  },
+  {
+    "position": 10,
+    "phrase": "ژاپن",
+    "reference": 31,
+    "band": "related",
+    "score": 39.6,
+    "rawScore": 1.6,
+    "historyCount": 9
+  },
+  {
+    "position": 11,
+    "phrase": "بوشیدو",
+    "reference": 54,
+    "band": "related",
+    "score": 35.39,
+    "rawScore": 1.43,
+    "historyCount": 10
+  },
+  {
+    "position": 12,
+    "phrase": "جنگ داخلی ژاپن",
+    "reference": 43,
+    "band": "related",
+    "score": 34.9,
+    "rawScore": 1.41,
+    "historyCount": 11
+  },
+  {
+    "position": 13,
+    "phrase": "فیلم حماسی سامورایی",
+    "reference": 80,
+    "band": "near",
+    "score": 54.95,
+    "rawScore": 2.22,
+    "historyCount": 12
+  },
+  {
+    "position": 14,
+    "phrase": "سامورایی فضایی",
+    "reference": 24,
+    "band": "related",
+    "score": 33.66,
+    "rawScore": 1.36,
+    "historyCount": 13
+  },
+  {
+    "position": 15,
+    "phrase": "آخرین نگهبان",
+    "reference": 42,
+    "band": "related",
+    "score": 61.13,
+    "rawScore": 2.47,
+    "historyCount": 14
+  },
+  {
+    "position": 16,
+    "phrase": "تقابل سامورایی‌ها و ارتش مدرن",
+    "reference": 74,
+    "band": "related",
+    "score": 74,
+    "rawScore": 2.99,
+    "historyCount": 15
+  },
+  {
+    "position": 17,
+    "phrase": "سامورایی که تسلیم نمی‌شود",
+    "reference": 72,
+    "band": "related",
+    "score": 73.51,
+    "rawScore": 2.97,
+    "historyCount": 16
+  },
+  {
+    "position": 18,
+    "phrase": "شجاعت",
+    "reference": 24,
+    "band": "related",
+    "score": 24.26,
+    "rawScore": 0.98,
+    "historyCount": 17
+  },
+  {
+    "position": 19,
+    "phrase": "واپسین سامورایی ژاپن",
+    "reference": 98,
+    "band": "near",
+    "score": 94.05,
+    "rawScore": 3.8,
+    "historyCount": 18
+  },
+  {
+    "position": 20,
+    "phrase": "فیلم سینمایی آخرین سامورایی",
+    "reference": 94,
+    "band": "near",
+    "score": 93.31,
+    "rawScore": 3.77,
+    "historyCount": 19
+  },
+  {
+    "position": 21,
+    "phrase": "آخرین سامورایی اثر ادوارد زویک",
+    "reference": 88,
+    "band": "near",
+    "score": 93.8,
+    "rawScore": 3.79,
+    "historyCount": 20
+  },
+  {
+    "position": 22,
+    "phrase": "آخرین جنگجوی سنتی ژاپن",
+    "reference": 82,
+    "band": "near",
+    "score": 91.33,
+    "rawScore": 3.69,
+    "historyCount": 21
+  },
+  {
+    "position": 23,
+    "phrase": "آخرین سامورایی تنها",
+    "reference": 94,
+    "band": "near",
+    "score": 86.87,
+    "rawScore": 3.51,
+    "historyCount": 22
+  },
+  {
+    "position": 24,
+    "phrase": "فیلم تاریخی ژاپنی درباره سامورایی‌ها",
+    "reference": 83,
+    "band": "near",
+    "score": 69.3,
+    "rawScore": 2.8,
+    "historyCount": 23
+  },
+  {
+    "position": 25,
+    "phrase": "نبرد سامورایی‌ها با ارتش ژاپن",
+    "reference": 72,
+    "band": "related",
+    "score": 61.38,
+    "rawScore": 2.48,
+    "historyCount": 24
+  },
+  {
+    "position": 26,
+    "phrase": "دوران ادو",
+    "reference": 34,
+    "band": "related",
+    "score": 35.15,
+    "rawScore": 1.42,
+    "historyCount": 25
+  },
+  {
+    "position": 27,
+    "phrase": "جنگجوی سامورایی",
+    "reference": 79,
+    "band": "related",
+    "score": 60.64,
+    "rawScore": 2.45,
+    "historyCount": 26
+  },
+  {
+    "position": 28,
+    "phrase": "آخرین سامورایی شمشیرزن",
+    "reference": 91,
+    "band": "near",
+    "score": 88.11,
+    "rawScore": 3.56,
+    "historyCount": 27
+  },
+  {
+    "position": 29,
+    "phrase": "جنگجوی تنها",
+    "reference": 52,
+    "band": "related",
+    "score": 46.28,
+    "rawScore": 1.87,
+    "historyCount": 28
+  },
+  {
+    "position": 30,
+    "phrase": "قهرمان",
+    "reference": 21,
+    "band": "related",
+    "score": 30.44,
+    "rawScore": 1.23,
+    "historyCount": 29
+  },
+  {
+    "position": 31,
+    "phrase": "آخرین روزگار سامورایی",
+    "reference": 82,
+    "band": "near",
+    "score": 89.84,
+    "rawScore": 3.63,
+    "historyCount": 30
+  },
+  {
+    "position": 32,
+    "phrase": "بازماندگی",
+    "reference": 29,
+    "band": "related",
+    "score": 40.84,
+    "rawScore": 1.65,
+    "historyCount": 31
+  },
+  {
+    "position": 33,
+    "phrase": "رونین",
+    "reference": 48,
+    "band": "related",
+    "score": 61.13,
+    "rawScore": 2.47,
+    "historyCount": 32
+  },
+  {
+    "position": 34,
+    "phrase": "دایمیو",
+    "reference": 34,
+    "band": "related",
+    "score": 25.25,
+    "rawScore": 1.02,
+    "historyCount": 33
+  },
+  {
+    "position": 35,
+    "phrase": "مبارزه با شمشیر",
+    "reference": 38,
+    "band": "related",
+    "score": 30.44,
+    "rawScore": 1.23,
+    "historyCount": 34
+  },
+  {
+    "position": 36,
+    "phrase": "جنگجوی ژاپنی",
+    "reference": 64,
+    "band": "related",
+    "score": 51.48,
+    "rawScore": 2.08,
+    "historyCount": 35
+  },
+  {
+    "position": 37,
+    "phrase": "جنگ",
+    "reference": 21,
+    "band": "related",
+    "score": 25.49,
+    "rawScore": 1.03,
+    "historyCount": 36
+  },
+  {
+    "position": 38,
+    "phrase": "دوران صنعتی",
+    "reference": 17,
+    "band": "far",
+    "score": 29.95,
+    "rawScore": 1.21,
+    "historyCount": 37
+  },
+  {
+    "position": 39,
+    "phrase": "انتقام",
+    "reference": 17,
+    "band": "far",
+    "score": 27.72,
+    "rawScore": 1.12,
+    "historyCount": 38
+  },
+  {
+    "position": 40,
+    "phrase": "تنهایی جنگجو",
+    "reference": 42,
+    "band": "related",
+    "score": 46.53,
+    "rawScore": 1.88,
+    "historyCount": 39
+  },
+  {
+    "position": 41,
+    "phrase": "فیلم اکشن",
+    "reference": 22,
+    "band": "related",
+    "score": 21.78,
+    "rawScore": 0.88,
+    "historyCount": 40
+  },
+  {
+    "position": 42,
+    "phrase": "نینجا",
+    "reference": 36,
+    "band": "related",
+    "score": 25.25,
+    "rawScore": 1.02,
+    "historyCount": 41
+  },
+  {
+    "position": 43,
+    "phrase": "شرافت",
+    "reference": 20,
+    "band": "related",
+    "score": 24.01,
+    "rawScore": 0.97,
+    "historyCount": 42
+  },
+  {
+    "position": 44,
+    "phrase": "نظامی‌گری",
+    "reference": 20,
+    "band": "related",
+    "score": 29.95,
+    "rawScore": 1.21,
+    "historyCount": 43
+  },
+  {
+    "position": 45,
+    "phrase": "استاد هنرهای رزمی",
+    "reference": 33,
+    "band": "related",
+    "score": 29.45,
+    "rawScore": 1.19,
+    "historyCount": 44
+  },
+  {
+    "position": 46,
+    "phrase": "ارتش ژاپن",
+    "reference": 27,
+    "band": "related",
+    "score": 30.2,
+    "rawScore": 1.22,
+    "historyCount": 45
+  },
+  {
+    "position": 47,
+    "phrase": "تام کروز",
+    "reference": 29,
+    "band": "related",
+    "score": 28.96,
+    "rawScore": 1.17,
+    "historyCount": 46
+  },
+  {
+    "position": 48,
+    "phrase": "ارتش سامورایی",
+    "reference": 64,
+    "band": "related",
+    "score": 37.87,
+    "rawScore": 1.53,
+    "historyCount": 47
+  },
+  {
+    "position": 49,
+    "phrase": "زره سامورایی",
+    "reference": 47,
+    "band": "related",
+    "score": 29.95,
+    "rawScore": 1.21,
+    "historyCount": 48
+  },
+  {
+    "position": 50,
+    "phrase": "کاتانا",
+    "reference": 53,
+    "band": "related",
+    "score": 29.7,
+    "rawScore": 1.2,
+    "historyCount": 49
+  },
+  {
+    "position": 51,
+    "phrase": "واپسین بازمانده سامورایی",
+    "reference": 95,
+    "band": "near",
+    "score": 90.59,
+    "rawScore": 3.66,
+    "historyCount": 50
+  },
+  {
+    "position": 52,
+    "phrase": "نیتن آلگرن",
+    "reference": 58,
+    "band": "related",
+    "score": 35.89,
+    "rawScore": 1.45,
+    "historyCount": 51
+  },
+  {
+    "position": 53,
+    "phrase": "سامورایی واپسین",
+    "reference": 98,
+    "band": "near",
+    "score": 95.29,
+    "rawScore": 3.85,
+    "historyCount": 52
+  },
+  {
+    "position": 54,
+    "phrase": "کیوتو",
+    "reference": 15,
+    "band": "far",
+    "score": 27.97,
+    "rawScore": 1.13,
+    "historyCount": 53
+  },
+  {
+    "position": 55,
+    "phrase": "آخرین جنگجوی ژاپنی",
+    "reference": 91,
+    "band": "near",
+    "score": 90.59,
+    "rawScore": 3.66,
+    "historyCount": 54
+  },
+  {
+    "position": 56,
+    "phrase": "آخرین سرباز",
+    "reference": 40,
+    "band": "related",
+    "score": 55.44,
+    "rawScore": 2.24,
+    "historyCount": 55
+  },
+  {
+    "position": 57,
+    "phrase": "شرافت سامورایی",
+    "reference": 63,
+    "band": "related",
+    "score": 34.9,
+    "rawScore": 1.41,
+    "historyCount": 56
+  },
+  {
+    "position": 58,
+    "phrase": "سامورایی آخر",
+    "reference": 97,
+    "band": "near",
+    "score": 96.03,
+    "rawScore": 3.88,
+    "historyCount": 57
+  },
+  {
+    "position": 59,
+    "phrase": "معبد ژاپنی",
+    "reference": 18,
+    "band": "far",
+    "score": 15.1,
+    "rawScore": 0.61,
+    "historyCount": 58
+  },
+  {
+    "position": 60,
+    "phrase": "ژاپن فئودالی",
+    "reference": 40,
+    "band": "related",
+    "score": 36.14,
+    "rawScore": 1.46,
+    "historyCount": 59
+  },
+  {
+    "position": 61,
+    "phrase": "واپسین مدافع راه سامورایی",
+    "reference": 82,
+    "band": "near",
+    "score": 83.66,
+    "rawScore": 3.38,
+    "historyCount": 60
+  },
+  {
+    "position": 62,
+    "phrase": "آخرین مدافع",
+    "reference": 47,
+    "band": "related",
+    "score": 61.38,
+    "rawScore": 2.48,
+    "historyCount": 61
+  },
+  {
+    "position": 63,
+    "phrase": "روح سامورایی",
+    "reference": 58,
+    "band": "related",
+    "score": 36.63,
+    "rawScore": 1.48,
+    "historyCount": 62
+  },
+  {
+    "position": 64,
+    "phrase": "سینمای ژاپن",
+    "reference": 24,
+    "band": "related",
+    "score": 30.2,
+    "rawScore": 1.22,
+    "historyCount": 63
+  },
+  {
+    "position": 65,
+    "phrase": "وفاداری تا آخرین نفس",
+    "reference": 53,
+    "band": "related",
+    "score": 38.86,
+    "rawScore": 1.57,
+    "historyCount": 64
+  },
+  {
+    "position": 66,
+    "phrase": "آخرین قهرمان",
+    "reference": 45,
+    "band": "related",
+    "score": 50.99,
+    "rawScore": 2.06,
+    "historyCount": 65
+  },
+  {
+    "position": 67,
+    "phrase": "شمشیرزنی ژاپنی",
+    "reference": 55,
+    "band": "related",
+    "score": 43.81,
+    "rawScore": 1.77,
+    "historyCount": 66
+  },
+  {
+    "position": 68,
+    "phrase": "کن واتانابه",
+    "reference": 31,
+    "band": "related",
+    "score": 33.17,
+    "rawScore": 1.34,
+    "historyCount": 67
+  },
+  {
+    "position": 69,
+    "phrase": "شمشیر کهنه سامورایی",
+    "reference": 47,
+    "band": "related",
+    "score": 47.77,
+    "rawScore": 1.93,
+    "historyCount": 68
+  },
+  {
+    "position": 70,
+    "phrase": "راه سامورایی",
+    "reference": 59,
+    "band": "related",
+    "score": 36.63,
+    "rawScore": 1.48,
+    "historyCount": 69
+  },
+  {
+    "position": 71,
+    "phrase": "شمشیر",
+    "reference": 28,
+    "band": "related",
+    "score": 25.74,
+    "rawScore": 1.04,
+    "historyCount": 70
+  },
+  {
+    "position": 72,
+    "phrase": "آخرین سامورایی‌ها",
+    "reference": 97,
+    "band": "near",
+    "score": 95.29,
+    "rawScore": 3.85,
+    "historyCount": 71
+  },
+  {
+    "position": 73,
+    "phrase": "نبرد تن‌به‌تن",
+    "reference": 27,
+    "band": "related",
+    "score": 22.77,
+    "rawScore": 0.92,
+    "historyCount": 72
+  },
+  {
+    "position": 74,
+    "phrase": "تفنگ و توپخانه",
+    "reference": 18,
+    "band": "far",
+    "score": 32.18,
+    "rawScore": 1.3,
+    "historyCount": 73
+  },
+  {
+    "position": 75,
+    "phrase": "شمشیرزن ژاپنی",
+    "reference": 61,
+    "band": "related",
+    "score": 44.55,
+    "rawScore": 1.8,
+    "historyCount": 74
+  },
+  {
+    "position": 76,
+    "phrase": "قرن نوزدهم",
+    "reference": 27,
+    "band": "related",
+    "score": 31.68,
+    "rawScore": 1.28,
+    "historyCount": 75
+  },
+  {
+    "position": 77,
+    "phrase": "تنها سامورایی بازمانده",
+    "reference": 91,
+    "band": "near",
+    "score": 88.61,
+    "rawScore": 3.58,
+    "historyCount": 76
+  },
+  {
+    "position": 78,
+    "phrase": "کارگردان سینما",
+    "reference": 8,
+    "band": "far",
+    "score": 9.41,
+    "rawScore": 0.38,
+    "historyCount": 77
+  },
+  {
+    "position": 79,
+    "phrase": "امپراتور ژاپن",
+    "reference": 36,
+    "band": "related",
+    "score": 22.77,
+    "rawScore": 0.92,
+    "historyCount": 78
+  },
+  {
+    "position": 80,
+    "phrase": "واپسین جنگجوی یک عصر",
+    "reference": 78,
+    "band": "near",
+    "score": 75.74,
+    "rawScore": 3.06,
+    "historyCount": 79
+  },
+  {
+    "position": 81,
+    "phrase": "جوان‌ترین سامورایی",
+    "reference": 67,
+    "band": "related",
+    "score": 38.12,
+    "rawScore": 1.54,
+    "historyCount": 80
+  },
+  {
+    "position": 82,
+    "phrase": "آخرین جنگجوی کاتانا به‌دست",
+    "reference": 76,
+    "band": "related",
+    "score": 82.42,
+    "rawScore": 3.33,
+    "historyCount": 81
+  },
+  {
+    "position": 83,
+    "phrase": "تنهایی",
+    "reference": 20,
+    "band": "related",
+    "score": 28.21,
+    "rawScore": 1.14,
+    "historyCount": 82
+  },
+  {
+    "position": 84,
+    "phrase": "فرهنگ ژاپن",
+    "reference": 29,
+    "band": "related",
+    "score": 24.01,
+    "rawScore": 0.97,
+    "historyCount": 83
+  },
+  {
+    "position": 85,
+    "phrase": "شوگون",
+    "reference": 39,
+    "band": "related",
+    "score": 29.95,
+    "rawScore": 1.21,
+    "historyCount": 84
+  },
+  {
+    "position": 86,
+    "phrase": "آخرین بازمانده عصر سامورایی",
+    "reference": 91,
+    "band": "near",
+    "score": 91.58,
+    "rawScore": 3.7,
+    "historyCount": 85
+  },
+  {
+    "position": 87,
+    "phrase": "سامورایی تنها",
+    "reference": 89,
+    "band": "near",
+    "score": 57.17,
+    "rawScore": 2.31,
+    "historyCount": 86
+  },
+  {
+    "position": 88,
+    "phrase": "سال ۱۸۷۷",
+    "reference": 33,
+    "band": "related",
+    "score": 28.96,
+    "rawScore": 1.17,
+    "historyCount": 87
+  },
+  {
+    "position": 89,
+    "phrase": "دوجو",
+    "reference": 35,
+    "band": "related",
+    "score": 16.58,
+    "rawScore": 0.67,
+    "historyCount": 88
+  },
+  {
+    "position": 90,
+    "phrase": "تام کروز در نقش نیتن آلگرن",
+    "reference": 65,
+    "band": "related",
+    "score": 45.79,
+    "rawScore": 1.85,
+    "historyCount": 89
+  },
+  {
+    "position": 91,
+    "phrase": "فیلم آخرین سامورایی",
+    "reference": 96,
+    "band": "near",
+    "score": 93.8,
+    "rawScore": 3.79,
+    "historyCount": 90
+  },
+  {
+    "position": 92,
+    "phrase": "تسلیم",
+    "reference": 18,
+    "band": "far",
+    "score": 22.03,
+    "rawScore": 0.89,
+    "historyCount": 91
+  },
+  {
+    "position": 93,
+    "phrase": "توکیو",
+    "reference": 14,
+    "band": "far",
+    "score": 16.58,
+    "rawScore": 0.67,
+    "historyCount": 92
+  },
+  {
+    "position": 94,
+    "phrase": "فیلم تاریخی",
+    "reference": 27,
+    "band": "related",
+    "score": 33.17,
+    "rawScore": 1.34,
+    "historyCount": 93
+  },
+  {
+    "position": 95,
+    "phrase": "سامورایی شکست‌خورده",
+    "reference": 61,
+    "band": "related",
+    "score": 60.64,
+    "rawScore": 2.45,
+    "historyCount": 94
+  },
+  {
+    "position": 96,
+    "phrase": "تنها سامورایی باقی‌مانده",
+    "reference": 91,
+    "band": "near",
+    "score": 90.34,
+    "rawScore": 3.65,
+    "historyCount": 95
+  },
+  {
+    "position": 97,
+    "phrase": "شرق آسیا",
+    "reference": 22,
+    "band": "related",
+    "score": 19.06,
+    "rawScore": 0.77,
+    "historyCount": 96
+  },
+  {
+    "position": 98,
+    "phrase": "ارتش مدرن",
+    "reference": 24,
+    "band": "related",
+    "score": 29.95,
+    "rawScore": 1.21,
+    "historyCount": 97
+  },
+  {
+    "position": 99,
+    "phrase": "سامورایی تبعیدی",
+    "reference": 65,
+    "band": "related",
+    "score": 54.95,
+    "rawScore": 2.22,
+    "historyCount": 98
+  },
+  {
+    "position": 100,
+    "phrase": "سقوط سامورایی‌ها",
+    "reference": 66,
+    "band": "related",
+    "score": 57.17,
+    "rawScore": 2.31,
+    "historyCount": 99
+  },
+  {
+    "position": 101,
+    "phrase": "غرب‌گرایی ژاپن",
+    "reference": 33,
+    "band": "related",
+    "score": 33.41,
+    "rawScore": 1.35,
+    "historyCount": 100
+  },
+  {
+    "position": 102,
+    "phrase": "سامورایی",
+    "reference": 76,
+    "band": "related",
+    "score": 51.48,
+    "rawScore": 2.08,
+    "historyCount": 101
+  },
+  {
+    "position": 103,
+    "phrase": "سامورایی سرگردان",
+    "reference": 72,
+    "band": "related",
+    "score": 58.16,
+    "rawScore": 2.35,
+    "historyCount": 102
+  },
+  {
+    "position": 104,
+    "phrase": "اصلاحات میجی",
+    "reference": 39,
+    "band": "related",
+    "score": 28.46,
+    "rawScore": 1.15,
+    "historyCount": 103
+  },
+  {
+    "position": 105,
+    "phrase": "آخرین سامورایی در پایان عصر",
+    "reference": 90,
+    "band": "near",
+    "score": 90.34,
+    "rawScore": 3.65,
+    "historyCount": 104
+  },
+  {
+    "position": 106,
+    "phrase": "شورش ساتسوما",
+    "reference": 59,
+    "band": "related",
+    "score": 44.3,
+    "rawScore": 1.79,
+    "historyCount": 105
+  },
+  {
+    "position": 107,
+    "phrase": "جامعه سنتی ژاپن",
+    "reference": 34,
+    "band": "related",
+    "score": 29.45,
+    "rawScore": 1.19,
+    "historyCount": 106
+  },
+  {
+    "position": 108,
+    "phrase": "نوسازی ارتش ژاپن",
+    "reference": 37,
+    "band": "related",
+    "score": 37.87,
+    "rawScore": 1.53,
+    "historyCount": 107
+  },
+  {
+    "position": 109,
+    "phrase": "نیروی دریایی",
+    "reference": 8,
+    "band": "far",
+    "score": 8.91,
+    "rawScore": 0.36,
+    "historyCount": 108
+  },
+  {
+    "position": 110,
+    "phrase": "آخرین بازمانده خاندان جنگاور",
+    "reference": 73,
+    "band": "related",
+    "score": 83.66,
+    "rawScore": 3.38,
+    "historyCount": 109
+  },
+  {
+    "position": 111,
+    "phrase": "فیلم سامورایی با بازی تام کروز",
+    "reference": 80,
+    "band": "near",
+    "score": 78.95,
+    "rawScore": 3.19,
+    "historyCount": 110
+  },
+  {
+    "position": 112,
+    "phrase": "سنت‌های کهن در برابر دنیای نو",
+    "reference": 39,
+    "band": "related",
+    "score": 49.25,
+    "rawScore": 1.99,
+    "historyCount": 111
+  },
+  {
+    "position": 113,
+    "phrase": "دسته شمشیر",
+    "reference": 28,
+    "band": "related",
+    "score": 20.54,
+    "rawScore": 0.83,
+    "historyCount": 112
+  },
+  {
+    "position": 114,
+    "phrase": "پایان یک نسل",
+    "reference": 39,
+    "band": "related",
+    "score": 49.01,
+    "rawScore": 1.98,
+    "historyCount": 113
+  },
+  {
+    "position": 115,
+    "phrase": "سرباز ژاپنی",
+    "reference": 39,
+    "band": "related",
+    "score": 41.83,
+    "rawScore": 1.69,
+    "historyCount": 114
+  },
+  {
+    "position": 116,
+    "phrase": "پایان طبقه جنگاوران",
+    "reference": 45,
+    "band": "related",
+    "score": 73.51,
+    "rawScore": 2.97,
+    "historyCount": 115
+  },
+  {
+    "position": 117,
+    "phrase": "دوران میجی",
+    "reference": 40,
+    "band": "related",
+    "score": 33.91,
+    "rawScore": 1.37,
+    "historyCount": 116
+  },
+  {
+    "position": 118,
+    "phrase": "تنها بازمانده",
+    "reference": 45,
+    "band": "related",
+    "score": 64.1,
+    "rawScore": 2.59,
+    "historyCount": 117
+  },
+  {
+    "position": 119,
+    "phrase": "گربه سامورایی",
+    "reference": 38,
+    "band": "related",
+    "score": 26.73,
+    "rawScore": 1.08,
+    "historyCount": 118
+  },
+  {
+    "position": 120,
+    "phrase": "سامورایی بی‌ارباب",
+    "reference": 74,
+    "band": "related",
+    "score": 52.97,
+    "rawScore": 2.14,
+    "historyCount": 119
+  },
+  {
+    "position": 121,
+    "phrase": "آخرین سامورایی ژاپن",
+    "reference": 98,
+    "band": "near",
+    "score": 96.28,
+    "rawScore": 3.89,
+    "historyCount": 120
+  },
+  {
+    "position": 122,
+    "phrase": "آخرین وایکینگ",
+    "reference": 39,
+    "band": "related",
+    "score": 35.39,
+    "rawScore": 1.43,
+    "historyCount": 121
+  },
+  {
+    "position": 123,
+    "phrase": "شمشیر سامورایی",
+    "reference": 60,
+    "band": "related",
+    "score": 39.11,
+    "rawScore": 1.58,
+    "historyCount": 122
+  },
+  {
+    "position": 124,
+    "phrase": "مبارزه برای شرافت",
+    "reference": 49,
+    "band": "related",
+    "score": 29.45,
+    "rawScore": 1.19,
+    "historyCount": 123
+  },
+  {
+    "position": 125,
+    "phrase": "نبرد با سلاح گرم",
+    "reference": 24,
+    "band": "related",
+    "score": 35.15,
+    "rawScore": 1.42,
+    "historyCount": 124
+  },
+  {
+    "position": 126,
+    "phrase": "آموزش سامورایی",
+    "reference": 41,
+    "band": "related",
+    "score": 29.7,
+    "rawScore": 1.2,
+    "historyCount": 125
+  },
+  {
+    "position": 127,
+    "phrase": "مرگ قهرمانانه",
+    "reference": 37,
+    "band": "related",
+    "score": 25.25,
+    "rawScore": 1.02,
+    "historyCount": 126
+  },
+  {
+    "position": 128,
+    "phrase": "پایان دوران سامورایی",
+    "reference": 83,
+    "band": "near",
+    "score": 71.03,
+    "rawScore": 2.87,
+    "historyCount": 127
+  },
+  {
+    "position": 129,
+    "phrase": "آخرین عضو طبقه سامورایی",
+    "reference": 87,
+    "band": "near",
+    "score": 90.09,
+    "rawScore": 3.64,
+    "historyCount": 128
+  },
+  {
+    "position": 130,
+    "phrase": "مبارز ژاپنی",
+    "reference": 53,
+    "band": "related",
+    "score": 43.81,
+    "rawScore": 1.77,
+    "historyCount": 129
+  },
+  {
+    "position": 131,
+    "phrase": "تاریخ نظامی ژاپن",
+    "reference": 35,
+    "band": "related",
+    "score": 29.95,
+    "rawScore": 1.21,
+    "historyCount": 130
+  },
+  {
+    "position": 132,
+    "phrase": "داستان آخرین سامورایی",
+    "reference": 89,
+    "band": "near",
+    "score": 87.62,
+    "rawScore": 3.54,
+    "historyCount": 131
+  },
+  {
+    "position": 133,
+    "phrase": "واپسین شمشیر سامورایی",
+    "reference": 72,
+    "band": "related",
+    "score": 76.23,
+    "rawScore": 3.08,
+    "historyCount": 132
+  },
+  {
+    "position": 134,
+    "phrase": "واپسین رونین ژاپن",
+    "reference": 84,
+    "band": "near",
+    "score": 73.26,
+    "rawScore": 2.96,
+    "historyCount": 133
+  },
+  {
+    "position": 135,
+    "phrase": "واپسین جنگجوی سامورایی",
+    "reference": 96,
+    "band": "near",
+    "score": 93.8,
+    "rawScore": 3.79,
+    "historyCount": 134
+  },
+  {
+    "position": 136,
+    "phrase": "لباس سامورایی",
+    "reference": 41,
+    "band": "related",
+    "score": 28.71,
+    "rawScore": 1.16,
+    "historyCount": 135
+  },
+  {
+    "position": 137,
+    "phrase": "وفاداری",
+    "reference": 21,
+    "band": "related",
+    "score": 23.51,
+    "rawScore": 0.95,
+    "historyCount": 136
+  },
+  {
+    "position": 138,
+    "phrase": "آخرین سامورایی",
+    "reference": 99,
+    "band": "near",
+    "score": 97.52,
+    "rawScore": 3.94,
+    "historyCount": 137
+  },
+  {
+    "position": 139,
+    "phrase": "رهبر شورش سامورایی‌ها",
+    "reference": 68,
+    "band": "related",
+    "score": 49.25,
+    "rawScore": 1.99,
+    "historyCount": 138
+  },
+  {
+    "position": 140,
+    "phrase": "آخرین استاد کاتانا",
+    "reference": 83,
+    "band": "near",
+    "score": 74.75,
+    "rawScore": 3.02,
+    "historyCount": 139
+  },
+  {
+    "position": 141,
+    "phrase": "کاتسوموتو",
+    "reference": 64,
+    "band": "related",
+    "score": 33.17,
+    "rawScore": 1.34,
+    "historyCount": 140
+  },
+  {
+    "position": 142,
+    "phrase": "پایان عصر سامورایی",
+    "reference": 84,
+    "band": "near",
+    "score": 75.49,
+    "rawScore": 3.05,
+    "historyCount": 141
+  },
+  {
+    "position": 143,
+    "phrase": "پایان یک دوران",
+    "reference": 42,
+    "band": "related",
+    "score": 45.05,
+    "rawScore": 1.82,
+    "historyCount": 142
+  },
+  {
+    "position": 144,
+    "phrase": "انقراض",
+    "reference": 23,
+    "band": "related",
+    "score": 25.49,
+    "rawScore": 1.03,
+    "historyCount": 143
+  },
+  {
+    "position": 145,
+    "phrase": "آخرین سامورایی بی‌ارباب",
+    "reference": 87,
+    "band": "near",
+    "score": 81.43,
+    "rawScore": 3.29,
+    "historyCount": 144
+  },
+  {
+    "position": 146,
+    "phrase": "واپسین شمشیرزن ژاپنی",
+    "reference": 85,
+    "band": "near",
+    "score": 84.4,
+    "rawScore": 3.41,
+    "historyCount": 145
+  },
+  {
+    "position": 147,
+    "phrase": "واپسین استاد شمشیر",
+    "reference": 79,
+    "band": "near",
+    "score": 71.78,
+    "rawScore": 2.9,
+    "historyCount": 146
+  },
+  {
+    "position": 148,
+    "phrase": "آخرین برگ درخت",
+    "reference": 3,
+    "band": "unrelated",
+    "score": 16.34,
+    "rawScore": 0.66,
+    "historyCount": 147
+  },
+  {
+    "position": 149,
+    "phrase": "فیلم تام کروز در ژاپن",
+    "reference": 67,
+    "band": "related",
+    "score": 55.44,
+    "rawScore": 2.24,
+    "historyCount": 148
+  },
+  {
+    "position": 150,
+    "phrase": "نبرد پایانی سامورایی",
+    "reference": 78,
+    "band": "near",
+    "score": 67.57,
+    "rawScore": 2.73,
+    "historyCount": 149
+  },
+  {
+    "position": 151,
+    "phrase": "سامورایی در واپسین نبرد",
+    "reference": 87,
+    "band": "near",
+    "score": 72.52,
+    "rawScore": 2.93,
+    "historyCount": 150
+  },
+  {
+    "position": 152,
+    "phrase": "فیلم آخرین جنگجوی ژاپنی",
+    "reference": 86,
+    "band": "near",
+    "score": 73.26,
+    "rawScore": 2.96,
+    "historyCount": 151
+  },
+  {
+    "position": 153,
+    "phrase": "نبرد",
+    "reference": 22,
+    "band": "related",
+    "score": 25.74,
+    "rawScore": 1.04,
+    "historyCount": 152
+  },
+  {
+    "position": 154,
+    "phrase": "آخرین نبرد سامورایی‌ها",
+    "reference": 78,
+    "band": "near",
+    "score": 74,
+    "rawScore": 2.99,
+    "historyCount": 153
+  },
+  {
+    "position": 155,
+    "phrase": "فیلم جنگی",
+    "reference": 29,
+    "band": "related",
+    "score": 28.46,
+    "rawScore": 1.15,
+    "historyCount": 154
+  },
+  {
+    "position": 156,
+    "phrase": "هالیوود",
+    "reference": 15,
+    "band": "far",
+    "score": 10.64,
+    "rawScore": 0.43,
+    "historyCount": 155
+  },
+  {
+    "position": 157,
+    "phrase": "آخرین پادشاه",
+    "reference": 35,
+    "band": "related",
+    "score": 41.33,
+    "rawScore": 1.67,
+    "historyCount": 156
+  },
+  {
+    "position": 158,
+    "phrase": "آخرین ربات",
+    "reference": 8,
+    "band": "far",
+    "score": 27.47,
+    "rawScore": 1.11,
+    "historyCount": 157
+  },
+  {
+    "position": 159,
+    "phrase": "امپراتوری",
+    "reference": 18,
+    "band": "far",
+    "score": 17.57,
+    "rawScore": 0.71,
+    "historyCount": 158
+  },
+  {
+    "position": 160,
+    "phrase": "تاریخ سامورایی‌ها",
+    "reference": 46,
+    "band": "related",
+    "score": 42.82,
+    "rawScore": 1.73,
+    "historyCount": 159
+  },
+  {
+    "position": 161,
+    "phrase": "وفاداری سامورایی",
+    "reference": 61,
+    "band": "related",
+    "score": 35.89,
+    "rawScore": 1.45,
+    "historyCount": 160
+  },
+  {
+    "position": 162,
+    "phrase": "ارتش امپراتوری ژاپن در برابر سامورایی‌ها",
+    "reference": 73,
+    "band": "related",
+    "score": 54.95,
+    "rawScore": 2.22,
+    "historyCount": 161
+  },
+  {
+    "position": 163,
+    "phrase": "کد اخلاقی بوشیدو",
+    "reference": 49,
+    "band": "related",
+    "score": 34.15,
+    "rawScore": 1.38,
+    "historyCount": 162
+  },
+  {
+    "position": 164,
+    "phrase": "جنگجوی شرقی",
+    "reference": 45,
+    "band": "related",
+    "score": 42.57,
+    "rawScore": 1.72,
+    "historyCount": 163
+  },
+  {
+    "position": 165,
+    "phrase": "شکوه و سقوط جنگاوران",
+    "reference": 43,
+    "band": "related",
+    "score": 52.72,
+    "rawScore": 2.13,
+    "historyCount": 164
+  },
+  {
+    "position": 166,
+    "phrase": "مرگ کاتسوموتو",
+    "reference": 54,
+    "band": "related",
+    "score": 39.85,
+    "rawScore": 1.61,
+    "historyCount": 165
+  },
+  {
+    "position": 167,
+    "phrase": "پایان فئودالیسم در ژاپن",
+    "reference": 42,
+    "band": "related",
+    "score": 49.75,
+    "rawScore": 2.01,
+    "historyCount": 166
+  },
+  {
+    "position": 168,
+    "phrase": "آخرین شمشیرزن سامورایی",
+    "reference": 93,
+    "band": "near",
+    "score": 90.83,
+    "rawScore": 3.67,
+    "historyCount": 167
+  },
+  {
+    "position": 169,
+    "phrase": "سرنوشت کاتسوموتو",
+    "reference": 56,
+    "band": "related",
+    "score": 40.59,
+    "rawScore": 1.64,
+    "historyCount": 168
+  },
+  {
+    "position": 170,
+    "phrase": "سامورایی زن",
+    "reference": 55,
+    "band": "related",
+    "score": 35.15,
+    "rawScore": 1.42,
+    "historyCount": 169
+  },
+  {
+    "position": 171,
+    "phrase": "جنگجوی پیر",
+    "reference": 32,
+    "band": "related",
+    "score": 45.54,
+    "rawScore": 1.84,
+    "historyCount": 170
+  },
+  {
+    "position": 172,
+    "phrase": "پایان شورش ساتسوما",
+    "reference": 60,
+    "band": "related",
+    "score": 48.51,
+    "rawScore": 1.96,
+    "historyCount": 171
+  },
+  {
+    "position": 173,
+    "phrase": "تاریخ ژاپن",
+    "reference": 30,
+    "band": "related",
+    "score": 24.5,
+    "rawScore": 0.99,
+    "historyCount": 172
+  },
+  {
+    "position": 174,
+    "phrase": "واپسین جنگجوی ژاپنی",
+    "reference": 90,
+    "band": "near",
+    "score": 78.95,
+    "rawScore": 3.19,
+    "historyCount": 173
+  },
+  {
+    "position": 175,
+    "phrase": "آیین سامورایی",
+    "reference": 52,
+    "band": "related",
+    "score": 35.89,
+    "rawScore": 1.45,
+    "historyCount": 174
+  },
+  {
+    "position": 176,
+    "phrase": "آخرین بازماندهٔ خاندان سامورایی",
+    "reference": 86,
+    "band": "near",
+    "score": 86.63,
+    "rawScore": 3.5,
+    "historyCount": 175
+  },
+  {
+    "position": 177,
+    "phrase": "آخرین شوالیه",
+    "reference": 47,
+    "band": "related",
+    "score": 43.56,
+    "rawScore": 1.76,
+    "historyCount": 176
+  },
+  {
+    "position": 178,
+    "phrase": "کن واتانابه در نقش کاتسوموتو",
+    "reference": 69,
+    "band": "related",
+    "score": 35.64,
+    "rawScore": 1.44,
+    "historyCount": 177
+  },
+  {
+    "position": 179,
+    "phrase": "آخرین بازمانده سامورایی",
+    "reference": 95,
+    "band": "near",
+    "score": 94.3,
+    "rawScore": 3.81,
+    "historyCount": 178
+  },
+  {
+    "position": 180,
+    "phrase": "سرباز آمریکایی در ژاپن",
+    "reference": 38,
+    "band": "related",
+    "score": 36.63,
+    "rawScore": 1.48,
+    "historyCount": 179
+  },
+  {
+    "position": 181,
+    "phrase": "ادوارد زویک",
+    "reference": 24,
+    "band": "related",
+    "score": 24.75,
+    "rawScore": 1,
+    "historyCount": 180
+  },
+  {
+    "position": 182,
+    "phrase": "آیین ذن",
+    "reference": 21,
+    "band": "related",
+    "score": 19.06,
+    "rawScore": 0.77,
+    "historyCount": 181
+  },
+  {
+    "position": 183,
+    "phrase": "آخرین جنگجوی دوران سامورایی",
+    "reference": 88,
+    "band": "near",
+    "score": 96.28,
+    "rawScore": 3.89,
+    "historyCount": 182
+  },
+  {
+    "position": 184,
+    "phrase": "آخرین بازمانده",
+    "reference": 53,
+    "band": "related",
+    "score": 58.66,
+    "rawScore": 2.37,
+    "historyCount": 183
+  },
+  {
+    "position": 185,
+    "phrase": "آخرین رونین",
+    "reference": 82,
+    "band": "near",
+    "score": 77.72,
+    "rawScore": 3.14,
+    "historyCount": 184
+  },
+  {
+    "position": 186,
+    "phrase": "شورش مسلحانه",
+    "reference": 20,
+    "band": "related",
+    "score": 26.73,
+    "rawScore": 1.08,
+    "historyCount": 185
+  },
+  {
+    "position": 187,
+    "phrase": "واپسین جنگ",
+    "reference": 22,
+    "band": "related",
+    "score": 38.12,
+    "rawScore": 1.54,
+    "historyCount": 186
+  },
+  {
+    "position": 188,
+    "phrase": "واپسین سامورایی در ژاپن",
+    "reference": 96,
+    "band": "near",
+    "score": 94.79,
+    "rawScore": 3.83,
+    "historyCount": 187
+  },
+  {
+    "position": 189,
+    "phrase": "آمریکا",
+    "reference": 13,
+    "band": "far",
+    "score": 8.42,
+    "rawScore": 0.34,
+    "historyCount": 188
+  },
+  {
+    "position": 190,
+    "phrase": "جنگجویان در برابر تفنگداران",
+    "reference": 42,
+    "band": "related",
+    "score": 50.49,
+    "rawScore": 2.04,
+    "historyCount": 189
+  },
+  {
+    "position": 191,
+    "phrase": "شوگون‌سالاری",
+    "reference": 34,
+    "band": "related",
+    "score": 26.98,
+    "rawScore": 1.09,
+    "historyCount": 190
+  },
+  {
+    "position": 192,
+    "phrase": "فیلم واپسین سامورایی",
+    "reference": 95,
+    "band": "near",
+    "score": 94.05,
+    "rawScore": 3.8,
+    "historyCount": 191
+  },
+  {
+    "position": 193,
+    "phrase": "سرباز",
+    "reference": 16,
+    "band": "far",
+    "score": 26.73,
+    "rawScore": 1.08,
+    "historyCount": 192
+  },
+  {
+    "position": 194,
+    "phrase": "فیلم حماسی",
+    "reference": 29,
+    "band": "related",
+    "score": 28.96,
+    "rawScore": 1.17,
+    "historyCount": 193
+  },
+  {
+    "position": 195,
+    "phrase": "مردی با زره و شمشیر",
+    "reference": 32,
+    "band": "related",
+    "score": 43.07,
+    "rawScore": 1.74,
+    "historyCount": 194
+  },
+  {
+    "position": 196,
+    "phrase": "باغ انار",
+    "reference": 0,
+    "band": "unrelated",
+    "score": 3.96,
+    "rawScore": 0.16,
+    "historyCount": 195
+  },
+  {
+    "position": 197,
+    "phrase": "واپسین روزهای سامورایی",
+    "reference": 82,
+    "band": "near",
+    "score": 80.19,
+    "rawScore": 3.24,
+    "historyCount": 196
+  },
+  {
+    "position": 198,
+    "phrase": "جنگجوی سالخورده ژاپنی",
+    "reference": 53,
+    "band": "related",
+    "score": 65.84,
+    "rawScore": 2.66,
+    "historyCount": 197
+  },
+  {
+    "position": 199,
+    "phrase": "هاراکیری",
+    "reference": 39,
+    "band": "related",
+    "score": 27.47,
+    "rawScore": 1.11,
+    "historyCount": 198
+  },
+  {
+    "position": 200,
+    "phrase": "واپسین سامورایی",
+    "reference": 100,
+    "band": "exact",
+    "score": 100,
+    "rawScore": null,
+    "historyCount": 199
+  }
+]

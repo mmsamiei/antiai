@@ -2,6 +2,7 @@ import { Prisma } from "@prisma/client";
 import { prisma } from "./prisma";
 import { normalizePersian } from "./geo";
 import { loadPhraseHuntHistory } from "./phrase-hunt-history-store";
+import { phraseHuntAnchors } from "./phrase-hunt-anchors";
 
 // New challenges use JEV's five-level semantic proximity score.
 export const PHRASE_HUNT_JUDGE_VERSION = 6;
@@ -90,11 +91,20 @@ async function judgeContextualPhrase(targetId: string, target: string, phrase: s
   const apiKey = process.env.JEV_API_KEY;
   if (!apiKey) throw new Error("JEV_UNAVAILABLE");
   const history = await loadPhraseHuntHistory(context.challengeId, context.userId, phrase);
+  const anchors = phraseHuntAnchors[context.challengeId] ?? [];
+  const previousByGuess = new Map(history.previousGuesses.map((item) => [normalizePersian(item.guess), item]));
+  for (const anchor of anchors) {
+    const normalized = normalizePersian(anchor.guess);
+    if (normalized && normalized !== normalizePersian(phrase)) previousByGuess.set(normalized, anchor);
+  }
+  const previousGuesses = [...previousByGuess.values()]
+    .sort((a, b) => b.score_out_of_100 - a.score_out_of_100 || normalizePersian(a.guess).localeCompare(normalizePersian(b.guess), "fa"))
+    .slice(0, 200);
   let score: number;
   try {
     const response = await fetch(process.env.JEV_API_URL || "https://openrouter.ai/api/alpha/decisions", {
       method: "POST", headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
-      body: JSON.stringify({ model, state: { target_phrase: target, submitted_phrase: phrase, language: "Persian", previous_guesses: history.previousGuesses },
+      body: JSON.stringify({ model, state: { target_phrase: target, submitted_phrase: phrase, language: "Persian", previous_guesses: previousGuesses },
         questions: { score: { type: "score", instructions: contextualPhraseInstructions, criteria: contextualPhraseLevels } } }),
       signal: AbortSignal.timeout(7000),
     });

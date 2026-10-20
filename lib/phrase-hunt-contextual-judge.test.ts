@@ -25,6 +25,21 @@ describe("v6 shared contextual judging", () => {
     expect(request.questions.score.criteria).toEqual(["بی‌ارتباط", "ارتباط ضعیف", "بخشی از مفهوم درست", "بیشتر مفهوم درست", "تقریباً همان معنا"]);
     expect(JSON.stringify(request)).not.toContain('"player"');
   });
+  it("adds only this challenge's score anchors, excludes the current guess, and stays within 200 examples", async () => {
+    const fetchMock = vi.fn().mockResolvedValue({ ok: true, json: async () => ({ answers: { score: { score: 2 } } }) });
+    vi.stubGlobal("fetch", fetchMock);
+    mocks.history.mockResolvedValue({ previousGuesses: Array.from({ length: 200 }, (_, i) => ({ guess: `حدس ${i}`, score_out_of_100: 60 - i / 10 })), counts: {} });
+    await judgePhrase("ph-108", "امید واهی", "امید بیهوده", 6, "typesafe/jev-1.13", { challengeId: "2026-10-21T06:30:00.000Z", userId: "player" });
+    const request = JSON.parse(fetchMock.mock.calls[0][1].body);
+    const history = request.state.previous_guesses as { guess: string; score_out_of_100: number }[];
+    expect(history).toHaveLength(200);
+    expect(history.some(item => item.guess === "امید بیهوده")).toBe(false);
+    expect(history).toContainEqual({ guess: "امید واهی", score_out_of_100: 100 });
+    expect(history).toContainEqual({ guess: "امید بی‌اساس", score_out_of_100: 94 });
+    expect(history).toContainEqual({ guess: "واهی", score_out_of_100: 65 });
+    expect(history.some(item => item.guess === "سامورایی" || item.guess === "باغ انار")).toBe(false);
+    expect(history).not.toContainEqual({ guess: "جنگ", score_out_of_100: 50 });
+  });
   it("reuses the shared score across players before selecting any personal context or calling JEV", async () => {
     mocks.findUnique.mockResolvedValue({ score: 53.21 });
     const fetchMock = vi.fn(); vi.stubGlobal("fetch", fetchMock);

@@ -11,6 +11,7 @@ import {
 import LetterDuel from "./letter-duel";
 import WordWeaver from "./word-weaver";
 import { sessionRequest, setClientSessionToken } from "@/lib/client-session";
+import { hiddenPhraseGuesses, normalizePersian, orderPhraseGuesses } from "@/lib/phrase-hunt-view";
 
 type GameType =
   | "IRAN_CITY"
@@ -62,7 +63,10 @@ type Game = {
     }[];
   };
 };
+type LeaderChallenge = { id: string; startsAt: string; endsAt: string; ended: boolean; target?: string };
 type LeaderRow = {
+  guessCount?: number;
+  bestGuess?: string;
   rank: number;
   userId: string;
   displayName: string;
@@ -496,6 +500,27 @@ function Play({
   const isSemantris = game.type === "SEMANTRIS";
   const isPhraseHunt = game.type === "PHRASE_HUNT";
   const [query, setQuery] = useState("");
+  const [phraseOrder, setPhraseOrder] = useState<"score" | "recent">("score");
+  const [hiddenPhraseIds, setHiddenPhraseIds] = useState<Set<string>>(() => new Set());
+  const [phraseResult, setPhraseResult] = useState<{ guess: PhraseGuess; repeated: boolean; sequence: number } | null>(null);
+  const phraseResultSequence = useRef(0);
+  useEffect(() => {
+    setHiddenPhraseIds(new Set());
+    setPhraseResult(null);
+  }, [game.id]);
+  useEffect(() => {
+    if (!phraseResult) return;
+    const timer = window.setTimeout(() => setPhraseResult(null), 3000);
+    return () => window.clearTimeout(timer);
+  }, [phraseResult]);
+  const showPhraseResult = (guess: PhraseGuess, repeated: boolean) => {
+    setPhraseResult({ guess, repeated, sequence: ++phraseResultSequence.current });
+    setHiddenPhraseIds(previous => {
+      const next = new Set(previous);
+      next.delete(guess.id);
+      return next;
+    });
+  };
   const [suggestions, setSuggestions] = useState<PublicItem[]>([]);
   const [selected, setSelected] = useState<PublicItem | null>(null);
   const [secondsLeft, setSecondsLeft] = useState(30);
@@ -520,8 +545,8 @@ function Play({
   );
 
   const sortedPhraseGuesses = useMemo(
-    () => [...(game.phraseGuesses || [])].sort((a, b) => b.score - a.score),
-    [game.phraseGuesses],
+    () => orderPhraseGuesses(game.phraseGuesses || [], phraseOrder).filter(guess => !hiddenPhraseIds.has(guess.id)),
+    [game.phraseGuesses, phraseOrder, hiddenPhraseIds],
   );
 
   const closeHelp = async () => {
@@ -640,6 +665,15 @@ function Play({
       busy
     )
       return;
+    if (isPhraseHunt) {
+      const repeated = game.phraseGuesses?.find(guess => normalizePersian(guess.name) === normalizePersian(query));
+      if (repeated) {
+        setError("");
+        setQuery("");
+        showPhraseResult(repeated, true);
+        return;
+      }
+    }
     setBusy(true);
     setError("");
     try {
@@ -670,6 +704,10 @@ function Play({
       setQuery("");
       setSelected(null);
       setSuggestions([]);
+      if (isPhraseHunt) {
+        const submitted = data.game.phraseGuesses?.find(guess => normalizePersian(guess.name) === normalizePersian(query));
+        if (submitted) showPhraseResult(submitted, false);
+      }
       if (isSemantris && data.semantris) {
         setSemantrisPreview({
           words: data.semantris.rankedWords,
@@ -1084,6 +1122,36 @@ function Play({
           </button>
         )}
       </div>
+      {isPhraseHunt && (
+        <>
+          <div className="phrase-result-notice" role="status" aria-live="polite" aria-atomic="true">
+            {phraseResult && (
+              <div className="phrase-result-card" key={phraseResult.sequence}>
+                <div className="phrase-result-heading"><span className="phrase-result-symbol" aria-hidden="true">⌁</span><span>{phraseResult.repeated ? "قبلاً حدس زده‌ای" : "نتیجهٔ حدس تو"}</span></div>
+                <div className="phrase-result-content">
+                  <b>{phraseResult.guess.name}</b>
+                  <div className="phrase-result-score"><strong>{phraseResult.guess.score.toLocaleString("fa-IR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong><small>از ۱۰۰</small></div>
+                </div>
+                <div className="phrase-result-meter" aria-hidden="true"><i style={{ width: `${phraseResult.guess.score}%` }} /></div>
+                <small className="phrase-result-caption">امتیاز نزدیکی به پاسخ</small>
+              </div>
+            )}
+          </div>
+          {!!game.phraseGuesses?.length && (
+            <div className="phrase-history-controls">
+              <label>ترتیب نمایش
+                <select value={phraseOrder} onChange={event => setPhraseOrder(event.target.value as "score" | "recent")}>
+                  <option value="score">بیشترین امتیاز</option>
+                  <option value="recent">تازه‌ترین</option>
+                </select>
+              </label>
+              <button className="secondary" disabled={busy || game.phraseGuesses.length <= 3} onClick={() => setHiddenPhraseIds(hiddenPhraseGuesses(game.phraseGuesses || []))}>خلوت‌کردن صفحه</button>
+              {hiddenPhraseIds.size > 0 && <button className="secondary" onClick={() => setHiddenPhraseIds(new Set())}>نمایش همهٔ حدس‌ها</button>}
+              {hiddenPhraseIds.size > 0 && <small>{hiddenPhraseIds.size.toLocaleString("fa-IR")} حدس پنهان است؛ تاریخچه و امتیازها حفظ شده‌اند.</small>}
+            </div>
+          )}
+        </>
+      )}
       {isPhraseHunt ? (
         (game.phraseGuesses || []).length ? (
           <div className="guess-list phrase-hunt-history">
@@ -1274,12 +1342,16 @@ function Leaderboard({
   initialType: GameType;
   onOpenProfile: (userId: string) => void;
 }) {
-  const [period, setPeriod] = useState<"week" | "all">("week"),
+  const [period, setPeriod] = useState<"challenge" | "week" | "all">(initialType === "PHRASE_HUNT" ? "challenge" : "week"),
     [mode, setMode] = useState<"effort" | "skill">("effort"),
     [type, setType] = useState<GameType>(initialType);
   const [rows, setRows] = useState<LeaderRow[]>([]),
     [me, setMe] = useState<LeaderRow | null>(null),
     [loading, setLoading] = useState(true);
+  const [challengeId, setChallengeId] = useState("");
+  const [challenges, setChallenges] = useState<LeaderChallenge[]>([]);
+  const [challenge, setChallenge] = useState<LeaderChallenge | null>(null);
+  const [boardError, setBoardError] = useState(false);
   const requestId = useRef(0);
   const isPhraseHunt = type === "PHRASE_HUNT";
   const isSemantris = type === "SEMANTRIS",
@@ -1288,17 +1360,23 @@ function Leaderboard({
     let active = true;
     const load = () => {
       const id = ++requestId.current;
-      jsonFetch<{ rows: LeaderRow[]; me: LeaderRow | null }>(
-        `/api/leaderboard?period=${period}&type=${type}&mode=${mode}`,
+      jsonFetch<{ rows: LeaderRow[]; me: LeaderRow | null; challenges?: LeaderChallenge[]; challenge?: LeaderChallenge }>(
+        `/api/leaderboard?period=${period}&type=${type}&mode=${mode}${period === "challenge" && challengeId ? `&challengeId=${encodeURIComponent(challengeId)}` : ""}`,
       )
         .then((data) => {
           if (!active || id !== requestId.current) return;
           setRows(data.rows);
           setMe(data.me);
+          setChallenges(data.challenges || []);
+          setChallenge(data.challenge || null);
+          setBoardError(false);
         })
+        .catch(() => { if (active && id === requestId.current) setBoardError(true); })
         .finally(() => { if (active && id === requestId.current) setLoading(false); });
     };
     setLoading(true);
+    setBoardError(false);
+    setChallenge(null);
     load();
     const timer = (type === "SEMANTRIS" || type === "PHRASE_HUNT") ? window.setInterval(load, 20_000) : null;
     const onVisibility = () => { if (document.visibilityState === "visible") load(); };
@@ -1308,7 +1386,7 @@ function Leaderboard({
       if (timer !== null) window.clearInterval(timer);
       document.removeEventListener("visibilitychange", onVisibility);
     };
-  }, [period, type, mode]);
+  }, [period, type, mode, challengeId]);
   return (
     <section>
       <div className="section-heading">
@@ -1324,31 +1402,31 @@ function Leaderboard({
           <div className="leader-games">
             <button
               className={type === "IRAN_CITY" ? "active" : ""}
-              onClick={() => setType("IRAN_CITY")}
+              onClick={() => { setType("IRAN_CITY"); if (period === "challenge") setPeriod("week"); }}
             >
               شهرجو
             </button>
             <button
               className={type === "COUNTRY" ? "active" : ""}
-              onClick={() => setType("COUNTRY")}
+              onClick={() => { setType("COUNTRY"); if (period === "challenge") setPeriod("week"); }}
             >
               کشورجو
             </button>
             <button
               className={type === "PHRASE_HUNT" ? "active" : ""}
-              onClick={() => setType("PHRASE_HUNT")}
+              onClick={() => { setType("PHRASE_HUNT"); setPeriod("challenge"); }}
             >
               معناجو
             </button>
             <button
               className={isSemantris ? "active" : ""}
-              onClick={() => setType("SEMANTRIS")}
+              onClick={() => { setType("SEMANTRIS"); if (period === "challenge") setPeriod("week"); }}
             >
               معناتریس
             </button>
             <button
               className={isDuel ? "active" : ""}
-              onClick={() => setType("LETTER_DUEL")}
+              onClick={() => { setType("LETTER_DUEL"); if (period === "challenge") setPeriod("week"); }}
             >
               دوحرف
             </button>
@@ -1375,7 +1453,8 @@ function Leaderboard({
         )}
         <div className="leader-filter-group">
           <span className="leader-filter-label">بازهٔ زمانی</span>
-          <div className="leader-toggle">
+          <div className={isPhraseHunt ? "leader-toggle leader-three-tabs" : "leader-toggle"}>
+            {isPhraseHunt && <button className={period === "challenge" ? "active" : ""} onClick={() => setPeriod("challenge")}>چالش‌ها</button>}
             <button
               className={period === "week" ? "active" : ""}
               onClick={() => setPeriod("week")}
@@ -1391,7 +1470,15 @@ function Leaderboard({
           </div>
         </div>
       </div>
-      {isPhraseHunt && <p className="board-note">مجموع بهترین امتیاز هر چالش · امتیاز چالش جاری هم حساب می‌شود · هفته از شنبه به وقت تهران</p>}
+      {isPhraseHunt && period === "challenge" && <div className="leader-challenge-picker">
+        <label htmlFor="leader-challenge">انتخاب چالش</label>
+        <select id="leader-challenge" value={challengeId || challenge?.id || ""} onChange={e => setChallengeId(e.target.value)}>
+          {challenges.map(c => <option key={c.id} value={c.id}>{new Date(c.startsAt).toLocaleString("fa-IR", { timeZone: "Asia/Tehran", year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })} · {c.ended ? "پایان‌یافته" : "در حال برگزاری"}</option>)}
+        </select>
+        {challenge && <p>{challenge.ended ? `عبارت هدف: ${challenge.target || "—"}` : "بهترین حدس‌ها پس از پایان چالش آشکار می‌شوند."}</p>}
+        <small>امتیاز بیشتر؛ در امتیاز برابر، زمان زودترِ رسیدن به آن امتیاز</small>
+      </div>}
+      {isPhraseHunt && period !== "challenge" && <p className="board-note">مجموع بهترین امتیاز هر چالش · امتیاز چالش جاری هم حساب می‌شود · هفته از شنبه به وقت تهران</p>}
       {!isPhraseHunt && mode === "skill" && (
         <p className="board-note">
           {isDuel
@@ -1401,7 +1488,7 @@ function Leaderboard({
               : "امتیاز مهارت = مجموع حدس‌های بازی‌های تمام‌شده ÷ تعداد بردها · حداقل ۳ برد"}
         </p>
       )}
-      {loading ? (
+      {boardError ? <div className="empty-state">دریافت جدول ممکن نشد؛ دوباره تلاش کن.</div> : loading ? (
         <div className="empty-state">در حال محاسبه رتبه‌ها…</div>
       ) : rows.length === 0 ? (
         <div className="empty-state">
@@ -1462,7 +1549,7 @@ function LeaderRowView({
     : mode === "effort"
       ? (row.totalScore ?? row.averageGuesses)
       : (row.bestScore ?? row.averageGuesses);
-  const detail = phraseHunt ? `${(row.games || 0).toLocaleString("fa-IR")} چالش` : duel
+  const detail = phraseHunt ? row.guessCount !== undefined ? `${row.guessCount.toLocaleString("fa-IR")} حدس` : `${(row.games || 0).toLocaleString("fa-IR")} چالش` : duel
     ? `${row.wins.toLocaleString("fa-IR")} برد · ${(row.losses || 0).toLocaleString("fa-IR")} باخت · ${(row.draws || 0).toLocaleString("fa-IR")} مساوی`
     : semantris
       ? mode === "effort"
@@ -1508,11 +1595,12 @@ function LeaderRowView({
           </button>
         </div>
         <small>{detail}</small>
+        {row.bestGuess && <p className="leader-best-guess">{row.bestGuess}</p>}
       </div>
       <div className="leader-wins">
         <strong>{value}</strong>
         <small>
-          {phraseHunt ? "مجموع امتیاز" : duel
+          {phraseHunt ? row.guessCount !== undefined ? "امتیاز" : "مجموع امتیاز" : duel
             ? mode === "skill"
               ? "نرخ برد"
               : "دور"

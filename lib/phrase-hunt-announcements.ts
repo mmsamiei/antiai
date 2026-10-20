@@ -130,7 +130,11 @@ async function buildAnnouncement(challenge: { id: string; targetId: string }) {
   `);
   const winners = selectTopPhraseHuntWinners(candidates);
   const phraseVisibility = await moderatePhraseHuntAnnouncementPhrases(winners.map((winner) => winner.phrase));
-  return renderPhraseHuntAnnouncement(target.phrase, winners, phraseVisibility, challenge.id === "2026-10-18T06:30:00.000Z" ? phraseHuntOct18Postscript : "");
+  const postscript = challenge.id === "2026-10-18T06:30:00.000Z" ? phraseHuntOct18Postscript
+    : challenge.id === "2026-10-18T19:23:00.000Z" ? "🔎 پاسخ چالش صبح، یک واژه است."
+    : challenge.id === "2026-10-19T06:30:00.000Z" ? "🔎 پی‌نوشت ۱: عبارت چالش امشب دو واژه است.\n\n💛 پی‌نوشت ۲: ممنونیم که بازی را به دیگران معرفی می‌کنید! اگر از معناجو لذت می‌برید، خوشحال می‌شویم آن را به دوستان و آشنایانتان هم معرفی کنید."
+    : "";
+  return renderPhraseHuntAnnouncement(target.phrase, winners, phraseVisibility, postscript);
 }
 
 export async function queueEndedPhraseHuntAnnouncements(enabledAt: Date, now: Date) {

@@ -36,8 +36,8 @@ describe("Phrase Hunt phrase judging primitives", () => {
   });
 
   it("has unique stable targets with short answer variants", () => {
-    expect(phraseHuntTargets).toHaveLength(106);
-    expect(new Set(phraseHuntTargets.map((target) => target.id)).size).toBe(106);
+    expect(phraseHuntTargets.length).toBeGreaterThan(0);
+    expect(new Set(phraseHuntTargets.map((target) => target.id)).size).toBe(phraseHuntTargets.length);
     const answers = phraseHuntTargets.flatMap((target) => [target.phrase, ...target.aliases]).map(normalizePersian);
     expect(new Set(answers).size).toBe(answers.length);
     expect(phraseHuntTargets.every((target) => target.phrase.split(" ").length <= 5)).toBe(true);

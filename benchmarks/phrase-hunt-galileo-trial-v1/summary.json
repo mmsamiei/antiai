@@ -1,0 +1,936 @@
+{
+  "count": 100,
+  "meanScore": 51.81,
+  "MAE": 7.96,
+  "within5": 46,
+  "within10": 74,
+  "bandStats": {
+    "exact": {
+      "count": 2,
+      "meanScore": 99.13,
+      "MAE": 0.87
+    },
+    "near": {
+      "count": 29,
+      "meanScore": 85.3,
+      "MAE": 6.22
+    },
+    "related": {
+      "count": 55,
+      "meanScore": 41.73,
+      "MAE": 8.77
+    },
+    "far": {
+      "count": 13,
+      "meanScore": 16.11,
+      "MAE": 9.77
+    },
+    "unrelated": {
+      "count": 1,
+      "meanScore": 3.96,
+      "MAE": 3.96
+    }
+  },
+  "sortedByScore": [
+    {
+      "position": 100,
+      "phrase": "محاکمه گالیله",
+      "reference": 100,
+      "band": "exact",
+      "score": 100,
+      "rawScore": null,
+      "historyCount": 99
+    },
+    {
+      "position": 21,
+      "phrase": "محاکمهٔ گالیله",
+      "reference": 100,
+      "band": "exact",
+      "score": 98.26,
+      "rawScore": 3.97,
+      "historyCount": 20
+    },
+    {
+      "position": 54,
+      "phrase": "محاکمه گالیله در قرن هفدهم",
+      "reference": 91,
+      "band": "near",
+      "score": 96.53,
+      "rawScore": 3.9,
+      "historyCount": 53
+    },
+    {
+      "position": 43,
+      "phrase": "محاکمه گالیله توسط کلیسا",
+      "reference": 98,
+      "band": "near",
+      "score": 96.28,
+      "rawScore": 3.89,
+      "historyCount": 42
+    },
+    {
+      "position": 28,
+      "phrase": "محاکمه گالیله توسط کلیسای کاتولیک",
+      "reference": 99,
+      "band": "near",
+      "score": 95.54,
+      "rawScore": 3.86,
+      "historyCount": 27
+    },
+    {
+      "position": 76,
+      "phrase": "محاکمه دانشمند گالیله",
+      "reference": 96,
+      "band": "near",
+      "score": 95.54,
+      "rawScore": 3.86,
+      "historyCount": 75
+    },
+    {
+      "position": 97,
+      "phrase": "گالیله و محاکمه‌اش",
+      "reference": 98,
+      "band": "near",
+      "score": 95.54,
+      "rawScore": 3.86,
+      "historyCount": 96
+    },
+    {
+      "position": 48,
+      "phrase": "دادگاه گالیلئو گالیله",
+      "reference": 99,
+      "band": "near",
+      "score": 93.06,
+      "rawScore": 3.76,
+      "historyCount": 47
+    },
+    {
+      "position": 39,
+      "phrase": "اتهام‌زنی به گالیله در دادگاه",
+      "reference": 87,
+      "band": "near",
+      "score": 92.32,
+      "rawScore": 3.73,
+      "historyCount": 38
+    },
+    {
+      "position": 70,
+      "phrase": "محاکمه گالیله به اتهام بدعت",
+      "reference": 93,
+      "band": "near",
+      "score": 92.32,
+      "rawScore": 3.73,
+      "historyCount": 69
+    },
+    {
+      "position": 74,
+      "phrase": "گالیله در برابر تفتیش عقاید",
+      "reference": 94,
+      "band": "near",
+      "score": 91.82,
+      "rawScore": 3.71,
+      "historyCount": 73
+    },
+    {
+      "position": 71,
+      "phrase": "دادگاه تفتیش عقاید برای گالیله",
+      "reference": 96,
+      "band": "near",
+      "score": 91.58,
+      "rawScore": 3.7,
+      "historyCount": 70
+    },
+    {
+      "position": 3,
+      "phrase": "محاکمه گالیله در رم",
+      "reference": 97,
+      "band": "near",
+      "score": 91.33,
+      "rawScore": 3.69,
+      "historyCount": 2
+    },
+    {
+      "position": 30,
+      "phrase": "دادگاه کلیسایی گالیله",
+      "reference": 95,
+      "band": "near",
+      "score": 91.33,
+      "rawScore": 3.69,
+      "historyCount": 29
+    },
+    {
+      "position": 13,
+      "phrase": "گالیله در برابر دادگاه",
+      "reference": 87,
+      "band": "near",
+      "score": 90.59,
+      "rawScore": 3.66,
+      "historyCount": 12
+    },
+    {
+      "position": 79,
+      "phrase": "گالیله در دادگاه",
+      "reference": 94,
+      "band": "near",
+      "score": 90.34,
+      "rawScore": 3.65,
+      "historyCount": 78
+    },
+    {
+      "position": 85,
+      "phrase": "گالیله در برابر کلیسای کاتولیک",
+      "reference": 85,
+      "band": "near",
+      "score": 90.34,
+      "rawScore": 3.65,
+      "historyCount": 84
+    },
+    {
+      "position": 38,
+      "phrase": "دادگاه گالیله",
+      "reference": 98,
+      "band": "near",
+      "score": 90.09,
+      "rawScore": 3.64,
+      "historyCount": 37
+    },
+    {
+      "position": 78,
+      "phrase": "محاکمه گالیله به جرم دفاع از کوپرنیک",
+      "reference": 90,
+      "band": "near",
+      "score": 88.61,
+      "rawScore": 3.58,
+      "historyCount": 77
+    },
+    {
+      "position": 88,
+      "phrase": "محاکمه دانشمند به‌خاطر نظریه خورشیدمرکزی",
+      "reference": 87,
+      "band": "near",
+      "score": 86.13,
+      "rawScore": 3.48,
+      "historyCount": 87
+    },
+    {
+      "position": 92,
+      "phrase": "دادگاه دانشمند ایتالیایی در رم",
+      "reference": 83,
+      "band": "near",
+      "score": 84.89,
+      "rawScore": 3.43,
+      "historyCount": 91
+    },
+    {
+      "position": 27,
+      "phrase": "حکم دادگاه علیه گالیله",
+      "reference": 83,
+      "band": "near",
+      "score": 79.94,
+      "rawScore": 3.23,
+      "historyCount": 26
+    },
+    {
+      "position": 52,
+      "phrase": "بازجویی گالیله توسط تفتیش عقاید",
+      "reference": 89,
+      "band": "near",
+      "score": 79.2,
+      "rawScore": 3.2,
+      "historyCount": 51
+    },
+    {
+      "position": 50,
+      "phrase": "محاکمه نظریه‌پرداز خورشیدمرکزی",
+      "reference": 84,
+      "band": "near",
+      "score": 78.95,
+      "rawScore": 3.19,
+      "historyCount": 49
+    },
+    {
+      "position": 26,
+      "phrase": "محکومیت گالیله به‌دست کلیسا",
+      "reference": 91,
+      "band": "near",
+      "score": 78.71,
+      "rawScore": 3.18,
+      "historyCount": 25
+    },
+    {
+      "position": 63,
+      "phrase": "گالیله و محکومیت او",
+      "reference": 78,
+      "band": "near",
+      "score": 76.23,
+      "rawScore": 3.08,
+      "historyCount": 62
+    },
+    {
+      "position": 37,
+      "phrase": "محاکمه یک ستاره‌شناس به‌دلیل یافته‌هایش",
+      "reference": 82,
+      "band": "near",
+      "score": 74.75,
+      "rawScore": 3.02,
+      "historyCount": 36
+    },
+    {
+      "position": 51,
+      "phrase": "تفتیش عقاید گالیله",
+      "reference": 89,
+      "band": "near",
+      "score": 74.5,
+      "rawScore": 3.01,
+      "historyCount": 50
+    },
+    {
+      "position": 33,
+      "phrase": "محاکمه علمی در برابر کلیسا",
+      "reference": 75,
+      "band": "related",
+      "score": 72.77,
+      "rawScore": 2.94,
+      "historyCount": 32
+    },
+    {
+      "position": 61,
+      "phrase": "گالیله و تفتیش عقاید",
+      "reference": 82,
+      "band": "near",
+      "score": 72.52,
+      "rawScore": 2.93,
+      "historyCount": 60
+    },
+    {
+      "position": 75,
+      "phrase": "محاکمه به جرم بدعت",
+      "reference": 68,
+      "band": "related",
+      "score": 67.07,
+      "rawScore": 2.71,
+      "historyCount": 74
+    },
+    {
+      "position": 9,
+      "phrase": "محاکمه دانشمندان به‌دست کلیسا",
+      "reference": 72,
+      "band": "related",
+      "score": 65.84,
+      "rawScore": 2.66,
+      "historyCount": 8
+    },
+    {
+      "position": 64,
+      "phrase": "دادگاه انکیزیسیون",
+      "reference": 58,
+      "band": "related",
+      "score": 65.09,
+      "rawScore": 2.63,
+      "historyCount": 63
+    },
+    {
+      "position": 29,
+      "phrase": "علم در برابر کلیسا",
+      "reference": 53,
+      "band": "related",
+      "score": 64.6,
+      "rawScore": 2.61,
+      "historyCount": 28
+    },
+    {
+      "position": 31,
+      "phrase": "گالیله مجبور به انکار نظریه‌اش شد",
+      "reference": 78,
+      "band": "near",
+      "score": 63.61,
+      "rawScore": 2.57,
+      "historyCount": 30
+    },
+    {
+      "position": 19,
+      "phrase": "دادگاه قرون وسطایی دانشمند",
+      "reference": 64,
+      "band": "related",
+      "score": 62.37,
+      "rawScore": 2.52,
+      "historyCount": 18
+    },
+    {
+      "position": 14,
+      "phrase": "گالیله و کلیسا",
+      "reference": 70,
+      "band": "related",
+      "score": 61.13,
+      "rawScore": 2.47,
+      "historyCount": 13
+    },
+    {
+      "position": 6,
+      "phrase": "محاکمه",
+      "reference": 18,
+      "band": "related",
+      "score": 60.14,
+      "rawScore": 2.43,
+      "historyCount": 5
+    },
+    {
+      "position": 8,
+      "phrase": "دادگاه عقیدتی",
+      "reference": 56,
+      "band": "related",
+      "score": 59.4,
+      "rawScore": 2.4,
+      "historyCount": 7
+    },
+    {
+      "position": 41,
+      "phrase": "دادگاه رم",
+      "reference": 31,
+      "band": "related",
+      "score": 56.43,
+      "rawScore": 2.28,
+      "historyCount": 40
+    },
+    {
+      "position": 82,
+      "phrase": "دادگاه در واتیکان",
+      "reference": 28,
+      "band": "related",
+      "score": 56.43,
+      "rawScore": 2.28,
+      "historyCount": 81
+    },
+    {
+      "position": 12,
+      "phrase": "گالیله",
+      "reference": 54,
+      "band": "related",
+      "score": 54.45,
+      "rawScore": 2.2,
+      "historyCount": 11
+    },
+    {
+      "position": 17,
+      "phrase": "تفتیش عقاید",
+      "reference": 55,
+      "band": "related",
+      "score": 53.21,
+      "rawScore": 2.15,
+      "historyCount": 16
+    },
+    {
+      "position": 72,
+      "phrase": "انکار نظریه خورشیدمرکزی توسط گالیله",
+      "reference": 72,
+      "band": "related",
+      "score": 51.73,
+      "rawScore": 2.09,
+      "historyCount": 71
+    },
+    {
+      "position": 83,
+      "phrase": "محاکمه اخترشناس ایتالیایی",
+      "reference": 88,
+      "band": "near",
+      "score": 51.23,
+      "rawScore": 2.07,
+      "historyCount": 82
+    },
+    {
+      "position": 66,
+      "phrase": "دادگاه",
+      "reference": 23,
+      "band": "related",
+      "score": 50,
+      "rawScore": 2.02,
+      "historyCount": 65
+    },
+    {
+      "position": 73,
+      "phrase": "محکومیت دانشمند",
+      "reference": 50,
+      "band": "related",
+      "score": 50,
+      "rawScore": 2.02,
+      "historyCount": 72
+    },
+    {
+      "position": 60,
+      "phrase": "کلیسای کاتولیک",
+      "reference": 42,
+      "band": "related",
+      "score": 48.26,
+      "rawScore": 1.95,
+      "historyCount": 59
+    },
+    {
+      "position": 67,
+      "phrase": "پاپ و دانشمند ایتالیایی",
+      "reference": 49,
+      "band": "related",
+      "score": 48.02,
+      "rawScore": 1.94,
+      "historyCount": 66
+    },
+    {
+      "position": 65,
+      "phrase": "دادگاه تاریخی",
+      "reference": 34,
+      "band": "related",
+      "score": 47.77,
+      "rawScore": 1.93,
+      "historyCount": 64
+    },
+    {
+      "position": 56,
+      "phrase": "گالیلئو گالیله",
+      "reference": 55,
+      "band": "related",
+      "score": 47.27,
+      "rawScore": 1.91,
+      "historyCount": 55
+    },
+    {
+      "position": 99,
+      "phrase": "نزاع علم و دین",
+      "reference": 58,
+      "band": "related",
+      "score": 46.78,
+      "rawScore": 1.89,
+      "historyCount": 98
+    },
+    {
+      "position": 32,
+      "phrase": "محاکمه برونو",
+      "reference": 32,
+      "band": "related",
+      "score": 44.55,
+      "rawScore": 1.8,
+      "historyCount": 31
+    },
+    {
+      "position": 1,
+      "phrase": "خورشیدمرکزی",
+      "reference": 37,
+      "band": "related",
+      "score": 44.3,
+      "rawScore": 1.79,
+      "historyCount": 0
+    },
+    {
+      "position": 34,
+      "phrase": "اعتراف در دادگاه",
+      "reference": 14,
+      "band": "related",
+      "score": 44.06,
+      "rawScore": 1.78,
+      "historyCount": 33
+    },
+    {
+      "position": 59,
+      "phrase": "نظریه خورشیدمرکزی",
+      "reference": 43,
+      "band": "related",
+      "score": 43.07,
+      "rawScore": 1.74,
+      "historyCount": 58
+    },
+    {
+      "position": 89,
+      "phrase": "محاکمه تاریخی",
+      "reference": 29,
+      "band": "related",
+      "score": 42.57,
+      "rawScore": 1.72,
+      "historyCount": 88
+    },
+    {
+      "position": 57,
+      "phrase": "اعتراف اجباری",
+      "reference": 35,
+      "band": "related",
+      "score": 42.32,
+      "rawScore": 1.71,
+      "historyCount": 56
+    },
+    {
+      "position": 25,
+      "phrase": "نظریه کوپرنیک",
+      "reference": 39,
+      "band": "related",
+      "score": 40.34,
+      "rawScore": 1.63,
+      "historyCount": 24
+    },
+    {
+      "position": 2,
+      "phrase": "ایتالیا در دوره رنسانس",
+      "reference": 20,
+      "band": "related",
+      "score": 38.12,
+      "rawScore": 1.54,
+      "historyCount": 1
+    },
+    {
+      "position": 7,
+      "phrase": "تلسکوپ گالیله",
+      "reference": 33,
+      "band": "related",
+      "score": 38.12,
+      "rawScore": 1.54,
+      "historyCount": 6
+    },
+    {
+      "position": 16,
+      "phrase": "پاپ اوربان هشتم",
+      "reference": 48,
+      "band": "related",
+      "score": 37.62,
+      "rawScore": 1.52,
+      "historyCount": 15
+    },
+    {
+      "position": 5,
+      "phrase": "اخترشناس ایتالیایی",
+      "reference": 35,
+      "band": "related",
+      "score": 36.88,
+      "rawScore": 1.49,
+      "historyCount": 4
+    },
+    {
+      "position": 22,
+      "phrase": "مذهب و سیاست",
+      "reference": 17,
+      "band": "related",
+      "score": 36.88,
+      "rawScore": 1.49,
+      "historyCount": 21
+    },
+    {
+      "position": 91,
+      "phrase": "سانسور علمی در اروپا",
+      "reference": 47,
+      "band": "related",
+      "score": 34.9,
+      "rawScore": 1.41,
+      "historyCount": 90
+    },
+    {
+      "position": 55,
+      "phrase": "تاریخ کلیسا",
+      "reference": 18,
+      "band": "related",
+      "score": 34.65,
+      "rawScore": 1.4,
+      "historyCount": 54
+    },
+    {
+      "position": 93,
+      "phrase": "اروپای قرن هفدهم",
+      "reference": 21,
+      "band": "related",
+      "score": 33.66,
+      "rawScore": 1.36,
+      "historyCount": 92
+    },
+    {
+      "position": 11,
+      "phrase": "وکیل مدافع",
+      "reference": 9,
+      "band": "far",
+      "score": 33.41,
+      "rawScore": 1.35,
+      "historyCount": 10
+    },
+    {
+      "position": 86,
+      "phrase": "محاکمه سقراط",
+      "reference": 27,
+      "band": "related",
+      "score": 33.41,
+      "rawScore": 1.35,
+      "historyCount": 85
+    },
+    {
+      "position": 45,
+      "phrase": "مشاهدات نجومی گالیله",
+      "reference": 41,
+      "band": "related",
+      "score": 32.67,
+      "rawScore": 1.32,
+      "historyCount": 44
+    },
+    {
+      "position": 95,
+      "phrase": "قاضی",
+      "reference": 8,
+      "band": "far",
+      "score": 32.42,
+      "rawScore": 1.31,
+      "historyCount": 94
+    },
+    {
+      "position": 90,
+      "phrase": "ستاره‌شناس",
+      "reference": 28,
+      "band": "related",
+      "score": 31.43,
+      "rawScore": 1.27,
+      "historyCount": 89
+    },
+    {
+      "position": 24,
+      "phrase": "کوپرنیک",
+      "reference": 35,
+      "band": "related",
+      "score": 30.69,
+      "rawScore": 1.24,
+      "historyCount": 23
+    },
+    {
+      "position": 49,
+      "phrase": "دانشمند ایتالیایی",
+      "reference": 33,
+      "band": "related",
+      "score": 30.69,
+      "rawScore": 1.24,
+      "historyCount": 48
+    },
+    {
+      "position": 36,
+      "phrase": "زندان",
+      "reference": 5,
+      "band": "far",
+      "score": 28.96,
+      "rawScore": 1.17,
+      "historyCount": 35
+    },
+    {
+      "position": 58,
+      "phrase": "آزادی اندیشه",
+      "reference": 20,
+      "band": "related",
+      "score": 28.96,
+      "rawScore": 1.17,
+      "historyCount": 57
+    },
+    {
+      "position": 84,
+      "phrase": "زمین‌مرکزی",
+      "reference": 29,
+      "band": "related",
+      "score": 28.71,
+      "rawScore": 1.16,
+      "historyCount": 83
+    },
+    {
+      "position": 47,
+      "phrase": "مبارزه با سانسور",
+      "reference": 18,
+      "band": "related",
+      "score": 27.97,
+      "rawScore": 1.13,
+      "historyCount": 46
+    },
+    {
+      "position": 81,
+      "phrase": "انقلاب علمی",
+      "reference": 25,
+      "band": "related",
+      "score": 27.97,
+      "rawScore": 1.13,
+      "historyCount": 80
+    },
+    {
+      "position": 68,
+      "phrase": "جوردانو برونو",
+      "reference": 29,
+      "band": "related",
+      "score": 27.47,
+      "rawScore": 1.11,
+      "historyCount": 67
+    },
+    {
+      "position": 53,
+      "phrase": "فیزیک‌دان ایتالیایی",
+      "reference": 30,
+      "band": "related",
+      "score": 26.98,
+      "rawScore": 1.09,
+      "historyCount": 52
+    },
+    {
+      "position": 62,
+      "phrase": "تاریخ علم",
+      "reference": 24,
+      "band": "related",
+      "score": 25.74,
+      "rawScore": 1.04,
+      "historyCount": 61
+    },
+    {
+      "position": 40,
+      "phrase": "تاریخ نجوم",
+      "reference": 22,
+      "band": "related",
+      "score": 25.49,
+      "rawScore": 1.03,
+      "historyCount": 39
+    },
+    {
+      "position": 94,
+      "phrase": "علم نجوم",
+      "reference": 20,
+      "band": "related",
+      "score": 25.25,
+      "rawScore": 1.02,
+      "historyCount": 93
+    },
+    {
+      "position": 69,
+      "phrase": "محاکمه ژاندارک",
+      "reference": 25,
+      "band": "related",
+      "score": 25,
+      "rawScore": 1.01,
+      "historyCount": 68
+    },
+    {
+      "position": 35,
+      "phrase": "رصد آسمان",
+      "reference": 19,
+      "band": "related",
+      "score": 23.76,
+      "rawScore": 0.96,
+      "historyCount": 34
+    },
+    {
+      "position": 80,
+      "phrase": "رنسانس",
+      "reference": 16,
+      "band": "related",
+      "score": 22.28,
+      "rawScore": 0.9,
+      "historyCount": 79
+    },
+    {
+      "position": 18,
+      "phrase": "فیزیک",
+      "reference": 13,
+      "band": "related",
+      "score": 22.03,
+      "rawScore": 0.89,
+      "historyCount": 17
+    },
+    {
+      "position": 46,
+      "phrase": "زندانی سیاسی",
+      "reference": 13,
+      "band": "far",
+      "score": 21.04,
+      "rawScore": 0.85,
+      "historyCount": 45
+    },
+    {
+      "position": 10,
+      "phrase": "قانون جاذبه",
+      "reference": 8,
+      "band": "far",
+      "score": 19.06,
+      "rawScore": 0.77,
+      "historyCount": 9
+    },
+    {
+      "position": 15,
+      "phrase": "هنر ایتالیایی",
+      "reference": 8,
+      "band": "far",
+      "score": 18.07,
+      "rawScore": 0.73,
+      "historyCount": 14
+    },
+    {
+      "position": 87,
+      "phrase": "کپلر",
+      "reference": 22,
+      "band": "related",
+      "score": 18.07,
+      "rawScore": 0.73,
+      "historyCount": 86
+    },
+    {
+      "position": 77,
+      "phrase": "سیاره مشتری",
+      "reference": 8,
+      "band": "far",
+      "score": 17.82,
+      "rawScore": 0.72,
+      "historyCount": 76
+    },
+    {
+      "position": 20,
+      "phrase": "ماه",
+      "reference": 4,
+      "band": "far",
+      "score": 12.62,
+      "rawScore": 0.51,
+      "historyCount": 19
+    },
+    {
+      "position": 44,
+      "phrase": "ستاره دنباله‌دار",
+      "reference": 8,
+      "band": "far",
+      "score": 10.89,
+      "rawScore": 0.44,
+      "historyCount": 43
+    },
+    {
+      "position": 42,
+      "phrase": "نقاشی رنسانس",
+      "reference": 9,
+      "band": "far",
+      "score": 9.16,
+      "rawScore": 0.37,
+      "historyCount": 41
+    },
+    {
+      "position": 4,
+      "phrase": "باغ انار",
+      "reference": 0,
+      "band": "unrelated",
+      "score": 3.96,
+      "rawScore": 0.16,
+      "historyCount": 3
+    },
+    {
+      "position": 23,
+      "phrase": "آزمایشگاه شیمی",
+      "reference": 6,
+      "band": "far",
+      "score": 3.22,
+      "rawScore": 0.13,
+      "historyCount": 22
+    },
+    {
+      "position": 98,
+      "phrase": "موسیقی کلاسیک",
+      "reference": 2,
+      "band": "far",
+      "score": 2.23,
+      "rawScore": 0.09,
+      "historyCount": 97
+    },
+    {
+      "position": 96,
+      "phrase": "جنگ جهانی دوم",
+      "reference": 1,
+      "band": "far",
+      "score": 0.5,
+      "rawScore": 0.02,
+      "historyCount": 95
+    }
+  ]
+}

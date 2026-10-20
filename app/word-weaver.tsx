@@ -3,6 +3,10 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { remainingWordWeaverSeconds, sampleWordWeaverClock, type WordWeaverClock } from "@/lib/word-weaver-clock";
 import { sessionRequest } from "@/lib/client-session";
+import { useOnlineUsers } from "@/lib/use-online-users";
+import OnlineAvatar from "./online-avatar";
+import { avatarImageUrl } from "@/lib/avatar-url";
+import { useBackHandler } from "./back-navigation";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 type Actor = { id: string; displayName: string; photoUrl: string | null; isBot: boolean };
@@ -36,23 +40,24 @@ async function request<T>(url: string, init?: RequestInit): Promise<T> {
   return payload as T;
 }
 
-function Avatar({ photoUrl, isBot = false }: { photoUrl: string | null; isBot?: boolean }) {
-  return photoUrl
-    ? <img className="word-weaver-avatar" src={photoUrl} alt="" />
-    : <span className="word-weaver-avatar word-weaver-avatar-fallback">{isBot ? "✦" : "👤"}</span>;
+function Avatar({ userId, photoUrl, isBot = false, online = false }: { userId: string; photoUrl: string | null; isBot?: boolean; online?: boolean }) {
+  return <OnlineAvatar online={online && !isBot}>
+    {photoUrl ? <img className="word-weaver-avatar" src={avatarImageUrl(userId, photoUrl) || ""} alt="" /> : <span className="word-weaver-avatar word-weaver-avatar-fallback">{isBot ? "✦" : "👤"}</span>}
+  </OnlineAvatar>;
 }
 
-function Player({ actor, onOpenProfile, own = false }: { actor: Actor; onOpenProfile: (id: string) => void; own?: boolean }) {
-  const content = <><Avatar photoUrl={actor.photoUrl} isBot={actor.isBot}/><b>{actor.displayName}</b>{actor.isBot && <small className="word-weaver-bot-badge">بات</small>}{own && <small>نوشتهٔ تو</small>}</>;
+function Player({ actor, onOpenProfile, own = false, online = false }: { actor: Actor; onOpenProfile: (id: string) => void; own?: boolean; online?: boolean }) {
+  const content = <><Avatar userId={actor.id} photoUrl={actor.photoUrl} isBot={actor.isBot} online={online}/><b>{actor.displayName}</b>{actor.isBot && <small className="word-weaver-bot-badge">بات</small>}{own && <small>نوشتهٔ تو</small>}</>;
   return actor.isBot
     ? <div className="word-weaver-player" title="نویسندهٔ هوش مصنوعی، با الهام از سبک نویسنده">{content}</div>
     : <button className="word-weaver-player" onClick={() => onOpenProfile(actor.id)}>{content}</button>;
 }
 
 export default function WordWeaver({
-  user, onExit, onOpenProfile, setError,
+  user, onExit, onOpenProfile, setError, registerLeave,
 }: {
   user: { id: string | number; photo_url?: string; photoUrl?: string; first_name?: string; firstName?: string };
+  registerLeave?: (handler: (() => Promise<void>) | null) => void;
   onExit: () => void; onOpenProfile: (userId: string) => void; setError: (message: string) => void;
 }) {
   const [room, setRoom] = useState<RoomState | null>(null);
@@ -166,6 +171,10 @@ export default function WordWeaver({
     try { await post("leave", { clientId: clientId.current }); } catch { /* presence expires when the request cannot reach the server */ }
     onExit();
   };
+  useEffect(() => {
+    registerLeave?.(async () => { await post("leave", { clientId: clientId.current }); onExit(); });
+    return () => registerLeave?.(null);
+  });
   const closeHelp = async () => {
     if (helpSaving) return;
     setHelpSaving(true);
@@ -180,8 +189,15 @@ export default function WordWeaver({
     }
   };
   const writeSeconds = remainingWordWeaverSeconds(room?.round?.writeDeadline || null, serverClock.current, clientNow);
+  useBackHandler(showHelp ? closeHelp : leave, true, showHelp ? 30 : 10);
   const resultSeconds = remainingWordWeaverSeconds(room?.round?.revealUntil || null, serverClock.current, clientNow);
   const joinedName = useMemo(() => user.first_name || user.firstName || "پروفایل من", [user.firstName, user.first_name]);
+  const onlineIds = useOnlineUsers([
+    String(user.id),
+    ...(room?.round?.submittedEntries.map((entry) => entry.user.isBot ? null : entry.user.id) || []),
+    room?.latestResult?.winner?.isBot ? null : room?.latestResult?.winner?.id,
+    ...results.map((result) => result.user.isBot ? null : result.user.id)
+  ]);
 
   return (
     <section className="word-weaver-screen" dir="rtl">
@@ -190,7 +206,7 @@ export default function WordWeaver({
         <div><small>اتاق عمومی · {room?.playersCount?.toLocaleString("fa-IR") || "۰"} نفر حاضر</small><h1>واژه‌باف</h1></div>
         <div className="word-weaver-heading-actions">
           <button className="word-weaver-help-button" onClick={() => setShowHelp(true)} aria-label="راهنمای واژه‌باف">?</button>
-          <button className="word-weaver-own-profile" onClick={() => onOpenProfile(String(user.id))} aria-label={"پروفایل " + joinedName}><Avatar photoUrl={user.photo_url || user.photoUrl || null} /></button>
+          <button className="word-weaver-own-profile" onClick={() => onOpenProfile(String(user.id))} aria-label={"پروفایل " + joinedName}><Avatar userId={String(user.id)} photoUrl={user.photo_url || user.photoUrl || null} online={onlineIds.has(String(user.id))} /></button>
         </div>
       </div>
 
@@ -236,7 +252,7 @@ export default function WordWeaver({
           <h2 className="word-weaver-feed-title">ثبت پاسخ‌ها</h2>
           {room.round.submittedEntries.length ? <div className="word-weaver-result-list">{room.round.submittedEntries.map((entry) => (
             <article className="word-weaver-result word-weaver-live-entry" key={entry.id}>
-              <Player actor={entry.user} onOpenProfile={onOpenProfile} own={entry.user.id === String(user.id)}/>
+              <Player actor={entry.user} onOpenProfile={onOpenProfile} own={entry.user.id === String(user.id)} online={onlineIds.has(entry.user.id)}/>
               <p>{entry.text}</p>
             </article>
           ))}</div> : <div className="empty-state">هنوز کسی پاسخش را ثبت نکرده است.</div>}
@@ -245,9 +261,9 @@ export default function WordWeaver({
 
       {room?.latestResult && (
         <section className="word-weaver-results">
-          <div className="word-weaver-results-heading"><div><small>{room.latestResult.missionTitle} · سه پاسخ برتر و پاسخ تو</small><h2>{room.latestResult.missionPrompt}</h2></div>{room.latestResult.winner ? <button className="word-weaver-winner" disabled={room.latestResult.winner.isBot} onClick={() => onOpenProfile(room.latestResult!.winner!.id)}><Avatar photoUrl={room.latestResult.winner.photoUrl} isBot={room.latestResult.winner.isBot}/><span><small>{room.latestResult.winner.isBot ? "برنده · بات" : "برنده"}</small><b>{room.latestResult.winner.displayName}</b></span></button> : <span className="word-weaver-no-winner">این دور برنده نداشت</span>}</div>
+          <div className="word-weaver-results-heading"><div><small>{room.latestResult.missionTitle} · سه پاسخ برتر و پاسخ تو</small><h2>{room.latestResult.missionPrompt}</h2></div>{room.latestResult.winner ? <button className="word-weaver-winner" disabled={room.latestResult.winner.isBot} onClick={() => onOpenProfile(room.latestResult!.winner!.id)}><Avatar userId={room.latestResult.winner.id} photoUrl={room.latestResult.winner.photoUrl} isBot={room.latestResult.winner.isBot} online={onlineIds.has(room.latestResult.winner.id)}/><span><small>{room.latestResult.winner.isBot ? "برنده · بات" : "برنده"}</small><b>{room.latestResult.winner.displayName}</b></span></button> : <span className="word-weaver-no-winner">این دور برنده نداشت</span>}</div>
           {loadedResultId === resultRoundId && results.length ? <div className="word-weaver-result-list">{results.map((result) => <article className={"word-weaver-result " + (result.isWinner ? "is-winner" : "")} key={result.id}>
-            <div className="word-weaver-result-top"><Player actor={result.user} onOpenProfile={onOpenProfile}/>{result.score === null ? <span className="word-weaver-failed">{result.failureMessage || "داوری انجام نشد"}</span> : <strong>{result.score.toLocaleString("fa-IR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong>}</div>
+            <div className="word-weaver-result-top"><Player actor={result.user} onOpenProfile={onOpenProfile} online={onlineIds.has(result.user.id)}/>{result.score === null ? <span className="word-weaver-failed">{result.failureMessage || "داوری انجام نشد"}</span> : <strong>{result.score.toLocaleString("fa-IR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong>}</div>
             <p>{result.text}</p>{result.score !== null && <div className="word-weaver-metrics"><span>اجرای مأموریت <b>{result.relevanceScore?.toLocaleString("fa-IR", { maximumFractionDigits: 1 })}</b></span><span>تازگی <b>{result.originalityScore?.toLocaleString("fa-IR", { maximumFractionDigits: 1 })}</b></span><span>دقت معنا <b>{result.expressionScore?.toLocaleString("fa-IR", { maximumFractionDigits: 1 })}</b></span></div>}{result.isMe && result.feedback && <small className="word-weaver-feedback">{result.feedback}</small>}
             <small aria-label="رتبه" className="word-weaver-rank">{result.rank === null ? "—" : result.rank.toLocaleString("fa-IR")}</small>{result.isMe && <small className="word-weaver-mine-label">نوشتهٔ تو</small>}
           </article>)}</div> : <div className="empty-state">{loadedResultId === resultRoundId ? "این دور نوشته‌ای برای نمایش ندارد." : "در حال دریافت نتیجه‌ها…"}</div>}

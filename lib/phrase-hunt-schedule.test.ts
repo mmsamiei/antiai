@@ -37,6 +37,15 @@ describe("Tehran twice-daily phrase challenge", () => {
     expect(isCurrentPhraseChallenge("2026-10-18T18:30:00.000Z", new Date("2026-10-18T18:45:00Z"))).toBe(false);
     expect(isCurrentPhraseChallenge("2026-10-18T19:30:00.000Z", new Date("2026-10-18T19:30:00Z"))).toBe(true);
   });
+  it("delays the 2026-10-20 evening challenge to 22:25 Tehran", () => {
+    const before = phraseChallengeWindow(new Date("2026-10-20T18:54:59.999Z"));
+    expect(before.id).toBe("2026-10-20T06:30:00.000Z");
+    expect(before.endsAt.toISOString()).toBe("2026-10-20T18:55:00.000Z");
+    const atStart = phraseChallengeWindow(new Date("2026-10-20T18:55:00.000Z"));
+    expect(atStart.id).toBe("2026-10-20T18:55:00.000Z");
+    expect(atStart.endsAt.toISOString()).toBe("2026-10-21T06:30:00.000Z");
+    expect(isCurrentPhraseChallenge("2026-10-20T18:30:00.000Z", new Date("2026-10-20T18:55:00.000Z"))).toBe(false);
+  });
   it("rejects old future slot IDs after the switch", () => {
     expect(isCurrentPhraseChallenge("2026-10-17T20:30:00.000Z", new Date("2026-10-17T21:00:00Z"))).toBe(false);
     expect(phraseChallengeTimes("2026-10-16T08:30:00.000Z").endsAt.toISOString()).toBe("2026-10-16T20:30:00.000Z");

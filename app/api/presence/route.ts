@@ -4,7 +4,7 @@ import { prisma } from "@/lib/prisma";
 
 export const dynamic = "force-dynamic";
 
-const ONLINE_WINDOW_MS = 50_000;
+const ONLINE_WINDOW_MS = 20_000;
 const DUEL_WAITING_WINDOW_MS = 30_000;
 
 export async function POST(request: Request) {
@@ -23,7 +23,7 @@ export async function POST(request: Request) {
       update: { isPlaying, lastSeenAt: now }
     }),
     prisma.onlinePresence.count({
-      where: { isPlaying: true, lastSeenAt: { gte: onlineSince } }
+      where: { lastSeenAt: { gte: onlineSince } }
     })
   ]);
 

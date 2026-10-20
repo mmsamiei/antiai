@@ -15,7 +15,8 @@
     "db:migrate": "prisma migrate deploy",
     "data:letter-duel": "node scripts/generate-letter-duel-lexicon.mjs",
     "data:country-descriptions": "node scripts/generate-country-descriptions.mjs",
-    "test:word-weaver-integration": "tsx scripts/test-word-weaver-integration.ts"
+    "test:word-weaver-integration": "tsx scripts/test-word-weaver-integration.ts",
+    "test:duel-invites-integration": "tsx scripts/test-duel-invites-integration.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.16.2",

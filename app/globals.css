@@ -99,6 +99,29 @@ input {
   place-items: center;
   background: #1b2540;
 }
+.online-avatar {
+  position: relative;
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: fit-content;
+  line-height: 0;
+}
+.leaderboard-heading { display: flex; align-items: center; gap: 12px; }
+.leaderboard-heading > div { flex: 1; }
+.online-avatar-dot {
+  position: absolute;
+  inset-inline-end: -2px;
+  bottom: -1px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #101726;
+  border-radius: 50%;
+  background: #35d58a;
+  box-shadow: 0 0 0 1px #35d58a55;
+}
+.online-avatar > span:not(.online-avatar-dot) { line-height: normal; }
+.profile-online-avatar .online-avatar-dot { width: 17px; height: 17px; border-width: 3px; }
 .profile-avatar-trigger {
   display: grid;
   place-items: center;
@@ -721,8 +744,8 @@ input {
   place-items: center;
   border-radius: 50%;
 }
-.leader-avatar-button img,
-.leader-avatar-button .mini-avatar {
+.leader-avatar-button .online-avatar > img,
+.leader-avatar-button .online-avatar > .mini-avatar {
   width: 34px;
   height: 34px;
   border-radius: 50%;
@@ -1432,8 +1455,9 @@ input {
   text-align: right;
   cursor: pointer;
 }
-.duel-profile-trigger img,
-.duel-profile-trigger > span {
+.duel-online-avatar { grid-column: 1; grid-row: 1/3; }
+.duel-online-avatar > img,
+.duel-online-avatar > span:not(.online-avatar-dot) {
   grid-column: 1;
   grid-row: 1/3;
   width: 38px;
@@ -1599,6 +1623,7 @@ input {
 .word-weaver-inline-error { width: 100%; margin-top: 10px; padding: 9px; border: 1px solid #713b4b; border-radius: 11px; background: #28151f; color: #ffb8c8; font-size: 11px; }
 .word-weaver-screen button:focus-visible { outline: 2px solid #b7a2ff; outline-offset: 2px; }
 .profile-identity > img,
+.profile-online-avatar > img,
 .profile-avatar-fallback {
   display: grid;
   place-items: center;
@@ -1614,7 +1639,7 @@ input {
   margin: 7px 0 0;
   font-size: 20px;
 }
-.profile-identity > span {
+.profile-identity > span:not(.online-avatar) {
   color: var(--muted);
   font-size: 12px;
 }
@@ -1855,3 +1880,42 @@ input {
 .leader-best-guess { margin: 5px 0 0; font-size: .85rem; overflow-wrap: anywhere; white-space: pre-wrap; }
 
 .leader-toggle.leader-three-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+/* Players and direct invitations */
+.bottom-nav { grid-template-columns: repeat(3, 1fr); }
+.players-page { padding: 16px 0 90px; }
+.players-heading { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.players-heading h1 { margin: 0; font-size: 24px; }
+.players-heading p, .players-hint { color: #99a6c5; font-size: 13px; }
+.players-tabs { display: flex; gap: 8px; margin-bottom: 16px; background: #11182a; border-radius: 16px; padding: 5px; }
+.players-tabs button { flex: 1; background: transparent; border: 0; border-radius: 12px; padding: 12px; color: #9ba8c7; }
+.players-tabs button.active { background: #30264f; color: #e3d8ff; }
+.players-search { width: 100%; padding: 14px; border-radius: 14px; background: #10182a; border: 1px solid #2d3955; color: #edf1ff; }
+.player-card, .invite-card { background: linear-gradient(135deg, #172037, #101628); border: 1px solid #293551; border-radius: 18px; padding: 14px; margin-bottom: 10px; }
+.player-card { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.player-card > .secondary { padding: 10px; font-size: 12px; flex-shrink: 0; }
+.player-identity { display: flex; align-items: center; gap: 12px; color: inherit; border: 0; background: none; text-align: start; min-width: 0; padding: 0; }
+.player-identity > span:last-child { display: grid; gap: 4px; min-width: 0; }
+.player-identity b { overflow-wrap: anywhere; }
+.player-identity small { font-size: 11px; color: #a0afcc; }
+.players-avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.players-fallback { display: grid; place-items: center; background: #28334c; }
+.players-pagination { display: flex; justify-content: center; align-items: center; gap: 18px; margin-top: 16px; }
+.invite-preference { display: flex; align-items: center; gap: 10px; padding: 14px; margin-bottom: 15px; background: #121b2e; border-radius: 14px; }
+.invite-preference input { accent-color: #ac8eff; width: 20px; height: 20px; }
+.invite-actions { display: flex; gap: 10px; margin-top: 12px; }
+.invite-actions button { flex: 1; padding: 10px; }
+.invite-status { display: inline-block; margin: 10px 0; font-size: 12px; color: #c4aaff; }
+.invite-card p, .invite-card > small { color: #a6b3d0; font-size: 12px; }
+.invite-badge { display: inline-grid; place-items: center; min-width: 18px; height: 18px; border-radius: 10px; background: #a485ed; color: #0a1020; font-size: 11px; padding: 0 4px; }
+.bottom-nav button { position: relative; }
+.bottom-nav .invite-badge { position: absolute; top: -3px; margin-inline-start: 35px; }
+.invitation-banner { position: fixed; z-index: 150; top: calc(12px + env(safe-area-inset-top, 0px)); left: 50%; transform: translateX(-50%); width: min(92vw, 510px); border-radius: 20px; border: 1px solid #8263b9; background: #19203af5; backdrop-filter: blur(18px); padding: 18px; box-shadow: 0 12px 44px #0008; }
+.invitation-banner p { margin: 4px 0; font-size: 13px; color: #d6dcf0; }
+.invitation-banner small { color: #afbedb; font-size: 12px; }
+.invite-dismiss { position: absolute; inset-inline-end: 9px; top: 7px; background: none; border: 0; color: #c8d0e6; font-size: 24px; padding: 2px 8px; }
+@media (max-width: 360px) { .player-card { align-items: stretch; flex-direction: column; } }
+.outgoing-invitation { position: fixed; z-index: 140; bottom: calc(84px + var(--safe-bottom)); left: 50%; transform: translateX(-50%); width: min(92vw, 510px); display: flex; justify-content: space-between; align-items: center; gap: 10px; background: #202b44f5; border: 1px solid #576586; box-shadow: 0 8px 30px #0006; border-radius: 16px; padding: 12px 15px; font-size: 13px; }
+.outgoing-invitation small { display: block; color: #bac6e1; margin-top: 4px; }
+.outgoing-invitation button { flex-shrink: 0; padding: 10px; }
+.shell > .toast { z-index: 160; }

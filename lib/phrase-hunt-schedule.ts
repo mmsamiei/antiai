@@ -4,6 +4,10 @@ const twelveHours = 12 * 60 * 60 * 1000;
 const delayedDayStart = Date.parse("2026-10-18T06:30:00.000Z");
 const delayedNightStart = Date.parse(process.env.PHRASE_HUNT_OCT18_NIGHT_START || "2026-10-18T19:30:00.000Z");
 const normalScheduleResumes = Date.parse("2026-10-19T06:30:00.000Z");
+// One-time 25 minute delay for the 2026-10-20 evening challenge (22:25 Tehran).
+const delayedOct20DayStart = Date.parse("2026-10-20T06:30:00.000Z");
+const delayedOct20NightStart = Date.parse("2026-10-20T18:55:00.000Z");
+const oct20ScheduleResumes = Date.parse("2026-10-21T06:30:00.000Z");
 // The final noon challenge ends early at 22:00 Tehran on 2026-10-17.
 // Preserve historical IDs and sessions; subsequent slots begin at 10:00/22:00.
 const scheduleChangedAt = Date.parse("2026-10-17T18:30:00.000Z");
@@ -20,6 +24,8 @@ function tehranClock(now: Date) {
 }
 
 function challengeEnd(startsAt: Date) {
+  if (startsAt.getTime() === delayedOct20DayStart) return new Date(delayedOct20NightStart);
+  if (startsAt.getTime() === delayedOct20NightStart) return new Date(oct20ScheduleResumes);
   if (startsAt.getTime() === delayedDayStart) return new Date(delayedNightStart);
   if (startsAt.getTime() === delayedNightStart) return new Date(normalScheduleResumes);
   const end = startsAt.getTime() + twelveHours;
@@ -27,6 +33,10 @@ function challengeEnd(startsAt: Date) {
 }
 
 export function phraseChallengeWindow(now = new Date()) {
+  if (now.getTime() >= delayedOct20DayStart && now.getTime() < oct20ScheduleResumes) {
+    const startsAt = new Date(now.getTime() < delayedOct20NightStart ? delayedOct20DayStart : delayedOct20NightStart);
+    return { id: startsAt.toISOString(), startsAt, endsAt: challengeEnd(startsAt) };
+  }
   if (now.getTime() >= delayedDayStart && now.getTime() < normalScheduleResumes) {
     const startsAt = new Date(now.getTime() < delayedNightStart ? delayedDayStart : delayedNightStart);
     return { id: startsAt.toISOString(), startsAt, endsAt: challengeEnd(startsAt) };

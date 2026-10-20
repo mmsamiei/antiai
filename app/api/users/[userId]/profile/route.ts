@@ -34,6 +34,7 @@ export async function GET(
       lastName: true,
       username: true,
       photoUrl: true,
+      acceptsGameInvites: true,
     },
   });
   if (!profile)
@@ -98,6 +99,7 @@ export async function GET(
   return NextResponse.json(
     {
       user: {
+        acceptsGameInvites: profile.acceptsGameInvites,
         id: profile.id,
         displayName: displayName(profile),
         username: profile.username,

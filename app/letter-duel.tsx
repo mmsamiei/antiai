@@ -1,6 +1,10 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { sessionRequest } from "@/lib/client-session";
+import { useOnlineUsers } from "@/lib/use-online-users";
+import OnlineAvatar from "./online-avatar";
+import { avatarImageUrl } from "@/lib/avatar-url";
+import { useBackHandler } from "./back-navigation";
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const BOT_USERNAME = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || "";
 type DuelUser = {
@@ -14,6 +18,7 @@ type DuelState = {
   mode: "PRIVATE" | "RANDOM";
   status: "WAITING" | "ACTIVE" | "ENDED";
   inviteToken: string | null;
+  directInvite: { id: string; reason: string | null; startDeadline: string | null } | null;
   me: DuelUser | null;
   opponent: DuelUser | null;
   myScore: number;
@@ -44,10 +49,14 @@ async function request<T>(url: string, init?: RequestInit): Promise<T> {
 }
 export default function LetterDuel({
   onExit,
+  connectionId,
+  registerLeave,
   setError,
   onOpenProfile,
 }: {
   onExit: () => void;
+  connectionId?: string | null;
+  registerLeave?: (handler: (() => Promise<void>) | null) => void;
   setError: (message: string) => void;
   onOpenProfile: (userId: string) => void;
 }) {
@@ -57,6 +66,7 @@ export default function LetterDuel({
     [word, setWord] = useState(""),
     [now, setNow] = useState(Date.now());
   const joined = useRef<string | null>(null);
+  const onlineIds = useOnlineUsers([duel?.me?.id, duel?.opponent?.id]);
   const post = useCallback(
     async (action: string, extra: Record<string, unknown> = {}) => {
       const data = await request<{ duel: DuelState | null }>(
@@ -81,7 +91,10 @@ export default function LetterDuel({
       (startParam?.startsWith("duel_") ? startParam.slice(5) : null);
     (async () => {
       try {
-        if (token && joined.current !== token) {
+        if (connectionId) {
+          const data = await request<{ duel: DuelState | null }>("/api/letter-duel?id=" + encodeURIComponent(connectionId));
+          if (!stopped) setDuel(data.duel);
+        } else if (token && joined.current !== token) {
           joined.current = token;
           await post("join-private", { token });
           history.replaceState({}, "", location.pathname);
@@ -101,7 +114,21 @@ export default function LetterDuel({
     return () => {
       stopped = true;
     };
-  }, [post, setError]);
+  }, [connectionId, post, setError]);
+  useEffect(() => {
+    if (!duel?.directInvite || duel.status !== "WAITING") return;
+    let stopped = false;
+    const ready = async () => {
+      if (document.visibilityState !== "visible") return;
+      try {
+        await request("/api/duel-invites", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "ready", id: duel.directInvite!.id }) });
+      } catch (e) { if (!stopped) setError(e instanceof Error ? e.message : "شروع بازی انجام نشد"); }
+    };
+    void ready();
+    const retry = window.setInterval(ready, 3000);
+    document.addEventListener("visibilitychange", ready);
+    return () => { stopped = true; clearInterval(retry); document.removeEventListener("visibilitychange", ready); };
+  }, [duel?.directInvite?.id, duel?.status]);
   useEffect(() => {
     if (!duel || duel.status === "ENDED") return;
     const poll = window.setInterval(
@@ -142,6 +169,14 @@ export default function LetterDuel({
       await act("leave", { connectionId: duel.id });
     onExit();
   };
+  useEffect(() => {
+    registerLeave?.(async () => {
+      if (duel && duel.status !== "ENDED") await post("leave", { connectionId: duel.id });
+      onExit();
+    });
+    return () => registerLeave?.(null);
+  });
+  useBackHandler(leave);
   const seconds = duel?.round?.deadline
     ? Math.max(
         0,
@@ -215,11 +250,11 @@ export default function LetterDuel({
         <div className="duel-wait">
           <span className="duel-loader">ح‌ح</span>
           <p>
-            {duel.mode === "PRIVATE"
+            {duel.directInvite ? "منتظر ورود هر دو بازیکن هستیم؛ بازی تا چند ثانیه دیگر شروع می‌شود." : duel.mode === "PRIVATE"
               ? "لینک را بفرست؛ با ورود نفر دوم بازی شروع می‌شود."
               : "اولین بازیکن آزاد به تو وصل می‌شود."}
           </p>
-          {duel.mode === "PRIVATE" && (
+          {duel.mode === "PRIVATE" && !duel.directInvite && (
             <button className="primary" onClick={share}>
               اشتراک لینک دعوت
             </button>
@@ -236,7 +271,7 @@ export default function LetterDuel({
         <Heading onBack={onExit} title="بازی تمام شد" />
         <div className="duel-result draw">
           <h2>اتصال بازی بسته شد</h2>
-          <p>می‌توانی با همین دوست یا یک حریف تازه دوباره بازی کنی.</p>
+          <p>{duel.directInvite?.reason || "می‌توانی با همین دوست یا یک حریف تازه دوباره بازی کنی."}</p>
           <button className="primary" onClick={onExit}>
             بازگشت
           </button>
@@ -269,6 +304,7 @@ export default function LetterDuel({
         <DuelPlayer
           user={duel.me}
           score={duel.myScore}
+          online={Boolean(duel.me && onlineIds.has(duel.me.id))}
           onOpenProfile={onOpenProfile}
         />
         <b>—</b>
@@ -276,6 +312,7 @@ export default function LetterDuel({
           user={duel.opponent}
           score={duel.opponentScore}
           disconnected={!duel.opponentConnected}
+          online={Boolean(duel.opponent && onlineIds.has(duel.opponent.id))}
           onOpenProfile={onOpenProfile}
         />
       </div>
@@ -401,11 +438,13 @@ function DuelPlayer({
   user,
   score,
   disconnected = false,
+  online = false,
   onOpenProfile,
 }: {
   user: DuelUser | null;
   score: number;
   disconnected?: boolean;
+  online?: boolean;
   onOpenProfile: (userId: string) => void;
 }) {
   return (
@@ -416,7 +455,9 @@ function DuelPlayer({
           onClick={() => onOpenProfile(user.id)}
           aria-label={`نمایش پروفایل ${user.name}`}
         >
-          {user.photoUrl ? <img src={user.photoUrl} alt="" /> : <span>👤</span>}
+          <OnlineAvatar online={online} className="duel-online-avatar">
+            {user.photoUrl ? <img src={avatarImageUrl(user.id, user.photoUrl) || ""} alt="" /> : <span>👤</span>}
+          </OnlineAvatar>
           <b>{user.name}</b>
           {user.username && <small>@{user.username}</small>}
         </button>

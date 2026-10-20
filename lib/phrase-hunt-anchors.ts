@@ -1,6 +1,6 @@
 /** Manually calibrated, challenge-specific examples shown to JEV as score anchors. */
 export const phraseHuntAnchors: Record<string, { guess: string; score_out_of_100: number }[]> = {
-  "2026-10-20T18:30:00.000Z": [
+  "2026-10-20T18:55:00.000Z": [
     { guess: "رخنه", score_out_of_100: 100 },
     { guess: "شکاف", score_out_of_100: 93 },
     { guess: "روزنه", score_out_of_100: 88 },

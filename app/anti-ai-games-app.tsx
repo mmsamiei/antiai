@@ -10,7 +10,13 @@ import {
 } from "react";
 import LetterDuel from "./letter-duel";
 import WordWeaver from "./word-weaver";
+import OnlineAvatar from "./online-avatar";
+import Players, { playerName } from "./players";
+import { useDuelInvitations, InvitationBanner } from "./duel-invitation-manager";
+import { avatarImageUrl } from "@/lib/avatar-url";
+import { BackHandlersContext, useBackHandler, useBrowserBack } from "./back-navigation";
 import { sessionRequest, setClientSessionToken } from "@/lib/client-session";
+import { useOnlineUsers } from "@/lib/use-online-users";
 import { hiddenPhraseGuesses, normalizePersian, orderPhraseGuesses } from "@/lib/phrase-hunt-view";
 
 type GameType =
@@ -89,6 +95,7 @@ type PublicProfile = {
     displayName: string;
     username: string | null;
     photoUrl: string | null;
+    acceptsGameInvites?: boolean;
     isMe: boolean;
   };
   stats: {
@@ -110,7 +117,7 @@ type PublicProfile = {
     };
   };
 };
-type Screen = "home" | "play" | "duel" | "word-weaver" | "leaderboard";
+type Screen = "home" | "play" | "duel" | "word-weaver" | "leaderboard" | "players";
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const TELEGRAM_BOT_USERNAME = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || "";
 
@@ -205,6 +212,72 @@ export default function AntiAiGamesApp() {
   const [phraseOnboardingRequired, setPhraseOnboardingRequired] = useState(false);
   const [leaderboardType, setLeaderboardType] = useState<GameType>("IRAN_CITY");
   const [profileUserId, setProfileUserId] = useState<string | null>(null);
+  const [directDuelId, setDirectDuelId] = useState<string | null>(null);
+  const multiplayerLeave = useRef<null | (() => Promise<void>)>(null);
+  const invitations = useDuelInvitations({
+    userId: user ? String(user.id) : null,
+    onError: setError,
+    beforeAccept: async (invite) => {
+      if ((game?.status === "ACTIVE" || screen === "duel" || screen === "word-weaver") && !window.confirm(`رفتن به دوحرف با ${playerName(invite.sender)}؟ از صفحهٔ بازی فعلی خارج می‌شوی.`)) return false;
+      if (multiplayerLeave.current) await multiplayerLeave.current();
+      return true;
+    },
+    onJoin: async (connectionId) => {
+      if (multiplayerLeave.current && screen !== "duel") await multiplayerLeave.current();
+      // Readiness is acknowledged by the mounted duel screen, not by the notification.
+      setDirectDuelId(connectionId);
+      setProfileUserId(null);
+      previousScreens.current = [];
+      setScreen("duel");
+    },
+  });
+  const sendDirectInvite = async (recipientId: string) => {
+    try {
+    if (screen === "duel") {
+      if (!window.confirm("از دوحرف فعلی خارج شوی و دعوت تازه بفرستی؟")) return;
+      if (multiplayerLeave.current) await multiplayerLeave.current();
+    }
+    await invitations.action("send", { recipientId });
+    } catch (cause) { setError(cause instanceof Error ? cause.message : "ارسال دعوت انجام نشد"); }
+  };
+  const previousScreens = useRef<Screen[]>([]);
+  const scrollPositions = useRef<Partial<Record<Screen, number>>>({});
+  const backHandlers = useRef(new Map<symbol, { priority: number; run: () => void | Promise<void> }>());
+  const navigate = (next: Screen) => {
+    if (next === screen) return;
+    scrollPositions.current[screen] = window.scrollY;
+    previousScreens.current.push(screen);
+    setScreen(next);
+  };
+  const exitGame = () => {
+    previousScreens.current = [];
+    scrollPositions.current = {};
+    setProfileUserId(null);
+    setScreen("home");
+    setGame(null);
+  };
+  const back = useBrowserBack(screen !== "home" || profileUserId !== null, async () => {
+    if (profileUserId) { setProfileUserId(null); return; }
+    const handler = [...backHandlers.current.values()].sort((a, b) => b.priority - a.priority)[0];
+    if (handler) { await handler.run(); return; }
+    const previous = previousScreens.current.pop() || "home";
+    scrollPositions.current[screen] = window.scrollY;
+    setScreen(previous);
+    if (previous === "home") setGame(null);
+  });
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, scrollPositions.current[screen] || 0);
+  }, [screen]);
+
+  useEffect(() => {
+    const button = telegram()?.BackButton;
+    if (!button) return;
+    if (screen !== "home" || profileUserId) button.show();
+    else button.hide();
+    button.onClick(back);
+    return () => button.offClick(back);
+  }, [screen, profileUserId, back]);
 
   useEffect(() => {
     const tg = telegram();
@@ -233,6 +306,7 @@ export default function AntiAiGamesApp() {
     if (!user) return;
     const isPlaying = screen === "play" && game?.status === "ACTIVE";
     const heartbeat = () => {
+      if (document.visibilityState !== "visible") return;
       jsonFetch<{ onlineCount: number; randomDuelWaiting: boolean }>("/api/presence", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -242,7 +316,7 @@ export default function AntiAiGamesApp() {
         .catch(() => setRandomDuelWaiting(false));
     };
     heartbeat();
-    const timer = window.setInterval(heartbeat, 20_000);
+    const timer = window.setInterval(heartbeat, 10_000);
     const onVisibility = () => {
       if (document.visibilityState === "visible") heartbeat();
     };
@@ -264,7 +338,7 @@ export default function AntiAiGamesApp() {
       });
       setGame(data.game);
       setPhraseOnboardingRequired(Boolean(data.onboardingRequired));
-      setScreen("play");
+      navigate("play");
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "بازی شروع نشد");
     } finally {
@@ -272,10 +346,6 @@ export default function AntiAiGamesApp() {
     }
   };
 
-  const exitGame = () => {
-    setScreen("home");
-    setGame(null);
-  };
   useEffect(() => {
     if (user && (new URLSearchParams(location.search).get("game") === "phrase_hunt" ||
       telegram()?.initDataUnsafe?.start_param === "phrase_hunt")) {
@@ -287,7 +357,7 @@ export default function AntiAiGamesApp() {
       (new URLSearchParams(location.search).get("duel") ||
         telegram()?.initDataUnsafe?.start_param?.startsWith("duel_"))
     )
-      setScreen("duel");
+      navigate("duel");
   }, [user]);
 
   if (loading)
@@ -310,6 +380,7 @@ export default function AntiAiGamesApp() {
     );
 
   return (
+    <BackHandlersContext.Provider value={backHandlers}>
     <main className="shell">
       {screen !== "play" && screen !== "duel" && screen !== "word-weaver" && (
         <Header
@@ -318,6 +389,7 @@ export default function AntiAiGamesApp() {
           onProfile={() => setProfileUserId(String(user.id))}
         />
       )}
+      {user && <InvitationBanner me={String(user.id)} state={invitations.state} busy={invitations.busy} action={invitations.action} />}
       {error && (
         <div className="toast" onClick={() => setError("")}>
           {error}
@@ -330,49 +402,58 @@ export default function AntiAiGamesApp() {
           randomDuelWaiting={randomDuelWaiting}
           busy={busy}
           onStart={startGame}
-          onDuel={() => setScreen("duel")}
-          onWordWeaver={() => setScreen("word-weaver")}
+          onDuel={() => { setDirectDuelId(null); navigate("duel"); }}
+          onWordWeaver={() => navigate("word-weaver")}
         />
       )}
+      {screen === "players" && <Players me={String(user.id)} state={invitations.state} busy={invitations.busy} onAction={invitations.action} onSend={id => void sendDirectInvite(id)} onProfile={setProfileUserId} onBack={back} />}
       {screen === "duel" && (
         <LetterDuel
+          connectionId={directDuelId}
+          registerLeave={handler => { multiplayerLeave.current = handler; }}
           onExit={exitGame}
           setError={setError}
           onOpenProfile={setProfileUserId}
         />
       )}
       {screen === "word-weaver" && (
-        <WordWeaver user={user} onExit={exitGame} onOpenProfile={setProfileUserId} setError={setError} />
+        <WordWeaver registerLeave={handler => { multiplayerLeave.current = handler; }} user={user} onExit={exitGame} onOpenProfile={setProfileUserId} setError={setError} />
       )}
-      {screen === "play" && game && (
+      {game && (screen === "play" || (screen === "leaderboard" && previousScreens.current.includes("play"))) && (
+        <div hidden={screen !== "play"}>
         <Play
           key={game.id}
+          active={screen === "play"}
           onboardingRequired={phraseOnboardingRequired}
           onOnboardingDone={() => setPhraseOnboardingRequired(false)}
-          onLeaderboard={() => { setLeaderboardType("PHRASE_HUNT"); setScreen("leaderboard"); }}
+          onLeaderboard={() => { setLeaderboardType("PHRASE_HUNT"); navigate("leaderboard"); }}
           game={game}
           setGame={setGame}
           busy={busy}
           setBusy={setBusy}
           setError={setError}
           onNew={() => startGame(game.type)}
-          onExit={exitGame}
+          onExit={back}
         />
+        </div>
       )}
       {screen === "leaderboard" && (
-        <Leaderboard initialType={leaderboardType} onOpenProfile={setProfileUserId} />
+        <Leaderboard initialType={leaderboardType} onOpenProfile={setProfileUserId} onBack={back} />
       )}
       {profileUserId && (
         <PublicProfileOverlay
           key={profileUserId}
           userId={profileUserId}
-          onClose={() => setProfileUserId(null)}
+          inviteBusy={invitations.busy}
+          onInvite={id => void sendDirectInvite(id)}
+          onClose={back}
         />
       )}
       {screen !== "play" && screen !== "duel" && screen !== "word-weaver" && (
-        <BottomNav active={screen} onChange={setScreen} />
+        <BottomNav invitationCount={invitations.state?.invites.filter(i => i.recipientId === String(user.id) && i.status === "PENDING").length || 0} active={screen} onChange={(next) => next === "home" ? exitGame() : navigate(next)} />
       )}
     </main>
+    </BackHandlersContext.Provider>
   );
 }
 
@@ -386,6 +467,7 @@ function Header({
   onProfile: () => void;
 }) {
   const photo = user?.photo_url || user?.photoUrl;
+  const onlineIds = useOnlineUsers([user?.id ? String(user.id) : null]);
   return (
     <header className="topbar">
       <button className="brand" onClick={onHome} aria-label="خانه">
@@ -400,11 +482,9 @@ function Header({
         onClick={onProfile}
         aria-label="نمایش پروفایل من"
       >
-        {photo ? (
-          <img className="avatar" src={photo} alt="" />
-        ) : (
-          <span className="avatar avatar-fallback">👤</span>
-        )}
+        <OnlineAvatar online={onlineIds.has(String(user?.id))}>
+          {photo ? <img className="avatar" src={avatarImageUrl(user.id, photo) || ""} alt="" /> : <span className="avatar avatar-fallback">👤</span>}
+        </OnlineAvatar>
       </button>
     </header>
   );
@@ -475,6 +555,7 @@ function Home({
 }
 
 function Play({
+  active,
   onboardingRequired, onOnboardingDone, onLeaderboard,
   game,
   setGame,
@@ -484,6 +565,7 @@ function Play({
   onNew,
   onExit,
 }: {
+  active: boolean;
   onboardingRequired: boolean;
   onOnboardingDone: () => void;
   onLeaderboard: () => void;
@@ -565,6 +647,7 @@ function Play({
     }
     setShowHelp(false);
   };
+  useBackHandler(closeHelp, active && showHelp, 30);
 
   useEffect(() => {
     if (!isPhraseHunt || !game.challenge) return;
@@ -883,7 +966,7 @@ function Play({
   return (
     <section className={`play-screen ${isSemantris ? "semantris-mode" : ""}`}>
       <div className="play-heading">
-        <button className="icon-button" onClick={onExit}>
+        <button className="icon-button" onClick={onExit} aria-label="بازگشت">
           →
         </button>
         <div>
@@ -1338,9 +1421,11 @@ function SemantrisBoard({
 function Leaderboard({
   initialType,
   onOpenProfile,
+  onBack,
 }: {
   initialType: GameType;
   onOpenProfile: (userId: string) => void;
+  onBack: () => void;
 }) {
   const [period, setPeriod] = useState<"challenge" | "week" | "all">(initialType === "PHRASE_HUNT" ? "challenge" : "week"),
     [mode, setMode] = useState<"effort" | "skill">("effort"),
@@ -1356,6 +1441,7 @@ function Leaderboard({
   const isPhraseHunt = type === "PHRASE_HUNT";
   const isSemantris = type === "SEMANTRIS",
     isDuel = type === "LETTER_DUEL";
+  const onlineIds = useOnlineUsers([...rows.map((row) => row.userId), me?.userId]);
   useEffect(() => {
     let active = true;
     const load = () => {
@@ -1389,7 +1475,8 @@ function Leaderboard({
   }, [period, type, mode, challengeId]);
   return (
     <section>
-      <div className="section-heading">
+      <div className="section-heading leaderboard-heading">
+        <button className="icon-button" onClick={onBack} aria-label="بازگشت">→</button>
         <div>
           <small>رقابت واقعی</small>
           <h1>لیدربورد</h1>
@@ -1506,6 +1593,7 @@ function Leaderboard({
               phraseHunt={isPhraseHunt}
               semantris={isSemantris}
               duel={isDuel}
+              online={onlineIds.has(row.userId)}
               onOpenProfile={onOpenProfile}
             />
           ))}
@@ -1520,6 +1608,7 @@ function Leaderboard({
             phraseHunt={isPhraseHunt}
             semantris={isSemantris}
             duel={isDuel}
+            online={onlineIds.has(me.userId)}
             onOpenProfile={onOpenProfile}
           />
         </div>
@@ -1533,6 +1622,7 @@ function LeaderRowView({
   phraseHunt = false,
   semantris = false,
   duel = false,
+  online = false,
   onOpenProfile,
 }: {
   row: LeaderRow;
@@ -1540,6 +1630,7 @@ function LeaderRowView({
   phraseHunt?: boolean;
   semantris?: boolean;
   duel?: boolean;
+  online?: boolean;
   onOpenProfile: (userId: string) => void;
 }) {
   const score = duel
@@ -1581,11 +1672,9 @@ function LeaderRowView({
             onClick={() => onOpenProfile(row.userId)}
             aria-label={`نمایش پروفایل ${row.displayName}`}
           >
-            {row.photoUrl ? (
-              <img src={row.photoUrl} alt="" />
-            ) : (
-              <span className="mini-avatar">👤</span>
-            )}
+            <OnlineAvatar online={online}>
+              {row.photoUrl ? <img src={avatarImageUrl(row.userId, row.photoUrl) || ""} alt="" /> : <span className="mini-avatar">👤</span>}
+            </OnlineAvatar>
           </button>
           <button
             className="leader-name-button"
@@ -1617,15 +1706,20 @@ function LeaderRowView({
 
 function PublicProfileOverlay({
   userId,
+  onInvite,
+  inviteBusy,
   onClose,
 }: {
   userId: string;
+  onInvite: (id: string) => void;
+  inviteBusy: boolean;
   onClose: () => void;
 }) {
   const [profile, setProfile] = useState<PublicProfile | null>(null);
   const [error, setError] = useState("");
   const [attempt, setAttempt] = useState(0);
   const [loading, setLoading] = useState(true);
+  const onlineIds = useOnlineUsers([userId]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -1686,13 +1780,12 @@ function PublicProfileOverlay({
         ) : profile ? (
           <>
             <div className="profile-identity">
-              {profile.user.photoUrl ? (
-                <img src={profile.user.photoUrl} alt="" />
-              ) : (
-                <span className="profile-avatar-fallback">👤</span>
-              )}
+              <OnlineAvatar online={onlineIds.has(profile.user.id)} className="profile-online-avatar">
+                {profile.user.photoUrl ? <img src={avatarImageUrl(profile.user.id, profile.user.photoUrl) || ""} alt="" /> : <span className="profile-avatar-fallback">👤</span>}
+              </OnlineAvatar>
               <h2>{profile.user.displayName}</h2>
               <span>{profile.user.username ? `@${profile.user.username.replace(/^@/, "")}` : "بدون نام کاربری"}</span>
+              {!profile.user.isMe && <button className="secondary" disabled={inviteBusy || profile.user.acceptsGameInvites === false || !onlineIds.has(profile.user.id)} onClick={() => onInvite(profile.user.id)}>{!onlineIds.has(profile.user.id) ? "آفلاین" : profile.user.acceptsGameInvites === false ? "دعوت غیرفعال" : "دعوت به دوحرف"}</button>}
               {!profile.user.isMe && (
                 profile.user.username ? (
                   <button className="primary profile-message-button" onClick={message}>پیام دادن در تلگرام</button>
@@ -1756,9 +1849,11 @@ function ProfileStat({ label, value }: { label: string; value: number | string |
   return <div className="profile-stat-row"><span>{label}</span><b>{value === null ? "—" : typeof value === "number" ? value.toLocaleString("fa-IR", { maximumFractionDigits: 1 }) : value}</b></div>;
 }
 function BottomNav({
+  invitationCount,
   active,
   onChange,
 }: {
+  invitationCount: number;
   active: Screen;
   onChange: (screen: Screen) => void;
 }) {
@@ -1776,6 +1871,7 @@ function BottomNav({
       >
         <span>♛</span>رتبه‌ها
       </button>
+      <button className={active === "players" ? "active" : ""} onClick={() => onChange("players")}><span>♙</span>بازیکن‌ها {invitationCount > 0 && <b className="invite-badge">{invitationCount.toLocaleString("fa-IR")}</b>}</button>
     </nav>
   );
 }

@@ -111,4 +111,5 @@ export const phraseHuntTargets: PhraseHuntTarget[] = [
   { id: "ph-107", phrase: "واپسین سامورایی", aliases: [] },
   { id: "ph-108", phrase: "امید واهی", aliases: [] },
   { id: "ph-109", phrase: "رخنه", aliases: [] },
+  { id: "ph-110", phrase: "پگاه", aliases: [] },
 ];

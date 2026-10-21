@@ -252,6 +252,7 @@ export default function AntiAiGamesApp() {
     setScreen(next);
   };
   const exitGame = () => {
+    setDirectDuelId(null);
     previousScreens.current = [];
     scrollPositions.current = {};
     setProfileUserId(null);

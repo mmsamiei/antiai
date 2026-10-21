@@ -1,9 +1,9 @@
 import crypto from "crypto";
 import { readFileSync } from "fs";
 import { join } from "path";
-import { Prisma } from "@prisma/client";
 import { prisma } from "./prisma";
-import { inviteTransaction, lockPlayers, reconcileInvites } from "./duel-invites";
+import { DUEL_TARGET_WINS, DUEL_RECONNECT_MS, DUEL_REMATCH_MS, disconnectedDuelWinner, endDuelMatch } from "./letter-duel-match";
+import { inviteTransaction, lockPlayers, reconcileInvites, READY_MS } from "./duel-invites";
 import { normalizePersian } from "./geo";
 import { wordPrompts } from "./data/adjective-prompts";
 import { semantrisCategories } from "./data/semantris-categories";
@@ -11,7 +11,7 @@ import { semantrisCategories } from "./data/semantris-categories";
 export const PERSIAN_LETTERS = [..."ابتثجچحخدذرزژسشصضطظعغفقکگلمنوهی"];
 export const PICK_MS = 5_000;
 export const ANSWER_MS = 15_000;
-export const RECONNECT_MS = 30_000;
+export const RECONNECT_MS = DUEL_RECONNECT_MS;
 export const RESULT_MS = 2_500;
 const lexiconFile = readFileSync(join(process.cwd(), "lib/data/letter-duel-lexicon.txt"), "utf8");
 const localWords = new Set([...lexiconFile.split(/\r?\n/), ...wordPrompts.flatMap((p) => [p.name, ...p.examples]), ...semantrisCategories.flatMap((c) => c.words)].map(normalizePersian).filter((w) => w && !w.includes(" ") && !w.startsWith("#")));
@@ -36,10 +36,13 @@ async function activeConnection(userId: string) {
   return prisma.letterDuelConnection.findFirst({ where: { status: { in: ["WAITING", "ACTIVE"] }, OR: [{ playerOneId: userId }, { playerTwoId: userId }] }, orderBy: { createdAt: "desc" } });
 }
 async function createRound(connectionId: string, number: number, playerOneId: string, playerTwoId: string, now = new Date()) {
-  return prisma.$transaction(async (tx) => {
+  return inviteTransaction(async (tx) => {
     await tx.$queryRaw`SELECT "id" FROM "LetterDuelConnection" WHERE "id" = ${connectionId} FOR UPDATE`;
     const connection = await tx.letterDuelConnection.findUnique({ where: { id: connectionId } });
     if (connection?.status !== "ACTIVE") return null;
+    const wins = await tx.letterDuelRound.groupBy({ by: ["winnerUserId"], where: { connectionId, status: "RESOLVED", winnerUserId: { not: null } }, _count: { _all: true } });
+    const winner = wins.find(row => row._count._all >= DUEL_TARGET_WINS);
+    if (winner) { await endDuelMatch(tx, connectionId, winner.winnerUserId, "TEN_WINS", now); return null; }
     const existing = await tx.letterDuelRound.findUnique({ where: { connectionId_number: { connectionId, number } } });
     if (existing) return existing;
     const round = await tx.letterDuelRound.create({ data: { connectionId, number, pickDeadline: new Date(now.getTime() + PICK_MS) } });
@@ -51,21 +54,13 @@ async function createRound(connectionId: string, number: number, playerOneId: st
     return round;
   });
 }
-async function cancelConnection(connectionId: string) {
-  await prisma.$transaction(async (tx) => {
-    const rounds = await tx.letterDuelRound.findMany({ where: { connectionId, status: { in: ["PICKING", "ANSWERING", "JUDGING"] } }, select: { id: true } });
-    const ids = rounds.map((r) => r.id);
-    if (ids.length) {
-      await tx.gameSession.updateMany({ where: { letterDuelRoundId: { in: ids }, status: "ACTIVE" }, data: { status: "SURRENDERED", finishedAt: new Date() } });
-      await tx.letterDuelRound.updateMany({ where: { id: { in: ids } }, data: { status: "CANCELLED", resolvedAt: new Date() } });
-    }
-    await tx.letterDuelConnection.update({ where: { id: connectionId }, data: { status: "ENDED", endedAt: new Date(), stateVersion: { increment: 1 } } });
-  });
-}
 async function resolveRound(roundId: string, winnerUserId: string | null, word: string | null, reason: string) {
-  await prisma.$transaction(async (tx) => {
+  await inviteTransaction(async (tx) => {
+    const initial = await tx.letterDuelRound.findUnique({ where: { id: roundId }, select: { connectionId: true } });
+    if (!initial) return;
+    await tx.$queryRaw`SELECT "id" FROM "LetterDuelConnection" WHERE "id" = ${initial.connectionId} FOR UPDATE`;
     const round = await tx.letterDuelRound.findUnique({ where: { id: roundId }, include: { connection: true } });
-    if (!round || round.status === "RESOLVED" || round.status === "CANCELLED") return;
+    if (!round || round.connection.status !== "ACTIVE" || round.status === "RESOLVED" || round.status === "CANCELLED") return;
     const users = [round.connection.playerOneId, round.connection.playerTwoId].filter(Boolean) as string[];
     const currentScores = await tx.gameSession.groupBy({ by: ["userId"], where: { userId: { in: users }, status: "WON", letterDuelRound: { connectionId: round.connectionId } }, _count: { _all: true } });
     const scores = new Map(currentScores.map((row) => [row.userId, row._count._all]));
@@ -73,11 +68,12 @@ async function resolveRound(roundId: string, winnerUserId: string | null, word: 
       const opponentId = users.find((id) => id !== userId)!;
       const status = winnerUserId ? (userId === winnerUserId ? "WON" : "LOST") : "DRAW";
       const own = (scores.get(userId) || 0) + (status === "WON" ? 1 : 0);
-      await tx.gameSession.updateMany({ where: { letterDuelRoundId: round.id, userId, status: "ACTIVE" }, data: { status, finishedAt: new Date(), duelOwnScore: own, duelOpponentScore: scores.get(opponentId) || 0 } });
+      await tx.gameSession.updateMany({ where: { letterDuelRoundId: round.id, userId, status: "ACTIVE" }, data: { status, finishedAt: new Date(), duelOwnScore: own, duelOpponentScore: (scores.get(opponentId) || 0) + (winnerUserId === opponentId ? 1 : 0) } });
     }
     await tx.letterDuelRound.update({ where: { id: round.id }, data: { status: "RESOLVED", winnerUserId, winningWord: word, resultReason: reason, resolvedAt: new Date() } });
     await tx.letterDuelConnection.update({ where: { id: round.connectionId }, data: { stateVersion: { increment: 1 } } });
-  }, { isolationLevel: Prisma.TransactionIsolationLevel.Serializable });
+    if (winnerUserId && (scores.get(winnerUserId) || 0) + 1 >= DUEL_TARGET_WINS) await endDuelMatch(tx, round.connectionId, winnerUserId, "TEN_WINS");
+  });
 }
 async function finalizeJudgments(roundId: string) {
   const submissions = await prisma.letterDuelSubmission.findMany({ where: { roundId }, orderBy: { receivedAt: "asc" } });
@@ -105,14 +101,23 @@ export async function advanceLetterDuel(connectionId: string) {
   const connection = await prisma.letterDuelConnection.findUnique({ where: { id: connectionId } });
   if (!connection || connection.status !== "ACTIVE" || !connection.playerTwoId) return;
   const now = new Date();
-  if (now.getTime() - connection.playerOneHeartbeat.getTime() > RECONNECT_MS || !connection.playerTwoHeartbeat || now.getTime() - connection.playerTwoHeartbeat.getTime() > RECONNECT_MS) return cancelConnection(connection.id);
+  if (now.getTime() - connection.playerOneHeartbeat.getTime() > RECONNECT_MS || !connection.playerTwoHeartbeat || now.getTime() - connection.playerTwoHeartbeat.getTime() > RECONNECT_MS) return inviteTransaction(async tx => {
+    await tx.$queryRaw`SELECT "id" FROM "LetterDuelConnection" WHERE "id" = ${connectionId} FOR UPDATE`;
+    const fresh = await tx.letterDuelConnection.findUnique({ where: { id: connectionId } });
+    if (fresh?.status === "ACTIVE" && (now.getTime() - fresh.playerOneHeartbeat.getTime() > RECONNECT_MS || !fresh.playerTwoHeartbeat || now.getTime() - fresh.playerTwoHeartbeat.getTime() > RECONNECT_MS)) await endDuelMatch(tx, connectionId, disconnectedDuelWinner(fresh, now), "DISCONNECTED", now);
+  });
   const round = await prisma.letterDuelRound.findFirst({ where: { connectionId, status: { in: ["PICKING", "ANSWERING", "JUDGING", "RESOLVED"] } }, orderBy: { number: "desc" } });
   if (!round) return createRound(connection.id, 1, connection.playerOneId, connection.playerTwoId, now);
   if (round.status === "PICKING" && (round.pickDeadline <= now || (round.playerOneLetter && round.playerTwoLetter))) {
-    await prisma.$transaction([
-      prisma.letterDuelRound.update({ where: { id: round.id }, data: { playerOneLetter: round.playerOneLetter || randomPersianLetter(), playerTwoLetter: round.playerTwoLetter || randomPersianLetter(), status: "ANSWERING", answerDeadline: new Date(now.getTime() + ANSWER_MS) } }),
-      prisma.letterDuelConnection.update({ where: { id: connection.id }, data: { stateVersion: { increment: 1 } } })
-    ]);
+    await inviteTransaction(async tx => {
+      await tx.$queryRaw`SELECT "id" FROM "LetterDuelConnection" WHERE "id" = ${connectionId} FOR UPDATE`;
+      const active = await tx.letterDuelConnection.findUnique({ where: { id: connectionId } });
+      const picking = await tx.letterDuelRound.findUnique({ where: { id: round.id } });
+      if (active?.status !== "ACTIVE" || picking?.status !== "PICKING") return;
+      if (picking.pickDeadline > now && (!picking.playerOneLetter || !picking.playerTwoLetter)) return;
+      await tx.letterDuelRound.update({ where: { id: round.id }, data: { playerOneLetter: picking.playerOneLetter || randomPersianLetter(), playerTwoLetter: picking.playerTwoLetter || randomPersianLetter(), status: "ANSWERING", answerDeadline: new Date(now.getTime() + ANSWER_MS) } });
+      await tx.letterDuelConnection.update({ where: { id: connectionId }, data: { stateVersion: { increment: 1 } } });
+    });
   } else if ((round.status === "ANSWERING" || round.status === "JUDGING") && round.answerDeadline && round.answerDeadline <= now) {
     const pending = await prisma.letterDuelSubmission.count({ where: { roundId: round.id, status: "PENDING" } });
     if (pending) await prisma.letterDuelRound.update({ where: { id: round.id }, data: { status: "JUDGING" } }); else await finalizeJudgments(round.id);
@@ -158,10 +163,15 @@ export async function joinRandomDuel(userId: string) {
   if (result.status === "ACTIVE") await advanceLetterDuel(result.id); return result;
 }
 export async function heartbeatDuel(userId: string, connectionId: string) {
-  const room = await prisma.letterDuelConnection.findFirst({ where: { id: connectionId, status: { in: ["WAITING", "ACTIVE"] }, OR: [{ playerOneId: userId }, { playerTwoId: userId }] } });
-  if (!room) throw new Error("CONNECTION_NOT_FOUND");
-  await prisma.letterDuelConnection.update({ where: { id: room.id }, data: room.playerOneId === userId ? { playerOneHeartbeat: new Date() } : { playerTwoHeartbeat: new Date() } });
-  await advanceLetterDuel(room.id);
+  if (!await prisma.letterDuelConnection.findFirst({ where: { id: connectionId, OR: [{ playerOneId: userId }, { playerTwoId: userId }] }, select: { id: true } })) throw new Error("CONNECTION_NOT_FOUND");
+  await advanceLetterDuel(connectionId);
+  await inviteTransaction(async tx => {
+    await tx.$queryRaw`SELECT "id" FROM "LetterDuelConnection" WHERE "id" = ${connectionId} FOR UPDATE`;
+    const room = await tx.letterDuelConnection.findFirst({ where: { id: connectionId, OR: [{ playerOneId: userId }, { playerTwoId: userId }] } });
+    if (!room) throw new Error("CONNECTION_NOT_FOUND");
+    await tx.letterDuelConnection.update({ where: { id: room.id }, data: room.playerOneId === userId ? { playerOneHeartbeat: new Date() } : { playerTwoHeartbeat: new Date() } });
+  });
+  await advanceLetterDuel(connectionId);
 }
 export async function chooseDuelLetter(userId: string, connectionId: string, raw: string) {
   const room = await prisma.letterDuelConnection.findFirst({ where: { id: connectionId, status: "ACTIVE", OR: [{ playerOneId: userId }, { playerTwoId: userId }] } });
@@ -193,10 +203,38 @@ export async function submitDuelWord(userId: string, connectionId: string, raw: 
 }
 export async function leaveDuel(userId: string, connectionId: string) {
   const room = await prisma.letterDuelConnection.findFirst({ where: { id: connectionId, status: { in: ["WAITING", "ACTIVE"] }, OR: [{ playerOneId: userId }, { playerTwoId: userId }] } });
-  if (!room) throw new Error("CONNECTION_NOT_FOUND"); await cancelConnection(room.id);
+  if (!room) throw new Error("CONNECTION_NOT_FOUND");
+  await inviteTransaction(tx => endDuelMatch(tx, room.id, room.status === "ACTIVE" ? (room.playerOneId === userId ? room.playerTwoId : room.playerOneId) : null, room.status === "ACTIVE" ? "FORFEIT" : "CANCELLED"));
+}
+export async function rematchDuel(userId: string, connectionId: string, cancel = false) {
+  return inviteTransaction(async tx => {
+    const initial = await tx.letterDuelConnection.findFirst({ where: { id: connectionId, OR: [{ playerOneId: userId }, { playerTwoId: userId }] } });
+    if (!initial?.playerTwoId || initial.status !== "ENDED") throw new Error("REMATCH_UNAVAILABLE");
+    await lockPlayers(tx, [initial.playerOneId, initial.playerTwoId]);
+    await tx.$queryRaw`SELECT "id" FROM "LetterDuelConnection" WHERE "id" = ${connectionId} FOR UPDATE`;
+    const room = await tx.letterDuelConnection.findUniqueOrThrow({ where: { id: connectionId } });
+    if (room.rematchConnectionId) return tx.letterDuelConnection.findUniqueOrThrow({ where: { id: room.rematchConnectionId } });
+    const one = room.playerOneId === userId;
+    if (cancel) return tx.letterDuelConnection.update({ where: { id: room.id }, data: one ? { rematchOneAt: null } : { rematchTwoAt: null } });
+    const ids = [room.playerOneId, room.playerTwoId!];
+    await reconcileInvites(tx, ids[0]); await reconcileInvites(tx, ids[1]);
+    if (await tx.letterDuelConnection.count({ where: { status: { in: ["WAITING", "ACTIVE"] }, OR: [{ playerOneId: { in: ids } }, { playerTwoId: { in: ids } }] } })) throw new Error("REMATCH_UNAVAILABLE");
+    const now = new Date();
+    const otherAt = one ? room.rematchTwoAt : room.rematchOneAt;
+    const otherHeartbeat = one ? room.playerTwoHeartbeat : room.playerOneHeartbeat;
+    if (otherAt && now.getTime() - otherAt.getTime() < DUEL_REMATCH_MS && otherHeartbeat && now.getTime() - otherHeartbeat.getTime() < RECONNECT_MS) {
+      const next = await tx.letterDuelConnection.create({ data: { mode: room.mode, status: "WAITING", playerOneId: room.playerOneId, playerTwoId: room.playerTwoId, playerOneHeartbeat: now, playerTwoHeartbeat: now } });
+      // Reuse the existing two-client readiness gate and 15-second start deadline.
+      await tx.duelInvite.create({ data: { senderId: room.playerOneId, recipientId: room.playerTwoId!, status: "ACCEPTED", respondedAt: now, expiresAt: new Date(now.getTime() + DUEL_REMATCH_MS), startDeadline: new Date(now.getTime() + READY_MS), connectionId: next.id } });
+      await tx.letterDuelConnection.update({ where: { id: room.id }, data: { rematchConnectionId: next.id, ...(one ? { rematchOneAt: now } : { rematchTwoAt: now }) } });
+      await tx.duelInvite.updateMany({ where: { status: "PENDING", OR: [{ senderId: { in: ids } }, { recipientId: { in: ids } }] }, data: { status: "CANCELLED", reason: "یکی از بازیکن‌ها وارد دوحرف دیگری شده است", respondedAt: now } });
+      return next;
+    }
+    return tx.letterDuelConnection.update({ where: { id: room.id }, data: one ? { rematchOneAt: now } : { rematchTwoAt: now } });
+  });
 }
 export async function serializeDuel(userId: string, requestedId?: string | null) {
-  const room = requestedId ? await prisma.letterDuelConnection.findFirst({ where: { id: requestedId, OR: [{ playerOneId: userId }, { playerTwoId: userId }] } }) : await activeConnection(userId);
+  const room = requestedId ? await prisma.letterDuelConnection.findFirst({ where: { id: requestedId, OR: [{ playerOneId: userId }, { playerTwoId: userId }] } }) : await activeConnection(userId) || await prisma.letterDuelConnection.findFirst({ where: { status: "ENDED", endReason: { in: ["TEN_WINS", "FORFEIT", "DISCONNECTED"] }, OR: [{ playerOneId: userId }, { playerTwoId: userId }] }, orderBy: { endedAt: "desc" } });
   if (!room) return null;
   if (room.status === "WAITING" && room.playerTwoId) await inviteTransaction(tx => reconcileInvites(tx, userId));
   await advanceLetterDuel(room.id);
@@ -206,5 +244,8 @@ export async function serializeDuel(userId: string, requestedId?: string | null)
   const scores = await prisma.gameSession.groupBy({ by: ["userId"], where: { userId: { in: [fresh.playerOneId, fresh.playerTwoId || ""] }, status: "WON", letterDuelRound: { connectionId: fresh.id } }, _count: { _all: true } });
   const score = new Map(scores.map((s) => [s.userId, s._count._all]));
   const reveal = round && ["ANSWERING", "JUDGING", "RESOLVED"].includes(round.status);
-  return { directInvite: fresh.directInvite, id: fresh.id, mode: fresh.mode, status: fresh.status, inviteToken: isOne ? fresh.inviteToken : null, stateVersion: fresh.stateVersion, me: userPublic(isOne ? fresh.playerOne : fresh.playerTwo), opponent: userPublic(opponent), myScore: score.get(userId) || 0, opponentScore: score.get(opponent?.id || "") || 0, opponentConnected: !opponent ? false : new Date().getTime() - (isOne ? fresh.playerTwoHeartbeat?.getTime() || 0 : fresh.playerOneHeartbeat.getTime()) < RECONNECT_MS, serverNow: new Date(), round: round ? { id: round.id, number: round.number, status: round.status, deadline: (round.status === "PICKING" ? round.pickDeadline : round.answerDeadline), myLetterChosen: Boolean(isOne ? round.playerOneLetter : round.playerTwoLetter), letters: reveal ? [round.playerOneLetter, round.playerTwoLetter] : null, winnerUserId: round.status === "RESOLVED" ? round.winnerUserId : null, winningWord: round.status === "RESOLVED" ? round.winningWord : null, resultReason: round.status === "RESOLVED" ? round.resultReason : null, lastSubmission: round.submissions[0] || null } : null };
+  return { targetWins: DUEL_TARGET_WINS, matchWinnerUserId: fresh.matchWinnerUserId, endReason: fresh.endReason, rematchConnectionId: fresh.rematchConnectionId,
+    myRematchPending: Boolean((isOne ? fresh.rematchOneAt : fresh.rematchTwoAt) && Date.now() - (isOne ? fresh.rematchOneAt! : fresh.rematchTwoAt!).getTime() < DUEL_REMATCH_MS),
+    opponentRematchPending: Boolean((isOne ? fresh.rematchTwoAt : fresh.rematchOneAt) && Date.now() - (isOne ? fresh.rematchTwoAt! : fresh.rematchOneAt!).getTime() < DUEL_REMATCH_MS),
+    directInvite: fresh.directInvite, id: fresh.id, mode: fresh.mode, status: fresh.status, inviteToken: isOne ? fresh.inviteToken : null, stateVersion: fresh.stateVersion, me: userPublic(isOne ? fresh.playerOne : fresh.playerTwo), opponent: userPublic(opponent), myScore: score.get(userId) || 0, opponentScore: score.get(opponent?.id || "") || 0, opponentConnected: !opponent ? false : new Date().getTime() - (isOne ? fresh.playerTwoHeartbeat?.getTime() || 0 : fresh.playerOneHeartbeat.getTime()) < 10_000, reconnectDeadline: opponent ? new Date((isOne ? fresh.playerTwoHeartbeat?.getTime() || 0 : fresh.playerOneHeartbeat.getTime()) + RECONNECT_MS) : null, serverNow: new Date(), round: round ? { id: round.id, number: round.number, status: round.status, deadline: (round.status === "PICKING" ? round.pickDeadline : round.answerDeadline), myLetterChosen: Boolean(isOne ? round.playerOneLetter : round.playerTwoLetter), letters: reveal ? [round.playerOneLetter, round.playerTwoLetter] : null, winnerUserId: round.status === "RESOLVED" ? round.winnerUserId : null, winningWord: round.status === "RESOLVED" ? round.winningWord : null, resultReason: round.status === "RESOLVED" ? round.resultReason : null, lastSubmission: round.submissions[0] || null } : null };
 }

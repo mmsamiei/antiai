@@ -231,6 +231,11 @@ model LetterDuelConnection {
   createdAt          DateTime          @default(now())
   startedAt          DateTime?
   endedAt            DateTime?
+  matchWinnerUserId  String?
+  endReason          String?
+  rematchOneAt       DateTime?
+  rematchTwoAt       DateTime?
+  rematchConnectionId String?           @unique
   playerOne          User              @relation("LetterDuelPlayerOne", fields: [playerOneId], references: [id], onDelete: Cascade)
   playerTwo          User?             @relation("LetterDuelPlayerTwo", fields: [playerTwoId], references: [id], onDelete: Cascade)
   rounds             LetterDuelRound[]

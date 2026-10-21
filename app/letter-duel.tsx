@@ -17,6 +17,12 @@ type DuelState = {
   id: string;
   mode: "PRIVATE" | "RANDOM";
   status: "WAITING" | "ACTIVE" | "ENDED";
+  targetWins: number;
+  matchWinnerUserId: string | null;
+  endReason: string | null;
+  rematchConnectionId: string | null;
+  myRematchPending: boolean;
+  opponentRematchPending: boolean;
   inviteToken: string | null;
   directInvite: { id: string; reason: string | null; startDeadline: string | null } | null;
   me: DuelUser | null;
@@ -24,6 +30,8 @@ type DuelState = {
   myScore: number;
   opponentScore: number;
   opponentConnected: boolean;
+  reconnectDeadline: string | null;
+  serverNow: string;
   round: null | {
     id: string;
     number: number;
@@ -66,7 +74,19 @@ export default function LetterDuel({
     [word, setWord] = useState(""),
     [now, setNow] = useState(Date.now());
   const joined = useRef<string | null>(null);
+  const serverOffset = useRef(0);
   const onlineIds = useOnlineUsers([duel?.me?.id, duel?.opponent?.id]);
+  const applyDuel = useCallback(async (next: DuelState | null) => {
+    // A rematch is a fresh room; both participants follow the server-owned link.
+    const visited = new Set<string>();
+    while (next?.rematchConnectionId && !visited.has(next.id)) {
+      visited.add(next.id);
+      const data: { duel: DuelState | null } = await request("/api/letter-duel?id=" + encodeURIComponent(next.rematchConnectionId));
+      next = data.duel;
+    }
+    if (next?.serverNow) serverOffset.current = new Date(next.serverNow).getTime() - Date.now();
+    setDuel(next);
+  }, []);
   const post = useCallback(
     async (action: string, extra: Record<string, unknown> = {}) => {
       const data = await request<{ duel: DuelState | null }>(
@@ -77,10 +97,10 @@ export default function LetterDuel({
           body: JSON.stringify({ action, ...extra }),
         },
       );
-      setDuel(data.duel);
+      await applyDuel(data.duel);
       return data;
     },
-    [],
+    [applyDuel],
   );
   useEffect(() => {
     let stopped = false;
@@ -93,7 +113,7 @@ export default function LetterDuel({
       try {
         if (connectionId) {
           const data = await request<{ duel: DuelState | null }>("/api/letter-duel?id=" + encodeURIComponent(connectionId));
-          if (!stopped) setDuel(data.duel);
+          if (!stopped) await applyDuel(data.duel);
         } else if (token && joined.current !== token) {
           joined.current = token;
           await post("join-private", { token });
@@ -102,7 +122,7 @@ export default function LetterDuel({
           const data = await request<{ duel: DuelState | null }>(
             "/api/letter-duel",
           );
-          if (!stopped) setDuel(data.duel);
+          if (!stopped) await applyDuel(data.duel);
         }
       } catch (error) {
         if (!stopped)
@@ -130,23 +150,36 @@ export default function LetterDuel({
     return () => { stopped = true; clearInterval(retry); document.removeEventListener("visibilitychange", ready); };
   }, [duel?.directInvite?.id, duel?.status]);
   useEffect(() => {
-    if (!duel || duel.status === "ENDED") return;
-    const poll = window.setInterval(
-      () =>
-        request<{ duel: DuelState | null }>("/api/letter-duel?id=" + duel.id)
-          .then((data) => setDuel(data.duel))
-          .catch(() => undefined),
-      750,
-    );
-    const heartbeat = window.setInterval(
-      () => post("heartbeat", { connectionId: duel.id }).catch(() => undefined),
-      5000,
-    );
-    return () => {
-      clearInterval(poll);
-      clearInterval(heartbeat);
+    if (!duel) return;
+    let stopped = false;
+    let polling = false;
+    const poll = async () => {
+      if (polling || document.visibilityState !== "visible") return;
+      polling = true;
+      try {
+        const data = await request<{ duel: DuelState | null }>("/api/letter-duel?id=" + encodeURIComponent(duel.id));
+        if (!stopped) await applyDuel(data.duel);
+      } catch {} finally { polling = false; }
     };
-  }, [duel?.id, duel?.status, post]);
+    const heartbeat = async () => {
+      if (document.visibilityState !== "visible") return;
+      try {
+        const data = await request<{ duel: DuelState | null }>("/api/letter-duel", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "heartbeat", connectionId: duel.id }) });
+        if (!stopped) await applyDuel(data.duel);
+      } catch {}
+    };
+    void heartbeat();
+    const pollTimer = window.setInterval(poll, duel.status === "ENDED" ? 2000 : 750);
+    const heartbeatTimer = window.setInterval(heartbeat, 5000);
+    document.addEventListener("visibilitychange", heartbeat);
+    return () => {
+      stopped = true;
+      clearInterval(pollTimer);
+      clearInterval(heartbeatTimer);
+      document.removeEventListener("visibilitychange", heartbeat);
+    };
+  }, [duel?.id, duel?.status, applyDuel]);
+
   useEffect(() => {
     const timer = window.setInterval(() => setNow(Date.now()), 200);
     return () => clearInterval(timer);
@@ -165,13 +198,18 @@ export default function LetterDuel({
     }
   };
   const leave = async () => {
-    if (duel && duel.status !== "ENDED")
-      await act("leave", { connectionId: duel.id });
-    onExit();
+    if (duel?.status === "ACTIVE" && !window.confirm("با خروج، مسابقه را به حریف واگذار می‌کنی. خارج می‌شوی؟")) return;
+    try {
+      if (duel && duel.status !== "ENDED") await post("leave", { connectionId: duel.id });
+      if (duel?.status === "ENDED" && duel.myRematchPending) await post("cancel-rematch", { connectionId: duel.id });
+      onExit();
+    } catch (error) { setError(error instanceof Error ? error.message : "خروج انجام نشد"); }
   };
   useEffect(() => {
+    // Callers already ask for confirmation before switching multiplayer games.
     registerLeave?.(async () => {
       if (duel && duel.status !== "ENDED") await post("leave", { connectionId: duel.id });
+      if (duel?.status === "ENDED" && duel.myRematchPending) await post("cancel-rematch", { connectionId: duel.id });
       onExit();
     });
     return () => registerLeave?.(null);
@@ -180,7 +218,7 @@ export default function LetterDuel({
   const seconds = duel?.round?.deadline
     ? Math.max(
         0,
-        Math.ceil((new Date(duel.round.deadline).getTime() - now) / 1000),
+        Math.ceil((new Date(duel.round.deadline).getTime() - now - serverOffset.current) / 1000),
       )
     : 0;
   const share = () => {
@@ -224,7 +262,7 @@ export default function LetterDuel({
           >
             بازی با دوست
           </button>
-          <small>یک لینک خصوصی بساز و برای دوستت بفرست.</small>
+          <small>یک لینک خصوصی بساز و برای دوستت بفرست. اولین نفر با ۱۰ برد، برندهٔ مسابقه است.</small>
           <button
             className="secondary"
             disabled={busy}
@@ -232,7 +270,7 @@ export default function LetterDuel({
           >
             حریف تصادفی
           </button>
-          <small>با اولین بازیکن منتظر وصل شو.</small>
+          <small>با اولین بازیکن منتظر وصل شو؛ مسابقه تا ۱۰ برد ادامه دارد.</small>
         </div>
       </section>
     );
@@ -265,19 +303,47 @@ export default function LetterDuel({
         </div>
       </section>
     );
-  if (duel.status === "ENDED")
+  if (duel.status === "ENDED") {
+    const wonMatch = duel.matchWinnerUserId === duel.me?.id;
+    const reason = duel.endReason === "TEN_WINS" ? "مسابقه با رسیدن به ۱۰ برد پایان یافت."
+      : duel.endReason === "FORFEIT" ? (wonMatch ? "حریف مسابقه را واگذار کرد." : "مسابقه را به حریف واگذار کردی.")
+      : duel.endReason === "DISCONNECTED" ? "مهلت ۳۰ ثانیه‌ای بازگشت به بازی تمام شد."
+      : duel.directInvite?.reason || "شروع مسابقه لغو شد.";
     return (
       <section className="duel-screen">
-        <Heading onBack={onExit} title="بازی تمام شد" />
-        <div className="duel-result draw">
-          <h2>اتصال بازی بسته شد</h2>
-          <p>{duel.directInvite?.reason || "می‌توانی با همین دوست یا یک حریف تازه دوباره بازی کنی."}</p>
-          <button className="primary" onClick={onExit}>
-            بازگشت
-          </button>
+        <Heading onBack={leave} title="نتیجهٔ مسابقه" />
+        <div className={"duel-result " + (duel.matchWinnerUserId ? wonMatch ? "won" : "lost" : "draw")}>
+          <span>{duel.matchWinnerUserId ? wonMatch ? "🏆" : "◌" : "🤝"}</span>
+          <h2>{duel.matchWinnerUserId ? wonMatch ? "مسابقه را بردی!" : "حریف برندهٔ مسابقه شد" : "مسابقه پایان یافت"}</h2>
+          <p>{reason}</p>
+          {duel.endReason === "TEN_WINS" && duel.round?.winningWord && <p>واژهٔ دور پایانی: <strong>{duel.round.winningWord}</strong></p>}
+          <div className="duel-score">
+            <DuelPlayer user={duel.me} score={duel.myScore} online={Boolean(duel.me && onlineIds.has(duel.me.id))} onOpenProfile={onOpenProfile} />
+            <b>—</b>
+            <DuelPlayer user={duel.opponent} score={duel.opponentScore} online={Boolean(duel.opponent && onlineIds.has(duel.opponent.id))} onOpenProfile={onOpenProfile} />
+          </div>
+          <p>تعداد بردهای دورها؛ واگذاری امتیاز دورها را تغییر نمی‌دهد.</p>
+          {duel.opponent && <div className="duel-rematch">
+            {duel.opponentRematchPending && !duel.myRematchPending && <p>حریفت درخواست یک مسابقهٔ دیگر داده است.</p>}
+            <button className="primary" disabled={busy || duel.myRematchPending} onClick={() => act("rematch", { connectionId: duel.id })}>
+              {duel.myRematchPending ? "منتظر موافقت حریف…" : duel.opponentRematchPending ? "قبول و شروع مسابقهٔ جدید" : "بازی مجدد با همین حریف"}
+            </button>
+            {duel.myRematchPending && <><small>درخواست تا دو دقیقه معتبر است؛ برای شروع هر دو باید اینجا باشید.</small><button className="secondary" disabled={busy} onClick={() => act("cancel-rematch", { connectionId: duel.id })}>لغو درخواست</button></>}
+          </div>}
+          <button className="secondary" disabled={busy} onClick={async () => {
+            try {
+              if (duel.myRematchPending) {
+                const data = await post("cancel-rematch", { connectionId: duel.id });
+                if (data.duel && data.duel.status !== "ENDED") return;
+              }
+              setDuel(null);
+            } catch (error) { setError(error instanceof Error ? error.message : "لغو درخواست انجام نشد"); }
+          }}>انتخاب حریف تازه</button>
+          <button className="secondary" onClick={leave}>بازگشت</button>
         </div>
       </section>
     );
+  }
   const round = duel.round,
     result = round?.status === "RESOLVED",
     won = result && round.winnerUserId === duel.me?.id;
@@ -300,6 +366,7 @@ export default function LetterDuel({
           تسلیم
         </button>
       </div>
+      <p className="duel-match-goal">اولین نفر با {duel.targetWins.toLocaleString("fa-IR")} برد، برندهٔ مسابقه است</p>
       <div className="duel-score">
         <DuelPlayer
           user={duel.me}
@@ -318,7 +385,7 @@ export default function LetterDuel({
       </div>
       {!duel.opponentConnected && (
         <div className="duel-disconnected">
-          ارتباط حریف قطع شده؛ ۳۰ ثانیه برای بازگشت فرصت دارد.
+          ارتباط حریف قطع شده؛ {Math.max(0, Math.ceil(((duel.reconnectDeadline ? new Date(duel.reconnectDeadline).getTime() : now) - now - serverOffset.current) / 1000)).toLocaleString("fa-IR")} ثانیه برای بازگشت فرصت دارد.
         </div>
       )}
       {round?.status === "PICKING" && (

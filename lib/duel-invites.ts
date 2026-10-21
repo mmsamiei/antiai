@@ -1,5 +1,6 @@
 import { Prisma } from "@prisma/client";
 import { prisma } from "./prisma";
+import { disconnectedDuelWinner, endDuelMatch } from "./letter-duel-match";
 
 export const INVITE_MS = 120_000;
 export const ONLINE_MS = 20_000;
@@ -11,7 +12,7 @@ export class InviteError extends Error { constructor(message: string, public sta
 export async function inviteTransaction<T>(fn: (tx: Tx) => Promise<T>): Promise<T> {
   for (let attempt = 0; ; attempt++) {
     try { return await prisma.$transaction(fn, { isolationLevel: Prisma.TransactionIsolationLevel.Serializable }); }
-    catch (e) { if (e instanceof Prisma.PrismaClientKnownRequestError && e.code === "P2034" && attempt < 3) continue; throw e; }
+    catch (e) { if (e instanceof Prisma.PrismaClientKnownRequestError && (e.code === "P2034" || e.code === "P2010" && ["40001", "40P01"].includes(String(e.meta?.code))) && attempt < 3) continue; throw e; }
   }
 }
 export async function lockPlayers(tx: Tx, ids: string[]) {
@@ -30,11 +31,9 @@ export async function reconcileInvites(tx: Tx, userId: string, now = new Date())
     status: { in: ["WAITING", "ACTIVE"] }, OR: [{ playerOneId: userId }, { playerTwoId: userId }],
     AND: [{ OR: [{ playerOneHeartbeat: { lt: new Date(now.getTime() - 30_000) } }, { playerTwoId: { not: null }, playerTwoHeartbeat: { lt: new Date(now.getTime() - 30_000) } }] }],
     NOT: { directInvite: { is: { status: "ACCEPTED" } }, status: "WAITING" }
-  }, select: { id: true } });
+  } });
   for (const room of stale) {
-    await tx.gameSession.updateMany({ where: { status: "ACTIVE", letterDuelRound: { connectionId: room.id } }, data: { status: "SURRENDERED", finishedAt: now } });
-    await tx.letterDuelRound.updateMany({ where: { connectionId: room.id, status: { in: ["PICKING", "ANSWERING", "JUDGING"] } }, data: { status: "CANCELLED", resolvedAt: now } });
-    await tx.letterDuelConnection.updateMany({ where: { id: room.id, status: { in: ["WAITING", "ACTIVE"] } }, data: { status: "ENDED", endedAt: now } });
+    await endDuelMatch(tx, room.id, room.status === "ACTIVE" ? disconnectedDuelWinner(room, now) : null, room.status === "ACTIVE" ? "DISCONNECTED" : "CANCELLED", now);
   }
   const invites = await tx.duelInvite.findMany({ where: { AND: [{ OR: [{ senderId: userId }, { recipientId: userId }] }, { OR: [{ status: "PENDING" }, { status: "ACCEPTED", OR: [{ connection: { is: { status: "WAITING" } } }, { senderReadyAt: null }, { recipientReadyAt: null }] }] }] }, include: { connection: true } });
   const ids = [...new Set(invites.flatMap(i => [i.senderId, i.recipientId]))];

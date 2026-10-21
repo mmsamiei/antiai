@@ -16,6 +16,7 @@
     "data:letter-duel": "node scripts/generate-letter-duel-lexicon.mjs",
     "data:country-descriptions": "node scripts/generate-country-descriptions.mjs",
     "test:word-weaver-integration": "tsx scripts/test-word-weaver-integration.ts",
+    "test:letter-duel-matches-integration": "tsx scripts/test-letter-duel-matches-integration.ts",
     "test:duel-invites-integration": "tsx scripts/test-duel-invites-integration.ts"
   },
   "dependencies": {

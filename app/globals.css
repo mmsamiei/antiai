@@ -1919,3 +1919,7 @@ input {
 .outgoing-invitation small { display: block; color: #bac6e1; margin-top: 4px; }
 .outgoing-invitation button { flex-shrink: 0; padding: 10px; }
 .shell > .toast { z-index: 160; }
+
+.duel-match-goal { text-align: center; color: var(--muted); font-size: .85rem; margin: 0 0 12px; }
+.duel-rematch { display: grid; gap: 12px; margin: 20px 0; }
+.duel-rematch small { line-height: 1.8; }

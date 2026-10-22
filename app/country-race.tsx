@@ -1,6 +1,7 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { geoRaceConfig, geoRaceType, type GeoRaceType } from "@/lib/geo-race-config";
+import { RaceCountdown } from "@/lib/race-countdown";
 import { sessionRequest } from "@/lib/client-session";
 import { useOnlineUsers } from "@/lib/use-online-users";
 import { useBackHandler } from "./back-navigation";
@@ -14,21 +15,30 @@ async function request(url: string, body?: unknown) {
   const data = await response.json(); if (!response.ok) throw new Error(data.error || "ارتباط با سرور برقرار نشد"); return data;
 }
 export default function CountryRace({ id, onExit, setError, onProfile, registerLeave }: { id: string; onExit: () => void; setError: (message: string) => void; onProfile: (id: string) => void; registerLeave: (handler: (() => Promise<void>) | null) => void }) {
-  const [race, setRace] = useState<Race | null>(null), [query, setQuery] = useState(""), [items, setItems] = useState<Guess[]>([]), [selected, setSelected] = useState<Guess | null>(null), [busy, setBusy] = useState(false), [invited, setInvited] = useState(false), [now, setNow] = useState(Date.now());
+  const [race, setRace] = useState<Race | null>(null), [query, setQuery] = useState(""), [items, setItems] = useState<Guess[]>([]), [selected, setSelected] = useState<Guess | null>(null), [busy, setBusy] = useState(false), [invited, setInvited] = useState(false), [now, setNow] = useState(0);
   const gameType = geoRaceType(race?.gameType), config = geoRaceConfig[gameType];
   const offset = useRef(0), submitting = useRef(false);
+  const countdown = useRef(new RaceCountdown()), latestServerTime = useRef(0), latestStatus = useRef("");
   const online = useOnlineUsers([race?.me.id, race?.opponent.id]);
-  const receive = useCallback((value: Race) => { offset.current = Date.parse(value.serverNow) - Date.now(); setRace(previous => previous?.status === "ENDED" && value.status !== "ENDED" ? previous : value); }, []);
+  const receive = useCallback((value: Race, sentAt: number) => {
+    const serverTime = Date.parse(value.serverNow), receivedAt = performance.now();
+    if (serverTime < latestServerTime.current || latestStatus.current === "ENDED" && value.status !== "ENDED" || latestStatus.current === "ACTIVE" && value.status === "WAITING") return;
+    latestServerTime.current = serverTime; latestStatus.current = value.status;
+    offset.current = serverTime - Date.now();
+    countdown.current.sync(value.deadline, value.serverNow, receivedAt, receivedAt - sentAt);
+    setNow(receivedAt); setRace(value);
+  }, []);
   const act = useCallback(async (action: string, extra: Record<string, unknown> = {}) => {
+    const sentAt = performance.now();
     const data = await request("/api/country-race", { action, id, ...extra });
-    receive(data.race); return data;
+    receive(data.race, sentAt); return data;
   }, [id, receive]);
   useEffect(() => {
     let stopped = false, polling = false;
     const poll = async () => {
       if (polling || document.visibilityState !== "visible") return;
       polling = true;
-      try { const data = await request("/api/country-race?id=" + encodeURIComponent(id)); if (!stopped) receive(data.race); }
+      try { const sentAt = performance.now(); const data = await request("/api/country-race?id=" + encodeURIComponent(id)); if (!stopped) receive(data.race, sentAt); }
       catch (e) { if (!stopped) setError(e instanceof Error ? e.message : "مسابقه پیدا نشد"); }
       finally { polling = false; }
     };
@@ -44,7 +54,7 @@ export default function CountryRace({ id, onExit, setError, onProfile, registerL
     document.addEventListener("visibilitychange", tick);
     return () => { clearInterval(timer); document.removeEventListener("visibilitychange", tick); };
   }, [race?.status, race?.invite?.id, act, setError]);
-  useEffect(() => { const timer = setInterval(() => setNow(Date.now()), 200); return () => clearInterval(timer); }, []);
+  useEffect(() => { const timer = setInterval(() => setNow(performance.now()), 200); return () => clearInterval(timer); }, []);
   useEffect(() => {
     const controller = new AbortController();
     const timer = setTimeout(async () => {
@@ -69,7 +79,7 @@ export default function CountryRace({ id, onExit, setError, onProfile, registerL
     catch (e) { setError(e instanceof Error ? e.message : "حدس ثبت نشد"); }
     finally { submitting.current = false; setBusy(false); }
   };
-  const seconds = Math.max(0, Math.ceil(((race?.deadline ? Date.parse(race.deadline) : now) - now - offset.current) / 1000));
+  const seconds = countdown.current.seconds(now);
   const ended = race?.status === "ENDED", won = ended && race.winnerUserId === race.me.id;
   return <section className="country-race-screen duel-screen">
     <div className="play-heading"><button className="icon-button" aria-label="بازگشت" onClick={() => void leave()}>→</button><div><small>رقابت دو نفره</small><h1>{config.name}</h1></div>{race?.status === "ACTIVE" && <button className="duel-leave" onClick={() => void leave()}>تسلیم</button>}</div>
@@ -82,7 +92,7 @@ export default function CountryRace({ id, onExit, setError, onProfile, registerL
       {race.status === "ACTIVE" && <>
         <div className={"race-timer" + (seconds <= 20 ? " urgent" : "")} role="timer">{seconds.toLocaleString("fa-IR")} <small>ثانیه باقی مانده</small></div>
         <p className="players-hint">{config.noun} پنهان را پیدا کن؛ رتبهٔ کمتر یعنی نزدیک‌تر.</p>
-        {!race.opponentConnected && <p className="duel-disconnected">منتظر بازگشت حریف؛ {Math.max(0, Math.ceil((Date.parse(race.reconnectDeadline) - now - offset.current) / 1000)).toLocaleString("fa-IR")} ثانیه فرصت دارد.</p>}
+        {!race.opponentConnected && <p className="duel-disconnected">منتظر بازگشت حریف؛ {Math.max(0, Math.ceil((Date.parse(race.reconnectDeadline) - Date.now() - offset.current) / 1000)).toLocaleString("fa-IR")} ثانیه فرصت دارد.</p>}
         <div className="search-box">
           <div className="search-row">
             <input aria-label={`جست‌وجوی ${config.noun}`} placeholder={config.hint} autoComplete="off" value={query} maxLength={80}

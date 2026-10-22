@@ -10,7 +10,7 @@ import {
 } from "react";
 import CountryRace from "./country-race";
 import CountryChallenge from "./country-challenge";
-import { CountryMatchBanner, useCountryMatchmaking, type MatchState } from "./country-matchmaking";
+import { CountryMatchBanner, CountryMatchWaiting, useCountryMatchmaking, type MatchState } from "./country-matchmaking";
 import LetterDuel from "./letter-duel";
 import WordWeaver from "./word-weaver";
 import OnlineAvatar from "./online-avatar";
@@ -123,7 +123,7 @@ type PublicProfile = {
     };
   };
 };
-type Screen = "country-race" | "country-mode" | "country-challenge" | "home" | "play" | "duel" | "word-weaver" | "leaderboard" | "players";
+type Screen = "country-search" | "country-race" | "country-mode" | "country-challenge" | "home" | "play" | "duel" | "word-weaver" | "leaderboard" | "players";
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const TELEGRAM_BOT_USERNAME = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || "";
 
@@ -226,7 +226,12 @@ export default function AntiAiGamesApp() {
   const [inviteGameChoice, setInviteGameChoice] = useState<InviteGame | null>(null);
   useBackHandler(() => setInviteRecipient(null), Boolean(inviteRecipient), 50);
   const multiplayerLeave = useRef<null | (() => Promise<void>)>(null);
-  const countryMatch = useCountryMatchmaking({ userId: user ? String(user.id) : null, onError: setError });
+  const countryMatch = useCountryMatchmaking({ userId: user ? String(user.id) : null, onError: setError, onMatch: roomId => {
+    if (raceId === roomId && screen === "country-race") return;
+    setRaceId(roomId); setProfileUserId(null); setInviteRecipient(null);
+    try { sessionStorage.setItem(`antiai-country-race:${user.id}`, roomId); } catch {}
+    previousScreens.current = []; setScreen("country-race");
+  } });
   const invitations = useDuelInvitations({
     userId: user ? String(user.id) : null,
     onError: setError,
@@ -236,6 +241,7 @@ export default function AntiAiGamesApp() {
       return true;
     },
     onJoin: async (connectionId, _inviteId, gameKind) => {
+      if (raceId === connectionId && screen === "country-race") return;
       if (multiplayerLeave.current && screen !== "duel" && screen !== "country-race") await multiplayerLeave.current();
       // Readiness is acknowledged by the mounted duel screen, not by the notification.
       if ((gameKind === "COUNTRY_RACE" || gameKind === "CITY_RACE")) {
@@ -331,7 +337,7 @@ export default function AntiAiGamesApp() {
     if (!user) return;
     const isPlaying = screen === "play" && game?.status === "ACTIVE";
     if (!presenceClientId.current) presenceClientId.current = window.crypto.randomUUID();
-    const context = isPlaying || screen === "duel" || screen === "country-race" || screen === "word-weaver" ? "GAME" : "MENU";
+    const context = isPlaying || screen === "country-challenge" || screen === "duel" || screen === "country-race" || screen === "word-weaver" ? "GAME" : "MENU";
     const heartbeat = () => {
       if (document.visibilityState !== "visible") return;
       jsonFetch<{ onlineCount: number; randomDuelWaiting: boolean }>("/api/presence", {
@@ -435,7 +441,8 @@ export default function AntiAiGamesApp() {
           onWordWeaver={() => navigate("word-weaver")}
         />
       )}
-      {screen === "country-mode" && <CountryModePicker matchState={countryMatch.state} matchBusy={countryMatch.busy} onBack={back} onChallenge={() => navigate("country-challenge")} onPractice={() => void startGame("COUNTRY")} onFind={() => void countryMatch.action("start")} onCancel={() => void countryMatch.action("cancel")} onInvite={() => { setInviteGameChoice("COUNTRY_RACE"); navigate("players"); }} />}
+      {screen === "country-mode" && <CountryModePicker matchState={countryMatch.state} matchBusy={countryMatch.busy} onBack={back} onChallenge={() => navigate("country-challenge")} onPractice={() => void startGame("COUNTRY")} onFind={() => { navigate("country-search"); if (countryMatch.state?.search?.status !== "ACTIVE") void countryMatch.action("start"); }} onCancel={() => void countryMatch.action("cancel")} onInvite={() => { setInviteGameChoice("COUNTRY_RACE"); navigate("players"); }} />}
+      {screen === "country-search" && <CountryMatchWaiting state={countryMatch.state} busy={countryMatch.busy} action={countryMatch.action} onBack={back} />}
       {screen === "country-challenge" && <CountryChallenge onBack={back} onLeaderboard={() => { setLeaderboardType("COUNTRY"); navigate("leaderboard"); }} setError={setError} />}
       {screen === "players" && <Players me={String(user.id)} state={invitations.state} busy={invitations.busy} onAction={invitations.action} onSend={id => { const kind = inviteGameChoice; setInviteGameChoice(null); if (kind) void sendDirectInvite(id, kind); else setInviteRecipient(id); }} onProfile={setProfileUserId} onBack={back} />}
       {screen === "country-race" && raceId && <CountryRace key={raceId} id={raceId} onExit={() => { exitGame(); setScreen("players"); }} setError={setError} onProfile={setProfileUserId} registerLeave={handler => { multiplayerLeave.current = handler; }} />}
@@ -661,7 +668,7 @@ function CountryModePicker({ matchState, matchBusy, onBack, onChallenge, onPract
     </button>
     <section className="country-mode-duel">
       <div className="country-mode-duel-heading"><span className="game-icon">⚔️</span><div className="game-copy"><b>رقابت دونفره</b><small>یک کشور مشترک، حداکثر ۲۰۰ ثانیه</small></div></div>
-      {running ? <div className="country-mode-searching"><span>در حال پیدا کردن حریف…</span><button className="secondary" disabled={matchBusy} onClick={onCancel}>لغو جست‌وجو</button></div> : <div className="country-mode-actions"><button className="primary" disabled={matchBusy} onClick={onFind}>پیدا کردن حریف</button><button className="secondary" onClick={onInvite}>دعوت از بازیکن آنلاین</button></div>}
+      {running ? <div className="country-mode-searching"><button className="primary" onClick={onFind}>مشاهدهٔ جست‌وجوی حریف</button><button className="secondary" disabled={matchBusy} onClick={onCancel}>لغو جست‌وجو</button></div> : <div className="country-mode-actions"><button className="primary" disabled={matchBusy} onClick={onFind}>پیدا کردن حریف</button><button className="secondary" onClick={onInvite}>دعوت از بازیکن آنلاین</button></div>}
     </section>
   </section>;
 }

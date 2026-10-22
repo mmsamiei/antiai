@@ -28,7 +28,7 @@ export function useDuelInvitations({ userId, onJoin, beforeAccept, onError }: {
     finally { joining.current = false; }
   }, []);
   const refresh = useCallback(async () => {
-    if (polling.current) return;
+    if (polling.current || actionBusy.current) return;
     polling.current = true;
     const version = ++sequence.current;
     try {
@@ -41,7 +41,7 @@ export function useDuelInvitations({ userId, onJoin, beforeAccept, onError }: {
     if (!userId) return;
     let stopped = false;
     const poll = () => { if (!stopped && document.visibilityState === "visible") void refresh().catch(() => undefined); };
-    poll(); const timer = setInterval(poll, 5000);
+    poll(); const timer = setInterval(poll, 2000);
     document.addEventListener("visibilitychange", poll);
     return () => { stopped = true; clearInterval(timer); document.removeEventListener("visibilitychange", poll); };
   }, [userId, refresh]);

@@ -2,6 +2,7 @@ import { randomInt } from "node:crypto";
 import { Prisma } from "@prisma/client";
 import { prisma } from "./prisma";
 import { datasetFor } from "./geo";
+import { publicIdentity } from "./public-identity";
 
 export const MATCH_ONLINE_MS = 20_000;
 export const MATCH_OFFER_MS = 15_000;
@@ -67,7 +68,8 @@ async function makeRaceTx(tx: Tx, senderId: string, recipientId: string, now: Da
     startDeadline: new Date(+now + MATCH_OFFER_MS),
   } });
   await tx.duelInvite.updateMany({ where: { id: { not: invite.id }, status: "PENDING", OR: [{ senderId: { in: [senderId, recipientId] } }, { recipientId: { in: [senderId, recipientId] } }] }, data: { status: "CANCELLED", reason: "یکی از بازیکن‌ها وارد مسابقه شد", respondedAt: now } });
-  await tx.countryMatchSearch.updateMany({ where: { userId: { in: [senderId, recipientId] }, status: "ACTIVE" }, data: { status: "MATCHED", ...(searchId ? { matchedRaceId: race.id } : {}) } });
+  await tx.countryMatchSearch.updateMany({ where: { userId: { in: [senderId, recipientId] }, status: "ACTIVE" }, data: { status: "MATCHED" } });
+  if (searchId) await tx.countryMatchSearch.update({ where: { id: searchId }, data: { matchedRaceId: race.id } });
   if (offerId) await tx.countryMatchOffer.update({ where: { id: offerId }, data: { status: "ACCEPTED", respondedAt: now, raceId: race.id } });
   await tx.countryMatchOffer.updateMany({ where: { status: "PENDING", OR: [{ senderId: { in: [senderId, recipientId] } }, { recipientId: { in: [senderId, recipientId] } }] }, data: { status: "CANCELLED", respondedAt: now } });
   return race;
@@ -103,8 +105,9 @@ export async function readCountryMatch(userId: string) {
     const search = await tx.countryMatchSearch.findFirst({ where: { userId }, orderBy: { createdAt: "desc" }, include: { offers: { orderBy: { createdAt: "desc" }, take: 1, include: { sender: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } }, recipient: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } } } } } });
     const incoming = await tx.countryMatchOffer.findFirst({ where: { recipientId: userId, status: "PENDING" }, include: { sender: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } } } });
     if (search?.status === "ACTIVE") await tx.countryMatchSearch.update({ where: { id: search.id }, data: { lastSeenAt: now } });
+    const room = await tx.countryRace.findFirst({ where: { status: { in: ["WAITING", "ACTIVE"] }, AND: [{ OR: [{ playerOneId: userId }, { playerTwoId: userId }] }, { OR: [{ matchOffer: { isNot: null } }, { matchedSearch: { isNot: null } }] }] }, select: { id: true } });
     const offer = incoming ? { ...incoming, sender: { ...incoming.sender, username: incoming.sender.showUsername ? incoming.sender.username : null } } : null;
-    return { search: search ? { id: search.id, status: search.status, createdAt: search.createdAt, offer: search.offers[0] ? { id: search.offers[0].id, status: search.offers[0].status, expiresAt: search.offers[0].expiresAt, recipient: search.offers[0].recipient } : null } : null, incoming: offer, serverNow: now };
+    return { search: search ? { id: search.id, status: search.status, createdAt: search.createdAt, offer: search.offers[0] ? { id: search.offers[0].id, status: search.offers[0].status, expiresAt: search.offers[0].expiresAt, recipient: publicIdentity(search.offers[0].recipient) } : null } : null, incoming: offer, roomId: room?.id ?? null, serverNow: now };
   }, { isolationLevel: Prisma.TransactionIsolationLevel.Serializable });
 }
 
@@ -182,8 +185,7 @@ export async function processCountryMatchTick() {
     const oldest = waiting[0];
     const secondQueued = waiting.find(search => search.id !== oldest.id);
     if (secondQueued) {
-      const race = await makeRaceTx(tx, oldest.userId, secondQueued.userId, now, oldest.id);
-      await tx.countryMatchSearch.update({ where: { id: secondQueued.id }, data: { matchedRaceId: race.id } });
+      await makeRaceTx(tx, oldest.userId, secondQueued.userId, now, oldest.id);
       return;
     }
     const attempted = await tx.countryMatchOffer.findMany({ where: { searchId: oldest.id }, select: { recipientId: true } });

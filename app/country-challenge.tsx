@@ -1,6 +1,8 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
 import { geoRaceConfig, type GeoRaceType } from "@/lib/geo-race-config";
+import { useGeographySearch } from "@/lib/use-geography-search";
+import type { GeographySuggestion } from "@/lib/geography-search-client";
 import { sessionRequest } from "@/lib/client-session";
 
 const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -20,7 +22,7 @@ export default function CountryChallenge({ gameType = "COUNTRY", onBack, onLeade
   const config = geoRaceConfig[gameType], name = gameType === "COUNTRY" ? "کشورجو" : "شهرجو";
   const url = "/api/country-challenge?type=" + gameType;
   const [state, setState] = useState<State | null>(null), [loading, setLoading] = useState(true), [busy, setBusy] = useState(false), [serverOffset, setServerOffset] = useState(0);
-  const [query, setQuery] = useState(""), [items, setItems] = useState<Guess[]>([]), [selected, setSelected] = useState<Guess | null>(null), [now, setNow] = useState(Date.now());
+  const [query, setQuery] = useState(""), [items, setItems] = useState<GeographySuggestion[]>([]), [selected, setSelected] = useState<GeographySuggestion | null>(null), [now, setNow] = useState(Date.now());
   const acceptState = useCallback((value: State) => { setServerOffset(Date.parse(value.challenge.serverNow) - Date.now()); setState(value); }, []);
   useEffect(() => {
     let stopped = false, polling = false, opened = false;
@@ -29,15 +31,8 @@ export default function CountryChallenge({ gameType = "COUNTRY", onBack, onLeade
     return () => { stopped = true; clearInterval(timer); document.removeEventListener("visibilitychange", poll); };
   }, [setError, acceptState, url]);
   useEffect(() => { const timer = setInterval(() => setNow(Date.now()), 500); return () => clearInterval(timer); }, []);
-  useEffect(() => {
-    const controller = new AbortController();
-    const timer = setTimeout(async () => {
-      if (selected || query.trim().length < 1) { setItems([]); return; }
-      try { const response = await fetch(base + "/api/search?type=" + gameType + "&q=" + encodeURIComponent(query), sessionRequest({ signal: controller.signal })); const data = await response.json(); if (response.ok && !controller.signal.aborted) setItems(data.items || []); }
-      catch { if (!controller.signal.aborted) setItems([]); }
-    }, 140);
-    return () => { controller.abort(); clearTimeout(timer); };
-  }, [query, selected, gameType]);
+  useGeographySearch({ type: gameType, query, selected: Boolean(selected), enabled: state?.entry?.status === "ACTIVE" && !state.challenge.ended, onResults: setItems });
+
   const act = async (payload: Record<string, unknown>) => {
     if (busy) return;
     setBusy(true);

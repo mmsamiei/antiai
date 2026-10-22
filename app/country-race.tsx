@@ -2,6 +2,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { geoRaceConfig, geoRaceType, type GeoRaceType } from "@/lib/geo-race-config";
 import { RaceCountdown } from "@/lib/race-countdown";
+import { useGeographySearch } from "@/lib/use-geography-search";
+import type { GeographySuggestion } from "@/lib/geography-search-client";
 import { sessionRequest } from "@/lib/client-session";
 import { useOnlineUsers } from "@/lib/use-online-users";
 import { useBackHandler } from "./back-navigation";
@@ -15,7 +17,7 @@ async function request(url: string, body?: unknown) {
   const data = await response.json(); if (!response.ok) throw new Error(data.error || "ارتباط با سرور برقرار نشد"); return data;
 }
 export default function CountryRace({ id, onExit, setError, onProfile, registerLeave }: { id: string; onExit: () => void; setError: (message: string) => void; onProfile: (id: string) => void; registerLeave: (handler: (() => Promise<void>) | null) => void }) {
-  const [race, setRace] = useState<Race | null>(null), [query, setQuery] = useState(""), [items, setItems] = useState<Guess[]>([]), [selected, setSelected] = useState<Guess | null>(null), [busy, setBusy] = useState(false), [invited, setInvited] = useState(false), [now, setNow] = useState(0);
+  const [race, setRace] = useState<Race | null>(null), [query, setQuery] = useState(""), [items, setItems] = useState<GeographySuggestion[]>([]), [selected, setSelected] = useState<GeographySuggestion | null>(null), [busy, setBusy] = useState(false), [invited, setInvited] = useState(false), [now, setNow] = useState(0);
   const gameType = geoRaceType(race?.gameType), config = geoRaceConfig[gameType];
   const offset = useRef(0), submitting = useRef(false);
   const countdown = useRef(new RaceCountdown()), latestServerTime = useRef(0), latestStatus = useRef("");
@@ -55,17 +57,8 @@ export default function CountryRace({ id, onExit, setError, onProfile, registerL
     return () => { clearInterval(timer); document.removeEventListener("visibilitychange", tick); };
   }, [race?.status, race?.invite?.id, act, setError]);
   useEffect(() => { const timer = setInterval(() => setNow(performance.now()), 200); return () => clearInterval(timer); }, []);
-  useEffect(() => {
-    const controller = new AbortController();
-    const timer = setTimeout(async () => {
-      if (selected || !query.trim()) { setItems([]); return; }
-      try {
-        const response = await fetch(base + "/api/search?type=" + gameType + "&q=" + encodeURIComponent(query), sessionRequest({ signal: controller.signal }));
-        const data = await response.json(); if (!response.ok) throw new Error(); if (!controller.signal.aborted) setItems(data.items);
-      } catch { if (!controller.signal.aborted) setItems([]); }
-    }, 150);
-    return () => { controller.abort(); clearTimeout(timer); };
-  }, [query, selected, gameType]);
+  useGeographySearch({ type: gameType, query, selected: Boolean(selected), enabled: race?.status === "ACTIVE", onResults: setItems });
+
   const leave = async (confirm = true) => {
     if (confirm && race?.status === "ACTIVE" && !window.confirm("با خروج، مسابقه را به حریف واگذار می‌کنی. خارج می‌شوی؟")) return;
     try { if (race && race.status !== "ENDED") await act("leave"); onExit(); }

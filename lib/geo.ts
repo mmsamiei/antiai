@@ -31,21 +31,35 @@ export function findItem(type: GameType, id: string): GameItem | undefined {
   return datasetFor(type).find((item) => item.id === id);
 }
 
+const searchCollator = new Intl.Collator("fa");
+const searchIndex = new Map<GameType, { item: GameItem; names: string[] }[]>(
+  (["IRAN_CITY", "COUNTRY"] as const).map(type => [type, datasetFor(type).map(item => ({
+    item, names: [item.name, ...item.aliases].map(normalizePersian),
+  }))]),
+);
+const searchCache = new Map<string, GameItem[]>();
+const SEARCH_CACHE_LIMIT = 256;
+
 export function searchItems(type: GameType, rawQuery: string, limit = 8): GameItem[] {
   const query = normalizePersian(rawQuery);
   if (!query) return [];
-  return datasetFor(type)
-    .map((item) => {
-      const names = [item.name, ...item.aliases].map(normalizePersian);
-      const exact = names.some((name) => name === query);
-      const starts = names.some((name) => name.startsWith(query));
-      const contains = names.some((name) => name.includes(query));
+  const key = JSON.stringify([type, query, limit]);
+  const cached = searchCache.get(key);
+  if (cached) return cached.slice();
+  const matches = (searchIndex.get(type) || [])
+    .map(({ item, names }) => {
+      const exact = names.some(name => name === query);
+      const starts = names.some(name => name.startsWith(query));
+      const contains = names.some(name => name.includes(query));
       return { item, score: exact ? 0 : starts ? 1 : contains ? 2 : 99 };
     })
     .filter(({ score }) => score < 99)
-    .sort((a, b) => a.score - b.score || a.item.name.localeCompare(b.item.name, "fa"))
+    .sort((a, b) => a.score - b.score || searchCollator.compare(a.item.name, b.item.name))
     .slice(0, limit)
     .map(({ item }) => item);
+  if (searchCache.size >= SEARCH_CACHE_LIMIT) searchCache.delete(searchCache.keys().next().value!);
+  searchCache.set(key, matches);
+  return matches.slice();
 }
 
 export function haversineDistance(a: GeoItem, b: GeoItem): number {

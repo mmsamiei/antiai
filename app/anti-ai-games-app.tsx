@@ -9,6 +9,7 @@ import {
   useState,
 } from "react";
 import { geoRaceConfig, type GeoRaceType } from "@/lib/geo-race-config";
+import { useGeographySearch } from "@/lib/use-geography-search";
 import CountryRace from "./country-race";
 import CountryChallenge from "./country-challenge";
 import { CountryMatchBanner, useCountryMatchmaking, type MatchState } from "./country-matchmaking";
@@ -834,31 +835,10 @@ function Play({
     setGame,
   ]);
 
-  useEffect(() => {
-    if (
-      isAdjectiveRain || isPhraseHunt ||
-      query.trim().length < 1 ||
-      selected?.name === query ||
-      game.status !== "ACTIVE"
-    ) {
-      setSuggestions([]);
-      return;
-    }
-    const timer = setTimeout(() => {
-      jsonFetch<{ items: PublicItem[] }>(
-        `/api/search?type=${game.type}&q=${encodeURIComponent(query)}`,
-      )
-        .then(({ items }) =>
-          setSuggestions(
-            items.filter(
-              (item) => !game.guesses.some((guess) => guess.id === item.id),
-            ),
-          ),
-        )
-        .catch(() => setSuggestions([]));
-    }, 140);
-    return () => clearTimeout(timer);
-  }, [query, selected, game.type, game.status, game.guesses, isAdjectiveRain, isPhraseHunt]);
+  useGeographySearch({ type: game.type, query, selected: selected?.name === query,
+    enabled: game.status === "ACTIVE" && (game.type === "COUNTRY" || game.type === "IRAN_CITY"),
+    onResults: items => setSuggestions(items.filter(item => !game.guesses.some(guess => guess.id === item.id))),
+  });
 
   const submitGuess = async () => {
     if (

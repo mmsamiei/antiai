@@ -22,7 +22,9 @@
     "test:letter-practice-matching-integration": "tsx scripts/test-letter-practice-matching-integration.ts",
     "test:letter-duel-matches-integration": "tsx scripts/test-letter-duel-matches-integration.ts",
     "test:duel-invites-integration": "tsx scripts/test-duel-invites-integration.ts",
-    "social-status-server": "tsx scripts/social-status-server.ts"
+    "social-status-server": "tsx scripts/social-status-server.ts",
+    "cache:clear-leaderboards": "tsx scripts/clear-leaderboard-cache.ts",
+    "test:shared-judgment-integration": "tsx scripts/test-shared-judgment.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.16.2",

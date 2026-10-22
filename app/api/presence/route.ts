@@ -1,3 +1,4 @@
+import { onlineCountCache } from "@/lib/online-count-cache";
 import { NextResponse } from "next/server";
 import { currentUserId } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
@@ -17,9 +18,9 @@ export async function POST(request: Request) {
   if (!clientId) return NextResponse.json({ error: "شناسهٔ حضور معتبر نیست" }, { status: 400 });
   const isPlaying = context === "GAME";
   const now = new Date();
-  const onlineSince = new Date(now.getTime() - ONLINE_WINDOW_MS);
 
-  const [, , onlineCount] = await prisma.$transaction([
+
+  await prisma.$transaction([
     prisma.onlinePresence.upsert({
       where: { userId },
       create: { userId, isPlaying, lastSeenAt: now },
@@ -29,11 +30,10 @@ export async function POST(request: Request) {
       where: { userId_clientId: { userId, clientId } },
       create: { userId, clientId, context, lastSeenAt: now },
       update: { context, lastSeenAt: now },
-    }),
-    prisma.onlinePresence.count({
-      where: { lastSeenAt: { gte: onlineSince } }
     })
   ]);
+
+  const onlineCount = await onlineCountCache.get("all", 3000, () => prisma.onlinePresence.count({ where: { lastSeenAt: { gte: new Date(Date.now() - ONLINE_WINDOW_MS) } } }));
 
   const randomDuelWaiting = Boolean(await prisma.letterDuelConnection.findFirst({
     where: {

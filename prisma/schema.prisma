@@ -297,6 +297,12 @@ model PhraseHuntGuess {
   @@index([gameId, createdAt])
 }
 
+model PhraseHuntJudgmentLease {
+  key       String   @id
+  owner     String
+  expiresAt DateTime
+}
+
 model PhraseHuntJudgment {
   id           String   @id @default(cuid())
   targetId     String

@@ -40,7 +40,7 @@ export function useCountryMatchmaking({ userId, onError, onMatch }: { userId: st
     if (!userId) { setState(null); return; }
     let stopped = false;
     const poll = () => { if (!stopped && document.visibilityState === "visible") void refresh().catch(() => undefined); };
-    poll(); const timer = window.setInterval(poll, watchingMatch ? 1_000 : 2_000); document.addEventListener("visibilitychange", poll);
+    poll(); const timer = window.setInterval(poll, watchingMatch ? 1_000 : 3_000); document.addEventListener("visibilitychange", poll);
     return () => { stopped = true; clearInterval(timer); document.removeEventListener("visibilitychange", poll); };
   }, [userId, refresh, watchingMatch]);
   const action = useCallback(async (action: "start" | "cancel" | "accept" | "reject", offerId?: string, gameType?: MatchGameType) => {

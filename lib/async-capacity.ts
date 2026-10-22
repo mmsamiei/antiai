@@ -3,7 +3,8 @@ export class AsyncCapacity {
   private active = 0;
   private waiting: { resolve: () => void; reject: (e: Error) => void; timer: ReturnType<typeof setTimeout> }[] = [];
   constructor(private limit: number, private maxWaiting: number, private waitMs: number) {}
-  async run<T>(work: () => Promise<T>): Promise<T> {
+  async run<T>(work: () => Promise<T>, onStart?: (waitMs: number) => void): Promise<T> {
+    const started = performance.now();
     if (this.active < this.limit) this.active++;
     else {
       if (this.waiting.length >= this.maxWaiting) throw new CapacityError();
@@ -12,7 +13,7 @@ export class AsyncCapacity {
         this.waiting.push(item);
       });
     }
-    try { return await work(); }
+    try { onStart?.(performance.now() - started); return await work(); }
     finally { const next = this.waiting.shift(); if (next) { clearTimeout(next.timer); next.resolve(); } else this.active--; }
   }
 }

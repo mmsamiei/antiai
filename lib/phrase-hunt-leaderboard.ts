@@ -1,3 +1,4 @@
+import { leaderboardCache, LIVE_BOARD_TTL, challengeBoardTtl } from "./leaderboard-cache";
 import { publicDisplayName } from "./public-identity";
 import { Prisma } from "@prisma/client";
 import { prisma } from "./prisma";
@@ -17,7 +18,7 @@ export async function phraseChallengeLeaderboard(userId: string, requestedId: st
     ended: c.endsAt <= now,
     ...(c.endsAt <= now ? { target: phraseHuntTargets.find(t => t.id === c.targetId)?.phrase } : {}),
   });
-  const best = await prisma.$queryRaw<{ userId: string; score: number; phrase: string; achievedAt: Date; guessCount: number }[]>(Prisma.sql`
+  const best = await leaderboardCache.get(JSON.stringify(["phrase-challenge", selected.id, +selected.endsAt, selected.endsAt <= now]), challengeBoardTtl(selected.endsAt, now), () => prisma.$queryRaw<{ userId: string; score: number; phrase: string; achievedAt: Date; guessCount: number }[]>(Prisma.sql`
     SELECT * FROM (
       SELECT DISTINCT ON (g."userId") g."userId", pg.score, pg.phrase,
         pg."createdAt" AS "achievedAt", COUNT(*) OVER (PARTITION BY g."userId")::int AS "guessCount"
@@ -25,7 +26,7 @@ export async function phraseChallengeLeaderboard(userId: string, requestedId: st
       WHERE g.type = 'PHRASE_HUNT' AND g."phraseChallengeId" = ${selected.id}
       ORDER BY g."userId", pg.score DESC, pg."createdAt" ASC, pg.id ASC
     ) best ORDER BY score DESC, "achievedAt" ASC, "userId" ASC
-  `);
+  `));
   const visibleIds = best.slice(0, 50).map(r => r.userId);
   if (best.some(r => r.userId === userId) && !visibleIds.includes(userId)) visibleIds.push(userId);
   const users = await prisma.user.findMany({ where: { id: { in: visibleIds } } });

@@ -1,3 +1,5 @@
+import { sharedJudgment } from "./shared-judgment";
+import { measureJudge, recordJudgeTiming } from "./judge-metrics";
 import { AsyncCapacity } from "./async-capacity";
 import { Prisma } from "@prisma/client";
 import { prisma } from "./prisma";
@@ -96,42 +98,43 @@ async function judgeContextualPhrase(targetId: string, target: string, phrase: s
   if (cached) return cached.score;
   const apiKey = process.env.JEV_API_KEY;
   if (!apiKey) throw new Error("JEV_UNAVAILABLE");
-  return judgeCapacity.run(async () => {
-  const history = await loadPhraseHuntHistory(context.challengeId, context.userId, phrase);
-  const anchors = phraseHuntAnchors[context.challengeId] ?? [];
-  const previousByGuess = new Map(history.previousGuesses.map((item) => [normalizePersian(item.guess), item]));
-  for (const anchor of anchors) {
-    const normalized = normalizePersian(anchor.guess);
-    if (normalized && normalized !== normalizePersian(phrase)) previousByGuess.set(normalized, anchor);
-  }
-  const previousGuesses = [...previousByGuess.entries()]
-    .sort(([aKey, a], [bKey, b]) => b.score_out_of_100 - a.score_out_of_100 || historyCollator.compare(aKey, bKey))
-    .slice(0, 200).map(([, item]) => item);
-  let score: number;
-  try {
-    const response = await fetch(process.env.JEV_API_URL || "https://openrouter.ai/api/alpha/decisions", {
-      method: "POST", headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
-      body: JSON.stringify({ model, state: { target_phrase: target, submitted_phrase: phrase, language: "Persian", previous_guesses: previousGuesses },
-        questions: { score: { type: "score", instructions: contextualPhraseInstructions, criteria: contextualPhraseLevels } } }),
-      signal: AbortSignal.timeout(7000),
+  return sharedJudgment([cacheTargetId, phrase, judgeVersion, model], async () => (await prisma.phraseHuntJudgment.findUnique({ where }))?.score ?? null, () => judgeCapacity.run(async () => {
+    const history = await measureJudge("history", () => loadPhraseHuntHistory(context.challengeId, context.userId, phrase));
+    const anchors = phraseHuntAnchors[context.challengeId] ?? [];
+    const previousByGuess = new Map(history.previousGuesses.map((item) => [normalizePersian(item.guess), item]));
+    for (const anchor of anchors) {
+      const normalized = normalizePersian(anchor.guess);
+      if (normalized && normalized !== normalizePersian(phrase)) previousByGuess.set(normalized, anchor);
+    }
+    const previousGuesses = [...previousByGuess.entries()]
+      .sort(([aKey, a], [bKey, b]) => b.score_out_of_100 - a.score_out_of_100 || historyCollator.compare(aKey, bKey))
+      .slice(0, 200).map(([, item]) => item);
+    const score = await measureJudge("provider", async () => {
+      try {
+        const response = await fetch(process.env.JEV_API_URL || "https://openrouter.ai/api/alpha/decisions", {
+          method: "POST", headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
+          body: JSON.stringify({ model, state: { target_phrase: target, submitted_phrase: phrase, language: "Persian", previous_guesses: previousGuesses },
+            questions: { score: { type: "score", instructions: contextualPhraseInstructions, criteria: contextualPhraseLevels } } }),
+          signal: AbortSignal.timeout(7000),
+      });
+      if (!response.ok) throw new Error("JEV_UNAVAILABLE");
+      const payload = await response.json() as { answers?: { score?: { score?: unknown } } };
+      return parsePhraseScore(payload.answers?.score?.score);
+    } catch { throw new Error("JEV_UNAVAILABLE"); }
     });
-    if (!response.ok) throw new Error("JEV_UNAVAILABLE");
-    const payload = await response.json() as { answers?: { score?: { score?: unknown } } };
-    score = parsePhraseScore(payload.answers?.score?.score);
-  } catch { throw new Error("JEV_UNAVAILABLE"); }
-  try {
-    const saved = await prisma.phraseHuntJudgment.upsert({ where,
-      create: { targetId: cacheTargetId, phrase, judgeVersion, model, score }, update: {},
-    });
-    // A concurrent first judgment may have won: always return the shared stored score.
-    return saved.score;
-  } catch (error) {
-    if (!(error instanceof Prisma.PrismaClientKnownRequestError) || error.code !== "P2002") throw error;
-    const winner = await prisma.phraseHuntJudgment.findUnique({ where });
-    if (!winner) throw error;
-    return winner.score;
-  }
-  });
+    try {
+      const saved = await measureJudge("score_persist", () => prisma.phraseHuntJudgment.upsert({ where,
+        create: { targetId: cacheTargetId, phrase, judgeVersion, model, score }, update: {},
+      }));
+      // A concurrent first judgment may have won: always return the shared stored score.
+      return saved.score;
+    } catch (error) {
+      if (!(error instanceof Prisma.PrismaClientKnownRequestError) || error.code !== "P2002") throw error;
+      const winner = await prisma.phraseHuntJudgment.findUnique({ where });
+      if (!winner) throw error;
+      return winner.score;
+    }
+  }, waitMs => recordJudgeTiming("queue_wait", waitMs)));
 }
 
 export async function judgePhrase(targetId: string, target: string, rawPhrase: string, judgeVersion = PHRASE_HUNT_JUDGE_VERSION, model = PHRASE_HUNT_JUDGE_MODEL, context?: PhraseJudgeContext): Promise<number> {

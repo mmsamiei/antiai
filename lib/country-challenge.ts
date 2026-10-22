@@ -1,3 +1,4 @@
+import { leaderboardCache, LIVE_BOARD_TTL, challengeBoardTtl } from "./leaderboard-cache";
 import { randomInt } from "node:crypto";
 import { Prisma } from "@prisma/client";
 import { prisma } from "./prisma";
@@ -152,29 +153,30 @@ export async function surrenderCountryChallenge(userId: string, gameType: GeoRac
 }
 
 export async function countryChallengeLeaderboard(userId: string, challengeId?: string | null, gameType: GeoRaceType = "COUNTRY") {
-  return prisma.$transaction(async tx => {
-    const now = new Date();
-    const current = await ensureChallenge(tx, now, gameType);
-    const selectedId = challengeId || current.id;
-    const challenge = await tx.countryChallenge.findUnique({ where: { id: selectedId } });
-    if (!challenge || challenge.gameType !== gameType) return null;
-    const entries = await tx.countryChallengeEntry.findMany({ where: { challengeId: selectedId }, include: { user: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } }, guesses: true } });
-    const ended = now >= challenge.endsAt;
-    entries.sort((a, b) => {
-      const aSolved = a.status === "WON", bSolved = b.status === "WON";
-      if (aSolved !== bSolved) return aSolved ? -1 : 1;
-      if (aSolved) return a.guessCount - b.guessCount || +(a.solvedAt || a.finishedAt || 0) - +(b.solvedAt || b.finishedAt || 0) || a.userId.localeCompare(b.userId);
-      return (a.bestRank ?? Number.MAX_SAFE_INTEGER) - (b.bestRank ?? Number.MAX_SAFE_INTEGER) || +(a.bestRankAt || a.finishedAt || a.createdAt) - +(b.bestRankAt || b.finishedAt || b.createdAt) || a.userId.localeCompare(b.userId);
-    });
-    const rows = entries.map((entry, index) => ({
-      rank: index + 1, userId: entry.userId, displayName: `${entry.user.firstName || ""} ${entry.user.lastName || ""}`.trim() || (entry.user.showUsername ? entry.user.username : null) || "بازیکن",
-      photoUrl: entry.user.photoUrl, wins: entry.status === "WON" ? 1 : 0, averageGuesses: entry.guessCount, bestGame: entry.guessCount,
-      guessCount: entry.guessCount, bestScore: entry.bestRank, totalScore: entry.bestRank, challengeSolved: entry.status === "WON",
-      bestGuess: ended ? findItem(gameType, entry.guesses.find(guess => guess.rank === (entry.status === "WON" ? 0 : entry.bestRank))?.itemId || "")?.name : undefined,
-      isMe: entry.userId === userId,
-    }));
-    const userIn = rows.find(row => row.isMe);
-    const target = ended ? findItem(geoRaceType(challenge.gameType), challenge.targetId)?.name ?? null : null;
-    return { rows: rows.slice(0, 50), me: userIn || null, challenge: { ...countryChallengeTimes(challenge.startsAt, now, challenge.endsAt), id: challenge.id, gameType, ended, target }, challenges: (await tx.countryChallenge.findMany({ where: { gameType }, orderBy: { startsAt: "desc" }, take: 30 })).map(c => ({ ...countryChallengeTimes(c.startsAt, now, c.endsAt), id: c.id, gameType, ended: now >= c.endsAt, target: now >= c.endsAt ? findItem(gameType, c.targetId)?.name ?? null : null })) };
-  }, { isolationLevel: Prisma.TransactionIsolationLevel.ReadCommitted });
+  const now = new Date();
+  const current = await leaderboardCache.get(JSON.stringify(["geo-current", gameType, countryChallengeWindow(now, gameType).id]), LIVE_BOARD_TTL, () => ensureCountryChallengeAt(now, gameType));
+  const selectedId = challengeId || current.id;
+  const challenge = await prisma.countryChallenge.findUnique({ where: { id: selectedId } });
+  if (!challenge || challenge.gameType !== gameType) return null;
+  const entries = await leaderboardCache.get(JSON.stringify(["geo-entries", selectedId, challenge.targetId, +challenge.endsAt, now >= challenge.endsAt]), challengeBoardTtl(challenge.endsAt, now), () => prisma.countryChallengeEntry.findMany({ where: { challengeId: selectedId }, include: { guesses: { orderBy: [{ rank: "asc" }, { createdAt: "asc" }], take: 1, select: { itemId: true, rank: true } } } }));
+  const ended = now >= challenge.endsAt;
+  entries.sort((a, b) => {
+    const aSolved = a.status === "WON", bSolved = b.status === "WON";
+    if (aSolved !== bSolved) return aSolved ? -1 : 1;
+    if (aSolved) return a.guessCount - b.guessCount || +(a.solvedAt || a.finishedAt || 0) - +(b.solvedAt || b.finishedAt || 0) || a.userId.localeCompare(b.userId);
+    return (a.bestRank ?? Number.MAX_SAFE_INTEGER) - (b.bestRank ?? Number.MAX_SAFE_INTEGER) || +(a.bestRankAt || a.finishedAt || a.createdAt) - +(b.bestRankAt || b.finishedAt || b.createdAt) || a.userId.localeCompare(b.userId);
+  });
+  const visibleIds = entries.filter((e, i) => i < 50 || e.userId === userId).map(e => e.userId);
+  const users = await prisma.user.findMany({ where: { id: { in: visibleIds } }, select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } });
+  const userMap = new Map(users.map(u => [u.id, u]));
+  const rows = entries.map((entry, index) => ({
+    rank: index + 1, userId: entry.userId, displayName: `${userMap.get(entry.userId)?.firstName || ""} ${userMap.get(entry.userId)?.lastName || ""}`.trim() || (userMap.get(entry.userId)?.showUsername ? userMap.get(entry.userId)?.username : null) || "بازیکن",
+    photoUrl: userMap.get(entry.userId)?.photoUrl, wins: entry.status === "WON" ? 1 : 0, averageGuesses: entry.guessCount, bestGame: entry.guessCount,
+    guessCount: entry.guessCount, bestScore: entry.bestRank, totalScore: entry.bestRank, challengeSolved: entry.status === "WON",
+    bestGuess: ended ? findItem(gameType, entry.guesses.find(guess => guess.rank === (entry.status === "WON" ? 0 : entry.bestRank))?.itemId || "")?.name : undefined,
+    isMe: entry.userId === userId,
+  }));
+  const userIn = rows.find(row => row.isMe);
+  const target = ended ? findItem(geoRaceType(challenge.gameType), challenge.targetId)?.name ?? null : null;
+  return { rows: rows.slice(0, 50), me: userIn || null, challenge: { ...countryChallengeTimes(challenge.startsAt, now, challenge.endsAt), id: challenge.id, gameType, ended, target }, challenges: (await prisma.countryChallenge.findMany({ where: { gameType }, orderBy: { startsAt: "desc" }, take: 30 })).map(c => ({ ...countryChallengeTimes(c.startsAt, now, c.endsAt), id: c.id, gameType, ended: now >= c.endsAt, target: now >= c.endsAt ? findItem(gameType, c.targetId)?.name ?? null : null })) };
 }

@@ -5,7 +5,7 @@ export class AvatarImageCache {
   private entries = new Map<string, { value: AvatarImage; expires: number }>();
   private pending = new Map<string, Promise<AvatarImage>>();
   private bytes = 0;
-  constructor(private maxBytes = 20 * 1024 * 1024, private ttl = 300000, private maxEntries = 256) {}
+  constructor(private maxBytes = 20 * 1024 * 1024, private ttl = 30 * 60 * 1000, private maxEntries = 256) {}
   async get(key: string, load: () => Promise<AvatarImage>): Promise<AvatarImage> {
     const cached = this.entries.get(key);
     if (cached && cached.expires > Date.now()) { this.entries.delete(key); this.entries.set(key, cached); return cached.value; }

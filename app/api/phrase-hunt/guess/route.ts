@@ -1,3 +1,4 @@
+import { measureJudge } from "@/lib/judge-metrics";
 import { NextResponse } from "next/server";
 import { Prisma } from "@prisma/client";
 import { currentUserId } from "@/lib/auth";
@@ -34,7 +35,7 @@ export async function POST(request: Request) {
       ? await judgePhrase(target.id, target.phrase, phrase, game.phraseChallenge!.judgeVersion, game.phraseChallenge!.judgeModel, { challengeId: game.phraseChallengeId!, userId })
       : await judgePhrase(target.id, target.phrase, phrase, game.phraseChallenge!.judgeVersion, game.phraseChallenge!.judgeModel));
 
-    const result = await prisma.$transaction(async (tx) => {
+    const result = await measureJudge("guess_commit", () => prisma.$transaction(async (tx) => {
       const current = await tx.gameSession.findFirst({ where: { id: game.id, userId, type: "PHRASE_HUNT", status: "ACTIVE", phraseChallengeId: phraseChallengeWindow().id } });
       if (!current) throw new Error("GAME_NOT_ACTIVE");
       const [duplicate, userRecentCount] = await Promise.all([
@@ -50,7 +51,7 @@ export async function POST(request: Request) {
         data: { guessesCount: { increment: 1 }, ...(won ? { status: "WON", finishedAt: new Date() } : {}) },
         include: { guesses: true, phraseGuesses: { orderBy: { createdAt: "asc" } } },
       });
-    }, { isolationLevel: Prisma.TransactionIsolationLevel.Serializable });
+    }, { isolationLevel: Prisma.TransactionIsolationLevel.Serializable }));
     return NextResponse.json({ game: serializeGame(result, won), score, won });
   } catch (error) {
     if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === "P2002") return NextResponse.json({ error: "این عبارت را قبلاً حدس زده‌ای" }, { status: 409 });

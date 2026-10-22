@@ -1,3 +1,4 @@
+import { leaderboardCache, LIVE_BOARD_TTL } from "@/lib/leaderboard-cache";
 import { geographyChallengeTotals } from "@/lib/geography-challenge-totals";
 import { competitiveLeaderboard } from "@/lib/competitive-rating";
 import { publicDisplayName } from "@/lib/public-identity";
@@ -61,7 +62,7 @@ export async function GET(request: Request) {
   }
 
   if (type === "PHRASE_HUNT") {
-    const totals = await prisma.$queryRaw<{ userId: string; totalScore: number; games: number }[]>(Prisma.sql`
+    const totals = await leaderboardCache.get(JSON.stringify(["phrase-totals", period, period === "week" ? +phraseWeekStart() : 0]), LIVE_BOARD_TTL, () => prisma.$queryRaw<{ userId: string; totalScore: number; games: number }[]>(Prisma.sql`
       SELECT g."userId", SUM(ROUND(best.score::numeric, 2))::double precision AS "totalScore", COUNT(*)::int AS games
       FROM "GameSession" g
       JOIN "PhraseHuntChallenge" c ON c.id = g."phraseChallengeId"
@@ -70,7 +71,7 @@ export async function GET(request: Request) {
         ${period === "week" ? Prisma.sql`AND c."startsAt" >= ${phraseWeekStart()}` : Prisma.empty}
       GROUP BY g."userId"
       ORDER BY SUM(ROUND(best.score::numeric, 2)) DESC, g."userId" ASC
-    `);
+    `));
     const topIds = totals.slice(0, 50).map(row => row.userId);
     if (!topIds.includes(userId) && totals.some(row => row.userId === userId)) topIds.push(userId);
     const users = await prisma.user.findMany({ where: { id: { in: topIds } } });
@@ -85,12 +86,12 @@ export async function GET(request: Request) {
   }
 
   if (type === "LETTER_DUEL") {
-    const groups = await prisma.gameSession.groupBy({
+    const groups = await leaderboardCache.get(JSON.stringify(["duel-practice", period, period === "week" ? +startOfWeekUtc() : 0]), LIVE_BOARD_TTL, () => prisma.gameSession.groupBy({
       by: ["userId", "status"],
       orderBy: [{ userId: "asc" }, { status: "asc" }],
       where: { ...baseWhere, status: { in: ["WON", "LOST", "DRAW"] } },
       _count: { _all: true }
-    });
+    }));
     const totals = new Map<string, { wins: number; losses: number; draws: number }>();
     for (const group of groups) {
       const current = totals.get(group.userId) || { wins: 0, losses: 0, draws: 0 };
@@ -116,10 +117,10 @@ export async function GET(request: Request) {
           { status: { in: ["WON", "SURRENDERED"] }, finishedAt: { gte: weekStart } }
         ] }
       : { type: "SEMANTRIS" as const };
-    const games = await prisma.gameSession.findMany({
+    const games = await leaderboardCache.get(JSON.stringify(["semantris-practice", period, +weekStart]), LIVE_BOARD_TTL, () => prisma.gameSession.findMany({
       where: { ...semantrisWhere, status: { in: ["ACTIVE", "WON", "SURRENDERED"] } },
       select: { userId: true, semantrisState: true }
-    });
+    }));
     const totals = new Map<string, { games: number; totalScore: number; bestScore: number }>();
     for (const game of games) {
       const score = Math.max(0, readSemantrisState(game.semantrisState)?.score || 0);
@@ -144,7 +145,7 @@ export async function GET(request: Request) {
     return NextResponse.json({ rows: rows.slice(0, 50), me, period, mode, type, minimumWins: 0 }, { headers: { "Cache-Control": "no-store" } });
   }
 
-  const [wonGroups, completedGroups] = await Promise.all([
+  const [wonGroups, completedGroups] = await leaderboardCache.get(JSON.stringify(["practice", type, period, period === "week" ? +startOfWeekUtc() : 0]), LIVE_BOARD_TTL, () => Promise.all([
     prisma.gameSession.groupBy({
       by: ["userId"], where: { ...baseWhere, status: "WON" },
       _count: { _all: true }, _avg: { guessesCount: true }, _min: { guessesCount: true }
@@ -153,7 +154,7 @@ export async function GET(request: Request) {
       by: ["userId"], where: { ...baseWhere, status: { not: "ACTIVE" } },
       _sum: { guessesCount: true }
     })
-  ]);
+  ]));
   const completedGuessTotals = new Map(completedGroups.map((row) => [row.userId, row._sum.guessesCount || 0]));
   const ranked = wonGroups.map((row) => ({
     userId: row.userId, wins: row._count?._all || 0, wonAverage: row._avg.guessesCount || 0,

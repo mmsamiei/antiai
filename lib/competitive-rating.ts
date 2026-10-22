@@ -1,3 +1,4 @@
+import { leaderboardCache, LIVE_BOARD_TTL } from "./leaderboard-cache";
 import type { Prisma } from "@prisma/client";
 import { eloResult } from "./elo";
 import { prisma } from "./prisma";
@@ -16,7 +17,7 @@ export async function rateMatch(tx: Prisma.TransactionClient, matchKey: string, 
 }
 
 export async function competitiveLeaderboard(userId: string, gameType: string) {
-  const ratings = await prisma.competitiveRating.findMany({ where: { gameType, games: { gt: 0 } }, orderBy: [{ rating: "desc" }, { userId: "asc" }] });
+  const ratings = await leaderboardCache.get(JSON.stringify(["competitive", gameType]), LIVE_BOARD_TTL, () => prisma.competitiveRating.findMany({ where: { gameType, games: { gt: 0 } }, orderBy: [{ rating: "desc" }, { userId: "asc" }] }));
   const selected = ratings.filter((r, i) => i < 50 || r.userId === userId);
   const users = await prisma.user.findMany({ where: { id: { in: selected.map(r => r.userId) } } });
   const rows = selected.map(r => { const user = users.find(u => u.id === r.userId); return { ...r, rank: ratings.indexOf(r) + 1, displayName: publicDisplayName(user, true), photoUrl: user?.photoUrl, averageGuesses: 0, bestGame: 0, isMe: r.userId === userId }; });

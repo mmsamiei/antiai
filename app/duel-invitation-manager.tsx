@@ -37,14 +37,15 @@ export function useDuelInvitations({ userId, onJoin, beforeAccept, onError }: {
       await receive(data.invitations, version);
     } finally { polling.current = false; }
   }, [receive, userId]);
+  const watchingInvite = Boolean(state?.invites.some(i => i.status === "PENDING" || i.status === "ACCEPTED" && (i.connection?.status === "WAITING" || i.countryRace?.status === "WAITING")));
   useEffect(() => {
     if (!userId) return;
     let stopped = false;
     const poll = () => { if (!stopped && document.visibilityState === "visible") void refresh().catch(() => undefined); };
-    poll(); const timer = setInterval(poll, 2000);
+    poll(); const timer = setInterval(poll, watchingInvite ? 2000 : 3000);
     document.addEventListener("visibilitychange", poll);
     return () => { stopped = true; clearInterval(timer); document.removeEventListener("visibilitychange", poll); };
-  }, [userId, refresh]);
+  }, [userId, refresh, watchingInvite]);
   const action = async (action: string, extra: Record<string, unknown> = {}) => {
     if (actionBusy.current) return;
     actionBusy.current = true; setBusy(true);

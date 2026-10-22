@@ -1,3 +1,4 @@
+import { leaderboardCache } from "./leaderboard-cache";
 import { afterEach, beforeEach, expect, it, vi } from "vitest";
 const mocks = vi.hoisted(() => ({ current: vi.fn(), challenges: vi.fn(), query: vi.fn(), users: vi.fn() }));
 vi.mock("./prisma", () => ({ prisma: { phraseHuntChallenge: { findMany: mocks.challenges }, $queryRaw: mocks.query, user: { findMany: mocks.users } } }));
@@ -6,6 +7,7 @@ import { phraseChallengeLeaderboard } from "./phrase-hunt-leaderboard";
 const old = { id: "old", startsAt: new Date("2026-10-18T06:30Z"), endsAt: new Date("2026-10-18T19:23Z"), targetId: "ph-105" };
 const current = { id: "current", startsAt: old.endsAt, endsAt: new Date("2026-10-19T06:30Z"), targetId: "ph-106" };
 beforeEach(() => {
+  leaderboardCache.clear();
   vi.clearAllMocks(); vi.useFakeTimers(); vi.setSystemTime(new Date("2026-10-18T21:00Z"));
   mocks.current.mockResolvedValue(current); mocks.challenges.mockResolvedValue([current, old]);
   mocks.users.mockResolvedValue([{ id: "me", username: "player" }]);

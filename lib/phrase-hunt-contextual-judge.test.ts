@@ -1,3 +1,4 @@
+vi.mock("./shared-judgment", () => ({ sharedJudgment: (_key: unknown[], _read: () => Promise<number | null>, work: () => Promise<number>) => work() }));
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { Prisma } from "@prisma/client";
 const mocks = vi.hoisted(() => ({ findUnique: vi.fn(), upsert: vi.fn(), history: vi.fn() }));

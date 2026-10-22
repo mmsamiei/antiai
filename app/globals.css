@@ -2042,13 +2042,7 @@ input {
 .country-match-offer .player-identity { padding-top: 8px; }
 .country-match-offer .player-identity p { font-size: 13px; line-height: 1.9; margin-bottom: 0; }
 .country-match-offer .invite-actions { margin-top: 4px; }
-.country-wait-card { display: flex; flex-direction: column; align-items: center; gap: 15px; text-align: center; padding: 32px 22px 22px; border: 1px solid var(--line); border-radius: 24px; background: radial-gradient(circle at 50% 0, #6941bd30, transparent 65%), var(--surface); }
-.country-wait-card h2 { font-size: 20px; margin: 12px 0 0; }
-.country-wait-card p { font-size: 13px; color: var(--muted); line-height: 2; margin: 0 0 6px; }
-.country-wait-card > small { color: #c9baff; }
-.country-wait-card > button { width: 100%; min-height: 46px; padding: 12px; }
-.country-wait-orbit { display: grid; place-items: center; width: 110px; height: 110px; border: 1px solid #916dff55; border-radius: 50%; box-shadow: 0 0 0 12px #916dff0a, 0 0 0 24px #916dff05; margin: 12px 0; }
-.country-wait-orbit span { font-size: 54px; animation: country-wait-pulse 2.5s ease-in-out infinite; }
-.country-wait-cancel { background: transparent; color: var(--muted); border: 0; cursor: pointer; font-size: 12px; }
-@keyframes country-wait-pulse { 50% { transform: scale(1.08); } }
-@media (prefers-reduced-motion: reduce) { .country-wait-orbit span { animation: none; } }
+
+.invitation-notifications { position: fixed; z-index: 150; inset-inline: 0; bottom: calc(84px + var(--safe-bottom)); margin-inline: auto; width: min(92vw, 510px); display: grid; gap: 8px; pointer-events: none; }
+.invitation-notifications > * { pointer-events: auto; }
+.invitation-notifications > .outgoing-invitation { position: static; width: 100%; transform: none; }

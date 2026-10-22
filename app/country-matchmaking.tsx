@@ -67,8 +67,15 @@ type MatchAction = (action: "start" | "cancel" | "accept" | "reject", offerId?: 
 export function CountryMatchBanner({ state, busy, action }: { state: MatchState | null; busy: boolean; action: MatchAction }) {
   const [dismissed, setDismissed] = useState<string | null>(null);
   const incoming = state?.incoming;
-  if (!state || !incoming || incoming.id === dismissed) return null;
-  return <div className="game-invite-backdrop country-match-dialog" onClick={() => setDismissed(incoming.id)}>
+  if (!state) return null;
+  const search = state.search?.status === "ACTIVE" ? state.search : null;
+  const pending = search?.offer?.status === "PENDING" ? search.offer : null;
+  return <>
+    {search && <aside className="outgoing-invitation" aria-live="polite">
+      <span>{pending ? <>پیشنهاد کشورجو برای {playerName(pending.recipient)} فرستاده شد؛ در انتظار پاسخ<Remaining expiresAt={pending.expiresAt} serverNow={state.serverNow}/></> : <>در حال پیدا کردن حریف کشورجو…<small>بازیکن‌های منتظر و آنلاین را بررسی می‌کنیم.</small></>}</span>
+      <button className="secondary" disabled={busy} onClick={() => void action("cancel")}>لغو جست‌وجو</button>
+    </aside>}
+    {incoming && incoming.id !== dismissed && <div className="game-invite-backdrop country-match-dialog" onClick={() => setDismissed(incoming.id)}>
     <section className="game-invite-picker country-match-offer" role="dialog" aria-modal="true" aria-label="پیشنهاد بازی کشورجو" onClick={e => e.stopPropagation()}>
       <button className="invite-dismiss" aria-label="بستن اعلان" onClick={() => setDismissed(incoming.id)}>×</button>
       <div className="player-identity"><PlayerAvatar player={incoming.sender} online/><div><b>{playerName(incoming.sender)}</b><p>حاضری با {playerName(incoming.sender)} کشورجو بازی کنی؟</p></div></div>
@@ -76,20 +83,6 @@ export function CountryMatchBanner({ state, busy, action }: { state: MatchState 
       <Remaining expiresAt={incoming.expiresAt} serverNow={state.serverNow}/>
       <div className="invite-actions"><button className="primary" disabled={busy} onClick={() => void action("accept", incoming.id)}>{busy ? "…" : "قبول و رفتن به بازی"}</button><button className="secondary" disabled={busy} onClick={() => void action("reject", incoming.id)}>رد</button></div>
     </section>
-  </div>;
-}
-
-export function CountryMatchWaiting({ state, busy, action, onBack }: { state: MatchState | null; busy: boolean; action: MatchAction; onBack: () => void }) {
-  const search = state?.search;
-  const pending = search?.status === "ACTIVE" && search.offer?.status === "PENDING" ? search.offer : null;
-  const active = search?.status === "ACTIVE";
-  return <section className="country-wait-screen">
-    <div className="play-heading"><button className="icon-button" aria-label="بازگشت" onClick={onBack}>→</button><div><h1>🌍 پیدا کردن حریف</h1></div></div>
-    <div className="country-wait-card">
-      <div className="country-wait-orbit" aria-hidden="true"><span>🌍</span></div>
-      <h2>{state?.roomId ? "حریف پیدا شد!" : pending ? "منتظر پاسخ حریف" : active || busy ? "دنبال یک هم‌بازی می‌گردیم" : "جست‌وجو پایان یافته است"}</h2>
-      {pending ? <><PlayerAvatar player={pending.recipient} online/><b>{playerName(pending.recipient)}</b><Remaining expiresAt={pending.expiresAt} serverNow={state!.serverNow}/><p>اگر پاسخ ندهد، جست‌وجو با بازیکن دیگری ادامه پیدا می‌کند.</p></> : <p>{state?.roomId ? "در حال ورود به اتاق مشترک…" : active || busy ? "بازیکن‌های منتظر و آنلاین را بررسی می‌کنیم. می‌توانی در بخش‌های دیگر اپ هم بگردی؛ جست‌وجو ادامه دارد." : "برای پیدا کردن هم‌بازی، دوباره جست‌وجو را شروع کن."}</p>}
-      {active ? <><button className="secondary" onClick={onBack}>ادامهٔ جست‌وجو در پس‌زمینه</button><button className="country-wait-cancel" disabled={busy} onClick={async () => { if (await action("cancel")) onBack(); }}>لغو جست‌وجو</button></> : !state?.roomId && <button className="primary" disabled={busy} onClick={() => void action("start")}>{busy ? "در حال شروع…" : "شروع دوباره"}</button>}
-    </div>
-  </section>;
+  </div>}
+  </>;
 }

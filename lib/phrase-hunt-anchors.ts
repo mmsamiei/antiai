@@ -1,6 +1,6 @@
 /** Manually calibrated, challenge-specific examples shown to JEV as score anchors. */
 export const phraseHuntAnchors: Record<string, { guess: string; score_out_of_100: number }[]> = {
-  "2026-10-23T06:30:00.000Z": [
+  "2026-10-22T18:30:00.000Z": [
     { guess: "شلغم", score_out_of_100: 100 },
     { guess: "شلغم خام", score_out_of_100: 98 },
     { guess: "شلغم پخته", score_out_of_100: 98 },
@@ -17,7 +17,7 @@ export const phraseHuntAnchors: Record<string, { guess: string; score_out_of_100
     { guess: "سرماخوردگی", score_out_of_100: 30 },
     { guess: "سنگ", score_out_of_100: 3 },
   ],
-  "2026-10-22T18:30:00.000Z": [
+  "2026-10-23T06:30:00.000Z": [
     { guess: "نگون‌بخت", score_out_of_100: 100 },
     { guess: "سیه‌بخت", score_out_of_100: 97 },
     { guess: "شوربخت", score_out_of_100: 96 },

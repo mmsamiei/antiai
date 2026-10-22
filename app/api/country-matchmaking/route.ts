@@ -5,7 +5,7 @@ import { cancelCountryMatch, readCountryMatch, respondToCountryMatch, startCount
 export const dynamic = "force-dynamic";
 const reply = (data: unknown, status = 200) => NextResponse.json(data, { status, headers: { "Cache-Control": "no-store" } });
 const bodySchema = z.discriminatedUnion("action", [
-  z.object({ action: z.literal("start") }),
+  z.object({ action: z.literal("start"), gameType: z.enum(["COUNTRY", "IRAN_CITY"]).default("COUNTRY") }),
   z.object({ action: z.literal("cancel") }),
   z.object({ action: z.enum(["accept", "reject"]), offerId: z.string().min(1).max(64).regex(/^[a-zA-Z0-9_-]+$/) }),
 ]);
@@ -33,7 +33,7 @@ export async function POST(request: Request) {
   if (!parsed.success) return reply({ error: "درخواست معتبر نیست" }, 400);
   try {
     const body = parsed.data;
-    if (body.action === "start") await startCountryMatch(userId);
+    if (body.action === "start") await startCountryMatch(userId, body.gameType);
     else if (body.action === "cancel") await cancelCountryMatch(userId);
     else await respondToCountryMatch(userId, body.offerId, body.action);
     return reply(await readCountryMatch(userId));

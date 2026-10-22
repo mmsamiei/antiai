@@ -7,7 +7,7 @@ import { publicIdentity } from "./public-identity";
 export const MATCH_ONLINE_MS = 20_000;
 export const MATCH_OFFER_MS = 15_000;
 export const MATCH_COOLDOWN_MS = 20_000;
-const countries = datasetFor("COUNTRY");
+import { geoRaceConfig, geoRaceType, type GeoRaceType } from "./geo-race-config";
 type Tx = Prisma.TransactionClient;
 
 async function lockUsers(tx: Tx, ids: string[]) {
@@ -58,12 +58,13 @@ async function cancelSearchTx(tx: Tx, searchId: string, status: "CANCELLED" | "E
   void reason;
 }
 
-async function makeRaceTx(tx: Tx, senderId: string, recipientId: string, now: Date, searchId?: string, offerId?: string) {
+async function makeRaceTx(tx: Tx, senderId: string, recipientId: string, now: Date, searchId?: string, offerId?: string, gameType: GeoRaceType = "COUNTRY") {
   await lockUsers(tx, [senderId, recipientId]);
+  const countries = datasetFor(gameType);
   const target = countries[randomInt(countries.length)];
-  const race = await tx.countryRace.create({ data: { gameType: "COUNTRY", playerOneId: senderId, playerTwoId: recipientId, targetId: target.id } });
+  const race = await tx.countryRace.create({ data: { gameType, playerOneId: senderId, playerTwoId: recipientId, targetId: target.id } });
   const invite = await tx.duelInvite.create({ data: {
-    gameKind: "COUNTRY_RACE", senderId, recipientId, countryRaceId: race.id,
+    gameKind: geoRaceConfig[gameType].inviteKind, senderId, recipientId, countryRaceId: race.id,
     status: "ACCEPTED", expiresAt: new Date(+now + MATCH_OFFER_MS), respondedAt: now,
     startDeadline: new Date(+now + MATCH_OFFER_MS),
   } });
@@ -75,18 +76,19 @@ async function makeRaceTx(tx: Tx, senderId: string, recipientId: string, now: Da
   return race;
 }
 
-export async function startCountryMatch(userId: string) {
+export async function startCountryMatch(userId: string, gameType: GeoRaceType = "COUNTRY") {
   return prisma.$transaction(async tx => {
     const now = new Date();
     await tx.$executeRaw`SELECT pg_advisory_xact_lock(728401, 902)`;
     await lockUsers(tx, [userId]);
     const existing = await tx.countryMatchSearch.findFirst({ where: { userId, status: "ACTIVE" }, orderBy: { createdAt: "desc" } });
     if (existing) {
+      if (existing.gameType !== gameType) throw new Error("MATCH_SEARCH_UNAVAILABLE");
       await tx.countryMatchSearch.update({ where: { id: existing.id }, data: { lastSeenAt: now } });
       return existing;
     }
     if (!await userCanMatch(tx, userId, now)) throw new Error("MATCH_SEARCH_UNAVAILABLE");
-    return tx.countryMatchSearch.create({ data: { userId, lastSeenAt: now } });
+    return tx.countryMatchSearch.create({ data: { userId, gameType, lastSeenAt: now } });
   }, { isolationLevel: Prisma.TransactionIsolationLevel.Serializable });
 }
 
@@ -103,11 +105,11 @@ export async function readCountryMatch(userId: string) {
   return prisma.$transaction(async tx => {
     const now = new Date();
     const search = await tx.countryMatchSearch.findFirst({ where: { userId }, orderBy: { createdAt: "desc" }, include: { offers: { orderBy: { createdAt: "desc" }, take: 1, include: { sender: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } }, recipient: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } } } } } });
-    const incoming = await tx.countryMatchOffer.findFirst({ where: { recipientId: userId, status: "PENDING" }, include: { sender: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } } } });
+    const incoming = await tx.countryMatchOffer.findFirst({ where: { recipientId: userId, status: "PENDING" }, include: { search: { select: { gameType: true } }, sender: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } } } });
     if (search?.status === "ACTIVE") await tx.countryMatchSearch.update({ where: { id: search.id }, data: { lastSeenAt: now } });
     const room = await tx.countryRace.findFirst({ where: { status: { in: ["WAITING", "ACTIVE"] }, AND: [{ OR: [{ playerOneId: userId }, { playerTwoId: userId }] }, { OR: [{ matchOffer: { isNot: null } }, { matchedSearch: { isNot: null } }] }] }, select: { id: true } });
-    const offer = incoming ? { ...incoming, sender: { ...incoming.sender, username: incoming.sender.showUsername ? incoming.sender.username : null } } : null;
-    return { search: search ? { id: search.id, status: search.status, createdAt: search.createdAt, offer: search.offers[0] ? { id: search.offers[0].id, status: search.offers[0].status, expiresAt: search.offers[0].expiresAt, recipient: publicIdentity(search.offers[0].recipient) } : null } : null, incoming: offer, roomId: room?.id ?? null, serverNow: now };
+    const offer = incoming ? { ...incoming, gameType: geoRaceType(incoming.search.gameType), sender: { ...incoming.sender, username: incoming.sender.showUsername ? incoming.sender.username : null } } : null;
+    return { search: search ? { id: search.id, gameType: geoRaceType(search.gameType), status: search.status, createdAt: search.createdAt, offer: search.offers[0] ? { id: search.offers[0].id, status: search.offers[0].status, expiresAt: search.offers[0].expiresAt, recipient: publicIdentity(search.offers[0].recipient) } : null } : null, incoming: offer, roomId: room?.id ?? null, serverNow: now };
   }, { isolationLevel: Prisma.TransactionIsolationLevel.Serializable });
 }
 
@@ -133,7 +135,8 @@ export async function respondToCountryMatch(userId: string, offerId: string, act
     if (!online.has(userId) || !online.has(offer.senderId) || !contexts.get(userId)?.present || contexts.get(userId)?.busy || !contexts.get(offer.senderId)?.present || contexts.get(offer.senderId)?.busy || busy.has(userId) || busy.has(offer.senderId) || !user?.acceptsGameInvites || searches) throw new Error("MATCH_OFFER_UNAVAILABLE");
     const senderPresent = online.has(offer.senderId);
     if (!senderPresent) throw new Error("MATCH_SENDER_OFFLINE");
-    const race = await makeRaceTx(tx, offer.senderId, offer.recipientId, now, offer.searchId, offerId);
+    const search = await tx.countryMatchSearch.findUniqueOrThrow({ where: { id: offer.searchId } });
+    const race = await makeRaceTx(tx, offer.senderId, offer.recipientId, now, offer.searchId, offerId, geoRaceType(search.gameType));
     return { ok: true, raceId: race.id };
   }, { isolationLevel: Prisma.TransactionIsolationLevel.Serializable });
 }
@@ -182,18 +185,22 @@ export async function processCountryMatchTick() {
     }
     const waiting = await tx.countryMatchSearch.findMany({ where: { status: "ACTIVE", offers: { none: { status: "PENDING" } } }, orderBy: [{ createdAt: "asc" }, { id: "asc" }] });
     if (!waiting.length) return;
-    const oldest = waiting[0];
-    const secondQueued = waiting.find(search => search.id !== oldest.id);
+    for (const gameType of ["COUNTRY", "IRAN_CITY"] as const) {
+    const sameGame = waiting.filter(search => search.gameType === gameType);
+    const oldest = sameGame[0];
+    if (!oldest) continue;
+    const secondQueued = sameGame.find(search => search.id !== oldest.id);
     if (secondQueued) {
-      await makeRaceTx(tx, oldest.userId, secondQueued.userId, now, oldest.id);
-      return;
+      await makeRaceTx(tx, oldest.userId, secondQueued.userId, now, oldest.id, undefined, gameType);
+      continue;
     }
     const attempted = await tx.countryMatchOffer.findMany({ where: { searchId: oldest.id }, select: { recipientId: true } });
     const candidates = await freeCandidates(tx, [oldest.userId, ...attempted.map(x => x.recipientId)], now);
     const recipientId = candidates[0];
-    if (!recipientId) return;
+    if (!recipientId) continue;
     await tx.countryMatchOffer.create({ data: { searchId: oldest.id, senderId: oldest.userId, recipientId, expiresAt: new Date(+now + MATCH_OFFER_MS) } });
     await tx.countryMatchState.upsert({ where: { userId: recipientId }, create: { userId: recipientId, lastOfferedAt: now }, update: { lastOfferedAt: now } });
+    }
   }, { isolationLevel: Prisma.TransactionIsolationLevel.Serializable, timeout: 10_000 });
 }
 

@@ -105,12 +105,14 @@ model AppPresence {
 }
 
 model CountryChallenge {
+  gameType  GameType @default(COUNTRY)
   id        String @id
-  startsAt  DateTime @unique
+  startsAt  DateTime
   endsAt    DateTime
   targetId  String
   createdAt DateTime @default(now())
   entries   CountryChallengeEntry[]
+  @@unique([gameType, startsAt])
   @@index([startsAt])
 }
 
@@ -148,6 +150,7 @@ model CountryChallengeGuess {
 }
 
 model CountryMatchSearch {
+  gameType    GameType @default(COUNTRY)
   id          String @id @default(cuid())
   userId      String
   status      String @default("ACTIVE")
@@ -158,6 +161,7 @@ model CountryMatchSearch {
   offers      CountryMatchOffer[]
   matchedRace CountryRace? @relation(fields: [matchedRaceId], references: [id], onDelete: SetNull)
   @@index([status, createdAt])
+  @@index([gameType, status, createdAt])
   @@index([userId, status])
 }
 

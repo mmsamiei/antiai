@@ -8,6 +8,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { geoRaceConfig, type GeoRaceType } from "@/lib/geo-race-config";
 import CountryRace from "./country-race";
 import CountryChallenge from "./country-challenge";
 import { CountryMatchBanner, useCountryMatchmaking, type MatchState } from "./country-matchmaking";
@@ -207,6 +208,7 @@ async function jsonFetch<T>(url: string, init?: RequestInit): Promise<T> {
 }
 
 export default function AntiAiGamesApp() {
+  const [geographyType, setGeographyType] = useState<GeoRaceType>("COUNTRY");
   const [screen, setScreen] = useState<Screen>("home");
   const [user, setUser] = useState<any>(null);
   const [game, setGame] = useState<Game | null>(null);
@@ -436,12 +438,12 @@ export default function AntiAiGamesApp() {
           busy={busy}
           onStart={startGame}
           onDuel={() => { setDirectDuelId(null); navigate("duel"); }}
-          onCountryMode={() => navigate("country-mode")}
+          onCountryMode={type => { setGeographyType(type); navigate("country-mode"); }}
           onWordWeaver={() => navigate("word-weaver")}
         />
       )}
-      {screen === "country-mode" && <CountryModePicker matchState={countryMatch.state} matchBusy={countryMatch.busy} onBack={back} onChallenge={() => navigate("country-challenge")} onPractice={() => void startGame("COUNTRY")} onFind={() => void countryMatch.action("start")} onCancel={() => void countryMatch.action("cancel")} onInvite={() => { setInviteGameChoice("COUNTRY_RACE"); navigate("players"); }} />}
-      {screen === "country-challenge" && <CountryChallenge onBack={back} onLeaderboard={() => { setLeaderboardType("COUNTRY"); navigate("leaderboard"); }} setError={setError} />}
+      {screen === "country-mode" && <CountryModePicker key={geographyType} gameType={geographyType} matchState={countryMatch.state} matchBusy={countryMatch.busy} onBack={back} onChallenge={() => navigate("country-challenge")} onPractice={() => void startGame(geographyType)} onFind={() => void countryMatch.action("start", undefined, geographyType)} onCancel={() => void countryMatch.action("cancel")} onInvite={() => { setInviteGameChoice(geoRaceConfig[geographyType].inviteKind); navigate("players"); }} />}
+      {screen === "country-challenge" && <CountryChallenge key={geographyType} gameType={geographyType} onBack={back} onLeaderboard={() => { setLeaderboardType(geographyType); navigate("leaderboard"); }} setError={setError} />}
       {screen === "players" && <Players me={String(user.id)} state={invitations.state} busy={invitations.busy} onAction={invitations.action} onSend={id => { const kind = inviteGameChoice; setInviteGameChoice(null); if (kind) void sendDirectInvite(id, kind); else setInviteRecipient(id); }} onProfile={setProfileUserId} onBack={back} />}
       {screen === "country-race" && raceId && <CountryRace key={raceId} id={raceId} onExit={() => { exitGame(); setScreen("players"); }} setError={setError} onProfile={setProfileUserId} registerLeave={handler => { multiplayerLeave.current = handler; }} />}
       {inviteRecipient && <div className="game-invite-backdrop" onClick={() => setInviteRecipient(null)}><section className="game-invite-picker" role="dialog" aria-modal="true" aria-label="انتخاب بازی" onKeyDown={e => { if (e.key === "Escape") setInviteRecipient(null); }} onClick={e => e.stopPropagation()}>
@@ -483,7 +485,7 @@ export default function AntiAiGamesApp() {
         </div>
       )}
       {screen === "leaderboard" && (
-        <Leaderboard initialType={leaderboardType} onOpenProfile={setProfileUserId} onBack={back} />
+        <Leaderboard initialType={leaderboardType} initialChallenge={previousScreens.current[previousScreens.current.length - 1] === "country-challenge"} onOpenProfile={setProfileUserId} onBack={back} />
       )}
       {profileUserId && (
         <PublicProfileOverlay
@@ -549,7 +551,7 @@ function Home({
   busy: boolean;
   onStart: (type: GameType) => void;
   onDuel: () => void;
-  onCountryMode: () => void;
+  onCountryMode: (type: GeoRaceType) => void;
   onWordWeaver: () => void;
 }) {
   const [otherGamesOpen, setOtherGamesOpen] = useState(false);
@@ -582,7 +584,7 @@ function Home({
             className={`game-card ${type === "IRAN_CITY" ? "iran" : type === "COUNTRY" ? "world" : type === "LETTER_DUEL" ? "duel" : type === "PHRASE_HUNT" ? "phrase-hunt" : "words"}`}
             key={type}
             disabled={busy}
-            onClick={() => (type === "LETTER_DUEL" ? onDuel() : type === "COUNTRY" ? onCountryMode() : onStart(type))}
+            onClick={() => (type === "LETTER_DUEL" ? onDuel() : (type === "COUNTRY" || type === "IRAN_CITY") ? onCountryMode(type) : onStart(type))}
           >
             <span className="game-icon">{gameMeta[type].icon}</span>
             <span className="game-copy">
@@ -636,16 +638,17 @@ function Home({
   );
 }
 
-function CountryModePicker({ matchState, matchBusy, onBack, onChallenge, onPractice, onFind, onCancel, onInvite }: {
-  matchState: MatchState | null; matchBusy: boolean; onBack: () => void; onChallenge: () => void;
+function CountryModePicker({ gameType, matchState, matchBusy, onBack, onChallenge, onPractice, onFind, onCancel, onInvite }: {
+  gameType: GeoRaceType; matchState: MatchState | null; matchBusy: boolean; onBack: () => void; onChallenge: () => void;
   onPractice: () => void; onFind: () => void; onCancel: () => void; onInvite: () => void;
 }) {
+  const config = geoRaceConfig[gameType], name = gameType === "COUNTRY" ? "کشورجو" : "شهرجو";
   const [daily, setDaily] = useState<{ entry: null | { status: string; guessCount: number }; challenge: { endsAt: string; serverNow: string; ended: boolean } } | null>(null);
   const [clockNow, setClockNow] = useState(Date.now());
   const [dailyServerOffset, setDailyServerOffset] = useState(0);
   useEffect(() => {
     let active = true;
-    void jsonFetch<NonNullable<typeof daily>>("/api/country-challenge").then(value => { if (active) { setDaily(value); setDailyServerOffset(Date.parse(value.challenge.serverNow) - Date.now()); } }).catch(() => undefined);
+    void jsonFetch<NonNullable<typeof daily>>("/api/country-challenge?type=" + gameType).then(value => { if (active) { setDaily(value); setDailyServerOffset(Date.parse(value.challenge.serverNow) - Date.now()); } }).catch(() => undefined);
     return () => { active = false; };
   }, []);
   useEffect(() => { const timer = window.setInterval(() => setClockNow(Date.now()), 1000); return () => window.clearInterval(timer); }, []);
@@ -655,9 +658,9 @@ function CountryModePicker({ matchState, matchBusy, onBack, onChallenge, onPract
   const dailyLabel = daily?.entry?.status === "WON" ? `نتیجهٔ تو · ${daily.entry.guessCount.toLocaleString("fa-IR")} حدس`
     : daily?.entry?.status === "SURRENDERED" ? "دیدن نتیجهٔ تو"
     : daily?.entry?.status === "ACTIVE" ? `ادامهٔ چالش · ${daily.entry.guessCount.toLocaleString("fa-IR")} حدس`
-    : daily?.challenge.ended ? "دیدن نتیجهٔ چالش قبلی" : "یک کشور مشترک برای همه";
+    : daily?.challenge.ended ? "دیدن نتیجهٔ چالش قبلی" : `یک ${config.noun} مشترک برای همه`;
   return <section className="country-mode-screen">
-    <div className="section-heading"><button className="icon-button" onClick={onBack} aria-label="بازگشت">→</button><div><small>کشورجو</small><h1>یک حالت انتخاب کن</h1></div><span>🌍</span></div>
+    <div className="section-heading"><button className="icon-button" onClick={onBack} aria-label="بازگشت">→</button><div><small>{name}</small><h1>یک حالت انتخاب کن</h1></div><span>{gameType === "COUNTRY" ? "🌍" : "📍"}</span></div>
     <button className="game-card world country-mode-card daily" onClick={onChallenge}>
       <span className="game-icon">📅</span><span className="game-copy"><b>چالش روزانه</b><small>{dailyLabel}</small>{daily && !daily.challenge.ended && <small className="country-mode-countdown">تا چالش بعدی <span dir="ltr">{countdown}</span></small>}</span><span className="game-arrow">←</span>
     </button>
@@ -665,8 +668,8 @@ function CountryModePicker({ matchState, matchBusy, onBack, onChallenge, onPract
       <span className="game-icon">🧭</span><span className="game-copy"><b>تمرین آزاد</b><small>با هدف تصادفی تمرین کن؛ بازی قبلی‌ات هم محفوظ است</small></span><span className="game-arrow">←</span>
     </button>
     <section className="country-mode-duel">
-      <div className="country-mode-duel-heading"><span className="game-icon">⚔️</span><div className="game-copy"><b>رقابت دونفره</b><small>یک کشور مشترک، حداکثر ۲۰۰ ثانیه</small></div></div>
-      {running ? <div className="country-mode-searching"><span>در حال پیدا کردن حریف…</span><button className="secondary" disabled={matchBusy} onClick={onCancel}>لغو جست‌وجو</button></div> : <div className="country-mode-actions"><button className="primary" disabled={matchBusy} onClick={onFind}>پیدا کردن حریف</button><button className="secondary" onClick={onInvite}>دعوت از بازیکن آنلاین</button></div>}
+      <div className="country-mode-duel-heading"><span className="game-icon">⚔️</span><div className="game-copy"><b>رقابت دونفره</b><small>یک {config.noun} مشترک، حداکثر {config.durationText}</small></div></div>
+      {running ? <div className="country-mode-searching"><span>در حال پیدا کردن حریف {matchState?.search?.gameType === "IRAN_CITY" ? "شهرجو" : "کشورجو"}…</span><button className="secondary" disabled={matchBusy} onClick={onCancel}>لغو جست‌وجو</button></div> : <div className="country-mode-actions"><button className="primary" disabled={matchBusy} onClick={onFind}>پیدا کردن حریف</button><button className="secondary" onClick={onInvite}>دعوت از بازیکن آنلاین</button></div>}
     </section>
   </section>;
 }
@@ -1537,14 +1540,16 @@ function SemantrisBoard({
 
 function Leaderboard({
   initialType,
+  initialChallenge = false,
   onOpenProfile,
   onBack,
 }: {
   initialType: GameType;
+  initialChallenge?: boolean;
   onOpenProfile: (userId: string) => void;
   onBack: () => void;
 }) {
-  const [period, setPeriod] = useState<"challenge" | "week" | "all">(initialType === "PHRASE_HUNT" ? "challenge" : "week"),
+  const [period, setPeriod] = useState<"challenge" | "week" | "all">(initialChallenge || initialType === "PHRASE_HUNT" ? "challenge" : "week"),
     [mode, setMode] = useState<"effort" | "skill">("effort"),
     [type, setType] = useState<GameType>(initialType);
   const [rows, setRows] = useState<LeaderRow[]>([]),
@@ -1556,8 +1561,8 @@ function Leaderboard({
   const [boardError, setBoardError] = useState(false);
   const requestId = useRef(0);
   const isPhraseHunt = type === "PHRASE_HUNT";
-  const isCountryChallenge = type === "COUNTRY" && period === "challenge";
-  const hasChallenges = isPhraseHunt || type === "COUNTRY";
+  const isCountryChallenge = (type === "COUNTRY" || type === "IRAN_CITY") && period === "challenge";
+  const hasChallenges = isPhraseHunt || type === "COUNTRY" || type === "IRAN_CITY";
   const isSemantris = type === "SEMANTRIS",
     isDuel = type === "LETTER_DUEL";
   const onlineIds = useOnlineUsers([...rows.map((row) => row.userId), me?.userId]);
@@ -1608,7 +1613,7 @@ function Leaderboard({
           <div className="leader-games">
             <button
               className={type === "IRAN_CITY" ? "active" : ""}
-              onClick={() => { setType("IRAN_CITY"); setChallengeId(""); if (period === "challenge") setPeriod("week"); }}
+              onClick={() => { setType("IRAN_CITY"); setChallengeId(""); }}
             >
               شهرجو
             </button>
@@ -1681,7 +1686,7 @@ function Leaderboard({
         <select id="leader-challenge" value={challengeId || challenge?.id || ""} onChange={e => setChallengeId(e.target.value)}>
           {challenges.map(c => <option key={c.id} value={c.id}>{new Date(c.startsAt).toLocaleString("fa-IR", { timeZone: "Asia/Tehran", year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })} · {c.ended ? "پایان‌یافته" : "در حال برگزاری"}</option>)}
         </select>
-        {challenge && <p>{challenge.ended ? `${isCountryChallenge ? "کشور هدف" : "عبارت هدف"}: ${challenge.target || "—"}` : isCountryChallenge ? "رتبه و تعداد حدس‌ها نمایش داده می‌شوند؛ نام کشورها پس از پایان چالش آشکار می‌شود." : "بهترین حدس‌ها پس از پایان چالش آشکار می‌شوند."}</p>}
+        {challenge && <p>{challenge.ended ? `${isCountryChallenge ? type === "IRAN_CITY" ? "شهر هدف" : "کشور هدف" : "عبارت هدف"}: ${challenge.target || "—"}` : isCountryChallenge ? "رتبه و تعداد حدس‌ها نمایش داده می‌شوند؛ نام حدس‌ها پس از پایان چالش آشکار می‌شود." : "بهترین حدس‌ها پس از پایان چالش آشکار می‌شوند."}</p>}
         <small>{isCountryChallenge ? "حل‌کنندگان با حدس کمتر و سپس زمان حل؛ بقیه با رتبهٔ بهتر و سپس زمان رسیدن به آن" : "امتیاز بیشتر؛ در امتیاز برابر، زمان زودترِ رسیدن به آن امتیاز"}</small>
       </div>}
       {isPhraseHunt && period !== "challenge" && <p className="board-note">مجموع بهترین امتیاز هر چالش · امتیاز چالش جاری هم حساب می‌شود · هفته از شنبه به وقت تهران</p>}

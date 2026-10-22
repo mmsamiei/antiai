@@ -44,8 +44,8 @@ export async function GET(request: Request) {
     });
   }
 
-  if (type === "COUNTRY" && period === "challenge") {
-    const result = await countryChallengeLeaderboard(userId, params.get("challengeId"));
+  if ((type === "COUNTRY" || type === "IRAN_CITY") && period === "challenge") {
+    const result = await countryChallengeLeaderboard(userId, params.get("challengeId"), type);
     return NextResponse.json(result || { error: "Challenge not found" }, {
       status: result ? 200 : 404, headers: { "Cache-Control": "no-store" },
     });

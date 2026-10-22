@@ -43,25 +43,52 @@ export default function CountryChallenge({ onBack, onLeaderboard, setError }: { 
     finally { setBusy(false); }
   };
   const seconds = state ? Math.max(0, Math.ceil((Date.parse(state.challenge.endsAt) - now - serverOffset) / 1000)) : 0;
-  const locked = !state || state.challenge.ended || !state.entry || state.entry.status !== "ACTIVE";
-  return <section className="country-daily">
-    <div className="section-heading"><button className="icon-button" onClick={onBack} aria-label="بازگشت">→</button><div><small>کشورجو · چالش مشترک</small><h1>چالش امروز</h1></div><span>🌍</span></div>
+  const active = Boolean(state?.entry && state.entry.status === "ACTIVE" && !state.challenge.ended);
+  const surrender = () => {
+    if (window.confirm("با تسلیم، پاسخ برایت آشکار می‌شود و دیگر نمی‌توانی در این چالش حدس بزنی. ادامه می‌دهی؟")) void act({ action: "surrender" });
+  };
+  return <section className="play-screen">
+    <div className="play-heading">
+      <button className="icon-button" onClick={onBack} aria-label="بازگشت">→</button>
+      <div><h1><span aria-hidden="true">🌍</span> کشورجو</h1></div>
+      <div className="play-actions"><span className="guess-count">{(state?.entry?.guessCount || 0).toLocaleString("fa-IR")} حدس</span></div>
+    </div>
+    {state && <div className="country-daily-deadline">
+      <button onClick={onLeaderboard} title="جدول رتبه‌بندی چالش">چالش روزانه <span>←</span></button>
+      <div><small>تا چالش بعدی</small><strong dir="ltr">{[Math.floor(seconds / 3600), Math.floor(seconds / 60) % 60, seconds % 60].map(value => value.toLocaleString("fa-IR", { minimumIntegerDigits: 2 })).join(":")}</strong></div>
+    </div>}
     {loading && !state && <div className="empty-state">در حال بارگذاری چالش کشورجو…</div>}
-    {state && <div className="phrase-challenge-info country-daily-clock"><div><b>چالش مشترک کشورجو</b><span>تعویض کشور: ۹ صبح و ۹ شب · به وقت تهران</span></div>{!state.challenge.ended && <strong dir="ltr">{Math.floor(seconds / 3600).toLocaleString("fa-IR", { minimumIntegerDigits: 2 })}:{Math.floor(seconds / 60 % 60).toLocaleString("fa-IR", { minimumIntegerDigits: 2 })}:{(seconds % 60).toLocaleString("fa-IR", { minimumIntegerDigits: 2 })}</strong>}{!state.challenge.ended && <small>تا چالش بعدی</small>}<button className="secondary" onClick={onLeaderboard}>جدول رتبه‌بندی</button></div>}
+    {active && <div className="search-box">
+      <div className="search-row">
+        <input aria-label="جست‌وجوی کشور" placeholder="نام یک کشور را بنویس…" autoComplete="off" value={query} onChange={e => { setQuery(e.target.value); setSelected(null); }} onKeyDown={e => { if (e.key === "Enter" && !e.nativeEvent.isComposing && selected && !busy) { e.preventDefault(); void act({ action: "guess", itemId: selected.id }); } }} />
+        <button disabled={!selected || busy} onClick={() => selected && void act({ action: "guess", itemId: selected.id })}>{busy ? "…" : "حدس"}</button>
+      </div>
+      {items.length > 0 && <div className="suggestions">{items.map(item => <button key={item.id} onClick={() => { setSelected(item); setQuery(item.name); setItems([]); }}><span>{item.emoji} {item.name}</span>{item.detail && <small>{item.detail}</small>}</button>)}</div>}
+    </div>}
+    {state?.entry && !active && <div className={`finish-card ${state.entry.status === "WON" ? "won" : "gave-up"}`}>
+      <span className="finish-icon">{state.entry.status === "WON" ? "🎯" : "🏳️"}</span>
+      <h2>{state.entry.status === "WON" ? "پیداش کردی!" : state.entry.status === "EXPIRED" ? "زمان چالش تمام شد" : "پاسخ این بود:"}</h2>
+      {state.entry.target && <><strong>{state.entry.target.emoji} {state.entry.target.name}</strong>{state.entry.target.description && <p className="country-description">{state.entry.target.description}</p>}</>}
+      <p>{state.entry.status === "WON" ? `با ${state.entry.guessCount.toLocaleString("fa-IR")} حدس به جواب رسیدی.` : "نتیجهٔ تو ثبت شد؛ چالش بعدی با یک کشور تازه شروع می‌شود."}</p>
+      <div className="finish-actions"><button className="secondary" onClick={onLeaderboard}>جدول چالش‌ها</button></div>
+    </div>}
     {state?.entry && <>
-      <div className="country-daily-stats"><span>{state.entry.guessCount.toLocaleString("fa-IR")} حدس</span><span>بهترین رتبه: {state.entry.bestRank === null ? "—" : state.entry.bestRank.toLocaleString("fa-IR")}</span></div>
-      {state.entry.status === "WON" && <div className="country-daily-result won"><b>آفرین! کشور را پیدا کردی.</b><span>{state.entry.guessCount.toLocaleString("fa-IR")} حدس</span></div>}
-      {state.entry.status === "SURRENDERED" && <div className="country-daily-result"><b>پاسخ را دیدی؛ نتیجه در جدول ثبت است.</b></div>}
-      {state.entry.status === "EXPIRED" && <div className="country-daily-result"><b>زمان چالش تمام شد.</b></div>}
-      {!state.challenge.ended && state.entry.status === "ACTIVE" && <>
-        <p className="players-hint">کشور پنهان را پیدا کن؛ رتبهٔ کمتر یعنی نزدیک‌تر.</p>
-        <div className="search-box"><div className="search-row"><input aria-label="جست‌وجوی کشور" placeholder="نام یک کشور را جست‌وجو کن…" autoComplete="off" value={query} onChange={e => { setQuery(e.target.value); setSelected(null); }} onKeyDown={e => { if (e.key === "Enter" && !e.nativeEvent.isComposing && selected && !busy) void act({ action: "guess", itemId: selected.id }); }} /><button disabled={!selected || busy} onClick={() => selected && void act({ action: "guess", itemId: selected.id })}>{busy ? "…" : "حدس"}</button></div>{items.length > 0 && <div className="suggestions">{items.map(item => <button key={item.id} onClick={() => { setSelected(item); setQuery(item.name); setItems([]); }}><span>{item.emoji} {item.name}</span>{item.detail && <small>{item.detail}</small>}</button>)}</div>}</div>
-        <button className="secondary country-daily-surrender" disabled={busy} onClick={() => { if (window.confirm("با تسلیم، پاسخ برایت آشکار می‌شود و دیگر نمی‌توانی در این چالش حدس بزنی. ادامه می‌دهی؟")) void act({ action: "surrender" }); }}>دیدن پاسخ و پایان‌دادن</button>
-      </>}
-      {state.entry.target && <div className="country-daily-target"><small>کشور هدف</small><b>{state.entry.target.emoji} {state.entry.target.name}</b>{state.entry.target.description && <span>{state.entry.target.description}</span>}</div>}
-      <section className="country-daily-guesses"><div className="guess-head"><h2>حدس‌های تو</h2><span>{state.entry.guesses.length.toLocaleString("fa-IR")}</span></div>{!state.entry.guesses.length ? <p>هنوز حدسی ثبت نکرده‌ای.</p> : [...state.entry.guesses].sort((a, b) => a.rank - b.rank).map(guess => <div className="country-daily-guess" key={guess.id}><span>{guess.emoji} {guess.name}</span><b>{guess.rank === 0 ? "✓" : guess.rank.toLocaleString("fa-IR")}</b></div>)}</section>
+      <div className="guess-head"><b>حدس‌ها</b>{active && <button onClick={surrender} disabled={busy}>تسلیم می‌شوم</button>}</div>
+      {!state.entry.guesses.length ? <div className="empty-state"><span>⌁</span><p>اولین حدس را بزن.</p></div> : <div className="guess-list">
+        {[...state.entry.guesses].sort((a, b) => a.rank - b.rank).map(guess => <div className={`guess-row ${rankColor(guess.rank, state.totalItems)}`} key={guess.id}>
+          <div className="guess-name"><span>{guess.emoji}</span><b>{guess.name}</b></div>
+          <div className="rank-copy"><small>رتبه</small><strong>{guess.rank === 0 ? "✓" : guess.rank.toLocaleString("fa-IR")}</strong><span>{guess.rank === 0 ? "پاسخ درست" : `از ${state.totalItems.toLocaleString("fa-IR")}`}</span></div>
+          <div className="rank-bar"><i style={{ width: `${guess.rank === 0 ? 100 : Math.max(4, 100 - ((guess.rank - 2) / Math.max(1, state.totalItems - 2)) * 100)}%` }} /></div>
+        </div>)}
+      </div>}
     </>}
-    <button className="secondary" onClick={onLeaderboard}>دیدن جدول چالش‌ها</button>
-    {locked && state?.challenge.target && <small className="country-daily-target-note">پاسخ چالش: {state.challenge.target.name}</small>}
   </section>;
+}
+
+function rankColor(rank: number, total: number) {
+  if (rank === 0) return "perfect";
+  if (rank / total <= .05) return "hot";
+  if (rank / total <= .2) return "warm";
+  if (rank / total <= .5) return "mild";
+  return "cold";
 }

@@ -2027,18 +2027,11 @@ input {
 .country-mode-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .country-mode-actions button, .country-mode-searching button { min-height: 48px; padding: 11px 9px; border-radius: 14px; font-size: 12px; }
 .country-mode-searching { display: grid; gap: 12px; color: #c9baff; font-size: 13px; }
-.country-daily-start, .country-daily-result, .country-daily-target { padding: 18px; margin: 16px 0; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); line-height: 1.9; }
-.country-daily-start p { color: #b4bdd3; font-size: 13px; margin-top: 0; }
-.country-daily-start .primary { width: 100%; }
-.country-daily-stats { display: flex; justify-content: space-between; gap: 12px; margin: 18px 0; font-size: 13px; color: #b4bdd3; }
-.country-daily-result.won { color: var(--green); border-color: #39d98a44; }
-.country-daily-result span, .country-daily-target > * { display: block; }
-.country-daily-target small { color: var(--muted); }
-.country-daily-target b { font-size: 24px; }
-.country-daily-surrender { margin-top: 12px; padding: 10px 14px; font-size: 12px; }
-.country-daily-guesses { margin: 22px 0; }
-.country-daily-guess { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); margin: 8px 0; }
-.country-daily-guess b { color: #c9baff; font-variant-numeric: tabular-nums; }
-.country-daily-guesses > p, .country-daily-target-note { color: var(--muted); font-size: 12px; line-height: 1.8; }
 @media (max-width: 360px) { .country-mode-actions { grid-template-columns: 1fr; } .country-mode-card { gap: 10px; padding: 15px; } .country-mode-card .game-copy b { font-size: 18px; } }
 .profile-privacy p, .profile-privacy small { color: var(--muted); font-size: .78rem; line-height: 1.9; }
+
+.country-daily-deadline { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 15px; margin: 4px 0 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.country-daily-deadline > button { display: flex; gap: 10px; align-items: center; padding: 0; border: 0; background: transparent; color: #c9baff; font-size: 12px; cursor: pointer; }
+.country-daily-deadline > div { display: flex; align-items: center; gap: 10px; }
+.country-daily-deadline small { color: var(--muted); font-size: 10px; }
+.country-daily-deadline strong { font-size: 16px; font-variant-numeric: tabular-nums; letter-spacing: 1px; }

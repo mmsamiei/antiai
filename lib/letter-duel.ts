@@ -10,6 +10,9 @@ import { inviteTransaction, lockPlayers, reconcileInvites, READY_MS } from "./du
 import { normalizePersian } from "./geo";
 import { wordPrompts } from "./data/adjective-prompts";
 import { semantrisCategories } from "./data/semantris-categories";
+import exclusions from "./data/letter-duel-exclusions.json";
+
+const excludedWords = new Map(exclusions.map(entry => [normalizePersian(entry.word), entry.reason]));
 
 export const PERSIAN_LETTERS = [..."ابتثجچحخدذرزژسشصضطظعغفقکگلمنوهی"];
 export const PICK_MS = 5_000;
@@ -17,7 +20,7 @@ export const ANSWER_MS = 15_000;
 export const RECONNECT_MS = DUEL_RECONNECT_MS;
 export const RESULT_MS = 2_500;
 const lexiconFile = readFileSync(join(process.cwd(), "lib/data/letter-duel-lexicon.txt"), "utf8");
-const localWords = new Set([...lexiconFile.split(/\r?\n/), ...wordPrompts.flatMap((p) => [p.name, ...p.examples]), ...semantrisCategories.flatMap((c) => c.words)].map(normalizePersian).filter((w) => w && !w.includes(" ") && !w.startsWith("#")));
+const localWords = new Set([...lexiconFile.split(/\r?\n/), ...wordPrompts.flatMap((p) => [p.name, ...p.examples]), ...semantrisCategories.flatMap((c) => c.words)].map(normalizePersian).filter((w) => w && !w.includes(" ") && !w.startsWith("#") && !excludedWords.has(w)));
 const JUDGE_VERSION = 2;
 
 export function randomPersianLetter(random = Math.random) { return PERSIAN_LETTERS[Math.floor(random() * PERSIAN_LETTERS.length)]; }
@@ -94,6 +97,8 @@ async function finalizeJudgments(roundId: string) {
   if (round?.answerDeadline && round.answerDeadline <= new Date() && !submissions.some((s) => s.status === "PENDING")) return resolveRound(roundId, null, null, "زمان تمام شد");
 }
 export async function judgeWord(word: string) {
+  const exclusion = excludedWords.get(normalizePersian(word));
+  if (exclusion) return { accepted: false, reason: exclusion };
   if (isLocalDuelWord(word)) return { accepted: true, reason: "واژه در واژه‌نامه ثبت شده است." };
   const cached = await prisma.letterDuelWordJudgment.findUnique({ where: { word } });
   if (cached && (cached.accepted || cached.judgeVersion === JUDGE_VERSION)) return { accepted: cached.accepted, reason: cached.reason || "" };

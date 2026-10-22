@@ -1,6 +1,22 @@
-import { describe, expect, it } from "vitest";
-import { duelWinRate, isLocalDuelWord, PERSIAN_LETTERS, randomPersianLetter, validateLetterWord, randomPracticeLetters } from "./letter-duel";
+import { describe, expect, it, vi } from "vitest";
+import { prisma } from "./prisma";
+import { duelWinRate, isLocalDuelWord, judgeWord, PERSIAN_LETTERS, randomPersianLetter, validateLetterWord, randomPracticeLetters } from "./letter-duel";
 describe("letter duel rules", () => {
+  it("rejects reviewed invalid entries before consulting cached or external judgments", async () => {
+    const cached = vi.spyOn(prisma.letterDuelWordJudgment, "findUnique").mockResolvedValue({ accepted: true } as never);
+    const external = vi.spyOn(globalThis, "fetch");
+    try {
+      for (const word of ["مظطر", "گچپژ", "مُظطر", "گچپژ "]) {
+        expect(isLocalDuelWord(word)).toBe(false);
+        expect(await judgeWord(word)).toMatchObject({ accepted: false });
+      }
+      expect(cached).not.toHaveBeenCalled();
+      expect(external).not.toHaveBeenCalled();
+    } finally { cached.mockRestore(); external.mockRestore(); }
+  });
+  it("preserves valid uncommon words, compounds and proper names", () => {
+    for (const word of ["غژغژ", "محظوظ", "رضانژاد", "گذرواژه", "چندضلعی"]) expect(isLocalDuelWord(word)).toBe(true);
+  });
   it("normalizes Persian forms and accepts a single word containing both letters", () => { expect(validateLetterWord("کتاب", ["ک", "ب"])).toMatchObject({ word: "کتاب", valid: true }); expect(validateLetterWord("كتاب", ["ک", "ب"])).toMatchObject({ word: "کتاب", valid: true }); });
   it("requires a repeated letter when both players choose it", () => { expect(validateLetterWord("بار", ["ب", "ب"]).valid).toBe(false); expect(validateLetterWord("باب", ["ب", "ب"]).valid).toBe(true); });
   it("rejects phrases, missing letters, punctuation-only and overlong words", () => { expect(validateLetterWord("کتاب خوب", ["ک", "ب"]).valid).toBe(false); expect(validateLetterWord("کتاب", ["ژ", "ب"]).valid).toBe(false); expect(validateLetterWord("!!!", ["ب", "ا"]).valid).toBe(false); expect(validateLetterWord("ا".repeat(33), ["ا", "ا"]).valid).toBe(false); });

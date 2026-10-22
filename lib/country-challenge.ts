@@ -10,8 +10,12 @@ import { geoRaceType, type GeoRaceType } from "./geo-race-config";
 type Tx = Prisma.TransactionClient;
 
 async function ensureChallenge(tx: Tx, now = new Date(), gameType: GeoRaceType = "COUNTRY") {
-  await tx.$executeRaw`SELECT pg_advisory_xact_lock(728401, 901)`;
   const window = countryChallengeWindow(now, gameType);
+  const current = await tx.countryChallenge.findUnique({ where: { gameType_startsAt: { gameType, startsAt: window.startsAt } } });
+  if (current && +current.endsAt === +window.endsAt) return current;
+  // Only creation/deadline changes need a global lock. Ordinary reads and
+  // guesses must not serialize all players behind challenge creation.
+  await tx.$executeRaw`SELECT pg_advisory_xact_lock(728401, 901)`;
   const existing = await tx.countryChallenge.findUnique({ where: { gameType_startsAt: { gameType, startsAt: window.startsAt } } });
   if (existing) return +existing.endsAt === +window.endsAt ? existing : tx.countryChallenge.update({ where: { id: existing.id }, data: { endsAt: window.endsAt } });
   const used = new Set((await tx.countryChallenge.findMany({ where: { gameType }, select: { targetId: true } })).map(x => x.targetId));

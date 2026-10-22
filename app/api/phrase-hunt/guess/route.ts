@@ -61,6 +61,7 @@ export async function POST(request: Request) {
     if (message === "GUESS_REPEATED") return NextResponse.json({ error: "این عبارت را قبلاً حدس زده‌ای" }, { status: 409 });
     if (message === "RATE_LIMITED") return NextResponse.json({ error: "کمی آهسته‌تر حدس بزن و دوباره تلاش کن." }, { status: 429 });
     if (message === "PHRASE_INVALID") return NextResponse.json({ error: "عبارت باید حداکثر ۱۲ واژه و ۱۲۰ نویسه باشد." }, { status: 400 });
+    if (message === "JEV_BUSY") return NextResponse.json({ error: "داور مشغول بررسی حدس‌هاست؛ چند لحظهٔ دیگر دوباره تلاش کن." }, { status: 429, headers: { "Retry-After": "2" } });
     if (message === "JEV_UNAVAILABLE") return NextResponse.json({ error: "داور هوشمند موقتاً در دسترس نیست؛ دوباره تلاش کن." }, { status: 503 });
     return NextResponse.json({ error: "ثبت حدس انجام نشد" }, { status: 500 });
   }

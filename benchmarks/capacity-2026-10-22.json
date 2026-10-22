@@ -1,0 +1,522 @@
+{
+  "dateUtc": "2026-10-22",
+  "readinessFor200ActivePlayers": "NOT_VALIDATED: mixed workload aborted due to errors before full ramp",
+  "environment": {
+    "serverLogicalCpus": 3,
+    "ramGiB": 8,
+    "loadGeneratorOnSameHost": true,
+    "testDatabase": "isolated clone; synthetic sessions and writes only",
+    "webProcesses": 2,
+    "socialStatusProcesses": 1
+  },
+  "limitations": [
+    "Bulk JEV responses mocked at 1850 ms; one real scoring probe succeeded in 1849 ms. Provider throughput was not load-tested.",
+    "Idle200 was an earlier version of the same optimization series; it does not establish gameplay capacity.",
+    "The mixed50 fixture had one unmatched invitation sender, producing 52 expected 404 responses; these are retained in the raw endpoint counts.",
+    "The final mixed50 run had one transient 503 race-read response.",
+    "CPU steal reached roughly 40–50 percent during overloaded runs. Shared-host and local-generator contention limit extrapolation."
+  ],
+  "checks": {
+    "typecheck": "passed",
+    "isolatedProductionBuild": "passed",
+    "vitest": {
+      "passed": 353,
+      "failedPreExisting": 5
+    },
+    "integration": "invites, matchmaking, country/city challenges, concurrent challenge creation, history sampling, historical profile parity passed"
+  },
+  "runs": {
+    "mixed50": {
+      "users": 50,
+      "authenticatedUsers": 50,
+      "scenario": "mixed",
+      "transportRetries": 4,
+      "seconds": 300.312,
+      "reason": "completed",
+      "maxInflight": 65,
+      "endpoints": {
+        "auth": {
+          "requests": 50,
+          "failures": 0,
+          "codes": {
+            "200": 50
+          },
+          "p50": 18,
+          "p95": 91,
+          "p99": 105,
+          "max": 105
+        },
+        "profile": {
+          "requests": 50,
+          "failures": 0,
+          "codes": {
+            "200": 50
+          },
+          "p50": 16,
+          "p95": 32,
+          "p99": 38,
+          "max": 38
+        },
+        "phrase-start": {
+          "requests": 25,
+          "failures": 0,
+          "codes": {
+            "200": 25
+          },
+          "p50": 28,
+          "p95": 47,
+          "p99": 66,
+          "max": 66
+        },
+        "search": {
+          "requests": 1358,
+          "failures": 0,
+          "codes": {
+            "200": 1358
+          },
+          "p50": 15,
+          "p95": 148,
+          "p99": 534,
+          "max": 1067
+        },
+        "phrase-read": {
+          "requests": 366,
+          "failures": 0,
+          "codes": {
+            "200": 366
+          },
+          "p50": 46,
+          "p95": 752,
+          "p99": 1703,
+          "max": 2984
+        },
+        "players": {
+          "requests": 147,
+          "failures": 0,
+          "codes": {
+            "200": 147
+          },
+          "p50": 25,
+          "p95": 385,
+          "p99": 887,
+          "max": 1229
+        },
+        "presence": {
+          "requests": 1444,
+          "failures": 0,
+          "codes": {
+            "200": 1444
+          },
+          "p50": 41,
+          "p95": 627,
+          "p99": 1261,
+          "max": 2709
+        },
+        "social": {
+          "requests": 7022,
+          "failures": 0,
+          "codes": {
+            "200": 7022
+          },
+          "p50": 26,
+          "p95": 376,
+          "p99": 765,
+          "max": 4046
+        },
+        "board": {
+          "requests": 147,
+          "failures": 0,
+          "codes": {
+            "200": 147
+          },
+          "p50": 59,
+          "p95": 992,
+          "p99": 1847,
+          "max": 2120
+        },
+        "phrase-guess": {
+          "requests": 605,
+          "failures": 0,
+          "codes": {
+            "200": 567,
+            "409": 38
+          },
+          "p50": 540,
+          "p95": 2835,
+          "p99": 5165,
+          "max": 7102
+        },
+        "geo-start": {
+          "requests": 20,
+          "failures": 0,
+          "codes": {
+            "200": 20
+          },
+          "p50": 38,
+          "p95": 284,
+          "p99": 284,
+          "max": 284
+        },
+        "geo-guess": {
+          "requests": 387,
+          "failures": 0,
+          "codes": {
+            "200": 387
+          },
+          "p50": 68,
+          "p95": 904,
+          "p99": 2316,
+          "max": 2995
+        },
+        "geo-read": {
+          "requests": 574,
+          "failures": 0,
+          "codes": {
+            "200": 574
+          },
+          "p50": 49,
+          "p95": 739,
+          "p99": 1774,
+          "max": 2637
+        },
+        "invite-send": {
+          "requests": 56,
+          "failures": 0,
+          "codes": {
+            "200": 4,
+            "404": 52
+          },
+          "p50": 363,
+          "p95": 2102,
+          "p99": 4274,
+          "max": 4274
+        },
+        "invite-accept": {
+          "requests": 4,
+          "failures": 0,
+          "codes": {
+            "200": 4
+          },
+          "p50": 264,
+          "p95": 859,
+          "p99": 859,
+          "max": 859
+        },
+        "race-ready": {
+          "requests": 8,
+          "failures": 0,
+          "codes": {
+            "200": 8
+          },
+          "p50": 639,
+          "p95": 1713,
+          "p99": 1713,
+          "max": 1713
+        },
+        "race-read": {
+          "requests": 460,
+          "failures": 1,
+          "codes": {
+            "200": 459,
+            "503": 1
+          },
+          "p50": 67,
+          "p95": 778,
+          "p99": 2998,
+          "max": 8960
+        },
+        "race-heartbeat": {
+          "requests": 456,
+          "failures": 0,
+          "codes": {
+            "200": 456
+          },
+          "p50": 98,
+          "p95": 1003,
+          "p99": 3834,
+          "max": 7830
+        }
+      },
+      "totalRequests": 13179,
+      "failedRequests": 1
+    },
+    "mixedTarget200": {
+      "users": 200,
+      "authenticatedUsers": 136,
+      "scenario": "mixed",
+      "transportRetries": 10,
+      "seconds": 81.114,
+      "reason": "excessive-test-errors",
+      "maxInflight": 322,
+      "endpoints": {
+        "auth": {
+          "requests": 159,
+          "failures": 12,
+          "codes": {
+            "0": 12,
+            "200": 147
+          },
+          "p50": 779,
+          "p95": 12019,
+          "p99": 12078,
+          "max": 12083
+        },
+        "profile": {
+          "requests": 143,
+          "failures": 7,
+          "codes": {
+            "0": 7,
+            "200": 136
+          },
+          "p50": 701,
+          "p95": 10661,
+          "p99": 12047,
+          "max": 12079
+        },
+        "presence": {
+          "requests": 570,
+          "failures": 114,
+          "codes": {
+            "0": 114,
+            "200": 456
+          },
+          "p50": 2196,
+          "p95": 12032,
+          "p99": 12117,
+          "max": 12496
+        },
+        "social": {
+          "requests": 2640,
+          "failures": 0,
+          "codes": {
+            "200": 2640
+          },
+          "p50": 100,
+          "p95": 688,
+          "p99": 777,
+          "max": 922
+        },
+        "phrase-start": {
+          "requests": 69,
+          "failures": 2,
+          "codes": {
+            "0": 2,
+            "200": 67
+          },
+          "p50": 1066,
+          "p95": 4672,
+          "p99": 12005,
+          "max": 12005
+        },
+        "players": {
+          "requests": 68,
+          "failures": 12,
+          "codes": {
+            "0": 12,
+            "200": 56
+          },
+          "p50": 1319,
+          "p95": 12044,
+          "p99": 12125,
+          "max": 12125
+        },
+        "search": {
+          "requests": 458,
+          "failures": 49,
+          "codes": {
+            "0": 49,
+            "200": 409
+          },
+          "p50": 799,
+          "p95": 12018,
+          "p99": 12077,
+          "max": 12123
+        },
+        "board": {
+          "requests": 68,
+          "failures": 13,
+          "codes": {
+            "0": 13,
+            "200": 55
+          },
+          "p50": 3977,
+          "p95": 12078,
+          "p99": 12195,
+          "max": 12195
+        },
+        "phrase-read": {
+          "requests": 162,
+          "failures": 20,
+          "codes": {
+            "0": 20,
+            "200": 142
+          },
+          "p50": 2500,
+          "p95": 12007,
+          "p99": 12039,
+          "max": 12063
+        },
+        "geo-start": {
+          "requests": 52,
+          "failures": 2,
+          "codes": {
+            "0": 2,
+            "200": 50
+          },
+          "p50": 1933,
+          "p95": 5737,
+          "p99": 12169,
+          "max": 12169
+        },
+        "geo-read": {
+          "requests": 211,
+          "failures": 46,
+          "codes": {
+            "0": 42,
+            "200": 165,
+            "500": 4
+          },
+          "p50": 2992,
+          "p95": 12038,
+          "p99": 12126,
+          "max": 12193
+        },
+        "geo-guess": {
+          "requests": 131,
+          "failures": 30,
+          "codes": {
+            "0": 11,
+            "200": 101,
+            "503": 19
+          },
+          "p50": 4678,
+          "p95": 12007,
+          "p99": 12032,
+          "max": 12129
+        },
+        "phrase-guess": {
+          "requests": 246,
+          "failures": 63,
+          "codes": {
+            "0": 59,
+            "200": 106,
+            "409": 77,
+            "503": 4
+          },
+          "p50": 7340,
+          "p95": 12051,
+          "p99": 12143,
+          "max": 12192
+        },
+        "network-ECONNRESET": {
+          "requests": 1,
+          "failures": 1,
+          "codes": {},
+          "p50": 107,
+          "p95": 107,
+          "p99": 107,
+          "max": 107
+        },
+        "network-Error": {
+          "requests": 342,
+          "failures": 342,
+          "codes": {},
+          "p50": 12011,
+          "p95": 12122,
+          "p99": 12192,
+          "max": 12496
+        }
+      },
+      "totalRequests": 4977,
+      "failedRequests": 370
+    },
+    "idle200Earlier": {
+      "users": 200,
+      "scenario": "idle",
+      "seconds": 131.19,
+      "reason": "completed",
+      "maxInflight": 70,
+      "endpoints": {
+        "auth": {
+          "requests": 200,
+          "failures": 0,
+          "codes": {
+            "200": 200
+          },
+          "p50": 26,
+          "p95": 471,
+          "p99": 609,
+          "max": 972
+        },
+        "profile": {
+          "requests": 200,
+          "failures": 0,
+          "codes": {
+            "200": 200
+          },
+          "p50": 21,
+          "p95": 236,
+          "p99": 609,
+          "max": 663
+        },
+        "board": {
+          "requests": 245,
+          "failures": 1,
+          "codes": {
+            "0": 1,
+            "200": 244
+          },
+          "p50": 67,
+          "p95": 628,
+          "p99": 971,
+          "max": 1764
+        },
+        "social": {
+          "requests": 11142,
+          "failures": 0,
+          "codes": {
+            "200": 11142
+          },
+          "p50": 25,
+          "p95": 99,
+          "p99": 449,
+          "max": 726
+        },
+        "presence": {
+          "requests": 2339,
+          "failures": 3,
+          "codes": {
+            "0": 3,
+            "200": 2336
+          },
+          "p50": 54,
+          "p95": 323,
+          "p99": 708,
+          "max": 1677
+        },
+        "players": {
+          "requests": 245,
+          "failures": 0,
+          "codes": {
+            "200": 245
+          },
+          "p50": 36,
+          "p95": 252,
+          "p99": 574,
+          "max": 895
+        },
+        "network-ECONNRESET": {
+          "requests": 4,
+          "failures": 4,
+          "codes": {},
+          "p50": 9,
+          "p95": 20,
+          "p99": 20,
+          "max": 20
+        }
+      },
+      "totalRequests": 14371,
+      "failedRequests": 4
+    }
+  }
+}

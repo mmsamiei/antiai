@@ -61,6 +61,24 @@ export async function reconcileInvites(tx: Tx, userId: string, now = new Date())
   }
 }
 export async function readInvites(userId: string) {
+  // Most polls have no live invitation or room. Avoid reserving a transaction
+  // connection for reconciliation when there is nothing to reconcile.
+  const idle = await prisma.$queryRaw<{ acceptsGameInvites: boolean }[]>`
+    SELECT u."acceptsGameInvites" FROM "User" u WHERE u.id = ${userId}
+    AND NOT EXISTS (SELECT 1 FROM "DuelInvite" i WHERE (i."senderId" = u.id OR i."recipientId" = u.id)
+      AND (i.status = 'PENDING' OR (i.status = 'ACCEPTED' AND (i."senderReadyAt" IS NULL OR i."recipientReadyAt" IS NULL))))
+    AND NOT EXISTS (SELECT 1 FROM "CountryRace" r WHERE (r."playerOneId" = u.id OR r."playerTwoId" = u.id) AND r.status IN ('WAITING','ACTIVE'))
+    AND NOT EXISTS (SELECT 1 FROM "LetterDuelConnection" r WHERE (r."playerOneId" = u.id OR r."playerTwoId" = u.id) AND r.status IN ('WAITING','ACTIVE'))
+  `;
+  if (idle[0]) {
+    const invites = await prisma.duelInvite.findMany({ where: { OR: [{ senderId: userId }, { recipientId: userId }] }, include: inviteInclude, orderBy: { createdAt: "desc" }, take: 100 });
+    // An invitation may arrive between the idle probe and history read.
+    // Reconcile any newly observed live invitation through the normal path.
+    if (!invites.some(i => i.status === "PENDING" || i.status === "ACCEPTED" && (i.connection?.status === "WAITING" || i.connection?.status === "ACTIVE" || i.countryRace?.status === "WAITING" || i.countryRace?.status === "ACTIVE"))) {
+      return { ...idle[0], invites: invites.map(i => ({ ...i, sender: publicIdentity(i.sender), recipient: publicIdentity(i.recipient) })), serverNow: new Date() };
+    }
+  }
+
   return inviteTransaction(async tx => {
     await reconcileInvites(tx, userId);
     const participants = { OR: [{ senderId: userId }, { recipientId: userId }] };

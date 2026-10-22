@@ -1,3 +1,4 @@
+import { sessionUserId } from "./session-signature";
 import crypto from "crypto";
 import { isAccountSuspended } from "./account-suspensions";
 import { cookies, headers } from "next/headers";
@@ -16,14 +17,8 @@ export function createSessionValue(userId: string): string {
 }
 
 function userIdFromSession(value?: string): string | null {
-  if (!value) return null;
-  const separator = value.lastIndexOf(".");
-  if (separator < 1) return null;
-  const userId = value.slice(0, separator);
-  const actual = Buffer.from(value.slice(separator + 1), "hex");
-  const expected = Buffer.from(crypto.createHmac("sha256", sessionKey()).update(userId).digest("hex"), "hex");
-  if (actual.length !== expected.length || !crypto.timingSafeEqual(actual, expected)) return null;
-  return isAccountSuspended(userId) ? null : userId;
+  const userId = sessionUserId(value, sessionKey());
+  return userId && !isAccountSuspended(userId) ? userId : null;
 }
 
 export function currentUserId(): string | null {

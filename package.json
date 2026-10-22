@@ -21,7 +21,8 @@
     "test:country-race-integration": "tsx scripts/test-country-race-integration.ts",
     "test:letter-practice-matching-integration": "tsx scripts/test-letter-practice-matching-integration.ts",
     "test:letter-duel-matches-integration": "tsx scripts/test-letter-duel-matches-integration.ts",
-    "test:duel-invites-integration": "tsx scripts/test-duel-invites-integration.ts"
+    "test:duel-invites-integration": "tsx scripts/test-duel-invites-integration.ts",
+    "social-status-server": "tsx scripts/social-status-server.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.16.2",

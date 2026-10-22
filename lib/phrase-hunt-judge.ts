@@ -1,3 +1,4 @@
+import { AsyncCapacity } from "./async-capacity";
 import { Prisma } from "@prisma/client";
 import { prisma } from "./prisma";
 import { normalizePersian } from "./geo";
@@ -81,6 +82,11 @@ export const contextualPhraseInstructions = "میزان نزدیک‌شدن حد
 export const contextualPhraseLevels = ["بی‌ارتباط", "ارتباط ضعیف", "بخشی از مفهوم درست", "بیشتر مفهوم درست", "تقریباً همان معنا"];
 export type PhraseJudgeContext = { challengeId: string; userId: string };
 
+const contextualPending = new Map<string, Promise<number>>();
+const historyCollator = new Intl.Collator("fa");
+const configuredConcurrency = Number(process.env.JEV_MAX_CONCURRENT || 8);
+const judgeCapacity = new AsyncCapacity(Number.isInteger(configuredConcurrency) && configuredConcurrency > 0 && configuredConcurrency <= 32 ? configuredConcurrency : 8, 64, 2000);
+
 async function judgeContextualPhrase(targetId: string, target: string, phrase: string, judgeVersion: number, model: string, context?: PhraseJudgeContext) {
   if (!context?.challengeId || !context.userId) throw new Error("PHRASE_CONTEXT_REQUIRED");
   // Scope contextual judgments to one challenge, while preserving historical cache keys.
@@ -90,6 +96,7 @@ async function judgeContextualPhrase(targetId: string, target: string, phrase: s
   if (cached) return cached.score;
   const apiKey = process.env.JEV_API_KEY;
   if (!apiKey) throw new Error("JEV_UNAVAILABLE");
+  return judgeCapacity.run(async () => {
   const history = await loadPhraseHuntHistory(context.challengeId, context.userId, phrase);
   const anchors = phraseHuntAnchors[context.challengeId] ?? [];
   const previousByGuess = new Map(history.previousGuesses.map((item) => [normalizePersian(item.guess), item]));
@@ -97,9 +104,9 @@ async function judgeContextualPhrase(targetId: string, target: string, phrase: s
     const normalized = normalizePersian(anchor.guess);
     if (normalized && normalized !== normalizePersian(phrase)) previousByGuess.set(normalized, anchor);
   }
-  const previousGuesses = [...previousByGuess.values()]
-    .sort((a, b) => b.score_out_of_100 - a.score_out_of_100 || normalizePersian(a.guess).localeCompare(normalizePersian(b.guess), "fa"))
-    .slice(0, 200);
+  const previousGuesses = [...previousByGuess.entries()]
+    .sort(([aKey, a], [bKey, b]) => b.score_out_of_100 - a.score_out_of_100 || historyCollator.compare(aKey, bKey))
+    .slice(0, 200).map(([, item]) => item);
   let score: number;
   try {
     const response = await fetch(process.env.JEV_API_URL || "https://openrouter.ai/api/alpha/decisions", {
@@ -124,13 +131,21 @@ async function judgeContextualPhrase(targetId: string, target: string, phrase: s
     if (!winner) throw error;
     return winner.score;
   }
+  });
 }
 
 export async function judgePhrase(targetId: string, target: string, rawPhrase: string, judgeVersion = PHRASE_HUNT_JUDGE_VERSION, model = PHRASE_HUNT_JUDGE_MODEL, context?: PhraseJudgeContext): Promise<number> {
   const phrase = normalizePhraseGuess(rawPhrase);
   if (!phrase || phrase.length > 120 || phrase.split(" ").length > 12) throw new Error("PHRASE_INVALID");
 
-  if (judgeVersion >= 6) return judgeContextualPhrase(targetId, target, phrase, judgeVersion, model, context);
+  if (judgeVersion >= 6) {
+    const key = JSON.stringify([targetId, context?.challengeId, phrase, judgeVersion, model]);
+    const pending = contextualPending.get(key);
+    if (pending) return pending;
+    const result = judgeContextualPhrase(targetId, target, phrase, judgeVersion, model, context);
+    contextualPending.set(key, result);
+    try { return await result; } finally { if (contextualPending.get(key) === result) contextualPending.delete(key); }
+  }
 
   const cached = await prisma.phraseHuntJudgment.findUnique({
     where: { targetId_phrase_judgeVersion_model: { targetId, phrase, judgeVersion, model } },

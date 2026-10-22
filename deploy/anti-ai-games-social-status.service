@@ -1,0 +1,17 @@
+[Unit]
+Description=Anti AI Games social status API
+After=network-online.target anti-ai-games-app.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/anti-ai-games
+EnvironmentFile=/root/anti-ai-games/.env
+Environment=NODE_ENV=production
+ExecStart=/usr/bin/npm run social-status-server
+Restart=always
+RestartSec=3
+MemoryMax=512M
+
+[Install]
+WantedBy=multi-user.target

@@ -14,10 +14,15 @@ export async function loadPhraseHuntHistory(challengeId: string, userId: string,
       by: ["normalized"], where: { game: { phraseChallengeId: challengeId, userId }, normalized: { not: normalized } },
       _max: { score: true }, orderBy: [{ _max: { score: "desc" } }, { normalized: "asc" }], take: 100,
     }),
-    prisma.phraseHuntGuess.groupBy({
-      by: ["normalized"], where: { game: { phraseChallengeId: challengeId, userId: { not: userId } }, normalized: { not: normalized } },
-      _max: { score: true },
-    }),
+    // Sample distinct words in PostgreSQL rather than transferring and
+    // normalizing the entire challenge's history for every new judgment.
+    prisma.$queryRaw<{ normalized: string; score: number }[]>`
+      SELECT g.normalized, MAX(g.score)::double precision AS score
+      FROM "PhraseHuntGuess" g JOIN "GameSession" s ON s.id = g."gameId"
+      WHERE s."phraseChallengeId" = ${challengeId} AND s."userId" <> ${userId}
+        AND g.normalized <> ${normalized}
+      GROUP BY g.normalized ORDER BY random() LIMIT 50
+    `.then(rows => rows.map(row => ({ normalized: row.normalized, _max: { score: row.score } }))),
   ]);
   const failures = results.filter(result => result.status === "rejected");
   if (failures.length) throw failures[0].reason;

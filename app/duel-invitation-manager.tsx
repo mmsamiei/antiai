@@ -1,5 +1,6 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { fetchSocialStatus } from "@/lib/social-status-client";
 import { sessionRequest } from "@/lib/client-session";
 import { Invitation, InviteGame, inviteGameName, InvitationState, InviteRemaining, playerName, PlayerAvatar } from "./players";
 const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -32,11 +33,10 @@ export function useDuelInvitations({ userId, onJoin, beforeAccept, onError }: {
     polling.current = true;
     const version = ++sequence.current;
     try {
-      const response = await fetch(base + "/api/duel-invites", sessionRequest());
-      if (!response.ok) throw new Error("دریافت دعوت‌ها انجام نشد");
-      await receive(await response.json(), version);
+      const data = await fetchSocialStatus(userId || "");
+      await receive(data.invitations, version);
     } finally { polling.current = false; }
-  }, [receive]);
+  }, [receive, userId]);
   useEffect(() => {
     if (!userId) return;
     let stopped = false;

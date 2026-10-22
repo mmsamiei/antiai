@@ -102,16 +102,19 @@ export async function cancelCountryMatch(userId: string) {
 }
 
 export async function readCountryMatch(userId: string) {
-  return prisma.$transaction(async tx => {
+  const tx = prisma;
+  {
     const now = new Date();
-    const search = await tx.countryMatchSearch.findFirst({ where: { userId }, orderBy: { createdAt: "desc" }, include: { offers: { orderBy: { createdAt: "desc" }, take: 1, include: { sender: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } }, recipient: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } } } } } });
-    const incoming = await tx.countryMatchOffer.findFirst({ where: { recipientId: userId, status: "PENDING" }, include: { search: { select: { gameType: true } }, sender: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } } } });
-    if (search?.status === "ACTIVE") await tx.countryMatchSearch.update({ where: { id: search.id }, data: { lastSeenAt: now } });
-    const room = await tx.countryRace.findFirst({ where: { status: { in: ["WAITING", "ACTIVE"] }, AND: [{ OR: [{ playerOneId: userId }, { playerTwoId: userId }] }, { OR: [{ matchOffer: { isNot: null } }, { matchedSearch: { isNot: null } }] }] }, select: { id: true, gameType: true } });
-    const duel = await tx.letterDuelConnection.findFirst({ where: { status: { in: ["WAITING", "ACTIVE"] }, OR: [{ playerOneId: userId }, { playerTwoId: userId }], directInvite: { is: { source: "MATCHING", status: "ACCEPTED" } } }, select: { id: true } });
+    const [search, incoming, room, duel] = await Promise.all([
+      tx.countryMatchSearch.findFirst({ where: { userId }, orderBy: { createdAt: "desc" }, include: { offers: { orderBy: { createdAt: "desc" }, take: 1, include: { sender: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } }, recipient: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } } } } } }),
+      tx.countryMatchOffer.findFirst({ where: { recipientId: userId, status: "PENDING" }, include: { search: { select: { gameType: true } }, sender: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } } } }),
+      tx.countryRace.findFirst({ where: { status: { in: ["WAITING", "ACTIVE"] }, AND: [{ OR: [{ playerOneId: userId }, { playerTwoId: userId }] }, { OR: [{ matchOffer: { isNot: null } }, { matchedSearch: { isNot: null } }] }] }, select: { id: true, gameType: true } }),
+      tx.letterDuelConnection.findFirst({ where: { status: { in: ["WAITING", "ACTIVE"] }, OR: [{ playerOneId: userId }, { playerTwoId: userId }], directInvite: { is: { source: "MATCHING", status: "ACCEPTED" } } }, select: { id: true } }),
+    ]);
+    if (search?.status === "ACTIVE") await tx.countryMatchSearch.updateMany({ where: { id: search.id, status: "ACTIVE" }, data: { lastSeenAt: now } });
     const offer = incoming ? { ...incoming, gameType: matchGameType(incoming.search.gameType), sender: { ...incoming.sender, username: incoming.sender.showUsername ? incoming.sender.username : null } } : null;
     return { search: search ? { id: search.id, gameType: matchGameType(search.gameType), status: search.status, createdAt: search.createdAt, offer: search.offers[0] ? { id: search.offers[0].id, status: search.offers[0].status, expiresAt: search.offers[0].expiresAt, recipient: publicIdentity(search.offers[0].recipient) } : null } : null, incoming: offer, roomId: room?.id ?? duel?.id ?? null, roomGameKind: room ? matchGameConfig[matchGameType(room.gameType)].inviteKind : duel ? "LETTER_DUEL" as const : null, serverNow: now };
-  }, { isolationLevel: Prisma.TransactionIsolationLevel.Serializable });
+  }
 }
 
 export async function respondToCountryMatch(userId: string, offerId: string, action: "accept" | "reject") {

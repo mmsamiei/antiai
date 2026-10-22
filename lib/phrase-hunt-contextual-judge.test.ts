@@ -40,6 +40,14 @@ describe("v6 shared contextual judging", () => {
     expect(history.some(item => item.guess === "سامورایی" || item.guess === "باغ انار")).toBe(false);
     expect(history).not.toContainEqual({ guess: "جنگ", score_out_of_100: 50 });
   });
+  it("coalesces concurrent guesses from different users into one provider request", async () => {
+    const fetchMock = vi.fn().mockResolvedValue({ ok: true, json: async () => ({ answers: { score: { score: 2 } } }) });
+    vi.stubGlobal("fetch", fetchMock);
+    const values = await Promise.all(["a", "b", "c"].map(userId => judgePhrase("ph-106", "جنگ روانی", "حدس مشترک", 6, "typesafe/jev-1.13", { challengeId: "night", userId })));
+    expect(new Set(values).size).toBe(1);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(mocks.upsert).toHaveBeenCalledTimes(1);
+  });
   it("reuses the shared score across players before selecting any personal context or calling JEV", async () => {
     mocks.findUnique.mockResolvedValue({ score: 53.21 });
     const fetchMock = vi.fn(); vi.stubGlobal("fetch", fetchMock);

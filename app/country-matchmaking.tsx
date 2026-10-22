@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { matchGameConfig, type MatchGameType } from "@/lib/match-game-config";
 import type { InviteGame } from "./players";
+import { fetchSocialStatus } from "@/lib/social-status-client";
 import { sessionRequest } from "@/lib/client-session";
 import { Player, PlayerAvatar, playerName } from "./players";
 const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -30,11 +31,10 @@ export function useCountryMatchmaking({ userId, onError, onMatch }: { userId: st
     if (polling.current || actionBusy.current) return;
     polling.current = true; const version = ++sequence.current;
     try {
-      const response = await fetch(base + "/api/country-matchmaking", sessionRequest());
-      const data = await response.json(); if (!response.ok) throw new Error(data.error || "وضعیت جست‌وجو دریافت نشد");
-      receive(data, version);
+      const data = await fetchSocialStatus(userId || "");
+      receive(data.matching, version);
     } finally { polling.current = false; }
-  }, [receive]);
+  }, [receive, userId]);
   const watchingMatch = state?.search?.status === "ACTIVE" || Boolean(state?.incoming);
   useEffect(() => {
     if (!userId) { setState(null); return; }

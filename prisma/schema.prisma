@@ -52,6 +52,7 @@ enum LetterDuelSubmissionStatus {
 }
 
 model User {
+  feedback Feedback[]
   competitiveRatings CompetitiveRating[]
   letterPractice LetterDuelPracticeRound?
   id                               String                 @id
@@ -84,6 +85,43 @@ model User {
   wordWeaverEntries                WordWeaverEntry[]
   createdAt                        DateTime               @default(now())
   updatedAt                        DateTime               @updatedAt
+}
+
+enum FeedbackKind {
+  SUGGESTION
+  CRITICISM
+  BUG
+  FEATURE
+}
+
+enum FeedbackStatus {
+  PENDING
+  REVIEWED
+  ACCEPTED
+  IMPLEMENTED
+}
+
+model Feedback {
+  id String @id @default(cuid())
+  userId String
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  requestId String
+  fingerprint String
+  kind FeedbackKind
+  title String
+  body String
+  status FeedbackStatus @default(PENDING)
+  reply String?
+  approvedAt DateTime?
+  reviewedAt DateTime?
+  reviewedBy String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, requestId])
+  @@unique([userId, fingerprint])
+  @@index([userId, createdAt])
+  @@index([status, createdAt])
 }
 
 model OnlinePresence {

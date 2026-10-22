@@ -17,6 +17,7 @@ import LetterDuelPractice, { LetterDuelMode } from "./letter-duel-practice";
 import { matchGameConfig } from "@/lib/match-game-config";
 import LetterDuel from "./letter-duel";
 import WordWeaver from "./word-weaver";
+import Feedback from "./feedback";
 import OnlineAvatar from "./online-avatar";
 import Players, { playerName, inviteGameName, type InviteGame } from "./players";
 import { useDuelInvitations, InvitationBanner } from "./duel-invitation-manager";
@@ -129,7 +130,7 @@ type PublicProfile = {
     };
   };
 };
-type Screen = "duel-mode" | "duel-practice" | "country-race" | "country-mode" | "country-challenge" | "home" | "play" | "duel" | "word-weaver" | "leaderboard" | "players";
+type Screen = "feedback" | "duel-mode" | "duel-practice" | "country-race" | "country-mode" | "country-challenge" | "home" | "play" | "duel" | "word-weaver" | "leaderboard" | "players";
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const TELEGRAM_BOT_USERNAME = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || "";
 
@@ -449,8 +450,10 @@ export default function AntiAiGamesApp() {
           onDuel={() => { setDirectDuelId(null); navigate("duel-mode"); }}
           onCountryMode={type => { setGeographyType(type); navigate("country-mode"); }}
           onWordWeaver={() => navigate("word-weaver")}
+          onFeedback={() => navigate("feedback")}
         />
       )}
+      {screen === "feedback" && <Feedback userId={String(user.id)} onBack={back} onOpenProfile={setProfileUserId} setError={setError} />}
       {screen === "duel-mode" && <LetterDuelMode state={countryMatch.state} busy={countryMatch.busy} onBack={back} onPractice={() => navigate("duel-practice")} onFind={() => void countryMatch.action("start", undefined, "LETTER_DUEL")} onCancel={() => void countryMatch.action("cancel")} onInvite={() => { setInviteGameChoice("LETTER_DUEL"); navigate("players"); }} />}
       {screen === "duel-practice" && <LetterDuelPractice onBack={back} setError={setError} />}
       {screen === "country-mode" && <CountryModePicker key={geographyType} gameType={geographyType} matchState={countryMatch.state} matchBusy={countryMatch.busy} onBack={back} onChallenge={() => navigate("country-challenge")} onPractice={() => void startGame(geographyType)} onFind={() => void countryMatch.action("start", undefined, geographyType)} onCancel={() => void countryMatch.action("cancel")} onInvite={() => { setInviteGameChoice(geoRaceConfig[geographyType].inviteKind); navigate("players"); }} />}
@@ -556,6 +559,7 @@ function Home({
   onDuel,
   onCountryMode,
   onWordWeaver,
+  onFeedback,
 }: {
   onlineCount: number | null;
   randomDuelWaiting: boolean;
@@ -564,6 +568,7 @@ function Home({
   onDuel: () => void;
   onCountryMode: (type: GeoRaceType) => void;
   onWordWeaver: () => void;
+  onFeedback: () => void;
 }) {
   const [otherGamesOpen, setOtherGamesOpen] = useState(false);
   const mainGameTypes = playableTypes.filter((type) => type !== "SEMANTRIS");
@@ -606,6 +611,7 @@ function Home({
             <span className="game-arrow">←</span>
           </button>
         ))}
+        <button className="game-card feedback-card" onClick={onFeedback}><span className="game-icon">💡</span><span className="game-copy"><b>نظرجو</b><small>پیشنهاد بده، باگ گزارش کن و در بهترشدن بازی سهیم شو</small></span><span className="game-arrow">←</span></button>
       </section>
       <section className={`other-games ${otherGamesOpen ? "is-open" : ""}`}>
         <button

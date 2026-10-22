@@ -2063,3 +2063,33 @@ input {
 
 .leader-mode-toggle { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .leader-mode-toggle button:only-child { grid-column: 1 / -1; }
+
+/* Nazarjoo follows the game's dark cards, Persian forms and rounded panels. */
+.game-card.feedback-card { border-color: #665336; background: linear-gradient(130deg, #252035, #161a27); }
+.feedback-screen { padding-bottom: 24px; }
+.feedback-screen > .game-card { width: 100%; margin: 7px 0; }
+.feedback-intro { color: var(--muted); line-height: 1.9; margin: 12px 0 20px; }
+.feedback-guide, .feedback-form, .feedback-item { padding: 20px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); margin: 16px 0; }
+.feedback-guide p { font-size: 13px; color: var(--muted); line-height: 1.9; }
+.feedback-form { display: grid; gap: 16px; }
+.feedback-form h2, .feedback-list-heading h2 { margin: 0; font-size: 19px; }
+.feedback-form label, .feedback-filter { display: grid; gap: 9px; color: var(--text); font-size: 13px; }
+.feedback-form input, .feedback-form textarea, .feedback-form select, .feedback-filter select { width: 100%; box-sizing: border-box; background: #0e1323; color: var(--text); border: 1px solid var(--line); border-radius: 12px; padding: 12px; font: inherit; }
+.feedback-form textarea { resize: vertical; line-height: 1.9; }
+.feedback-form :is(input,textarea,select):focus { outline: 2px solid #8060d8; outline-offset: 2px; }
+.feedback-list-heading, .feedback-item-meta, .feedback-pagination { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.feedback-notice, .feedback-reply { border-radius: 14px; background: #192b31; border: 1px solid #305657; padding: 14px; line-height: 1.9; font-size: 13px; }
+.feedback-item h3 { margin: 16px 0 8px; overflow-wrap: anywhere; }
+.feedback-item > p, .feedback-reply p { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.9; font-size: 14px; }
+.feedback-item small, .feedback-item-meta { color: var(--muted); font-size: 12px; }
+.feedback-reply { margin-top: 16px; }
+.feedback-reply p { margin-bottom: 0; }
+.feedback-status { border: 1px solid var(--line); border-radius: 100px; padding: 5px 10px; font-size: 11px; }
+.feedback-status.accepted, .feedback-status.implemented { background: #143428; color: #9ce1b6; border-color: #2d6547; }
+.feedback-status.pending { color: #d6c295; }
+.feedback-review { margin-bottom: 0; padding: 16px; background: #101522; }
+.feedback-ranking { width: 100%; display: flex; align-items: center; gap: 12px; padding: 14px 10px; margin: 8px 0; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); color: var(--text); text-align: right; }
+.feedback-ranking .feedback-ranking-copy { flex: 1; min-width: 0; }
+.feedback-ranking strong { overflow-wrap: anywhere; }
+.feedback-ranking small { display: block; font-size: 10px; color: var(--muted); margin-top: 5px; }
+.feedback-ranking > b:last-child { text-align: center; color: #c8b7ff; }

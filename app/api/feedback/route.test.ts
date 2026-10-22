@@ -1,0 +1,14 @@
+import { beforeEach, expect, it, vi } from "vitest";
+const mocks=vi.hoisted(()=>({currentUserId:vi.fn(),createFeedback:vi.fn(),readFeedback:vi.fn(),reviewFeedback:vi.fn()}));
+vi.mock("@/lib/auth",()=>({currentUserId:mocks.currentUserId}));
+vi.mock("@/lib/feedback",()=>mocks);
+import {GET,POST,PATCH} from "./route";
+const req=(body:unknown,method="POST")=>new Request("https://example.test/api/feedback",{method,body:JSON.stringify(body)});
+const good={requestId:"e6659ed8-6771-45d6-a495-644ab947c43b",kind:"BUG",title:"مشکل نمایش",body:"دکمهٔ بازگشت کار نمی‌کند."};
+beforeEach(()=>{vi.resetAllMocks();mocks.currentUserId.mockReturnValue("me");mocks.readFeedback.mockResolvedValue({items:[]});mocks.createFeedback.mockResolvedValue({feedback:{id:"f"}});mocks.reviewFeedback.mockResolvedValue({feedback:{id:"f"}});});
+it("requires authentication on all operations",async()=>{mocks.currentUserId.mockReturnValue(null);expect((await GET(new Request("https://example.test/api/feedback"))).status).toBe(401);expect((await POST(req(good))).status).toBe(401);expect((await PATCH(req({},"PATCH"))).status).toBe(401);expect(mocks.createFeedback).not.toHaveBeenCalled();});
+it("scopes owner reads to the session and validates paging",async()=>{await GET(new Request("https://example.test/api/feedback?userId=other"));expect(mocks.readFeedback).toHaveBeenCalledWith("me","mine",1,"PENDING");expect((await GET(new Request("https://example.test/api/feedback?page=-1"))).status).toBe(400);});
+it("cannot inject points, status, or owner while posting",async()=>{expect((await POST(req({...good,userId:"other",status:"ACCEPTED",points:500}))).status).toBe(200);expect(mocks.createFeedback).toHaveBeenCalledWith("me",good);});
+it.each([null,{},[],{...good,body:" "},{...good,kind:"OTHER"}])("rejects malformed content %j",async body=>{expect((await POST(req(body))).status).toBe(400);expect(mocks.createFeedback).not.toHaveBeenCalled();});
+it("reports unauthorized review without performing an approval",async()=>{mocks.reviewFeedback.mockRejectedValue(new Error("FEEDBACK_FORBIDDEN"));expect((await PATCH(req({id:"f",status:"ACCEPTED",reply:"تأیید شد"},"PATCH"))).status).toBe(403);expect(mocks.reviewFeedback).toHaveBeenCalledWith("me",{id:"f",status:"ACCEPTED",reply:"تأیید شد"});});
+it("reports missing feedback and posting limits",async()=>{mocks.reviewFeedback.mockRejectedValue(new Error("FEEDBACK_NOT_FOUND"));expect((await PATCH(req({id:"f",status:"ACCEPTED",reply:"تأیید شد"},"PATCH"))).status).toBe(404);mocks.createFeedback.mockRejectedValue(new Error("FEEDBACK_LIMIT"));expect((await POST(req(good))).status).toBe(429);});

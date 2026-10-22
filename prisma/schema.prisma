@@ -107,6 +107,7 @@ model AppPresence {
 }
 
 model CountryChallenge {
+  announcement PhraseHuntAnnouncement?
   gameType  GameType @default(COUNTRY)
   id        String @id
   startsAt  DateTime
@@ -255,13 +256,15 @@ model PhraseHuntNotificationConfig {
 
 model PhraseHuntAnnouncement {
   id          String                           @id @default(cuid())
-  challengeId String                           @unique
+  challengeId String?                          @unique
+  geoChallengeId String?                       @unique
+  geoChallenge CountryChallenge? @relation(fields: [geoChallengeId], references: [id], onDelete: Restrict)
   messageText String
   winnerUserIds String[] @default([])
   status      PhraseHuntAnnouncementStatus     @default(PENDING)
   createdAt   DateTime                         @default(now())
   completedAt DateTime?
-  challenge   PhraseHuntChallenge              @relation(fields: [challengeId], references: [id], onDelete: Restrict)
+  challenge   PhraseHuntChallenge?             @relation(fields: [challengeId], references: [id], onDelete: Restrict)
   deliveries  PhraseHuntAnnouncementDelivery[]
 }
 
@@ -615,4 +618,10 @@ model CompetitiveResult {
   oneAfter Int
   twoAfter Int
   createdAt DateTime @default(now())
+}
+
+model GeoChallengeNotificationConfig {
+  gameType String @id
+  enabledAt DateTime @default(now())
+  lastQueuedStart DateTime?
 }

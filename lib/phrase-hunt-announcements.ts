@@ -1,3 +1,4 @@
+import { isAccountSuspended } from "./account-suspensions";
 import { publicDisplayName } from "./public-identity";
 import { Prisma } from "@prisma/client";
 import { prisma } from "./prisma";
@@ -200,6 +201,7 @@ export function refreshAnnouncementNames(text: string, names: string[]) {
 }
 
 async function sendTelegramMessage(delivery: ClaimedDelivery): Promise<TelegramDeliveryResult> {
+  if (isAccountSuspended(delivery.chatId)) return { kind: "permanent", error: "Account suspended" };
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const miniAppUrl = process.env.MINI_APP_URL;
   if (!token || !miniAppUrl) throw new Error("TELEGRAM_BOT_TOKEN and MINI_APP_URL are required");
@@ -296,6 +298,8 @@ export async function runPhraseHuntAnnouncementWorker(signal: AbortSignal) {
       if (now.getTime() >= nextScheduleCheck) {
         ensuredThrough = await ensureChallengesThrough(now, config.enabledAt, ensuredThrough);
         await queueEndedPhraseHuntAnnouncements(config.enabledAt, now);
+        const { queueGeographyChallengeAnnouncements } = await import("./geography-challenge-announcements");
+        await queueGeographyChallengeAnnouncements(now);
         nextScheduleCheck = now.getTime() + pollMs;
       }
       if (await processPhraseHuntAnnouncementDelivery(now)) {

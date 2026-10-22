@@ -1,3 +1,4 @@
+import type { GeoRaceType } from "./geo-race-config";
 export const COUNTRY_CHALLENGE_TIME_ZONE = "Asia/Tehran";
 const clock = new Intl.DateTimeFormat("en-CA", {
   timeZone: COUNTRY_CHALLENGE_TIME_ZONE,
@@ -13,15 +14,21 @@ function tehranOffset(now: Date, parts = tehranParts(now)) {
   return localTime - Math.floor(now.getTime() / 1000) * 1000;
 }
 
-export function countryChallengeWindow(now = new Date()) {
+// Preserve historical 09:00/21:00 country IDs; switch at 20:00 Tehran tonight.
+export const COUNTRY_SCHEDULE_CHANGE = Date.parse("2026-10-22T16:30:00.000Z");
+
+export function countryChallengeWindow(now = new Date(), gameType: GeoRaceType = "COUNTRY") {
   const p = tehranParts(now);
-  const localStartHour = p.hour >= 21 ? 21 : p.hour >= 9 ? 9 : -3;
+  const morning = gameType === "COUNTRY" && +now >= COUNTRY_SCHEDULE_CHANGE ? 8 : 9;
+  const evening = morning + 12;
+  const localStartHour = p.hour >= evening ? evening : p.hour >= morning ? morning : evening - 24;
   const start = new Date(Date.UTC(p.year, p.month - 1, p.day, localStartHour) - tehranOffset(now, p));
-  const end = new Date(start.getTime() + 12 * 60 * 60 * 1000);
+  const naturalEnd = start.getTime() + 12 * 60 * 60 * 1000;
+  const end = new Date(gameType === "COUNTRY" && +now < COUNTRY_SCHEDULE_CHANGE ? Math.min(naturalEnd, COUNTRY_SCHEDULE_CHANGE) : naturalEnd);
   return { id: start.toISOString(), startsAt: start, endsAt: end };
 }
 
-export function countryChallengeTimes(startsAt: Date | string, now = new Date()) {
+export function countryChallengeTimes(startsAt: Date | string, now = new Date(), endsAt?: Date | string) {
   const start = new Date(startsAt);
-  return { id: start.toISOString(), startsAt: start, endsAt: new Date(+start + 12 * 60 * 60 * 1000), timeZone: COUNTRY_CHALLENGE_TIME_ZONE, serverNow: now };
+  return { id: start.toISOString(), startsAt: start, endsAt: endsAt ? new Date(endsAt) : new Date(+start + 12 * 60 * 60 * 1000), timeZone: COUNTRY_CHALLENGE_TIME_ZONE, serverNow: now };
 }

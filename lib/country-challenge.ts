@@ -11,14 +11,18 @@ type Tx = Prisma.TransactionClient;
 
 async function ensureChallenge(tx: Tx, now = new Date(), gameType: GeoRaceType = "COUNTRY") {
   await tx.$executeRaw`SELECT pg_advisory_xact_lock(728401, 901)`;
-  const window = countryChallengeWindow(now);
+  const window = countryChallengeWindow(now, gameType);
   const existing = await tx.countryChallenge.findUnique({ where: { gameType_startsAt: { gameType, startsAt: window.startsAt } } });
-  if (existing) return existing;
+  if (existing) return +existing.endsAt === +window.endsAt ? existing : tx.countryChallenge.update({ where: { id: existing.id }, data: { endsAt: window.endsAt } });
   const used = new Set((await tx.countryChallenge.findMany({ where: { gameType }, select: { targetId: true } })).map(x => x.targetId));
   const pool = datasetFor(gameType);
   const unseen = pool.filter(item => !used.has(item.id));
   const target = (unseen.length ? unseen : pool)[randomInt(unseen.length || pool.length)];
   return tx.countryChallenge.create({ data: { id: gameType === "COUNTRY" ? window.id : `${gameType}:${window.id}`, gameType, startsAt: window.startsAt, endsAt: window.endsAt, targetId: target.id } });
+}
+
+export async function ensureCountryChallengeAt(now: Date, gameType: GeoRaceType) {
+  return prisma.$transaction(tx => ensureChallenge(tx, now, gameType), { isolationLevel: Prisma.TransactionIsolationLevel.ReadCommitted });
 }
 
 async function readEntry(tx: Tx, challengeId: string, userId: string) {
@@ -34,7 +38,7 @@ function serialize(challenge: { id: string; startsAt: Date; endsAt: Date; target
   const reveal = ended || entry?.status === "WON" || entry?.status === "SURRENDERED";
   const target = findItem(geoRaceType(challenge.gameType), challenge.targetId);
   return {
-    challenge: { ...countryChallengeTimes(challenge.startsAt, now), id: challenge.id, gameType, endsAt: challenge.endsAt, ended, target: reveal && target ? publicItem(target, true) : null },
+    challenge: { ...countryChallengeTimes(challenge.startsAt, now, challenge.endsAt), id: challenge.id, gameType, endsAt: challenge.endsAt, ended, target: reveal && target ? publicItem(target, true) : null },
     entry: entry ? {
       id: entry.id,
       status: entry.status === "ACTIVE" && ended ? "EXPIRED" : entry.status,
@@ -78,7 +82,7 @@ export async function listCountryChallenges(userId: string, gameType: GeoRaceTyp
     return {
       challenges: challenges.map(challenge => {
         const entry = byChallenge.get(challenge.id);
-        return { ...countryChallengeTimes(challenge.startsAt, now), id: challenge.id, gameType, ended: now >= challenge.endsAt, entryStatus: entry?.status ?? null, guessCount: entry?.guessCount ?? 0, target: now >= challenge.endsAt ? findItem(geoRaceType(challenge.gameType), challenge.targetId)?.name ?? null : null };
+        return { ...countryChallengeTimes(challenge.startsAt, now, challenge.endsAt), id: challenge.id, gameType, ended: now >= challenge.endsAt, entryStatus: entry?.status ?? null, guessCount: entry?.guessCount ?? 0, target: now >= challenge.endsAt ? findItem(geoRaceType(challenge.gameType), challenge.targetId)?.name ?? null : null };
       }),
       currentId: current.id,
     };
@@ -167,6 +171,6 @@ export async function countryChallengeLeaderboard(userId: string, challengeId?: 
     }));
     const userIn = rows.find(row => row.isMe);
     const target = ended ? findItem(geoRaceType(challenge.gameType), challenge.targetId)?.name ?? null : null;
-    return { rows: rows.slice(0, 50), me: userIn || null, challenge: { ...countryChallengeTimes(challenge.startsAt, now), id: challenge.id, gameType, ended, target }, challenges: (await tx.countryChallenge.findMany({ where: { gameType }, orderBy: { startsAt: "desc" }, take: 30 })).map(c => ({ ...countryChallengeTimes(c.startsAt, now), id: c.id, gameType, ended: now >= c.endsAt, target: now >= c.endsAt ? findItem(gameType, c.targetId)?.name ?? null : null })) };
+    return { rows: rows.slice(0, 50), me: userIn || null, challenge: { ...countryChallengeTimes(challenge.startsAt, now, challenge.endsAt), id: challenge.id, gameType, ended, target }, challenges: (await tx.countryChallenge.findMany({ where: { gameType }, orderBy: { startsAt: "desc" }, take: 30 })).map(c => ({ ...countryChallengeTimes(c.startsAt, now, c.endsAt), id: c.id, gameType, ended: now >= c.endsAt, target: now >= c.endsAt ? findItem(gameType, c.targetId)?.name ?? null : null })) };
   }, { isolationLevel: Prisma.TransactionIsolationLevel.ReadCommitted });
 }

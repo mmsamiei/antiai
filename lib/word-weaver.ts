@@ -35,14 +35,14 @@ export async function getWordWeaverState(userId: string) {
   const [mine, submittedEntries] = round ? await Promise.all([
     prisma.wordWeaverEntry.findUnique({ where: { roundId_userId: { roundId: round.id, userId } }, select: { text: true, status: true } }),
     ["WRITING", "JUDGING"].includes(round.status)
-      ? prisma.wordWeaverEntry.findMany({ where: { roundId: round.id }, orderBy: [{ submittedAt: "asc" }, { id: "asc" }], select: { id: true, text: true, botPersonaId: true, user: { select: { id: true, firstName: true, lastName: true, username: true, photoUrl: true } } } })
+      ? prisma.wordWeaverEntry.findMany({ where: { roundId: round.id }, orderBy: [{ submittedAt: "asc" }, { id: "asc" }], select: { id: true, text: true, botPersonaId: true, user: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } } } })
       : [],
   ]) : [null, []];
   const mission = round ? getWordWeaverMission(round.missionId) : null;
   const visibleResult = round?.status === "RESULTS" ? round : null;
   let winner = null;
   if (visibleResult?.winningEntryId) {
-    const entry = await prisma.wordWeaverEntry.findUnique({ where: { id: visibleResult.winningEntryId }, include: { user: { select: { id: true, firstName: true, lastName: true, username: true, photoUrl: true } } } });
+    const entry = await prisma.wordWeaverEntry.findUnique({ where: { id: visibleResult.winningEntryId }, include: { user: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } } } });
     if (entry) winner = wordWeaverActor(entry);
   }
   let judgedCount = 0;
@@ -161,7 +161,7 @@ export async function getWordWeaverResults(roundId: unknown, userId: string) {
   if (typeof roundId !== "string" || !roundId || roundId.length > 64) throw new Error("RESULT_NOT_READY");
   const round = await prisma.wordWeaverRound.findFirst({ where: { id: roundId, status: { in: ["RESULTS", "CLOSED"] }, resolvedAt: { not: null } }, select: { id: true, winnerUserId: true, winningEntryId: true } });
   if (!round) throw new Error("RESULT_NOT_READY");
-  const include = { user: { select: { id: true, firstName: true, lastName: true, username: true, photoUrl: true } } } as const;
+  const include = { user: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } } } as const;
   const [leaders, mine, winner] = await Promise.all([
     prisma.wordWeaverEntry.findMany({
       where: { roundId: round.id, status: "SCORED", finalScore: { not: null }, ...(round.winningEntryId ? { id: { not: round.winningEntryId } } : {}) },

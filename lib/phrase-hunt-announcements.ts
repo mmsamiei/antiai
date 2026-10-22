@@ -1,3 +1,4 @@
+import { publicDisplayName } from "./public-identity";
 import { Prisma } from "@prisma/client";
 import { prisma } from "./prisma";
 import { currentPhraseChallenge } from "./phrase-hunt-challenge";
@@ -16,6 +17,7 @@ export type PhraseHuntWinnerCandidate = {
   id: string;
   userId: string;
   username: string | null;
+  showUsername?: boolean;
   firstName: string | null;
   lastName: string | null;
   phrase: string;
@@ -40,7 +42,7 @@ export function selectTopPhraseHuntWinners(candidates: PhraseHuntWinnerCandidate
     .slice(0, 3)
     .map((winner) => ({
       ...winner,
-      displayName: winner.username ? `@${winner.username}` : [winner.firstName, winner.lastName].filter(Boolean).join(" ") || "بازیکن ناشناس",
+      displayName: publicDisplayName(winner, true),
     }));
 }
 
@@ -120,7 +122,7 @@ async function buildAnnouncement(challenge: { id: string; targetId: string }) {
   if (!target) throw new Error(`Unknown PHRASE_HUNT target: ${challenge.targetId}`);
 
   const candidates = await prisma.$queryRaw<PhraseHuntWinnerCandidate[]>(Prisma.sql`
-    SELECT DISTINCT ON (g."userId") pg."id", g."userId", u."username", u."firstName", u."lastName", pg."phrase",
+    SELECT DISTINCT ON (g."userId") pg."id", g."userId", u."username", u."showUsername", u."firstName", u."lastName", pg."phrase",
       pg."score"::double precision AS "score", pg."createdAt"
     FROM "PhraseHuntGuess" pg
     JOIN "GameSession" g ON g."id" = pg."gameId"
@@ -134,7 +136,7 @@ async function buildAnnouncement(challenge: { id: string; targetId: string }) {
     : challenge.id === "2026-10-18T19:23:00.000Z" ? "🔎 پاسخ چالش صبح، یک واژه است."
     : challenge.id === "2026-10-19T06:30:00.000Z" ? "🔎 پی‌نوشت ۱: عبارت چالش امشب دو واژه است.\n\n💛 پی‌نوشت ۲: ممنونیم که بازی را به دیگران معرفی می‌کنید! اگر از معناجو لذت می‌برید، خوشحال می‌شویم آن را به دوستان و آشنایانتان هم معرفی کنید."
     : "";
-  return renderPhraseHuntAnnouncement(target.phrase, winners, phraseVisibility, postscript);
+  return { messageText: renderPhraseHuntAnnouncement(target.phrase, winners, phraseVisibility, postscript), winnerUserIds: winners.map(w => w.userId) };
 }
 
 export async function queueEndedPhraseHuntAnnouncements(enabledAt: Date, now: Date) {
@@ -145,11 +147,11 @@ export async function queueEndedPhraseHuntAnnouncements(enabledAt: Date, now: Da
   });
 
   for (const challenge of ended) {
-    const messageText = await buildAnnouncement(challenge);
+    const content = await buildAnnouncement(challenge);
     try {
       await prisma.$transaction(async (tx) => {
         const users = await tx.user.findMany({ select: { id: true } });
-        const announcement = await tx.phraseHuntAnnouncement.create({ data: { challengeId: challenge.id, messageText } });
+        const announcement = await tx.phraseHuntAnnouncement.create({ data: { challengeId: challenge.id, ...content } });
         if (users.length) {
           await tx.phraseHuntAnnouncementDelivery.createMany({
             data: users.map(({ id }) => ({ announcementId: announcement.id, chatId: id })),
@@ -166,7 +168,7 @@ export async function queueEndedPhraseHuntAnnouncements(enabledAt: Date, now: Da
   }
 }
 
-type ClaimedDelivery = { id: string; announcementId: string; chatId: string; attempts: number; messageText: string };
+type ClaimedDelivery = { id: string; announcementId: string; chatId: string; attempts: number; messageText: string; winnerUserIds?: string[] };
 
 async function claimDelivery(now: Date): Promise<ClaimedDelivery | null> {
   const leaseUntil = new Date(now.getTime() + deliveryLeaseMs);
@@ -185,9 +187,16 @@ async function claimDelivery(now: Date): Promise<ClaimedDelivery | null> {
     FROM candidate c
     JOIN "PhraseHuntAnnouncement" a ON a."id" = c."announcementId"
     WHERE d."id" = c."id"
-    RETURNING d."id", d."announcementId", d."chatId", d."attempts", a."messageText"
+    RETURNING d."id", d."announcementId", d."chatId", d."attempts", a."messageText", a."winnerUserIds"
   `);
   return rows[0] || null;
+}
+
+export function refreshAnnouncementNames(text: string, names: string[]) {
+  return text.replace(/^([🥇🥈🥉]) <b>[^\n]*?<\/b> —/gmu, (_row, medal: string) => {
+    const index = ["🥇", "🥈", "🥉"].indexOf(medal);
+    return `${medal} <b>${escapeTelegramHtml(names[index] || "بازیکن ناشناس")}</b> —`;
+  });
 }
 
 async function sendTelegramMessage(delivery: ClaimedDelivery): Promise<TelegramDeliveryResult> {
@@ -196,12 +205,18 @@ async function sendTelegramMessage(delivery: ClaimedDelivery): Promise<TelegramD
   if (!token || !miniAppUrl) throw new Error("TELEGRAM_BOT_TOKEN and MINI_APP_URL are required");
 
   try {
+    let messageText = delivery.messageText;
+    if (delivery.winnerUserIds?.length) {
+      const users = await prisma.user.findMany({ where: { id: { in: delivery.winnerUserIds } } });
+      const names = delivery.winnerUserIds.map(id => publicDisplayName(users.find(u => u.id === id), true));
+      messageText = refreshAnnouncementNames(messageText, names);
+    }
     const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         chat_id: delivery.chatId,
-        text: delivery.messageText,
+        text: messageText,
         parse_mode: "HTML",
         reply_markup: { inline_keyboard: [[{ text: "🎮 ورود به چالش تازه", web_app: { url: miniAppUrl } }]] },
       }),

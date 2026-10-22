@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
 import { createSessionValue, SESSION_COOKIE } from "@/lib/auth";
+import { isAccountSuspended } from "@/lib/account-suspensions";
 import { validateTelegramInitData } from "@/lib/telegram";
 
 const input = z.object({ initData: z.string().min(1).max(16_384) });
@@ -23,6 +24,7 @@ export async function POST(request: Request) {
     return reply("اطلاعات ورود تلگرام معتبر نیست یا مهلت آن گذشته است؛ بازی را از داخل تلگرام دوباره باز کن", "INVALID_TELEGRAM_SESSION", 401);
   }
   try {
+    if (isAccountSuspended(String(user.id))) return reply("دسترسی این حساب موقتاً تعلیق شده است", "ACCOUNT_SUSPENDED", 403);
     await prisma.user.upsert({
       where: { id: String(user.id) },
       create: { id: String(user.id), firstName: user.first_name, lastName: user.last_name, username: user.username, photoUrl: user.photo_url },

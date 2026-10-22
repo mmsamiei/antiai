@@ -4,8 +4,9 @@ import { sessionRequest } from "./client-session";
 // SHA-256: 124bdff7ba3fe86c8ba5143467afec21e020405e74abdb92cfdda6c0ee3b5908.
 export const TELEGRAM_SDK_PATH = "/vendor/telegram-web-app.124bdff7ba3f.js";
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
-export type TelegramLoginErrorCode = "SDK_LOAD_FAILED" | "MISSING_LAUNCH_DATA" | "INVALID_SESSION" | "NETWORK_ERROR" | "SERVER_ERROR";
+export type TelegramLoginErrorCode = "ACCOUNT_SUSPENDED" | "SDK_LOAD_FAILED" | "MISSING_LAUNCH_DATA" | "INVALID_SESSION" | "NETWORK_ERROR" | "SERVER_ERROR";
 const messages: Record<TelegramLoginErrorCode, string> = {
+  ACCOUNT_SUSPENDED: "دسترسی این حساب موقتاً تعلیق شده است.",
   SDK_LOAD_FAILED: "فایل موردنیاز بازی دریافت نشد. اتصال اینترنتت را بررسی کن و دوباره تلاش کن.",
   MISSING_LAUNCH_DATA: "اطلاعات ورود تلگرام دریافت نشد. بازی را ببند و از دکمهٔ بازی داخل تلگرام دوباره باز کن.",
   INVALID_SESSION: "اطلاعات ورود تلگرام معتبر نیست یا مهلت آن گذشته است. بازی را ببند و از داخل تلگرام دوباره باز کن.",
@@ -102,6 +103,7 @@ export async function authenticateTelegram(signal: AbortSignal): Promise<{ user:
       ...(initData ? { body: JSON.stringify({ initData }) } : {}),
     }));
     const data = await response.json().catch(() => null);
+    if (!response.ok && data?.code === "ACCOUNT_SUSPENDED") throw new TelegramLoginError("ACCOUNT_SUSPENDED");
     if (!response.ok) throw new TelegramLoginError(response.status === 401 || response.status === 400 ? "INVALID_SESSION" : "SERVER_ERROR");
     if (!data?.user?.id || typeof data.session !== "string" || !data.session) throw new TelegramLoginError("SERVER_ERROR");
     return data;

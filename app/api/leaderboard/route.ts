@@ -1,3 +1,4 @@
+import { publicDisplayName } from "@/lib/public-identity";
 import { NextResponse } from "next/server";
 import { Prisma } from "@prisma/client";
 import { currentUserId } from "@/lib/auth";
@@ -6,6 +7,7 @@ import { parseLeaderboardGameType } from "@/lib/game-service";
 import { phraseWeekStart } from "@/lib/phrase-hunt-schedule";
 import { phraseChallengeLeaderboard } from "@/lib/phrase-hunt-leaderboard";
 import { readSemantrisState } from "@/lib/semantris";
+import { countryChallengeLeaderboard } from "@/lib/country-challenge";
 
 export const dynamic = "force-dynamic";
 
@@ -16,15 +18,16 @@ function startOfWeekUtc() {
   return new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - daysSinceSaturday));
 }
 
-function displayName(user: { id: string; username: string | null; firstName: string | null; lastName: string | null; photoUrl: string | null } | undefined) {
-  return user?.username ? `@${user.username}` : [user?.firstName, user?.lastName].filter(Boolean).join(" ") || "بازیکن ناشناس";
+function displayName(user: { id: string; username: string | null; firstName: string | null; lastName: string | null; photoUrl: string | null; showUsername?: boolean } | undefined) {
+  return publicDisplayName(user, true);
 }
 
 export async function GET(request: Request) {
   const userId = currentUserId();
   if (!userId) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   const params = new URL(request.url).searchParams;
-  const period = params.get("period") === "all" ? "all" : "week";
+  const requestedPeriod = params.get("period");
+  const period = requestedPeriod === "all" ? "all" : requestedPeriod === "challenge" ? "challenge" : "week";
   const mode = params.get("mode") === "skill" ? "skill" : "effort";
   const requestedType = params.get("type");
   const type = requestedType === "ALL" || !requestedType ? null : parseLeaderboardGameType(requestedType);
@@ -36,6 +39,13 @@ export async function GET(request: Request) {
 
   if (type === "PHRASE_HUNT" && params.get("period") === "challenge") {
     const result = await phraseChallengeLeaderboard(userId, params.get("challengeId"));
+    return NextResponse.json(result || { error: "Challenge not found" }, {
+      status: result ? 200 : 404, headers: { "Cache-Control": "no-store" },
+    });
+  }
+
+  if (type === "COUNTRY" && period === "challenge") {
+    const result = await countryChallengeLeaderboard(userId, params.get("challengeId"));
     return NextResponse.json(result || { error: "Challenge not found" }, {
       status: result ? 200 : 404, headers: { "Cache-Control": "no-store" },
     });

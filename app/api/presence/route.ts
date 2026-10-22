@@ -12,15 +12,23 @@ export async function POST(request: Request) {
   if (!userId) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const body = await request.json().catch(() => ({}));
-  const isPlaying = body?.isPlaying === true;
+  const clientId = typeof body?.clientId === "string" && /^[a-zA-Z0-9-]{8,64}$/.test(body.clientId) ? body.clientId : null;
+  const context = body?.context === "GAME" ? "GAME" : "MENU";
+  if (!clientId) return NextResponse.json({ error: "شناسهٔ حضور معتبر نیست" }, { status: 400 });
+  const isPlaying = context === "GAME";
   const now = new Date();
   const onlineSince = new Date(now.getTime() - ONLINE_WINDOW_MS);
 
-  const [, onlineCount] = await prisma.$transaction([
+  const [, , onlineCount] = await prisma.$transaction([
     prisma.onlinePresence.upsert({
       where: { userId },
       create: { userId, isPlaying, lastSeenAt: now },
       update: { isPlaying, lastSeenAt: now }
+    }),
+    prisma.appPresence.upsert({
+      where: { userId_clientId: { userId, clientId } },
+      create: { userId, clientId, context, lastSeenAt: now },
+      update: { context, lastSeenAt: now },
     }),
     prisma.onlinePresence.count({
       where: { lastSeenAt: { gte: onlineSince } }

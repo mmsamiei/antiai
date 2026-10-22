@@ -22,6 +22,7 @@ vi.mock("./prisma", () => ({ prisma: {
   $transaction: mocks.transaction,
 } }));
 import {
+  refreshAnnouncementNames,
   classifyTelegramResponse,
   escapeTelegramHtml,
   phraseHuntChallengeStartsToEnsure,
@@ -161,6 +162,17 @@ describe("durable Telegram delivery processing", () => {
   });
   afterEach(() => { vi.unstubAllGlobals(); vi.unstubAllEnvs(); });
 
+  it("refreshes queued winner identities just before sending without altering scores or guesses", async () => {
+    mocks.queryRaw.mockResolvedValue([{ id: "delivery-1", announcementId: "announcement-1", chatId: "telegram-1", attempts: 1, messageText: "🥇 <b>@old_handle</b> — «باران» <code>۹۵ از ۱۰۰</code>", winnerUserIds: ["winner"] }]);
+    mocks.findUsers.mockResolvedValue([{ id: "winner", username: "old_handle", showUsername: false, firstName: "سارا", lastName: "آزمایشی" }]);
+    const fetchMock = vi.fn().mockResolvedValue({ status: 200, json: async () => ({ ok: true }) });
+    vi.stubGlobal("fetch", fetchMock);
+    await processPhraseHuntAnnouncementDelivery(new Date());
+    const text = JSON.parse(fetchMock.mock.calls[0][1].body).text;
+    expect(text).toContain("<b>سارا آزمایشی</b>"); expect(text).not.toContain("old_handle");
+    expect(text).toContain("«باران» <code>۹۵ از ۱۰۰</code>");
+  });
+
   it("marks a delivered message sent and completes the announcement after its last recipient", async () => {
     const fetchMock = vi.fn().mockResolvedValue({ status: 200, json: async () => ({ ok: true }) });
     vi.stubGlobal("fetch", fetchMock);
@@ -222,5 +234,13 @@ describe("announcement outbox creation", () => {
       { announcementId: "announcement-1", chatId: "telegram-2" },
     ] });
     expect(mocks.createAnnouncement.mock.calls[0][0].data.messageText).toContain("هوای پاک");
+  });
+});
+
+describe("privacy in result formatting", () => {
+  it("uses real names for hidden usernames and safely escapes replacements", () => {
+    const winners = selectTopPhraseHuntWinners([{ ...candidate("one", "one", 90, "2026-10-16T12:00:00Z"), username: "hidden", showUsername: false, firstName: "سارا", lastName: null }]);
+    expect(renderPhraseHuntAnnouncement("پگاه", winners)).not.toContain("hidden");
+    expect(refreshAnnouncementNames("🥇 <b>@old</b> — «حدس»", ["سارا <آزمایش>"])).toBe("🥇 <b>سارا &lt;آزمایش&gt;</b> — «حدس»");
   });
 });

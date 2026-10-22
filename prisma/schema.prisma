@@ -59,9 +59,20 @@ model User {
   photoUrl                         String?
   phraseHuntOnboardedAt            DateTime?
   wordWeaverOnboardedAt            DateTime?
+  countryRacesAsOne               CountryRace[] @relation("RaceOne")
+  countryRacesAsTwo               CountryRace[] @relation("RaceTwo")
+  countryRaceGuesses              CountryRaceGuess[]
+  countryChallengeEntries         CountryChallengeEntry[]
+  countryChallengeGuesses         CountryChallengeGuess[]
+  countryMatchSearches            CountryMatchSearch[]
+  countryMatchOffersSent          CountryMatchOffer[] @relation("CountryMatchSender")
+  countryMatchOffersReceived      CountryMatchOffer[] @relation("CountryMatchRecipient")
+  countryMatchState               CountryMatchState?
+  appPresence                     AppPresence[]
   games                            GameSession[]
   presence                         OnlinePresence?
   acceptsGameInvites               Boolean @default(true)
+  showUsername                     Boolean @default(true)
   sentDuelInvites                  DuelInvite[] @relation("InviteSender")
   receivedDuelInvites              DuelInvite[] @relation("InviteRecipient")
   letterDuelConnectionsAsPlayerOne LetterDuelConnection[] @relation("LetterDuelPlayerOne")
@@ -81,6 +92,102 @@ model OnlinePresence {
 
   @@index([isPlaying, lastSeenAt])
   @@index([lastSeenAt])
+}
+
+model AppPresence {
+  userId     String
+  clientId   String
+  context    String   @default("MENU")
+  lastSeenAt DateTime @default(now())
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@id([userId, clientId])
+  @@index([lastSeenAt, context])
+}
+
+model CountryChallenge {
+  id        String @id
+  startsAt  DateTime @unique
+  endsAt    DateTime
+  targetId  String
+  createdAt DateTime @default(now())
+  entries   CountryChallengeEntry[]
+  @@index([startsAt])
+}
+
+model CountryChallengeEntry {
+  id          String @id @default(cuid())
+  challengeId String
+  userId      String
+  status      String @default("ACTIVE")
+  guessCount  Int @default(0)
+  bestRank    Int?
+  bestRankAt  DateTime?
+  solvedAt    DateTime?
+  finishedAt  DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  challenge   CountryChallenge @relation(fields: [challengeId], references: [id], onDelete: Cascade)
+  user        User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  guesses     CountryChallengeGuess[]
+  @@unique([challengeId, userId])
+  @@index([challengeId, status, guessCount, solvedAt])
+  @@index([userId, createdAt])
+}
+
+model CountryChallengeGuess {
+  id        String @id @default(cuid())
+  entryId   String
+  userId    String
+  itemId    String
+  rank      Int
+  createdAt DateTime @default(now())
+  entry     CountryChallengeEntry @relation(fields: [entryId], references: [id], onDelete: Cascade)
+  user      User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@unique([entryId, itemId])
+  @@index([entryId, rank, createdAt])
+}
+
+model CountryMatchSearch {
+  id          String @id @default(cuid())
+  userId      String
+  status      String @default("ACTIVE")
+  createdAt   DateTime @default(now())
+  lastSeenAt  DateTime @default(now())
+  matchedRaceId String? @unique
+  user        User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  offers      CountryMatchOffer[]
+  matchedRace CountryRace? @relation(fields: [matchedRaceId], references: [id], onDelete: SetNull)
+  @@index([status, createdAt])
+  @@index([userId, status])
+}
+
+model CountryMatchOffer {
+  id          String @id @default(cuid())
+  searchId    String
+  senderId    String
+  recipientId String
+  status      String @default("PENDING")
+  createdAt   DateTime @default(now())
+  expiresAt   DateTime
+  respondedAt DateTime?
+  raceId      String? @unique
+  search      CountryMatchSearch @relation(fields: [searchId], references: [id], onDelete: Cascade)
+  sender      User @relation("CountryMatchSender", fields: [senderId], references: [id], onDelete: Cascade)
+  recipient   User @relation("CountryMatchRecipient", fields: [recipientId], references: [id], onDelete: Cascade)
+  race        CountryRace? @relation(fields: [raceId], references: [id], onDelete: SetNull)
+  @@unique([searchId, recipientId])
+  @@index([status, expiresAt])
+  @@index([recipientId, status, createdAt])
+}
+
+model CountryMatchState {
+  userId        String @id
+  cooldownUntil DateTime?
+  lastOfferedAt DateTime?
+  updatedAt     DateTime @updatedAt
+  user          User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@index([cooldownUntil])
+  @@index([lastOfferedAt])
 }
 
 model GameSession {
@@ -144,6 +251,7 @@ model PhraseHuntAnnouncement {
   id          String                           @id @default(cuid())
   challengeId String                           @unique
   messageText String
+  winnerUserIds String[] @default([])
   status      PhraseHuntAnnouncementStatus     @default(PENDING)
   createdAt   DateTime                         @default(now())
   completedAt DateTime?
@@ -402,8 +510,49 @@ model WordWeaverBotTurn {
   @@index([roundId, status, leaseUntil])
 }
 
+model CountryRace {
+  gameType GameType @default(COUNTRY)
+  id String @id @default(cuid())
+  status String @default("WAITING")
+  playerOneId String
+  playerTwoId String
+  targetId String
+  createdAt DateTime @default(now())
+  startedAt DateTime?
+  deadline DateTime?
+  endedAt DateTime?
+  winnerUserId String?
+  endReason String?
+  playerOneHeartbeat DateTime @default(now())
+  playerTwoHeartbeat DateTime @default(now())
+  playerOne User @relation("RaceOne", fields: [playerOneId], references: [id], onDelete: Cascade)
+  playerTwo User @relation("RaceTwo", fields: [playerTwoId], references: [id], onDelete: Cascade)
+  guesses CountryRaceGuess[]
+  invite DuelInvite?
+  matchOffer CountryMatchOffer?
+  matchedSearch CountryMatchSearch?
+  @@index([playerOneId, status])
+  @@index([playerTwoId, status])
+}
+
+model CountryRaceGuess {
+  id String @id @default(cuid())
+  raceId String
+  userId String
+  itemId String
+  rank Int
+  createdAt DateTime @default(now())
+  race CountryRace @relation(fields: [raceId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@unique([raceId, userId, itemId])
+  @@index([raceId, userId, rank])
+}
+
 model DuelInvite {
   id String @id @default(cuid())
+  gameKind String @default("LETTER_DUEL")
+  countryRaceId String? @unique
+  countryRace CountryRace? @relation(fields: [countryRaceId], references: [id])
   senderId String
   recipientId String
   status String @default("PENDING")

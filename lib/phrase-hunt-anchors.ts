@@ -1,19 +1,28 @@
 /** Manually calibrated, challenge-specific examples shown to JEV as score anchors. */
 export const phraseHuntAnchors: Record<string, { guess: string; score_out_of_100: number }[]> = {
-  "2026-10-22T06:30:00.000Z": [
+  "2026-10-21T18:30:00.000Z": [
     { guess: "پگاه", score_out_of_100: 100 },
     { guess: "سپیده‌دم", score_out_of_100: 97 },
     { guess: "سحرگاه", score_out_of_100: 95 },
     { guess: "بامداد", score_out_of_100: 93 },
     { guess: "صبح زود", score_out_of_100: 90 },
     { guess: "سپیده", score_out_of_100: 87 },
-    { guess: "آغاز صبح", score_out_of_100: 85 },
     { guess: "طلوع خورشید", score_out_of_100: 80 },
     { guess: "صبح", score_out_of_100: 75 },
-    { guess: "روشنایی", score_out_of_100: 45 },
     { guess: "نیمروز", score_out_of_100: 30 },
-    { guess: "غروب", score_out_of_100: 20 },
     { guess: "شامگاه", score_out_of_100: 15 },
+  ],
+  "2026-10-22T06:30:00.000Z": [
+    { guess: "آبگینه", score_out_of_100: 100 },
+    { guess: "شیشه", score_out_of_100: 98 },
+    { guess: "بلور", score_out_of_100: 96 },
+    { guess: "ظرف شیشه‌ای", score_out_of_100: 92 },
+    { guess: "جام شیشه‌ای", score_out_of_100: 91 },
+    { guess: "آینه", score_out_of_100: 88 },
+    { guess: "شیشه‌گری", score_out_of_100: 75 },
+    { guess: "جام", score_out_of_100: 70 },
+    { guess: "شفافیت", score_out_of_100: 45 },
+    { guess: "سنگ", score_out_of_100: 15 },
   ],
   "2026-10-20T18:55:00.000Z": [
     { guess: "رخنه", score_out_of_100: 100 },

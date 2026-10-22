@@ -1,10 +1,10 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { sessionRequest } from "@/lib/client-session";
-import { Invitation, InvitationState, InviteRemaining, playerName, PlayerAvatar } from "./players";
+import { Invitation, InviteGame, inviteGameName, InvitationState, InviteRemaining, playerName, PlayerAvatar } from "./players";
 const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
 export function useDuelInvitations({ userId, onJoin, beforeAccept, onError }: {
-  userId: string | null; onJoin: (connectionId: string, inviteId: string) => Promise<void>;
+  userId: string | null; onJoin: (connectionId: string, inviteId: string, gameKind: InviteGame) => Promise<void>;
   beforeAccept: (invite: Invitation) => Promise<boolean>; onError: (message: string) => void;
 }) {
   const [state, setState] = useState<InvitationState | null>(null);
@@ -20,10 +20,10 @@ export function useDuelInvitations({ userId, onJoin, beforeAccept, onError }: {
     if (version < appliedSequence.current) return;
     appliedSequence.current = version;
     setState(data);
-    const accepted = data.invites.find(i => i.status === "ACCEPTED" && i.connectionId && i.connection?.status !== "ENDED" && !joined.current.has(i.id));
+    const accepted = data.invites.find(i => i.status === "ACCEPTED" && (i.connectionId || i.countryRaceId) && (i.countryRace || i.connection)?.status !== "ENDED" && !joined.current.has(i.id));
     if (!accepted || joining.current) return;
     joining.current = true;
-    try { await latest.current.onJoin(accepted.connectionId!, accepted.id); joined.current.add(accepted.id); }
+    try { await latest.current.onJoin((accepted.countryRaceId || accepted.connectionId)!, accepted.id, accepted.gameKind || "LETTER_DUEL"); joined.current.add(accepted.id); }
     catch (e) { latest.current.onError(e instanceof Error ? e.message : "ورود به بازی انجام نشد"); }
     finally { joining.current = false; }
   }, []);
@@ -69,11 +69,11 @@ export function InvitationBanner({ me, state, busy, action }: { me: string; stat
   if (!invite) {
     const outgoing = state.invites.find(i => i.senderId === me && i.status === "PENDING");
     if (!outgoing) return null;
-    return <aside className="outgoing-invitation" aria-live="polite"><span>در انتظار پاسخ {playerName(outgoing.recipient)}<InviteRemaining invite={outgoing} serverNow={state.serverNow}/></span><button className="secondary" disabled={busy} onClick={() => void action("cancel", { id: outgoing.id })}>لغو دعوت</button></aside>;
+    return <aside className="outgoing-invitation" aria-live="polite"><span>{inviteGameName(outgoing.gameKind)}؛ در انتظار پاسخ {playerName(outgoing.recipient)}<InviteRemaining invite={outgoing} serverNow={state.serverNow}/></span><button className="secondary" disabled={busy} onClick={() => void action("cancel", { id: outgoing.id })}>لغو دعوت</button></aside>;
   }
-  return <aside className="invitation-banner" role="region" aria-label="دعوت به دوحرف" aria-live="polite">
+  return <aside className="invitation-banner" role="region" aria-label="دعوت به بازی" aria-live="polite">
     <button className="invite-dismiss" aria-label="بستن اعلان" onClick={() => setDismissed(s => new Set([...s, invite.id]))}>×</button>
-    <div className="player-identity"><PlayerAvatar player={invite.sender} online/><div><b>{playerName(invite.sender)}</b><p>تو را به دوحرف دعوت کرده</p><InviteRemaining invite={invite} serverNow={state.serverNow}/></div></div>
+    <div className="player-identity"><PlayerAvatar player={invite.sender} online/><div><b>{playerName(invite.sender)}</b><p>تو را به {inviteGameName(invite.gameKind)} دعوت کرده</p>{invite.gameKind === "COUNTRY_RACE" && <small>یک کشور مشترک، حداکثر ۲۰۰ ثانیه</small>}{invite.gameKind === "CITY_RACE" && <small>یک شهر مشترک، حداکثر ۵ دقیقه</small>}<InviteRemaining invite={invite} serverNow={state.serverNow}/></div></div>
     <div className="invite-actions"><button className="primary" disabled={busy} onClick={() => void action("accept", { id: invite.id })}>قبول و رفتن به بازی</button><button className="secondary" disabled={busy} onClick={() => void action("reject", { id: invite.id })}>رد</button></div>
   </aside>;
 }

@@ -1,4 +1,6 @@
 import crypto from "crypto";
+import { publicDisplayName, publicUsername } from "./public-identity";
+import { countryRaceBusy } from "./country-race-state";
 import { readFileSync } from "fs";
 import { join } from "path";
 import { prisma } from "./prisma";
@@ -29,8 +31,8 @@ export function validateLetterWord(raw: string, letters: string[]) {
 export function duelWinRate(wins: number, total: number) { return total ? wins / total : 0; }
 export function isLocalDuelWord(raw: string) { return localWords.has(normalizePersian(raw)); }
 
-function userPublic(user: { id: string; firstName: string | null; lastName: string | null; username: string | null; photoUrl: string | null } | null) {
-  return user ? { id: user.id, name: [user.firstName, user.lastName].filter(Boolean).join(" ") || user.username || "بازیکن", username: user.username, photoUrl: user.photoUrl } : null;
+function userPublic(user: { id: string; firstName: string | null; lastName: string | null; username: string | null; showUsername?: boolean; photoUrl: string | null } | null) {
+  return user ? { id: user.id, name: publicDisplayName(user), username: publicUsername(user), photoUrl: user.photoUrl } : null;
 }
 async function activeConnection(userId: string) {
   return prisma.letterDuelConnection.findFirst({ where: { status: { in: ["WAITING", "ACTIVE"] }, OR: [{ playerOneId: userId }, { playerTwoId: userId }] }, orderBy: { createdAt: "desc" } });
@@ -130,6 +132,7 @@ export async function createPrivateDuel(userId: string) {
   return inviteTransaction(async tx => {
     await lockPlayers(tx, [userId]);
     await reconcileInvites(tx, userId);
+    if (await countryRaceBusy(tx, [userId])) throw new Error("ROOM_UNAVAILABLE");
     const existing = await tx.letterDuelConnection.findFirst({ where: { status: { in: ["WAITING", "ACTIVE"] }, OR: [{ playerOneId: userId }, { playerTwoId: userId }] } });
     if (existing) return existing;
     return tx.letterDuelConnection.create({ data: { mode: "PRIVATE", playerOneId: userId, inviteToken: crypto.randomBytes(18).toString("base64url") } });
@@ -140,7 +143,9 @@ export async function joinPrivateDuel(userId: string, token: string) {
     const room = await tx.letterDuelConnection.findUnique({ where: { inviteToken: token } });
     if (!room) throw new Error("ROOM_UNAVAILABLE");
     await lockPlayers(tx, [userId, room.playerOneId]);
-    await reconcileInvites(tx, userId); await reconcileInvites(tx, room.playerOneId);
+    await reconcileInvites(tx, userId);
+    if (await countryRaceBusy(tx, [userId])) throw new Error("ROOM_UNAVAILABLE");
+    await reconcileInvites(tx, room.playerOneId);
     const existing = await tx.letterDuelConnection.findFirst({ where: { status: { in: ["WAITING", "ACTIVE"] }, OR: [{ playerOneId: userId }, { playerTwoId: userId }] } });
     if (existing) return existing;
     if (room.status !== "WAITING" || room.playerTwoId || Date.now() - room.playerOneHeartbeat.getTime() > RECONNECT_MS) throw new Error("ROOM_UNAVAILABLE");
@@ -155,6 +160,7 @@ export async function joinRandomDuel(userId: string) {
     const waiting = await tx.letterDuelConnection.findFirst({ where: { mode: "RANDOM", status: "WAITING", playerOneId: { not: userId }, playerTwoId: null, playerOneHeartbeat: { gte: cutoff } }, orderBy: { playerOneHeartbeat: "asc" } });
     await lockPlayers(tx, waiting ? [userId, waiting.playerOneId] : [userId]);
     await reconcileInvites(tx, userId);
+    if (await countryRaceBusy(tx, [userId])) throw new Error("ROOM_UNAVAILABLE");
     const existing = await tx.letterDuelConnection.findFirst({ where: { status: { in: ["WAITING", "ACTIVE"] }, OR: [{ playerOneId: userId }, { playerTwoId: userId }] } });
     if (existing) return tx.letterDuelConnection.update({ where: { id: existing.id }, data: existing.playerOneId === userId ? { playerOneHeartbeat: new Date() } : { playerTwoHeartbeat: new Date() } });
     if (!waiting) return tx.letterDuelConnection.create({ data: { mode: "RANDOM", playerOneId: userId } });
@@ -218,6 +224,7 @@ export async function rematchDuel(userId: string, connectionId: string, cancel =
     if (cancel) return tx.letterDuelConnection.update({ where: { id: room.id }, data: one ? { rematchOneAt: null } : { rematchTwoAt: null } });
     const ids = [room.playerOneId, room.playerTwoId!];
     await reconcileInvites(tx, ids[0]); await reconcileInvites(tx, ids[1]);
+    if (await countryRaceBusy(tx, ids)) throw new Error("REMATCH_UNAVAILABLE");
     if (await tx.letterDuelConnection.count({ where: { status: { in: ["WAITING", "ACTIVE"] }, OR: [{ playerOneId: { in: ids } }, { playerTwoId: { in: ids } }] } })) throw new Error("REMATCH_UNAVAILABLE");
     const now = new Date();
     const otherAt = one ? room.rematchTwoAt : room.rematchOneAt;

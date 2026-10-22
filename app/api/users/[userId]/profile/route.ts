@@ -1,3 +1,4 @@
+import { publicDisplayName, publicUsername } from "@/lib/public-identity";
 import { NextResponse } from "next/server";
 import { currentUserId } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
@@ -5,18 +6,6 @@ import { readSemantrisState } from "@/lib/semantris";
 import { buildPublicProfileStats } from "@/lib/public-profile";
 
 export const dynamic = "force-dynamic";
-
-function displayName(user: {
-  firstName: string | null;
-  lastName: string | null;
-  username: string | null;
-}) {
-  return (
-    [user.firstName, user.lastName].filter(Boolean).join(" ") ||
-    user.username ||
-    "بازیکن ناشناس"
-  );
-}
 
 export async function GET(
   _request: Request,
@@ -33,6 +22,7 @@ export async function GET(
       firstName: true,
       lastName: true,
       username: true,
+      showUsername: true,
       photoUrl: true,
       acceptsGameInvites: true,
     },
@@ -101,10 +91,11 @@ export async function GET(
       user: {
         acceptsGameInvites: profile.acceptsGameInvites,
         id: profile.id,
-        displayName: displayName(profile),
-        username: profile.username,
+        displayName: publicDisplayName(profile),
+        username: publicUsername(profile),
         photoUrl: profile.photoUrl,
         isMe: profile.id === viewerId,
+        ...(profile.id === viewerId ? { showUsername: profile.showUsername } : {}),
       },
       stats,
     },

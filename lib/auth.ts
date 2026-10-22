@@ -1,4 +1,5 @@
 import crypto from "crypto";
+import { isAccountSuspended } from "./account-suspensions";
 import { cookies, headers } from "next/headers";
 
 export const SESSION_COOKIE = "anti_ai_user_id";
@@ -22,7 +23,7 @@ function userIdFromSession(value?: string): string | null {
   const actual = Buffer.from(value.slice(separator + 1), "hex");
   const expected = Buffer.from(crypto.createHmac("sha256", sessionKey()).update(userId).digest("hex"), "hex");
   if (actual.length !== expected.length || !crypto.timingSafeEqual(actual, expected)) return null;
-  return userId;
+  return isAccountSuspended(userId) ? null : userId;
 }
 
 export function currentUserId(): string | null {

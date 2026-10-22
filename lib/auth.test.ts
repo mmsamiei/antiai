@@ -6,14 +6,26 @@ vi.mock("next/headers", () => ({
   headers: () => ({ get: () => request.authorization }),
 }));
 
+const suspension = vi.hoisted(() => ({ check: vi.fn((_id: string) => false) }));
+vi.mock("./account-suspensions", () => ({ isAccountSuspended: suspension.check }));
+
 import { createSessionValue, currentUserId } from "./auth";
 
 describe("account identity in Telegram windows sharing cookies", () => {
   beforeEach(() => {
     request.cookie = undefined;
     request.authorization = null;
+    suspension.check.mockReset().mockReturnValue(false);
   });
 
+  it("rejects previously issued tokens and cookies for a suspended Telegram ID", () => {
+    const token = createSessionValue("suspended");
+    suspension.check.mockImplementation(id => id === "suspended");
+    request.cookie = token; expect(currentUserId()).toBeNull();
+    request.cookie = createSessionValue("other");
+    request.authorization = `Bearer ${token}`; expect(currentUserId()).toBeNull();
+    request.authorization = `Bearer ${createSessionValue("other")}`; expect(currentUserId()).toBe("other");
+  });
   it("uses each window's signed token even when another account overwrites the shared cookie", () => {
     request.cookie = createSessionValue("mojtaba");
     request.authorization = `Bearer ${createSessionValue("mahdi")}`;

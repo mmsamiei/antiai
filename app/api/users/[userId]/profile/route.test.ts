@@ -35,6 +35,15 @@ describe("GET /api/users/[userId]/profile", () => {
     findMany.mockResolvedValue([]);
   });
 
+  it("hides username and Telegram links for another viewer while preserving the person's name", async () => {
+    currentUserId.mockReturnValue("viewer");
+    findUnique.mockResolvedValue({ id: "telegram-user-42", firstName: "سارا", lastName: "", username: "secret_handle", showUsername: false, photoUrl: null });
+    const response = await GET(new Request("https://example.test/api"), context);
+    const body = await response.json();
+    expect(body.user.displayName).toBe("سارا"); expect(body.user.username).toBeNull();
+    expect(JSON.stringify(body)).not.toContain("secret_handle"); expect(body.user).not.toHaveProperty("showUsername");
+  });
+
   it("requires authentication before looking up a user", async () => {
     currentUserId.mockReturnValue(null);
 

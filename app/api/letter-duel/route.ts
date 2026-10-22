@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { currentUserId } from "@/lib/auth";
 import { chooseDuelLetter, createPrivateDuel, heartbeatDuel, joinPrivateDuel, joinRandomDuel, leaveDuel, rematchDuel, serializeDuel, submitDuelWord } from "@/lib/letter-duel";
+import { cancelCountryMatch } from "@/lib/country-matchmaking";
 export const dynamic = "force-dynamic";
 const reply = (body: unknown, status = 200) => NextResponse.json(body, { status, headers: { "Cache-Control": "no-store" } });
 export async function GET(request: Request) { const userId = currentUserId(); if (!userId) return reply({ error: "ابتدا وارد بازی شو" }, 401); const id = new URL(request.url).searchParams.get("id"); return reply({ duel: await serializeDuel(userId, id) }); }
@@ -18,6 +19,7 @@ export async function POST(request: Request) {
     else if (action === "submit-word" && typeof body.connectionId === "string" && typeof body.word === "string") { const verdict = await submitDuelWord(userId, body.connectionId, body.word); return reply({ duel: await serializeDuel(userId, body.connectionId), verdict }); }
     else if (action === "leave" && typeof body.connectionId === "string") { await leaveDuel(userId, body.connectionId); return reply({ duel: null }); }
     else return reply({ error: "درخواست معتبر نیست" }, 400);
+    if (["create-private", "join-private", "join-random", "rematch"].includes(action)) await cancelCountryMatch(userId);
     return reply({ duel: await serializeDuel(userId, room?.id || body.connectionId) });
   } catch (error) {
     const code = error instanceof Error ? error.message : "";

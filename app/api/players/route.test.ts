@@ -20,6 +20,12 @@ describe("players search", () => {
     await GET(new Request("https://test/api/players?q="+encodeURIComponent("علي كريمي")));
     expect(mocks.queryRaw.mock.calls[1][0].values).toContain("علی کریمی");
   });
+  it("filters hidden usernames from search and redacts them in SQL projection", async () => {
+    await GET(new Request("https://test/api/players?q=hidden_handle"));
+    const sql = mocks.queryRaw.mock.calls[0][0].sql;
+    expect(sql).toContain('u."showUsername" AND strpos');
+    expect(sql).toContain('CASE WHEN u."showUsername" THEN u."username" ELSE NULL END');
+  });
   it("parameterizes user-entered SQL-looking text", async () => {
     const q = "'; DROP TABLE User; --";
     await GET(new Request("https://test/api/players?q="+encodeURIComponent(q)));

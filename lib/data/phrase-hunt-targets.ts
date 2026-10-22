@@ -46,7 +46,6 @@ export const phraseHuntTargets: PhraseHuntTarget[] = [
   { id: "ph-042", phrase: "خاطره شیرین", aliases: [] },
   { id: "ph-043", phrase: "لبخند کودک", aliases: [] },
   { id: "ph-044", phrase: "قول محکم", aliases: ["وعده محکم"] },
-  { id: "ph-045", phrase: "خبر خوش", aliases: ["خبر خوب"] },
   { id: "ph-046", phrase: "هدیه کوچک", aliases: [] },
   { id: "ph-047", phrase: "مهمان ناخوانده", aliases: [] },
   { id: "ph-048", phrase: "خانه گرم", aliases: [] },
@@ -112,4 +111,5 @@ export const phraseHuntTargets: PhraseHuntTarget[] = [
   { id: "ph-108", phrase: "امید واهی", aliases: [] },
   { id: "ph-109", phrase: "رخنه", aliases: [] },
   { id: "ph-110", phrase: "پگاه", aliases: [] },
+  { id: "ph-111", phrase: "آبگینه", aliases: [] },
 ];

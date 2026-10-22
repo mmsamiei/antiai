@@ -18,6 +18,13 @@ describe("private invite API", () => {
     expect((await POST(request({ action: "send", recipientId: "other", senderId: "forged" }))).status).toBe(200);
     expect(mocks.sendInvite).toHaveBeenCalledWith("me", "other"); expect(mocks.readInvites).toHaveBeenCalledWith("me");
   });
+  it("passes the selected game and rejects unknown games", async () => {
+    await POST(request({ action: "send", recipientId: "other", gameKind: "COUNTRY_RACE" }));
+    expect(mocks.sendInvite).toHaveBeenCalledWith("me", "other", "COUNTRY_RACE");
+    await POST(request({ action: "send", recipientId: "other", gameKind: "CITY_RACE" }));
+    expect(mocks.sendInvite).toHaveBeenCalledWith("me", "other", "CITY_RACE");
+    expect((await POST(request({ action: "send", recipientId: "other", gameKind: "UNKNOWN" }))).status).toBe(400);
+  });
   it("passes authenticated ownership to acceptance", async () => {
     await POST(request({ action: "accept", id: "invitation" }));
     expect(mocks.actOnInvite).toHaveBeenCalledWith("me", "invitation", "accept");

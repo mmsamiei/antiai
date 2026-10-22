@@ -5,7 +5,9 @@ import { avatarImageUrl } from "@/lib/avatar-url";
 import { sessionRequest } from "@/lib/client-session";
 
 export type Player = { id: string; firstName: string | null; lastName: string | null; username: string | null; photoUrl: string | null; online?: boolean; acceptsGameInvites?: boolean };
-export type Invitation = { id: string; senderId: string; recipientId: string; sender: Player; recipient: Player; status: string; reason: string | null; expiresAt: string; startDeadline: string | null; connectionId: string | null; connection: { status: string } | null };
+export type InviteGame = "LETTER_DUEL" | "COUNTRY_RACE" | "CITY_RACE";
+export const inviteGameName = (kind?: string) => kind === "CITY_RACE" ? "شهرجوی سرعتی" : kind === "COUNTRY_RACE" ? "کشورجوی سرعتی" : "دوحرف";
+export type Invitation = { gameKind: InviteGame; countryRaceId: string | null; countryRace: { status: string } | null; id: string; senderId: string; recipientId: string; sender: Player; recipient: Player; status: string; reason: string | null; expiresAt: string; startDeadline: string | null; connectionId: string | null; connection: { status: string } | null };
 export type InvitationState = { invites: Invitation[]; acceptsGameInvites: boolean; serverNow: string };
 export const playerName = (p: Player) => [p.firstName, p.lastName].filter(Boolean).join(" ") || p.username || "بازیکن";
 export function PlayerAvatar({ player, online = false }: { player: Player; online?: boolean }) {
@@ -50,7 +52,7 @@ export default function Players({ me, state, busy, onAction, onSend, onProfile, 
   const pending = state?.invites.filter(i => i.recipientId === me && i.status === "PENDING").length || 0;
   const status: Record<string, string> = { PENDING: "در انتظار پاسخ", ACCEPTED: "پذیرفته‌شده", REJECTED: "ردشده", CANCELLED: "لغوشده", EXPIRED: "منقضی‌شده" };
   return <section className="players-page">
-    <div className="players-heading"><button className="icon-button" onClick={onBack} aria-label="بازگشت">→</button><div><h1>بازیکن‌ها</h1><p>یک هم‌بازی برای دوحرف پیدا کن</p></div></div>
+    <div className="players-heading"><button className="icon-button" onClick={onBack} aria-label="بازگشت">→</button><div><h1>بازیکن‌ها</h1><p>یک نفر را به دوحرف یا کشورجوی سرعتی دعوت کن</p></div></div>
     <div className="players-tabs"><button className={section === "players" ? "active" : ""} onClick={() => setSection("players")}>بازیکن‌ها</button><button className={section === "invites" ? "active" : ""} onClick={() => setSection("invites")}>دعوت‌های من {pending > 0 && <b className="invite-badge">{pending.toLocaleString("fa-IR")}</b>}</button></div>
     {section === "players" ? <>
       <input className="players-search" value={query} onChange={e => { setQuery(e.target.value); setPage(0); }} placeholder="جست‌وجوی نام یا نام کاربری" maxLength={80} aria-label="جست‌وجوی بازیکن" />
@@ -58,7 +60,7 @@ export default function Players({ me, state, busy, onAction, onSend, onProfile, 
       {error && <p role="alert">{error}</p>}
       {loading ? <p>در حال دریافت…</p> : players.length === 0 ? <p className="empty-state">{query ? "بازیکنی پیدا نشد" : "فعلاً بازیکن دیگری آنلاین نیست"}</p> : players.map(p => <div className="player-card" key={p.id}>
         <button className="player-identity" onClick={() => onProfile(p.id)}><PlayerAvatar player={p} online={p.online} /><span><b>{playerName(p)}</b><small dir="ltr">{p.username ? `@${p.username}` : ""}</small><small>{p.online ? "آنلاین" : "آفلاین"}</small></span></button>
-        <button className="secondary" disabled={busy || loading || !p.online || p.acceptsGameInvites === false} onClick={() => onSend(p.id)}>{p.acceptsGameInvites === false ? "دعوت غیرفعال" : "دعوت به دوحرف"}</button>
+        <button className="secondary" disabled={busy || loading || !p.online || p.acceptsGameInvites === false} onClick={() => onSend(p.id)}>{p.acceptsGameInvites === false ? "دعوت غیرفعال" : "دعوت به بازی"}</button>
       </div>)}
       <div className="players-pagination"><button className="secondary" disabled={page === 0 || loading} onClick={() => setPage(p => p - 1)}>قبلی</button><span>{(page + 1).toLocaleString("fa-IR")}</span><button className="secondary" disabled={!hasMore || loading} onClick={() => setPage(p => p + 1)}>بعدی</button></div>
     </> : <>
@@ -67,6 +69,7 @@ export default function Players({ me, state, busy, onAction, onSend, onProfile, 
         const incoming = i.recipientId === me, p = incoming ? i.sender : i.recipient;
         return <article className="invite-card" key={i.id}>
           <button className="player-identity" onClick={() => onProfile(p.id)}><PlayerAvatar player={p}/><span><small>{incoming ? "دعوت از طرف" : "دعوت فرستادی برای"}</small><b>{playerName(p)}</b></span></button>
+          <p>{inviteGameName(i.gameKind)}{i.gameKind === "COUNTRY_RACE" && " · یک کشور مشترک، حداکثر ۲۰۰ ثانیه"}{i.gameKind === "CITY_RACE" && " · یک شهر مشترک، حداکثر ۵ دقیقه"}</p>
           <span className="invite-status">{status[i.status]}</span>{i.reason && <p>{i.reason}</p>}
           {i.status === "PENDING" && <><InviteRemaining invite={i} serverNow={state.serverNow}/><div className="invite-actions">{incoming ? <><button className="primary" disabled={busy} onClick={() => void onAction("accept", { id: i.id })}>قبول</button><button className="secondary" disabled={busy} onClick={() => void onAction("reject", { id: i.id })}>رد</button></> : <button className="secondary" disabled={busy} onClick={() => void onAction("cancel", { id: i.id })}>لغو دعوت</button>}</div></>}
         </article>;

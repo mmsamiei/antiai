@@ -260,7 +260,6 @@ input {
   from { opacity: 0; transform: translateY(-4px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 .game-card {
   position: relative;
   display: grid;
@@ -1993,3 +1992,26 @@ input {
 .duel-match-goal { text-align: center; color: var(--muted); font-size: .85rem; margin: 0 0 12px; }
 .duel-rematch { display: grid; gap: 12px; margin: 20px 0; }
 .duel-rematch small { line-height: 1.8; }
+
+.game-invite-backdrop { position: fixed; inset: 0; z-index: 155; display: grid; place-items: center; padding: 20px; background: #030611c9; backdrop-filter: blur(6px); }
+.game-invite-picker { width: min(100%, 390px); display: grid; gap: 14px; padding: 24px; border-radius: 24px; background: var(--surface); border: 1px solid var(--line); }
+.game-invite-picker p { color: var(--muted); line-height: 1.8; font-size: .85rem; }
+.race-timer { text-align: center; font-size: 2.4rem; font-weight: 800; margin: 20px 0 8px; }
+.race-timer small { display: block; font-size: .8rem; font-weight: 400; color: var(--muted); }
+.race-timer.urgent { color: #ff8787; }
+.race-score { justify-content: space-around; }
+.race-score strong { animation: race-rank .35s ease-out; }
+@keyframes race-rank { from { opacity: .4; transform: scale(1.15); } to { opacity: 1; transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .race-score strong { animation: none; } }
+.race-guesses { margin: 22px 0; }
+.race-guesses h2 { font-size: 1rem; }
+
+.race-score { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.race-score > div { display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 0; }
+.race-score .duel-profile-trigger { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100%; text-align: center; }
+.race-score .duel-profile-trigger b { max-width: 100%; }
+.race-score > div > small { color: var(--muted); font-size: .7rem; }
+.race-score strong { font-size: 1.6rem; line-height: 1.5; }
+
+.profile-privacy { margin: 20px 0; padding: 16px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+.profile-privacy p, .profile-privacy small { color: var(--muted); font-size: .78rem; line-height: 1.9; }

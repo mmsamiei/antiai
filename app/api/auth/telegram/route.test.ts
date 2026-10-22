@@ -1,6 +1,7 @@
 import crypto from "node:crypto";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-const mocks = vi.hoisted(() => ({ upsert: vi.fn(), session: vi.fn() }));
+const mocks = vi.hoisted(() => ({ upsert: vi.fn(), session: vi.fn(), suspended: vi.fn() }));
+vi.mock("@/lib/account-suspensions", () => ({ isAccountSuspended: mocks.suspended }));
 vi.mock("@/lib/prisma", () => ({ prisma: { user: { upsert: mocks.upsert } } }));
 vi.mock("@/lib/auth", () => ({ createSessionValue: mocks.session, SESSION_COOKIE: "anti_ai_user_id" }));
 import { POST } from "./route";
@@ -13,12 +14,19 @@ function signedData(user: unknown = { id: 123, first_name: "آزمایشی" }, d
 }
 const request = (body: unknown) => new Request("https://example.test/api/auth/telegram", { method:"POST", body: JSON.stringify(body) });
 beforeEach(() => {
-  vi.clearAllMocks(); vi.stubEnv("TELEGRAM_BOT_TOKEN",token); vi.stubEnv("NODE_ENV","production");
+  vi.clearAllMocks(); mocks.suspended.mockReturnValue(false); vi.stubEnv("TELEGRAM_BOT_TOKEN",token); vi.stubEnv("NODE_ENV","production");
   mocks.upsert.mockResolvedValue({ id:"123" }); mocks.session.mockReturnValue("signed-session");
   vi.spyOn(console,"warn").mockImplementation(() => {}); vi.spyOn(console,"error").mockImplementation(() => {});
 });
 afterEach(() => { vi.unstubAllEnvs(); vi.restoreAllMocks(); });
 describe("verified Telegram login", () => {
+  it("rejects a verified but suspended account without issuing another session", async () => {
+    mocks.suspended.mockReturnValue(true);
+    const response = await POST(request({ initData: signedData() }));
+    expect(response.status).toBe(403); expect((await response.json()).code).toBe("ACCOUNT_SUSPENDED");
+    expect(response.headers.get("set-cookie")).toBeNull();
+    expect(mocks.upsert).not.toHaveBeenCalled(); expect(mocks.session).not.toHaveBeenCalled();
+  });
   it("verifies the signature before creating a session", async () => {
     const response = await POST(request({initData:signedData(), userId:"forged-user"}));
     expect(response.status).toBe(200); expect(mocks.upsert.mock.calls[0][0].where).toEqual({id:"123"});

@@ -1,0 +1,1 @@
+ALTER TABLE "CountryRace" ADD COLUMN "gameType" "GameType" NOT NULL DEFAULT 'COUNTRY';

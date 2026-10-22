@@ -328,7 +328,7 @@ export default function LetterDuel({
             <button className="primary" disabled={busy || duel.myRematchPending} onClick={() => act("rematch", { connectionId: duel.id })}>
               {duel.myRematchPending ? "منتظر موافقت حریف…" : duel.opponentRematchPending ? "قبول و شروع مسابقهٔ جدید" : "بازی مجدد با همین حریف"}
             </button>
-            {duel.myRematchPending && <><small>درخواست تا دو دقیقه معتبر است؛ برای شروع هر دو باید اینجا باشید.</small><button className="secondary" disabled={busy} onClick={() => act("cancel-rematch", { connectionId: duel.id })}>لغو درخواست</button></>}
+            {duel.myRematchPending && <><small>درخواست تا ۶۰ ثانیه معتبر است؛ برای شروع هر دو باید اینجا باشید.</small><button className="secondary" disabled={busy} onClick={() => act("cancel-rematch", { connectionId: duel.id })}>لغو درخواست</button></>}
           </div>}
           <button className="secondary" disabled={busy} onClick={async () => {
             try {

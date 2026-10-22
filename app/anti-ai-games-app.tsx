@@ -8,10 +8,13 @@ import {
   useRef,
   useState,
 } from "react";
+import CountryRace from "./country-race";
+import CountryChallenge from "./country-challenge";
+import { CountryMatchBanner, useCountryMatchmaking, type MatchState } from "./country-matchmaking";
 import LetterDuel from "./letter-duel";
 import WordWeaver from "./word-weaver";
 import OnlineAvatar from "./online-avatar";
-import Players, { playerName } from "./players";
+import Players, { playerName, inviteGameName, type InviteGame } from "./players";
 import { useDuelInvitations, InvitationBanner } from "./duel-invitation-manager";
 import { avatarImageUrl } from "@/lib/avatar-url";
 import { BackHandlersContext, useBackHandler, useBrowserBack } from "./back-navigation";
@@ -70,7 +73,7 @@ type Game = {
     }[];
   };
 };
-type LeaderChallenge = { id: string; startsAt: string; endsAt: string; ended: boolean; target?: string };
+type LeaderChallenge = { id: string; startsAt: string; endsAt: string; ended: boolean; target?: string | null };
 type LeaderRow = {
   guessCount?: number;
   bestGuess?: string;
@@ -89,6 +92,7 @@ type LeaderRow = {
   draws?: number;
   winRate?: number;
   isMe: boolean;
+  challengeSolved?: boolean;
 };
 type PublicProfile = {
   user: {
@@ -97,6 +101,7 @@ type PublicProfile = {
     username: string | null;
     photoUrl: string | null;
     acceptsGameInvites?: boolean;
+    showUsername?: boolean;
     isMe: boolean;
   };
   stats: {
@@ -118,7 +123,7 @@ type PublicProfile = {
     };
   };
 };
-type Screen = "home" | "play" | "duel" | "word-weaver" | "leaderboard" | "players";
+type Screen = "country-race" | "country-mode" | "country-challenge" | "home" | "play" | "duel" | "word-weaver" | "leaderboard" | "players";
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const TELEGRAM_BOT_USERNAME = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || "";
 
@@ -215,31 +220,42 @@ export default function AntiAiGamesApp() {
   const [leaderboardType, setLeaderboardType] = useState<GameType>("IRAN_CITY");
   const [profileUserId, setProfileUserId] = useState<string | null>(null);
   const [directDuelId, setDirectDuelId] = useState<string | null>(null);
+  const [raceId, setRaceId] = useState<string | null>(null);
+  const presenceClientId = useRef("");
+  const [inviteRecipient, setInviteRecipient] = useState<string | null>(null);
+  const [inviteGameChoice, setInviteGameChoice] = useState<InviteGame | null>(null);
+  useBackHandler(() => setInviteRecipient(null), Boolean(inviteRecipient), 50);
   const multiplayerLeave = useRef<null | (() => Promise<void>)>(null);
+  const countryMatch = useCountryMatchmaking({ userId: user ? String(user.id) : null, onError: setError });
   const invitations = useDuelInvitations({
     userId: user ? String(user.id) : null,
     onError: setError,
     beforeAccept: async (invite) => {
-      if ((game?.status === "ACTIVE" || screen === "duel" || screen === "word-weaver") && !window.confirm(`رفتن به دوحرف با ${playerName(invite.sender)}؟ از صفحهٔ بازی فعلی خارج می‌شوی.`)) return false;
+      if ((game?.status === "ACTIVE" || screen === "duel" || screen === "country-race" || screen === "word-weaver") && !window.confirm(`رفتن به ${inviteGameName(invite.gameKind)} با ${playerName(invite.sender)}؟ از صفحهٔ بازی فعلی خارج می‌شوی.`)) return false;
       if (multiplayerLeave.current) await multiplayerLeave.current();
       return true;
     },
-    onJoin: async (connectionId) => {
-      if (multiplayerLeave.current && screen !== "duel") await multiplayerLeave.current();
+    onJoin: async (connectionId, _inviteId, gameKind) => {
+      if (multiplayerLeave.current && screen !== "duel" && screen !== "country-race") await multiplayerLeave.current();
       // Readiness is acknowledged by the mounted duel screen, not by the notification.
-      setDirectDuelId(connectionId);
+      if ((gameKind === "COUNTRY_RACE" || gameKind === "CITY_RACE")) {
+        setRaceId(connectionId);
+        try { sessionStorage.setItem(`antiai-country-race:${user.id}`, connectionId); } catch {}
+      } else setDirectDuelId(connectionId);
       setProfileUserId(null);
+      setInviteRecipient(null);
       previousScreens.current = [];
-      setScreen("duel");
+      setScreen((gameKind === "COUNTRY_RACE" || gameKind === "CITY_RACE") ? "country-race" : "duel");
     },
   });
-  const sendDirectInvite = async (recipientId: string) => {
+  const sendDirectInvite = async (recipientId: string, gameKind: InviteGame) => {
     try {
-    if (screen === "duel") {
-      if (!window.confirm("از دوحرف فعلی خارج شوی و دعوت تازه بفرستی؟")) return;
+    if (screen === "duel" || screen === "country-race") {
+      if (!window.confirm("از مسابقهٔ فعلی خارج شوی و دعوت تازه بفرستی؟")) return;
       if (multiplayerLeave.current) await multiplayerLeave.current();
     }
-    await invitations.action("send", { recipientId });
+    await invitations.action("send", { recipientId, gameKind });
+    setInviteRecipient(null);
     } catch (cause) { setError(cause instanceof Error ? cause.message : "ارسال دعوت انجام نشد"); }
   };
   const previousScreens = useRef<Screen[]>([]);
@@ -251,7 +267,16 @@ export default function AntiAiGamesApp() {
     previousScreens.current.push(screen);
     setScreen(next);
   };
+  useEffect(() => {
+    if (!user) return;
+    try {
+      const saved = sessionStorage.getItem(`antiai-country-race:${user.id}`);
+      if (saved) { setRaceId(saved); setScreen("country-race"); }
+    } catch {}
+  }, [user?.id]);
   const exitGame = () => {
+    if (user) { try { sessionStorage.removeItem(`antiai-country-race:${user.id}`); } catch {} }
+    setRaceId(null);
     setDirectDuelId(null);
     previousScreens.current = [];
     scrollPositions.current = {};
@@ -260,6 +285,7 @@ export default function AntiAiGamesApp() {
     setGame(null);
   };
   const back = useBrowserBack(screen !== "home" || profileUserId !== null, async () => {
+    if (inviteRecipient) { setInviteRecipient(null); return; }
     if (profileUserId) { setProfileUserId(null); return; }
     const handler = [...backHandlers.current.values()].sort((a, b) => b.priority - a.priority)[0];
     if (handler) { await handler.run(); return; }
@@ -304,12 +330,14 @@ export default function AntiAiGamesApp() {
   useEffect(() => {
     if (!user) return;
     const isPlaying = screen === "play" && game?.status === "ACTIVE";
+    if (!presenceClientId.current) presenceClientId.current = window.crypto.randomUUID();
+    const context = isPlaying || screen === "duel" || screen === "country-race" || screen === "word-weaver" ? "GAME" : "MENU";
     const heartbeat = () => {
       if (document.visibilityState !== "visible") return;
       jsonFetch<{ onlineCount: number; randomDuelWaiting: boolean }>("/api/presence", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ isPlaying }),
+        body: JSON.stringify({ clientId: presenceClientId.current, context, isPlaying }),
       })
         .then(({ onlineCount, randomDuelWaiting }) => { setOnlineCount(onlineCount); setRandomDuelWaiting(randomDuelWaiting); })
         .catch(() => setRandomDuelWaiting(false));
@@ -381,7 +409,7 @@ export default function AntiAiGamesApp() {
   return (
     <BackHandlersContext.Provider value={backHandlers}>
     <main className="shell">
-      {screen !== "play" && screen !== "duel" && screen !== "word-weaver" && (
+      {screen !== "play" && screen !== "duel" && screen !== "country-race" && screen !== "country-challenge" && screen !== "word-weaver" && (
         <Header
           user={user}
           onHome={exitGame}
@@ -389,6 +417,7 @@ export default function AntiAiGamesApp() {
         />
       )}
       {user && <InvitationBanner me={String(user.id)} state={invitations.state} busy={invitations.busy} action={invitations.action} />}
+      {user && <CountryMatchBanner state={countryMatch.state} busy={countryMatch.busy} action={countryMatch.action} />}
       {error && (
         <div className="toast" onClick={() => setError("")}>
           {error}
@@ -402,10 +431,22 @@ export default function AntiAiGamesApp() {
           busy={busy}
           onStart={startGame}
           onDuel={() => { setDirectDuelId(null); navigate("duel"); }}
+          onCountryMode={() => navigate("country-mode")}
           onWordWeaver={() => navigate("word-weaver")}
         />
       )}
-      {screen === "players" && <Players me={String(user.id)} state={invitations.state} busy={invitations.busy} onAction={invitations.action} onSend={id => void sendDirectInvite(id)} onProfile={setProfileUserId} onBack={back} />}
+      {screen === "country-mode" && <CountryModePicker matchState={countryMatch.state} matchBusy={countryMatch.busy} onBack={back} onChallenge={() => navigate("country-challenge")} onPractice={() => void startGame("COUNTRY")} onFind={() => void countryMatch.action("start")} onCancel={() => void countryMatch.action("cancel")} onInvite={() => { setInviteGameChoice("COUNTRY_RACE"); navigate("players"); }} />}
+      {screen === "country-challenge" && <CountryChallenge onBack={back} onLeaderboard={() => { setLeaderboardType("COUNTRY"); navigate("leaderboard"); }} setError={setError} />}
+      {screen === "players" && <Players me={String(user.id)} state={invitations.state} busy={invitations.busy} onAction={invitations.action} onSend={id => { const kind = inviteGameChoice; setInviteGameChoice(null); if (kind) void sendDirectInvite(id, kind); else setInviteRecipient(id); }} onProfile={setProfileUserId} onBack={back} />}
+      {screen === "country-race" && raceId && <CountryRace key={raceId} id={raceId} onExit={() => { exitGame(); setScreen("players"); }} setError={setError} onProfile={setProfileUserId} registerLeave={handler => { multiplayerLeave.current = handler; }} />}
+      {inviteRecipient && <div className="game-invite-backdrop" onClick={() => setInviteRecipient(null)}><section className="game-invite-picker" role="dialog" aria-modal="true" aria-label="انتخاب بازی" onKeyDown={e => { if (e.key === "Escape") setInviteRecipient(null); }} onClick={e => e.stopPropagation()}>
+        <h2>به کدام بازی دعوت می‌کنی؟</h2>
+        <button autoFocus className="primary" disabled={invitations.busy} onClick={() => void sendDirectInvite(inviteRecipient, "LETTER_DUEL")}>دوحرف</button>
+        <button className="primary" disabled={invitations.busy} onClick={() => void sendDirectInvite(inviteRecipient, "COUNTRY_RACE")}>کشورجوی سرعتی</button>
+        <button className="primary" disabled={invitations.busy} onClick={() => void sendDirectInvite(inviteRecipient, "CITY_RACE")}>شهرجوی سرعتی</button>
+        <p>یک کشور مشترک، حداکثر ۲۰۰ ثانیه؛ بهترین رتبهٔ حریفت را می‌بینی.</p>
+        <button className="secondary" onClick={() => setInviteRecipient(null)}>انصراف</button>
+      </section></div>}
       {screen === "duel" && (
         <LetterDuel
           connectionId={directDuelId}
@@ -444,11 +485,11 @@ export default function AntiAiGamesApp() {
           key={profileUserId}
           userId={profileUserId}
           inviteBusy={invitations.busy}
-          onInvite={id => void sendDirectInvite(id)}
+          onInvite={setInviteRecipient}
           onClose={back}
         />
       )}
-      {screen !== "play" && screen !== "duel" && screen !== "word-weaver" && (
+      {screen !== "play" && screen !== "duel" && screen !== "country-race" && screen !== "country-challenge" && screen !== "word-weaver" && (
         <BottomNav invitationCount={invitations.state?.invites.filter(i => i.recipientId === String(user.id) && i.status === "PENDING").length || 0} active={screen} onChange={(next) => next === "home" ? exitGame() : navigate(next)} />
       )}
     </main>
@@ -495,6 +536,7 @@ function Home({
   busy,
   onStart,
   onDuel,
+  onCountryMode,
   onWordWeaver,
 }: {
   onlineCount: number | null;
@@ -502,6 +544,7 @@ function Home({
   busy: boolean;
   onStart: (type: GameType) => void;
   onDuel: () => void;
+  onCountryMode: () => void;
   onWordWeaver: () => void;
 }) {
   const [otherGamesOpen, setOtherGamesOpen] = useState(false);
@@ -534,7 +577,7 @@ function Home({
             className={`game-card ${type === "IRAN_CITY" ? "iran" : type === "COUNTRY" ? "world" : type === "LETTER_DUEL" ? "duel" : type === "PHRASE_HUNT" ? "phrase-hunt" : "words"}`}
             key={type}
             disabled={busy}
-            onClick={() => (type === "LETTER_DUEL" ? onDuel() : onStart(type))}
+            onClick={() => (type === "LETTER_DUEL" ? onDuel() : type === "COUNTRY" ? onCountryMode() : onStart(type))}
           >
             <span className="game-icon">{gameMeta[type].icon}</span>
             <span className="game-copy">
@@ -586,6 +629,41 @@ function Home({
       <p className="manifesto">همه‌چیز را نده AI انجام بده.</p>
     </>
   );
+}
+
+function CountryModePicker({ matchState, matchBusy, onBack, onChallenge, onPractice, onFind, onCancel, onInvite }: {
+  matchState: MatchState | null; matchBusy: boolean; onBack: () => void; onChallenge: () => void;
+  onPractice: () => void; onFind: () => void; onCancel: () => void; onInvite: () => void;
+}) {
+  const [daily, setDaily] = useState<{ entry: null | { status: string; guessCount: number }; challenge: { endsAt: string; serverNow: string; ended: boolean } } | null>(null);
+  const [clockNow, setClockNow] = useState(Date.now());
+  const [dailyServerOffset, setDailyServerOffset] = useState(0);
+  useEffect(() => {
+    let active = true;
+    void jsonFetch<NonNullable<typeof daily>>("/api/country-challenge").then(value => { if (active) { setDaily(value); setDailyServerOffset(Date.parse(value.challenge.serverNow) - Date.now()); } }).catch(() => undefined);
+    return () => { active = false; };
+  }, []);
+  useEffect(() => { const timer = window.setInterval(() => setClockNow(Date.now()), 1000); return () => window.clearInterval(timer); }, []);
+  const running = matchState?.search?.status === "ACTIVE";
+  const remaining = daily ? Math.max(0, Math.ceil((Date.parse(daily.challenge.endsAt) - clockNow + dailyServerOffset) / 1000)) : 0;
+  const countdown = `${Math.floor(remaining / 3600).toLocaleString("fa-IR", { minimumIntegerDigits: 2 })}:${Math.floor(remaining / 60 % 60).toLocaleString("fa-IR", { minimumIntegerDigits: 2 })}:${(remaining % 60).toLocaleString("fa-IR", { minimumIntegerDigits: 2 })}`;
+  const dailyLabel = daily?.entry?.status === "WON" ? `نتیجهٔ تو · ${daily.entry.guessCount.toLocaleString("fa-IR")} حدس`
+    : daily?.entry?.status === "SURRENDERED" ? "دیدن نتیجهٔ تو"
+    : daily?.entry?.status === "ACTIVE" ? `ادامهٔ چالش · ${daily.entry.guessCount.toLocaleString("fa-IR")} حدس`
+    : daily?.challenge.ended ? "دیدن نتیجهٔ چالش قبلی" : "یک کشور مشترک برای همه";
+  return <section className="country-mode-screen">
+    <div className="section-heading"><button className="icon-button" onClick={onBack} aria-label="بازگشت">→</button><div><small>کشورجو</small><h1>یک حالت انتخاب کن</h1></div><span>🌍</span></div>
+    <button className="country-mode-card daily" onClick={onChallenge}>
+      <span>📅</span><div><b>چالش روزانه</b><small>{dailyLabel}{daily && !daily.challenge.ended ? ` · ${countdown} باقی‌مانده` : ""}</small></div><i>←</i>
+    </button>
+    <button className="country-mode-card practice" onClick={onPractice}>
+      <span>🧭</span><div><b>تمرین آزاد</b><small>با هدف تصادفی تمرین کن؛ هر وقت خواستی برگرد</small></div><i>←</i>
+    </button>
+    <section className="country-mode-duel">
+      <div><b>رقابت دونفره</b><small>یک هدف مشترک، حداکثر ۲۰۰ ثانیه</small></div>
+      {running ? <div className="country-mode-searching"><span>در حال پیدا کردن حریف…</span><button className="secondary" disabled={matchBusy} onClick={onCancel}>لغو جست‌وجو</button></div> : <div className="country-mode-actions"><button className="primary" disabled={matchBusy} onClick={onFind}>پیدا کردن حریف</button><button className="secondary" onClick={onInvite}>دعوت از بازیکن آنلاین</button></div>}
+    </section>
+  </section>;
 }
 
 function Play({
@@ -1473,6 +1551,8 @@ function Leaderboard({
   const [boardError, setBoardError] = useState(false);
   const requestId = useRef(0);
   const isPhraseHunt = type === "PHRASE_HUNT";
+  const isCountryChallenge = type === "COUNTRY" && period === "challenge";
+  const hasChallenges = isPhraseHunt || type === "COUNTRY";
   const isSemantris = type === "SEMANTRIS",
     isDuel = type === "LETTER_DUEL";
   const onlineIds = useOnlineUsers([...rows.map((row) => row.userId), me?.userId]);
@@ -1498,7 +1578,7 @@ function Leaderboard({
     setBoardError(false);
     setChallenge(null);
     load();
-    const timer = (type === "SEMANTRIS" || type === "PHRASE_HUNT") ? window.setInterval(load, 20_000) : null;
+    const timer = (type === "SEMANTRIS" || type === "PHRASE_HUNT" || isCountryChallenge) ? window.setInterval(load, 20_000) : null;
     const onVisibility = () => { if (document.visibilityState === "visible") load(); };
     document.addEventListener("visibilitychange", onVisibility);
     return () => {
@@ -1506,7 +1586,7 @@ function Leaderboard({
       if (timer !== null) window.clearInterval(timer);
       document.removeEventListener("visibilitychange", onVisibility);
     };
-  }, [period, type, mode, challengeId]);
+  }, [period, type, mode, challengeId, isCountryChallenge]);
   return (
     <section>
       <div className="section-heading leaderboard-heading">
@@ -1523,37 +1603,37 @@ function Leaderboard({
           <div className="leader-games">
             <button
               className={type === "IRAN_CITY" ? "active" : ""}
-              onClick={() => { setType("IRAN_CITY"); if (period === "challenge") setPeriod("week"); }}
+              onClick={() => { setType("IRAN_CITY"); setChallengeId(""); if (period === "challenge") setPeriod("week"); }}
             >
               شهرجو
             </button>
             <button
               className={type === "COUNTRY" ? "active" : ""}
-              onClick={() => { setType("COUNTRY"); if (period === "challenge") setPeriod("week"); }}
+              onClick={() => { setType("COUNTRY"); setChallengeId(""); }}
             >
               کشورجو
             </button>
             <button
               className={type === "PHRASE_HUNT" ? "active" : ""}
-              onClick={() => { setType("PHRASE_HUNT"); setPeriod("challenge"); }}
+              onClick={() => { setType("PHRASE_HUNT"); setPeriod("challenge"); setChallengeId(""); }}
             >
               معناجو
             </button>
             <button
               className={isSemantris ? "active" : ""}
-              onClick={() => { setType("SEMANTRIS"); if (period === "challenge") setPeriod("week"); }}
+              onClick={() => { setType("SEMANTRIS"); setChallengeId(""); if (period === "challenge") setPeriod("week"); }}
             >
               معناتریس
             </button>
             <button
               className={isDuel ? "active" : ""}
-              onClick={() => { setType("LETTER_DUEL"); if (period === "challenge") setPeriod("week"); }}
+              onClick={() => { setType("LETTER_DUEL"); setChallengeId(""); if (period === "challenge") setPeriod("week"); }}
             >
               دوحرف
             </button>
           </div>
         </div>
-        {!isPhraseHunt && (
+        {!isPhraseHunt && !isCountryChallenge && (
         <div className="leader-filter-group">
           <span className="leader-filter-label">رتبه‌بندی</span>
           <div className="leader-toggle">
@@ -1574,8 +1654,8 @@ function Leaderboard({
         )}
         <div className="leader-filter-group">
           <span className="leader-filter-label">بازهٔ زمانی</span>
-          <div className={isPhraseHunt ? "leader-toggle leader-three-tabs" : "leader-toggle"}>
-            {isPhraseHunt && <button className={period === "challenge" ? "active" : ""} onClick={() => setPeriod("challenge")}>چالش‌ها</button>}
+          <div className={hasChallenges ? "leader-toggle leader-three-tabs" : "leader-toggle"}>
+            {hasChallenges && <button className={period === "challenge" ? "active" : ""} onClick={() => setPeriod("challenge")}>چالش‌ها</button>}
             <button
               className={period === "week" ? "active" : ""}
               onClick={() => setPeriod("week")}
@@ -1591,13 +1671,13 @@ function Leaderboard({
           </div>
         </div>
       </div>
-      {isPhraseHunt && period === "challenge" && <div className="leader-challenge-picker">
+      {hasChallenges && period === "challenge" && <div className="leader-challenge-picker">
         <label htmlFor="leader-challenge">انتخاب چالش</label>
         <select id="leader-challenge" value={challengeId || challenge?.id || ""} onChange={e => setChallengeId(e.target.value)}>
           {challenges.map(c => <option key={c.id} value={c.id}>{new Date(c.startsAt).toLocaleString("fa-IR", { timeZone: "Asia/Tehran", year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })} · {c.ended ? "پایان‌یافته" : "در حال برگزاری"}</option>)}
         </select>
-        {challenge && <p>{challenge.ended ? `عبارت هدف: ${challenge.target || "—"}` : "بهترین حدس‌ها پس از پایان چالش آشکار می‌شوند."}</p>}
-        <small>امتیاز بیشتر؛ در امتیاز برابر، زمان زودترِ رسیدن به آن امتیاز</small>
+        {challenge && <p>{challenge.ended ? `${isCountryChallenge ? "کشور هدف" : "عبارت هدف"}: ${challenge.target || "—"}` : isCountryChallenge ? "رتبه و تعداد حدس‌ها نمایش داده می‌شوند؛ نام کشورها پس از پایان چالش آشکار می‌شود." : "بهترین حدس‌ها پس از پایان چالش آشکار می‌شوند."}</p>}
+        <small>{isCountryChallenge ? "حل‌کنندگان با حدس کمتر و سپس زمان حل؛ بقیه با رتبهٔ بهتر و سپس زمان رسیدن به آن" : "امتیاز بیشتر؛ در امتیاز برابر، زمان زودترِ رسیدن به آن امتیاز"}</small>
       </div>}
       {isPhraseHunt && period !== "challenge" && <p className="board-note">مجموع بهترین امتیاز هر چالش · امتیاز چالش جاری هم حساب می‌شود · هفته از شنبه به وقت تهران</p>}
       {!isPhraseHunt && mode === "skill" && (
@@ -1627,6 +1707,7 @@ function Leaderboard({
               phraseHunt={isPhraseHunt}
               semantris={isSemantris}
               duel={isDuel}
+              countryChallenge={isCountryChallenge}
               online={onlineIds.has(row.userId)}
               onOpenProfile={onOpenProfile}
             />
@@ -1642,6 +1723,7 @@ function Leaderboard({
             phraseHunt={isPhraseHunt}
             semantris={isSemantris}
             duel={isDuel}
+            countryChallenge={isCountryChallenge}
             online={onlineIds.has(me.userId)}
             onOpenProfile={onOpenProfile}
           />
@@ -1656,6 +1738,7 @@ function LeaderRowView({
   phraseHunt = false,
   semantris = false,
   duel = false,
+  countryChallenge = false,
   online = false,
   onOpenProfile,
 }: {
@@ -1664,6 +1747,7 @@ function LeaderRowView({
   phraseHunt?: boolean;
   semantris?: boolean;
   duel?: boolean;
+  countryChallenge?: boolean;
   online?: boolean;
   onOpenProfile: (userId: string) => void;
 }) {
@@ -1671,10 +1755,12 @@ function LeaderRowView({
     ? mode === "effort"
       ? row.rounds || 0
       : (row.winRate || 0) * 100
+    : countryChallenge
+      ? row.challengeSolved ? row.guessCount || 0 : row.bestScore ?? Number.MAX_SAFE_INTEGER
     : mode === "effort"
       ? (row.totalScore ?? row.averageGuesses)
       : (row.bestScore ?? row.averageGuesses);
-  const detail = phraseHunt ? row.guessCount !== undefined ? `${row.guessCount.toLocaleString("fa-IR")} حدس` : `${(row.games || 0).toLocaleString("fa-IR")} چالش` : duel
+  const detail = countryChallenge ? row.challengeSolved ? `${(row.guessCount || 0).toLocaleString("fa-IR")} حدس تا حل` : row.bestScore == null ? "هنوز حدسی ثبت نکرده" : `بهترین رتبه ${row.bestScore.toLocaleString("fa-IR")} · ${(row.guessCount || 0).toLocaleString("fa-IR")} حدس` : phraseHunt ? row.guessCount !== undefined ? `${row.guessCount.toLocaleString("fa-IR")} حدس` : `${(row.games || 0).toLocaleString("fa-IR")} چالش` : duel
     ? `${row.wins.toLocaleString("fa-IR")} برد · ${(row.losses || 0).toLocaleString("fa-IR")} باخت · ${(row.draws || 0).toLocaleString("fa-IR")} مساوی`
     : semantris
       ? mode === "effort"
@@ -1683,7 +1769,7 @@ function LeaderRowView({
       : mode === "skill"
         ? row.wins.toLocaleString("fa-IR") + " برد"
         : "میانگین " + row.averageGuesses.toLocaleString("fa-IR") + " حدس";
-  const value = phraseHunt ? (row.totalScore || 0).toLocaleString("fa-IR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : duel
+  const value = countryChallenge ? row.challengeSolved ? (row.guessCount || 0).toLocaleString("fa-IR") : row.bestScore == null ? "—" : row.bestScore.toLocaleString("fa-IR") : phraseHunt ? (row.totalScore || 0).toLocaleString("fa-IR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : duel
     ? mode === "skill"
       ? score.toLocaleString("fa-IR", { maximumFractionDigits: 1 }) + "٪"
       : score.toLocaleString("fa-IR")
@@ -1723,7 +1809,7 @@ function LeaderRowView({
       <div className="leader-wins">
         <strong>{value}</strong>
         <small>
-          {phraseHunt ? row.guessCount !== undefined ? "امتیاز" : "مجموع امتیاز" : duel
+          {countryChallenge ? row.challengeSolved ? "حدس" : "رتبه" : phraseHunt ? row.guessCount !== undefined ? "امتیاز" : "مجموع امتیاز" : duel
             ? mode === "skill"
               ? "نرخ برد"
               : "دور"
@@ -1752,6 +1838,7 @@ function PublicProfileOverlay({
   const [profile, setProfile] = useState<PublicProfile | null>(null);
   const [error, setError] = useState("");
   const [attempt, setAttempt] = useState(0);
+  const [privacyBusy, setPrivacyBusy] = useState(false);
   const [loading, setLoading] = useState(true);
   const onlineIds = useOnlineUsers([userId]);
 
@@ -1818,16 +1905,29 @@ function PublicProfileOverlay({
                 {profile.user.photoUrl ? <img src={avatarImageUrl(profile.user.id, profile.user.photoUrl) || ""} alt="" /> : <span className="profile-avatar-fallback">👤</span>}
               </OnlineAvatar>
               <h2>{profile.user.displayName}</h2>
-              <span>{profile.user.username ? `@${profile.user.username.replace(/^@/, "")}` : "بدون نام کاربری"}</span>
-              {!profile.user.isMe && <button className="secondary" disabled={inviteBusy || profile.user.acceptsGameInvites === false || !onlineIds.has(profile.user.id)} onClick={() => onInvite(profile.user.id)}>{!onlineIds.has(profile.user.id) ? "آفلاین" : profile.user.acceptsGameInvites === false ? "دعوت غیرفعال" : "دعوت به دوحرف"}</button>}
+              <span>{profile.user.username ? `@${profile.user.username.replace(/^@/, "")}` : "نام کاربری نمایش داده نمی‌شود"}</span>
+              {!profile.user.isMe && <button className="secondary" disabled={inviteBusy || profile.user.acceptsGameInvites === false || !onlineIds.has(profile.user.id)} onClick={() => onInvite(profile.user.id)}>{!onlineIds.has(profile.user.id) ? "آفلاین" : profile.user.acceptsGameInvites === false ? "دعوت غیرفعال" : "دعوت به بازی"}</button>}
               {!profile.user.isMe && (
                 profile.user.username ? (
                   <button className="primary profile-message-button" onClick={message}>پیام دادن در تلگرام</button>
                 ) : (
-                  <button className="secondary profile-message-button" disabled>این بازیکن نام کاربری تلگرام ندارد</button>
+                  <button className="secondary profile-message-button" disabled>نام کاربری تلگرام نمایش داده نمی‌شود</button>
                 )
               )}
             </div>
+            {profile.user.isMe && <section className="profile-privacy">
+              <label className="invite-preference"><input type="checkbox" checked={profile.user.showUsername ?? true} disabled={privacyBusy} onChange={async event => {
+                const showUsername = event.target.checked;
+                setPrivacyBusy(true);
+                try {
+                  await jsonFetch("/api/account/settings", { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ showUsername }) });
+                  setAttempt(value => value + 1);
+                } catch { setError("ذخیرهٔ تنظیم انجام نشد؛ دوباره تلاش کن"); }
+                finally { setPrivacyBusy(false); }
+              }} />نمایش نام کاربری تلگرام به دیگران</label>
+              <p>اگر خاموش باشد، نام کاربری‌ات در پروفایل، بازی‌ها، رتبه‌ها، جست‌وجوی نام کاربری و پیام‌های بعدی اعلام نتایج بات نمایش داده نمی‌شود؛ به‌جایش نامت را نشان می‌دهیم.</p>
+              <small>نام و عکس فعلی‌ات همچنان دیده می‌شوند و دعوت به بازی فعال می‌ماند. پیام‌های قبلاً ارسال‌شده تغییر نمی‌کنند.</small>
+            </section>}
             <h2 className="profile-section-title">آمار بازی‌ها</h2>
             <div className="profile-stats-grid">
               <ProfileStatCard title="🇮🇷 شهرجو">

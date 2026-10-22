@@ -1,3 +1,4 @@
+import { publicDisplayName } from "./public-identity";
 import { Prisma } from "@prisma/client";
 import { prisma } from "./prisma";
 import { currentPhraseChallenge } from "./phrase-hunt-challenge";
@@ -32,7 +33,7 @@ export async function phraseChallengeLeaderboard(userId: string, requestedId: st
   const rows = best.map((r, i) => {
     const u = userMap.get(r.userId);
     return { rank: i + 1, userId: r.userId,
-      displayName: u?.username ? `@${u.username}` : [u?.firstName, u?.lastName].filter(Boolean).join(" ") || "بازیکن ناشناس",
+      displayName: publicDisplayName(u, true),
       photoUrl: u?.photoUrl, totalScore: r.score, guessCount: r.guessCount,
       achievedAt: r.achievedAt.toISOString(), isMe: r.userId === userId,
       wins: 0, averageGuesses: 0, bestGame: 0,

@@ -2,7 +2,7 @@ import type { Prisma } from "@prisma/client";
 
 export const DUEL_TARGET_WINS = 10;
 export const DUEL_RECONNECT_MS = 30_000;
-export const DUEL_REMATCH_MS = 120_000;
+export const DUEL_REMATCH_MS = 60_000;
 
 export function disconnectedDuelWinner(room: { playerOneId: string; playerTwoId: string | null; playerOneHeartbeat: Date; playerTwoHeartbeat: Date | null }, now: Date) {
   const oneGone = now.getTime() - room.playerOneHeartbeat.getTime() > DUEL_RECONNECT_MS;

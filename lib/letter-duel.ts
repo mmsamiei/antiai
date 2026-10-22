@@ -11,6 +11,7 @@ import { normalizePersian } from "./geo";
 import { wordPrompts } from "./data/adjective-prompts";
 import { semantrisCategories } from "./data/semantris-categories";
 import exclusions from "./data/letter-duel-exclusions.json";
+import { LetterWordIndex } from "./letter-word-index";
 
 const excludedWords = new Map(exclusions.map(entry => [normalizePersian(entry.word), entry.reason]));
 
@@ -19,9 +20,16 @@ export const PICK_MS = 5_000;
 export const ANSWER_MS = 15_000;
 export const RECONNECT_MS = DUEL_RECONNECT_MS;
 export const RESULT_MS = 2_500;
+const EXAMPLE_RESULT_MS = 6_000;
 const lexiconFile = readFileSync(join(process.cwd(), "lib/data/letter-duel-lexicon.txt"), "utf8");
 const localWords = new Set([...lexiconFile.split(/\r?\n/), ...wordPrompts.flatMap((p) => [p.name, ...p.examples]), ...semantrisCategories.flatMap((c) => c.words)].map(normalizePersian).filter((w) => w && !w.includes(" ") && !w.startsWith("#") && !excludedWords.has(w)));
 const JUDGE_VERSION = 2;
+const wordIndex = new LetterWordIndex(localWords);
+export function findDuelExample(first: string, second: string) { return wordIndex.find(first, second); }
+function timeoutExample(round: { status: string; winnerUserId: string | null; winningWord: string | null; resultReason: string | null; playerOneLetter: string | null; playerTwoLetter: string | null }) {
+  if (round.status !== "RESOLVED" || round.winnerUserId || round.winningWord || round.resultReason !== "زمان تمام شد" || !round.playerOneLetter || !round.playerTwoLetter) return null;
+  return findDuelExample(round.playerOneLetter, round.playerTwoLetter);
+}
 
 export function randomPersianLetter(random = Math.random) { return PERSIAN_LETTERS[Math.floor(random() * PERSIAN_LETTERS.length)]; }
 export function validateLetterWord(raw: string, letters: string[]) {
@@ -137,7 +145,7 @@ export async function advanceLetterDuel(connectionId: string) {
   } else if ((round.status === "ANSWERING" || round.status === "JUDGING") && round.answerDeadline && round.answerDeadline <= now) {
     const pending = await prisma.letterDuelSubmission.count({ where: { roundId: round.id, status: "PENDING" } });
     if (pending) await prisma.letterDuelRound.update({ where: { id: round.id }, data: { status: "JUDGING" } }); else await finalizeJudgments(round.id);
-  } else if (round.status === "RESOLVED" && round.resolvedAt && now.getTime() - round.resolvedAt.getTime() >= RESULT_MS) {
+  } else if (round.status === "RESOLVED" && round.resolvedAt && now.getTime() - round.resolvedAt.getTime() >= (timeoutExample(round) ? EXAMPLE_RESULT_MS : RESULT_MS)) {
     await createRound(connection.id, round.number + 1, connection.playerOneId, connection.playerTwoId, now).catch(() => undefined);
   }
 }
@@ -266,8 +274,9 @@ export async function serializeDuel(userId: string, requestedId?: string | null)
   const score = new Map(scores.map((s) => [s.userId, s._count._all]));
   const reveal = round && ["ANSWERING", "JUDGING", "RESOLVED"].includes(round.status);
   const ratingChange = fresh.status === "ENDED" ? ownRatingChange(await prisma.competitiveResult.findUnique({ where: { matchKey: `duel:${fresh.id}` } }), userId) : null;
+  const exampleWord = round ? timeoutExample(round) : null;
   return { ratingChange, targetWins: DUEL_TARGET_WINS, matchWinnerUserId: fresh.matchWinnerUserId, endReason: fresh.endReason, rematchConnectionId: fresh.rematchConnectionId,
     myRematchPending: Boolean((isOne ? fresh.rematchOneAt : fresh.rematchTwoAt) && Date.now() - (isOne ? fresh.rematchOneAt! : fresh.rematchTwoAt!).getTime() < DUEL_REMATCH_MS),
     opponentRematchPending: Boolean((isOne ? fresh.rematchTwoAt : fresh.rematchOneAt) && Date.now() - (isOne ? fresh.rematchTwoAt! : fresh.rematchOneAt!).getTime() < DUEL_REMATCH_MS),
-    directInvite: fresh.directInvite, id: fresh.id, mode: fresh.mode, status: fresh.status, inviteToken: isOne ? fresh.inviteToken : null, stateVersion: fresh.stateVersion, me: userPublic(isOne ? fresh.playerOne : fresh.playerTwo), opponent: userPublic(opponent), myScore: score.get(userId) || 0, opponentScore: score.get(opponent?.id || "") || 0, opponentConnected: !opponent ? false : new Date().getTime() - (isOne ? fresh.playerTwoHeartbeat?.getTime() || 0 : fresh.playerOneHeartbeat.getTime()) < 10_000, reconnectDeadline: opponent ? new Date((isOne ? fresh.playerTwoHeartbeat?.getTime() || 0 : fresh.playerOneHeartbeat.getTime()) + RECONNECT_MS) : null, serverNow: new Date(), round: round ? { id: round.id, number: round.number, status: round.status, deadline: (round.status === "PICKING" ? round.pickDeadline : round.answerDeadline), myLetterChosen: Boolean(isOne ? round.playerOneLetter : round.playerTwoLetter), letters: reveal ? [round.playerOneLetter, round.playerTwoLetter] : null, winnerUserId: round.status === "RESOLVED" ? round.winnerUserId : null, winningWord: round.status === "RESOLVED" ? round.winningWord : null, resultReason: round.status === "RESOLVED" ? round.resultReason : null, lastSubmission: round.submissions[0] || null } : null };
+    directInvite: fresh.directInvite, id: fresh.id, mode: fresh.mode, status: fresh.status, inviteToken: isOne ? fresh.inviteToken : null, stateVersion: fresh.stateVersion, me: userPublic(isOne ? fresh.playerOne : fresh.playerTwo), opponent: userPublic(opponent), myScore: score.get(userId) || 0, opponentScore: score.get(opponent?.id || "") || 0, opponentConnected: !opponent ? false : new Date().getTime() - (isOne ? fresh.playerTwoHeartbeat?.getTime() || 0 : fresh.playerOneHeartbeat.getTime()) < 10_000, reconnectDeadline: opponent ? new Date((isOne ? fresh.playerTwoHeartbeat?.getTime() || 0 : fresh.playerOneHeartbeat.getTime()) + RECONNECT_MS) : null, serverNow: new Date(), round: round ? { id: round.id, number: round.number, status: round.status, deadline: (round.status === "PICKING" ? round.pickDeadline : round.answerDeadline), myLetterChosen: Boolean(isOne ? round.playerOneLetter : round.playerTwoLetter), letters: reveal ? [round.playerOneLetter, round.playerTwoLetter] : null, winnerUserId: round.status === "RESOLVED" ? round.winnerUserId : null, winningWord: round.status === "RESOLVED" ? round.winningWord : null, resultReason: round.status === "RESOLVED" ? round.resultReason : null, exampleWord, lastSubmission: round.submissions[0] || null } : null };
 }

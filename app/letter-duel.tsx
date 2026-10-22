@@ -42,6 +42,7 @@ type DuelState = {
     letters: [string, string] | null;
     winnerUserId: string | null;
     winningWord: string | null;
+    exampleWord: string | null;
     lastSubmission: { word: string; status: string; reason?: string } | null;
   };
 };
@@ -479,6 +480,9 @@ export default function LetterDuel({
                 : "این دور مساوی شد"}
           </h2>
           {round.winningWord && <strong>{round.winningWord}</strong>}
+          {round.exampleWord && (
+            <p className="duel-example">می‌تونستید بنویسید: <strong>{round.exampleWord}</strong></p>
+          )}
           <p>دور بعدی تا چند لحظهٔ دیگر شروع می‌شود…</p>
         </div>
       )}

@@ -1866,6 +1866,20 @@ input {
   color: var(--muted);
   font-size: 11px;
 }
+.duel-result .duel-example {
+  margin: 18px 0;
+  padding: 14px;
+  border: 1px solid #564878;
+  border-radius: 14px;
+  background: #211b37;
+  font-size: 14px;
+  color: #d9ceff;
+}
+.duel-example strong {
+  display: block;
+  margin-top: 6px;
+  overflow-wrap: anywhere;
+}
 .duel-result.won {
   border-color: #34765e;
   background: #102820;

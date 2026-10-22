@@ -25,6 +25,46 @@ async function seedRounds(connectionId: string, wins: number, draws = 0) {
   }
 }
 async function main() {
+  await check("pending judgments hide examples; rejected guesses allow timeout examples", async () => {
+    const r = await room();
+    const round = await prisma.letterDuelRound.create({ data: { connectionId: r.id, number: 1, status: "ANSWERING", pickDeadline: new Date(), playerOneLetter: "ک", playerTwoLetter: "ب", answerDeadline: new Date(Date.now() - 1000) } });
+    const submission = await prisma.letterDuelSubmission.create({ data: { roundId: round.id, userId: a, word: "کبکبکبکب" } });
+    const pending = await serializeDuel(b, r.id);
+    assert.equal(pending!.round!.status, "JUDGING");
+    assert.equal(pending!.round!.exampleWord, null);
+    await prisma.letterDuelSubmission.update({ where: { id: submission.id }, data: { status: "REJECTED", judgedAt: new Date() } });
+    assert.ok((await serializeDuel(b, r.id))!.round!.exampleWord);
+  });
+  await check("timeout examples are shared, hidden before resolution, and readable before the next round", async () => {
+    const r = await room();
+    const round = await prisma.letterDuelRound.create({ data: { connectionId: r.id, number: 1, status: "ANSWERING", pickDeadline: new Date(), playerOneLetter: "ک", playerTwoLetter: "ب", answerDeadline: new Date(Date.now() + 15000) } });
+    assert.equal((await serializeDuel(a, r.id))!.round!.exampleWord, null);
+    await prisma.letterDuelRound.update({ where: { id: round.id }, data: { answerDeadline: new Date(Date.now() - 1000) } });
+    const one = await serializeDuel(a, r.id), two = await serializeDuel(b, r.id);
+    assert.equal(one!.round!.status, "RESOLVED");
+    assert.ok(one!.round!.exampleWord);
+    assert.equal(one!.round!.exampleWord, two!.round!.exampleWord);
+    assert.equal(one!.round!.winningWord, null);
+    assert.equal(one!.round!.winnerUserId, null);
+    await prisma.letterDuelRound.update({ where: { id: round.id }, data: { resolvedAt: new Date(Date.now() - 3500) } });
+    await advanceLetterDuel(r.id);
+    assert.equal(await prisma.letterDuelRound.count({ where: { connectionId: r.id } }), 1);
+    await prisma.letterDuelRound.update({ where: { id: round.id }, data: { resolvedAt: new Date(Date.now() - 6500) } });
+    await advanceLetterDuel(r.id);
+    assert.equal(await prisma.letterDuelRound.count({ where: { connectionId: r.id } }), 2);
+  });
+  await check("timeouts without dictionary matches show no example", async () => {
+    const r = await room();
+    await prisma.letterDuelRound.create({ data: { connectionId: r.id, number: 1, status: "ANSWERING", pickDeadline: new Date(), playerOneLetter: "ث", playerTwoLetter: "چ", answerDeadline: new Date(Date.now() - 1000) } });
+    const state = await serializeDuel(a, r.id);
+    assert.equal(state!.round!.status, "RESOLVED");
+    assert.equal(state!.round!.exampleWord, null);
+  });
+  await check("winning rounds never reveal timeout examples", async () => {
+    const r = await room();
+    await prisma.letterDuelRound.create({ data: { connectionId: r.id, number: 1, status: "RESOLVED", pickDeadline: new Date(), playerOneLetter: "ک", playerTwoLetter: "ب", winnerUserId: a, winningWord: "کتاب", resolvedAt: new Date() } });
+    assert.equal((await serializeDuel(b, r.id))!.round!.exampleWord, null);
+  });
   await check("the tenth win ends exactly once under concurrent submissions; no extra round; final result survives refresh", async () => {
     const r=await room(); await seedRounds(r.id,9,2);
     await advanceLetterDuel(r.id);

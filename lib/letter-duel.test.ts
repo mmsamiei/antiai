@@ -1,7 +1,17 @@
 import { describe, expect, it, vi } from "vitest";
 import { prisma } from "./prisma";
-import { duelWinRate, isLocalDuelWord, judgeWord, PERSIAN_LETTERS, randomPersianLetter, validateLetterWord, randomPracticeLetters } from "./letter-duel";
+import { duelWinRate, findDuelExample, isLocalDuelWord, judgeWord, PERSIAN_LETTERS, randomPersianLetter, validateLetterWord, randomPracticeLetters } from "./letter-duel";
 describe("letter duel rules", () => {
+  it("suggests only eligible dictionary words including repeated-letter pairs", () => {
+    expect(findDuelExample("ث", "چ")).toBeNull();
+    expect(findDuelExample("ط", "ظ")).not.toBe("مظطر");
+    for (const pair of [["ک", "ب"], ["ظ", "ظ"], ["چ", "ژ"]]) {
+      const word = findDuelExample(pair[0], pair[1]);
+      expect(word).not.toBeNull();
+      expect(isLocalDuelWord(word!)).toBe(true);
+      expect(validateLetterWord(word!, pair).valid).toBe(true);
+    }
+  });
   it("rejects reviewed invalid entries before consulting cached or external judgments", async () => {
     const cached = vi.spyOn(prisma.letterDuelWordJudgment, "findUnique").mockResolvedValue({ accepted: true } as never);
     const external = vi.spyOn(globalThis, "fetch");

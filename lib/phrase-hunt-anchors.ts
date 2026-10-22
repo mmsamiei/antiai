@@ -1,5 +1,22 @@
 /** Manually calibrated, challenge-specific examples shown to JEV as score anchors. */
 export const phraseHuntAnchors: Record<string, { guess: string; score_out_of_100: number }[]> = {
+  "2026-10-22T18:30:00.000Z": [
+    { guess: "نگون‌بخت", score_out_of_100: 100 },
+    { guess: "سیه‌بخت", score_out_of_100: 97 },
+    { guess: "شوربخت", score_out_of_100: 96 },
+    { guess: "بدبخت", score_out_of_100: 94 },
+    { guess: "بداقبال", score_out_of_100: 93 },
+    { guess: "بدشانس", score_out_of_100: 89 },
+    { guess: "بخت‌برگشته", score_out_of_100: 88 },
+    { guess: "تیره‌روز", score_out_of_100: 87 },
+    { guess: "فلاکت‌زده", score_out_of_100: 83 },
+    { guess: "بیچاره", score_out_of_100: 80 },
+    { guess: "بینوا", score_out_of_100: 74 },
+    { guess: "درمانده", score_out_of_100: 70 },
+    { guess: "فقیر", score_out_of_100: 48 },
+    { guess: "بخت", score_out_of_100: 40 },
+    { guess: "خوشبخت", score_out_of_100: 12 },
+  ],
   "2026-10-21T18:30:00.000Z": [
     { guess: "پگاه", score_out_of_100: 100 },
     { guess: "سپیده‌دم", score_out_of_100: 97 },

@@ -2014,4 +2014,18 @@ input {
 .race-score strong { font-size: 1.6rem; line-height: 1.5; }
 
 .profile-privacy { margin: 20px 0; padding: 16px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+.country-mode-screen { display: grid; gap: 14px; }
+.country-mode-screen > .section-heading { margin: 6px 0 8px; }
+.country-mode-screen .section-heading h1 { font-size: clamp(23px, 6vw, 30px); }
+.country-mode-card .game-copy { min-width: 0; }
+.country-mode-card .game-copy b { font-size: 20px; }
+.country-mode-countdown { display: flex !important; align-items: center; gap: 8px; margin-top: 8px; color: #c9baff !important; }
+.country-mode-countdown span { font-variant-numeric: tabular-nums; letter-spacing: 1px; padding: 2px 8px; border-radius: 7px; background: #ffffff0a; }
+.country-mode-duel { padding: 18px; border: 1px solid var(--line); border-radius: 22px; background: radial-gradient(circle at 0 0, #69462444, transparent 60%), linear-gradient(145deg, #1c2033, #111729); }
+.country-mode-duel-heading { display: flex; align-items: center; gap: 13px; margin-bottom: 18px; }
+.country-mode-duel-heading .game-copy b { font-size: 20px; }
+.country-mode-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.country-mode-actions button, .country-mode-searching button { min-height: 48px; padding: 11px 9px; border-radius: 14px; font-size: 12px; }
+.country-mode-searching { display: grid; gap: 12px; color: #c9baff; font-size: 13px; }
+@media (max-width: 360px) { .country-mode-actions { grid-template-columns: 1fr; } .country-mode-card { gap: 10px; padding: 15px; } .country-mode-card .game-copy b { font-size: 18px; } }
 .profile-privacy p, .profile-privacy small { color: var(--muted); font-size: .78rem; line-height: 1.9; }

@@ -653,14 +653,14 @@ function CountryModePicker({ matchState, matchBusy, onBack, onChallenge, onPract
     : daily?.challenge.ended ? "دیدن نتیجهٔ چالش قبلی" : "یک کشور مشترک برای همه";
   return <section className="country-mode-screen">
     <div className="section-heading"><button className="icon-button" onClick={onBack} aria-label="بازگشت">→</button><div><small>کشورجو</small><h1>یک حالت انتخاب کن</h1></div><span>🌍</span></div>
-    <button className="country-mode-card daily" onClick={onChallenge}>
-      <span>📅</span><div><b>چالش روزانه</b><small>{dailyLabel}{daily && !daily.challenge.ended ? ` · ${countdown} باقی‌مانده` : ""}</small></div><i>←</i>
+    <button className="game-card world country-mode-card daily" onClick={onChallenge}>
+      <span className="game-icon">📅</span><span className="game-copy"><b>چالش روزانه</b><small>{dailyLabel}</small>{daily && !daily.challenge.ended && <small className="country-mode-countdown">تا چالش بعدی <span dir="ltr">{countdown}</span></small>}</span><span className="game-arrow">←</span>
     </button>
-    <button className="country-mode-card practice" onClick={onPractice}>
-      <span>🧭</span><div><b>تمرین آزاد</b><small>با هدف تصادفی تمرین کن؛ هر وقت خواستی برگرد</small></div><i>←</i>
+    <button className="game-card iran country-mode-card practice" onClick={onPractice}>
+      <span className="game-icon">🧭</span><span className="game-copy"><b>تمرین آزاد</b><small>با هدف تصادفی تمرین کن؛ بازی قبلی‌ات هم محفوظ است</small></span><span className="game-arrow">←</span>
     </button>
     <section className="country-mode-duel">
-      <div><b>رقابت دونفره</b><small>یک هدف مشترک، حداکثر ۲۰۰ ثانیه</small></div>
+      <div className="country-mode-duel-heading"><span className="game-icon">⚔️</span><div className="game-copy"><b>رقابت دونفره</b><small>یک کشور مشترک، حداکثر ۲۰۰ ثانیه</small></div></div>
       {running ? <div className="country-mode-searching"><span>در حال پیدا کردن حریف…</span><button className="secondary" disabled={matchBusy} onClick={onCancel}>لغو جست‌وجو</button></div> : <div className="country-mode-actions"><button className="primary" disabled={matchBusy} onClick={onFind}>پیدا کردن حریف</button><button className="secondary" onClick={onInvite}>دعوت از بازیکن آنلاین</button></div>}
     </section>
   </section>;

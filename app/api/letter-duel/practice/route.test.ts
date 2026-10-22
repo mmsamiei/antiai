@@ -1,0 +1,10 @@
+import {beforeEach,it,expect,vi} from "vitest";
+const mocks=vi.hoisted(()=>({currentUserId:vi.fn(),readLetterPractice:vi.fn(),submitLetterPractice:vi.fn()}));
+vi.mock("@/lib/auth",()=>({currentUserId:mocks.currentUserId}));vi.mock("@/lib/letter-duel-practice",()=>mocks);
+import {GET,POST} from "./route";
+const req=(body:unknown)=>new Request("https://example.test/api/letter-duel/practice",{method:"POST",body:JSON.stringify(body)});
+beforeEach(()=>{vi.resetAllMocks();mocks.currentUserId.mockReturnValue("me");mocks.readLetterPractice.mockResolvedValue({id:"round",letters:["ک","ب"]});mocks.submitLetterPractice.mockResolvedValue({round:{id:"round"},verdict:{accepted:true}});});
+it("requires an authenticated account",async()=>{mocks.currentUserId.mockReturnValue(null);expect((await GET()).status).toBe(401);expect((await POST(req({action:"new",roundId:"round"}))).status).toBe(401);expect(mocks.readLetterPractice).not.toHaveBeenCalled();});
+it.each([null,{},[],{action:"guess",roundId:"round"},{action:"new"},{action:"guess",roundId:"round",word:5}])("rejects malformed requests %j",async body=>{expect((await POST(req(body))).status).toBe(400);expect(mocks.submitLetterPractice).not.toHaveBeenCalled();});
+it("uses session ownership for words and new pairs",async()=>{await GET();expect(mocks.readLetterPractice).toHaveBeenCalledWith("me");await POST(req({action:"new",roundId:"old",userId:"other"}));expect(mocks.readLetterPractice).toHaveBeenCalledWith("me","old");await POST(req({action:"guess",roundId:"round",word:"کتاب",userId:"other"}));expect(mocks.submitLetterPractice).toHaveBeenCalledWith("me","round","کتاب");});
+it("reports a stale or foreign round without exposing it",async()=>{mocks.submitLetterPractice.mockRejectedValue(new Error("PRACTICE_ROUND_CHANGED"));expect((await POST(req({action:"guess",roundId:"other",word:"کتاب"}))).status).toBe(409);});

@@ -7,7 +7,7 @@ import { publicIdentity } from "./public-identity";
 export const MATCH_ONLINE_MS = 20_000;
 export const MATCH_OFFER_MS = 15_000;
 export const MATCH_COOLDOWN_MS = 20_000;
-import { geoRaceConfig, geoRaceType, type GeoRaceType } from "./geo-race-config";
+import { matchGameConfig, matchGameType, type MatchGameType } from "./match-game-config";
 type Tx = Prisma.TransactionClient;
 
 async function lockUsers(tx: Tx, ids: string[]) {
@@ -58,25 +58,25 @@ async function cancelSearchTx(tx: Tx, searchId: string, status: "CANCELLED" | "E
   void reason;
 }
 
-async function makeRaceTx(tx: Tx, senderId: string, recipientId: string, now: Date, searchId?: string, offerId?: string, gameType: GeoRaceType = "COUNTRY") {
+async function makeMatchRoomTx(tx: Tx, senderId: string, recipientId: string, now: Date, searchId?: string, offerId?: string, gameType: MatchGameType = "COUNTRY") {
   await lockUsers(tx, [senderId, recipientId]);
-  const countries = datasetFor(gameType);
-  const target = countries[randomInt(countries.length)];
-  const race = await tx.countryRace.create({ data: { gameType, playerOneId: senderId, playerTwoId: recipientId, targetId: target.id } });
+  const pool = gameType === "LETTER_DUEL" ? [] : datasetFor(gameType);
+  const race = gameType === "LETTER_DUEL" ? null : await tx.countryRace.create({ data: { gameType, playerOneId: senderId, playerTwoId: recipientId, targetId: pool[randomInt(pool.length)].id } });
+  const connection = gameType === "LETTER_DUEL" ? await tx.letterDuelConnection.create({ data: { mode: "PRIVATE", status: "WAITING", playerOneId: senderId, playerTwoId: recipientId } }) : null;
   const invite = await tx.duelInvite.create({ data: {
-    gameKind: geoRaceConfig[gameType].inviteKind, senderId, recipientId, countryRaceId: race.id,
+    source: "MATCHING", gameKind: matchGameConfig[gameType].inviteKind, senderId, recipientId, countryRaceId: race?.id, connectionId: connection?.id,
     status: "ACCEPTED", expiresAt: new Date(+now + MATCH_OFFER_MS), respondedAt: now,
     startDeadline: new Date(+now + MATCH_OFFER_MS),
   } });
   await tx.duelInvite.updateMany({ where: { id: { not: invite.id }, status: "PENDING", OR: [{ senderId: { in: [senderId, recipientId] } }, { recipientId: { in: [senderId, recipientId] } }] }, data: { status: "CANCELLED", reason: "یکی از بازیکن‌ها وارد مسابقه شد", respondedAt: now } });
   await tx.countryMatchSearch.updateMany({ where: { userId: { in: [senderId, recipientId] }, status: "ACTIVE" }, data: { status: "MATCHED" } });
-  if (searchId) await tx.countryMatchSearch.update({ where: { id: searchId }, data: { matchedRaceId: race.id } });
-  if (offerId) await tx.countryMatchOffer.update({ where: { id: offerId }, data: { status: "ACCEPTED", respondedAt: now, raceId: race.id } });
+  if (searchId && race) await tx.countryMatchSearch.update({ where: { id: searchId }, data: { matchedRaceId: race.id } });
+  if (offerId) await tx.countryMatchOffer.update({ where: { id: offerId }, data: { status: "ACCEPTED", respondedAt: now, raceId: race?.id } });
   await tx.countryMatchOffer.updateMany({ where: { status: "PENDING", OR: [{ senderId: { in: [senderId, recipientId] } }, { recipientId: { in: [senderId, recipientId] } }] }, data: { status: "CANCELLED", respondedAt: now } });
-  return race;
+  return { id: race?.id || connection!.id };
 }
 
-export async function startCountryMatch(userId: string, gameType: GeoRaceType = "COUNTRY") {
+export async function startCountryMatch(userId: string, gameType: MatchGameType = "COUNTRY") {
   return prisma.$transaction(async tx => {
     const now = new Date();
     await tx.$executeRaw`SELECT pg_advisory_xact_lock(728401, 902)`;
@@ -107,9 +107,10 @@ export async function readCountryMatch(userId: string) {
     const search = await tx.countryMatchSearch.findFirst({ where: { userId }, orderBy: { createdAt: "desc" }, include: { offers: { orderBy: { createdAt: "desc" }, take: 1, include: { sender: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } }, recipient: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } } } } } });
     const incoming = await tx.countryMatchOffer.findFirst({ where: { recipientId: userId, status: "PENDING" }, include: { search: { select: { gameType: true } }, sender: { select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } } } });
     if (search?.status === "ACTIVE") await tx.countryMatchSearch.update({ where: { id: search.id }, data: { lastSeenAt: now } });
-    const room = await tx.countryRace.findFirst({ where: { status: { in: ["WAITING", "ACTIVE"] }, AND: [{ OR: [{ playerOneId: userId }, { playerTwoId: userId }] }, { OR: [{ matchOffer: { isNot: null } }, { matchedSearch: { isNot: null } }] }] }, select: { id: true } });
-    const offer = incoming ? { ...incoming, gameType: geoRaceType(incoming.search.gameType), sender: { ...incoming.sender, username: incoming.sender.showUsername ? incoming.sender.username : null } } : null;
-    return { search: search ? { id: search.id, gameType: geoRaceType(search.gameType), status: search.status, createdAt: search.createdAt, offer: search.offers[0] ? { id: search.offers[0].id, status: search.offers[0].status, expiresAt: search.offers[0].expiresAt, recipient: publicIdentity(search.offers[0].recipient) } : null } : null, incoming: offer, roomId: room?.id ?? null, serverNow: now };
+    const room = await tx.countryRace.findFirst({ where: { status: { in: ["WAITING", "ACTIVE"] }, AND: [{ OR: [{ playerOneId: userId }, { playerTwoId: userId }] }, { OR: [{ matchOffer: { isNot: null } }, { matchedSearch: { isNot: null } }] }] }, select: { id: true, gameType: true } });
+    const duel = await tx.letterDuelConnection.findFirst({ where: { status: { in: ["WAITING", "ACTIVE"] }, OR: [{ playerOneId: userId }, { playerTwoId: userId }], directInvite: { is: { source: "MATCHING", status: "ACCEPTED" } } }, select: { id: true } });
+    const offer = incoming ? { ...incoming, gameType: matchGameType(incoming.search.gameType), sender: { ...incoming.sender, username: incoming.sender.showUsername ? incoming.sender.username : null } } : null;
+    return { search: search ? { id: search.id, gameType: matchGameType(search.gameType), status: search.status, createdAt: search.createdAt, offer: search.offers[0] ? { id: search.offers[0].id, status: search.offers[0].status, expiresAt: search.offers[0].expiresAt, recipient: publicIdentity(search.offers[0].recipient) } : null } : null, incoming: offer, roomId: room?.id ?? duel?.id ?? null, roomGameKind: room ? matchGameConfig[matchGameType(room.gameType)].inviteKind : duel ? "LETTER_DUEL" as const : null, serverNow: now };
   }, { isolationLevel: Prisma.TransactionIsolationLevel.Serializable });
 }
 
@@ -136,7 +137,7 @@ export async function respondToCountryMatch(userId: string, offerId: string, act
     const senderPresent = online.has(offer.senderId);
     if (!senderPresent) throw new Error("MATCH_SENDER_OFFLINE");
     const search = await tx.countryMatchSearch.findUniqueOrThrow({ where: { id: offer.searchId } });
-    const race = await makeRaceTx(tx, offer.senderId, offer.recipientId, now, offer.searchId, offerId, geoRaceType(search.gameType));
+    const race = await makeMatchRoomTx(tx, offer.senderId, offer.recipientId, now, offer.searchId, offerId, matchGameType(search.gameType));
     return { ok: true, raceId: race.id };
   }, { isolationLevel: Prisma.TransactionIsolationLevel.Serializable });
 }
@@ -185,13 +186,13 @@ export async function processCountryMatchTick() {
     }
     const waiting = await tx.countryMatchSearch.findMany({ where: { status: "ACTIVE", offers: { none: { status: "PENDING" } } }, orderBy: [{ createdAt: "asc" }, { id: "asc" }] });
     if (!waiting.length) return;
-    for (const gameType of ["COUNTRY", "IRAN_CITY"] as const) {
+    for (const gameType of ["COUNTRY", "IRAN_CITY", "LETTER_DUEL"] as const) {
     const sameGame = waiting.filter(search => search.gameType === gameType);
     const oldest = sameGame[0];
     if (!oldest) continue;
     const secondQueued = sameGame.find(search => search.id !== oldest.id);
     if (secondQueued) {
-      await makeRaceTx(tx, oldest.userId, secondQueued.userId, now, oldest.id, undefined, gameType);
+      await makeMatchRoomTx(tx, oldest.userId, secondQueued.userId, now, oldest.id, undefined, gameType);
       continue;
     }
     const attempted = await tx.countryMatchOffer.findMany({ where: { searchId: oldest.id }, select: { recipientId: true } });

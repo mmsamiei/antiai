@@ -22,11 +22,19 @@ const JUDGE_VERSION = 2;
 export function randomPersianLetter(random = Math.random) { return PERSIAN_LETTERS[Math.floor(random() * PERSIAN_LETTERS.length)]; }
 export function validateLetterWord(raw: string, letters: string[]) {
   const word = normalizePersian(raw);
-  if (!word || word.length < 2 || word.length > 32 || word.includes(" ") || !/^[\u0600-\u06ff]+$/u.test(word)) return { word, valid: false, reason: "یک واژهٔ فارسی و تک‌کلمه‌ای بنویس." };
+  if (word.length < 3) return { word, valid: false, reason: "واژه باید دست‌کم سه حرف داشته باشد." };
+  if (!word || word.length < 3 || word.length > 32 || word.includes(" ") || !/^[\u0600-\u06ff]+$/u.test(word)) return { word, valid: false, reason: "یک واژهٔ فارسی و تک‌کلمه‌ای بنویس." };
   const needed = new Map<string, number>();
   for (const letter of letters) needed.set(letter, (needed.get(letter) || 0) + 1);
   for (const [letter, count] of needed) if ([...word].filter((item) => item === letter).length < count) return { word, valid: false, reason: `واژه باید حرف «${letter}» را${count > 1 ? ` ${count.toLocaleString("fa-IR")} بار` : ""} داشته باشد.` };
   return { word, valid: true, reason: "" };
+}
+const practiceWords = [...localWords].filter(word => word.length >= 3 && word.length <= 32 && [...word].every(letter => PERSIAN_LETTERS.includes(letter)));
+export function randomPracticeLetters(): [string, string] {
+  const letters = [...practiceWords[crypto.randomInt(practiceWords.length)]];
+  const first = crypto.randomInt(letters.length);
+  const second = (first + 1 + crypto.randomInt(letters.length - 1)) % letters.length;
+  return [letters[first], letters[second]];
 }
 export function duelWinRate(wins: number, total: number) { return total ? wins / total : 0; }
 export function isLocalDuelWord(raw: string) { return localWords.has(normalizePersian(raw)); }
@@ -84,7 +92,7 @@ async function finalizeJudgments(roundId: string) {
   const round = await prisma.letterDuelRound.findUnique({ where: { id: roundId } });
   if (round?.answerDeadline && round.answerDeadline <= new Date() && !submissions.some((s) => s.status === "PENDING")) return resolveRound(roundId, null, null, "زمان تمام شد");
 }
-async function judgeWord(word: string) {
+export async function judgeWord(word: string) {
   if (isLocalDuelWord(word)) return { accepted: true, reason: "واژه در واژه‌نامه ثبت شده است." };
   const cached = await prisma.letterDuelWordJudgment.findUnique({ where: { word } });
   if (cached && (cached.accepted || cached.judgeVersion === JUDGE_VERSION)) return { accepted: cached.accepted, reason: cached.reason || "" };

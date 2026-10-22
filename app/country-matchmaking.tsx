@@ -1,17 +1,19 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { geoRaceConfig, type GeoRaceType } from "@/lib/geo-race-config";
+import { matchGameConfig, type MatchGameType } from "@/lib/match-game-config";
+import type { InviteGame } from "./players";
 import { sessionRequest } from "@/lib/client-session";
 import { Player, PlayerAvatar, playerName } from "./players";
 const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
-type Offer = { gameType: GeoRaceType; id: string; expiresAt: string; sender: Player };
+type Offer = { gameType: MatchGameType; id: string; expiresAt: string; sender: Player };
 export type MatchState = {
-  search: null | { gameType: GeoRaceType; id: string; status: string; createdAt: string; offer: null | { id: string; status: string; expiresAt: string; recipient: Player } };
+  search: null | { gameType: MatchGameType; id: string; status: string; createdAt: string; offer: null | { id: string; status: string; expiresAt: string; recipient: Player } };
   incoming: Offer | null;
   roomId: string | null;
+  roomGameKind: InviteGame | null;
   serverNow: string;
 };
-export function useCountryMatchmaking({ userId, onError, onMatch }: { userId: string | null; onError: (message: string) => void; onMatch: (roomId: string) => void }) {
+export function useCountryMatchmaking({ userId, onError, onMatch }: { userId: string | null; onError: (message: string) => void; onMatch: (roomId: string, gameKind: InviteGame) => void }) {
   const [state, setState] = useState<MatchState | null>(null), [busy, setBusy] = useState(false);
   const polling = useRef(false), actionBusy = useRef(false), sequence = useRef(0), applied = useRef(0);
   const latestError = useRef(onError); latestError.current = onError;
@@ -21,7 +23,7 @@ export function useCountryMatchmaking({ userId, onError, onMatch }: { userId: st
     if (version < applied.current) return;
     applied.current = version; setState(data);
     if (data.roomId && joinedRoom.current !== data.roomId) {
-      joinedRoom.current = data.roomId; latestMatch.current(data.roomId);
+      joinedRoom.current = data.roomId; latestMatch.current(data.roomId, data.roomGameKind || "COUNTRY_RACE");
     }
   }, []);
   const refresh = useCallback(async () => {
@@ -41,7 +43,7 @@ export function useCountryMatchmaking({ userId, onError, onMatch }: { userId: st
     poll(); const timer = window.setInterval(poll, watchingMatch ? 1_000 : 2_000); document.addEventListener("visibilitychange", poll);
     return () => { stopped = true; clearInterval(timer); document.removeEventListener("visibilitychange", poll); };
   }, [userId, refresh, watchingMatch]);
-  const action = useCallback(async (action: "start" | "cancel" | "accept" | "reject", offerId?: string, gameType?: GeoRaceType) => {
+  const action = useCallback(async (action: "start" | "cancel" | "accept" | "reject", offerId?: string, gameType?: MatchGameType) => {
     if (actionBusy.current) return false;
     actionBusy.current = true; setBusy(true);
     const version = ++sequence.current;
@@ -70,9 +72,9 @@ export function CountryMatchBanner({ state, busy, action }: { state: MatchState 
   const incoming = state?.incoming;
   if (!state) return null;
   const search = state.search?.status === "ACTIVE" ? state.search : null;
-  const name = search?.gameType === "IRAN_CITY" ? "شهرجو" : "کشورجو";
-  const incomingName = incoming?.gameType === "IRAN_CITY" ? "شهرجو" : "کشورجو";
-  const incomingConfig = geoRaceConfig[incoming?.gameType || "COUNTRY"];
+  const name = matchGameConfig[search?.gameType || "COUNTRY"].name;
+  const incomingName = matchGameConfig[incoming?.gameType || "COUNTRY"].name;
+  const incomingConfig = matchGameConfig[incoming?.gameType || "COUNTRY"];
   const pending = search?.offer?.status === "PENDING" ? search.offer : null;
   return <>
     {search && <aside className="outgoing-invitation" aria-live="polite">
@@ -83,7 +85,7 @@ export function CountryMatchBanner({ state, busy, action }: { state: MatchState 
     <section className="game-invite-picker country-match-offer" role="dialog" aria-modal="true" aria-label={`پیشنهاد بازی ${incomingName}`} onClick={e => e.stopPropagation()}>
       <button className="invite-dismiss" aria-label="بستن اعلان" onClick={() => setDismissed(incoming.id)}>×</button>
       <div className="player-identity"><PlayerAvatar player={incoming.sender} online/><div><b>{playerName(incoming.sender)}</b><p>حاضری با {playerName(incoming.sender)} {incomingName} بازی کنی؟</p></div></div>
-      <small className="players-hint">پیشنهاد سیستم · یک {incomingConfig.noun} مشترک، حداکثر {incomingConfig.durationText}</small>
+      <small className="players-hint">پیشنهاد سیستم · {incomingConfig.description}</small>
       <Remaining expiresAt={incoming.expiresAt} serverNow={state.serverNow}/>
       <div className="invite-actions"><button className="primary" disabled={busy} onClick={() => void action("accept", incoming.id)}>{busy ? "…" : "قبول و رفتن به بازی"}</button><button className="secondary" disabled={busy} onClick={() => void action("reject", incoming.id)}>رد</button></div>
     </section>

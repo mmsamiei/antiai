@@ -426,8 +426,8 @@ export default function LetterDuel({
             </div>
             <p>
               {round.letters?.[0] === round.letters?.[1]
-                ? "این حرف باید دو بار در واژه باشد."
-                : "واژه‌ای بساز که هر دو حرف را داشته باشد."}
+                ? "واژه باید حداقل سه حرف داشته باشد و این حرف دو بار در آن بیاید."
+                : "واژه‌ای با حداقل سه حرف بساز که هر دو حرف را داشته باشد."}
             </p>
           </div>
           <div className="search-box">
@@ -438,7 +438,7 @@ export default function LetterDuel({
                 onKeyDown={(event) => {
                   if (event.key === "Enter") submit();
                 }}
-                placeholder="یک واژهٔ فارسی…"
+                placeholder="یک واژهٔ حداقل سه‌حرفی…"
                 disabled={round.status === "JUDGING"}
               />
               <button

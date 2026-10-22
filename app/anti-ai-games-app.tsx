@@ -13,6 +13,8 @@ import { useGeographySearch } from "@/lib/use-geography-search";
 import CountryRace from "./country-race";
 import CountryChallenge from "./country-challenge";
 import { CountryMatchBanner, useCountryMatchmaking, type MatchState } from "./country-matchmaking";
+import LetterDuelPractice, { LetterDuelMode } from "./letter-duel-practice";
+import { matchGameConfig } from "@/lib/match-game-config";
 import LetterDuel from "./letter-duel";
 import WordWeaver from "./word-weaver";
 import OnlineAvatar from "./online-avatar";
@@ -125,7 +127,7 @@ type PublicProfile = {
     };
   };
 };
-type Screen = "country-race" | "country-mode" | "country-challenge" | "home" | "play" | "duel" | "word-weaver" | "leaderboard" | "players";
+type Screen = "duel-mode" | "duel-practice" | "country-race" | "country-mode" | "country-challenge" | "home" | "play" | "duel" | "word-weaver" | "leaderboard" | "players";
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const TELEGRAM_BOT_USERNAME = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || "";
 
@@ -166,7 +168,7 @@ const gameMeta: Record<
   LETTER_DUEL: {
     title: "دوحرف",
     icon: "ح‌ح",
-    description: "با یک حریف، از دو حرف واژه بساز",
+    description: "تمرین یا رقابت؛ از دو حرف، واژهٔ حداقل سه‌حرفی بساز",
     hint: "یک واژهٔ فارسی بنویس…",
   },
   SEMANTRIS: {
@@ -229,7 +231,11 @@ export default function AntiAiGamesApp() {
   const [inviteGameChoice, setInviteGameChoice] = useState<InviteGame | null>(null);
   useBackHandler(() => setInviteRecipient(null), Boolean(inviteRecipient), 50);
   const multiplayerLeave = useRef<null | (() => Promise<void>)>(null);
-  const countryMatch = useCountryMatchmaking({ userId: user ? String(user.id) : null, onError: setError, onMatch: roomId => {
+  const countryMatch = useCountryMatchmaking({ userId: user ? String(user.id) : null, onError: setError, onMatch: (roomId, gameKind) => {
+    if (gameKind === "LETTER_DUEL") {
+      if (directDuelId === roomId && screen === "duel") return;
+      setDirectDuelId(roomId); setProfileUserId(null); setInviteRecipient(null); previousScreens.current = []; setScreen("duel"); return;
+    }
     if (raceId === roomId && screen === "country-race") return;
     setRaceId(roomId); setProfileUserId(null); setInviteRecipient(null);
     try { sessionStorage.setItem(`antiai-country-race:${user.id}`, roomId); } catch {}
@@ -239,12 +245,12 @@ export default function AntiAiGamesApp() {
     userId: user ? String(user.id) : null,
     onError: setError,
     beforeAccept: async (invite) => {
-      if ((game?.status === "ACTIVE" || screen === "duel" || screen === "country-race" || screen === "word-weaver") && !window.confirm(`رفتن به ${inviteGameName(invite.gameKind)} با ${playerName(invite.sender)}؟ از صفحهٔ بازی فعلی خارج می‌شوی.`)) return false;
+      if ((game?.status === "ACTIVE" || screen === "duel" || screen === "duel-practice" || screen === "country-challenge" || screen === "country-race" || screen === "word-weaver") && !window.confirm(`رفتن به ${inviteGameName(invite.gameKind)} با ${playerName(invite.sender)}؟ از صفحهٔ بازی فعلی خارج می‌شوی.`)) return false;
       if (multiplayerLeave.current) await multiplayerLeave.current();
       return true;
     },
     onJoin: async (connectionId, _inviteId, gameKind) => {
-      if (raceId === connectionId && screen === "country-race") return;
+      if (raceId === connectionId && screen === "country-race" || directDuelId === connectionId && screen === "duel") return;
       if (multiplayerLeave.current && screen !== "duel" && screen !== "country-race") await multiplayerLeave.current();
       // Readiness is acknowledged by the mounted duel screen, not by the notification.
       if ((gameKind === "COUNTRY_RACE" || gameKind === "CITY_RACE")) {
@@ -340,7 +346,7 @@ export default function AntiAiGamesApp() {
     if (!user) return;
     const isPlaying = screen === "play" && game?.status === "ACTIVE";
     if (!presenceClientId.current) presenceClientId.current = window.crypto.randomUUID();
-    const context = isPlaying || screen === "country-challenge" || screen === "duel" || screen === "country-race" || screen === "word-weaver" ? "GAME" : "MENU";
+    const context = isPlaying || screen === "duel-practice" || screen === "country-challenge" || screen === "duel" || screen === "country-race" || screen === "word-weaver" ? "GAME" : "MENU";
     const heartbeat = () => {
       if (document.visibilityState !== "visible") return;
       jsonFetch<{ onlineCount: number; randomDuelWaiting: boolean }>("/api/presence", {
@@ -418,7 +424,7 @@ export default function AntiAiGamesApp() {
   return (
     <BackHandlersContext.Provider value={backHandlers}>
     <main className="shell">
-      {screen !== "play" && screen !== "duel" && screen !== "country-race" && screen !== "country-challenge" && screen !== "word-weaver" && (
+      {screen !== "duel-practice" && screen !== "play" && screen !== "duel" && screen !== "country-race" && screen !== "country-challenge" && screen !== "word-weaver" && (
         <Header
           user={user}
           onHome={exitGame}
@@ -438,11 +444,13 @@ export default function AntiAiGamesApp() {
           randomDuelWaiting={randomDuelWaiting}
           busy={busy}
           onStart={startGame}
-          onDuel={() => { setDirectDuelId(null); navigate("duel"); }}
+          onDuel={() => { setDirectDuelId(null); navigate("duel-mode"); }}
           onCountryMode={type => { setGeographyType(type); navigate("country-mode"); }}
           onWordWeaver={() => navigate("word-weaver")}
         />
       )}
+      {screen === "duel-mode" && <LetterDuelMode state={countryMatch.state} busy={countryMatch.busy} onBack={back} onPractice={() => navigate("duel-practice")} onFind={() => void countryMatch.action("start", undefined, "LETTER_DUEL")} onCancel={() => void countryMatch.action("cancel")} onInvite={() => { setInviteGameChoice("LETTER_DUEL"); navigate("players"); }} />}
+      {screen === "duel-practice" && <LetterDuelPractice onBack={back} setError={setError} />}
       {screen === "country-mode" && <CountryModePicker key={geographyType} gameType={geographyType} matchState={countryMatch.state} matchBusy={countryMatch.busy} onBack={back} onChallenge={() => navigate("country-challenge")} onPractice={() => void startGame(geographyType)} onFind={() => void countryMatch.action("start", undefined, geographyType)} onCancel={() => void countryMatch.action("cancel")} onInvite={() => { setInviteGameChoice(geoRaceConfig[geographyType].inviteKind); navigate("players"); }} />}
       {screen === "country-challenge" && <CountryChallenge key={geographyType} gameType={geographyType} onBack={back} onLeaderboard={() => { setLeaderboardType(geographyType); navigate("leaderboard"); }} setError={setError} />}
       {screen === "players" && <Players me={String(user.id)} state={invitations.state} busy={invitations.busy} onAction={invitations.action} onSend={id => { const kind = inviteGameChoice; setInviteGameChoice(null); if (kind) void sendDirectInvite(id, kind); else setInviteRecipient(id); }} onProfile={setProfileUserId} onBack={back} />}
@@ -497,7 +505,7 @@ export default function AntiAiGamesApp() {
           onClose={back}
         />
       )}
-      {screen !== "play" && screen !== "duel" && screen !== "country-race" && screen !== "country-challenge" && screen !== "word-weaver" && (
+      {screen !== "duel-practice" && screen !== "play" && screen !== "duel" && screen !== "country-race" && screen !== "country-challenge" && screen !== "word-weaver" && (
         <BottomNav invitationCount={invitations.state?.invites.filter(i => i.recipientId === String(user.id) && i.status === "PENDING").length || 0} active={screen} onChange={(next) => next === "home" ? exitGame() : navigate(next)} />
       )}
     </main>
@@ -670,7 +678,7 @@ function CountryModePicker({ gameType, matchState, matchBusy, onBack, onChalleng
     </button>
     <section className="country-mode-duel">
       <div className="country-mode-duel-heading"><span className="game-icon">⚔️</span><div className="game-copy"><b>رقابت دونفره</b><small>یک {config.noun} مشترک، حداکثر {config.durationText}</small></div></div>
-      {running ? <div className="country-mode-searching"><span>در حال پیدا کردن حریف {matchState?.search?.gameType === "IRAN_CITY" ? "شهرجو" : "کشورجو"}…</span><button className="secondary" disabled={matchBusy} onClick={onCancel}>لغو جست‌وجو</button></div> : <div className="country-mode-actions"><button className="primary" disabled={matchBusy} onClick={onFind}>پیدا کردن حریف</button><button className="secondary" onClick={onInvite}>دعوت از بازیکن آنلاین</button></div>}
+      {running ? <div className="country-mode-searching"><span>در حال پیدا کردن حریف {matchGameConfig[matchState?.search?.gameType || "COUNTRY"].name}…</span><button className="secondary" disabled={matchBusy} onClick={onCancel}>لغو جست‌وجو</button></div> : <div className="country-mode-actions"><button className="primary" disabled={matchBusy} onClick={onFind}>پیدا کردن حریف</button><button className="secondary" onClick={onInvite}>دعوت از بازیکن آنلاین</button></div>}
     </section>
   </section>;
 }

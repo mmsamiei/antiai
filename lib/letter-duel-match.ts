@@ -1,3 +1,4 @@
+import { rateMatch } from "./competitive-rating";
 import type { Prisma } from "@prisma/client";
 
 export const DUEL_TARGET_WINS = 10;
@@ -16,6 +17,7 @@ export async function endDuelMatch(tx: Prisma.TransactionClient, connectionId: s
   await tx.$queryRaw`SELECT "id" FROM "LetterDuelConnection" WHERE "id" = ${connectionId} FOR UPDATE`;
   const room = await tx.letterDuelConnection.findUnique({ where: { id: connectionId } });
   if (!room || room.status === "ENDED") return;
+  if (room.status === "ACTIVE" && room.playerTwoId) await rateMatch(tx, `duel:${connectionId}`, "LETTER_DUEL", room.playerOneId, room.playerTwoId, winnerUserId);
   await tx.gameSession.updateMany({ where: { status: "ACTIVE", letterDuelRound: { connectionId } }, data: { status: "SURRENDERED", finishedAt: now } });
   await tx.letterDuelRound.updateMany({ where: { connectionId, status: { in: ["PICKING", "ANSWERING", "JUDGING"] } }, data: { status: "CANCELLED", resolvedAt: now } });
   await tx.letterDuelConnection.update({ where: { id: connectionId }, data: { status: "ENDED", endedAt: now, matchWinnerUserId: winnerUserId, endReason: reason, stateVersion: { increment: 1 } } });

@@ -10,7 +10,7 @@ import { useBackHandler } from "./back-navigation";
 import { Player, PlayerAvatar, playerName } from "./players";
 const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
 type Guess = { id: string; name: string; emoji?: string; rank: number; detail?: string; provinceName?: string };
-type Race = { id: string; gameType: GeoRaceType; totalItems: number; status: string; deadline: string | null; serverNow: string; me: Player; opponent: Player; myBestRank: number | null; opponentBestRank: number | null; opponentConnected: boolean; reconnectDeadline: string; guesses: Guess[]; opponentGuesses?: Guess[]; target?: { name: string; emoji?: string; description?: string }; winnerUserId: string | null; endReason: string | null; invite: { id: string; reason: string | null } | null };
+type Race = { ratingChange?: { before: number; after: number; delta: number } | null; id: string; gameType: GeoRaceType; totalItems: number; status: string; deadline: string | null; serverNow: string; me: Player; opponent: Player; myBestRank: number | null; opponentBestRank: number | null; opponentConnected: boolean; reconnectDeadline: string; guesses: Guess[]; opponentGuesses?: Guess[]; target?: { name: string; emoji?: string; description?: string }; winnerUserId: string | null; endReason: string | null; invite: { id: string; reason: string | null } | null };
 const rankText = (rank: number | null) => rank === null ? "—" : rank === 0 ? "پیدا شد!" : rank.toLocaleString("fa-IR");
 async function request(url: string, body?: unknown) {
   const response = await fetch(base + url, sessionRequest(body ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) } : undefined));
@@ -99,6 +99,7 @@ export default function CountryRace({ id, onExit, setError, onProfile, registerL
       {ended && <div className={"duel-result " + (race.winnerUserId ? won ? "won" : "lost" : "draw")}>
         <span>{race.winnerUserId ? won ? "🏆" : "◌" : "🤝"}</span><h2>{race.winnerUserId ? won ? "مسابقه را بردی!" : "حریف مسابقه را برد" : race.endReason === "CANCELLED" ? "شروع مسابقه لغو شد" : "مسابقه مساوی شد"}</h2>
         <p>{race.endReason === "FOUND" ? `${config.noun} هدف پیدا شد.` : race.endReason === "TIMEOUT" ? `${config.durationText} تمام شد؛ نتیجه بر اساس بهترین رتبهٔ هر نفر است.` : race.endReason === "FORFEIT" ? "مسابقه با واگذاری پایان یافت." : race.endReason === "DISCONNECTED" ? "مهلت بازگشت به مسابقه تمام شد." : race.invite?.reason}</p>
+        {race.ratingChange && <p>امتیاز رقابتی: <b dir="ltr">{race.ratingChange.before.toLocaleString("fa-IR")} → {race.ratingChange.after.toLocaleString("fa-IR")} ({race.ratingChange.delta > 0 ? "+" : ""}{race.ratingChange.delta.toLocaleString("fa-IR")})</b></p>}
         {race.target && <><strong>{race.target.emoji} {race.target.name}</strong><p>{race.target.description}</p></>}
         <div className="duel-rematch"><button className="primary" disabled={busy || invited} onClick={async () => { setBusy(true); try { await act("rematch"); setInvited(true); } catch (e) { setError(e instanceof Error ? e.message : "دعوت ارسال نشد"); } finally { setBusy(false); } }}>{invited ? "دعوت فرستاده شد؛ منتظر پاسخ حریف" : "بازی مجدد با همین حریف"}</button><button className="secondary" onClick={onExit}>بازگشت به بازیکن‌ها</button></div>
       </div>}

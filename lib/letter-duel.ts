@@ -1,3 +1,4 @@
+import { ownRatingChange } from "./competitive-rating";
 import crypto from "crypto";
 import { publicDisplayName, publicUsername } from "./public-identity";
 import { countryRaceBusy } from "./country-race-state";
@@ -259,7 +260,8 @@ export async function serializeDuel(userId: string, requestedId?: string | null)
   const scores = await prisma.gameSession.groupBy({ by: ["userId"], where: { userId: { in: [fresh.playerOneId, fresh.playerTwoId || ""] }, status: "WON", letterDuelRound: { connectionId: fresh.id } }, _count: { _all: true } });
   const score = new Map(scores.map((s) => [s.userId, s._count._all]));
   const reveal = round && ["ANSWERING", "JUDGING", "RESOLVED"].includes(round.status);
-  return { targetWins: DUEL_TARGET_WINS, matchWinnerUserId: fresh.matchWinnerUserId, endReason: fresh.endReason, rematchConnectionId: fresh.rematchConnectionId,
+  const ratingChange = fresh.status === "ENDED" ? ownRatingChange(await prisma.competitiveResult.findUnique({ where: { matchKey: `duel:${fresh.id}` } }), userId) : null;
+  return { ratingChange, targetWins: DUEL_TARGET_WINS, matchWinnerUserId: fresh.matchWinnerUserId, endReason: fresh.endReason, rematchConnectionId: fresh.rematchConnectionId,
     myRematchPending: Boolean((isOne ? fresh.rematchOneAt : fresh.rematchTwoAt) && Date.now() - (isOne ? fresh.rematchOneAt! : fresh.rematchTwoAt!).getTime() < DUEL_REMATCH_MS),
     opponentRematchPending: Boolean((isOne ? fresh.rematchTwoAt : fresh.rematchOneAt) && Date.now() - (isOne ? fresh.rematchTwoAt! : fresh.rematchOneAt!).getTime() < DUEL_REMATCH_MS),
     directInvite: fresh.directInvite, id: fresh.id, mode: fresh.mode, status: fresh.status, inviteToken: isOne ? fresh.inviteToken : null, stateVersion: fresh.stateVersion, me: userPublic(isOne ? fresh.playerOne : fresh.playerTwo), opponent: userPublic(opponent), myScore: score.get(userId) || 0, opponentScore: score.get(opponent?.id || "") || 0, opponentConnected: !opponent ? false : new Date().getTime() - (isOne ? fresh.playerTwoHeartbeat?.getTime() || 0 : fresh.playerOneHeartbeat.getTime()) < 10_000, reconnectDeadline: opponent ? new Date((isOne ? fresh.playerTwoHeartbeat?.getTime() || 0 : fresh.playerOneHeartbeat.getTime()) + RECONNECT_MS) : null, serverNow: new Date(), round: round ? { id: round.id, number: round.number, status: round.status, deadline: (round.status === "PICKING" ? round.pickDeadline : round.answerDeadline), myLetterChosen: Boolean(isOne ? round.playerOneLetter : round.playerTwoLetter), letters: reveal ? [round.playerOneLetter, round.playerTwoLetter] : null, winnerUserId: round.status === "RESOLVED" ? round.winnerUserId : null, winningWord: round.status === "RESOLVED" ? round.winningWord : null, resultReason: round.status === "RESOLVED" ? round.resultReason : null, lastSubmission: round.submissions[0] || null } : null };

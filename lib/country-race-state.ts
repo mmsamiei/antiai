@@ -1,3 +1,4 @@
+import { rateMatch } from "./competitive-rating";
 import type { CountryRace, Prisma } from "@prisma/client";
 
 export const COUNTRY_RACE_MS = 200_000;
@@ -21,6 +22,7 @@ export async function advanceCountryRace(tx: Prisma.TransactionClient, initial: 
     const best = await tx.countryRaceGuess.groupBy({ by: ["userId"], where: { raceId: room.id }, _min: { rank: true } });
     winner = raceTimeoutWinner(room.playerOneId, room.playerTwoId, best.find(x => x.userId === room.playerOneId)?._min.rank ?? null, best.find(x => x.userId === room.playerTwoId)?._min.rank ?? null);
   } else winner = oneGone === twoGone ? null : oneGone ? room.playerTwoId : room.playerOneId;
+  await rateMatch(tx, `race:${room.id}`, room.gameType, room.playerOneId, room.playerTwoId, winner);
   return tx.countryRace.update({ where: { id: room.id }, data: { status: "ENDED", endedAt: now, winnerUserId: winner, endReason: timedOut ? "TIMEOUT" : "DISCONNECTED" } });
 }
 export async function countryRaceBusy(tx: Prisma.TransactionClient, ids: string[]) {

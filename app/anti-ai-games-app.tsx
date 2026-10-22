@@ -79,6 +79,8 @@ type Game = {
 };
 type LeaderChallenge = { id: string; startsAt: string; endsAt: string; ended: boolean; target?: string | null };
 type LeaderRow = {
+  rating?: number;
+  challengeTotal?: boolean;
   guessCount?: number;
   bestGuess?: string;
   rank: number;
@@ -1540,6 +1542,7 @@ function Leaderboard({
   const [period, setPeriod] = useState<"challenge" | "week" | "all">(initialChallenge || initialType === "PHRASE_HUNT" ? "challenge" : "week"),
     [mode, setMode] = useState<"effort" | "skill">("effort"),
     [type, setType] = useState<GameType>(initialType);
+  const [board, setBoard] = useState<"practice" | "challenge" | "competitive">(initialType === "LETTER_DUEL" ? "competitive" : initialChallenge || initialType === "PHRASE_HUNT" ? "challenge" : "practice");
   const [rows, setRows] = useState<LeaderRow[]>([]),
     [me, setMe] = useState<LeaderRow | null>(null),
     [loading, setLoading] = useState(true);
@@ -1549,7 +1552,7 @@ function Leaderboard({
   const [boardError, setBoardError] = useState(false);
   const requestId = useRef(0);
   const isPhraseHunt = type === "PHRASE_HUNT";
-  const isCountryChallenge = (type === "COUNTRY" || type === "IRAN_CITY") && period === "challenge";
+  const isCountryChallenge = (type === "COUNTRY" || type === "IRAN_CITY") && board === "challenge" && period === "challenge";
   const hasChallenges = isPhraseHunt || type === "COUNTRY" || type === "IRAN_CITY";
   const isSemantris = type === "SEMANTRIS",
     isDuel = type === "LETTER_DUEL";
@@ -1559,7 +1562,7 @@ function Leaderboard({
     const load = () => {
       const id = ++requestId.current;
       jsonFetch<{ rows: LeaderRow[]; me: LeaderRow | null; challenges?: LeaderChallenge[]; challenge?: LeaderChallenge }>(
-        `/api/leaderboard?period=${period}&type=${type}&mode=${mode}${period === "challenge" && challengeId ? `&challengeId=${encodeURIComponent(challengeId)}` : ""}`,
+        `/api/leaderboard?board=${board}&period=${board !== "challenge" && period === "challenge" ? "week" : period}&type=${type}&mode=${mode}${board === "challenge" && period === "challenge" && challengeId ? `&challengeId=${encodeURIComponent(challengeId)}` : ""}`,
       )
         .then((data) => {
           if (!active || id !== requestId.current) return;
@@ -1584,7 +1587,7 @@ function Leaderboard({
       if (timer !== null) window.clearInterval(timer);
       document.removeEventListener("visibilitychange", onVisibility);
     };
-  }, [period, type, mode, challengeId, isCountryChallenge]);
+  }, [board, period, type, mode, challengeId, isCountryChallenge]);
   return (
     <section>
       <div className="section-heading leaderboard-heading">
@@ -1613,25 +1616,33 @@ function Leaderboard({
             </button>
             <button
               className={type === "PHRASE_HUNT" ? "active" : ""}
-              onClick={() => { setType("PHRASE_HUNT"); setPeriod("challenge"); setChallengeId(""); }}
+              onClick={() => { setType("PHRASE_HUNT"); setBoard("challenge"); setPeriod("challenge"); setChallengeId(""); }}
             >
               معناجو
             </button>
             <button
               className={isSemantris ? "active" : ""}
-              onClick={() => { setType("SEMANTRIS"); setChallengeId(""); if (period === "challenge") setPeriod("week"); }}
+              onClick={() => { setType("SEMANTRIS"); setBoard("practice"); setChallengeId(""); if (period === "challenge") setPeriod("week"); }}
             >
               معناتریس
             </button>
             <button
               className={isDuel ? "active" : ""}
-              onClick={() => { setType("LETTER_DUEL"); setChallengeId(""); if (period === "challenge") setPeriod("week"); }}
+              onClick={() => { setType("LETTER_DUEL"); setBoard("competitive"); setChallengeId(""); if (period === "challenge") setPeriod("week"); }}
             >
               دوحرف
             </button>
           </div>
         </div>
-        {!isPhraseHunt && !isCountryChallenge && (
+        <div className="leader-filter-group">
+          <span className="leader-filter-label">حالت</span>
+          <div className="leader-toggle leader-mode-toggle">
+            {!isPhraseHunt && !isDuel && <button className={board === "practice" ? "active" : ""} onClick={() => { setBoard("practice"); setPeriod("week"); }}>تمرین</button>}
+            {hasChallenges && <button className={board === "challenge" ? "active" : ""} onClick={() => { setBoard("challenge"); setPeriod("challenge"); }}>چالش</button>}
+            {(type === "COUNTRY" || type === "IRAN_CITY" || isDuel) && <button className={board === "competitive" ? "active" : ""} onClick={() => setBoard("competitive")}>رقابتی</button>}
+          </div>
+        </div>
+        {board === "practice" && (
         <div className="leader-filter-group">
           <span className="leader-filter-label">رتبه‌بندی</span>
           <div className="leader-toggle">
@@ -1650,10 +1661,11 @@ function Leaderboard({
           </div>
         </div>
         )}
-        <div className="leader-filter-group">
-          <span className="leader-filter-label">بازهٔ زمانی</span>
-          <div className={hasChallenges ? "leader-toggle leader-three-tabs" : "leader-toggle"}>
-            {hasChallenges && <button className={period === "challenge" ? "active" : ""} onClick={() => setPeriod("challenge")}>چالش‌ها</button>}
+        {board !== "competitive" && <div className="leader-filter-group">
+          <span className="leader-filter-label">{board === "challenge" ? "نمایش نتایج" : "بازهٔ زمانی"}</span>
+          <div className={board === "challenge" ? "leader-toggle leader-three-tabs" : "leader-toggle"}>
+            {board === "challenge" && <button className={period === "challenge" ? "active" : ""} onClick={() => setPeriod("challenge")}>انتخاب چالش</button>}
+
             <button
               className={period === "week" ? "active" : ""}
               onClick={() => setPeriod("week")}
@@ -1667,9 +1679,9 @@ function Leaderboard({
               همهٔ دوران
             </button>
           </div>
-        </div>
+        </div>}
       </div>
-      {hasChallenges && period === "challenge" && <div className="leader-challenge-picker">
+      {hasChallenges && board === "challenge" && period === "challenge" && <div className="leader-challenge-picker">
         <label htmlFor="leader-challenge">انتخاب چالش</label>
         <select id="leader-challenge" value={challengeId || challenge?.id || ""} onChange={e => setChallengeId(e.target.value)}>
           {challenges.map(c => <option key={c.id} value={c.id}>{new Date(c.startsAt).toLocaleString("fa-IR", { timeZone: "Asia/Tehran", year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })} · {c.ended ? "پایان‌یافته" : "در حال برگزاری"}</option>)}
@@ -1678,7 +1690,7 @@ function Leaderboard({
         <small>{isCountryChallenge ? "حل‌کنندگان با حدس کمتر و سپس زمان حل؛ بقیه با رتبهٔ بهتر و سپس زمان رسیدن به آن" : "امتیاز بیشتر؛ در امتیاز برابر، زمان زودترِ رسیدن به آن امتیاز"}</small>
       </div>}
       {isPhraseHunt && period !== "challenge" && <p className="board-note">مجموع بهترین امتیاز هر چالش · امتیاز چالش جاری هم حساب می‌شود · هفته از شنبه به وقت تهران</p>}
-      {!isPhraseHunt && mode === "skill" && (
+      {board === "practice" && !isPhraseHunt && mode === "skill" && (
         <p className="board-note">
           {isDuel
             ? "نرخ برد = دورهای برده ÷ همهٔ دورها · حداقل ۱۰ دور"
@@ -1687,11 +1699,13 @@ function Leaderboard({
               : "امتیاز مهارت = مجموع حدس‌های بازی‌های تمام‌شده ÷ تعداد بردها · حداقل ۳ برد"}
         </p>
       )}
+      {board === "challenge" && !isPhraseHunt && period !== "challenge" && <p className="board-note">تعداد چالش‌های حل‌شده؛ سپس میانگین حدس کمتر در حل‌ها و میانگین بهترین رتبهٔ کمتر · هفته از شنبه به وقت تهران</p>}
+      {board === "competitive" && <p className="board-note">امتیاز Elo · شروع از ۱۰۰۰ · همهٔ مسابقه‌های دونفره امتیازدارند</p>}
       {boardError ? <div className="empty-state">دریافت جدول ممکن نشد؛ دوباره تلاش کن.</div> : loading ? (
         <div className="empty-state">در حال محاسبه رتبه‌ها…</div>
       ) : rows.length === 0 ? (
         <div className="empty-state">
-          {isDuel && mode === "skill"
+          {board === "practice" && isDuel && mode === "skill"
             ? "هنوز کسی در این بازه به ۱۰ دور نرسیده."
             : "هنوز نتیجه‌ای برای این جدول ثبت نشده."}
         </div>
@@ -1758,7 +1772,7 @@ function LeaderRowView({
     : mode === "effort"
       ? (row.totalScore ?? row.averageGuesses)
       : (row.bestScore ?? row.averageGuesses);
-  const detail = countryChallenge ? row.challengeSolved ? `${(row.guessCount || 0).toLocaleString("fa-IR")} حدس تا حل` : row.bestScore == null ? "هنوز حدسی ثبت نکرده" : `بهترین رتبه ${row.bestScore.toLocaleString("fa-IR")} · ${(row.guessCount || 0).toLocaleString("fa-IR")} حدس` : phraseHunt ? row.guessCount !== undefined ? `${row.guessCount.toLocaleString("fa-IR")} حدس` : `${(row.games || 0).toLocaleString("fa-IR")} چالش` : duel
+  const detail = row.challengeTotal ? `${(row.games || 0).toLocaleString("fa-IR")} چالش · ${row.wins ? `میانگین ${row.averageGuesses.toLocaleString("fa-IR")} حدس در حل‌ها` : "هنوز چالشی حل نشده"}` : row.rating !== undefined ? `${(row.games || 0).toLocaleString("fa-IR")} مسابقه · ${row.wins.toLocaleString("fa-IR")} برد · ${(row.losses || 0).toLocaleString("fa-IR")} باخت · ${(row.draws || 0).toLocaleString("fa-IR")} مساوی` : countryChallenge ? row.challengeSolved ? `${(row.guessCount || 0).toLocaleString("fa-IR")} حدس تا حل` : row.bestScore == null ? "هنوز حدسی ثبت نکرده" : `بهترین رتبه ${row.bestScore.toLocaleString("fa-IR")} · ${(row.guessCount || 0).toLocaleString("fa-IR")} حدس` : phraseHunt ? row.guessCount !== undefined ? `${row.guessCount.toLocaleString("fa-IR")} حدس` : `${(row.games || 0).toLocaleString("fa-IR")} چالش` : duel
     ? `${row.wins.toLocaleString("fa-IR")} برد · ${(row.losses || 0).toLocaleString("fa-IR")} باخت · ${(row.draws || 0).toLocaleString("fa-IR")} مساوی`
     : semantris
       ? mode === "effort"
@@ -1767,7 +1781,7 @@ function LeaderRowView({
       : mode === "skill"
         ? row.wins.toLocaleString("fa-IR") + " برد"
         : "میانگین " + row.averageGuesses.toLocaleString("fa-IR") + " حدس";
-  const value = countryChallenge ? row.challengeSolved ? (row.guessCount || 0).toLocaleString("fa-IR") : row.bestScore == null ? "—" : row.bestScore.toLocaleString("fa-IR") : phraseHunt ? (row.totalScore || 0).toLocaleString("fa-IR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : duel
+  const value = row.challengeTotal ? row.wins.toLocaleString("fa-IR") : row.rating !== undefined ? row.rating.toLocaleString("fa-IR") : countryChallenge ? row.challengeSolved ? (row.guessCount || 0).toLocaleString("fa-IR") : row.bestScore == null ? "—" : row.bestScore.toLocaleString("fa-IR") : phraseHunt ? (row.totalScore || 0).toLocaleString("fa-IR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : duel
     ? mode === "skill"
       ? score.toLocaleString("fa-IR", { maximumFractionDigits: 1 }) + "٪"
       : score.toLocaleString("fa-IR")
@@ -1807,7 +1821,7 @@ function LeaderRowView({
       <div className="leader-wins">
         <strong>{value}</strong>
         <small>
-          {countryChallenge ? row.challengeSolved ? "حدس" : "رتبه" : phraseHunt ? row.guessCount !== undefined ? "امتیاز" : "مجموع امتیاز" : duel
+          {row.challengeTotal ? "چالش حل‌شده" : row.rating !== undefined ? "Elo" : countryChallenge ? row.challengeSolved ? "حدس" : "رتبه" : phraseHunt ? row.guessCount !== undefined ? "امتیاز" : "مجموع امتیاز" : duel
             ? mode === "skill"
               ? "نرخ برد"
               : "دور"

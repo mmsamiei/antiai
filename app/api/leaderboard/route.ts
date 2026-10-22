@@ -1,3 +1,5 @@
+import { geographyChallengeTotals } from "@/lib/geography-challenge-totals";
+import { competitiveLeaderboard } from "@/lib/competitive-rating";
 import { publicDisplayName } from "@/lib/public-identity";
 import { NextResponse } from "next/server";
 import { Prisma } from "@prisma/client";
@@ -32,6 +34,13 @@ export async function GET(request: Request) {
   const requestedType = params.get("type");
   const type = requestedType === "ALL" || !requestedType ? null : parseLeaderboardGameType(requestedType);
   if (requestedType && requestedType !== "ALL" && !type) return NextResponse.json({ error: "Invalid game type" }, { status: 400 });
+  if (params.get("board") === "competitive") {
+    if (type !== "COUNTRY" && type !== "IRAN_CITY" && type !== "LETTER_DUEL") return NextResponse.json({ error: "Invalid competitive game" }, { status: 400 });
+    return NextResponse.json(await competitiveLeaderboard(userId, type), { headers: { "Cache-Control": "no-store" } });
+  }
+  if (params.get("board") === "challenge" && period !== "challenge" && (type === "COUNTRY" || type === "IRAN_CITY")) {
+    return NextResponse.json(await geographyChallengeTotals(userId, type, period), { headers: { "Cache-Control": "no-store" } });
+  }
   const baseWhere = {
     ...(type ? { type } : {}),
     ...(period === "week" ? { finishedAt: { gte: startOfWeekUtc() } } : {})

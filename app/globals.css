@@ -2046,3 +2046,6 @@ input {
 .invitation-notifications { position: fixed; z-index: 150; inset-inline: 0; bottom: calc(84px + var(--safe-bottom)); margin-inline: auto; width: min(92vw, 510px); display: grid; gap: 8px; pointer-events: none; }
 .invitation-notifications > * { pointer-events: auto; }
 .invitation-notifications > .outgoing-invitation { position: static; width: 100%; transform: none; }
+
+.leader-mode-toggle { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.leader-mode-toggle button:only-child { grid-column: 1 / -1; }

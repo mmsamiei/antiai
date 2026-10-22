@@ -14,6 +14,7 @@ type DuelUser = {
   photoUrl: string | null;
 };
 type DuelState = {
+  ratingChange?: { before: number; after: number; delta: number } | null;
   id: string;
   mode: "PRIVATE" | "RANDOM";
   status: "WAITING" | "ACTIVE" | "ENDED";
@@ -316,6 +317,7 @@ export default function LetterDuel({
           <span>{duel.matchWinnerUserId ? wonMatch ? "🏆" : "◌" : "🤝"}</span>
           <h2>{duel.matchWinnerUserId ? wonMatch ? "مسابقه را بردی!" : "حریف برندهٔ مسابقه شد" : "مسابقه پایان یافت"}</h2>
           <p>{reason}</p>
+          {duel.ratingChange && <p>امتیاز رقابتی: <b dir="ltr">{duel.ratingChange.before.toLocaleString("fa-IR")} → {duel.ratingChange.after.toLocaleString("fa-IR")} ({duel.ratingChange.delta > 0 ? "+" : ""}{duel.ratingChange.delta.toLocaleString("fa-IR")})</b></p>}
           {duel.endReason === "TEN_WINS" && duel.round?.winningWord && <p>واژهٔ دور پایانی: <strong>{duel.round.winningWord}</strong></p>}
           <div className="duel-score">
             <DuelPlayer user={duel.me} score={duel.myScore} online={Boolean(duel.me && onlineIds.has(duel.me.id))} onOpenProfile={onOpenProfile} />

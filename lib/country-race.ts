@@ -1,3 +1,4 @@
+import { ownRatingChange, rateMatch } from "./competitive-rating";
 import { geoRaceConfig, geoRaceType } from "./geo-race-config";
 import { publicIdentity } from "./public-identity";
 import { prisma } from "./prisma";
@@ -23,7 +24,8 @@ export async function readCountryRace(userId: string, id: string) {
     ]);
     const own = guesses.filter(g => g.userId === userId), other = guesses.filter(g => g.userId !== userId);
     const describe = (g: typeof guesses[number]) => ({ ...publicItem(findItem(gameType, g.itemId)!), rank: g.rank, createdAt: g.createdAt });
-    return { id, gameType, totalItems: datasetFor(gameType).length, status: room.status, deadline: room.deadline, serverNow: new Date(), winnerUserId: room.winnerUserId, endReason: room.endReason,
+    const ratingChange = room.status === "ENDED" ? ownRatingChange(await tx.competitiveResult.findUnique({ where: { matchKey: `race:${id}` } }), userId) : null;
+    return { ratingChange, id, gameType, totalItems: datasetFor(gameType).length, status: room.status, deadline: room.deadline, serverNow: new Date(), winnerUserId: room.winnerUserId, endReason: room.endReason,
       me: publicIdentity(userId === one.id ? one : two), opponent: publicIdentity(userId === one.id ? two : one), invite,
       myBestRank: own[0]?.rank ?? null, opponentBestRank: other[0]?.rank ?? null,
       guesses: own.map(describe),
@@ -41,6 +43,7 @@ export async function actCountryRace(userId: string, id: string, action: "heartb
       return null;
     }
     if (action === "leave") {
+      if (room.status === "ACTIVE") await rateMatch(tx, `race:${id}`, room.gameType, room.playerOneId, room.playerTwoId, userId === room.playerOneId ? room.playerTwoId : room.playerOneId);
       await tx.countryRace.update({ where: { id }, data: { status: "ENDED", endedAt: new Date(), endReason: room.status === "ACTIVE" ? "FORFEIT" : "CANCELLED", winnerUserId: room.status === "ACTIVE" ? userId === room.playerOneId ? room.playerTwoId : room.playerOneId : null } });
       return null;
     }
@@ -53,6 +56,7 @@ export async function actCountryRace(userId: string, id: string, action: "heartb
     // Touch the locked room so concurrent transactions retry with a fresh snapshot.
     await tx.countryRace.update({ where: { id }, data: userId === room.playerOneId ? { playerOneHeartbeat: new Date() } : { playerTwoHeartbeat: new Date() } });
     await tx.countryRaceGuess.createMany({ data: [{ raceId: id, userId, itemId: guess.id, rank }], skipDuplicates: true });
+    if (!rank) await rateMatch(tx, `race:${id}`, room.gameType, room.playerOneId, room.playerTwoId, userId);
     if (!rank) room = await tx.countryRace.update({ where: { id }, data: { status: "ENDED", winnerUserId: userId, endedAt: new Date(), endReason: "FOUND" } });
     return null;
   });

@@ -44,12 +44,12 @@ export default function CountryChallenge({ onBack, onLeaderboard, setError }: { 
     catch (e) { setError(e instanceof Error ? e.message : "عملیات انجام نشد"); }
     finally { setBusy(false); }
   };
-  const seconds = state ? Math.max(0, Math.ceil((Date.parse(state.challenge.endsAt) - now + serverOffset) / 1000)) : 0;
+  const seconds = state ? Math.max(0, Math.ceil((Date.parse(state.challenge.endsAt) - now - serverOffset) / 1000)) : 0;
   const locked = !state || state.challenge.ended || !state.entry || state.entry.status !== "ACTIVE";
   if (loading && !state) return <section className="country-daily"><div className="empty-state">در حال بارگذاری چالش کشورجو…</div></section>;
   return <section className="country-daily">
     <div className="section-heading"><button className="icon-button" onClick={onBack} aria-label="بازگشت">→</button><div><small>کشورجو · چالش مشترک</small><h1>چالش امروز</h1></div><span>🌍</span></div>
-    {state && <div className="country-daily-clock"><span>{state.challenge.ended ? "این چالش به پایان رسیده" : "تعویض چالش در"}</span>{!state.challenge.ended && <b>{Math.floor(seconds / 3600).toLocaleString("fa-IR", { minimumIntegerDigits: 2 })}:{Math.floor(seconds / 60 % 60).toLocaleString("fa-IR", { minimumIntegerDigits: 2 })}:{(seconds % 60).toLocaleString("fa-IR", { minimumIntegerDigits: 2 })}</b>}</div>}
+    {state && <div className="phrase-challenge-info country-daily-clock"><div><b>چالش مشترک کشورجو</b><span>تعویض کشور: ۹ صبح و ۹ شب · به وقت تهران</span></div>{!state.challenge.ended && <strong dir="ltr">{Math.floor(seconds / 3600).toLocaleString("fa-IR", { minimumIntegerDigits: 2 })}:{Math.floor(seconds / 60 % 60).toLocaleString("fa-IR", { minimumIntegerDigits: 2 })}:{(seconds % 60).toLocaleString("fa-IR", { minimumIntegerDigits: 2 })}</strong>}{!state.challenge.ended && <small>تا چالش بعدی</small>}<button className="secondary" onClick={onLeaderboard}>جدول رتبه‌بندی</button></div>}
     {!state?.entry && state && !state.challenge.ended && <div className="country-daily-start"><p>یک کشور برای همه پنهان شده؛ حدس بزن و رتبهٔ هر کشور را ببین.</p><button className="primary" disabled={busy} onClick={() => void act({ action: "start" })}>شروع چالش روزانه</button></div>}
     {state?.entry && <>
       <div className="country-daily-stats"><span>{state.entry.guessCount.toLocaleString("fa-IR")} حدس</span><span>بهترین رتبه: {state.entry.bestRank === null ? "—" : state.entry.bestRank.toLocaleString("fa-IR")}</span></div>

@@ -76,7 +76,7 @@ async function makeRaceTx(tx: Tx, senderId: string, recipientId: string, now: Da
 export async function startCountryMatch(userId: string) {
   return prisma.$transaction(async tx => {
     const now = new Date();
-    await tx.$queryRaw`SELECT pg_advisory_xact_lock(728401, 902)`;
+    await tx.$executeRaw`SELECT pg_advisory_xact_lock(728401, 902)`;
     await lockUsers(tx, [userId]);
     const existing = await tx.countryMatchSearch.findFirst({ where: { userId, status: "ACTIVE" }, orderBy: { createdAt: "desc" } });
     if (existing) {
@@ -111,7 +111,7 @@ export async function readCountryMatch(userId: string) {
 export async function respondToCountryMatch(userId: string, offerId: string, action: "accept" | "reject") {
   return prisma.$transaction(async tx => {
     const now = new Date();
-    await tx.$queryRaw`SELECT pg_advisory_xact_lock(728401, 902)`;
+    await tx.$executeRaw`SELECT pg_advisory_xact_lock(728401, 902)`;
     const offer = await tx.countryMatchOffer.findUnique({ where: { id: offerId } });
     if (!offer || offer.recipientId !== userId) throw new Error("MATCH_OFFER_NOT_FOUND");
     await lockUsers(tx, [offer.senderId, offer.recipientId]);

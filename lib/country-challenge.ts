@@ -9,7 +9,7 @@ type Tx = Prisma.TransactionClient;
 const pool = datasetFor("COUNTRY");
 
 async function ensureChallenge(tx: Tx, now = new Date()) {
-  await tx.$queryRaw`SELECT pg_advisory_xact_lock(728401, 901)`;
+  await tx.$executeRaw`SELECT pg_advisory_xact_lock(728401, 901)`;
   const window = countryChallengeWindow(now);
   const existing = await tx.countryChallenge.findUnique({ where: { startsAt: window.startsAt } });
   if (existing) return existing;

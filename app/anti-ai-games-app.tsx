@@ -645,7 +645,7 @@ function CountryModePicker({ matchState, matchBusy, onBack, onChallenge, onPract
   }, []);
   useEffect(() => { const timer = window.setInterval(() => setClockNow(Date.now()), 1000); return () => window.clearInterval(timer); }, []);
   const running = matchState?.search?.status === "ACTIVE";
-  const remaining = daily ? Math.max(0, Math.ceil((Date.parse(daily.challenge.endsAt) - clockNow + dailyServerOffset) / 1000)) : 0;
+  const remaining = daily ? Math.max(0, Math.ceil((Date.parse(daily.challenge.endsAt) - clockNow - dailyServerOffset) / 1000)) : 0;
   const countdown = `${Math.floor(remaining / 3600).toLocaleString("fa-IR", { minimumIntegerDigits: 2 })}:${Math.floor(remaining / 60 % 60).toLocaleString("fa-IR", { minimumIntegerDigits: 2 })}:${(remaining % 60).toLocaleString("fa-IR", { minimumIntegerDigits: 2 })}`;
   const dailyLabel = daily?.entry?.status === "WON" ? `نتیجهٔ تو · ${daily.entry.guessCount.toLocaleString("fa-IR")} حدس`
     : daily?.entry?.status === "SURRENDERED" ? "دیدن نتیجهٔ تو"

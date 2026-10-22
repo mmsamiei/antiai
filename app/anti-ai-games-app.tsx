@@ -504,6 +504,9 @@ function Home({
   onDuel: () => void;
   onWordWeaver: () => void;
 }) {
+  const [otherGamesOpen, setOtherGamesOpen] = useState(false);
+  const mainGameTypes = playableTypes.filter((type) => type !== "SEMANTRIS");
+
   return (
     <>
       <section className="hero">
@@ -526,14 +529,9 @@ function Home({
         </div>
       </section>
       <section className="game-grid">
-        <button className="game-card word-weaver-game" onClick={onWordWeaver}>
-          <span className="game-icon">✍️</span>
-          <span className="game-copy"><b>واژه‌باف</b><small>تمرین‌های کوتاه واژگانی و تصویرسازی؛ با بقیه رقابت کن</small></span>
-          <span className="game-arrow">←</span>
-        </button>
-        {playableTypes.map((type) => (
+        {mainGameTypes.map((type) => (
           <button
-            className={`game-card ${type === "IRAN_CITY" ? "iran" : type === "COUNTRY" ? "world" : type === "SEMANTRIS" ? "semantris" : type === "LETTER_DUEL" ? "duel" : type === "PHRASE_HUNT" ? "phrase-hunt" : "words"}`}
+            className={`game-card ${type === "IRAN_CITY" ? "iran" : type === "COUNTRY" ? "world" : type === "LETTER_DUEL" ? "duel" : type === "PHRASE_HUNT" ? "phrase-hunt" : "words"}`}
             key={type}
             disabled={busy}
             onClick={() => (type === "LETTER_DUEL" ? onDuel() : onStart(type))}
@@ -547,6 +545,43 @@ function Home({
             <span className="game-arrow">←</span>
           </button>
         ))}
+      </section>
+      <section className={`other-games ${otherGamesOpen ? "is-open" : ""}`}>
+        <button
+          className="other-games-toggle"
+          type="button"
+          aria-expanded={otherGamesOpen}
+          aria-controls="other-games-list"
+          onClick={() => setOtherGamesOpen((open) => !open)}
+        >
+          <span className="other-games-mark" aria-hidden="true">✦</span>
+          <span className="other-games-heading">
+            <b>بازی‌های دیگر</b>
+            <small>در حال توسعهٔ آزمایشی</small>
+          </span>
+          <span className="other-games-count">۲ بازی</span>
+          <span className="other-games-chevron" aria-hidden="true">⌄</span>
+        </button>
+        {otherGamesOpen && (
+          <div className="other-games-list" id="other-games-list">
+            <button className="game-card semantris" onClick={() => onStart("SEMANTRIS")} disabled={busy}>
+              <span className="game-icon">{gameMeta.SEMANTRIS.icon}</span>
+              <span className="game-copy">
+                <b>{gameMeta.SEMANTRIS.title}</b>
+                <small>{gameMeta.SEMANTRIS.description}</small>
+              </span>
+              <span className="game-arrow">←</span>
+            </button>
+            <button className="game-card word-weaver-game" onClick={onWordWeaver}>
+              <span className="game-icon">✍️</span>
+              <span className="game-copy">
+                <b>واژه‌باف</b>
+                <small>تمرین‌های کوتاه واژگانی و تصویرسازی؛ با بقیه رقابت کن</small>
+              </span>
+              <span className="game-arrow">←</span>
+            </button>
+          </div>
+        )}
       </section>
       <p className="manifesto">همه‌چیز را نده AI انجام بده.</p>
     </>

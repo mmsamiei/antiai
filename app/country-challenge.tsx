@@ -1,7 +1,6 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
 import { sessionRequest } from "@/lib/client-session";
-import { useBackHandler } from "./back-navigation";
 
 const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
 type Guess = { id: string; name: string; emoji?: string; detail?: string; rank: number; createdAt: string };
@@ -19,11 +18,10 @@ async function request(url: string, body?: unknown) {
 export default function CountryChallenge({ onBack, onLeaderboard, setError }: { onBack: () => void; onLeaderboard: () => void; setError: (message: string) => void }) {
   const [state, setState] = useState<State | null>(null), [loading, setLoading] = useState(true), [busy, setBusy] = useState(false), [serverOffset, setServerOffset] = useState(0);
   const [query, setQuery] = useState(""), [items, setItems] = useState<Guess[]>([]), [selected, setSelected] = useState<Guess | null>(null), [now, setNow] = useState(Date.now());
-  useBackHandler(onBack);
   const acceptState = useCallback((value: State) => { setServerOffset(Date.parse(value.challenge.serverNow) - Date.now()); setState(value); }, []);
   useEffect(() => {
-    let stopped = false, polling = false;
-    const poll = async () => { if (polling || document.visibilityState !== "visible") return; polling = true; try { const data = await request("/api/country-challenge"); if (!stopped) acceptState(data); } catch (e) { if (!stopped) setError(e instanceof Error ? e.message : "چالش بارگذاری نشد"); } finally { polling = false; if (!stopped) setLoading(false); } };
+    let stopped = false, polling = false, opened = false;
+    const poll = async () => { if (polling || document.visibilityState !== "visible") return; polling = true; try { let data = await request("/api/country-challenge", opened ? undefined : { action: "start" }); opened = true; if (!stopped && !data.entry && !data.challenge.ended) data = await request("/api/country-challenge", { action: "start" }); if (!stopped) acceptState(data); } catch (e) { if (!stopped) setError(e instanceof Error ? e.message : "چالش بارگذاری نشد"); } finally { polling = false; if (!stopped) setLoading(false); } };
     void poll(); const timer = setInterval(poll, 10_000); document.addEventListener("visibilitychange", poll);
     return () => { stopped = true; clearInterval(timer); document.removeEventListener("visibilitychange", poll); };
   }, [setError, acceptState]);
@@ -46,11 +44,10 @@ export default function CountryChallenge({ onBack, onLeaderboard, setError }: { 
   };
   const seconds = state ? Math.max(0, Math.ceil((Date.parse(state.challenge.endsAt) - now - serverOffset) / 1000)) : 0;
   const locked = !state || state.challenge.ended || !state.entry || state.entry.status !== "ACTIVE";
-  if (loading && !state) return <section className="country-daily"><div className="empty-state">در حال بارگذاری چالش کشورجو…</div></section>;
   return <section className="country-daily">
     <div className="section-heading"><button className="icon-button" onClick={onBack} aria-label="بازگشت">→</button><div><small>کشورجو · چالش مشترک</small><h1>چالش امروز</h1></div><span>🌍</span></div>
+    {loading && !state && <div className="empty-state">در حال بارگذاری چالش کشورجو…</div>}
     {state && <div className="phrase-challenge-info country-daily-clock"><div><b>چالش مشترک کشورجو</b><span>تعویض کشور: ۹ صبح و ۹ شب · به وقت تهران</span></div>{!state.challenge.ended && <strong dir="ltr">{Math.floor(seconds / 3600).toLocaleString("fa-IR", { minimumIntegerDigits: 2 })}:{Math.floor(seconds / 60 % 60).toLocaleString("fa-IR", { minimumIntegerDigits: 2 })}:{(seconds % 60).toLocaleString("fa-IR", { minimumIntegerDigits: 2 })}</strong>}{!state.challenge.ended && <small>تا چالش بعدی</small>}<button className="secondary" onClick={onLeaderboard}>جدول رتبه‌بندی</button></div>}
-    {!state?.entry && state && !state.challenge.ended && <div className="country-daily-start"><p>یک کشور برای همه پنهان شده؛ حدس بزن و رتبهٔ هر کشور را ببین.</p><button className="primary" disabled={busy} onClick={() => void act({ action: "start" })}>شروع چالش روزانه</button></div>}
     {state?.entry && <>
       <div className="country-daily-stats"><span>{state.entry.guessCount.toLocaleString("fa-IR")} حدس</span><span>بهترین رتبه: {state.entry.bestRank === null ? "—" : state.entry.bestRank.toLocaleString("fa-IR")}</span></div>
       {state.entry.status === "WON" && <div className="country-daily-result won"><b>آفرین! کشور را پیدا کردی.</b><span>{state.entry.guessCount.toLocaleString("fa-IR")} حدس</span></div>}

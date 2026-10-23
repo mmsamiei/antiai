@@ -14,6 +14,8 @@ TypeScript, Prisma, and PostgreSQL. It currently exposes four playable games:
 resuming, guessing, or surrendering these games. Preserve their code, database
 rows, profile history, and historical leaderboard access.
 
+Country Race (کشورجوی سرعتی) is invitation-only, stored separately from GameSession, and does not contribute to existing leaderboards. Both clients must be ready before its 200-second deadline starts. Opponents see only the best public COUNTRY rank until the match ends.
+
 The application is deployed below a configurable base path and is designed to
 run inside Telegram. Development mode provides a local demo login.
 
@@ -133,3 +135,7 @@ patterns.
 
 If a requested change conflicts with one of these invariants, call out the
 conflict before changing behavior.
+
+Username visibility defaults to true. All public identities and bot result announcements must honor User.showUsername, including search, name fallbacks, and queued result deliveries. Use lib/public-identity.ts; never expose hidden usernames in API payloads.
+
+City Race (شهرجوی سرعتی) reuses the geographic race engine with gameType IRAN_CITY and a 300-second limit. CountryRace rows without a new type remain COUNTRY (200 seconds). Both are invitation-only and excluded from existing leaderboards.

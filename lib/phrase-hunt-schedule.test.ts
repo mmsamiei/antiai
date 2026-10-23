@@ -55,6 +55,16 @@ describe("Tehran twice-daily phrase challenge", () => {
     expect(isCurrentPhraseChallenge(null, time)).toBe(false);
     expect(isCurrentPhraseChallenge("2026-10-15T20:30:00.000Z", time)).toBe(false);
   });
+  it("keeps exact slot boundaries and tolerates caller mutations and time moving backwards", () => {
+    const now = new Date("2026-10-23T12:00:00Z");
+    const first = phraseChallengeWindow(now);
+    first.startsAt.setTime(0);
+    first.endsAt.setTime(0);
+    expect(phraseChallengeWindow(now).id).toBe("2026-10-23T06:30:00.000Z");
+    expect(phraseChallengeWindow(new Date("2026-10-23T18:30:00Z")).id).toBe("2026-10-23T18:30:00.000Z");
+    expect(phraseChallengeWindow(now).id).toBe("2026-10-23T06:30:00.000Z");
+    expect(phraseChallengeWindow(now).endsAt.toISOString()).toBe("2026-10-23T18:30:00.000Z");
+  });
   it.each([
     ["2026-10-16T20:29:59Z", "2026-10-09T20:30:00.000Z"],
     ["2026-10-16T20:30:00Z", "2026-10-16T20:30:00.000Z"],

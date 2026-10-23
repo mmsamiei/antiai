@@ -37,14 +37,16 @@ async function main() {
     assert.equal((await serializeDuel(b,accepted.connectionId))!.status,"ACTIVE");
     assert.equal((await serializeDuel(c,accepted.connectionId)),null);
   });
-  await check("single outgoing invitation and pair cooldown; recipient ownership", async () => {
+  await check("single outgoing invitation; immediate resend after cancellation; recipient ownership", async () => {
     const invite = await sendInvite(a,b);
     await reject(() => sendInvite(a,c));
     await reject(() => actOnInvite(a,invite.id,"reject"));
     await reject(() => actOnInvite(b,invite.id,"cancel"));
     await reject(() => actOnInvite(c,invite.id,"cancel"));
     await actOnInvite(a,invite.id,"cancel");
-    await reject(() => sendInvite(a,b), /دو دقیقه/);
+    const resent = await sendInvite(a,b);
+    assert.equal(resent.status,"PENDING");
+    await actOnInvite(a,resent.id,"cancel");
     await sendInvite(a,c);
     await reject(() => sendInvite(d,d));
   });

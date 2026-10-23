@@ -13,3 +13,10 @@ export function hiddenPhraseGuesses(guesses: readonly DisplayPhraseGuess[]) {
   const best = new Set(orderPhraseGuesses(guesses, "score").slice(0, 3).map(guess => guess.id));
   return new Set(guesses.filter(guess => !best.has(guess.id)).map(guess => guess.id));
 }
+
+/** Merge a compact guess response without discarding locally loaded history. */
+export function mergePhraseGuess(guesses: readonly DisplayPhraseGuess[], guess: DisplayPhraseGuess, bestScore = 0) {
+  const existing = guesses.findIndex(item => item.id === guess.id);
+  const phraseGuesses = existing < 0 ? [...guesses, guess] : guesses.map((item, index) => index === existing ? guess : item);
+  return { phraseGuesses, bestScore: Math.max(bestScore, guess.score, ...guesses.map(item => item.score)) };
+}

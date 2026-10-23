@@ -92,7 +92,7 @@ export async function readInvites(userId: string) {
     return { ...user, invites: invites.map(i => ({ ...i, sender: publicIdentity(i.sender), recipient: publicIdentity(i.recipient) })), serverNow: new Date() };
   });
 }
-export async function sendInvite(senderId: string, recipientId: string, gameKind: "LETTER_DUEL" | "COUNTRY_RACE" | "CITY_RACE" = "LETTER_DUEL", rematchOf?: string) {
+export async function sendInvite(senderId: string, recipientId: string, gameKind: "LETTER_DUEL" | "COUNTRY_RACE" | "CITY_RACE" = "LETTER_DUEL") {
   if (senderId === recipientId) throw new InviteError("نمی‌توانی خودت را دعوت کنی", 400);
   await inviteTransaction(async tx => { await reconcileInvites(tx, senderId); await reconcileInvites(tx, recipientId); });
   return inviteTransaction(async tx => {
@@ -107,9 +107,6 @@ export async function sendInvite(senderId: string, recipientId: string, gameKind
     if (await tx.letterDuelConnection.count({ where: { status: { in: ["WAITING", "ACTIVE"] }, OR: [{ playerOneId: senderId }, { playerTwoId: senderId }] } })) throw new InviteError("یکی از بازیکن‌ها در بازی دونفرهٔ دیگری است");
     if (await countryRaceBusy(tx, [senderId])) throw new InviteError("ابتدا از مسابقهٔ فعلی خارج شو");
     if (await tx.duelInvite.count({ where: { senderId, status: "PENDING" } })) throw new InviteError("ابتدا دعوت قبلی را لغو کن");
-    const previous = rematchOf ? await tx.countryRace.findFirst({ where: { id: rematchOf, status: "ENDED", OR: [{ playerOneId: senderId, playerTwoId: recipientId }, { playerOneId: recipientId, playerTwoId: senderId }] } }) : null;
-    const firstRematch = previous?.endedAt && !await tx.duelInvite.count({ where: { createdAt: { gte: previous.endedAt }, OR: [{ senderId, recipientId }, { senderId: recipientId, recipientId: senderId }] } });
-    if (!firstRematch && await tx.duelInvite.count({ where: { senderId, recipientId, createdAt: { gt: new Date(now.getTime() - 120_000) } } })) throw new InviteError("برای دعوت دوباره به این بازیکن دو دقیقه صبر کن", 429);
     const invite = await tx.duelInvite.create({ data: { senderId, recipientId, gameKind, expiresAt: new Date(now.getTime() + INVITE_MS) }, include: inviteInclude });
     return { ...invite, sender: publicIdentity(invite.sender), recipient: publicIdentity(invite.recipient) };
   });

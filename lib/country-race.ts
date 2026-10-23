@@ -66,5 +66,5 @@ export async function actCountryRace(userId: string, id: string, action: "heartb
 export async function rematchCountryRace(userId: string, id: string) {
   const room = await prisma.countryRace.findFirst({ where: { id, status: "ENDED", OR: [{ playerOneId: userId }, { playerTwoId: userId }] } });
   if (!room) throw new InviteError("مسابقه پیدا نشد", 404);
-  return sendInvite(userId, userId === room.playerOneId ? room.playerTwoId : room.playerOneId, geoRaceConfig[geoRaceType(room.gameType)].inviteKind, room.id);
+  return sendInvite(userId, userId === room.playerOneId ? room.playerTwoId : room.playerOneId, geoRaceConfig[geoRaceType(room.gameType)].inviteKind);
 }

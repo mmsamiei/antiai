@@ -4,10 +4,11 @@ import { Prisma } from "@prisma/client";
 import { currentUserId } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { serializeGame } from "@/lib/game-service";
-import { phraseHuntTargets } from "@/lib/data/phrase-hunt-targets";
+import { phraseHuntTarget, isPhraseHuntAnswer } from "@/lib/phrase-hunt-answer";
 import { judgePhrase, normalizePhraseGuess } from "@/lib/phrase-hunt-judge";
-import { isCurrentPhraseChallenge, phraseChallengeWindow } from "@/lib/phrase-hunt-schedule";
-import { normalizePersian } from "@/lib/geo";
+import { isCurrentPhraseChallenge } from "@/lib/phrase-hunt-schedule";
+import { phraseHuntTransaction } from "@/lib/phrase-hunt-transaction";
+import { readPhraseHuntGuessState } from "@/lib/phrase-hunt-guess-state";
 
 const PHRASE_HUNT_GUESSES_PER_MINUTE = 30;
 
@@ -16,43 +17,47 @@ export async function POST(request: Request) {
   if (!userId) return NextResponse.json({ error: "ابتدا وارد بازی شو" }, { status: 401 });
   const body: unknown = await request.json().catch(() => null);
   if (!body || typeof body !== "object" || !("gameId" in body) || !("phrase" in body) || typeof body.gameId !== "string" || typeof body.phrase !== "string") return NextResponse.json({ error: "حدس معتبر نیست" }, { status: 400 });
-  const input = body as { gameId: string; phrase: string };
+  const input = body as { gameId: string; phrase: string; responseMode?: unknown };
+  // Older open clients still receive their full snapshot until they refresh.
+  const delta = input.responseMode === "delta";
 
   try {
     const phrase = normalizePhraseGuess(input.phrase);
     if (!phrase || phrase.length > 120 || phrase.split(" ").length > 12) throw new Error("PHRASE_INVALID");
-    const game = await prisma.gameSession.findFirst({ where: { id: input.gameId, userId, type: "PHRASE_HUNT", status: "ACTIVE" }, include: { phraseChallenge: true, phraseGuesses: { orderBy: { createdAt: "asc" } } } });
+    const game = await readPhraseHuntGuessState(prisma, input.gameId, userId, phrase);
     if (!game) throw new Error("GAME_NOT_ACTIVE");
     if (!isCurrentPhraseChallenge(game.phraseChallengeId)) throw new Error("CHALLENGE_ENDED");
-    if (game.phraseGuesses.some((guess) => guess.normalized === phrase)) throw new Error("GUESS_REPEATED");
-    const recentCount = await prisma.phraseHuntGuess.count({ where: { game: { userId }, createdAt: { gte: new Date(Date.now() - 60_000) } } });
-    if (recentCount >= PHRASE_HUNT_GUESSES_PER_MINUTE) throw new Error("RATE_LIMITED");
-    const target = phraseHuntTargets.find((item) => item.id === game.targetId);
+    if (game.duplicate) throw new Error("GUESS_REPEATED");
+    if (game.recentCount >= PHRASE_HUNT_GUESSES_PER_MINUTE) throw new Error("RATE_LIMITED");
+    const target = phraseHuntTarget(game.targetId);
     if (!target) throw new Error("TARGET_INVALID");
-    const answers = [target.phrase, ...target.aliases].map(normalizePersian);
-    const won = answers.includes(phrase);
+    const won = isPhraseHuntAnswer(target, phrase);
     const score = won ? 100 : (game.phraseChallenge!.judgeVersion >= 6
       ? await judgePhrase(target.id, target.phrase, phrase, game.phraseChallenge!.judgeVersion, game.phraseChallenge!.judgeModel, { challengeId: game.phraseChallengeId!, userId })
       : await judgePhrase(target.id, target.phrase, phrase, game.phraseChallenge!.judgeVersion, game.phraseChallenge!.judgeModel));
 
-    const result = await measureJudge("guess_commit", () => prisma.$transaction(async (tx) => {
-      const current = await tx.gameSession.findFirst({ where: { id: game.id, userId, type: "PHRASE_HUNT", status: "ACTIVE", phraseChallengeId: phraseChallengeWindow().id } });
+    const result = await measureJudge("guess_commit", () => phraseHuntTransaction(userId, async (tx) => {
+      const current = await readPhraseHuntGuessState(tx, game.id, userId, phrase);
       if (!current) throw new Error("GAME_NOT_ACTIVE");
-      const [duplicate, userRecentCount] = await Promise.all([
-        tx.phraseHuntGuess.findUnique({ where: { gameId_normalized: { gameId: game.id, normalized: phrase } } }),
-        tx.phraseHuntGuess.count({ where: { game: { userId }, createdAt: { gte: new Date(Date.now() - 60_000) } } }),
-      ]);
       if (!isCurrentPhraseChallenge(current.phraseChallengeId)) throw new Error("CHALLENGE_ENDED");
-      if (duplicate) throw new Error("GUESS_REPEATED");
-      if (userRecentCount >= PHRASE_HUNT_GUESSES_PER_MINUTE) throw new Error("RATE_LIMITED");
-      await tx.phraseHuntGuess.create({ data: { gameId: game.id, phrase: input.phrase.trim(), normalized: phrase, score } });
-      return tx.gameSession.update({
+      if (current.duplicate) throw new Error("GUESS_REPEATED");
+      if (current.recentCount >= PHRASE_HUNT_GUESSES_PER_MINUTE) throw new Error("RATE_LIMITED");
+      const guess = await tx.phraseHuntGuess.create({ data: { gameId: game.id, phrase: input.phrase.trim(), normalized: phrase, score } });
+      const update = {
         where: { id: game.id },
-        data: { guessesCount: { increment: 1 }, ...(won ? { status: "WON", finishedAt: new Date() } : {}) },
-        include: { guesses: true, phraseGuesses: { orderBy: { createdAt: "asc" } } },
-      });
-    }, { isolationLevel: Prisma.TransactionIsolationLevel.Serializable }));
-    return NextResponse.json({ game: serializeGame(result, won), score, won });
+        data: { guessesCount: { increment: 1 }, ...(won ? { status: "WON" as const, finishedAt: new Date() } : {}) },
+      };
+      const updated = delta
+        ? { ...await tx.gameSession.update(update), guesses: [] }
+        : await tx.gameSession.update({ ...update, include: { guesses: true, phraseGuesses: { orderBy: { createdAt: "asc" } } } });
+      return { game: updated, guess };
+    }));
+    const snapshot = serializeGame({ ...result.game, guesses: result.game.guesses ?? [] }, won);
+    if (delta) {
+      const { phraseGuesses: _history, bestScore: _best, ...state } = snapshot;
+      return NextResponse.json({ game: state, guess: { id: result.guess.id, name: result.guess.phrase, score: result.guess.score, createdAt: result.guess.createdAt }, score, won });
+    }
+    return NextResponse.json({ game: snapshot, score, won });
   } catch (error) {
     if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === "P2002") return NextResponse.json({ error: "این عبارت را قبلاً حدس زده‌ای" }, { status: 409 });
     if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === "P2034") return NextResponse.json({ error: "وضعیت بازی تغییر کرد؛ دوباره تلاش کن." }, { status: 409 });

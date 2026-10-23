@@ -32,7 +32,7 @@ function challengeEnd(startsAt: Date) {
   return new Date(startsAt.getTime() < scheduleChangedAt ? Math.min(end, scheduleChangedAt) : end);
 }
 
-export function phraseChallengeWindow(now = new Date()) {
+function calculatePhraseChallengeWindow(now: Date) {
   if (now.getTime() >= delayedOct20DayStart && now.getTime() < oct20ScheduleResumes) {
     const startsAt = new Date(now.getTime() < delayedOct20NightStart ? delayedOct20DayStart : delayedOct20NightStart);
     return { id: startsAt.toISOString(), startsAt, endsAt: challengeEnd(startsAt) };
@@ -48,6 +48,19 @@ export function phraseChallengeWindow(now = new Date()) {
   // Date.UTC normalizes -2 to 22:00 on the preceding calendar day.
   const startsAt = new Date(Date.UTC(parts.year, parts.month - 1, parts.day, startHour) - offset);
   return { id: startsAt.toISOString(), startsAt, endsAt: challengeEnd(startsAt) };
+}
+
+let cachedWindow: { id: string; start: number; end: number } | undefined;
+
+/** Reuse the current slot without repeated ICU timezone conversion per guess. */
+export function phraseChallengeWindow(now = new Date()) {
+  const time = now.getTime();
+  if (!cachedWindow || time < cachedWindow.start || time >= cachedWindow.end) {
+    const window = calculatePhraseChallengeWindow(now);
+    cachedWindow = { id: window.id, start: window.startsAt.getTime(), end: window.endsAt.getTime() };
+  }
+  // Callers may mutate Date objects; never share the cached objects themselves.
+  return { id: cachedWindow.id, startsAt: new Date(cachedWindow.start), endsAt: new Date(cachedWindow.end) };
 }
 
 export function isCurrentPhraseChallenge(id: string | null | undefined, now = new Date()) {

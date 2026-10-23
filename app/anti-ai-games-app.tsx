@@ -26,7 +26,7 @@ import { BackHandlersContext, useBackHandler, useBrowserBack } from "./back-navi
 import { sessionRequest, setClientSessionToken } from "@/lib/client-session";
 import { authenticateTelegram, TelegramLoginError } from "@/lib/telegram-client";
 import { useOnlineUsers } from "@/lib/use-online-users";
-import { hiddenPhraseGuesses, normalizePersian, orderPhraseGuesses } from "@/lib/phrase-hunt-view";
+import { hiddenPhraseGuesses, mergePhraseGuess, normalizePersian, orderPhraseGuesses } from "@/lib/phrase-hunt-view";
 
 type GameType =
   | "IRAN_CITY"
@@ -878,6 +878,7 @@ function Play({
     try {
       const data = await jsonFetch<{
         game: Game;
+        guess?: PhraseGuess;
         semantris?: {
           hit: boolean;
           removed: number;
@@ -892,7 +893,7 @@ function Play({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(
           isPhraseHunt
-            ? { gameId: game.id, phrase: query }
+            ? { gameId: game.id, phrase: query, responseMode: "delta" }
             : isSemantris
             ? { gameId: game.id, clue: query }
             : isAdjectiveRain
@@ -904,7 +905,17 @@ function Play({
       setSelected(null);
       setSuggestions([]);
       if (isPhraseHunt) {
-        const submitted = data.game.phraseGuesses?.find(guess => normalizePersian(guess.name) === normalizePersian(query));
+        if (data.guess) {
+          data.game = { ...game, ...data.game,
+            ...mergePhraseGuess(game.phraseGuesses || [], data.guess, game.bestScore),
+          };
+          // Another tab/device may have saved guesses missing from this page.
+          if (data.game.guessesCount !== data.game.phraseGuesses!.length) {
+            const refreshed = await jsonFetch<{ game: Game }>("/api/game?type=PHRASE_HUNT").catch(() => null);
+            if (refreshed?.game.id === game.id) data.game = refreshed.game;
+          }
+        }
+        const submitted = data.guess ?? data.game.phraseGuesses?.find(guess => normalizePersian(guess.name) === normalizePersian(query));
         if (submitted) showPhraseResult(submitted, false);
       }
       if (isSemantris && data.semantris) {

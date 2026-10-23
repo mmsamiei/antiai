@@ -1,13 +1,15 @@
-vi.mock("./shared-judgment", () => ({ sharedJudgment: (_key: unknown[], _read: () => Promise<number | null>, work: () => Promise<number>) => work() }));
+vi.mock("./shared-judgment", () => ({ sharedJudgment: async (_key: unknown[], read: () => Promise<number | null>, work: () => Promise<number>) => (await read()) ?? work() }));
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { Prisma } from "@prisma/client";
 const mocks = vi.hoisted(() => ({ findUnique: vi.fn(), upsert: vi.fn(), history: vi.fn() }));
 vi.mock("./prisma", () => ({ prisma: { phraseHuntJudgment: { findUnique: mocks.findUnique, upsert: mocks.upsert } } }));
 vi.mock("./phrase-hunt-history-store", () => ({ loadPhraseHuntHistory: mocks.history }));
 import { judgePhrase, contextualPhraseInstructions } from "./phrase-hunt-judge";
+import { phraseHuntScoreCache } from "./phrase-hunt-score-cache";
 
 describe("v6 shared contextual judging", () => {
   beforeEach(() => {
+    phraseHuntScoreCache.clear();
     vi.clearAllMocks(); vi.stubEnv("JEV_API_KEY", "test-key");
     mocks.findUnique.mockResolvedValue(null);
     mocks.history.mockResolvedValue({ previousGuesses: [{ guess: "جنگ", score_out_of_100: 50 }], counts: {} });
@@ -54,7 +56,8 @@ describe("v6 shared contextual judging", () => {
     const fetchMock = vi.fn(); vi.stubGlobal("fetch", fetchMock);
     for (const userId of ["one", "two"]) expect(await judgePhrase("ph-106", "جنگ روانی", "تهدید", 6, "typesafe/jev-1.13", { challengeId: "night", userId })).toBe(53.21);
     expect(mocks.history).not.toHaveBeenCalled(); expect(fetchMock).not.toHaveBeenCalled();
-    expect(mocks.findUnique).toHaveBeenCalledWith({ where: { targetId_phrase_judgeVersion_model: { targetId: JSON.stringify(["ph-106", "night"]), phrase: "تهدید", judgeVersion: 6, model: "typesafe/jev-1.13" } } });
+    expect(mocks.findUnique).toHaveBeenCalledOnce();
+    expect(mocks.findUnique).toHaveBeenCalledWith({ where: { targetId_phrase_judgeVersion_model: { targetId: JSON.stringify(["ph-106", "night"]), phrase: "تهدید", judgeVersion: 6, model: "typesafe/jev-1.13" } }, select: { score: true } });
   });
   it("returns the canonical winning insert if concurrent first judgments disagree", async () => {
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue({ ok: true, json: async () => ({ answers: { score: { score: 3 } } }) }));
@@ -73,8 +76,21 @@ describe("v6 shared contextual judging", () => {
     expect(mocks.findUnique).not.toHaveBeenCalled();
   });
   it("does not cache failed JEV responses", async () => {
-    vi.stubGlobal("fetch", vi.fn().mockResolvedValue({ ok: false }));
+    const fetch = vi.fn().mockResolvedValueOnce({ ok: false }).mockResolvedValueOnce({ ok: true, json: async () => ({ answers: { score: { score: 2 } } }) });
+    vi.stubGlobal("fetch", fetch);
     await expect(judgePhrase("ph-106", "جنگ روانی", "تهدید", 6, "typesafe/jev-1.13", { challengeId: "night", userId: "player" })).rejects.toThrow("JEV_UNAVAILABLE");
     expect(mocks.upsert).not.toHaveBeenCalled();
+    expect(await judgePhrase("ph-106", "جنگ روانی", "تهدید", 6, "typesafe/jev-1.13", { challengeId: "night", userId: "player" })).toBe(49.5);
+    expect(fetch).toHaveBeenCalledTimes(2);
+  });
+  it("scopes memory scores to the challenge, target, judge version and model", async () => {
+    mocks.findUnique.mockResolvedValue({ score: 0 });
+    const request = (challengeId: string, model = "typesafe/jev-1.13", version = 6) => judgePhrase("ph-106", "جنگ روانی", "تهدید", version, model, { challengeId, userId: "player" });
+    expect(await request("morning")).toBe(0);
+    expect(await request("morning")).toBe(0);
+    await request("night");
+    await request("morning", "other-model");
+    await request("morning", "typesafe/jev-1.13", 7);
+    expect(mocks.findUnique).toHaveBeenCalledTimes(4);
   });
 });

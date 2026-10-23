@@ -1,15 +1,20 @@
 import { prisma } from "./prisma";
 import { normalizePersian } from "./geo";
 import { selectPhraseHuntHistory } from "./phrase-hunt-history";
+import { ResultCache } from "./result-cache";
+
+const shared = globalThis as unknown as { phraseHuntGlobalHistoryCache?: ResultCache };
+export const phraseHuntGlobalHistoryCache = shared.phraseHuntGlobalHistoryCache ??= new ResultCache(8, 1024 * 1024);
 
 /** Read-only context preparation; never exposes user identifiers to the judge. */
 export async function loadPhraseHuntHistory(challengeId: string, userId: string, currentGuess: string) {
   const normalized = normalizePersian(currentGuess);
   const results = await Promise.allSettled([
-    prisma.phraseHuntGuess.groupBy({
-      by: ["normalized"], where: { game: { phraseChallengeId: challengeId }, normalized: { not: normalized } },
-      _max: { score: true }, orderBy: [{ _max: { score: "desc" } }, { normalized: "asc" }], take: 200,
-    }),
+    phraseHuntGlobalHistoryCache.get(challengeId, 10_000, () => prisma.phraseHuntGuess.groupBy({
+      by: ["normalized"], where: { game: { phraseChallengeId: challengeId } },
+      // One spare row keeps a 200-word pool after excluding this request's guess.
+      _max: { score: true }, orderBy: [{ _max: { score: "desc" } }, { normalized: "asc" }], take: 201,
+    })).then(rows => rows.filter(row => row.normalized !== normalized).slice(0, 200)),
     prisma.phraseHuntGuess.groupBy({
       by: ["normalized"], where: { game: { phraseChallengeId: challengeId, userId }, normalized: { not: normalized } },
       _max: { score: true }, orderBy: [{ _max: { score: "desc" } }, { normalized: "asc" }], take: 100,

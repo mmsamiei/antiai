@@ -1,5 +1,22 @@
 /** Manually calibrated, challenge-specific examples shown to JEV as score anchors. */
 export const phraseHuntAnchors: Record<string, { guess: string; score_out_of_100: number }[]> = {
+  "2026-10-23T18:30:00.000Z": [
+    { guess: "پود", score_out_of_100: 100 },
+    { guess: "تار و پود", score_out_of_100: 95 },
+    { guess: "تار", score_out_of_100: 88 },
+    { guess: "بافت", score_out_of_100: 82 },
+    { guess: "بافندگی", score_out_of_100: 77 },
+    { guess: "نساجی", score_out_of_100: 72 },
+    { guess: "پارچه", score_out_of_100: 68 },
+    { guess: "نخ", score_out_of_100: 64 },
+    { guess: "رشته", score_out_of_100: 60 },
+    { guess: "فرش", score_out_of_100: 60 },
+    { guess: "دار قالی", score_out_of_100: 55 },
+    { guess: "قالی‌بافی", score_out_of_100: 51 },
+    { guess: "پنبه", score_out_of_100: 41 },
+    { guess: "جامه", score_out_of_100: 36 },
+    { guess: "چرخ خیاطی", score_out_of_100: 28 },
+  ],
   "2026-10-22T18:30:00.000Z": [
     { guess: "شلغم", score_out_of_100: 100 },
     { guess: "شلغم خام", score_out_of_100: 98 },

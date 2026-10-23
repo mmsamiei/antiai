@@ -6,6 +6,7 @@ import { prisma } from "./prisma";
 import { normalizePersian } from "./geo";
 import { loadPhraseHuntHistory } from "./phrase-hunt-history-store";
 import { phraseHuntAnchors } from "./phrase-hunt-anchors";
+import { phraseHuntPendingScores, phraseHuntScoreCache } from "./phrase-hunt-score-cache";
 
 // New challenges use JEV's five-level semantic proximity score.
 export const PHRASE_HUNT_JUDGE_VERSION = 6;
@@ -84,7 +85,6 @@ export const contextualPhraseInstructions = "میزان نزدیک‌شدن حد
 export const contextualPhraseLevels = ["بی‌ارتباط", "ارتباط ضعیف", "بخشی از مفهوم درست", "بیشتر مفهوم درست", "تقریباً همان معنا"];
 export type PhraseJudgeContext = { challengeId: string; userId: string };
 
-const contextualPending = new Map<string, Promise<number>>();
 const historyCollator = new Intl.Collator("fa");
 const configuredConcurrency = Number(process.env.JEV_MAX_CONCURRENT || 8);
 const judgeCapacity = new AsyncCapacity(Number.isInteger(configuredConcurrency) && configuredConcurrency > 0 && configuredConcurrency <= 32 ? configuredConcurrency : 8, 64, 2000);
@@ -94,11 +94,9 @@ async function judgeContextualPhrase(targetId: string, target: string, phrase: s
   // Scope contextual judgments to one challenge, while preserving historical cache keys.
   const cacheTargetId = JSON.stringify([targetId, context.challengeId]);
   const where = { targetId_phrase_judgeVersion_model: { targetId: cacheTargetId, phrase, judgeVersion, model } };
-  const cached = await prisma.phraseHuntJudgment.findUnique({ where });
-  if (cached) return cached.score;
-  const apiKey = process.env.JEV_API_KEY;
-  if (!apiKey) throw new Error("JEV_UNAVAILABLE");
-  return sharedJudgment([cacheTargetId, phrase, judgeVersion, model], async () => (await prisma.phraseHuntJudgment.findUnique({ where }))?.score ?? null, () => judgeCapacity.run(async () => {
+  return sharedJudgment([cacheTargetId, phrase, judgeVersion, model], async () => (await prisma.phraseHuntJudgment.findUnique({ where, select: { score: true } }))?.score ?? null, () => judgeCapacity.run(async () => {
+    const apiKey = process.env.JEV_API_KEY;
+    if (!apiKey) throw new Error("JEV_UNAVAILABLE");
     const history = await measureJudge("history", () => loadPhraseHuntHistory(context.challengeId, context.userId, phrase));
     const anchors = phraseHuntAnchors[context.challengeId] ?? [];
     const previousByGuess = new Map(history.previousGuesses.map((item) => [normalizePersian(item.guess), item]));
@@ -124,13 +122,13 @@ async function judgeContextualPhrase(targetId: string, target: string, phrase: s
     });
     try {
       const saved = await measureJudge("score_persist", () => prisma.phraseHuntJudgment.upsert({ where,
-        create: { targetId: cacheTargetId, phrase, judgeVersion, model, score }, update: {},
+        create: { targetId: cacheTargetId, phrase, judgeVersion, model, score }, update: {}, select: { score: true },
       }));
       // A concurrent first judgment may have won: always return the shared stored score.
       return saved.score;
     } catch (error) {
       if (!(error instanceof Prisma.PrismaClientKnownRequestError) || error.code !== "P2002") throw error;
-      const winner = await prisma.phraseHuntJudgment.findUnique({ where });
+      const winner = await prisma.phraseHuntJudgment.findUnique({ where, select: { score: true } });
       if (!winner) throw error;
       return winner.score;
     }
@@ -142,12 +140,19 @@ export async function judgePhrase(targetId: string, target: string, rawPhrase: s
   if (!phrase || phrase.length > 120 || phrase.split(" ").length > 12) throw new Error("PHRASE_INVALID");
 
   if (judgeVersion >= 6) {
+    if (!context?.challengeId || !context.userId) throw new Error("PHRASE_CONTEXT_REQUIRED");
     const key = JSON.stringify([targetId, context?.challengeId, phrase, judgeVersion, model]);
-    const pending = contextualPending.get(key);
+    const cached = phraseHuntScoreCache.get(key);
+    if (cached !== undefined) return cached;
+    const pending = phraseHuntPendingScores.get(key);
     if (pending) return pending;
     const result = judgeContextualPhrase(targetId, target, phrase, judgeVersion, model, context);
-    contextualPending.set(key, result);
-    try { return await result; } finally { if (contextualPending.get(key) === result) contextualPending.delete(key); }
+    phraseHuntPendingScores.set(key, result);
+    try {
+      const score = await result;
+      phraseHuntScoreCache.set(key, score);
+      return score;
+    } finally { if (phraseHuntPendingScores.get(key) === result) phraseHuntPendingScores.delete(key); }
   }
 
   const cached = await prisma.phraseHuntJudgment.findUnique({

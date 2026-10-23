@@ -11,5 +11,5 @@ it("escapes identities and the old answer and distinguishes solved from closest 
     { userId: "b", displayName: "B", challengeSolved: false, guessCount: 5, bestScore: 7 },
   ]);
   expect(text).toContain("&lt;old&gt;"); expect(text).toContain("&lt;name&gt;");
-  expect(text).toContain("حل با ۳ حدس"); expect(text).toContain("بهترین رتبه: ۷");
+  expect(text).toContain("حل با ۳ حدس"); expect(text).toContain("بهترین جایگاه نزدیکی: ۷");
 });

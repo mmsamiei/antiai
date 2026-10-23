@@ -465,7 +465,7 @@ export default function AntiAiGamesApp() {
         <button autoFocus className="primary" disabled={invitations.busy} onClick={() => void sendDirectInvite(inviteRecipient, "LETTER_DUEL")}>دوحرف</button>
         <button className="primary" disabled={invitations.busy} onClick={() => void sendDirectInvite(inviteRecipient, "COUNTRY_RACE")}>کشورجوی سرعتی</button>
         <button className="primary" disabled={invitations.busy} onClick={() => void sendDirectInvite(inviteRecipient, "CITY_RACE")}>شهرجوی سرعتی</button>
-        <p>یک کشور مشترک، حداکثر ۲۰۰ ثانیه؛ بهترین رتبهٔ حریفت را می‌بینی.</p>
+        <p>یک کشور مشترک، حداکثر ۲۰۰ ثانیه؛ بهترین جایگاه نزدیکی حریفت را می‌بینی.</p>
         <button className="secondary" onClick={() => setInviteRecipient(null)}>انصراف</button>
       </section></div>}
       {screen === "duel" && (
@@ -1021,7 +1021,7 @@ function Play({
       .map((mark, index) => {
         const guess = game.guesses[index];
         const location = game.type === "IRAN_CITY" && guess.provinceName ? `، ${guess.provinceName}` : "";
-        return `${mark} ${guess.name}${location}${guess.rank ? ` (رتبهٔ ${guess.rank.toLocaleString("fa-IR")})` : " (پاسخ درست)"}`;
+        return `${mark} ${guess.name}${location}${guess.rank ? ` (جایگاه نزدیکی ${guess.rank.toLocaleString("fa-IR")})` : " (پاسخ درست)"}`;
       });
     const targetName = game.type === "IRAN_CITY" && game.target?.provinceName ? `${game.target.name}، ${game.target.provinceName}` : game.target?.name;
     const text = `${meta.title} در Anti AI Games\n${game.guessesCount.toLocaleString("fa-IR")} حدس\n${blocks.join("\n")}\n\nپاسخ نهایی: ${game.target?.emoji || ""} ${targetName || ""}`;
@@ -1066,16 +1066,16 @@ function Play({
             title: "راهنمای شهرجو",
             steps: [
               "نام یک شهر ایران را تایپ و از پیشنهادها انتخاب کن.",
-              "هر حدس یک رتبه می‌گیرد؛ هرچه رتبه کمتر باشد، به شهر پنهان نزدیک‌تری.",
-              "رتبهٔ ۲ نزدیک‌ترین شهرِ دیگر است؛ فقط علامت ✓ یعنی پاسخ را پیدا کرده‌ای.",
+              "هر حدس یک جایگاه نزدیکی دارد؛ هرچه این عدد کمتر باشد، به شهر پنهان نزدیک‌تری.",
+              "جایگاه نزدیکی ۲ نزدیک‌ترین شهرِ دیگر است؛ فقط علامت ✓ یعنی پاسخ را پیدا کرده‌ای.",
             ],
           }
         : {
             title: "راهنمای کشورجو",
             steps: [
               "نام یک کشور را تایپ و از پیشنهادها انتخاب کن.",
-              "هر حدس یک رتبه می‌گیرد؛ هرچه رتبه کمتر باشد، به کشور پنهان نزدیک‌تری.",
-              "رتبهٔ ۲ نزدیک‌ترین کشورِ دیگر است؛ فقط علامت ✓ یعنی پاسخ را پیدا کرده‌ای.",
+              "هر حدس یک جایگاه نزدیکی دارد؛ هرچه این عدد کمتر باشد، به کشور پنهان نزدیک‌تری.",
+              "جایگاه نزدیکی ۲ نزدیک‌ترین کشورِ دیگر است؛ فقط علامت ✓ یعنی پاسخ را پیدا کرده‌ای.",
             ],
           };
 
@@ -1432,7 +1432,7 @@ function Play({
                 <b>{guess.name}</b>
               </div>
               <div className="rank-copy">
-                <small>رتبه</small>
+                <small>جایگاه نزدیکی</small>
                 <strong>
                   {guess.rank === 0 ? "✓" : guess.rank.toLocaleString("fa-IR")}
                 </strong>
@@ -1692,8 +1692,8 @@ function Leaderboard({
         <select id="leader-challenge" value={challengeId || challenge?.id || ""} onChange={e => setChallengeId(e.target.value)}>
           {challenges.map(c => <option key={c.id} value={c.id}>{new Date(c.startsAt).toLocaleString("fa-IR", { timeZone: "Asia/Tehran", year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })} · {c.ended ? "پایان‌یافته" : "در حال برگزاری"}</option>)}
         </select>
-        {challenge && <p>{challenge.ended ? `${isCountryChallenge ? type === "IRAN_CITY" ? "شهر هدف" : "کشور هدف" : "عبارت هدف"}: ${challenge.target || "—"}` : isCountryChallenge ? "رتبه و تعداد حدس‌ها نمایش داده می‌شوند؛ نام حدس‌ها پس از پایان چالش آشکار می‌شود." : "بهترین حدس‌ها پس از پایان چالش آشکار می‌شوند."}</p>}
-        <small>{isCountryChallenge ? "حل‌کنندگان با حدس کمتر و سپس زمان حل؛ بقیه با رتبهٔ بهتر و سپس زمان رسیدن به آن" : "امتیاز بیشتر؛ در امتیاز برابر، زمان زودترِ رسیدن به آن امتیاز"}</small>
+        {challenge && <p>{challenge.ended ? `${isCountryChallenge ? type === "IRAN_CITY" ? "شهر هدف" : "کشور هدف" : "عبارت هدف"}: ${challenge.target || "—"}` : isCountryChallenge ? "جایگاه نزدیکی و تعداد حدس‌ها نمایش داده می‌شوند؛ نام حدس‌ها پس از پایان چالش آشکار می‌شود." : "بهترین حدس‌ها پس از پایان چالش آشکار می‌شوند."}</p>}
+        <small>{isCountryChallenge ? "حل‌کنندگان با حدس کمتر و سپس زمان حل؛ بقیه با جایگاه نزدیکی کمتر و سپس زمان رسیدن به آن" : "امتیاز بیشتر؛ در امتیاز برابر، زمان زودترِ رسیدن به آن امتیاز"}</small>
       </div>}
       {isPhraseHunt && period !== "challenge" && <p className="board-note">مجموع بهترین امتیاز هر چالش · امتیاز چالش جاری هم حساب می‌شود · هفته از شنبه به وقت تهران</p>}
       {board === "practice" && !isPhraseHunt && mode === "skill" && (
@@ -1705,7 +1705,7 @@ function Leaderboard({
               : "امتیاز مهارت = مجموع حدس‌های بازی‌های تمام‌شده ÷ تعداد بردها · حداقل ۳ برد"}
         </p>
       )}
-      {board === "challenge" && !isPhraseHunt && period !== "challenge" && <p className="board-note">تعداد چالش‌های حل‌شده؛ سپس میانگین حدس کمتر در حل‌ها و میانگین بهترین رتبهٔ کمتر · هفته از شنبه به وقت تهران</p>}
+      {board === "challenge" && !isPhraseHunt && period !== "challenge" && <p className="board-note">تعداد چالش‌های حل‌شده؛ سپس میانگین حدس کمتر در حل‌ها و میانگین بهترین جایگاه نزدیکی کمتر · هفته از شنبه به وقت تهران</p>}
       {board === "competitive" && <p className="board-note">امتیاز Elo · شروع از ۱۰۰۰ · همهٔ مسابقه‌های دونفره امتیازدارند</p>}
       {boardError ? <div className="empty-state">دریافت جدول ممکن نشد؛ دوباره تلاش کن.</div> : loading ? (
         <div className="empty-state">در حال محاسبه رتبه‌ها…</div>
@@ -1778,7 +1778,7 @@ function LeaderRowView({
     : mode === "effort"
       ? (row.totalScore ?? row.averageGuesses)
       : (row.bestScore ?? row.averageGuesses);
-  const detail = row.challengeTotal ? `${(row.games || 0).toLocaleString("fa-IR")} چالش · ${row.wins ? `میانگین ${row.averageGuesses.toLocaleString("fa-IR")} حدس در حل‌ها` : "هنوز چالشی حل نشده"}` : row.rating !== undefined ? `${(row.games || 0).toLocaleString("fa-IR")} مسابقه · ${row.wins.toLocaleString("fa-IR")} برد · ${(row.losses || 0).toLocaleString("fa-IR")} باخت · ${(row.draws || 0).toLocaleString("fa-IR")} مساوی` : countryChallenge ? row.challengeSolved ? `${(row.guessCount || 0).toLocaleString("fa-IR")} حدس تا حل` : row.bestScore == null ? "هنوز حدسی ثبت نکرده" : `بهترین رتبه ${row.bestScore.toLocaleString("fa-IR")} · ${(row.guessCount || 0).toLocaleString("fa-IR")} حدس` : phraseHunt ? row.guessCount !== undefined ? `${row.guessCount.toLocaleString("fa-IR")} حدس` : `${(row.games || 0).toLocaleString("fa-IR")} چالش` : duel
+  const detail = row.challengeTotal ? `${(row.games || 0).toLocaleString("fa-IR")} چالش · ${row.wins ? `میانگین ${row.averageGuesses.toLocaleString("fa-IR")} حدس در حل‌ها` : "هنوز چالشی حل نشده"}` : row.rating !== undefined ? `${(row.games || 0).toLocaleString("fa-IR")} مسابقه · ${row.wins.toLocaleString("fa-IR")} برد · ${(row.losses || 0).toLocaleString("fa-IR")} باخت · ${(row.draws || 0).toLocaleString("fa-IR")} مساوی` : countryChallenge ? row.challengeSolved ? `${(row.guessCount || 0).toLocaleString("fa-IR")} حدس تا حل` : row.bestScore == null ? "هنوز حدسی ثبت نکرده" : `بهترین جایگاه نزدیکی ${row.bestScore.toLocaleString("fa-IR")} · ${(row.guessCount || 0).toLocaleString("fa-IR")} حدس` : phraseHunt ? row.guessCount !== undefined ? `${row.guessCount.toLocaleString("fa-IR")} حدس` : `${(row.games || 0).toLocaleString("fa-IR")} چالش` : duel
     ? `${row.wins.toLocaleString("fa-IR")} برد · ${(row.losses || 0).toLocaleString("fa-IR")} باخت · ${(row.draws || 0).toLocaleString("fa-IR")} مساوی`
     : semantris
       ? mode === "effort"
@@ -1827,7 +1827,7 @@ function LeaderRowView({
       <div className="leader-wins">
         <strong>{value}</strong>
         <small>
-          {row.challengeTotal ? "چالش حل‌شده" : row.rating !== undefined ? "Elo" : countryChallenge ? row.challengeSolved ? "حدس" : "رتبه" : phraseHunt ? row.guessCount !== undefined ? "امتیاز" : "مجموع امتیاز" : duel
+          {row.challengeTotal ? "چالش حل‌شده" : row.rating !== undefined ? "Elo" : countryChallenge ? row.challengeSolved ? "حدس" : "جایگاه نزدیکی" : phraseHunt ? row.guessCount !== undefined ? "امتیاز" : "مجموع امتیاز" : duel
             ? mode === "skill"
               ? "نرخ برد"
               : "دور"

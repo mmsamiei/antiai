@@ -13,7 +13,7 @@ export function renderGeographyAnnouncement(type: GeoRaceType, answer: string | 
   return [
     `${city ? "📍" : "🌍"} <b>${name} | چالش تازه شروع شد!</b>`, "",
     ...(answer ? [`🎯 پاسخ چالش قبلی: <b>«${escapeTelegramHtml(answer)}»</b>`, "",
-      ...winners.map((w, i) => `${["🥇", "🥈", "🥉"][i]} <b>${escapeTelegramHtml(w.displayName)}</b> — ${w.challengeSolved ? `حل با ${w.guessCount.toLocaleString("fa-IR")} حدس` : `بهترین رتبه: ${w.bestScore?.toLocaleString("fa-IR") ?? "—"}`}`), ""] : []),
+      ...winners.map((w, i) => `${["🥇", "🥈", "🥉"][i]} <b>${escapeTelegramHtml(w.displayName)}</b> — ${w.challengeSolved ? `حل با ${w.guessCount.toLocaleString("fa-IR")} حدس` : `بهترین جایگاه نزدیکی: ${w.bestScore?.toLocaleString("fa-IR") ?? "—"}`}`), ""] : []),
     `یک ${city ? "شهر" : "کشور"} تازه برای همه پنهان شده؛ پیدایش می‌کنی؟`,
     `⏰ هر روز ساعت ${city ? "۹ صبح و ۹ شب" : "۸ صبح و ۸ شب"} به وقت تهران`,
     `🎮 وارد بازی شو و «${name} ← چالش روزانه» را انتخاب کن.`,

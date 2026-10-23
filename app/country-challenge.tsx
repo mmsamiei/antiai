@@ -75,7 +75,7 @@ export default function CountryChallenge({ gameType = "COUNTRY", onBack, onLeade
       {!state.entry.guesses.length ? <div className="empty-state"><span>⌁</span><p>اولین حدس را بزن.</p></div> : <div className="guess-list">
         {[...state.entry.guesses].sort((a, b) => a.rank - b.rank).map(guess => <div className={`guess-row ${rankColor(guess.rank, state.totalItems)}`} key={guess.id}>
           <div className="guess-name"><span>{guess.emoji}</span><b>{guess.name}{guess.provinceName ? `، ${guess.provinceName}` : ""}</b></div>
-          <div className="rank-copy"><small>رتبه</small><strong>{guess.rank === 0 ? "✓" : guess.rank.toLocaleString("fa-IR")}</strong><span>{guess.rank === 0 ? "پاسخ درست" : `از ${state.totalItems.toLocaleString("fa-IR")}`}</span></div>
+          <div className="rank-copy"><small>جایگاه نزدیکی</small><strong>{guess.rank === 0 ? "✓" : guess.rank.toLocaleString("fa-IR")}</strong><span>{guess.rank === 0 ? "پاسخ درست" : `از ${state.totalItems.toLocaleString("fa-IR")}`}</span></div>
           <div className="rank-bar"><i style={{ width: `${guess.rank === 0 ? 100 : Math.max(4, 100 - ((guess.rank - 2) / Math.max(1, state.totalItems - 2)) * 100)}%` }} /></div>
         </div>)}
       </div>}

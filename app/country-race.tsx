@@ -79,12 +79,12 @@ export default function CountryRace({ id, onExit, setError, onProfile, registerL
     {!race ? <div className="empty-state">در حال بازیابی مسابقه…</div> : <>
       <div className="duel-score race-score">{[race.me, race.opponent].map((p, index) => <div key={p.id}>
         <button className="duel-profile-trigger" onClick={() => onProfile(p.id)}><PlayerAvatar player={p} online={online.has(p.id)} /><b>{playerName(p)}</b></button>
-        <small>{index === 0 ? "بهترین رتبهٔ تو" : "بهترین رتبهٔ حریف"}</small><strong key={index === 0 ? race.myBestRank : race.opponentBestRank}>{rankText(index === 0 ? race.myBestRank : race.opponentBestRank)}</strong>
+        <small>{index === 0 ? "بهترین جایگاه نزدیکی تو" : "بهترین جایگاه نزدیکی حریف"}</small><strong key={index === 0 ? race.myBestRank : race.opponentBestRank}>{rankText(index === 0 ? race.myBestRank : race.opponentBestRank)}</strong>
       </div>)}</div>
       {race.status === "WAITING" && <div className="empty-state">منتظر آماده‌شدن هر دو بازیکن…</div>}
       {race.status === "ACTIVE" && <>
         <div className={"race-timer" + (seconds <= 20 ? " urgent" : "")} role="timer">{seconds.toLocaleString("fa-IR")} <small>ثانیه باقی مانده</small></div>
-        <p className="players-hint">{config.noun} پنهان را پیدا کن؛ رتبهٔ کمتر یعنی نزدیک‌تر.</p>
+        <p className="players-hint">{config.noun} پنهان را پیدا کن؛ جایگاه نزدیکی کمتر یعنی نزدیک‌تر.</p>
         {!race.opponentConnected && <p className="duel-disconnected">منتظر بازگشت حریف؛ {Math.max(0, Math.ceil((Date.parse(race.reconnectDeadline) - Date.now() - offset.current) / 1000)).toLocaleString("fa-IR")} ثانیه فرصت دارد.</p>}
         <div className="search-box">
           <div className="search-row">
@@ -98,7 +98,7 @@ export default function CountryRace({ id, onExit, setError, onProfile, registerL
       </>}
       {ended && <div className={"duel-result " + (race.winnerUserId ? won ? "won" : "lost" : "draw")}>
         <span>{race.winnerUserId ? won ? "🏆" : "◌" : "🤝"}</span><h2>{race.winnerUserId ? won ? "مسابقه را بردی!" : "حریف مسابقه را برد" : race.endReason === "CANCELLED" ? "شروع مسابقه لغو شد" : "مسابقه مساوی شد"}</h2>
-        <p>{race.endReason === "FOUND" ? `${config.noun} هدف پیدا شد.` : race.endReason === "TIMEOUT" ? `${config.durationText} تمام شد؛ نتیجه بر اساس بهترین رتبهٔ هر نفر است.` : race.endReason === "FORFEIT" ? "مسابقه با واگذاری پایان یافت." : race.endReason === "DISCONNECTED" ? "مهلت بازگشت به مسابقه تمام شد." : race.invite?.reason}</p>
+        <p>{race.endReason === "FOUND" ? `${config.noun} هدف پیدا شد.` : race.endReason === "TIMEOUT" ? `${config.durationText} تمام شد؛ نتیجه بر اساس بهترین جایگاه نزدیکی هر نفر است.` : race.endReason === "FORFEIT" ? "مسابقه با واگذاری پایان یافت." : race.endReason === "DISCONNECTED" ? "مهلت بازگشت به مسابقه تمام شد." : race.invite?.reason}</p>
         {race.ratingChange && <p>امتیاز رقابتی: <b dir="ltr">{race.ratingChange.before.toLocaleString("fa-IR")} → {race.ratingChange.after.toLocaleString("fa-IR")} ({race.ratingChange.delta > 0 ? "+" : ""}{race.ratingChange.delta.toLocaleString("fa-IR")})</b></p>}
         {race.target && <><strong>{race.target.emoji} {race.target.name}</strong><p>{race.target.description}</p></>}
         <div className="duel-rematch"><button className="primary" disabled={busy || invited} onClick={async () => { setBusy(true); try { await act("rematch"); setInvited(true); } catch (e) { setError(e instanceof Error ? e.message : "دعوت ارسال نشد"); } finally { setBusy(false); } }}>{invited ? "دعوت فرستاده شد؛ منتظر پاسخ حریف" : "بازی مجدد با همین حریف"}</button><button className="secondary" onClick={onExit}>بازگشت به بازیکن‌ها</button></div>
@@ -111,7 +111,7 @@ export default function CountryRace({ id, onExit, setError, onProfile, registerL
 function RaceGuesses({ title, guesses, total }: { title: string; guesses: Guess[]; total: number }) {
   return <section className="race-guesses"><div className="guess-head"><h2>{title}</h2><span>{guesses.length.toLocaleString("fa-IR")} حدس</span></div>{!guesses.length ? <p>هنوز حدسی ثبت نشده</p> : <div className="guess-list">{[...guesses].sort((a, b) => a.rank - b.rank).map(g => <div className={`guess-row ${rankColor(g.rank, total)}`} key={g.id}>
     <div className="guess-name"><span>{g.emoji}</span><b>{g.name}</b></div>
-    <div className="rank-copy"><small>رتبه</small><strong>{g.rank === 0 ? "✓" : g.rank.toLocaleString("fa-IR")}</strong><span>{g.rank === 0 ? "پاسخ درست" : `از ${total.toLocaleString("fa-IR")}`}</span></div>
+    <div className="rank-copy"><small>جایگاه نزدیکی</small><strong>{g.rank === 0 ? "✓" : g.rank.toLocaleString("fa-IR")}</strong><span>{g.rank === 0 ? "پاسخ درست" : `از ${total.toLocaleString("fa-IR")}`}</span></div>
     <div className="rank-bar"><i style={{ width: `${g.rank === 0 ? 100 : Math.max(4, 100 - ((g.rank - 2) / Math.max(1, total - 2)) * 100)}%` }} /></div>
   </div>)}</div>}</section>;
 }

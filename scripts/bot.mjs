@@ -1,11 +1,18 @@
 import "dotenv/config";
+import { PrismaClient } from "@prisma/client";
+import { parseStartCommand, recordStartCommand } from "./bot-starts.mjs";
 
 const token = process.env.TELEGRAM_BOT_TOKEN;
 const appUrl = process.env.MINI_APP_URL;
 if (!token || !appUrl) throw new Error("TELEGRAM_BOT_TOKEN and MINI_APP_URL are required");
 
 const api = `https://api.telegram.org/bot${token}`;
+const prisma = new PrismaClient();
 let offset = 0;
+
+for (const signal of ["SIGINT", "SIGTERM"]) {
+  process.once(signal, () => { void prisma.$disconnect().finally(() => process.exit(0)); });
+}
 
 async function call(method, payload = {}) {
   const response = await fetch(`${api}/${method}`, {
@@ -23,11 +30,15 @@ while (true) {
   try {
     const updates = await call("getUpdates", { offset, timeout: 30, allowed_updates: ["message"] });
     for (const update of updates) {
-      offset = update.update_id + 1;
       const message = update.message;
-      if (!message?.chat?.id) continue;
+      if (!message?.chat?.id) {
+        offset = update.update_id + 1;
+        continue;
+      }
+      const parsedStart = parseStartCommand(message.text);
+      if (parsedStart) await recordStartCommand(prisma, update);
       if (["/start", "/play"].some((command) => message.text?.startsWith(command))) {
-        const startPayload = message.text?.startsWith("/start ") ? message.text.slice(7).trim() : "";
+        const startPayload = parsedStart?.payload || (message.text?.startsWith("/start ") ? message.text.slice(7).trim() : "");
         const inviteToken = startPayload.startsWith("duel_") ? startPayload.slice(5) : "";
         const isPhraseHunt = startPayload === "phrase_hunt";
         const destinationUrl = new URL(appUrl);
@@ -44,6 +55,7 @@ while (true) {
           reply_markup: { inline_keyboard: [[{ text: isPhraseHunt ? "🎯 معناجو" : inviteToken ? "🔤 ورود به اتاق دوحرف" : "🎮 شروع بازی", web_app: { url: destination } }]] }
         });
       }
+      offset = update.update_id + 1;
     }
   } catch (error) {
     console.error(error);

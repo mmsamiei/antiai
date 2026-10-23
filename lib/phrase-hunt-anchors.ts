@@ -1,5 +1,27 @@
 /** Manually calibrated, challenge-specific examples shown to JEV as score anchors. */
 export const phraseHuntAnchors: Record<string, { guess: string; score_out_of_100: number }[]> = {
+  "2026-10-24T06:30:00.000Z": [
+    { guess: "پرنیان", score_out_of_100: 100 },
+    { guess: "پرند", score_out_of_100: 98 },
+    { guess: "دیبا", score_out_of_100: 96 },
+    { guess: "حریر", score_out_of_100: 94 },
+    { guess: "ابریشم", score_out_of_100: 92 },
+    { guess: "دیباج", score_out_of_100: 90 },
+    { guess: "زربفت", score_out_of_100: 88 },
+    { guess: "ململ", score_out_of_100: 86 },
+    { guess: "اطلس", score_out_of_100: 83 },
+    { guess: "پارچهٔ ابریشمی", score_out_of_100: 80 },
+    { guess: "ترمه", score_out_of_100: 77 },
+    { guess: "مخمل", score_out_of_100: 73 },
+    { guess: "پارچه", score_out_of_100: 67 },
+    { guess: "بافت", score_out_of_100: 60 },
+    { guess: "نخ", score_out_of_100: 52 },
+    { guess: "پشم", score_out_of_100: 49 },
+    { guess: "پنبه", score_out_of_100: 46 },
+    { guess: "ریسندگی", score_out_of_100: 42 },
+    { guess: "جامه", score_out_of_100: 37 },
+    { guess: "پوشاک", score_out_of_100: 32 },
+  ],
   "2026-10-23T18:30:00.000Z": [
     { guess: "پود", score_out_of_100: 100 },
     { guess: "تار و پود", score_out_of_100: 95 },

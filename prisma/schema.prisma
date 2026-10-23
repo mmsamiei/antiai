@@ -87,6 +87,20 @@ model User {
   updatedAt                        DateTime               @updatedAt
 }
 
+model TelegramStartEvent {
+  updateId       BigInt   @id
+  telegramUserId String
+  username       String?
+  firstName      String?
+  lastName       String?
+  payloadKind    String
+  messageAt      DateTime
+  receivedAt     DateTime @default(now())
+
+  @@index([messageAt])
+  @@index([telegramUserId, messageAt])
+}
+
 enum FeedbackKind {
   SUGGESTION
   CRITICISM

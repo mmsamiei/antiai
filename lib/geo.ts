@@ -1,3 +1,5 @@
+import type { ItemPhoto } from "./item-photo";
+import { animalPhotos } from "./data/animal-photos";
 import { animalRecords } from "./data/animals";
 import { animalProximityRank } from "./animals";
 import type { GameType } from "@prisma/client";
@@ -12,12 +14,13 @@ export type GeoItem = {
   latitude?: number;
   longitude?: number;
   emoji?: string;
+  photo?: ItemPhoto;
   detail?: string;
   provinceName?: string;
 };
 
 export type GameItem = GeoItem;
-const animals: GameItem[] = animalRecords.map(a => ({ id: a.id, name: a.name, aliases: a.aliases, emoji: "🐾", detail: a.scientific }));
+const animals: GameItem[] = animalRecords.map(a => ({ id: a.id, name: a.name, aliases: a.aliases, emoji: "🐾", photo: animalPhotos[a.id], detail: a.scientific }));
 
 export const DATASET_VERSION = "2026-10-06-iran-admin-v3.1.2";
 
@@ -95,6 +98,7 @@ export function publicItem(item: GameItem, includeDescription = false) {
     emoji: item.emoji,
     detail: item.detail,
     provinceName: item.provinceName,
+    ...(item.photo ? { photo: item.photo } : {}),
     ...(includeDescription && countryDescriptions[item.id] ? { description: countryDescriptions[item.id] } : {})
   };
 }

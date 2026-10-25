@@ -1,4 +1,6 @@
 "use client";
+import type { ItemPhoto } from "@/lib/item-photo";
+import { ItemImage, AnimalPortrait, AnimalPhotoCreditsLink } from "./item-image";
 
 import {
   useCallback,
@@ -39,7 +41,7 @@ type GameType =
   | "ADJECTIVE_RAIN"
   | "SEMANTRIS"
   | "LETTER_DUEL";
-type PublicItem = { id: string; name: string; emoji?: string; detail?: string; provinceName?: string; description?: string };
+type PublicItem = { id: string; name: string; emoji?: string; photo?: ItemPhoto; detail?: string; provinceName?: string; description?: string };
 type Guess = PublicItem & { rank: number; createdAt: string };
 type PhraseGuess = { id: string; name: string; score: number; createdAt: string };
 type Game = {
@@ -1281,8 +1283,8 @@ function Play({
                     setSuggestions([]);
                   }}
                 >
-                  <span>
-                    {item.emoji} {item.name}
+                  <span className="item-with-photo">
+                    <ItemImage item={item} /> {item.name}
                   </span>
                   {(item.provinceName || item.detail) && <small>{item.provinceName || item.detail}</small>}
                 </button>
@@ -1324,6 +1326,7 @@ function Play({
               </>
             )}
           </strong>
+          {game.type === "ANIMAL" && <AnimalPortrait item={game.target} />}
           {game.type === "COUNTRY" && game.target?.description && (
             <p className="country-description">{game.target.description}</p>
           )}
@@ -1467,7 +1470,7 @@ function Play({
               key={guess.id}
             >
               <div className="guess-name">
-                <span>{guess.emoji}</span>
+                <ItemImage item={guess} />
                 <b>{guess.name}</b>
               </div>
               <div className="rank-copy">
@@ -1492,6 +1495,7 @@ function Play({
           ))}
         </div>
       )}
+      {game.type === "ANIMAL" && <AnimalPhotoCreditsLink />}
     </section>
   );
 }

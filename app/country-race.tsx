@@ -1,4 +1,6 @@
 "use client";
+import type { ItemPhoto } from "@/lib/item-photo";
+import { ItemImage, AnimalPortrait, AnimalPhotoCreditsLink } from "./item-image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { geoRaceConfig, geoRaceType, type GeoRaceType } from "@/lib/geo-race-config";
 import { RaceCountdown } from "@/lib/race-countdown";
@@ -9,8 +11,8 @@ import { useOnlineUsers } from "@/lib/use-online-users";
 import { useBackHandler } from "./back-navigation";
 import { Player, PlayerAvatar, playerName } from "./players";
 const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
-type Guess = { id: string; name: string; emoji?: string; rank: number; detail?: string; provinceName?: string };
-type Race = { phase?: "SELECTING" | "GUESSING"; selectionDeadline?: string | null; selectedForOpponent?: { id: string; name: string } | null; opponentHasSelected?: boolean; opponentTarget?: { name: string }; ratingChange?: { before: number; after: number; delta: number } | null; id: string; gameType: GeoRaceType; totalItems: number; status: string; deadline: string | null; serverNow: string; me: Player; opponent: Player; myBestRank: number | null; opponentBestRank: number | null; opponentConnected: boolean; reconnectDeadline: string; guesses: Guess[]; opponentGuesses?: Guess[]; target?: { name: string; emoji?: string; description?: string }; winnerUserId: string | null; endReason: string | null; invite: { id: string; reason: string | null } | null };
+type Guess = { id: string; name: string; emoji?: string; photo?: ItemPhoto; rank: number; detail?: string; provinceName?: string };
+type Race = { phase?: "SELECTING" | "GUESSING"; selectionDeadline?: string | null; selectedForOpponent?: { id: string; name: string; photo?: ItemPhoto } | null; opponentHasSelected?: boolean; opponentTarget?: { name: string; photo?: ItemPhoto }; ratingChange?: { before: number; after: number; delta: number } | null; id: string; gameType: GeoRaceType; totalItems: number; status: string; deadline: string | null; serverNow: string; me: Player; opponent: Player; myBestRank: number | null; opponentBestRank: number | null; opponentConnected: boolean; reconnectDeadline: string; guesses: Guess[]; opponentGuesses?: Guess[]; target?: { name: string; emoji?: string; photo?: ItemPhoto; description?: string }; winnerUserId: string | null; endReason: string | null; invite: { id: string; reason: string | null } | null };
 const rankText = (rank: number | null) => rank === null ? "—" : rank === 0 ? "پیدا شد!" : rank.toLocaleString("fa-IR");
 async function request(url: string, body?: unknown) {
   const response = await fetch(base + url, sessionRequest(body ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) } : undefined));
@@ -94,9 +96,9 @@ export default function CountryRace({ id, onExit, setError, onProfile, registerL
         <span className="animal-selection-icon">🐾</span><h2>برای {playerName(race.opponent)} یک حیوان انتخاب کن</h2>
         <p>حریف باید حیوان انتخابی تو را پیدا کند؛ پاسخ خودت مخفی می‌ماند.</p>
         <div className={"race-timer" + (selectionSeconds <= 5 ? " urgent" : "")} role="timer">{selectionSeconds.toLocaleString("fa-IR")} <small>ثانیه برای انتخاب</small></div>
-        {race.selectedForOpponent ? <div className="animal-choice-confirmed"><b>✓ {race.selectedForOpponent.name}</b><p>انتخابت ثبت شد؛ منتظر انتخاب حریف هستیم.</p></div> : <div className="search-box">
+        {race.selectedForOpponent ? <div className="animal-choice-confirmed"><ItemImage item={race.selectedForOpponent} /><b>✓ {race.selectedForOpponent.name}</b><p>انتخابت ثبت شد؛ منتظر انتخاب حریف هستیم.</p></div> : <div className="search-box">
           <div className="search-row"><input aria-label="حیوان برای حریف" placeholder={config.hint} autoComplete="off" maxLength={80} value={query} onChange={e => { setQuery(e.target.value); setSelected(null); }} onKeyDown={e => { if (e.key === "Enter" && !e.nativeEvent.isComposing && selected && !busy && selectionSeconds > 0) { e.preventDefault(); void guess(selected.id, true); } }} /><button disabled={!selected || busy || selectionSeconds <= 0} onClick={() => selected && void guess(selected.id, true)}>{busy ? "…" : "انتخاب"}</button></div>
-          {items.length > 0 && <div className="suggestions">{items.map(item => <button key={item.id} onClick={() => { setSelected(item); setQuery(item.name); setItems([]); }}><span>🐾 {item.name}</span></button>)}</div>}
+          {items.length > 0 && <div className="suggestions">{items.map(item => <button key={item.id} onClick={() => { setSelected(item); setQuery(item.name); setItems([]); }}><span className="item-with-photo"><ItemImage item={item} /> {item.name}</span></button>)}</div>}
         </div>}
         <small>{race.opponentHasSelected ? "حریف حیوان تو را انتخاب کرده است." : "حریف هم در حال انتخاب است."} با پایان مهلت، انتخاب‌های باقی‌مانده تصادفی انجام می‌شوند.</small>
       </div>}
@@ -111,7 +113,7 @@ export default function CountryRace({ id, onExit, setError, onProfile, registerL
               onKeyDown={e => { if (e.key === "Enter" && !e.nativeEvent.isComposing) { e.preventDefault(); if (selected && !busy && seconds > 0) void guess(selected.id); } }} />
             <button disabled={!selected || busy || seconds <= 0} onClick={() => selected && void guess(selected.id)}>{busy ? "…" : "حدس"}</button>
           </div>
-          {items.length > 0 && <div className="suggestions">{items.map(item => <button key={item.id} onClick={() => { setSelected(item); setQuery(item.name); setItems([]); }}><span>{item.emoji} {item.name}</span>{(item.provinceName || item.detail) && <small>{item.provinceName || item.detail}</small>}</button>)}</div>}
+          {items.length > 0 && <div className="suggestions">{items.map(item => <button key={item.id} onClick={() => { setSelected(item); setQuery(item.name); setItems([]); }}><span className="item-with-photo"><ItemImage item={item} /> {item.name}</span>{(item.provinceName || item.detail) && <small>{item.provinceName || item.detail}</small>}</button>)}</div>}
         </div>
       </>}
       {ended && <div className={"duel-result " + (race.winnerUserId ? won ? "won" : "lost" : "draw")}>
@@ -119,17 +121,19 @@ export default function CountryRace({ id, onExit, setError, onProfile, registerL
         <p>{race.endReason === "FOUND" ? `${config.noun} هدف پیدا شد.` : race.endReason === "TIMEOUT" ? `${config.durationText} تمام شد؛ نتیجه بر اساس بهترین جایگاه نزدیکی هر نفر است.` : race.endReason === "FORFEIT" ? "مسابقه با واگذاری پایان یافت." : race.endReason === "DISCONNECTED" ? "مهلت بازگشت به مسابقه تمام شد." : race.invite?.reason}</p>
         {race.ratingChange && <p>امتیاز رقابتی: <b dir="ltr">{race.ratingChange.before.toLocaleString("fa-IR")} → {race.ratingChange.after.toLocaleString("fa-IR")} ({race.ratingChange.delta > 0 ? "+" : ""}{race.ratingChange.delta.toLocaleString("fa-IR")})</b></p>}
         {race.target && <><strong>{gameType === "ANIMAL" && "حیوان تو: "}{race.target.emoji} {race.target.name}</strong><p>{race.target.description}</p></>}
+        {gameType === "ANIMAL" && <AnimalPortrait item={race.target} />}
         {race.opponentTarget && <p>حیوان حریف: <b>{race.opponentTarget.name}</b></p>}
         <div className="duel-rematch"><button className="primary" disabled={busy || invited} onClick={async () => { setBusy(true); try { await act("rematch"); setInvited(true); } catch (e) { setError(e instanceof Error ? e.message : "دعوت ارسال نشد"); } finally { setBusy(false); } }}>{invited ? "دعوت فرستاده شد؛ منتظر پاسخ حریف" : "بازی مجدد با همین حریف"}</button><button className="secondary" onClick={onExit}>بازگشت به بازیکن‌ها</button></div>
       </div>}
       <RaceGuesses title="حدس‌های تو" guesses={race.guesses} total={race.totalItems} />
       {ended && <RaceGuesses title="حدس‌های حریف" guesses={race.opponentGuesses || []} total={race.totalItems} />}
     </>}
+    {gameType === "ANIMAL" && <AnimalPhotoCreditsLink />}
   </section>;
 }
 function RaceGuesses({ title, guesses, total }: { title: string; guesses: Guess[]; total: number }) {
   return <section className="race-guesses"><div className="guess-head"><h2>{title}</h2><span>{guesses.length.toLocaleString("fa-IR")} حدس</span></div>{!guesses.length ? <p>هنوز حدسی ثبت نشده</p> : <div className="guess-list">{[...guesses].sort((a, b) => a.rank - b.rank).map(g => <div className={`guess-row ${rankColor(g.rank, total)}`} key={g.id}>
-    <div className="guess-name"><span>{g.emoji}</span><b>{g.name}</b></div>
+    <div className="guess-name"><ItemImage item={g} /><b>{g.name}</b></div>
     <div className="rank-copy"><small>جایگاه نزدیکی</small><strong>{g.rank === 0 ? "✓" : g.rank.toLocaleString("fa-IR")}</strong><span>{g.rank === 0 ? "پاسخ درست" : `از ${total.toLocaleString("fa-IR")}`}</span></div>
     <div className="rank-bar"><i style={{ width: `${g.rank === 0 ? 100 : Math.max(4, 100 - ((g.rank - 2) / Math.max(1, total - 2)) * 100)}%` }} /></div>
   </div>)}</div>}</section>;

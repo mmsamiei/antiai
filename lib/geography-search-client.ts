@@ -1,7 +1,8 @@
 "use client";
+import type { ItemPhoto } from "./item-photo";
 import { normalizePersian } from "./normalize-persian";
 import { sessionRequest } from "./client-session";
-export type GeographySuggestion = { id: string; name: string; emoji?: string; detail?: string; provinceName?: string; description?: string };
+export type GeographySuggestion = { id: string; name: string; emoji?: string; photo?: ItemPhoto; detail?: string; provinceName?: string; description?: string };
 const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const cache = new Map<string, GeographySuggestion[]>();
 const pending = new Map<string, Promise<GeographySuggestion[]>>();

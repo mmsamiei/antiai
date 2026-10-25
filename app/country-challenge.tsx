@@ -1,4 +1,6 @@
 "use client";
+import type { ItemPhoto } from "@/lib/item-photo";
+import { ItemImage, AnimalPortrait, AnimalPhotoCreditsLink } from "./item-image";
 import { useCallback, useEffect, useState } from "react";
 import { geoRaceConfig, type GeoRaceType } from "@/lib/geo-race-config";
 import { useGeographySearch } from "@/lib/use-geography-search";
@@ -6,10 +8,10 @@ import type { GeographySuggestion } from "@/lib/geography-search-client";
 import { sessionRequest } from "@/lib/client-session";
 
 const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
-type Guess = { id: string; name: string; emoji?: string; detail?: string; provinceName?: string; rank: number; createdAt: string };
+type Guess = { id: string; name: string; emoji?: string; photo?: ItemPhoto; detail?: string; provinceName?: string; rank: number; createdAt: string };
 type State = {
-  challenge: { id: string; startsAt: string; endsAt: string; serverNow: string; ended: boolean; target: { id: string; name: string; emoji?: string; provinceName?: string; description?: string } | null };
-  entry: { id: string; status: "ACTIVE" | "WON" | "SURRENDERED" | "EXPIRED"; guessCount: number; bestRank: number | null; guesses: Guess[]; target: { name: string; emoji?: string; provinceName?: string; description?: string } | null } | null;
+  challenge: { id: string; startsAt: string; endsAt: string; serverNow: string; ended: boolean; target: { id: string; name: string; emoji?: string; photo?: ItemPhoto; provinceName?: string; description?: string } | null };
+  entry: { id: string; status: "ACTIVE" | "WON" | "SURRENDERED" | "EXPIRED"; guessCount: number; bestRank: number | null; guesses: Guess[]; target: { name: string; emoji?: string; photo?: ItemPhoto; provinceName?: string; description?: string } | null } | null;
   totalItems: number;
 };
 async function request(url: string, body?: unknown) {
@@ -61,12 +63,13 @@ export default function CountryChallenge({ gameType = "COUNTRY", onBack, onLeade
         <input aria-label={`جست‌وجوی ${config.noun}`} placeholder={config.hint} autoComplete="off" value={query} onChange={e => { setQuery(e.target.value); setSelected(null); }} onKeyDown={e => { if (e.key === "Enter" && !e.nativeEvent.isComposing && selected && !busy) { e.preventDefault(); void act({ action: "guess", itemId: selected.id }); } }} />
         <button disabled={!selected || busy} onClick={() => selected && void act({ action: "guess", itemId: selected.id })}>{busy ? "…" : "حدس"}</button>
       </div>
-      {items.length > 0 && <div className="suggestions">{items.map(item => <button key={item.id} onClick={() => { setSelected(item); setQuery(item.name); setItems([]); }}><span>{item.emoji} {item.name}</span>{(item.provinceName || item.detail) && <small>{item.provinceName || item.detail}</small>}</button>)}</div>}
+      {items.length > 0 && <div className="suggestions">{items.map(item => <button key={item.id} onClick={() => { setSelected(item); setQuery(item.name); setItems([]); }}><span className="item-with-photo"><ItemImage item={item} /> {item.name}</span>{(item.provinceName || item.detail) && <small>{item.provinceName || item.detail}</small>}</button>)}</div>}
     </div>}
     {state?.entry && !active && <div className={`finish-card ${state.entry.status === "WON" ? "won" : "gave-up"}`}>
       <span className="finish-icon">{state.entry.status === "WON" ? "🎯" : "🏳️"}</span>
       <h2>{state.entry.status === "WON" ? "پیداش کردی!" : state.entry.status === "EXPIRED" ? "زمان چالش تمام شد" : "پاسخ این بود:"}</h2>
       {state.entry.target && <><strong>{state.entry.target.emoji} {state.entry.target.name}{state.entry.target.provinceName && <small> — {state.entry.target.provinceName}</small>}</strong>{state.entry.target.description && <p className="country-description">{state.entry.target.description}</p>}</>}
+      {gameType === "ANIMAL" && <AnimalPortrait item={state.entry.target} />}
       <p>{state.entry.status === "WON" ? `با ${state.entry.guessCount.toLocaleString("fa-IR")} حدس به جواب رسیدی.` : "نتیجهٔ تو ثبت شد؛ چالش بعدی با یک پاسخ تازه شروع می‌شود."}</p>
       <div className="finish-actions"><button className="secondary" onClick={onLeaderboard}>جدول چالش‌ها</button></div>
     </div>}
@@ -74,12 +77,13 @@ export default function CountryChallenge({ gameType = "COUNTRY", onBack, onLeade
       <div className="guess-head"><b>حدس‌ها</b>{active && <button onClick={surrender} disabled={busy}>تسلیم می‌شوم</button>}</div>
       {!state.entry.guesses.length ? <div className="empty-state"><span>⌁</span><p>اولین حدس را بزن.</p></div> : <div className="guess-list">
         {[...state.entry.guesses].sort((a, b) => a.rank - b.rank).map(guess => <div className={`guess-row ${rankColor(guess.rank, state.totalItems)}`} key={guess.id}>
-          <div className="guess-name"><span>{guess.emoji}</span><b>{guess.name}{guess.provinceName ? `، ${guess.provinceName}` : ""}</b></div>
+          <div className="guess-name"><ItemImage item={guess} /><b>{guess.name}{guess.provinceName ? `، ${guess.provinceName}` : ""}</b></div>
           <div className="rank-copy"><small>جایگاه نزدیکی</small><strong>{guess.rank === 0 ? "✓" : guess.rank.toLocaleString("fa-IR")}</strong><span>{guess.rank === 0 ? "پاسخ درست" : `از ${state.totalItems.toLocaleString("fa-IR")}`}</span></div>
           <div className="rank-bar"><i style={{ width: `${guess.rank === 0 ? 100 : Math.max(4, 100 - ((guess.rank - 2) / Math.max(1, state.totalItems - 2)) * 100)}%` }} /></div>
         </div>)}
       </div>}
     </>}
+    {gameType === "ANIMAL" && <AnimalPhotoCreditsLink />}
   </section>;
 }
 

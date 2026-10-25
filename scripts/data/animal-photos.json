@@ -6047,5 +6047,465 @@
       "width": 960,
       "height": 720
     }
+  },
+  {
+    "animalId": "ott247333",
+    "scientific": "Canis lupus familiaris",
+    "name": "سگ",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q26972265",
+    "commonsTitle": "File:Domestic-Dog-Canis-lupus-familiaris.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Domestic-Dog-Canis-lupus-familiaris.jpg",
+    "artist": "Post Stamp of Indonesia",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott247333-small-e16e78e1f1a4.jpg",
+      "bytes": 15841,
+      "width": 250,
+      "height": 151
+    },
+    "large": {
+      "src": "/animals/ott247333-large-3bbb758a4de3.jpg",
+      "bytes": 16439,
+      "width": 307,
+      "height": 185
+    }
+  },
+  {
+    "animalId": "ott490099",
+    "scientific": "Bos taurus",
+    "name": "گاو",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q19610691",
+    "commonsTitle": "File:Scottish highland cow standing in grass close up - DPLA - d6123812d5f50689bf8627914bf5617b.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Scottish_highland_cow_standing_in_grass_close_up_-_DPLA_-_d6123812d5f50689bf8627914bf5617b.jpg",
+    "artist": "Garst, Warren, 1922-2016, photographer",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott490099-small-cf2877b3affa.jpg",
+      "bytes": 15259,
+      "width": 250,
+      "height": 168
+    },
+    "large": {
+      "src": "/animals/ott490099-large-4c66a4532718.jpg",
+      "bytes": 127741,
+      "width": 960,
+      "height": 646
+    }
+  },
+  {
+    "animalId": "ott70819",
+    "scientific": "Ovis aries",
+    "name": "گوسفند",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q29350771",
+    "commonsTitle": "File:Flock of sheep.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flock_of_sheep.jpg",
+    "artist": "Keith Weller",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott70819-small-40a67373e47b.jpg",
+      "bytes": 41450,
+      "width": 250,
+      "height": 380
+    },
+    "large": {
+      "src": "/animals/ott70819-large-5757fbac0016.jpg",
+      "bytes": 461177,
+      "width": 960,
+      "height": 1459
+    }
+  },
+  {
+    "animalId": "ott19017",
+    "scientific": "Capra hircus",
+    "name": "بز",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q45320358",
+    "commonsTitle": "File:A white irish goat.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_white_irish_goat.jpg",
+    "artist": "Michael Palmer",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott19017-small-f19e473e6287.jpg",
+      "bytes": 29918,
+      "width": 250,
+      "height": 375
+    },
+    "large": {
+      "src": "/animals/ott19017-large-ca8028a87b34.jpg",
+      "bytes": 276693,
+      "width": 960,
+      "height": 1440
+    }
+  },
+  {
+    "animalId": "ott1068218",
+    "scientific": "Equus caballus",
+    "name": "اسب",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q10758650",
+    "commonsTitle": "File:Equus ferus caballus, Hückeswagen (DE) -- 2022 -- 0057.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Equus_ferus_caballus,_H%C3%BCckeswagen_(DE)_--_2022_--_0057.jpg",
+    "artist": "Anil Öztas",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott1068218-small-cdd3fdd2a636.jpg",
+      "bytes": 18934,
+      "width": 250,
+      "height": 166
+    },
+    "large": {
+      "src": "/animals/ott1068218-large-82c3fc742fc9.jpg",
+      "bytes": 211369,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott1068202",
+    "scientific": "Equus asinus",
+    "name": "الاغ",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q19829417",
+    "commonsTitle": "File:Equus asinus Kadzidłowo 001.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Equus_asinus_Kadzid%C5%82owo_001.jpg",
+    "artist": "Lilly M",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott1068202-small-2ab1f9c41fc4.jpg",
+      "bytes": 15036,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott1068202-large-941dfc8726f8.jpg",
+      "bytes": 157182,
+      "width": 960,
+      "height": 643
+    }
+  },
+  {
+    "animalId": "ott864596",
+    "scientific": "Oryctolagus cuniculus",
+    "name": "خرگوش",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q25851",
+    "commonsTitle": "File:Rabbit (Oryctolagus cuniculus) Aston Upthorpe.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rabbit_(Oryctolagus_cuniculus)_Aston_Upthorpe.jpg",
+    "artist": "Charles J. Sharp",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott864596-small-d0ce434fa51e.jpg",
+      "bytes": 24360,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott864596-large-c7b5e802b6ba.jpg",
+      "bytes": 345856,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott729998",
+    "scientific": "Sus scrofa domesticus",
+    "name": "خوک",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q787",
+    "commonsTitle": "File:Pot-bellied pigs in Lisbon Zoo 2008.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pot-bellied_pigs_in_Lisbon_Zoo_2008.jpg",
+    "artist": "Alvesgaspar",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott729998-small-e8c64b0f1891.jpg",
+      "bytes": 17474,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott729998-large-5d78aca5bd43.jpg",
+      "bytes": 266867,
+      "width": 960,
+      "height": 643
+    }
+  },
+  {
+    "animalId": "ott153563",
+    "scientific": "Gallus gallus",
+    "name": "مرغ",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q184774",
+    "commonsTitle": "File:Gallus gallus domesticus LC0259.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gallus_gallus_domesticus_LC0259.jpg",
+    "artist": "Jörg Hempel",
+    "license": "CC BY-SA 3.0 de",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+    "small": {
+      "src": "/animals/ott153563-small-cc0f092d63f4.jpg",
+      "bytes": 26351,
+      "width": 250,
+      "height": 250
+    },
+    "large": {
+      "src": "/animals/ott153563-large-75539d9cc24e.jpg",
+      "bytes": 237672,
+      "width": 960,
+      "height": 960
+    }
+  },
+  {
+    "animalId": "ott542509",
+    "scientific": "Mus musculus",
+    "name": "موش خانگی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q83310",
+    "commonsTitle": "File:House mouse (Mus musculus) 2732.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:House_mouse_(Mus_musculus)_2732.jpg",
+    "artist": "Ahunt",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "small": {
+      "src": "/animals/ott542509-small-8e0390b602da.jpg",
+      "bytes": 19264,
+      "width": 250,
+      "height": 139
+    },
+    "large": {
+      "src": "/animals/ott542509-large-3a6e7759ddeb.jpg",
+      "bytes": 219496,
+      "width": 960,
+      "height": 535
+    }
+  },
+  {
+    "animalId": "ott271555",
+    "scientific": "Rattus norvegicus",
+    "name": "موش صحرایی قهوه‌ای",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q184224",
+    "commonsTitle": "File:Brown rat (Rattus norvegicus) Drenthe 2.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brown_rat_(Rattus_norvegicus)_Drenthe_2.jpg",
+    "artist": "Charles J. Sharp",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott271555-small-ea3ed124bb6a.jpg",
+      "bytes": 12583,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott271555-large-f56a41f4e93e.jpg",
+      "bytes": 120232,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott124776",
+    "scientific": "Equus burchellii quagga",
+    "name": "گورخر دشتی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q245305",
+    "commonsTitle": "File:Equus quagga (Namutoni, 2012).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Equus_quagga_(Namutoni,_2012).jpg",
+    "artist": "Yathin S Krishnappa",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott124776-small-3b679b6d24c4.jpg",
+      "bytes": 12675,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott124776-large-329723d67927.jpg",
+      "bytes": 131436,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott936014",
+    "scientific": "Cervus elaphus",
+    "name": "گوزن قرمز",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q79794",
+    "commonsTitle": "File:Cervus elaphus Luc Viatour 2.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cervus_elaphus_Luc_Viatour_2.jpg",
+    "artist": "Lviatour",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott936014-small-0a4dd1074fed.jpg",
+      "bytes": 16617,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott936014-large-705b97a71126.jpg",
+      "bytes": 187434,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott641187",
+    "scientific": "Bubalus bubalis",
+    "name": "گاومیش آبی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q42710",
+    "commonsTitle": "File:Bubalus bubalis (water buffalo) calf, looking at the viewer, the feet in a pond, in Laos.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bubalus_bubalis_(water_buffalo)_calf,_looking_at_the_viewer,_the_feet_in_a_pond,_in_Laos.jpg",
+    "artist": "Basile Morin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott641187-small-4ffd45be5b6a.jpg",
+      "bytes": 19902,
+      "width": 250,
+      "height": 250
+    },
+    "large": {
+      "src": "/animals/ott641187-large-943d27046fd0.jpg",
+      "bytes": 200143,
+      "width": 960,
+      "height": 960
+    }
+  },
+  {
+    "animalId": "ott986973",
+    "scientific": "Lama glama",
+    "name": "لاما",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q42569",
+    "commonsTitle": "File:Lama glama Laguna Colorada 2.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lama_glama_Laguna_Colorada_2.jpg",
+    "artist": "kallerna",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott986973-small-b5d063c07e01.jpg",
+      "bytes": 15650,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott986973-large-85b9175f9448.jpg",
+      "bytes": 191406,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott906301",
+    "scientific": "Vicugna pacos",
+    "name": "آلپاکا",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q81564",
+    "commonsTitle": "File:Vicugna pacos - Karlsruhe Zoo.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vicugna_pacos_-_Karlsruhe_Zoo.jpg",
+    "artist": "H. Zell",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott906301-small-1584cdf95609.jpg",
+      "bytes": 14641,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott906301-large-73d10b1819e9.jpg",
+      "bytes": 154709,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott796660",
+    "scientific": "Erinaceus europaeus",
+    "name": "جوجه‌تیغی اروپایی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q6145",
+    "commonsTitle": "File:West European Hedgehog (Erinaceus europaeus)1.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:West_European_Hedgehog_(Erinaceus_europaeus)1.jpg",
+    "artist": "Hrald",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott796660-small-661138c7a7cc.jpg",
+      "bytes": 16674,
+      "width": 250,
+      "height": 166
+    },
+    "large": {
+      "src": "/animals/ott796660-large-5117b3385b37.jpg",
+      "bytes": 151073,
+      "width": 960,
+      "height": 638
+    }
+  },
+  {
+    "animalId": "ott410925",
+    "scientific": "Sciurus carolinensis",
+    "name": "سنجاب خاکستری",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q468500",
+    "commonsTitle": "File:Grey squirrel (Sciurus carolinensis) 02.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grey_squirrel_(Sciurus_carolinensis)_02.jpg",
+    "artist": "Charles J. Sharp",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott410925-small-3eed342f9bdb.jpg",
+      "bytes": 10609,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott410925-large-61cddac32f33.jpg",
+      "bytes": 126420,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott315465",
+    "scientific": "Vulpes zerda",
+    "name": "روباه فنک",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q131564",
+    "commonsTitle": "File:Fennec Fox Peek.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fennec_Fox_Peek.jpg",
+    "artist": "Anass ERRIHANI",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott315465-small-4bd638db3d8d.jpg",
+      "bytes": 10811,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott315465-large-df53e7c6d207.jpg",
+      "bytes": 98125,
+      "width": 960,
+      "height": 643
+    }
+  },
+  {
+    "animalId": "ott918649",
+    "scientific": "Equus hemionus",
+    "name": "خر وحشی آسیایی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q180960",
+    "commonsTitle": "File:Equus hemionus kulan MNHN.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Equus_hemionus_kulan_MNHN.jpg",
+    "artist": "Jebulon",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "small": {
+      "src": "/animals/ott918649-small-d376bebc8231.jpg",
+      "bytes": 12931,
+      "width": 250,
+      "height": 252
+    },
+    "large": {
+      "src": "/animals/ott918649-large-948b748a1f5a.jpg",
+      "bytes": 108898,
+      "width": 960,
+      "height": 968
+    }
   }
 ]

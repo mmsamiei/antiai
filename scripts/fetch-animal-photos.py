@@ -137,6 +137,13 @@ def main():
                 title = unquote(animal['wikidataImage'].split('/Special:FilePath/')[-1])
                 choices.setdefault(animal['scientific'], []).insert(
                     0, (title, wikidata_item_by_scientific[animal['scientific']]))
+    curated_path = ROOT / 'scripts/data/animal-curated-additions-v1.json'
+    if curated_path.exists():
+        for animal in json.loads(curated_path.read_text()).get('animals', []):
+            item_url = 'https://www.wikidata.org/entity/' + animal['wikidata']
+            wikidata_item_by_scientific[animal['scientific']] = item_url
+            for title in reversed(animal.get('commonsFiles', [])):
+                choices.setdefault(animal['scientific'], []).insert(0, (title, item_url))
     overrides = ROOT / 'scripts/data/animal-photo-overrides.json'
     if overrides.exists():
         for animal in animals:

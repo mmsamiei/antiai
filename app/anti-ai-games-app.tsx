@@ -602,7 +602,7 @@ function Home({
   onFeedback: () => void;
 }) {
   const [otherGamesOpen, setOtherGamesOpen] = useState(false);
-  const mainGameTypes = playableTypes.filter((type) => type !== "SEMANTRIS");
+  const mainGameTypes = playableTypes.filter((type) => type !== "SEMANTRIS" && type !== "ANIMAL");
 
   return (
     <>
@@ -631,7 +631,7 @@ function Home({
             className={`game-card ${type === "IRAN_CITY" ? "iran" : type === "COUNTRY" ? "world" : type === "LETTER_DUEL" ? "duel" : type === "PHRASE_HUNT" ? "phrase-hunt" : "words"}`}
             key={type}
             disabled={busy}
-            onClick={() => (type === "LETTER_DUEL" ? onDuel() : (type === "COUNTRY" || type === "IRAN_CITY" || type === "ANIMAL") ? onCountryMode(type) : onStart(type))}
+            onClick={() => (type === "LETTER_DUEL" ? onDuel() : (type === "COUNTRY" || type === "IRAN_CITY") ? onCountryMode(type) : onStart(type))}
           >
             <span className="game-icon">{gameMeta[type].icon}</span>
             <span className="game-copy">
@@ -657,11 +657,19 @@ function Home({
             <b>بازی‌های دیگر</b>
             <small>در حال توسعهٔ آزمایشی</small>
           </span>
-          <span className="other-games-count">۲ بازی</span>
+          <span className="other-games-count">۳ بازی</span>
           <span className="other-games-chevron" aria-hidden="true">⌄</span>
         </button>
         {otherGamesOpen && (
           <div className="other-games-list" id="other-games-list">
+            <button className="game-card animal" onClick={() => onCountryMode("ANIMAL")} disabled={busy}>
+              <span className="game-icon">{gameMeta.ANIMAL.icon}</span>
+              <span className="game-copy">
+                <b>{gameMeta.ANIMAL.title}</b>
+                <small>{gameMeta.ANIMAL.description}</small>
+              </span>
+              <span className="game-arrow">←</span>
+            </button>
             <button className="game-card semantris" onClick={() => onStart("SEMANTRIS")} disabled={busy}>
               <span className="game-icon">{gameMeta.SEMANTRIS.icon}</span>
               <span className="game-copy">

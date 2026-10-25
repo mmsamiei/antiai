@@ -7,13 +7,18 @@ import { countryChallengeWindow } from "./country-challenge-schedule";
 
 const id = (name: string) => animalRecords.find(a => a.name === name)!.id;
 describe("animal game data and rankings", () => {
-  it("only exposes the 263 distinct animal leaves, without geographic coordinates", () => {
-    expect(datasetFor("ANIMAL")).toHaveLength(263);
-    expect(new Set(animalRecords.map(a => a.id)).size).toBe(263);
+  it("only exposes the 283 distinct animal taxa, without geographic coordinates", () => {
+    expect(datasetFor("ANIMAL")).toHaveLength(283);
+    expect(new Set(animalRecords.map(a => a.id)).size).toBe(283);
     expect(datasetFor("ANIMAL").every(a => a.latitude === undefined && a.longitude === undefined)).toBe(true);
     expect(searchItems("ANIMAL", "گربه").some(a => a.name === "گربه خانگی")).toBe(true);
     expect(searchItems("ANIMAL", "گربه‌سان")).toEqual([]);
     expect(searchItems("ANIMAL", "ایران")).toEqual([]);
+  });
+  it("includes common domestic and familiar animals with searchable Persian names", () => {
+    for (const name of ["سگ", "گاو", "گوسفند", "بز", "اسب", "الاغ", "خرگوش", "خوک", "مرغ", "گورخر دشتی"]) {
+      expect(searchItems("ANIMAL", name).some(animal => animal.name === name)).toBe(true);
+    }
   });
   it("has symmetric distances, exact-answer zero, and strictly positive distances otherwise", () => {
     for (let i = 0; i < animalRecords.length; i++) for (let j = 0; j < animalRecords.length; j++) {

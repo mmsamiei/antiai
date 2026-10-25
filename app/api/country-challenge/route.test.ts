@@ -10,3 +10,11 @@ it("routes city start, guess and surrender using authenticated ownership",async(
 it("accepts city challenge IDs and keeps country compatibility",async()=>{mocks.readCountryChallenge.mockResolvedValue({});const id="IRAN_CITY:2026-10-22T05:30:00.000Z";expect((await GET(new Request("https://example.test/api/country-challenge?type=IRAN_CITY&id="+encodeURIComponent(id)))).status).toBe(200);expect(mocks.readCountryChallenge).toHaveBeenCalledWith("me",id,"IRAN_CITY");await GET(new Request("https://example.test/api/country-challenge"));expect(mocks.readCountryChallenge).toHaveBeenLastCalledWith("me",undefined,"COUNTRY");});
 it.each([null,{},[],{action:"guess"},{action:"other"}])("rejects malformed requests %j",async body=>{expect((await POST(request(body))).status).toBe(400);expect(mocks.startCountryChallenge).not.toHaveBeenCalled();});
 it("rejects invalid game types on reads and writes",async()=>{expect((await GET(new Request("https://example.test/api/country-challenge?type=OTHER"))).status).toBe(400);expect((await POST(request({action:"start"},"OTHER"))).status).toBe(400);});
+it("supports animal challenges and their namespaced IDs", async () => {
+  expect((await POST(request({ action: "start" }, "ANIMAL"))).status).toBe(200);
+  expect(mocks.startCountryChallenge).toHaveBeenCalledWith("me", "ANIMAL");
+  mocks.readCountryChallenge.mockResolvedValue({});
+  const id = "ANIMAL:2026-10-25T05:30:00.000Z";
+  expect((await GET(new Request("https://example.test/api/country-challenge?type=ANIMAL&id=" + encodeURIComponent(id)))).status).toBe(200);
+  expect(mocks.readCountryChallenge).toHaveBeenCalledWith("me", id, "ANIMAL");
+});

@@ -3,6 +3,7 @@ const mocks = vi.hoisted(() => ({
   findConfig: vi.fn(),
   findEnded: vi.fn(),
   findUsers: vi.fn(),
+  findRecipient: vi.fn(),
   createAnnouncement: vi.fn(),
   createDeliveries: vi.fn(),
   queryRaw: vi.fn(),
@@ -15,7 +16,7 @@ const mocks = vi.hoisted(() => ({
 vi.mock("./prisma", () => ({ prisma: {
   phraseHuntNotificationConfig: { findUnique: mocks.findConfig, update: mocks.updateConfig },
   phraseHuntChallenge: { findMany: mocks.findEnded },
-  user: { findMany: mocks.findUsers },
+  user: { findMany: mocks.findUsers, findUnique: mocks.findRecipient },
   phraseHuntAnnouncementDelivery: { update: mocks.updateDelivery, count: mocks.countDeliveries, createMany: mocks.createDeliveries },
   phraseHuntAnnouncement: { updateMany: mocks.updateAnnouncement, create: mocks.createAnnouncement },
   $queryRaw: mocks.queryRaw,
@@ -152,6 +153,7 @@ describe("durable Telegram delivery processing", () => {
     vi.clearAllMocks();
     vi.stubEnv("TELEGRAM_BOT_TOKEN", "test-token");
     vi.stubEnv("MINI_APP_URL", "https://example.test/anti-ai");
+    mocks.findRecipient.mockResolvedValue({ announcementsEnabled: true });
     mocks.findConfig.mockResolvedValue({ sendNotBefore: null });
     mocks.queryRaw.mockResolvedValue([{
       id: "delivery-1", announcementId: "announcement-1", chatId: "telegram-1", attempts: 1,
@@ -173,12 +175,20 @@ describe("durable Telegram delivery processing", () => {
     expect(text).toContain("«باران» <code>۹۵ از ۱۰۰</code>");
   });
 
+  it("does not send a queued announcement after opt-out", async () => {
+    mocks.findRecipient.mockResolvedValue({ announcementsEnabled: false });
+    const send = vi.fn(); vi.stubGlobal("fetch", send);
+    await processPhraseHuntAnnouncementDelivery(new Date());
+    expect(send).not.toHaveBeenCalled();
+    expect(mocks.updateDelivery).toHaveBeenCalledWith(expect.objectContaining({ data: expect.objectContaining({ status: "FAILED", lastError: "Announcements disabled" }) }));
+  });
+
   it("marks a delivered message sent and completes the announcement after its last recipient", async () => {
     const fetchMock = vi.fn().mockResolvedValue({ status: 200, json: async () => ({ ok: true }) });
     vi.stubGlobal("fetch", fetchMock);
     expect(await processPhraseHuntAnnouncementDelivery(new Date("2026-10-16T12:00:00Z"))).toBe(true);
     expect(JSON.parse(fetchMock.mock.calls[0][1].body)).toMatchObject({
-      chat_id: "telegram-1", parse_mode: "HTML", reply_markup: { inline_keyboard: [[{ text: "🎮 ورود به چالش تازه" }] ] },
+      chat_id: "telegram-1", parse_mode: "HTML", reply_markup: { inline_keyboard: [[{ text: "🎮 ورود به چالش تازه" }], [{ text: "🔕 قطع اعلان‌ها", callback_data: "announcements:off" }]] },
     });
     expect(mocks.updateDelivery).toHaveBeenCalledWith(expect.objectContaining({ where: { id: "delivery-1" }, data: expect.objectContaining({ status: "SENT" }) }));
     expect(mocks.updateAnnouncement).toHaveBeenCalledWith(expect.objectContaining({ data: expect.objectContaining({ status: "COMPLETED" }) }));
@@ -208,7 +218,7 @@ describe("durable Telegram delivery processing", () => {
 });
 
 describe("announcement outbox creation", () => {
-  it("snapshots every registered user and writes the completed challenge result once", async () => {
+  it("snapshots only users with announcements enabled and writes the completed challenge result once", async () => {
     const enabledAt = new Date("2026-10-16T00:00:00Z");
     const now = new Date("2026-10-17T08:30:01Z");
     mocks.findEnded.mockResolvedValue([{ id: "challenge-1", targetId: "ph-001" }]);
@@ -220,7 +230,7 @@ describe("announcement outbox creation", () => {
     mocks.createDeliveries.mockResolvedValue({ count: 2 });
     mocks.countDeliveries.mockResolvedValue(2);
     mocks.transaction.mockImplementation((work: any) => work({
-      user: { findMany: mocks.findUsers },
+      user: { findMany: mocks.findUsers, findUnique: mocks.findRecipient },
       phraseHuntAnnouncement: { create: mocks.createAnnouncement, update: mocks.updateAnnouncement },
       phraseHuntAnnouncementDelivery: { createMany: mocks.createDeliveries },
     }));
@@ -229,6 +239,7 @@ describe("announcement outbox creation", () => {
     expect(mocks.findEnded).toHaveBeenCalledWith(expect.objectContaining({
       where: { endsAt: { gt: enabledAt, lte: now }, announcement: null },
     }));
+    expect(mocks.findUsers).toHaveBeenCalledWith({ where: { announcementsEnabled: true }, select: { id: true } });
     expect(mocks.createDeliveries).toHaveBeenCalledWith({ data: [
       { announcementId: "announcement-1", chatId: "telegram-1" },
       { announcementId: "announcement-1", chatId: "telegram-2" },

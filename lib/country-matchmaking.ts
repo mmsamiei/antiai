@@ -189,7 +189,7 @@ export async function processCountryMatchTick() {
     }
     const waiting = await tx.countryMatchSearch.findMany({ where: { status: "ACTIVE", offers: { none: { status: "PENDING" } } }, orderBy: [{ createdAt: "asc" }, { id: "asc" }] });
     if (!waiting.length) return;
-    for (const gameType of ["COUNTRY", "IRAN_CITY", "LETTER_DUEL"] as const) {
+    for (const gameType of ["COUNTRY", "IRAN_CITY", "LETTER_DUEL", "ANIMAL"] as const) {
     const sameGame = waiting.filter(search => search.gameType === gameType);
     const oldest = sameGame[0];
     if (!oldest) continue;

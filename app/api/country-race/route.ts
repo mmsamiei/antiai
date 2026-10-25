@@ -9,6 +9,7 @@ const id = z.string().min(1).max(64).regex(/^[a-zA-Z0-9:_-]+$/);
 const input = z.discriminatedUnion("action", [
   z.object({ action: z.enum(["heartbeat", "leave", "rematch"]), id }),
   z.object({ action: z.literal("guess"), id, itemId: z.string().min(1).max(80) }),
+  z.object({ action: z.literal("choose"), id, itemId: z.string().min(1).max(80) }),
   z.object({ action: z.literal("ready"), id, inviteId: id })
 ]);
 async function handle(run: () => Promise<unknown>) {
@@ -37,6 +38,6 @@ export async function POST(request: Request) {
       await actOnInvite(userId, body.inviteId, "ready");
       return { race: await readCountryRace(userId, body.id) };
     }
-    return { race: await actCountryRace(userId, body.id, body.action, body.action === "guess" ? body.itemId : undefined) };
+    return { race: await actCountryRace(userId, body.id, body.action, body.action === "guess" || body.action === "choose" ? body.itemId : undefined) };
   });
 }

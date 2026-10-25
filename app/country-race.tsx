@@ -10,7 +10,7 @@ import { useBackHandler } from "./back-navigation";
 import { Player, PlayerAvatar, playerName } from "./players";
 const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
 type Guess = { id: string; name: string; emoji?: string; rank: number; detail?: string; provinceName?: string };
-type Race = { ratingChange?: { before: number; after: number; delta: number } | null; id: string; gameType: GeoRaceType; totalItems: number; status: string; deadline: string | null; serverNow: string; me: Player; opponent: Player; myBestRank: number | null; opponentBestRank: number | null; opponentConnected: boolean; reconnectDeadline: string; guesses: Guess[]; opponentGuesses?: Guess[]; target?: { name: string; emoji?: string; description?: string }; winnerUserId: string | null; endReason: string | null; invite: { id: string; reason: string | null } | null };
+type Race = { phase?: "SELECTING" | "GUESSING"; selectionDeadline?: string | null; selectedForOpponent?: { id: string; name: string } | null; opponentHasSelected?: boolean; opponentTarget?: { name: string }; ratingChange?: { before: number; after: number; delta: number } | null; id: string; gameType: GeoRaceType; totalItems: number; status: string; deadline: string | null; serverNow: string; me: Player; opponent: Player; myBestRank: number | null; opponentBestRank: number | null; opponentConnected: boolean; reconnectDeadline: string; guesses: Guess[]; opponentGuesses?: Guess[]; target?: { name: string; emoji?: string; description?: string }; winnerUserId: string | null; endReason: string | null; invite: { id: string; reason: string | null } | null };
 const rankText = (rank: number | null) => rank === null ? "—" : rank === 0 ? "پیدا شد!" : rank.toLocaleString("fa-IR");
 async function request(url: string, body?: unknown) {
   const response = await fetch(base + url, sessionRequest(body ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) } : undefined));
@@ -20,13 +20,19 @@ export default function CountryRace({ id, onExit, setError, onProfile, registerL
   const [race, setRace] = useState<Race | null>(null), [query, setQuery] = useState(""), [items, setItems] = useState<GeographySuggestion[]>([]), [selected, setSelected] = useState<GeographySuggestion | null>(null), [busy, setBusy] = useState(false), [invited, setInvited] = useState(false), [now, setNow] = useState(0);
   const gameType = geoRaceType(race?.gameType), config = geoRaceConfig[gameType];
   const offset = useRef(0), submitting = useRef(false);
+  const selectionCountdown = useRef(new RaceCountdown());
+  const latestPhase = useRef("");
   const countdown = useRef(new RaceCountdown()), latestServerTime = useRef(0), latestStatus = useRef("");
   const online = useOnlineUsers([race?.me.id, race?.opponent.id]);
   const receive = useCallback((value: Race, sentAt: number) => {
     const serverTime = Date.parse(value.serverNow), receivedAt = performance.now();
     if (serverTime < latestServerTime.current || latestStatus.current === "ENDED" && value.status !== "ENDED" || latestStatus.current === "ACTIVE" && value.status === "WAITING") return;
+    if (latestPhase.current === "GUESSING" && value.phase === "SELECTING") return;
+    if (latestPhase.current === "SELECTING" && value.phase === "GUESSING") { setQuery(""); setSelected(null); setItems([]); }
+    latestPhase.current = value.status === "ACTIVE" ? value.phase || "" : "";
     latestServerTime.current = serverTime; latestStatus.current = value.status;
     offset.current = serverTime - Date.now();
+    selectionCountdown.current.sync(value.selectionDeadline || null, value.serverNow, receivedAt, receivedAt - sentAt);
     countdown.current.sync(value.deadline, value.serverNow, receivedAt, receivedAt - sentAt);
     setNow(receivedAt); setRace(value);
   }, []);
@@ -57,7 +63,7 @@ export default function CountryRace({ id, onExit, setError, onProfile, registerL
     return () => { clearInterval(timer); document.removeEventListener("visibilitychange", tick); };
   }, [race?.status, race?.invite?.id, act, setError]);
   useEffect(() => { const timer = setInterval(() => setNow(performance.now()), 200); return () => clearInterval(timer); }, []);
-  useGeographySearch({ type: gameType, query, selected: Boolean(selected), enabled: race?.status === "ACTIVE", onResults: setItems });
+  useGeographySearch({ type: gameType, query, selected: Boolean(selected), enabled: race?.status === "ACTIVE" && (race.phase !== "SELECTING" || !race.selectedForOpponent), onResults: setItems });
 
   const leave = async (confirm = true) => {
     if (confirm && race?.status === "ACTIVE" && !window.confirm("با خروج، مسابقه را به حریف واگذار می‌کنی. خارج می‌شوی؟")) return;
@@ -66,13 +72,15 @@ export default function CountryRace({ id, onExit, setError, onProfile, registerL
   };
   useBackHandler(() => leave());
   useEffect(() => { registerLeave(() => leave(false)); return () => registerLeave(null); });
-  const guess = async (itemId: string) => {
+  const guess = async (itemId: string, choosing = false) => {
     if (submitting.current) return; submitting.current = true; setBusy(true);
-    try { await act("guess", { itemId }); setQuery(""); setSelected(null); setItems([]); }
+    try { await act(choosing ? "choose" : "guess", { itemId }); setQuery(""); setSelected(null); setItems([]); }
     catch (e) { setError(e instanceof Error ? e.message : "حدس ثبت نشد"); }
     finally { submitting.current = false; setBusy(false); }
   };
   const seconds = countdown.current.seconds(now);
+  const selectionSeconds = selectionCountdown.current.seconds(now);
+  const choosing = race?.status === "ACTIVE" && race.phase === "SELECTING";
   const ended = race?.status === "ENDED", won = ended && race.winnerUserId === race.me.id;
   return <section className="country-race-screen duel-screen">
     <div className="play-heading"><button className="icon-button" aria-label="بازگشت" onClick={() => void leave()}>→</button><div><small>رقابت دو نفره</small><h1>{config.name}</h1></div>{race?.status === "ACTIVE" && <button className="duel-leave" onClick={() => void leave()}>تسلیم</button>}</div>
@@ -82,9 +90,19 @@ export default function CountryRace({ id, onExit, setError, onProfile, registerL
         <small>{index === 0 ? "بهترین جایگاه نزدیکی تو" : "بهترین جایگاه نزدیکی حریف"}</small><strong key={index === 0 ? race.myBestRank : race.opponentBestRank}>{rankText(index === 0 ? race.myBestRank : race.opponentBestRank)}</strong>
       </div>)}</div>
       {race.status === "WAITING" && <div className="empty-state">منتظر آماده‌شدن هر دو بازیکن…</div>}
-      {race.status === "ACTIVE" && <>
+      {choosing && <div className="animal-selection-panel">
+        <span className="animal-selection-icon">🐾</span><h2>برای {playerName(race.opponent)} یک حیوان انتخاب کن</h2>
+        <p>حریف باید حیوان انتخابی تو را پیدا کند؛ پاسخ خودت مخفی می‌ماند.</p>
+        <div className={"race-timer" + (selectionSeconds <= 5 ? " urgent" : "")} role="timer">{selectionSeconds.toLocaleString("fa-IR")} <small>ثانیه برای انتخاب</small></div>
+        {race.selectedForOpponent ? <div className="animal-choice-confirmed"><b>✓ {race.selectedForOpponent.name}</b><p>انتخابت ثبت شد؛ منتظر انتخاب حریف هستیم.</p></div> : <div className="search-box">
+          <div className="search-row"><input aria-label="حیوان برای حریف" placeholder={config.hint} autoComplete="off" maxLength={80} value={query} onChange={e => { setQuery(e.target.value); setSelected(null); }} onKeyDown={e => { if (e.key === "Enter" && !e.nativeEvent.isComposing && selected && !busy && selectionSeconds > 0) { e.preventDefault(); void guess(selected.id, true); } }} /><button disabled={!selected || busy || selectionSeconds <= 0} onClick={() => selected && void guess(selected.id, true)}>{busy ? "…" : "انتخاب"}</button></div>
+          {items.length > 0 && <div className="suggestions">{items.map(item => <button key={item.id} onClick={() => { setSelected(item); setQuery(item.name); setItems([]); }}><span>🐾 {item.name}</span></button>)}</div>}
+        </div>}
+        <small>{race.opponentHasSelected ? "حریف حیوان تو را انتخاب کرده است." : "حریف هم در حال انتخاب است."} با پایان مهلت، انتخاب‌های باقی‌مانده تصادفی انجام می‌شوند.</small>
+      </div>}
+      {race.status === "ACTIVE" && !choosing && <>
         <div className={"race-timer" + (seconds <= 20 ? " urgent" : "")} role="timer">{seconds.toLocaleString("fa-IR")} <small>ثانیه باقی مانده</small></div>
-        <p className="players-hint">{config.noun} پنهان را پیدا کن؛ جایگاه نزدیکی کمتر یعنی نزدیک‌تر.</p>
+        <p className="players-hint">{gameType === "ANIMAL" ? "حیوانی را که حریف برایت انتخاب کرده پیدا کن؛ جایگاه کمتر یعنی خویشاوندی نزدیک‌تر." : `${config.noun} پنهان را پیدا کن؛ جایگاه نزدیکی کمتر یعنی نزدیک‌تر.`}</p>
         {!race.opponentConnected && <p className="duel-disconnected">منتظر بازگشت حریف؛ {Math.max(0, Math.ceil((Date.parse(race.reconnectDeadline) - Date.now() - offset.current) / 1000)).toLocaleString("fa-IR")} ثانیه فرصت دارد.</p>}
         <div className="search-box">
           <div className="search-row">
@@ -100,7 +118,8 @@ export default function CountryRace({ id, onExit, setError, onProfile, registerL
         <span>{race.winnerUserId ? won ? "🏆" : "◌" : "🤝"}</span><h2>{race.winnerUserId ? won ? "مسابقه را بردی!" : "حریف مسابقه را برد" : race.endReason === "CANCELLED" ? "شروع مسابقه لغو شد" : "مسابقه مساوی شد"}</h2>
         <p>{race.endReason === "FOUND" ? `${config.noun} هدف پیدا شد.` : race.endReason === "TIMEOUT" ? `${config.durationText} تمام شد؛ نتیجه بر اساس بهترین جایگاه نزدیکی هر نفر است.` : race.endReason === "FORFEIT" ? "مسابقه با واگذاری پایان یافت." : race.endReason === "DISCONNECTED" ? "مهلت بازگشت به مسابقه تمام شد." : race.invite?.reason}</p>
         {race.ratingChange && <p>امتیاز رقابتی: <b dir="ltr">{race.ratingChange.before.toLocaleString("fa-IR")} → {race.ratingChange.after.toLocaleString("fa-IR")} ({race.ratingChange.delta > 0 ? "+" : ""}{race.ratingChange.delta.toLocaleString("fa-IR")})</b></p>}
-        {race.target && <><strong>{race.target.emoji} {race.target.name}</strong><p>{race.target.description}</p></>}
+        {race.target && <><strong>{gameType === "ANIMAL" && "حیوان تو: "}{race.target.emoji} {race.target.name}</strong><p>{race.target.description}</p></>}
+        {race.opponentTarget && <p>حیوان حریف: <b>{race.opponentTarget.name}</b></p>}
         <div className="duel-rematch"><button className="primary" disabled={busy || invited} onClick={async () => { setBusy(true); try { await act("rematch"); setInvited(true); } catch (e) { setError(e instanceof Error ? e.message : "دعوت ارسال نشد"); } finally { setBusy(false); } }}>{invited ? "دعوت فرستاده شد؛ منتظر پاسخ حریف" : "بازی مجدد با همین حریف"}</button><button className="secondary" onClick={onExit}>بازگشت به بازیکن‌ها</button></div>
       </div>}
       <RaceGuesses title="حدس‌های تو" guesses={race.guesses} total={race.totalItems} />

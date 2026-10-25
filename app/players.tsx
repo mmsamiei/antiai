@@ -5,8 +5,8 @@ import { avatarImageUrl } from "@/lib/avatar-url";
 import { sessionRequest } from "@/lib/client-session";
 
 export type Player = { id: string; firstName: string | null; lastName: string | null; username: string | null; photoUrl: string | null; online?: boolean; acceptsGameInvites?: boolean };
-export type InviteGame = "LETTER_DUEL" | "COUNTRY_RACE" | "CITY_RACE";
-export const inviteGameName = (kind?: string) => kind === "CITY_RACE" ? "شهرجوی سرعتی" : kind === "COUNTRY_RACE" ? "کشورجوی سرعتی" : "دوحرف";
+export type InviteGame = "LETTER_DUEL" | "COUNTRY_RACE" | "CITY_RACE" | "ANIMAL_RACE";
+export const inviteGameName = (kind?: string) => kind === "ANIMAL_RACE" ? "حیوان‌جوی رقابتی" : kind === "CITY_RACE" ? "شهرجوی سرعتی" : kind === "COUNTRY_RACE" ? "کشورجوی سرعتی" : "دوحرف";
 export type Invitation = { gameKind: InviteGame; countryRaceId: string | null; countryRace: { status: string } | null; id: string; senderId: string; recipientId: string; sender: Player; recipient: Player; status: string; reason: string | null; expiresAt: string; startDeadline: string | null; connectionId: string | null; connection: { status: string } | null };
 export type InvitationState = { invites: Invitation[]; acceptsGameInvites: boolean; serverNow: string };
 export const playerName = (p: Player) => [p.firstName, p.lastName].filter(Boolean).join(" ") || p.username || "بازیکن";
@@ -69,7 +69,7 @@ export default function Players({ me, state, busy, onAction, onSend, onProfile, 
         const incoming = i.recipientId === me, p = incoming ? i.sender : i.recipient;
         return <article className="invite-card" key={i.id}>
           <button className="player-identity" onClick={() => onProfile(p.id)}><PlayerAvatar player={p}/><span><small>{incoming ? "دعوت از طرف" : "دعوت فرستادی برای"}</small><b>{playerName(p)}</b></span></button>
-          <p>{inviteGameName(i.gameKind)}{i.gameKind === "COUNTRY_RACE" && " · یک کشور مشترک، حداکثر ۲۰۰ ثانیه"}{i.gameKind === "CITY_RACE" && " · یک شهر مشترک، حداکثر ۵ دقیقه"}</p>
+          <p>{inviteGameName(i.gameKind)}{i.gameKind === "COUNTRY_RACE" && " · یک کشور مشترک، حداکثر ۲۰۰ ثانیه"}{i.gameKind === "ANIMAL_RACE" && " · انتخاب حیوان برای حریف، سپس ۲۰۰ ثانیه رقابت"}{i.gameKind === "CITY_RACE" && " · یک شهر مشترک، حداکثر ۵ دقیقه"}</p>
           <span className="invite-status">{status[i.status]}</span>{i.reason && <p>{i.reason}</p>}
           {i.status === "PENDING" && <><InviteRemaining invite={i} serverNow={state.serverNow}/><div className="invite-actions">{incoming ? <><button className="primary" disabled={busy} onClick={() => void onAction("accept", { id: i.id })}>قبول</button><button className="secondary" disabled={busy} onClick={() => void onAction("reject", { id: i.id })}>رد</button></> : <button className="secondary" disabled={busy} onClick={() => void onAction("cancel", { id: i.id })}>لغو دعوت</button>}</div></>}
         </article>;

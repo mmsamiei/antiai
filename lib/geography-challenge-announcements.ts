@@ -37,7 +37,7 @@ export async function queueGeographyChallengeAnnouncements(now = new Date()) {
       const messageText = refreshAnnouncementNames(renderGeographyAnnouncement(gameType, board?.challenge.target ?? null, winners), winnerUserIds.map(id => publicDisplayName(users.find(u => u.id === id), true)));
       try {
         await prisma.$transaction(async tx => {
-          const recipients = (await tx.user.findMany({ select: { id: true } })).filter(u => !isAccountSuspended(u.id));
+          const recipients = (await tx.user.findMany({ where: { announcementsEnabled: true }, select: { id: true } })).filter(u => !isAccountSuspended(u.id));
           const announcement = await tx.phraseHuntAnnouncement.create({ data: { geoChallengeId: current.id, messageText, winnerUserIds, ...(recipients.length ? {} : { status: "COMPLETED", completedAt: now }) } });
           if (recipients.length) await tx.phraseHuntAnnouncementDelivery.createMany({ data: recipients.map(u => ({ announcementId: announcement.id, chatId: u.id })) });
           await tx.geoChallengeNotificationConfig.update({ where: { gameType }, data: { lastQueuedStart: nextStart } });

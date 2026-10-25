@@ -1,3 +1,5 @@
+import { animalRecords } from "./data/animals";
+import { animalProximityRank } from "./animals";
 import type { GameType } from "@prisma/client";
 import { countries } from "./data/countries";
 import { iranCities } from "./data/iran-cities";
@@ -7,14 +9,15 @@ export type GeoItem = {
   id: string;
   name: string;
   aliases: string[];
-  latitude: number;
-  longitude: number;
+  latitude?: number;
+  longitude?: number;
   emoji?: string;
   detail?: string;
   provinceName?: string;
 };
 
 export type GameItem = GeoItem;
+const animals: GameItem[] = animalRecords.map(a => ({ id: a.id, name: a.name, aliases: a.aliases, emoji: "🐾", detail: a.scientific }));
 
 export const DATASET_VERSION = "2026-10-06-iran-admin-v3.1.2";
 
@@ -22,6 +25,7 @@ export { normalizePersian } from "./normalize-persian";
 import { normalizePersian } from "./normalize-persian";
 
 export function datasetFor(type: GameType): GameItem[] {
+  if (type === "ANIMAL") return animals;
   if (type === "IRAN_CITY") return iranCities;
   if (type === "COUNTRY") return countries;
   return [];
@@ -33,7 +37,7 @@ export function findItem(type: GameType, id: string): GameItem | undefined {
 
 const searchCollator = new Intl.Collator("fa");
 const searchIndex = new Map<GameType, { item: GameItem; names: string[] }[]>(
-  (["IRAN_CITY", "COUNTRY"] as const).map(type => [type, datasetFor(type).map(item => ({
+  (["IRAN_CITY", "COUNTRY", "ANIMAL"] as const).map(type => [type, datasetFor(type).map(item => ({
     item, names: [item.name, ...item.aliases].map(normalizePersian),
   }))]),
 );
@@ -63,6 +67,7 @@ export function searchItems(type: GameType, rawQuery: string, limit = 8): GameIt
 }
 
 export function haversineDistance(a: GeoItem, b: GeoItem): number {
+  if (a.latitude === undefined || a.longitude === undefined || b.latitude === undefined || b.longitude === undefined) throw new Error("Coordinates required");
   const radius = 6371;
   const radians = (degrees: number) => (degrees * Math.PI) / 180;
   const dLat = radians(b.latitude - a.latitude);
@@ -77,6 +82,7 @@ export function proximityRank(type: GameType, guess: GameItem, target: GameItem)
   // The exact answer is intentionally kept outside the proximity ranks. Rank 1
   // therefore always means the nearest *other* place to the hidden answer.
   if (guess.id === target.id) return 0;
+  if (type === "ANIMAL") return animalProximityRank(guess.id, target.id);
   if (type !== "IRAN_CITY" && type !== "COUNTRY") throw new Error("No proximity ranks for this game type");
   const distance = haversineDistance(guess, target);
   return 1 + datasetFor(type).filter((item) => item.id !== target.id && haversineDistance(item, target) < distance - 1e-9).length;

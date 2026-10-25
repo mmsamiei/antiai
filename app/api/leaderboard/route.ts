@@ -36,10 +36,10 @@ export async function GET(request: Request) {
   const type = requestedType === "ALL" || !requestedType ? null : parseLeaderboardGameType(requestedType);
   if (requestedType && requestedType !== "ALL" && !type) return NextResponse.json({ error: "Invalid game type" }, { status: 400 });
   if (params.get("board") === "competitive") {
-    if (type !== "COUNTRY" && type !== "IRAN_CITY" && type !== "LETTER_DUEL") return NextResponse.json({ error: "Invalid competitive game" }, { status: 400 });
+    if (type !== "COUNTRY" && type !== "IRAN_CITY" && type !== "LETTER_DUEL" && type !== "ANIMAL") return NextResponse.json({ error: "Invalid competitive game" }, { status: 400 });
     return NextResponse.json(await competitiveLeaderboard(userId, type), { headers: { "Cache-Control": "no-store" } });
   }
-  if (params.get("board") === "challenge" && period !== "challenge" && (type === "COUNTRY" || type === "IRAN_CITY")) {
+  if (params.get("board") === "challenge" && period !== "challenge" && (type === "COUNTRY" || type === "IRAN_CITY" || type === "ANIMAL")) {
     return NextResponse.json(await geographyChallengeTotals(userId, type, period), { headers: { "Cache-Control": "no-store" } });
   }
   const baseWhere = {
@@ -54,7 +54,7 @@ export async function GET(request: Request) {
     });
   }
 
-  if ((type === "COUNTRY" || type === "IRAN_CITY") && period === "challenge") {
+  if ((type === "COUNTRY" || type === "IRAN_CITY" || type === "ANIMAL") && period === "challenge") {
     const result = await countryChallengeLeaderboard(userId, params.get("challengeId"), type);
     return NextResponse.json(result || { error: "Challenge not found" }, {
       status: result ? 200 : 404, headers: { "Cache-Control": "no-store" },

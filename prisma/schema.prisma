@@ -8,6 +8,7 @@ datasource db {
 }
 
 enum GameType {
+  ANIMAL
   IRAN_CITY
   COUNTRY
   ADJECTIVE
@@ -52,6 +53,7 @@ enum LetterDuelSubmissionStatus {
 }
 
 model User {
+  announcementsEnabled Boolean @default(false)
   feedback Feedback[]
   competitiveRatings CompetitiveRating[]
   letterPractice LetterDuelPracticeRound?
@@ -578,6 +580,9 @@ model WordWeaverBotTurn {
 }
 
 model CountryRace {
+  selectionDeadline DateTime?
+  playerOneTargetId String?
+  playerTwoTargetId String?
   gameType GameType @default(COUNTRY)
   id String @id @default(cuid())
   status String @default("WAITING")
@@ -683,4 +688,22 @@ model GeoChallengeNotificationConfig {
   gameType String @id
   enabledAt DateTime @default(now())
   lastQueuedStart DateTime?
+}
+
+model CodeLoginRequest {
+  id             String   @id
+  browserHash    String
+  addressHash    String
+  createdAt      DateTime @default(now())
+  expiresAt      DateTime
+  userId         String?
+  codeHash       String?
+  codeExpiresAt  DateTime?
+  issuedAt       DateTime?
+  attempts       Int      @default(0)
+  consumedAt     DateTime?
+
+  @@index([addressHash, createdAt])
+  @@index([userId, issuedAt])
+  @@index([expiresAt])
 }

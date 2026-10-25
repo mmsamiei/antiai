@@ -1,4 +1,5 @@
 import type { GameSession, GameType, Guess } from "@prisma/client";
+import { ANIMAL_DATASET_VERSION } from "./data/animals";
 import { prisma } from "./prisma";
 import { DATASET_VERSION, datasetFor, findItem, publicItem, normalizePersian } from "./geo";
 import { wordPrompts, promptById } from "./data/adjective-prompts";
@@ -7,7 +8,7 @@ import { currentPhraseGame } from "./phrase-hunt-challenge";
 import { phraseChallengeTimes } from "./phrase-hunt-schedule";
 import { phraseHuntTargets } from "./data/phrase-hunt-targets";
 
-export const GAME_TYPES = ["IRAN_CITY", "COUNTRY", "PHRASE_HUNT", "SEMANTRIS", "LETTER_DUEL"] as const;
+export const GAME_TYPES = ["ANIMAL", "IRAN_CITY", "COUNTRY", "PHRASE_HUNT", "SEMANTRIS", "LETTER_DUEL"] as const;
 
 export function parseGameType(value: unknown): GameType | null {
   return typeof value === "string" && GAME_TYPES.includes(value as (typeof GAME_TYPES)[number])
@@ -26,7 +27,7 @@ export function parseLeaderboardGameType(value: unknown): GameType | null {
 
 /** The stored rank keeps the geographic engine's original zero/one-based semantics. */
 export function publicProximityRank(type: GameType, rank: number) {
-  return (type === "COUNTRY" || type === "IRAN_CITY") && rank > 0 ? rank + 1 : rank;
+  return (type === "COUNTRY" || type === "IRAN_CITY" || type === "ANIMAL") && rank > 0 ? rank + 1 : rank;
 }
 
 export function canResumeActiveGame(type: GameType, targetId: string) {
@@ -117,7 +118,7 @@ export async function activeOrNewGame(userId: string, type: GameType) {
   const pool = unseen.length ? unseen : dataset;
   const target = pool[Math.floor(Math.random() * pool.length)];
   return prisma.gameSession.create({
-    data: { userId, type, targetId: target.id, datasetVersion: DATASET_VERSION },
+    data: { userId, type, targetId: target.id, datasetVersion: type === "ANIMAL" ? ANIMAL_DATASET_VERSION : DATASET_VERSION },
     include: { guesses: true }
   });
 }

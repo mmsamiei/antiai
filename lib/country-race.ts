@@ -23,18 +23,31 @@ export async function readCountryRace(userId: string, id: string) {
       tx.countryRaceGuess.findMany({ where: { raceId: id }, orderBy: [{ rank: "asc" }, { createdAt: "asc" }] })
     ]);
     const own = guesses.filter(g => g.userId === userId), other = guesses.filter(g => g.userId !== userId);
+    const isOne = room.playerOneId === userId;
+    const ownTargetId = gameType === "ANIMAL" ? (isOne ? room.playerOneTargetId : room.playerTwoTargetId) : room.targetId;
+    const selectedForOpponentId = isOne ? room.playerTwoTargetId : room.playerOneTargetId;
     const describe = (g: typeof guesses[number]) => ({ ...publicItem(findItem(gameType, g.itemId)!), rank: g.rank, createdAt: g.createdAt });
     const ratingChange = room.status === "ENDED" ? ownRatingChange(await tx.competitiveResult.findUnique({ where: { matchKey: `race:${id}` } }), userId) : null;
     return { ratingChange, id, gameType, totalItems: datasetFor(gameType).length, status: room.status, deadline: room.deadline, serverNow: new Date(), winnerUserId: room.winnerUserId, endReason: room.endReason,
+      ...(gameType === "ANIMAL" ? {
+        phase: room.status === "ACTIVE" && !room.deadline ? "SELECTING" : "GUESSING",
+        selectionDeadline: room.selectionDeadline,
+        selectedForOpponent: selectedForOpponentId ? publicItem(findItem(gameType, selectedForOpponentId)!) : null,
+        opponentHasSelected: Boolean(ownTargetId),
+      } : {}),
       me: publicIdentity(userId === one.id ? one : two), opponent: publicIdentity(userId === one.id ? two : one), invite,
       myBestRank: own[0]?.rank ?? null, opponentBestRank: other[0]?.rank ?? null,
       guesses: own.map(describe),
       opponentConnected: Date.now() - +(userId === one.id ? room.playerTwoHeartbeat : room.playerOneHeartbeat) < 10_000,
       reconnectDeadline: new Date(+(userId === one.id ? room.playerTwoHeartbeat : room.playerOneHeartbeat) + 30_000),
-      ...(room.status === "ENDED" ? { target: publicItem(findItem(gameType, room.targetId)!, true), opponentGuesses: other.map(describe) } : {}) };
+      ...(room.status === "ENDED" ? {
+        target: ownTargetId ? publicItem(findItem(gameType, ownTargetId)!, true) : null,
+        ...(gameType === "ANIMAL" && selectedForOpponentId ? { opponentTarget: publicItem(findItem(gameType, selectedForOpponentId)!) } : {}),
+        opponentGuesses: other.map(describe),
+      } : {}) };
   });
 }
-export async function actCountryRace(userId: string, id: string, action: "heartbeat" | "guess" | "leave", itemId?: string) {
+export async function actCountryRace(userId: string, id: string, action: "heartbeat" | "guess" | "choose" | "leave", itemId?: string) {
   const error = await inviteTransaction(async tx => {
     let room = await advanceCountryRace(tx, await owned(tx, userId, id));
     if (room.status === "ENDED") return action === "guess" ? "مسابقه تمام شده است" : null;
@@ -51,7 +64,22 @@ export async function actCountryRace(userId: string, id: string, action: "heartb
     const gameType = geoRaceType(room.gameType);
     const guess = findItem(gameType, itemId || "");
     if (!guess) return `${geoRaceConfig[gameType].noun} معتبر انتخاب کن`;
-    const target = findItem(gameType, room.targetId)!;
+    if (action === "choose") {
+      if (gameType !== "ANIMAL") return "این بازی مرحلهٔ انتخاب حیوان ندارد";
+      const prior = userId === room.playerOneId ? room.playerTwoTargetId : room.playerOneTargetId;
+      if (prior === guess.id) return null; // Retries never change a confirmed choice.
+      if (prior) return "حیوان حریف را قبلاً انتخاب کرده‌ای";
+      if (room.deadline || !room.selectionDeadline || room.selectionDeadline <= new Date()) return "مهلت انتخاب حیوان تمام شده است";
+      room = await tx.countryRace.update({ where: { id }, data: userId === room.playerOneId
+        ? { playerTwoTargetId: guess.id, playerOneHeartbeat: new Date() }
+        : { playerOneTargetId: guess.id, playerTwoHeartbeat: new Date() } });
+      await advanceCountryRace(tx, room);
+      return null;
+    }
+    if (gameType === "ANIMAL" && !room.deadline) return "ابتدا مرحلهٔ انتخاب حیوان باید تمام شود";
+    const targetId = gameType === "ANIMAL" ? (userId === room.playerOneId ? room.playerOneTargetId : room.playerTwoTargetId) : room.targetId;
+    const target = findItem(gameType, targetId || "");
+    if (!target) return "هدف مسابقه آماده نیست";
     const rank = guess.id === target.id ? 0 : proximityRank(gameType, guess, target) + 1;
     // Touch the locked room so concurrent transactions retry with a fresh snapshot.
     await tx.countryRace.update({ where: { id }, data: userId === room.playerOneId ? { playerOneHeartbeat: new Date() } : { playerTwoHeartbeat: new Date() } });

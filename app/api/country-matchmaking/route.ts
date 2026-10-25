@@ -5,7 +5,7 @@ import { cancelCountryMatch, readCountryMatch, respondToCountryMatch, startCount
 export const dynamic = "force-dynamic";
 const reply = (data: unknown, status = 200) => NextResponse.json(data, { status, headers: { "Cache-Control": "no-store" } });
 const bodySchema = z.discriminatedUnion("action", [
-  z.object({ action: z.literal("start"), gameType: z.enum(["COUNTRY", "IRAN_CITY", "LETTER_DUEL"]).default("COUNTRY") }),
+  z.object({ action: z.literal("start"), gameType: z.enum(["COUNTRY", "IRAN_CITY", "LETTER_DUEL", "ANIMAL"]).default("COUNTRY") }),
   z.object({ action: z.literal("cancel") }),
   z.object({ action: z.enum(["accept", "reject"]), offerId: z.string().min(1).max(64).regex(/^[a-zA-Z0-9_-]+$/) }),
 ]);

@@ -16,6 +16,20 @@
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
 }
+.animal-selection-panel {
+  padding: 24px 16px;
+  margin: 18px 0;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: radial-gradient(circle at top, #916dff20, transparent 70%), var(--surface);
+}
+.animal-selection-icon { font-size: 36px; }
+.animal-selection-panel h2 { font-size: 19px; margin: 12px 0 8px; }
+.animal-selection-panel p, .animal-selection-panel > small { color: var(--muted); line-height: 1.9; }
+.animal-selection-panel .search-box { text-align: right; }
+.animal-choice-confirmed { margin: 18px 0; padding: 16px; border-radius: 16px; background: #39d98a12; border: 1px solid #39d98a40; }
+.animal-choice-confirmed b { color: var(--green); font-size: 20px; }
 * {
   box-sizing: border-box;
 }
@@ -2093,3 +2107,13 @@ input {
 .feedback-ranking strong { overflow-wrap: anywhere; }
 .feedback-ranking small { display: block; font-size: 10px; color: var(--muted); margin-top: 5px; }
 .feedback-ranking > b:last-child { text-align: center; color: #c8b7ff; }
+
+.code-login { display: grid; gap: 12px; width: min(100%, 380px); padding: 20px; box-sizing: border-box; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); text-align: right; }
+.code-login p, .code-login small { margin: 0; line-height: 1.9; font-size: 13px; overflow-wrap: anywhere; }
+.code-login small { color: var(--muted); }
+.code-login form { display: grid; gap: 10px; }
+.code-login input { width: 100%; box-sizing: border-box; padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: #0e1323; color: var(--text); font: inherit; font-size: 24px; text-align: center; letter-spacing: 6px; }
+.code-login input:focus { outline: 2px solid #8060d8; outline-offset: 2px; }
+.code-login-link { display: block; text-align: center; text-decoration: none; }
+.loading-screen:has(.code-login) { height: auto; min-height: 100dvh; padding: 32px 16px; box-sizing: border-box; }
+.code-login-reference { display: inline-block; direction: ltr; font-family: monospace; letter-spacing: 1px; color: var(--text); }

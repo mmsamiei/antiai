@@ -35,6 +35,7 @@ export async function POST(request: Request) {
     response.cookies.set(SESSION_COOKIE, session, {
       httpOnly: true, sameSite: "lax", secure: process.env.NODE_ENV === "production", path: process.env.NEXT_PUBLIC_BASE_PATH || "/", maxAge: 60 * 60 * 24 * 30
     });
+    response.cookies.set("anti_ai_code_session", "", { httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: "lax", path: process.env.NEXT_PUBLIC_BASE_PATH || "/", maxAge: 0 });
     return response;
   } catch {
     console.error("telegram_auth_session_creation_failed");

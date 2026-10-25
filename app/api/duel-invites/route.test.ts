@@ -6,6 +6,10 @@ import { GET, POST } from "./route";
 const request = (body: unknown) => new Request("https://example.test/api/duel-invites", { method: "POST", body: JSON.stringify(body) });
 beforeEach(() => { vi.clearAllMocks(); mocks.currentUserId.mockReturnValue("me"); mocks.readInvites.mockResolvedValue({ invites: [], acceptsGameInvites: true }); });
 describe("private invite API", () => {
+  it("accepts the animal game invitation kind", async () => {
+    expect((await POST(request({ action: "send", recipientId: "other", gameKind: "ANIMAL_RACE" }))).status).toBe(200);
+    expect(mocks.sendInvite).toHaveBeenCalledWith("me", "other", "ANIMAL_RACE");
+  });
   it("rejects anonymous reads and writes", async () => {
     mocks.currentUserId.mockReturnValue(null);
     expect((await GET()).status).toBe(401); expect((await POST(request({ action: "send", recipientId: "other" }))).status).toBe(401);

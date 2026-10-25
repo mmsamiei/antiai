@@ -151,7 +151,7 @@ export async function queueEndedPhraseHuntAnnouncements(enabledAt: Date, now: Da
     const content = await buildAnnouncement(challenge);
     try {
       await prisma.$transaction(async (tx) => {
-        const users = await tx.user.findMany({ select: { id: true } });
+        const users = await tx.user.findMany({ where: { announcementsEnabled: true }, select: { id: true } });
         const announcement = await tx.phraseHuntAnnouncement.create({ data: { challengeId: challenge.id, ...content } });
         if (users.length) {
           await tx.phraseHuntAnnouncementDelivery.createMany({
@@ -202,6 +202,8 @@ export function refreshAnnouncementNames(text: string, names: string[]) {
 
 async function sendTelegramMessage(delivery: ClaimedDelivery): Promise<TelegramDeliveryResult> {
   if (isAccountSuspended(delivery.chatId)) return { kind: "permanent", error: "Account suspended" };
+  const recipient = await prisma.user.findUnique({ where: { id: delivery.chatId }, select: { announcementsEnabled: true } });
+  if (!recipient?.announcementsEnabled) return { kind: "permanent", error: "Announcements disabled" };
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const miniAppUrl = process.env.MINI_APP_URL;
   if (!token || !miniAppUrl) throw new Error("TELEGRAM_BOT_TOKEN and MINI_APP_URL are required");
@@ -220,7 +222,7 @@ async function sendTelegramMessage(delivery: ClaimedDelivery): Promise<TelegramD
         chat_id: delivery.chatId,
         text: messageText,
         parse_mode: "HTML",
-        reply_markup: { inline_keyboard: [[{ text: "🎮 ورود به چالش تازه", web_app: { url: miniAppUrl } }]] },
+        reply_markup: { inline_keyboard: [[{ text: "🎮 ورود به چالش تازه", web_app: { url: miniAppUrl } }], [{ text: "🔕 قطع اعلان‌ها", callback_data: "announcements:off" }]] },
       }),
       signal: AbortSignal.timeout(requestTimeoutMs),
     });

@@ -74,7 +74,7 @@ export function InvitationBanner({ me, state, busy, action }: { me: string; stat
   }
   return <aside className="invitation-banner" role="region" aria-label="دعوت به بازی" aria-live="polite">
     <button className="invite-dismiss" aria-label="بستن اعلان" onClick={() => setDismissed(s => new Set([...s, invite.id]))}>×</button>
-    <div className="player-identity"><PlayerAvatar player={invite.sender} online/><div><b>{playerName(invite.sender)}</b><p>تو را به {inviteGameName(invite.gameKind)} دعوت کرده</p>{invite.gameKind === "COUNTRY_RACE" && <small>یک کشور مشترک، حداکثر ۲۰۰ ثانیه</small>}{invite.gameKind === "CITY_RACE" && <small>یک شهر مشترک، حداکثر ۵ دقیقه</small>}<InviteRemaining invite={invite} serverNow={state.serverNow}/></div></div>
+    <div className="player-identity"><PlayerAvatar player={invite.sender} online/><div><b>{playerName(invite.sender)}</b><p>تو را به {inviteGameName(invite.gameKind)} دعوت کرده</p>{invite.gameKind === "COUNTRY_RACE" && <small>یک کشور مشترک، حداکثر ۲۰۰ ثانیه</small>}{invite.gameKind === "ANIMAL_RACE" && <small>۲۰ ثانیه انتخاب حیوان برای حریف؛ ۲۰۰ ثانیه رقابت</small>}{invite.gameKind === "CITY_RACE" && <small>یک شهر مشترک، حداکثر ۵ دقیقه</small>}<InviteRemaining invite={invite} serverNow={state.serverNow}/></div></div>
     <div className="invite-actions"><button className="primary" disabled={busy} onClick={() => void action("accept", { id: invite.id })}>قبول و رفتن به بازی</button><button className="secondary" disabled={busy} onClick={() => void action("reject", { id: invite.id })}>رد</button></div>
   </aside>;
 }

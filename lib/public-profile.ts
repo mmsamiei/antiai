@@ -1,4 +1,4 @@
-export type PublicProfileGameType = "IRAN_CITY" | "COUNTRY";
+export type PublicProfileGameType = "IRAN_CITY" | "COUNTRY" | "ANIMAL";
 
 export type GeographyProfileStats = {
   total: number;
@@ -34,6 +34,7 @@ export function buildPublicProfileStats(
   phraseHuntGames: { status: string; bestScore: number }[] = [],
 ): PublicProfileStats {
   const geography: Record<PublicProfileGameType, GeographyProfileStats> = {
+    ANIMAL: { total: 0, wins: 0, surrendered: 0, averageGuesses: null, bestGame: null },
     IRAN_CITY: {
       total: 0,
       wins: 0,
@@ -51,7 +52,7 @@ export function buildPublicProfileStats(
   };
 
   for (const group of geographyGroups) {
-    if (group.type !== "IRAN_CITY" && group.type !== "COUNTRY") continue;
+    if (group.type !== "IRAN_CITY" && group.type !== "COUNTRY" && group.type !== "ANIMAL") continue;
     const stats = geography[group.type];
     stats.total += group.count;
     if (group.status === "WON") {

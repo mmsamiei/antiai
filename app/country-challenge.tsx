@@ -19,7 +19,7 @@ async function request(url: string, body?: unknown) {
   return data as State;
 }
 export default function CountryChallenge({ gameType = "COUNTRY", onBack, onLeaderboard, setError }: { gameType?: GeoRaceType; onBack: () => void; onLeaderboard: () => void; setError: (message: string) => void }) {
-  const config = geoRaceConfig[gameType], name = gameType === "COUNTRY" ? "کشورجو" : "شهرجو";
+  const config = geoRaceConfig[gameType], name = config.title;
   const url = "/api/country-challenge?type=" + gameType;
   const [state, setState] = useState<State | null>(null), [loading, setLoading] = useState(true), [busy, setBusy] = useState(false), [serverOffset, setServerOffset] = useState(0);
   const [query, setQuery] = useState(""), [items, setItems] = useState<GeographySuggestion[]>([]), [selected, setSelected] = useState<GeographySuggestion | null>(null), [now, setNow] = useState(Date.now());
@@ -48,7 +48,7 @@ export default function CountryChallenge({ gameType = "COUNTRY", onBack, onLeade
   return <section className="play-screen">
     <div className="play-heading">
       <button className="icon-button" onClick={onBack} aria-label="بازگشت">→</button>
-      <div><h1><span aria-hidden="true">{gameType === "COUNTRY" ? "🌍" : "📍"}</span> {name}</h1></div>
+      <div><h1><span aria-hidden="true">{config.icon}</span> {name}</h1></div>
       <div className="play-actions"><span className="guess-count">{(state?.entry?.guessCount || 0).toLocaleString("fa-IR")} حدس</span></div>
     </div>
     {state && <div className="country-daily-deadline">

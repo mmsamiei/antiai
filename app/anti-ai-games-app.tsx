@@ -24,13 +24,16 @@ import { useDuelInvitations, InvitationBanner } from "./duel-invitation-manager"
 import { avatarImageUrl } from "@/lib/avatar-url";
 import { BackHandlersContext, useBackHandler, useBrowserBack } from "./back-navigation";
 import { sessionRequest, setClientSessionToken } from "@/lib/client-session";
-import { authenticateTelegram, TelegramLoginError } from "@/lib/telegram-client";
+import CodeLogin from "./code-login";
+import { authenticateGame } from "@/lib/code-login-client";
+import { TelegramLoginError } from "@/lib/telegram-client";
 import { useOnlineUsers } from "@/lib/use-online-users";
 import { hiddenPhraseGuesses, mergePhraseGuess, normalizePersian, orderPhraseGuesses } from "@/lib/phrase-hunt-view";
 
 type GameType =
   | "IRAN_CITY"
   | "COUNTRY"
+  | "ANIMAL"
   | "PHRASE_HUNT"
   | "ADJECTIVE"
   | "ADJECTIVE_RAIN"
@@ -109,10 +112,11 @@ type PublicProfile = {
     photoUrl: string | null;
     acceptsGameInvites?: boolean;
     showUsername?: boolean;
+    announcementsEnabled?: boolean;
     isMe: boolean;
   };
   stats: {
-    geography: Record<"IRAN_CITY" | "COUNTRY", {
+    geography: Record<"IRAN_CITY" | "COUNTRY" | "ANIMAL", {
       total: number;
       wins: number;
       surrendered: number;
@@ -144,6 +148,7 @@ const gameMeta: Record<
     description: "شهر پنهان ایران را پیدا کن",
     hint: "نام یک شهر ایران را بنویس…",
   },
+  ANIMAL: { title: "حیوان‌جو", icon: "🐾", description: "حیوان پنهان را با خویشاوندی جانوران پیدا کن", hint: "نام یک حیوان را جست‌وجو کن…" },
   COUNTRY: {
     title: "کشورجو",
     icon: "🌍",
@@ -184,6 +189,7 @@ const gameMeta: Record<
 const playableTypes: GameType[] = [
   "COUNTRY",
   "IRAN_CITY",
+  "ANIMAL",
   "PHRASE_HUNT",
   "SEMANTRIS",
   "LETTER_DUEL",
@@ -220,6 +226,7 @@ export default function AntiAiGamesApp() {
   const [game, setGame] = useState<Game | null>(null);
   const [loading, setLoading] = useState(true);
   const [loginAttempt, setLoginAttempt] = useState(0);
+  const [codeSessionExpiresAt, setCodeSessionExpiresAt] = useState<number | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [onlineCount, setOnlineCount] = useState<number | null>(null);
@@ -256,14 +263,14 @@ export default function AntiAiGamesApp() {
       if (raceId === connectionId && screen === "country-race" || directDuelId === connectionId && screen === "duel") return;
       if (multiplayerLeave.current && screen !== "duel" && screen !== "country-race") await multiplayerLeave.current();
       // Readiness is acknowledged by the mounted duel screen, not by the notification.
-      if ((gameKind === "COUNTRY_RACE" || gameKind === "CITY_RACE")) {
+      if ((gameKind === "COUNTRY_RACE" || gameKind === "CITY_RACE" || gameKind === "ANIMAL_RACE")) {
         setRaceId(connectionId);
         try { sessionStorage.setItem(`antiai-country-race:${user.id}`, connectionId); } catch {}
       } else setDirectDuelId(connectionId);
       setProfileUserId(null);
       setInviteRecipient(null);
       previousScreens.current = [];
-      setScreen((gameKind === "COUNTRY_RACE" || gameKind === "CITY_RACE") ? "country-race" : "duel");
+      setScreen((gameKind === "COUNTRY_RACE" || gameKind === "CITY_RACE" || gameKind === "ANIMAL_RACE") ? "country-race" : "duel");
     },
   });
   const sendDirectInvite = async (recipientId: string, gameKind: InviteGame) => {
@@ -330,8 +337,10 @@ export default function AntiAiGamesApp() {
     const controller = new AbortController();
     setLoading(true);
     setError("");
-    authenticateTelegram(controller.signal)
-      .then(({ user, session }) => {
+    authenticateGame(controller.signal)
+      .then(data => {
+        const { user, session } = data;
+        setCodeSessionExpiresAt("expiresAt" in data ? data.expiresAt as number : null);
         if (controller.signal.aborted) return;
         setClientSessionToken(session);
         setUser(user);
@@ -344,6 +353,20 @@ export default function AntiAiGamesApp() {
       .finally(() => { if (!controller.signal.aborted) setLoading(false); });
     return () => controller.abort();
   }, [loginAttempt]);
+
+  useEffect(() => {
+    if (!codeSessionExpiresAt) return;
+    const expire = () => {
+      if (Date.now() < codeSessionExpiresAt) return;
+      setClientSessionToken(""); setUser(null); setCodeSessionExpiresAt(null);
+      setGame(null); setScreen("home"); setProfileUserId(null); setRaceId(null); setDirectDuelId(null);
+      setError("مهلت ۱۲ ساعتهٔ ورود تمام شد؛ دوباره از بات کد بگیر.");
+    };
+    const timer = setTimeout(expire, Math.max(0, codeSessionExpiresAt - Date.now()));
+    window.addEventListener("focus", expire);
+    return () => { clearTimeout(timer); window.removeEventListener("focus", expire); };
+  }, [codeSessionExpiresAt]);
+
 
   useEffect(() => {
     if (!user) return;
@@ -421,6 +444,7 @@ export default function AntiAiGamesApp() {
         <strong>ورود به بازی کامل نشد</strong>
         <span>{error || "ورود به بازی انجام نشد. دوباره تلاش کن."}</span>
         <button className="primary" onClick={() => setLoginAttempt(attempt => attempt + 1)}>تلاش دوباره</button>
+        <CodeLogin onLogin={({ user, session, expiresAt }) => { setClientSessionToken(session); setUser(user); setCodeSessionExpiresAt(expiresAt); setError(""); }} />
       </div>
     );
 
@@ -463,6 +487,7 @@ export default function AntiAiGamesApp() {
       {inviteRecipient && <div className="game-invite-backdrop" onClick={() => setInviteRecipient(null)}><section className="game-invite-picker" role="dialog" aria-modal="true" aria-label="انتخاب بازی" onKeyDown={e => { if (e.key === "Escape") setInviteRecipient(null); }} onClick={e => e.stopPropagation()}>
         <h2>به کدام بازی دعوت می‌کنی؟</h2>
         <button autoFocus className="primary" disabled={invitations.busy} onClick={() => void sendDirectInvite(inviteRecipient, "LETTER_DUEL")}>دوحرف</button>
+        <button className="primary" disabled={invitations.busy} onClick={() => void sendDirectInvite(inviteRecipient, "ANIMAL_RACE")}>حیوان‌جوی رقابتی</button>
         <button className="primary" disabled={invitations.busy} onClick={() => void sendDirectInvite(inviteRecipient, "COUNTRY_RACE")}>کشورجوی سرعتی</button>
         <button className="primary" disabled={invitations.busy} onClick={() => void sendDirectInvite(inviteRecipient, "CITY_RACE")}>شهرجوی سرعتی</button>
         <p>یک کشور مشترک، حداکثر ۲۰۰ ثانیه؛ بهترین جایگاه نزدیکی حریفت را می‌بینی.</p>
@@ -600,7 +625,7 @@ function Home({
             className={`game-card ${type === "IRAN_CITY" ? "iran" : type === "COUNTRY" ? "world" : type === "LETTER_DUEL" ? "duel" : type === "PHRASE_HUNT" ? "phrase-hunt" : "words"}`}
             key={type}
             disabled={busy}
-            onClick={() => (type === "LETTER_DUEL" ? onDuel() : (type === "COUNTRY" || type === "IRAN_CITY") ? onCountryMode(type) : onStart(type))}
+            onClick={() => (type === "LETTER_DUEL" ? onDuel() : (type === "COUNTRY" || type === "IRAN_CITY" || type === "ANIMAL") ? onCountryMode(type) : onStart(type))}
           >
             <span className="game-icon">{gameMeta[type].icon}</span>
             <span className="game-copy">
@@ -659,7 +684,7 @@ function CountryModePicker({ gameType, matchState, matchBusy, onBack, onChalleng
   gameType: GeoRaceType; matchState: MatchState | null; matchBusy: boolean; onBack: () => void; onChallenge: () => void;
   onPractice: () => void; onFind: () => void; onCancel: () => void; onInvite: () => void;
 }) {
-  const config = geoRaceConfig[gameType], name = gameType === "COUNTRY" ? "کشورجو" : "شهرجو";
+  const config = geoRaceConfig[gameType], name = config.title;
   const [daily, setDaily] = useState<{ entry: null | { status: string; guessCount: number }; challenge: { endsAt: string; serverNow: string; ended: boolean } } | null>(null);
   const [clockNow, setClockNow] = useState(Date.now());
   const [dailyServerOffset, setDailyServerOffset] = useState(0);
@@ -677,7 +702,8 @@ function CountryModePicker({ gameType, matchState, matchBusy, onBack, onChalleng
     : daily?.entry?.status === "ACTIVE" ? `ادامهٔ چالش · ${daily.entry.guessCount.toLocaleString("fa-IR")} حدس`
     : daily?.challenge.ended ? "دیدن نتیجهٔ چالش قبلی" : `یک ${config.noun} مشترک برای همه`;
   return <section className="country-mode-screen">
-    <div className="section-heading"><button className="icon-button" onClick={onBack} aria-label="بازگشت">→</button><div><small>{name}</small><h1>یک حالت انتخاب کن</h1></div><span>{gameType === "COUNTRY" ? "🌍" : "📍"}</span></div>
+    <div className="section-heading"><button className="icon-button" onClick={onBack} aria-label="بازگشت">→</button><div><small>{name}</small><h1>یک حالت انتخاب کن</h1></div><span>{config.icon}</span></div>
+    {gameType === "ANIMAL" && <p className="players-hint">فقط نام حیوان‌ها را از پیشنهادها انتخاب کن. جایگاه کمتر یعنی خویشاوندی نزدیک‌تر در درخت جانوران؛ چند حیوان ممکن است جایگاه برابر داشته باشند.</p>}
     <button className="game-card world country-mode-card daily" onClick={onChallenge}>
       <span className="game-icon">📅</span><span className="game-copy"><b>چالش روزانه</b><small>{dailyLabel}</small>{daily && !daily.challenge.ended && <small className="country-mode-countdown">تا چالش بعدی <span dir="ltr">{countdown}</span></small>}</span><span className="game-arrow">←</span>
     </button>
@@ -685,7 +711,7 @@ function CountryModePicker({ gameType, matchState, matchBusy, onBack, onChalleng
       <span className="game-icon">🧭</span><span className="game-copy"><b>تمرین آزاد</b><small>با هدف تصادفی تمرین کن؛ بازی قبلی‌ات هم محفوظ است</small></span><span className="game-arrow">←</span>
     </button>
     <section className="country-mode-duel">
-      <div className="country-mode-duel-heading"><span className="game-icon">⚔️</span><div className="game-copy"><b>رقابت دونفره</b><small>یک {config.noun} مشترک، حداکثر {config.durationText}</small></div></div>
+      <div className="country-mode-duel-heading"><span className="game-icon">⚔️</span><div className="game-copy"><b>رقابت دونفره</b><small>{gameType === "ANIMAL" ? "۲۰ ثانیه انتخاب حیوان برای حریف؛ سپس ۲۰۰ ثانیه رقابت" : `یک ${config.noun} مشترک، حداکثر ${config.durationText}`}</small></div></div>
       {running ? <div className="country-mode-searching"><span>در حال پیدا کردن حریف {matchGameConfig[matchState?.search?.gameType || "COUNTRY"].name}…</span><button className="secondary" disabled={matchBusy} onClick={onCancel}>لغو جست‌وجو</button></div> : <div className="country-mode-actions"><button className="primary" disabled={matchBusy} onClick={onFind}>پیدا کردن حریف</button><button className="secondary" onClick={onInvite}>دعوت از بازیکن آنلاین</button></div>}
     </section>
   </section>;
@@ -852,7 +878,7 @@ function Play({
   ]);
 
   useGeographySearch({ type: game.type, query, selected: selected?.name === query,
-    enabled: game.status === "ACTIVE" && (game.type === "COUNTRY" || game.type === "IRAN_CITY"),
+    enabled: game.status === "ACTIVE" && (game.type === "COUNTRY" || game.type === "IRAN_CITY" || game.type === "ANIMAL"),
     onResults: items => setSuggestions(items.filter(item => !game.guesses.some(guess => guess.id === item.id))),
   });
 
@@ -1072,6 +1098,8 @@ function Play({
             "واژه‌های پذیرفته‌شده سبز یا زرد می‌شوند؛ واژه‌های نامرتبط پذیرفته نمی‌شوند.",
           ],
         }
+      : game.type === "ANIMAL"
+        ? { title: "راهنمای حیوان‌جو", steps: ["نام یک حیوان را تایپ و از پیشنهادها انتخاب کن.", "جایگاه کمتر یعنی خویشاوندی نزدیک‌تر در درخت جانوران؛ شباهت ظاهری ملاک نیست.", "چند حیوان ممکن است جایگاه برابر داشته باشند؛ فقط ✓ یعنی جواب دقیق را پیدا کرده‌ای."] }
       : game.type === "IRAN_CITY"
         ? {
             title: "راهنمای شهرجو",
@@ -1569,8 +1597,8 @@ function Leaderboard({
   const [boardError, setBoardError] = useState(false);
   const requestId = useRef(0);
   const isPhraseHunt = type === "PHRASE_HUNT";
-  const isCountryChallenge = (type === "COUNTRY" || type === "IRAN_CITY") && board === "challenge" && period === "challenge";
-  const hasChallenges = isPhraseHunt || type === "COUNTRY" || type === "IRAN_CITY";
+  const isCountryChallenge = (type === "COUNTRY" || type === "IRAN_CITY" || type === "ANIMAL") && board === "challenge" && period === "challenge";
+  const hasChallenges = isPhraseHunt || type === "COUNTRY" || type === "IRAN_CITY" || type === "ANIMAL";
   const isSemantris = type === "SEMANTRIS",
     isDuel = type === "LETTER_DUEL";
   const onlineIds = useOnlineUsers([...rows.map((row) => row.userId), me?.userId]);
@@ -1631,6 +1659,7 @@ function Leaderboard({
             >
               کشورجو
             </button>
+            <button className={type === "ANIMAL" ? "active" : ""} onClick={() => { setType("ANIMAL"); setChallengeId(""); }}>حیوان‌جو</button>
             <button
               className={type === "PHRASE_HUNT" ? "active" : ""}
               onClick={() => { setType("PHRASE_HUNT"); setBoard("challenge"); setPeriod("challenge"); setChallengeId(""); }}
@@ -1656,7 +1685,7 @@ function Leaderboard({
           <div className="leader-toggle leader-mode-toggle">
             {!isPhraseHunt && !isDuel && <button className={board === "practice" ? "active" : ""} onClick={() => { setBoard("practice"); setPeriod("week"); }}>تمرین</button>}
             {hasChallenges && <button className={board === "challenge" ? "active" : ""} onClick={() => { setBoard("challenge"); setPeriod("challenge"); }}>چالش</button>}
-            {(type === "COUNTRY" || type === "IRAN_CITY" || isDuel) && <button className={board === "competitive" ? "active" : ""} onClick={() => setBoard("competitive")}>رقابتی</button>}
+            {(type === "COUNTRY" || type === "IRAN_CITY" || type === "ANIMAL" || isDuel) && <button className={board === "competitive" ? "active" : ""} onClick={() => setBoard("competitive")}>رقابتی</button>}
           </div>
         </div>
         {board === "practice" && (
@@ -1703,7 +1732,7 @@ function Leaderboard({
         <select id="leader-challenge" value={challengeId || challenge?.id || ""} onChange={e => setChallengeId(e.target.value)}>
           {challenges.map(c => <option key={c.id} value={c.id}>{new Date(c.startsAt).toLocaleString("fa-IR", { timeZone: "Asia/Tehran", year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })} · {c.ended ? "پایان‌یافته" : "در حال برگزاری"}</option>)}
         </select>
-        {challenge && <p>{challenge.ended ? `${isCountryChallenge ? type === "IRAN_CITY" ? "شهر هدف" : "کشور هدف" : "عبارت هدف"}: ${challenge.target || "—"}` : isCountryChallenge ? "جایگاه نزدیکی و تعداد حدس‌ها نمایش داده می‌شوند؛ نام حدس‌ها پس از پایان چالش آشکار می‌شود." : "بهترین حدس‌ها پس از پایان چالش آشکار می‌شوند."}</p>}
+        {challenge && <p>{challenge.ended ? `${isCountryChallenge ? type === "ANIMAL" ? "حیوان هدف" : type === "IRAN_CITY" ? "شهر هدف" : "کشور هدف" : "عبارت هدف"}: ${challenge.target || "—"}` : isCountryChallenge ? "جایگاه نزدیکی و تعداد حدس‌ها نمایش داده می‌شوند؛ نام حدس‌ها پس از پایان چالش آشکار می‌شود." : "بهترین حدس‌ها پس از پایان چالش آشکار می‌شوند."}</p>}
         <small>{isCountryChallenge ? "حل‌کنندگان با حدس کمتر و سپس زمان حل؛ بقیه با جایگاه نزدیکی کمتر و سپس زمان رسیدن به آن" : "امتیاز بیشتر؛ در امتیاز برابر، زمان زودترِ رسیدن به آن امتیاز"}</small>
       </div>}
       {isPhraseHunt && period !== "challenge" && <p className="board-note">مجموع بهترین امتیاز هر چالش · امتیاز چالش جاری هم حساب می‌شود · هفته از شنبه به وقت تهران</p>}
@@ -1945,6 +1974,17 @@ function PublicProfileOverlay({
               )}
             </div>
             {profile.user.isMe && <section className="profile-privacy">
+              <label className="invite-preference"><input type="checkbox" checked={profile.user.announcementsEnabled ?? false} disabled={privacyBusy} onChange={async event => {
+                const announcementsEnabled = event.target.checked;
+                setPrivacyBusy(true);
+                try {
+                  await jsonFetch("/api/account/settings", { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ announcementsEnabled }) });
+                  setAttempt(value => value + 1);
+                } catch (error) { setError(error instanceof Error ? error.message : "ذخیره تنظیمات انجام نشد"); }
+                finally { setPrivacyBusy(false); }
+              }} />دریافت اعلان چالش‌ها و خبرهای بازی در بات</label>
+              <p>با خاموش‌کردن این گزینه، اعلان‌های عمومی قطع می‌شوند. پاسخ دستورهای خودت و پیام‌های مسابقه‌ای که واردش شده‌ای همچنان فعال‌اند.</p>
+
               <label className="invite-preference"><input type="checkbox" checked={profile.user.showUsername ?? true} disabled={privacyBusy} onChange={async event => {
                 const showUsername = event.target.checked;
                 setPrivacyBusy(true);
@@ -1972,6 +2012,13 @@ function PublicProfileOverlay({
                 <ProfileStat label="تسلیم" value={profile.stats.geography.COUNTRY.surrendered} />
                 <ProfileStat label="میانگین حدس در برد" value={profile.stats.geography.COUNTRY.averageGuesses} />
                 <ProfileStat label="کمترین حدس برای برد" value={profile.stats.geography.COUNTRY.bestGame} />
+              </ProfileStatCard>
+              <ProfileStatCard title="🐾 حیوان‌جو">
+                <ProfileStat label="بازی تمام‌شده" value={profile.stats.geography.ANIMAL.total} />
+                <ProfileStat label="برد" value={profile.stats.geography.ANIMAL.wins} />
+                <ProfileStat label="تسلیم" value={profile.stats.geography.ANIMAL.surrendered} />
+                <ProfileStat label="میانگین حدس در برد" value={profile.stats.geography.ANIMAL.averageGuesses} />
+                <ProfileStat label="کمترین حدس برای برد" value={profile.stats.geography.ANIMAL.bestGame} />
               </ProfileStatCard>
               <ProfileStatCard title="▦ معناتریس">
                 <ProfileStat label="بازی‌ها" value={profile.stats.semantris.games} />

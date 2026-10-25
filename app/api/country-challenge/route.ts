@@ -16,9 +16,9 @@ export async function GET(request: Request) {
   if (!userId) return reply({ error: "ابتدا وارد بازی شو" }, 401);
   const params = new URL(request.url).searchParams;
   const gameType = params.get("type") || "COUNTRY";
-  if (gameType !== "COUNTRY" && gameType !== "IRAN_CITY") return reply({ error: "نوع بازی معتبر نیست" }, 400);
+  if (gameType !== "COUNTRY" && gameType !== "IRAN_CITY" && gameType !== "ANIMAL") return reply({ error: "نوع بازی معتبر نیست" }, 400);
   const id = params.get("id") || undefined;
-  const timestamp = id?.replace(/^IRAN_CITY:/, "");
+  const timestamp = id?.replace(/^(IRAN_CITY|ANIMAL):/, "");
   if (timestamp && (!/^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z$/.test(timestamp) || Number.isNaN(Date.parse(timestamp)))) return reply({ error: "شناسهٔ چالش معتبر نیست" }, 400);
   const state = await readCountryChallenge(userId, id, gameType);
   return state ? reply(state) : reply({ error: "چالش پیدا نشد" }, 404);
@@ -28,7 +28,7 @@ export async function POST(request: Request) {
   const userId = currentUserId();
   if (!userId) return reply({ error: "ابتدا وارد بازی شو" }, 401);
   const gameType = new URL(request.url).searchParams.get("type") || "COUNTRY";
-  if (gameType !== "COUNTRY" && gameType !== "IRAN_CITY") return reply({ error: "نوع بازی معتبر نیست" }, 400);
+  if (gameType !== "COUNTRY" && gameType !== "IRAN_CITY" && gameType !== "ANIMAL") return reply({ error: "نوع بازی معتبر نیست" }, 400);
   const parsed = input.safeParse(await request.json().catch(() => null));
   if (!parsed.success) return reply({ error: "درخواست معتبر نیست" }, 400);
   try {

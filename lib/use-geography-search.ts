@@ -6,7 +6,7 @@ export function useGeographySearch({ type, query, selected, enabled = true, onRe
 }) {
   const results = useRef(onResults); results.current = onResults;
   useEffect(() => {
-    if (!enabled || selected || !query.trim() || (type !== "COUNTRY" && type !== "IRAN_CITY")) { results.current([]); return; }
+    if (!enabled || selected || !query.trim() || (type !== "COUNTRY" && type !== "IRAN_CITY" && type !== "ANIMAL")) { results.current([]); return; }
     const cached = cachedGeographySearch(type, query);
     if (cached) { results.current(cached); return; }
     let stopped = false;

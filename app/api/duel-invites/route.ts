@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 const reply = (data: unknown, status = 200) => NextResponse.json(data, { status, headers: { "Cache-Control": "no-store" } });
 const id = z.string().min(1).max(64).regex(/^[a-zA-Z0-9:_-]+$/);
 const input = z.discriminatedUnion("action", [
-  z.object({ action: z.literal("send"), recipientId: id, gameKind: z.enum(["LETTER_DUEL", "COUNTRY_RACE", "CITY_RACE"]).optional() }),
+  z.object({ action: z.literal("send"), recipientId: id, gameKind: z.enum(["LETTER_DUEL", "COUNTRY_RACE", "CITY_RACE", "ANIMAL_RACE"]).optional() }),
   z.object({ action: z.enum(["accept", "reject", "cancel", "ready"]), id }),
   z.object({ action: z.literal("preference"), enabled: z.boolean() })
 ]);

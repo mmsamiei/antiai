@@ -11,11 +11,16 @@ describe("account privacy settings", () => {
     expect((await GET()).status).toBe(401); expect((await PATCH(request({ showUsername: false }))).status).toBe(401);
     expect(mocks.update).not.toHaveBeenCalled();
   });
-  it.each([null, {}, { showUsername: "false" }, { showUsername: false, userId: "other" }])("rejects invalid or foreign account updates %j", async body => {
+  it.each([null, {}, { showUsername: "false" }, { announcementsEnabled: "false" }, { announcementsEnabled: false, userId: "other" }, { showUsername: false, userId: "other" }])("rejects invalid or foreign account updates %j", async body => {
     expect((await PATCH(request(body))).status).toBe(400); expect(mocks.update).not.toHaveBeenCalled();
   });
   it("updates only the signed-in user and persists an explicit opt-out", async () => {
     expect((await PATCH(request({ showUsername: false }))).status).toBe(200);
-    expect(mocks.update).toHaveBeenCalledWith({ where: { id: "owner" }, data: { showUsername: false }, select: { showUsername: true } });
+    expect(mocks.update).toHaveBeenCalledWith({ where: { id: "owner" }, data: { showUsername: false }, select: { showUsername: true, announcementsEnabled: true } });
   });
+});
+
+it.each([false, true])("persists announcement preference %s for the authenticated account", async announcementsEnabled => {
+  expect((await PATCH(request({ announcementsEnabled }))).status).toBe(200);
+  expect(mocks.update).toHaveBeenCalledWith({ where: { id: "owner" }, data: { announcementsEnabled }, select: { showUsername: true, announcementsEnabled: true } });
 });

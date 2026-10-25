@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "bot": "node scripts/bot.mjs",
+    "bot": "tsx scripts/bot.mjs",
     "word-weaver-worker": "tsx scripts/word-weaver-worker.ts",
     "phrase-hunt-announcement-worker": "tsx scripts/phrase-hunt-announcement-worker.ts",
     "country-matchmaking-worker": "tsx scripts/country-matchmaking-worker.ts",

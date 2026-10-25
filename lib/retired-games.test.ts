@@ -39,8 +39,8 @@ describe.each(["ADJECTIVE", "ADJECTIVE_RAIN"] as const)("retired %s", (type) => 
     expect(mocks.update).not.toHaveBeenCalled();
   });
 });
-it("keeps five playable game types", () => {
-  expect(GAME_TYPES).toEqual(["IRAN_CITY", "COUNTRY", "PHRASE_HUNT", "SEMANTRIS", "LETTER_DUEL"]);
+it("keeps six playable game types including animals", () => {
+  expect(GAME_TYPES).toEqual(["ANIMAL", "IRAN_CITY", "COUNTRY", "PHRASE_HUNT", "SEMANTRIS", "LETTER_DUEL"]);
   for (const type of GAME_TYPES) expect(parseGameType(type)).toBe(type);
 });
 it.each([start, guess, surrender])("requires authentication", async (handler) => {

@@ -2,7 +2,7 @@ import { publicIdentity } from "./public-identity";
 import { randomInt } from "crypto";
 import { datasetFor } from "./geo";
 import { geoRaceConfig, geoRaceType } from "./geo-race-config";
-import { advanceCountryRace, countryRaceBusy } from "./country-race-state";
+import { advanceCountryRace, ANIMAL_SELECTION_MS, countryRaceBusy } from "./country-race-state";
 import { Prisma } from "@prisma/client";
 import { prisma } from "./prisma";
 import { disconnectedDuelWinner, endDuelMatch } from "./letter-duel-match";
@@ -92,7 +92,7 @@ export async function readInvites(userId: string) {
     return { ...user, invites: invites.map(i => ({ ...i, sender: publicIdentity(i.sender), recipient: publicIdentity(i.recipient) })), serverNow: new Date() };
   });
 }
-export async function sendInvite(senderId: string, recipientId: string, gameKind: "LETTER_DUEL" | "COUNTRY_RACE" | "CITY_RACE" = "LETTER_DUEL") {
+export async function sendInvite(senderId: string, recipientId: string, gameKind: "LETTER_DUEL" | "COUNTRY_RACE" | "CITY_RACE" | "ANIMAL_RACE" = "LETTER_DUEL") {
   if (senderId === recipientId) throw new InviteError("نمی‌توانی خودت را دعوت کنی", 400);
   await inviteTransaction(async tx => { await reconcileInvites(tx, senderId); await reconcileInvites(tx, recipientId); });
   return inviteTransaction(async tx => {
@@ -127,7 +127,13 @@ export async function actOnInvite(userId: string, id: string, action: "accept" |
       if (await tx.onlinePresence.count({ where: { userId: { in: [invite.senderId, invite.recipientId] }, lastSeenAt: { gte: new Date(now.getTime() - ONLINE_MS) } } }) !== 2) throw new InviteError("یکی از بازیکن‌ها دیگر آنلاین نیست");
       const ready = await tx.duelInvite.update({ where: { id }, data: invite.senderId === userId ? { senderReadyAt: now } : { recipientReadyAt: now } });
       if (ready.senderReadyAt && ready.recipientReadyAt && room?.status === "WAITING") {
-        if (invite.countryRaceId) await tx.countryRace.update({ where: { id: invite.countryRaceId }, data: { status: "ACTIVE", startedAt: now, deadline: new Date(+now + geoRaceConfig[geoRaceType(invite.countryRace?.gameType)].durationMs), playerOneHeartbeat: now, playerTwoHeartbeat: now } });
+        if (invite.countryRaceId) await tx.countryRace.update({ where: { id: invite.countryRaceId }, data: {
+          status: "ACTIVE", startedAt: now,
+          ...(invite.countryRace?.gameType === "ANIMAL"
+            ? { selectionDeadline: new Date(+now + ANIMAL_SELECTION_MS), deadline: null }
+            : { deadline: new Date(+now + geoRaceConfig[geoRaceType(invite.countryRace?.gameType)].durationMs) }),
+          playerOneHeartbeat: now, playerTwoHeartbeat: now,
+        } });
         else await tx.letterDuelConnection.update({ where: { id: invite.connectionId! }, data: { status: "ACTIVE", startedAt: now, playerOneHeartbeat: now, playerTwoHeartbeat: now } });
       }
       return ready;
@@ -144,9 +150,9 @@ export async function actOnInvite(userId: string, id: string, action: "accept" |
     for (const id of ids) await cancelMatchingForUser(tx, id, "یکی از بازیکن‌ها دعوت مستقیم دیگری را پذیرفت", now);
     if (await tx.letterDuelConnection.count({ where: { status: { in: ["WAITING", "ACTIVE"] }, OR: [{ playerOneId: { in: ids } }, { playerTwoId: { in: ids } }] } })) throw new InviteError("یکی از بازیکن‌ها در بازی دونفرهٔ دیگری است");
     if (await countryRaceBusy(tx, ids)) throw new InviteError("یکی از بازیکن‌ها در مسابقهٔ دیگری است");
-    const gameType = invite.gameKind === "CITY_RACE" ? "IRAN_CITY" : "COUNTRY";
+    const gameType = invite.gameKind === "ANIMAL_RACE" ? "ANIMAL" : invite.gameKind === "CITY_RACE" ? "IRAN_CITY" : "COUNTRY";
     const pool = datasetFor(gameType);
-    const countryRace = invite.gameKind === "COUNTRY_RACE" || invite.gameKind === "CITY_RACE" ? await tx.countryRace.create({ data: { gameType, playerOneId: invite.senderId, playerTwoId: invite.recipientId, targetId: pool[randomInt(pool.length)].id } }) : null;
+    const countryRace = invite.gameKind === "COUNTRY_RACE" || invite.gameKind === "CITY_RACE" || invite.gameKind === "ANIMAL_RACE" ? await tx.countryRace.create({ data: { gameType, playerOneId: invite.senderId, playerTwoId: invite.recipientId, targetId: pool[randomInt(pool.length)].id } }) : null;
     const connection = countryRace ? null : await tx.letterDuelConnection.create({ data: { mode: "PRIVATE", status: "WAITING", playerOneId: invite.senderId, playerTwoId: invite.recipientId } });
     await tx.duelInvite.updateMany({ where: { id: { not: id }, status: "PENDING", OR: [{ senderId: { in: ids } }, { recipientId: { in: ids } }] }, data: { status: "CANCELLED", reason: "یکی از بازیکن‌ها دعوت دیگری را پذیرفت", respondedAt: now } });
     return tx.duelInvite.update({ where: { id }, data: { status: "ACCEPTED", respondedAt: now, connectionId: connection?.id, countryRaceId: countryRace?.id, startDeadline: new Date(now.getTime() + READY_MS) } });

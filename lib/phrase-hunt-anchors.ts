@@ -1,5 +1,19 @@
 /** Manually calibrated, challenge-specific examples shown to JEV as score anchors. */
 export const phraseHuntAnchors: Record<string, { guess: string; score_out_of_100: number }[]> = {
+  "2026-10-24T18:30:00.000Z": [
+    { guess: "هوش مصنوعی", score_out_of_100: 100 },
+    { guess: "هوش ماشینی", score_out_of_100: 97 },
+    { guess: "یادگیری ماشین", score_out_of_100: 90 },
+    { guess: "یادگیری عمیق", score_out_of_100: 86 },
+    { guess: "شبکهٔ عصبی مصنوعی", score_out_of_100: 82 },
+    { guess: "چت‌بات", score_out_of_100: 74 },
+    { guess: "ربات", score_out_of_100: 63 },
+    { guess: "هوش", score_out_of_100: 60 },
+    { guess: "مصنوعی", score_out_of_100: 50 },
+    { guess: "برنامه‌نویسی", score_out_of_100: 48 },
+    { guess: "رایانه", score_out_of_100: 38 },
+    { guess: "هوش انسانی", score_out_of_100: 28 },
+  ],
   "2026-10-24T06:30:00.000Z": [
     { guess: "پرنیان", score_out_of_100: 100 },
     { guess: "پرند", score_out_of_100: 98 },

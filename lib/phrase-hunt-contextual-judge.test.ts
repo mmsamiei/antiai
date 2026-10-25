@@ -43,6 +43,18 @@ describe("v6 shared contextual judging", () => {
     expect(history.some(item => item.guess === "سامورایی" || item.guess === "باغ انار")).toBe(false);
     expect(history).not.toContainEqual({ guess: "جنگ", score_out_of_100: 50 });
   });
+  it("sends tonight's calibrated AI anchors, overrides prior history, and excludes the submitted guess", async () => {
+    const fetchMock = vi.fn().mockResolvedValue({ ok: true, json: async () => ({ answers: { score: { score: 2 } } }) });
+    vi.stubGlobal("fetch", fetchMock);
+    mocks.history.mockResolvedValue({ previousGuesses: [{ guess: "هوش", score_out_of_100: 10 }], counts: {} });
+    await judgePhrase("ph-071", "هوش مصنوعی", "یادگیری ماشین", 6, "typesafe/jev-1.13", { challengeId: "2026-10-24T18:30:00.000Z", userId: "player" });
+    const history = JSON.parse(fetchMock.mock.calls[0][1].body).state.previous_guesses;
+    expect(history).toHaveLength(11);
+    expect(history).toContainEqual({ guess: "هوش", score_out_of_100: 60 });
+    expect(history).toContainEqual({ guess: "مصنوعی", score_out_of_100: 50 });
+    expect(history).toContainEqual({ guess: "هوش مصنوعی", score_out_of_100: 100 });
+    expect(history.some((item: { guess: string }) => item.guess === "یادگیری ماشین" || item.guess === "پرنیان")).toBe(false);
+  });
   it("coalesces concurrent guesses from different users into one provider request", async () => {
     const fetchMock = vi.fn().mockResolvedValue({ ok: true, json: async () => ({ answers: { score: { score: 2 } } }) });
     vi.stubGlobal("fetch", fetchMock);

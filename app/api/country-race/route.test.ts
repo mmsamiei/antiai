@@ -21,6 +21,13 @@ describe("country race authenticated API", () => {
     expect((await POST(request({ action: "guess", id: "race", itemId: "IR", userId: "forged" }))).status).toBe(200);
     expect(mocks.actCountryRace).toHaveBeenCalledWith("me", "race", "guess", "IR");
   });
+  it("authenticates animal choices and ignores a forged selector", async () => {
+    expect((await POST(request({ action: "choose", id: "race", itemId: "ott563151", userId: "forged" }))).status).toBe(200);
+    expect(mocks.actCountryRace).toHaveBeenCalledWith("me", "race", "choose", "ott563151");
+    expect((await POST(request({ action: "choose", id: "race" }))).status).toBe(400);
+    mocks.currentUserId.mockReturnValue(null);
+    expect((await POST(request({ action: "choose", id: "race", itemId: "ott563151" }))).status).toBe(401);
+  });
   it("requires readiness to belong to this race", async () => {
     expect((await POST(request({ action: "ready", id: "race", inviteId: "other" }))).status).toBe(404);
     expect(mocks.actOnInvite).not.toHaveBeenCalled();

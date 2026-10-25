@@ -11,9 +11,10 @@ import { useOnlineUsers } from "@/lib/use-online-users";
 import { useBackHandler } from "./back-navigation";
 import { Player, PlayerAvatar, playerName } from "./players";
 const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
-type Guess = { id: string; name: string; emoji?: string; photo?: ItemPhoto; rank: number; detail?: string; provinceName?: string };
-type Race = { phase?: "SELECTING" | "GUESSING"; selectionDeadline?: string | null; selectedForOpponent?: { id: string; name: string; photo?: ItemPhoto } | null; opponentHasSelected?: boolean; opponentTarget?: { name: string; photo?: ItemPhoto }; ratingChange?: { before: number; after: number; delta: number } | null; id: string; gameType: GeoRaceType; totalItems: number; status: string; deadline: string | null; serverNow: string; me: Player; opponent: Player; myBestRank: number | null; opponentBestRank: number | null; opponentConnected: boolean; reconnectDeadline: string; guesses: Guess[]; opponentGuesses?: Guess[]; target?: { name: string; emoji?: string; photo?: ItemPhoto; description?: string }; winnerUserId: string | null; endReason: string | null; invite: { id: string; reason: string | null } | null };
+type Guess = { id: string; name: string; emoji?: string; photo?: ItemPhoto; rank: number; distance?: number; detail?: string; provinceName?: string };
+type Race = { phase?: "SELECTING" | "GUESSING"; selectionDeadline?: string | null; selectedForOpponent?: { id: string; name: string; photo?: ItemPhoto } | null; opponentHasSelected?: boolean; opponentTarget?: { name: string; photo?: ItemPhoto }; ratingChange?: { before: number; after: number; delta: number } | null; id: string; gameType: GeoRaceType; totalItems: number; status: string; deadline: string | null; serverNow: string; me: Player; opponent: Player; myBestRank: number | null; opponentBestRank: number | null; myBestDistance?: number | null; opponentBestDistance?: number | null; opponentConnected: boolean; reconnectDeadline: string; guesses: Guess[]; opponentGuesses?: Guess[]; target?: { name: string; emoji?: string; photo?: ItemPhoto; description?: string }; winnerUserId: string | null; endReason: string | null; invite: { id: string; reason: string | null } | null };
 const rankText = (rank: number | null) => rank === null ? "—" : rank === 0 ? "پیدا شد!" : rank.toLocaleString("fa-IR");
+const animalDistanceText = (distance: number | null | undefined) => distance == null ? "—" : distance === 0 ? "پیدا شد!" : distance.toLocaleString("fa-IR", { maximumFractionDigits: 2 });
 async function request(url: string, body?: unknown) {
   const response = await fetch(base + url, sessionRequest(body ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) } : undefined));
   const data = await response.json(); if (!response.ok) throw new Error(data.error || "ارتباط با سرور برقرار نشد"); return data;
@@ -89,7 +90,7 @@ export default function CountryRace({ id, onExit, setError, onProfile, registerL
     {!race ? <div className="empty-state">در حال بازیابی مسابقه…</div> : <>
       <div className="duel-score race-score">{[race.me, race.opponent].map((p, index) => <div key={p.id}>
         <button className="duel-profile-trigger" onClick={() => onProfile(p.id)}><PlayerAvatar player={p} online={online.has(p.id)} /><b>{playerName(p)}</b></button>
-        <small>{index === 0 ? "بهترین جایگاه نزدیکی تو" : "بهترین جایگاه نزدیکی حریف"}</small><strong key={index === 0 ? race.myBestRank : race.opponentBestRank}>{rankText(index === 0 ? race.myBestRank : race.opponentBestRank)}</strong>
+        <small>{gameType === "ANIMAL" ? index === 0 ? "بهترین فاصلهٔ خویشاوندی تو" : "بهترین فاصلهٔ خویشاوندی حریف" : index === 0 ? "بهترین جایگاه نزدیکی تو" : "بهترین جایگاه نزدیکی حریف"}</small><strong key={index === 0 ? race.myBestRank : race.opponentBestRank}>{gameType === "ANIMAL" ? animalDistanceText(index === 0 ? race.myBestDistance : race.opponentBestDistance) : rankText(index === 0 ? race.myBestRank : race.opponentBestRank)}</strong>
       </div>)}</div>
       {race.status === "WAITING" && <div className="empty-state">منتظر آماده‌شدن هر دو بازیکن…</div>}
       {choosing && <div className="animal-selection-panel">
@@ -104,7 +105,7 @@ export default function CountryRace({ id, onExit, setError, onProfile, registerL
       </div>}
       {race.status === "ACTIVE" && !choosing && <>
         <div className={"race-timer" + (seconds <= 20 ? " urgent" : "")} role="timer">{seconds.toLocaleString("fa-IR")} <small>ثانیه باقی مانده</small></div>
-        <p className="players-hint">{gameType === "ANIMAL" ? "حیوانی را که حریف برایت انتخاب کرده پیدا کن؛ جایگاه کمتر یعنی خویشاوندی نزدیک‌تر." : `${config.noun} پنهان را پیدا کن؛ جایگاه نزدیکی کمتر یعنی نزدیک‌تر.`}</p>
+        <p className="players-hint">{gameType === "ANIMAL" ? "حیوانی را که حریف برایت انتخاب کرده پیدا کن؛ فاصلهٔ خویشاوندی کمتر یعنی نزدیک‌تر." : `${config.noun} پنهان را پیدا کن؛ جایگاه نزدیکی کمتر یعنی نزدیک‌تر.`}</p>
         {!race.opponentConnected && <p className="duel-disconnected">منتظر بازگشت حریف؛ {Math.max(0, Math.ceil((Date.parse(race.reconnectDeadline) - Date.now() - offset.current) / 1000)).toLocaleString("fa-IR")} ثانیه فرصت دارد.</p>}
         <div className="search-box">
           <div className="search-row">
@@ -118,23 +119,23 @@ export default function CountryRace({ id, onExit, setError, onProfile, registerL
       </>}
       {ended && <div className={"duel-result " + (race.winnerUserId ? won ? "won" : "lost" : "draw")}>
         <span>{race.winnerUserId ? won ? "🏆" : "◌" : "🤝"}</span><h2>{race.winnerUserId ? won ? "مسابقه را بردی!" : "حریف مسابقه را برد" : race.endReason === "CANCELLED" ? "شروع مسابقه لغو شد" : "مسابقه مساوی شد"}</h2>
-        <p>{race.endReason === "FOUND" ? `${config.noun} هدف پیدا شد.` : race.endReason === "TIMEOUT" ? `${config.durationText} تمام شد؛ نتیجه بر اساس بهترین جایگاه نزدیکی هر نفر است.` : race.endReason === "FORFEIT" ? "مسابقه با واگذاری پایان یافت." : race.endReason === "DISCONNECTED" ? "مهلت بازگشت به مسابقه تمام شد." : race.invite?.reason}</p>
+        <p>{race.endReason === "FOUND" ? `${config.noun} هدف پیدا شد.` : race.endReason === "TIMEOUT" ? `${config.durationText} تمام شد؛ نتیجه ${gameType === "ANIMAL" ? "بر اساس کمترین فاصلهٔ خویشاوندی" : "بر اساس بهترین جایگاه نزدیکی"} هر نفر است.` : race.endReason === "FORFEIT" ? "مسابقه با واگذاری پایان یافت." : race.endReason === "DISCONNECTED" ? "مهلت بازگشت به مسابقه تمام شد." : race.invite?.reason}</p>
         {race.ratingChange && <p>امتیاز رقابتی: <b dir="ltr">{race.ratingChange.before.toLocaleString("fa-IR")} → {race.ratingChange.after.toLocaleString("fa-IR")} ({race.ratingChange.delta > 0 ? "+" : ""}{race.ratingChange.delta.toLocaleString("fa-IR")})</b></p>}
         {race.target && <><strong>{gameType === "ANIMAL" && "حیوان تو: "}{race.target.emoji} {race.target.name}</strong><p>{race.target.description}</p></>}
         {gameType === "ANIMAL" && <AnimalPortrait item={race.target} />}
         {race.opponentTarget && <p>حیوان حریف: <b>{race.opponentTarget.name}</b></p>}
         <div className="duel-rematch"><button className="primary" disabled={busy || invited} onClick={async () => { setBusy(true); try { await act("rematch"); setInvited(true); } catch (e) { setError(e instanceof Error ? e.message : "دعوت ارسال نشد"); } finally { setBusy(false); } }}>{invited ? "دعوت فرستاده شد؛ منتظر پاسخ حریف" : "بازی مجدد با همین حریف"}</button><button className="secondary" onClick={onExit}>بازگشت به بازیکن‌ها</button></div>
       </div>}
-      <RaceGuesses title="حدس‌های تو" guesses={race.guesses} total={race.totalItems} />
-      {ended && <RaceGuesses title="حدس‌های حریف" guesses={race.opponentGuesses || []} total={race.totalItems} />}
+      <RaceGuesses title="حدس‌های تو" guesses={race.guesses} total={race.totalItems} gameType={gameType} />
+      {ended && <RaceGuesses title="حدس‌های حریف" guesses={race.opponentGuesses || []} total={race.totalItems} gameType={gameType} />}
     </>}
     {gameType === "ANIMAL" && <AnimalPhotoCreditsLink />}
   </section>;
 }
-function RaceGuesses({ title, guesses, total }: { title: string; guesses: Guess[]; total: number }) {
+function RaceGuesses({ title, guesses, total, gameType }: { title: string; guesses: Guess[]; total: number; gameType: GeoRaceType }) {
   return <section className="race-guesses"><div className="guess-head"><h2>{title}</h2><span>{guesses.length.toLocaleString("fa-IR")} حدس</span></div>{!guesses.length ? <p>هنوز حدسی ثبت نشده</p> : <div className="guess-list">{[...guesses].sort((a, b) => a.rank - b.rank).map(g => <div className={`guess-row ${rankColor(g.rank, total)}`} key={g.id}>
     <div className="guess-name"><ItemImage item={g} /><b>{g.name}</b></div>
-    <div className="rank-copy"><small>جایگاه نزدیکی</small><strong>{g.rank === 0 ? "✓" : g.rank.toLocaleString("fa-IR")}</strong><span>{g.rank === 0 ? "پاسخ درست" : `از ${total.toLocaleString("fa-IR")}`}</span></div>
+    <div className="rank-copy"><small>{gameType === "ANIMAL" ? "فاصلهٔ خویشاوندی" : "جایگاه نزدیکی"}</small><strong>{g.rank === 0 ? "✓" : gameType === "ANIMAL" ? animalDistanceText(g.distance) : g.rank.toLocaleString("fa-IR")}</strong><span>{g.rank === 0 ? "پاسخ درست" : gameType === "ANIMAL" ? "کمتر یعنی نزدیک‌تر" : `از ${total.toLocaleString("fa-IR")}`}</span></div>
     <div className="rank-bar"><i style={{ width: `${g.rank === 0 ? 100 : Math.max(4, 100 - ((g.rank - 2) / Math.max(1, total - 2)) * 100)}%` }} /></div>
   </div>)}</div>}</section>;
 }

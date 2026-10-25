@@ -1,5 +1,6 @@
 import type { GameSession, GameType, Guess } from "@prisma/client";
 import { ANIMAL_DATASET_VERSION } from "./data/animals";
+import { animalDistance } from "./animals";
 import { prisma } from "./prisma";
 import { DATASET_VERSION, datasetFor, findItem, publicItem, normalizePersian } from "./geo";
 import { wordPrompts, promptById } from "./data/adjective-prompts";
@@ -66,7 +67,11 @@ export function serializeGame(game: GameSession & { guesses: Guess[]; phraseGues
   const dataset = datasetFor(game.type);
   const guesses = game.guesses.map((guess) => {
     const item = findItem(game.type, guess.itemId);
-    return item ? { ...publicItem(item), rank: publicProximityRank(game.type, guess.rank), createdAt: guess.createdAt } : null;
+    return item ? {
+      ...publicItem(item), rank: publicProximityRank(game.type, guess.rank),
+      ...(game.type === "ANIMAL" ? { distance: animalDistance(item.id, game.targetId) } : {}),
+      createdAt: guess.createdAt,
+    } : null;
   }).filter(Boolean);
   const target = revealTarget ? findItem(game.type, game.targetId) : undefined;
   return {

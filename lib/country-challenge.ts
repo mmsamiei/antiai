@@ -7,6 +7,7 @@ import { countryChallengeTimes, countryChallengeWindow } from "./country-challen
 import { cancelMatchingForUser } from "./country-matchmaking";
 
 import { geoRaceType, type GeoRaceType } from "./geo-race-config";
+import { animalDistance } from "./animals";
 
 type Tx = Prisma.TransactionClient;
 
@@ -53,7 +54,11 @@ function serialize(challenge: { id: string; startsAt: Date; endsAt: Date; target
       solvedAt: entry.solvedAt,
       guesses: entry.guesses.map(guess => {
         const item = findItem(gameType, guess.itemId);
-        return item ? { ...publicItem(item), rank: guess.rank, createdAt: guess.createdAt } : null;
+        return item ? {
+          ...publicItem(item), rank: guess.rank,
+          ...(gameType === "ANIMAL" ? { distance: animalDistance(item.id, challenge.targetId) } : {}),
+          createdAt: guess.createdAt,
+        } : null;
       }).filter(Boolean),
       target: reveal && target ? publicItem(target, true) : null,
     } : null,
@@ -169,13 +174,19 @@ export async function countryChallengeLeaderboard(userId: string, challengeId?: 
   const visibleIds = entries.filter((e, i) => i < 50 || e.userId === userId).map(e => e.userId);
   const users = await prisma.user.findMany({ where: { id: { in: visibleIds } }, select: { id: true, firstName: true, lastName: true, username: true, showUsername: true, photoUrl: true } });
   const userMap = new Map(users.map(u => [u.id, u]));
-  const rows = entries.map((entry, index) => ({
-    rank: index + 1, userId: entry.userId, displayName: `${userMap.get(entry.userId)?.firstName || ""} ${userMap.get(entry.userId)?.lastName || ""}`.trim() || (userMap.get(entry.userId)?.showUsername ? userMap.get(entry.userId)?.username : null) || "بازیکن",
-    photoUrl: userMap.get(entry.userId)?.photoUrl, wins: entry.status === "WON" ? 1 : 0, averageGuesses: entry.guessCount, bestGame: entry.guessCount,
-    guessCount: entry.guessCount, bestScore: entry.bestRank, totalScore: entry.bestRank, challengeSolved: entry.status === "WON",
-    bestGuess: ended ? findItem(gameType, entry.guesses.find(guess => guess.rank === (entry.status === "WON" ? 0 : entry.bestRank))?.itemId || "")?.name : undefined,
-    isMe: entry.userId === userId,
-  }));
+  const rows = entries.map((entry, index) => {
+    const bestItemId = entry.guesses[0]?.itemId;
+    const bestDistance = gameType === "ANIMAL" && bestItemId ? animalDistance(bestItemId, challenge.targetId) : null;
+    const bestScore = gameType === "ANIMAL" ? bestDistance : entry.bestRank;
+    return {
+      rank: index + 1, userId: entry.userId, displayName: `${userMap.get(entry.userId)?.firstName || ""} ${userMap.get(entry.userId)?.lastName || ""}`.trim() || (userMap.get(entry.userId)?.showUsername ? userMap.get(entry.userId)?.username : null) || "بازیکن",
+      photoUrl: userMap.get(entry.userId)?.photoUrl, wins: entry.status === "WON" ? 1 : 0, averageGuesses: entry.guessCount, bestGame: entry.guessCount,
+      guessCount: entry.guessCount, bestScore, totalScore: bestScore, challengeSolved: entry.status === "WON",
+      ...(gameType === "ANIMAL" ? { scoreType: "animal-distance" as const } : {}),
+      bestGuess: ended && bestItemId ? findItem(gameType, bestItemId)?.name : undefined,
+      isMe: entry.userId === userId,
+    };
+  });
   const userIn = rows.find(row => row.isMe);
   const target = ended ? findItem(geoRaceType(challenge.gameType), challenge.targetId)?.name ?? null : null;
   return { rows: rows.slice(0, 50), me: userIn || null, challenge: { ...countryChallengeTimes(challenge.startsAt, now, challenge.endsAt), id: challenge.id, gameType, ended, target }, challenges: (await prisma.countryChallenge.findMany({ where: { gameType }, orderBy: { startsAt: "desc" }, take: 30 })).map(c => ({ ...countryChallengeTimes(c.startsAt, now, c.endsAt), id: c.id, gameType, ended: now >= c.endsAt, target: now >= c.endsAt ? findItem(gameType, c.targetId)?.name ?? null : null })) };

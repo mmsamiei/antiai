@@ -3,6 +3,7 @@ import { prisma } from "./prisma";
 import { phraseWeekStart } from "./phrase-hunt-schedule";
 import { publicDisplayName } from "./public-identity";
 import type { GeoRaceType } from "./geo-race-config";
+import { animalDistance } from "./animals";
 
 export function challengeTotals(entries: { userId: string; status: string; guessCount: number; bestRank: number | null }[]) {
   const totals = new Map<string, { userId: string; wins: number; games: number; solvedGuesses: number; ranks: number }>();
@@ -15,7 +16,21 @@ export function challengeTotals(entries: { userId: string; status: string; guess
   return [...totals.values()].sort((a, b) => b.wins - a.wins || (a.wins && b.wins ? a.solvedGuesses / a.wins - b.solvedGuesses / b.wins : 0) || a.ranks / a.games - b.ranks / b.games || a.userId.localeCompare(b.userId));
 }
 export async function geographyChallengeTotals(userId: string, gameType: GeoRaceType, period: "week" | "all") {
-  const entries = await leaderboardCache.get(JSON.stringify(["geo-totals", gameType, period, period === "week" ? +phraseWeekStart() : 0]), LIVE_BOARD_TTL, () => prisma.countryChallengeEntry.findMany({ where: { challenge: { gameType, ...(period === "week" ? { startsAt: { gte: phraseWeekStart() } } : {}) }, guessCount: { gt: 0 } }, select: { userId: true, status: true, guessCount: true, bestRank: true } }));
+  const cached = await leaderboardCache.get(JSON.stringify(["geo-totals", gameType, period, period === "week" ? +phraseWeekStart() : 0]), LIVE_BOARD_TTL, () => prisma.countryChallengeEntry.findMany({
+    where: { challenge: { gameType, ...(period === "week" ? { startsAt: { gte: phraseWeekStart() } } : {}) }, guessCount: { gt: 0 } },
+    select: {
+      userId: true, status: true, guessCount: true, bestRank: true,
+      ...(gameType === "ANIMAL" ? {
+        challenge: { select: { targetId: true } },
+        guesses: { orderBy: [{ rank: "asc" }, { createdAt: "asc" }], take: 1, select: { itemId: true } },
+      } : {}),
+    },
+  }));
+  const entries = gameType === "ANIMAL" ? cached.map(entry => {
+    const animalEntry = entry as typeof entry & { challenge: { targetId: string }; guesses: { itemId: string }[] };
+    const bestGuess = animalEntry.guesses[0];
+    return { ...entry, bestRank: bestGuess ? animalDistance(bestGuess.itemId, animalEntry.challenge.targetId) : entry.bestRank };
+  }) : cached;
   const totals = challengeTotals(entries);
   const selected = totals.filter((r, i) => i < 50 || r.userId === userId);
   const users = await prisma.user.findMany({ where: { id: { in: selected.map(r => r.userId) } } });

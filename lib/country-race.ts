@@ -4,6 +4,7 @@ import { publicIdentity } from "./public-identity";
 import { prisma } from "./prisma";
 import { datasetFor, findItem, proximityRank, publicItem } from "./geo";
 import { advanceCountryRace } from "./country-race-state";
+import { animalDistance } from "./animals";
 import { inviteTransaction, InviteError, sendInvite } from "./duel-invites";
 import type { Prisma } from "@prisma/client";
 
@@ -26,7 +27,16 @@ export async function readCountryRace(userId: string, id: string) {
     const isOne = room.playerOneId === userId;
     const ownTargetId = gameType === "ANIMAL" ? (isOne ? room.playerOneTargetId : room.playerTwoTargetId) : room.targetId;
     const selectedForOpponentId = isOne ? room.playerTwoTargetId : room.playerOneTargetId;
-    const describe = (g: typeof guesses[number]) => ({ ...publicItem(findItem(gameType, g.itemId)!), rank: g.rank, createdAt: g.createdAt });
+    const targetFor = (guess: typeof guesses[number]) => gameType === "ANIMAL"
+      ? guess.userId === room.playerOneId ? room.playerOneTargetId : room.playerTwoTargetId
+      : room.targetId;
+    const describe = (g: typeof guesses[number]) => ({
+      ...publicItem(findItem(gameType, g.itemId)!), rank: g.rank,
+      ...(gameType === "ANIMAL" && targetFor(g) ? { distance: animalDistance(g.itemId, targetFor(g)!) } : {}),
+      createdAt: g.createdAt,
+    });
+    const bestDistance = (rows: typeof guesses, targetId: string | null) => gameType === "ANIMAL" && rows[0] && targetId
+      ? animalDistance(rows[0].itemId, targetId) : null;
     const ratingChange = room.status === "ENDED" ? ownRatingChange(await tx.competitiveResult.findUnique({ where: { matchKey: `race:${id}` } }), userId) : null;
     return { ratingChange, id, gameType, totalItems: datasetFor(gameType).length, status: room.status, deadline: room.deadline, serverNow: new Date(), winnerUserId: room.winnerUserId, endReason: room.endReason,
       ...(gameType === "ANIMAL" ? {
@@ -37,6 +47,10 @@ export async function readCountryRace(userId: string, id: string) {
       } : {}),
       me: publicIdentity(userId === one.id ? one : two), opponent: publicIdentity(userId === one.id ? two : one), invite,
       myBestRank: own[0]?.rank ?? null, opponentBestRank: other[0]?.rank ?? null,
+      ...(gameType === "ANIMAL" ? {
+        myBestDistance: bestDistance(own, ownTargetId),
+        opponentBestDistance: bestDistance(other, selectedForOpponentId),
+      } : {}),
       guesses: own.map(describe),
       opponentConnected: Date.now() - +(userId === one.id ? room.playerTwoHeartbeat : room.playerOneHeartbeat) < 10_000,
       reconnectDeadline: new Date(+(userId === one.id ? room.playerTwoHeartbeat : room.playerOneHeartbeat) + 30_000),

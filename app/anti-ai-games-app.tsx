@@ -42,7 +42,7 @@ type GameType =
   | "SEMANTRIS"
   | "LETTER_DUEL";
 type PublicItem = { id: string; name: string; emoji?: string; photo?: ItemPhoto; detail?: string; provinceName?: string; description?: string };
-type Guess = PublicItem & { rank: number; createdAt: string };
+type Guess = PublicItem & { rank: number; distance?: number; createdAt: string };
 type PhraseGuess = { id: string; name: string; score: number; createdAt: string };
 type Game = {
   id: string;
@@ -105,6 +105,7 @@ type LeaderRow = {
   winRate?: number;
   isMe: boolean;
   challengeSolved?: boolean;
+  scoreType?: "animal-distance";
 };
 type PublicProfile = {
   user: {
@@ -139,6 +140,9 @@ type PublicProfile = {
 type Screen = "feedback" | "duel-mode" | "duel-practice" | "country-race" | "country-mode" | "country-challenge" | "home" | "play" | "duel" | "word-weaver" | "leaderboard" | "players";
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const TELEGRAM_BOT_USERNAME = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || "";
+function formatAnimalDistance(distance?: number) {
+  return distance === undefined ? "—" : distance.toLocaleString("fa-IR", { maximumFractionDigits: 2 });
+}
 
 const gameMeta: Record<
   GameType,
@@ -705,7 +709,7 @@ function CountryModePicker({ gameType, matchState, matchBusy, onBack, onChalleng
     : daily?.challenge.ended ? "دیدن نتیجهٔ چالش قبلی" : `یک ${config.noun} مشترک برای همه`;
   return <section className="country-mode-screen">
     <div className="section-heading"><button className="icon-button" onClick={onBack} aria-label="بازگشت">→</button><div><small>{name}</small><h1>یک حالت انتخاب کن</h1></div><span>{config.icon}</span></div>
-    {gameType === "ANIMAL" && <p className="players-hint">فقط نام حیوان‌ها را از پیشنهادها انتخاب کن. جایگاه کمتر یعنی خویشاوندی نزدیک‌تر در درخت جانوران؛ چند حیوان ممکن است جایگاه برابر داشته باشند.</p>}
+    {gameType === "ANIMAL" && <p className="players-hint">فقط نام حیوان‌ها را از پیشنهادها انتخاب کن. فاصلهٔ خویشاوندی کمتر یعنی نزدیکی بیشتر در درخت جانوران؛ چند حیوان ممکن است فاصلهٔ برابر داشته باشند.</p>}
     <button className="game-card world country-mode-card daily" onClick={onChallenge}>
       <span className="game-icon">📅</span><span className="game-copy"><b>چالش روزانه</b><small>{dailyLabel}</small>{daily && !daily.challenge.ended && <small className="country-mode-countdown">تا چالش بعدی <span dir="ltr">{countdown}</span></small>}</span><span className="game-arrow">←</span>
     </button>
@@ -1060,7 +1064,10 @@ function Play({
       .map((mark, index) => {
         const guess = game.guesses[index];
         const location = game.type === "IRAN_CITY" && guess.provinceName ? `، ${guess.provinceName}` : "";
-        return `${mark} ${guess.name}${location}${guess.rank ? ` (جایگاه نزدیکی ${guess.rank.toLocaleString("fa-IR")})` : " (پاسخ درست)"}`;
+        const score = game.type === "ANIMAL"
+          ? guess.rank ? ` (فاصلهٔ خویشاوندی ${formatAnimalDistance(guess.distance)})` : " (پاسخ درست)"
+          : guess.rank ? ` (جایگاه نزدیکی ${guess.rank.toLocaleString("fa-IR")})` : " (پاسخ درست)";
+        return `${mark} ${guess.name}${location}${score}`;
       });
     const targetName = game.type === "IRAN_CITY" && game.target?.provinceName ? `${game.target.name}، ${game.target.provinceName}` : game.target?.name;
     const text = `${meta.title} در Anti AI Games\n${game.guessesCount.toLocaleString("fa-IR")} حدس\n${blocks.join("\n")}\n\nپاسخ نهایی: ${game.target?.emoji || ""} ${targetName || ""}`;
@@ -1101,7 +1108,7 @@ function Play({
           ],
         }
       : game.type === "ANIMAL"
-        ? { title: "راهنمای حیوان‌جو", steps: ["نام یک حیوان را تایپ و از پیشنهادها انتخاب کن.", "جایگاه کمتر یعنی خویشاوندی نزدیک‌تر در درخت جانوران؛ شباهت ظاهری ملاک نیست.", "چند حیوان ممکن است جایگاه برابر داشته باشند؛ فقط ✓ یعنی جواب دقیق را پیدا کرده‌ای."] }
+        ? { title: "راهنمای حیوان‌جو", steps: ["نام یک حیوان را تایپ و از پیشنهادها انتخاب کن.", "عدد نمایش‌داده‌شده فاصلهٔ خویشاوندی در درخت جانوران است؛ عدد کمتر یعنی خویشاوندی نزدیک‌تر و شباهت ظاهری ملاک نیست.", "این فاصله لگاریتم اندازهٔ شاخهٔ مشترک است، نه تعداد گام‌های تکاملی؛ فقط ✓ یعنی جواب دقیق را پیدا کرده‌ای."] }
       : game.type === "IRAN_CITY"
         ? {
             title: "راهنمای شهرجو",
@@ -1474,14 +1481,14 @@ function Play({
                 <b>{guess.name}</b>
               </div>
               <div className="rank-copy">
-                <small>جایگاه نزدیکی</small>
+                <small>{game.type === "ANIMAL" ? "فاصلهٔ خویشاوندی" : "جایگاه نزدیکی"}</small>
                 <strong>
-                  {guess.rank === 0 ? "✓" : guess.rank.toLocaleString("fa-IR")}
+                  {guess.rank === 0 ? "✓" : game.type === "ANIMAL" ? formatAnimalDistance(guess.distance) : guess.rank.toLocaleString("fa-IR")}
                 </strong>
                 <span>
                   {guess.rank === 0
                     ? "پاسخ درست"
-                    : `از ${(game.totalItems).toLocaleString("fa-IR")}`}
+                    : game.type === "ANIMAL" ? "کمتر یعنی نزدیک‌تر" : `از ${(game.totalItems).toLocaleString("fa-IR")}`}
                 </span>
               </div>
               <div className="rank-bar">
@@ -1736,8 +1743,8 @@ function Leaderboard({
         <select id="leader-challenge" value={challengeId || challenge?.id || ""} onChange={e => setChallengeId(e.target.value)}>
           {challenges.map(c => <option key={c.id} value={c.id}>{new Date(c.startsAt).toLocaleString("fa-IR", { timeZone: "Asia/Tehran", year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })} · {c.ended ? "پایان‌یافته" : "در حال برگزاری"}</option>)}
         </select>
-        {challenge && <p>{challenge.ended ? `${isCountryChallenge ? type === "ANIMAL" ? "حیوان هدف" : type === "IRAN_CITY" ? "شهر هدف" : "کشور هدف" : "عبارت هدف"}: ${challenge.target || "—"}` : isCountryChallenge ? "جایگاه نزدیکی و تعداد حدس‌ها نمایش داده می‌شوند؛ نام حدس‌ها پس از پایان چالش آشکار می‌شود." : "بهترین حدس‌ها پس از پایان چالش آشکار می‌شوند."}</p>}
-        <small>{isCountryChallenge ? "حل‌کنندگان با حدس کمتر و سپس زمان حل؛ بقیه با جایگاه نزدیکی کمتر و سپس زمان رسیدن به آن" : "امتیاز بیشتر؛ در امتیاز برابر، زمان زودترِ رسیدن به آن امتیاز"}</small>
+        {challenge && <p>{challenge.ended ? `${isCountryChallenge ? type === "ANIMAL" ? "حیوان هدف" : type === "IRAN_CITY" ? "شهر هدف" : "کشور هدف" : "عبارت هدف"}: ${challenge.target || "—"}` : isCountryChallenge ? type === "ANIMAL" ? "فاصلهٔ خویشاوندی و تعداد حدس‌ها نمایش داده می‌شوند؛ نام حدس‌ها پس از پایان چالش آشکار می‌شود." : "جایگاه نزدیکی و تعداد حدس‌ها نمایش داده می‌شوند؛ نام حدس‌ها پس از پایان چالش آشکار می‌شود." : "بهترین حدس‌ها پس از پایان چالش آشکار می‌شوند."}</p>}
+        <small>{isCountryChallenge ? type === "ANIMAL" ? "حل‌کنندگان با حدس کمتر و سپس زمان حل؛ بقیه با فاصلهٔ خویشاوندی کمتر و سپس زمان رسیدن به آن" : "حل‌کنندگان با حدس کمتر و سپس زمان حل؛ بقیه با جایگاه نزدیکی کمتر و سپس زمان رسیدن به آن" : "امتیاز بیشتر؛ در امتیاز برابر، زمان زودترِ رسیدن به آن امتیاز"}</small>
       </div>}
       {isPhraseHunt && period !== "challenge" && <p className="board-note">مجموع بهترین امتیاز هر چالش · امتیاز چالش جاری هم حساب می‌شود · هفته از شنبه به وقت تهران</p>}
       {board === "practice" && !isPhraseHunt && mode === "skill" && (
@@ -1749,7 +1756,7 @@ function Leaderboard({
               : "امتیاز مهارت = مجموع حدس‌های بازی‌های تمام‌شده ÷ تعداد بردها · حداقل ۳ برد"}
         </p>
       )}
-      {board === "challenge" && !isPhraseHunt && period !== "challenge" && <p className="board-note">تعداد چالش‌های حل‌شده؛ سپس میانگین حدس کمتر در حل‌ها و میانگین بهترین جایگاه نزدیکی کمتر · هفته از شنبه به وقت تهران</p>}
+      {board === "challenge" && !isPhraseHunt && period !== "challenge" && <p className="board-note">تعداد چالش‌های حل‌شده؛ سپس میانگین حدس کمتر در حل‌ها و میانگین {type === "ANIMAL" ? "بهترین فاصلهٔ خویشاوندی کمتر" : "بهترین جایگاه نزدیکی کمتر"} · هفته از شنبه به وقت تهران</p>}
       {board === "competitive" && <p className="board-note">امتیاز Elo · شروع از ۱۰۰۰ · همهٔ مسابقه‌های دونفره امتیازدارند</p>}
       {boardError ? <div className="empty-state">دریافت جدول ممکن نشد؛ دوباره تلاش کن.</div> : loading ? (
         <div className="empty-state">در حال محاسبه رتبه‌ها…</div>
@@ -1822,7 +1829,7 @@ function LeaderRowView({
     : mode === "effort"
       ? (row.totalScore ?? row.averageGuesses)
       : (row.bestScore ?? row.averageGuesses);
-  const detail = row.challengeTotal ? `${(row.games || 0).toLocaleString("fa-IR")} چالش · ${row.wins ? `میانگین ${row.averageGuesses.toLocaleString("fa-IR")} حدس در حل‌ها` : "هنوز چالشی حل نشده"}` : row.rating !== undefined ? `${(row.games || 0).toLocaleString("fa-IR")} مسابقه · ${row.wins.toLocaleString("fa-IR")} برد · ${(row.losses || 0).toLocaleString("fa-IR")} باخت · ${(row.draws || 0).toLocaleString("fa-IR")} مساوی` : countryChallenge ? row.challengeSolved ? `${(row.guessCount || 0).toLocaleString("fa-IR")} حدس تا حل` : row.bestScore == null ? "هنوز حدسی ثبت نکرده" : `بهترین جایگاه نزدیکی ${row.bestScore.toLocaleString("fa-IR")} · ${(row.guessCount || 0).toLocaleString("fa-IR")} حدس` : phraseHunt ? row.guessCount !== undefined ? `${row.guessCount.toLocaleString("fa-IR")} حدس` : `${(row.games || 0).toLocaleString("fa-IR")} چالش` : duel
+  const detail = row.challengeTotal ? `${(row.games || 0).toLocaleString("fa-IR")} چالش · ${row.wins ? `میانگین ${row.averageGuesses.toLocaleString("fa-IR")} حدس در حل‌ها` : "هنوز چالشی حل نشده"}` : row.rating !== undefined ? `${(row.games || 0).toLocaleString("fa-IR")} مسابقه · ${row.wins.toLocaleString("fa-IR")} برد · ${(row.losses || 0).toLocaleString("fa-IR")} باخت · ${(row.draws || 0).toLocaleString("fa-IR")} مساوی` : countryChallenge ? row.challengeSolved ? `${(row.guessCount || 0).toLocaleString("fa-IR")} حدس تا حل` : row.bestScore == null ? "هنوز حدسی ثبت نکرده" : `${row.scoreType === "animal-distance" ? "بهترین فاصلهٔ خویشاوندی" : "بهترین جایگاه نزدیکی"} ${row.bestScore.toLocaleString("fa-IR", { maximumFractionDigits: row.scoreType === "animal-distance" ? 2 : 0 })} · ${(row.guessCount || 0).toLocaleString("fa-IR")} حدس` : phraseHunt ? row.guessCount !== undefined ? `${row.guessCount.toLocaleString("fa-IR")} حدس` : `${(row.games || 0).toLocaleString("fa-IR")} چالش` : duel
     ? `${row.wins.toLocaleString("fa-IR")} برد · ${(row.losses || 0).toLocaleString("fa-IR")} باخت · ${(row.draws || 0).toLocaleString("fa-IR")} مساوی`
     : semantris
       ? mode === "effort"
@@ -1831,7 +1838,7 @@ function LeaderRowView({
       : mode === "skill"
         ? row.wins.toLocaleString("fa-IR") + " برد"
         : "میانگین " + row.averageGuesses.toLocaleString("fa-IR") + " حدس";
-  const value = row.challengeTotal ? row.wins.toLocaleString("fa-IR") : row.rating !== undefined ? row.rating.toLocaleString("fa-IR") : countryChallenge ? row.challengeSolved ? (row.guessCount || 0).toLocaleString("fa-IR") : row.bestScore == null ? "—" : row.bestScore.toLocaleString("fa-IR") : phraseHunt ? (row.totalScore || 0).toLocaleString("fa-IR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : duel
+  const value = row.challengeTotal ? row.wins.toLocaleString("fa-IR") : row.rating !== undefined ? row.rating.toLocaleString("fa-IR") : countryChallenge ? row.challengeSolved ? (row.guessCount || 0).toLocaleString("fa-IR") : row.bestScore == null ? "—" : row.bestScore.toLocaleString("fa-IR", { maximumFractionDigits: row.scoreType === "animal-distance" ? 2 : 0 }) : phraseHunt ? (row.totalScore || 0).toLocaleString("fa-IR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : duel
     ? mode === "skill"
       ? score.toLocaleString("fa-IR", { maximumFractionDigits: 1 }) + "٪"
       : score.toLocaleString("fa-IR")
@@ -1871,7 +1878,7 @@ function LeaderRowView({
       <div className="leader-wins">
         <strong>{value}</strong>
         <small>
-          {row.challengeTotal ? "چالش حل‌شده" : row.rating !== undefined ? "Elo" : countryChallenge ? row.challengeSolved ? "حدس" : "جایگاه نزدیکی" : phraseHunt ? row.guessCount !== undefined ? "امتیاز" : "مجموع امتیاز" : duel
+          {row.challengeTotal ? "چالش حل‌شده" : row.rating !== undefined ? "Elo" : countryChallenge ? row.challengeSolved ? "حدس" : row.scoreType === "animal-distance" ? "فاصله" : "جایگاه نزدیکی" : phraseHunt ? row.guessCount !== undefined ? "امتیاز" : "مجموع امتیاز" : duel
             ? mode === "skill"
               ? "نرخ برد"
               : "دور"

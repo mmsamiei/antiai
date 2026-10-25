@@ -2,6 +2,7 @@ import { rateMatch } from "./competitive-rating";
 import type { CountryRace, Prisma } from "@prisma/client";
 import { randomInt } from "node:crypto";
 import { animalRecords } from "./data/animals";
+import { animalDistance } from "./animals";
 
 export const COUNTRY_RACE_MS = 200_000;
 export const ANIMAL_SELECTION_MS = 20_000;
@@ -32,8 +33,19 @@ export async function advanceCountryRace(tx: Prisma.TransactionClient, initial: 
   if (!timedOut && !oneGone && !twoGone) return room;
   let winner: string | null = null;
   if (timedOut) {
-    const best = await tx.countryRaceGuess.groupBy({ by: ["userId"], where: { raceId: room.id }, _min: { rank: true } });
-    winner = raceTimeoutWinner(room.playerOneId, room.playerTwoId, best.find(x => x.userId === room.playerOneId)?._min.rank ?? null, best.find(x => x.userId === room.playerTwoId)?._min.rank ?? null);
+    if (room.gameType === "ANIMAL") {
+      const guesses = await tx.countryRaceGuess.findMany({ where: { raceId: room.id }, orderBy: [{ rank: "asc" }, { createdAt: "asc" }] });
+      const best = new Map<string, number>();
+      for (const guess of guesses) {
+        if (best.has(guess.userId)) continue;
+        const targetId = guess.userId === room.playerOneId ? room.playerOneTargetId : room.playerTwoTargetId;
+        if (targetId) best.set(guess.userId, animalDistance(guess.itemId, targetId));
+      }
+      winner = raceTimeoutWinner(room.playerOneId, room.playerTwoId, best.get(room.playerOneId) ?? null, best.get(room.playerTwoId) ?? null);
+    } else {
+      const best = await tx.countryRaceGuess.groupBy({ by: ["userId"], where: { raceId: room.id }, _min: { rank: true } });
+      winner = raceTimeoutWinner(room.playerOneId, room.playerTwoId, best.find(x => x.userId === room.playerOneId)?._min.rank ?? null, best.find(x => x.userId === room.playerTwoId)?._min.rank ?? null);
+    }
   } else winner = oneGone === twoGone ? null : oneGone ? room.playerTwoId : room.playerOneId;
   await rateMatch(tx, `race:${room.id}`, room.gameType, room.playerOneId, room.playerTwoId, winner);
   return tx.countryRace.update({ where: { id: room.id }, data: { status: "ENDED", endedAt: now, winnerUserId: winner, endReason: timedOut ? "TIMEOUT" : "DISCONNECTED" } });

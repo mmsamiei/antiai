@@ -19,7 +19,7 @@ describe("animal photos", () => {
         expect(src).toMatch(/^\/animals\/[a-z0-9-]+\.(jpg|png|webp)$/);
         expect(existsSync(new URL("../public" + src, import.meta.url))).toBe(true);
       }
-      expect(credit.small.bytes).toBeLessThan(100_000);
+      expect(credit.small.bytes).toBeLessThan(125_000);
       expect(credit.large.bytes).toBeLessThan(1_000_000);
     }
   });

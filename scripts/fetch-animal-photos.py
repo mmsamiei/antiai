@@ -126,11 +126,25 @@ def main():
     for row in bindings:
         title = unquote(row['image']['value'].split('/Special:FilePath/')[-1])
         choices.setdefault(row['name']['value'], []).append((title, row['item']['value'].replace('http:', 'https:')))
+    # The expanded species catalog carries exact Wikidata taxon and image links,
+    # so new animals do not depend on refreshing a stale SPARQL cache.
+    popular = ROOT / 'scripts/data/animal-wikipedia-popular-v1.json'
+    wikidata_item_by_scientific = {}
+    if popular.exists():
+        for animal in json.loads(popular.read_text()).get('addedAnimals', []):
+            wikidata_item_by_scientific[animal['scientific']] = 'https://www.wikidata.org/entity/' + animal['wikidata']
+            if animal.get('wikidataImage'):
+                title = unquote(animal['wikidataImage'].split('/Special:FilePath/')[-1])
+                choices.setdefault(animal['scientific'], []).insert(
+                    0, (title, wikidata_item_by_scientific[animal['scientific']]))
     overrides = ROOT / 'scripts/data/animal-photo-overrides.json'
     if overrides.exists():
         for animal in animals:
             for title in reversed(json.loads(overrides.read_text()).get(animal['id'], [])):
-                choices.setdefault(animal['scientific'], []).insert(0, (title, next(row['item']['value'].replace('http:', 'https:') for row in bindings if row['name']['value'] == animal['scientific'])))
+                item = wikidata_item_by_scientific.get(animal['scientific']) or next(
+                    row['item']['value'].replace('http:', 'https:') for row in bindings
+                    if row['name']['value'] == animal['scientific'])
+                choices.setdefault(animal['scientific'], []).insert(0, (title, item))
     titles = list(dict.fromkeys(title for rows in choices.values() for title, _ in rows))
     info = {}
     batches = [titles[i:i+5] for i in range(0, len(titles), 5)]
@@ -154,6 +168,8 @@ def main():
                     continue
                 if not artist and value('AttributionRequired').lower() == 'true':
                     continue
+                if not artist:
+                    artist = 'نام عکاس در ویکی‌انبار درج نشده'
                 license_url = value('LicenseUrl')
                 if license_url.startswith('//'): license_url = 'https:' + license_url
                 small = download(image['smallThumbUrl'], animal['id'], 'small')

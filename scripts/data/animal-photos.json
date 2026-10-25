@@ -2229,5 +2229,3823 @@
       "width": 960,
       "height": 712
     }
+  },
+  {
+    "animalId": "ott124215",
+    "scientific": "Orcinus orca",
+    "name": "نهنگ قاتل",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q26843",
+    "commonsTitle": "File:Killerwhales jumping.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg",
+    "artist": "Robert Pittman",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott124215-small-cfa603e302df.jpg",
+      "bytes": 23666,
+      "width": 250,
+      "height": 166
+    },
+    "large": {
+      "src": "/animals/ott124215-large-6b6e2128bb30.jpg",
+      "bytes": 184018,
+      "width": 960,
+      "height": 638
+    }
+  },
+  {
+    "animalId": "ott247331",
+    "scientific": "Canis latrans",
+    "name": "کایوت",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q44299",
+    "commonsTitle": "File:2009-Coyote-Yosemite.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2009-Coyote-Yosemite.jpg",
+    "artist": "Yathin S Krishnappa",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott247331-small-08f46e2b8b78.jpg",
+      "bytes": 20413,
+      "width": 250,
+      "height": 290
+    },
+    "large": {
+      "src": "/animals/ott247331-large-36d1c2500d29.jpg",
+      "bytes": 157314,
+      "width": 565,
+      "height": 656
+    }
+  },
+  {
+    "animalId": "ott984726",
+    "scientific": "Ambystoma mexicanum",
+    "name": "سمندر مکزیکی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q22718",
+    "commonsTitle": "File:Ambystoma mexicanum Natural History Museum University of Pisa (cropped).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ambystoma_mexicanum_Natural_History_Museum_University_of_Pisa_(cropped).jpg",
+    "artist": "Mattia Nocciola",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott984726-small-45f4a19b412d.jpg",
+      "bytes": 14329,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott984726-large-561b6c002353.jpg",
+      "bytes": 97187,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott460509",
+    "scientific": "Alces alces",
+    "name": "موس",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q35517",
+    "commonsTitle": "File:A male moose takes a rest in a field during a light rainshower.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_male_moose_takes_a_rest_in_a_field_during_a_light_rainshower.jpg",
+    "artist": "Ryan Hagerty",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott460509-small-0a34c2cb0ab1.jpg",
+      "bytes": 15666,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott460509-large-3d5b4958b37e.jpg",
+      "bytes": 154537,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott276851",
+    "scientific": "Physeter macrocephalus",
+    "name": "نهنگ عنبر",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q81214",
+    "commonsTitle": "File:Mother and baby sperm whale.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mother_and_baby_sperm_whale.jpg",
+    "artist": "Gabriel Barathieu",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "small": {
+      "src": "/animals/ott276851-small-fea0b285e890.jpg",
+      "bytes": 7709,
+      "width": 250,
+      "height": 141
+    },
+    "large": {
+      "src": "/animals/ott276851-large-5d463c357ba7.jpg",
+      "bytes": 67847,
+      "width": 960,
+      "height": 540
+    }
+  },
+  {
+    "animalId": "ott226190",
+    "scientific": "Balaenoptera musculus",
+    "name": "نهنگ آبی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q42196",
+    "commonsTitle": "File:Large Blue Whale Off Southern California Coast Photo Don Ramey Logan.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Large_Blue_Whale_Off_Southern_California_Coast_Photo_Don_Ramey_Logan.jpg",
+    "artist": "Don Ramey Logan",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott226190-small-d6791848ae45.jpg",
+      "bytes": 11275,
+      "width": 250,
+      "height": 148
+    },
+    "large": {
+      "src": "/animals/ott226190-large-c5ac522dae42.jpg",
+      "bytes": 128350,
+      "width": 960,
+      "height": 570
+    }
+  },
+  {
+    "animalId": "ott410153",
+    "scientific": "Rangifer tarandus",
+    "name": "گوزن شمالی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q39624",
+    "commonsTitle": "File:Caribou.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Caribou.jpg",
+    "artist": "Dean Biggins (U.S. Fish and Wildlife Service)",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott410153-small-3f595cfc4367.jpg",
+      "bytes": 23789,
+      "width": 250,
+      "height": 164
+    },
+    "large": {
+      "src": "/animals/ott410153-large-64eef2f2ecff.jpg",
+      "bytes": 246846,
+      "width": 960,
+      "height": 629
+    }
+  },
+  {
+    "animalId": "ott851318",
+    "scientific": "Delphinapterus leucas",
+    "name": "نهنگ سفید",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q132072",
+    "commonsTitle": "File:Beluga oceanografic.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Beluga_oceanografic.jpg",
+    "artist": "Carquinyol from Badalona, Catalunya",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "small": {
+      "src": "/animals/ott851318-small-9f3a163f30e2.jpg",
+      "bytes": 11616,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott851318-large-bbf29388ca18.jpg",
+      "bytes": 100132,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott744018",
+    "scientific": "Hydrochoerus hydrochaeris",
+    "name": "کاپی‌بارا",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q131538",
+    "commonsTitle": "File:Capybara (Hydrochoerus hydrochaeris) alpha male.JPG",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Capybara_(Hydrochoerus_hydrochaeris)_alpha_male.JPG",
+    "artist": "Charles J. Sharp",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott744018-small-f84dab9f7456.jpg",
+      "bytes": 20600,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott744018-large-110ad08d0a74.jpg",
+      "bytes": 251112,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott158484",
+    "scientific": "Pan paniscus",
+    "name": "بونوبو",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q19537",
+    "commonsTitle": "File:Bonobo at Nsele Valley Park, Kinshasa, DR Congo.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bonobo_at_Nsele_Valley_Park,_Kinshasa,_DR_Congo.jpg",
+    "artist": "EdwinAlden.1995",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott158484-small-e630a4e1209a.jpg",
+      "bytes": 33273,
+      "width": 250,
+      "height": 260
+    },
+    "large": {
+      "src": "/animals/ott158484-large-026746453105.jpg",
+      "bytes": 400508,
+      "width": 960,
+      "height": 999
+    }
+  },
+  {
+    "animalId": "ott306757",
+    "scientific": "Monodon monoceros",
+    "name": "ناروال",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q159426",
+    "commonsTitle": "File:Нарвал в российской Арктике.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B0%D1%80%D0%B2%D0%B0%D0%BB_%D0%B2_%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9_%D0%90%D1%80%D0%BA%D1%82%D0%B8%D0%BA%D0%B5.jpg",
+    "artist": "пресс-служба ПАО \"Газпром нефть\"",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott306757-small-018114eb8b6e.jpg",
+      "bytes": 8696,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott306757-large-fc833e8db203.jpg",
+      "bytes": 106589,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott507545",
+    "scientific": "Lynx rufus",
+    "name": "گربه دم‌کوتاه",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q131907",
+    "commonsTitle": "File:Bobcat at Columbus Zoo Boo.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bobcat_at_Columbus_Zoo_Boo.jpg",
+    "artist": "Becker1999 (Paul and Cathy)",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott507545-small-17e83da3f8f8.jpg",
+      "bytes": 46812,
+      "width": 250,
+      "height": 374
+    },
+    "large": {
+      "src": "/animals/ott507545-large-7f46d476e1d0.jpg",
+      "bytes": 516724,
+      "width": 960,
+      "height": 1434
+    }
+  },
+  {
+    "animalId": "ott907693",
+    "scientific": "Bison bison",
+    "name": "بوفالوی آمریکایی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q82728",
+    "commonsTitle": "File:American bison k5680-1.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:American_bison_k5680-1.jpg",
+    "artist": "Jack Dykinga",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott907693-small-8d1a3aae42ea.jpg",
+      "bytes": 18344,
+      "width": 250,
+      "height": 163
+    },
+    "large": {
+      "src": "/animals/ott907693-large-90e3fef0eccd.jpg",
+      "bytes": 201359,
+      "width": 960,
+      "height": 626
+    }
+  },
+  {
+    "animalId": "ott872577",
+    "scientific": "Ursus americanus",
+    "name": "خرس سیاه آمریکایی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q122783",
+    "commonsTitle": "File:American black bear (19647087094).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:American_black_bear_(19647087094).jpg",
+    "artist": "California Department of Fish and Wildlife from Sacramento, CA, USA",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott872577-small-ed772b5f072e.jpg",
+      "bytes": 31854,
+      "width": 250,
+      "height": 378
+    },
+    "large": {
+      "src": "/animals/ott872577-large-0765c1f5f4b0.jpg",
+      "bytes": 324105,
+      "width": 960,
+      "height": 1450
+    }
+  },
+  {
+    "animalId": "ott509853",
+    "scientific": "Bubo virginianus",
+    "name": "بوف شاخدار بزرگ",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q81515",
+    "commonsTitle": "File:Bubo virginianus -Canada-6.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bubo_virginianus_-Canada-6.jpg",
+    "artist": "brendan.lally",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott509853-small-a47fe3ed635a.jpg",
+      "bytes": 35586,
+      "width": 250,
+      "height": 270
+    },
+    "large": {
+      "src": "/animals/ott509853-large-02430df5c8e0.jpg",
+      "bytes": 392898,
+      "width": 960,
+      "height": 1035
+    }
+  },
+  {
+    "animalId": "ott514178",
+    "scientific": "Bubo scandiacus",
+    "name": "بوف برفی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q170177",
+    "commonsTitle": "File:Bubo scandiacus male Muskegon.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bubo_scandiacus_male_Muskegon.jpg",
+    "artist": "Bill Bouton from San Luis Obispo, CA, USA",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "small": {
+      "src": "/animals/ott514178-small-55e83f450399.jpg",
+      "bytes": 15378,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott514178-large-9379d94292ae.jpg",
+      "bytes": 138471,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott442057",
+    "scientific": "Somniosus microcephalus",
+    "name": "کوسه گرینلند",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q370444",
+    "commonsTitle": "File:Somniosus microcephalus okeanos.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Somniosus_microcephalus_okeanos.jpg",
+    "artist": "NOAA Okeanos Explorer Program",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott442057-small-0a10681240df.jpg",
+      "bytes": 9549,
+      "width": 250,
+      "height": 141
+    },
+    "large": {
+      "src": "/animals/ott442057-large-53649ebd9743.jpg",
+      "bytes": 125642,
+      "width": 960,
+      "height": 540
+    }
+  },
+  {
+    "animalId": "ott702294",
+    "scientific": "Physalia physalis",
+    "name": "ناوچه پرتغالی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q202526",
+    "commonsTitle": "File:Portuguese Man-O-War (Physalia physalis).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Portuguese_Man-O-War_(Physalia_physalis).jpg",
+    "artist": "Image courtesy of Islands in the Sea 2002, NOAA/OER.",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott702294-small-e98f7c050878.jpg",
+      "bytes": 16137,
+      "width": 250,
+      "height": 343
+    },
+    "large": {
+      "src": "/animals/ott702294-large-ab94d8e6f5e7.jpg",
+      "bytes": 160723,
+      "width": 960,
+      "height": 1316
+    }
+  },
+  {
+    "animalId": "ott509065",
+    "scientific": "Strix varia",
+    "name": "جغد نواری",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q630457",
+    "commonsTitle": "File:Strix-varia-005.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Strix-varia-005.jpg",
+    "artist": "Mdf",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "small": {
+      "src": "/animals/ott509065-small-07fee0c37c79.jpg",
+      "bytes": 12598,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott509065-large-e5529d99be3c.jpg",
+      "bytes": 106207,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott140425",
+    "scientific": "Corvus corax",
+    "name": "غراب معمولی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q25357",
+    "commonsTitle": "File:Corvus corax ad berlin 090516.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Corvus_corax_ad_berlin_090516.jpg",
+    "artist": "Accipiter (R. Altenkamp, Berlin)",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott140425-small-fbd4c82dd670.jpg",
+      "bytes": 14455,
+      "width": 250,
+      "height": 161
+    },
+    "large": {
+      "src": "/animals/ott140425-large-1c28fad626f5.jpg",
+      "bytes": 133454,
+      "width": 960,
+      "height": 620
+    }
+  },
+  {
+    "animalId": "ott226198",
+    "scientific": "Megaptera novaeangliae",
+    "name": "نهنگ گوژپشت",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q132905",
+    "commonsTitle": "File:Humpback whales in singing position.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Humpback_whales_in_singing_position.jpg",
+    "artist": "Dr. Louis M. Herman.",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott226198-small-de6a8c50f0be.jpg",
+      "bytes": 9236,
+      "width": 250,
+      "height": 169
+    },
+    "large": {
+      "src": "/animals/ott226198-large-7660eb2172ce.jpg",
+      "bytes": 84416,
+      "width": 960,
+      "height": 648
+    }
+  },
+  {
+    "animalId": "ott335590",
+    "scientific": "Alligator mississippiensis",
+    "name": "الیگاتور آمریکایی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q193327",
+    "commonsTitle": "File:American Alligator.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:American_Alligator.jpg",
+    "artist": "User:Postdlf",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "small": {
+      "src": "/animals/ott335590-small-b236fddb678b.jpg",
+      "bytes": 42141,
+      "width": 250,
+      "height": 333
+    },
+    "large": {
+      "src": "/animals/ott335590-large-9ee63ce3074e.jpg",
+      "bytes": 499084,
+      "width": 960,
+      "height": 1280
+    }
+  },
+  {
+    "animalId": "ott881015",
+    "scientific": "Gavialis gangeticus",
+    "name": "تمساح پوزه‌باریک گنگی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q17134",
+    "commonsTitle": "File:Gharial san diego.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gharial_san_diego.jpg",
+    "artist": "Bo Link from Knoxville, TN, USA",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott881015-small-548ebacfc686.jpg",
+      "bytes": 35119,
+      "width": 250,
+      "height": 333
+    },
+    "large": {
+      "src": "/animals/ott881015-large-1a5d2a77246a.jpg",
+      "bytes": 501587,
+      "width": 960,
+      "height": 1280
+    }
+  },
+  {
+    "animalId": "ott714461",
+    "scientific": "Branta canadensis",
+    "name": "غاز کانادایی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q26733",
+    "commonsTitle": "File:Bernaches du Canada 02.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bernaches_du_Canada_02.jpg",
+    "artist": "Pierre5018",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott714461-small-a9ea80e3ac79.jpg",
+      "bytes": 36559,
+      "width": 250,
+      "height": 314
+    },
+    "large": {
+      "src": "/animals/ott714461-large-b7d26c461893.jpg",
+      "bytes": 438325,
+      "width": 960,
+      "height": 1207
+    }
+  },
+  {
+    "animalId": "ott509837",
+    "scientific": "Pandion haliaetus",
+    "name": "عقاب ماهی‌گیر",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q25332",
+    "commonsTitle": "File:Balbuzard pecheur Lac de Tunis.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Balbuzard_pecheur_Lac_de_Tunis.jpg",
+    "artist": "El Golli Mohamed",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott509837-small-3a8adc643257.jpg",
+      "bytes": 6607,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott509837-large-57dc54c98727.jpg",
+      "bytes": 56539,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott870591",
+    "scientific": "Crocodylus acutus",
+    "name": "تمساح آمریکایی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q207836",
+    "commonsTitle": "File:Crocodylus acutus mexico 01.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Crocodylus_acutus_mexico_01.jpg",
+    "artist": "Tomás Castelazo",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "small": {
+      "src": "/animals/ott870591-small-cea053dacc38.jpg",
+      "bytes": 40750,
+      "width": 250,
+      "height": 313
+    },
+    "large": {
+      "src": "/animals/ott870591-large-70c04537941f.jpg",
+      "bytes": 379889,
+      "width": 960,
+      "height": 1200
+    }
+  },
+  {
+    "animalId": "ott316992",
+    "scientific": "Gymnogyps californianus",
+    "name": "رخ‌کرکس کالیفرنیا",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q194314",
+    "commonsTitle": "File:Gymnogyps californianus -San Diego Zoo-8a.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gymnogyps_californianus_-San_Diego_Zoo-8a.jpg",
+    "artist": "Stacy from San Diego",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott316992-small-5cbcebb52573.jpg",
+      "bytes": 12718,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott316992-large-a94c50f7e9fa.jpg",
+      "bytes": 107762,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott630994",
+    "scientific": "Marmota monax",
+    "name": "موش‌خرمای کوهی آمریکایی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q221612",
+    "commonsTitle": "File:Groundhog3.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Groundhog3.jpg",
+    "artist": "No machine-readable author provided. ElC assumed (based on copyright claims).",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "small": {
+      "src": "/animals/ott630994-small-bd5fa863db8a.jpg",
+      "bytes": 25457,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott630994-large-0e6f89a9f631.jpg",
+      "bytes": 253397,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott243403",
+    "scientific": "Dermochelys coriacea",
+    "name": "لاک‌پشت چرمی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q120043",
+    "commonsTitle": "File:Dermochelys coriacea - Julien Renoult - 12981952.jpeg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dermochelys_coriacea_-_Julien_Renoult_-_12981952.jpeg",
+    "artist": "Julien Renoult",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "small": {
+      "src": "/animals/ott243403-small-fff191514fe3.jpg",
+      "bytes": 14880,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott243403-large-4925efc5554b.jpg",
+      "bytes": 209748,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott1036186",
+    "scientific": "Sagittarius serpentarius",
+    "name": "مرغ دبیر",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q168748",
+    "commonsTitle": "File:Secretario (Sagittarius serpentarius), parque nacional de Amboseli, Kenia, 2024-05-23, DD 13.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Secretario_(Sagittarius_serpentarius),_parque_nacional_de_Amboseli,_Kenia,_2024-05-23,_DD_13.jpg",
+    "artist": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott1036186-small-d80fcb7879ee.jpg",
+      "bytes": 19767,
+      "width": 250,
+      "height": 250
+    },
+    "large": {
+      "src": "/animals/ott1036186-large-447e4c8b1855.jpg",
+      "bytes": 198334,
+      "width": 960,
+      "height": 960
+    }
+  },
+  {
+    "animalId": "ott297463",
+    "scientific": "Melursus ursinus",
+    "name": "خرس تنبل",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q145016",
+    "commonsTitle": "File:SlothBear.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:SlothBear.jpg",
+    "artist": "Saumitra Newalkar",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott297463-small-9d19e7f9a9b6.jpg",
+      "bytes": 24847,
+      "width": 250,
+      "height": 188
+    },
+    "large": {
+      "src": "/animals/ott297463-large-d4e2e33d1473.jpg",
+      "bytes": 260352,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott679701",
+    "scientific": "Helarctos malayanus",
+    "name": "خرس آفتاب",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q144923",
+    "commonsTitle": "File:Sitting sun bear.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sitting_sun_bear.jpg",
+    "artist": "Tambako The Jaguar",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "small": {
+      "src": "/animals/ott679701-small-b2629ecef73c.jpg",
+      "bytes": 33604,
+      "width": 250,
+      "height": 376
+    },
+    "large": {
+      "src": "/animals/ott679701-large-4ac81b499fa8.jpg",
+      "bytes": 377582,
+      "width": 960,
+      "height": 1445
+    }
+  },
+  {
+    "animalId": "ott741047",
+    "scientific": "Mandrillus sphinx",
+    "name": "مندریل",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q189868",
+    "commonsTitle": "File:Mandrill (4531340530).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mandrill_(4531340530).jpg",
+    "artist": "LaggedOnUser",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "small": {
+      "src": "/animals/ott741047-small-a3c2b953fd28.jpg",
+      "bytes": 22481,
+      "width": 250,
+      "height": 217
+    },
+    "large": {
+      "src": "/animals/ott741047-large-b62b01f276a8.jpg",
+      "bytes": 164710,
+      "width": 960,
+      "height": 832
+    }
+  },
+  {
+    "animalId": "ott9106",
+    "scientific": "Cathartes aura",
+    "name": "کرکس بوقلمونی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q245181",
+    "commonsTitle": "File:Cathartes aura -Mexico-8.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cathartes_aura_-Mexico-8.jpg",
+    "artist": "Andrey from Finland",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott9106-small-23ad65b563bb.jpg",
+      "bytes": 20464,
+      "width": 250,
+      "height": 179
+    },
+    "large": {
+      "src": "/animals/ott9106-large-ce35ec30c20b.jpg",
+      "bytes": 114199,
+      "width": 960,
+      "height": 686
+    }
+  },
+  {
+    "animalId": "ott679667",
+    "scientific": "Tremarctos ornatus",
+    "name": "خرس عینکی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q137641",
+    "commonsTitle": "File:Zoológico Paraguaná - Oso frontino Pacheco.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zool%C3%B3gico_Paraguan%C3%A1_-_Oso_frontino_Pacheco.jpg",
+    "artist": "Escarabajo Lunar",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "small": {
+      "src": "/animals/ott679667-small-5ad175424a4c.jpg",
+      "bytes": 12288,
+      "width": 250,
+      "height": 162
+    },
+    "large": {
+      "src": "/animals/ott679667-large-5e26448fc385.jpg",
+      "bytes": 91561,
+      "width": 960,
+      "height": 621
+    }
+  },
+  {
+    "animalId": "ott363015",
+    "scientific": "Vultur gryphus",
+    "name": "رخ‌کرکس آند",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q170598",
+    "commonsTitle": "File:204 - Canyon de Colca - Condor des Andes - Juin 2010.JPG",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:204_-_Canyon_de_Colca_-_Condor_des_Andes_-_Juin_2010.JPG",
+    "artist": "Martin St-Amant ( S23678 )",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott363015-small-33e73d23a31d.jpg",
+      "bytes": 13043,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott363015-large-52fac57c3e0a.jpg",
+      "bytes": 86106,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott872580",
+    "scientific": "Ursus thibetanus",
+    "name": "خرس سیاه آسیایی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q124410",
+    "commonsTitle": "File:Ursus thibetanus 3 (Wroclaw zoo).JPG",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ursus_thibetanus_3_(Wroclaw_zoo).JPG",
+    "artist": "Guérin Nicolas ( messages )",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott872580-small-cac387d1fdef.jpg",
+      "bytes": 32103,
+      "width": 250,
+      "height": 333
+    },
+    "large": {
+      "src": "/animals/ott872580-large-f5d4bab296f2.jpg",
+      "bytes": 324237,
+      "width": 960,
+      "height": 1280
+    }
+  },
+  {
+    "animalId": "ott226193",
+    "scientific": "Balaenoptera physalus",
+    "name": "نهنگ تیغ‌باله",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q179020",
+    "commonsTitle": "File:Finhval.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Finhval.jpg",
+    "artist": "Aqqa Rosing-Asvid - Visit Greenland",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott226193-small-280ed5800249.jpg",
+      "bytes": 11879,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott226193-large-a053efd05f34.jpg",
+      "bytes": 79162,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott689650",
+    "scientific": "Macaca mulatta",
+    "name": "میمون رزوس",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q156606",
+    "commonsTitle": "File:Rhesus macaque Macaca mulatta IMG 0807.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rhesus_macaque_Macaca_mulatta_IMG_0807.jpg",
+    "artist": "Bishalsonar47",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott689650-small-5e606ce57ae2.jpg",
+      "bytes": 18391,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott689650-large-dbfa3ab43837.jpg",
+      "bytes": 152398,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott397231",
+    "scientific": "Balaena mysticetus",
+    "name": "نهنگ قطبی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q174652",
+    "commonsTitle": "File:Bowheads42.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bowheads42.jpg",
+    "artist": "نام عکاس در ویکی‌انبار درج نشده",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott397231-small-37e7932d44aa.jpg",
+      "bytes": 22071,
+      "width": 250,
+      "height": 172
+    },
+    "large": {
+      "src": "/animals/ott397231-large-72cef0ac20be.jpg",
+      "bytes": 322506,
+      "width": 594,
+      "height": 409
+    }
+  },
+  {
+    "animalId": "ott698411",
+    "scientific": "Inia geoffrensis",
+    "name": "دلفین رودخانه‌ای آمازون",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q205329",
+    "commonsTitle": "File:Inia.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Inia.jpg",
+    "artist": "Dennis Otten",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "small": {
+      "src": "/animals/ott698411-small-24cdc8b0f3bd.jpg",
+      "bytes": 12876,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott698411-large-abe44caad4d1.jpg",
+      "bytes": 105110,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott864865",
+    "scientific": "Fratercula arctica",
+    "name": "طوطی دریایی اطلس",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q26685",
+    "commonsTitle": "File:Puffin (Fratercula arctica).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Puffin_(Fratercula_arctica).jpg",
+    "artist": "Charles J. Sharp",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott864865-small-049bff91a275.jpg",
+      "bytes": 22195,
+      "width": 250,
+      "height": 250
+    },
+    "large": {
+      "src": "/animals/ott864865-large-b370324b37fb.jpg",
+      "bytes": 223295,
+      "width": 960,
+      "height": 960
+    }
+  },
+  {
+    "animalId": "ott446482",
+    "scientific": "Meleagris gallopavo",
+    "name": "بوقلمون وحشی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q26844",
+    "commonsTitle": "File:Wild Turkey (female) - Meleagris gallopavo, Occoquan Bay National Wildlife Refuge, Woodbridge, Virginia.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wild_Turkey_(female)_-_Meleagris_gallopavo,_Occoquan_Bay_National_Wildlife_Refuge,_Woodbridge,_Virginia.jpg",
+    "artist": "Judy Gallagher",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott446482-small-f2eabd1d181e.jpg",
+      "bytes": 23012,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott446482-large-45452df9a0f6.jpg",
+      "bytes": 246856,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott392505",
+    "scientific": "Caretta caretta",
+    "name": "لاک‌پشت سرخ",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q192095",
+    "commonsTitle": "File:Loggerhead sea turtle.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Loggerhead_sea_turtle.jpg",
+    "artist": "ukanda",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott392505-small-d7745aa8970e.jpg",
+      "bytes": 11129,
+      "width": 250,
+      "height": 166
+    },
+    "large": {
+      "src": "/animals/ott392505-large-f61c7c0e3c38.jpg",
+      "bytes": 115131,
+      "width": 960,
+      "height": 638
+    }
+  },
+  {
+    "animalId": "ott1060752",
+    "scientific": "Asio otus",
+    "name": "جغد گوش‌دراز",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q25384",
+    "commonsTitle": "File:Asio otus Downsview Park Toronto2.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Asio_otus_Downsview_Park_Toronto2.jpg",
+    "artist": "Mykola Swarnyk",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott1060752-small-652ea52ee3ef.jpg",
+      "bytes": 45089,
+      "width": 250,
+      "height": 414
+    },
+    "large": {
+      "src": "/animals/ott1060752-large-b1fccc125372.jpg",
+      "bytes": 441849,
+      "width": 960,
+      "height": 1588
+    }
+  },
+  {
+    "animalId": "ott1089663",
+    "scientific": "Phocoena sinus",
+    "name": "گرازماهی کالیفرنیا",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q725493",
+    "commonsTitle": "File:Vaquita4 Olson NOAA.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vaquita4_Olson_NOAA.jpg",
+    "artist": "Paula Olson , NOAA",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott1089663-small-13bf6488c118.jpg",
+      "bytes": 6981,
+      "width": 250,
+      "height": 123
+    },
+    "large": {
+      "src": "/animals/ott1089663-large-ff1c86b4e506.jpg",
+      "bytes": 78732,
+      "width": 960,
+      "height": 472
+    }
+  },
+  {
+    "animalId": "ott73671",
+    "scientific": "Cetorhinus maximus",
+    "name": "کوسه آسوده",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q185260",
+    "commonsTitle": "File:Basking Shark.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Basking_Shark.jpg",
+    "artist": "نام عکاس در ویکی‌انبار درج نشده",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott73671-small-4ae7322aaf04.jpg",
+      "bytes": 6921,
+      "width": 250,
+      "height": 190
+    },
+    "large": {
+      "src": "/animals/ott73671-large-22abebb62d04.jpg",
+      "bytes": 112983,
+      "width": 960,
+      "height": 729
+    }
+  },
+  {
+    "animalId": "ott587300",
+    "scientific": "Chrysemys picta",
+    "name": "لاک‌پشت رنگین",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q199203",
+    "commonsTitle": "File:Painted turtle.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Painted_turtle.jpg",
+    "artist": "Jmalik ( talk )",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott587300-small-c60551461a7f.jpg",
+      "bytes": 20375,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott587300-large-797e98c3e273.jpg",
+      "bytes": 185386,
+      "width": 960,
+      "height": 717
+    }
+  },
+  {
+    "animalId": "ott689668",
+    "scientific": "Macaca fascicularis",
+    "name": "مکاک دم‌دراز",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q301676",
+    "commonsTitle": "File:Macaca fascicularis, Ubud Monkey Forest, Bali, 20220822 1053 0059.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Macaca_fascicularis,_Ubud_Monkey_Forest,_Bali,_20220822_1053_0059.jpg",
+    "artist": "Jakub Hałun",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott689668-small-454210a04b53.jpg",
+      "bytes": 26269,
+      "width": 250,
+      "height": 311
+    },
+    "large": {
+      "src": "/animals/ott689668-large-93750beb6124.jpg",
+      "bytes": 348399,
+      "width": 960,
+      "height": 1195
+    }
+  },
+  {
+    "animalId": "ott458957",
+    "scientific": "Crocodylus palustris",
+    "name": "گاندو",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q81207",
+    "commonsTitle": "File:Marsh crocodile - Basking in the sun.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marsh_crocodile_-_Basking_in_the_sun.jpg",
+    "artist": "Karunakar Rayker from India",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "small": {
+      "src": "/animals/ott458957-small-0bdf5304a699.jpg",
+      "bytes": 29218,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott458957-large-427155040f94.jpg",
+      "bytes": 388684,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott5269",
+    "scientific": "Lipotes vexillifer",
+    "name": "دلفین رودخانه‌ای چین",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q188130",
+    "commonsTitle": "File:Baiji Dolphin killed by Charles Hoy 1914.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Baiji_Dolphin_killed_by_Charles_Hoy_1914.jpg",
+    "artist": "Charles Hoy",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott5269-small-6ad3bbdc6d68.jpg",
+      "bytes": 14714,
+      "width": 250,
+      "height": 150
+    },
+    "large": {
+      "src": "/animals/ott5269-large-094afbe3177a.jpg",
+      "bytes": 144706,
+      "width": 960,
+      "height": 576
+    }
+  },
+  {
+    "animalId": "ott699249",
+    "scientific": "Eubalaena australis",
+    "name": "نهنگ صاف جنوبی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q244410",
+    "commonsTitle": "File:Southern right whale6.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Southern_right_whale6.jpg",
+    "artist": "Michaël CATANZARITI",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott699249-small-7b7567935b5d.jpg",
+      "bytes": 18559,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott699249-large-02af5232f691.jpg",
+      "bytes": 180195,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott872963",
+    "scientific": "Varanus salvator",
+    "name": "بزمجه آبی آسیایی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q655616",
+    "commonsTitle": "File:Water Monitor (about 1.5m long).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Water_Monitor_(about_1.5m_long).jpg",
+    "artist": "Rob and Stephanie Levy from Townsville, Australia",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott872963-small-c04bcc9fcbf4.jpg",
+      "bytes": 30219,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott872963-large-7c99376fe7bc.jpg",
+      "bytes": 310239,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott584232",
+    "scientific": "Vandellia cirrhosa",
+    "name": "واندلیا سیروزا",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q1461873",
+    "commonsTitle": "File:Vandellia cirrhosa after a full meal of blood.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vandellia_cirrhosa_after_a_full_meal_of_blood.jpg",
+    "artist": "Ivan Sazima & Jansen Zuanon",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "small": {
+      "src": "/animals/ott584232-small-6a0b25cf7bd0.jpg",
+      "bytes": 7901,
+      "width": 250,
+      "height": 93
+    },
+    "large": {
+      "src": "/animals/ott584232-large-8ee8f8ad26d2.jpg",
+      "bytes": 102381,
+      "width": 715,
+      "height": 267
+    }
+  },
+  {
+    "animalId": "ott842080",
+    "scientific": "Proteus anguinus",
+    "name": "سمندر سفید",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q15856",
+    "commonsTitle": "File:P anguinus parkelj-head.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:P_anguinus_parkelj-head.jpg",
+    "artist": "Arne Hodalič",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "small": {
+      "src": "/animals/ott842080-small-282f73a80d44.jpg",
+      "bytes": 19687,
+      "width": 250,
+      "height": 163
+    },
+    "large": {
+      "src": "/animals/ott842080-large-2c591ec896fa.jpg",
+      "bytes": 102345,
+      "width": 300,
+      "height": 196
+    }
+  },
+  {
+    "animalId": "ott793181",
+    "scientific": "Aedes albopictus",
+    "name": "پشه ببری",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q477918",
+    "commonsTitle": "File:Aedes Albopictus.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aedes_Albopictus.jpg",
+    "artist": "James Gathany/CDC",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott793181-small-1fcb58c519b2.jpg",
+      "bytes": 10583,
+      "width": 250,
+      "height": 170
+    },
+    "large": {
+      "src": "/animals/ott793181-large-bee6ac97250d.jpg",
+      "bytes": 79607,
+      "width": 960,
+      "height": 651
+    }
+  },
+  {
+    "animalId": "ott1072344",
+    "scientific": "Eubalaena japonica",
+    "name": "نهنگ صاف آرام شمالی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q506604",
+    "commonsTitle": "File:20170505 NPRW - Breach 1.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:20170505_NPRW_-_Breach_1.jpg",
+    "artist": "Mark Hoffman and Bruce Long",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott1072344-small-36396aa4d866.jpg",
+      "bytes": 7908,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott1072344-large-4f519156b235.jpg",
+      "bytes": 60570,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott689660",
+    "scientific": "Macaca fuscata",
+    "name": "ماکاک ژاپنی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q191781",
+    "commonsTitle": "File:Japanese macaque Highland Wildlife Park.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Japanese_macaque_Highland_Wildlife_Park.jpg",
+    "artist": "\"Louise.Helen\"",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott689660-small-0c2828ec8a26.jpg",
+      "bytes": 10799,
+      "width": 250,
+      "height": 166
+    },
+    "large": {
+      "src": "/animals/ott689660-large-3115beff2286.jpg",
+      "bytes": 104633,
+      "width": 960,
+      "height": 638
+    }
+  },
+  {
+    "animalId": "ott123064",
+    "scientific": "Enteroctopus dofleini",
+    "name": "هشت‌پای غول‌پیکر آرام",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q912404",
+    "commonsTitle": "File:Enteroctopus dolfeini.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Enteroctopus_dolfeini.jpg",
+    "artist": "NOAA/R. N. Lea [1]",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott123064-small-c12d9d38a2eb.jpg",
+      "bytes": 19257,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott123064-large-ef23ae7040aa.jpg",
+      "bytes": 213593,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott953151",
+    "scientific": "Alligator sinensis",
+    "name": "الیگاتور چینی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q194422",
+    "commonsTitle": "File:2011 China-Alligator 0491.JPG",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011_China-Alligator_0491.JPG",
+    "artist": "J. Patrick Fischer",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott953151-small-41f89b3403ca.jpg",
+      "bytes": 24202,
+      "width": 250,
+      "height": 175
+    },
+    "large": {
+      "src": "/animals/ott953151-large-f72f29cca88f.jpg",
+      "bytes": 275149,
+      "width": 960,
+      "height": 671
+    }
+  },
+  {
+    "animalId": "ott50727",
+    "scientific": "Daubentonia madagascariensis",
+    "name": "آی-آی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q186778",
+    "commonsTitle": "File:Aye-aye (Daubentonia madagascariensis), Tsimbazaza Zoo, Madagascar (3897947810).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aye-aye_(Daubentonia_madagascariensis),_Tsimbazaza_Zoo,_Madagascar_(3897947810).jpg",
+    "artist": "Frank Vassen from Brussels, Belgium",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott50727-small-848689e4dd5c.jpg",
+      "bytes": 15147,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott50727-large-faae8f70c265.jpg",
+      "bytes": 194050,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott749203",
+    "scientific": "Nestor notabilis",
+    "name": "کئا",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q193337",
+    "commonsTitle": "File:Kea.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kea.jpg",
+    "artist": "Markus Koljonen ( Dilaudid )",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "small": {
+      "src": "/animals/ott749203-small-2c0904895f1b.jpg",
+      "bytes": 26136,
+      "width": 250,
+      "height": 333
+    },
+    "large": {
+      "src": "/animals/ott749203-large-08c652bf2c15.jpg",
+      "bytes": 325988,
+      "width": 960,
+      "height": 1280
+    }
+  },
+  {
+    "animalId": "ott926817",
+    "scientific": "Acanthaster planci",
+    "name": "ستاره دریایی تاج‌تیغی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q26634",
+    "commonsTitle": "File:CrownofThornsStarfish Fiji 2005-10-12.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:CrownofThornsStarfish_Fiji_2005-10-12.jpg",
+    "artist": "Matt Wright",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "small": {
+      "src": "/animals/ott926817-small-4023370b0404.jpg",
+      "bytes": 36823,
+      "width": 250,
+      "height": 312
+    },
+    "large": {
+      "src": "/animals/ott926817-large-ce18f72d1ccb.jpg",
+      "bytes": 347736,
+      "width": 960,
+      "height": 1200
+    }
+  },
+  {
+    "animalId": "ott269666",
+    "scientific": "Aedes aegypti",
+    "name": "پشه تب زرد",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q1148004",
+    "commonsTitle": "File:Aedes aegypti CDC-Gathany.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aedes_aegypti_CDC-Gathany.jpg",
+    "artist": "James Gathany",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott269666-small-76154eb4e49c.jpg",
+      "bytes": 12252,
+      "width": 250,
+      "height": 168
+    },
+    "large": {
+      "src": "/animals/ott269666-large-a9ab4d488211.jpg",
+      "bytes": 34835,
+      "width": 700,
+      "height": 470
+    }
+  },
+  {
+    "animalId": "ott276609",
+    "scientific": "Myiopsitta monachus",
+    "name": "طوطی راهب",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q724987",
+    "commonsTitle": "File:Monk Parakeet (Myiopsitta monachus) Buenos Aires.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monk_Parakeet_(Myiopsitta_monachus)_Buenos_Aires.jpg",
+    "artist": "Kevin Jones",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott276609-small-b3facac5ab97.jpg",
+      "bytes": 19354,
+      "width": 250,
+      "height": 169
+    },
+    "large": {
+      "src": "/animals/ott276609-large-a7e434a0f9c0.jpg",
+      "bytes": 168670,
+      "width": 960,
+      "height": 649
+    }
+  },
+  {
+    "animalId": "ott770302",
+    "scientific": "Pongo pygmaeus",
+    "name": "اورانگوتان بورنئویی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q599672",
+    "commonsTitle": "File:Nanga with male baby.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nanga_with_male_baby.jpg",
+    "artist": "user mt7",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "small": {
+      "src": "/animals/ott770302-small-b22c99d01b41.jpg",
+      "bytes": 27918,
+      "width": 250,
+      "height": 249
+    },
+    "large": {
+      "src": "/animals/ott770302-large-0d54084d7bb9.jpg",
+      "bytes": 223671,
+      "width": 960,
+      "height": 956
+    }
+  },
+  {
+    "animalId": "ott630645",
+    "scientific": "Nymphicus hollandicus",
+    "name": "عروس هلندی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q514809",
+    "commonsTitle": "File:Cockateil.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cockateil.jpg",
+    "artist": "Jim Bendon",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "small": {
+      "src": "/animals/ott630645-small-c1393458a21f.jpg",
+      "bytes": 10793,
+      "width": 250,
+      "height": 308
+    },
+    "large": {
+      "src": "/animals/ott630645-large-6ae6843e673f.jpg",
+      "bytes": 114961,
+      "width": 960,
+      "height": 1182
+    }
+  },
+  {
+    "animalId": "ott1084896",
+    "scientific": "Macrochelys temminckii",
+    "name": "لاک‌پشت گازگیر الیگاتور",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q457872",
+    "commonsTitle": "File:Alligator Snapping Turtle (Macrochelys temminckii) (35856633000).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alligator_Snapping_Turtle_(Macrochelys_temminckii)_(35856633000).jpg",
+    "artist": "Peter Paplanus from St. Louis, Missouri",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott1084896-small-3f7c10ae789a.jpg",
+      "bytes": 21555,
+      "width": 250,
+      "height": 178
+    },
+    "large": {
+      "src": "/animals/ott1084896-large-194ba32a7b83.jpg",
+      "bytes": 193594,
+      "width": 960,
+      "height": 685
+    }
+  },
+  {
+    "animalId": "ott73672",
+    "scientific": "Isurus oxyrinchus",
+    "name": "کوسه ماکوی باله‌کوتاه",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q192158",
+    "commonsTitle": "File:Isurus oxyrinchus by mark conlin2.JPG",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Isurus_oxyrinchus_by_mark_conlin2.JPG",
+    "artist": "Mark Conlin, SWFSC Large Pelagics Program",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott73672-small-8af472160a01.jpg",
+      "bytes": 9209,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott73672-large-b55e29a504fa.jpg",
+      "bytes": 115255,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott944695",
+    "scientific": "Athene cunicularia",
+    "name": "جغد سوراخ‌نشین",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q467068",
+    "commonsTitle": "File:Western burrowing owl, Glenn County-0550.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Western_burrowing_owl,_Glenn_County-0550.jpg",
+    "artist": "Frank Schulenburg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott944695-small-fcbf48c62ffb.jpg",
+      "bytes": 13382,
+      "width": 250,
+      "height": 179
+    },
+    "large": {
+      "src": "/animals/ott944695-large-d889951ee830.jpg",
+      "bytes": 119714,
+      "width": 960,
+      "height": 686
+    }
+  },
+  {
+    "animalId": "ott73664",
+    "scientific": "Mitsukurina owstoni",
+    "name": "دیوکوسه",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q499461",
+    "commonsTitle": "File:Goblin shark snout.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Goblin_shark_snout.jpg",
+    "artist": "Hungarian Snow",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "small": {
+      "src": "/animals/ott73664-small-a18d6e422eef.jpg",
+      "bytes": 19620,
+      "width": 250,
+      "height": 333
+    },
+    "large": {
+      "src": "/animals/ott73664-large-a665d9582b04.jpg",
+      "bytes": 237387,
+      "width": 960,
+      "height": 1280
+    }
+  },
+  {
+    "animalId": "ott689645",
+    "scientific": "Macaca sylvanus",
+    "name": "میمون بربری",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q199962",
+    "commonsTitle": "File:Portrait of a father.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_father.jpg",
+    "artist": "Karyn Sig",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott689645-small-6c489ef35542.jpg",
+      "bytes": 15523,
+      "width": 250,
+      "height": 192
+    },
+    "large": {
+      "src": "/animals/ott689645-large-9b4988a6f9b1.jpg",
+      "bytes": 186717,
+      "width": 960,
+      "height": 738
+    }
+  },
+  {
+    "animalId": "ott285641",
+    "scientific": "Psittacus erithacus",
+    "name": "کاسکو",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q220328",
+    "commonsTitle": "File:Perroquet à Yampopo Beach - Douala.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Perroquet_%C3%A0_Yampopo_Beach_-_Douala.jpg",
+    "artist": "Florettesokeng",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott285641-small-7246fd8ae91b.jpg",
+      "bytes": 16047,
+      "width": 250,
+      "height": 141
+    },
+    "large": {
+      "src": "/animals/ott285641-large-312dd5850dd2.jpg",
+      "bytes": 145894,
+      "width": 960,
+      "height": 540
+    }
+  },
+  {
+    "animalId": "ott870606",
+    "scientific": "Cygnus buccinator",
+    "name": "قوی شیپورچی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q733375",
+    "commonsTitle": "File:NPS Wildlife. Trumpeter Swan on Nest.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:NPS_Wildlife._Trumpeter_Swan_on_Nest.jpg",
+    "artist": "نام عکاس در ویکی‌انبار درج نشده",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott870606-small-3f2b90f417a0.jpg",
+      "bytes": 17542,
+      "width": 250,
+      "height": 173
+    },
+    "large": {
+      "src": "/animals/ott870606-large-e157e8163789.jpg",
+      "bytes": 167570,
+      "width": 960,
+      "height": 663
+    }
+  },
+  {
+    "animalId": "ott534288",
+    "scientific": "Cryptobranchus alleganiensis",
+    "name": "سمندر آبی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q369467",
+    "commonsTitle": "File:Hellbender.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hellbender.jpg",
+    "artist": "Brian Gratwicke",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott534288-small-6cfaca517039.jpg",
+      "bytes": 7683,
+      "width": 250,
+      "height": 164
+    },
+    "large": {
+      "src": "/animals/ott534288-large-c950492a0f52.jpg",
+      "bytes": 65993,
+      "width": 960,
+      "height": 630
+    }
+  },
+  {
+    "animalId": "ott430337",
+    "scientific": "Eretmochelys imbricata",
+    "name": "لاک‌پشت پوزه‌عقابی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q203538",
+    "commonsTitle": "File:Tortuga carey (Eretmochelys imbricata), parque nacional Ras Muhammad, Egipto, 2022-03-28, DD 56.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-28,_DD_56.jpg",
+    "artist": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott430337-small-33022303f81e.jpg",
+      "bytes": 14793,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott430337-large-8cd4bc530459.jpg",
+      "bytes": 173683,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott800317",
+    "scientific": "Balaenoptera acutorostrata",
+    "name": "نهنگ نیزه‌ای معمولی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q201808",
+    "commonsTitle": "File:Balaenoptera-acutorostrata.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Balaenoptera-acutorostrata.jpg",
+    "artist": "Marie Firmin Bocourt",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott800317-small-7c378f6b9cb1.jpg",
+      "bytes": 8526,
+      "width": 250,
+      "height": 102
+    },
+    "large": {
+      "src": "/animals/ott800317-large-2ab6db3c492f.jpg",
+      "bytes": 48726,
+      "width": 960,
+      "height": 393
+    }
+  },
+  {
+    "animalId": "ott277019",
+    "scientific": "Isistius brasiliensis",
+    "name": "کوسه کلوچه‌بر",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q199372",
+    "commonsTitle": "File:Isistius brasiliensis.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Isistius_brasiliensis.jpg",
+    "artist": "NOAA Observer Project",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott277019-small-177d639123eb.jpg",
+      "bytes": 16995,
+      "width": 250,
+      "height": 132
+    },
+    "large": {
+      "src": "/animals/ott277019-large-111060f02640.jpg",
+      "bytes": 91972,
+      "width": 733,
+      "height": 387
+    }
+  },
+  {
+    "animalId": "ott500593",
+    "scientific": "Lamna nasus",
+    "name": "پوربیگل",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q136842",
+    "commonsTitle": "File:Lamna nasus noaa.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lamna_nasus_noaa.jpg",
+    "artist": "NOAA",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott500593-small-8a6d1dd796d9.jpg",
+      "bytes": 13635,
+      "width": 250,
+      "height": 126
+    },
+    "large": {
+      "src": "/animals/ott500593-large-18551cf2056d.jpg",
+      "bytes": 127269,
+      "width": 960,
+      "height": 484
+    }
+  },
+  {
+    "animalId": "ott953147",
+    "scientific": "Melanosuchus niger",
+    "name": "کیمن سیاه",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q504483",
+    "commonsTitle": "File:Jacaré Açú.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jacar%C3%A9_A%C3%A7%C3%BA.jpg",
+    "artist": "Jovem Rural",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott953147-small-fb3116097702.jpg",
+      "bytes": 19727,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott953147-large-838714b687bb.jpg",
+      "bytes": 284202,
+      "width": 591,
+      "height": 394
+    }
+  },
+  {
+    "animalId": "ott424193",
+    "scientific": "Andrias davidianus",
+    "name": "سمندر غول‌پیکر چینی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q61312",
+    "commonsTitle": "File:Velemlok čínský zoo praha 1.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Velemlok_%C4%8D%C3%ADnsk%C3%BD_zoo_praha_1.jpg",
+    "artist": "Petr Hamerník",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott424193-small-9e94692b3972.jpg",
+      "bytes": 16814,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott424193-large-301a733ccf15.jpg",
+      "bytes": 156036,
+      "width": 960,
+      "height": 641
+    }
+  },
+  {
+    "animalId": "ott73662",
+    "scientific": "Megachasma pelagios",
+    "name": "کوسه دهان‌بزرگ",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q106728",
+    "commonsTitle": "File:Mega mouth shark specimen.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mega_mouth_shark_specimen.jpg",
+    "artist": "Oos ( talk )",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "small": {
+      "src": "/animals/ott73662-small-9c222e7cdbd7.jpg",
+      "bytes": 17906,
+      "width": 250,
+      "height": 185
+    },
+    "large": {
+      "src": "/animals/ott73662-large-d9fe53332856.jpg",
+      "bytes": 179978,
+      "width": 960,
+      "height": 710
+    }
+  },
+  {
+    "animalId": "ott1064070",
+    "scientific": "Malaclemys terrapin",
+    "name": "لاک‌پشت پشت‌الماسی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q569170",
+    "commonsTitle": "File:Malaclemys terrapinHolbrookV1P12A.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Malaclemys_terrapinHolbrookV1P12A.jpg",
+    "artist": "Holbrook, John Edwards, 1794-1871 ( English Wikipedia )",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott1064070-small-efb1b163045a.jpg",
+      "bytes": 27008,
+      "width": 250,
+      "height": 282
+    },
+    "large": {
+      "src": "/animals/ott1064070-large-db5f60348555.jpg",
+      "bytes": 316528,
+      "width": 909,
+      "height": 1024
+    }
+  },
+  {
+    "animalId": "ott124230",
+    "scientific": "Tursiops truncatus",
+    "name": "دلفین بینی‌بطری معمولی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q174199",
+    "commonsTitle": "File:Tursiops truncatus 01-cropped.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01-cropped.jpg",
+    "artist": "NASA",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott124230-small-2b47d310c488.jpg",
+      "bytes": 19806,
+      "width": 250,
+      "height": 185
+    },
+    "large": {
+      "src": "/animals/ott124230-large-2d1dd00e8798.jpg",
+      "bytes": 240634,
+      "width": 960,
+      "height": 709
+    }
+  },
+  {
+    "animalId": "ott140312",
+    "scientific": "Cygnus atratus",
+    "name": "قوی سیاه",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q131044",
+    "commonsTitle": "File:00 2102 Trauerschwäne (Breisach am Rhein).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:00_2102_Trauerschw%C3%A4ne_(Breisach_am_Rhein).jpg",
+    "artist": "W. Bulach",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott140312-small-b0e9fc6f72d1.jpg",
+      "bytes": 13108,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott140312-large-44a9519ce90d.jpg",
+      "bytes": 117969,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott800311",
+    "scientific": "Ziphius cavirostris",
+    "name": "نهنگ غازنوک",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q623173",
+    "commonsTitle": "File:Ziphius cavirostris 47619123 (cropped).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ziphius_cavirostris_47619123_(cropped).jpg",
+    "artist": "Charlotte Kirchner",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "small": {
+      "src": "/animals/ott800311-small-30d100c454a7.jpg",
+      "bytes": 17123,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott800311-large-798b0da29d89.jpg",
+      "bytes": 86832,
+      "width": 447,
+      "height": 335
+    }
+  },
+  {
+    "animalId": "ott1093624",
+    "scientific": "Chlamydoselachus anguineus",
+    "name": "کوسه چین‌دار",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q194312",
+    "commonsTitle": "File:Chlamydoselachus anguineus2.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chlamydoselachus_anguineus2.jpg",
+    "artist": "This illustration was made by Citron You must credit this : Citron / CC-BY-SA-3.0",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott1093624-small-9f81a2324624.jpg",
+      "bytes": 5183,
+      "width": 250,
+      "height": 101
+    },
+    "large": {
+      "src": "/animals/ott1093624-large-ae50f123b796.jpg",
+      "bytes": 37982,
+      "width": 960,
+      "height": 388
+    }
+  },
+  {
+    "animalId": "ott1089846",
+    "scientific": "Calyptorhynchus banksii",
+    "name": "طوطی‌کاکلی سیاه دم‌سرخ",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q638242",
+    "commonsTitle": "File:Calyptorhynchus banksii (pair)-8-2cp.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Calyptorhynchus_banksii_(pair)-8-2cp.jpg",
+    "artist": "Calyptorhynchus_banksii_(pair)-8.jpg : gaab22 derivative work: Snowmanradio ( talk )",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott1089846-small-ba50b2af6b1e.jpg",
+      "bytes": 12438,
+      "width": 250,
+      "height": 250
+    },
+    "large": {
+      "src": "/animals/ott1089846-large-b77775e30363.jpg",
+      "bytes": 138112,
+      "width": 960,
+      "height": 960
+    }
+  },
+  {
+    "animalId": "ott430320",
+    "scientific": "Lepidochelys olivacea",
+    "name": "لاک‌پشت زیتونی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q282385",
+    "commonsTitle": "File:Lepidochelys olivacea.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lepidochelys_olivacea.jpg",
+    "artist": "Bernard Gagnon",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott430320-small-7c36e4c4a1f4.jpg",
+      "bytes": 17441,
+      "width": 250,
+      "height": 177
+    },
+    "large": {
+      "src": "/animals/ott430320-large-42c7905caa8c.jpg",
+      "bytes": 281237,
+      "width": 960,
+      "height": 680
+    }
+  },
+  {
+    "animalId": "ott335725",
+    "scientific": "Arapaima gigas",
+    "name": "آراپایما",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q145409",
+    "commonsTitle": "File:Arapaima gigas captivity.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arapaima_gigas_captivity.jpg",
+    "artist": "This illustration was made by Citron You must credit this : Citron / CC-BY-SA-3.0",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott335725-small-515804c6b425.jpg",
+      "bytes": 13822,
+      "width": 250,
+      "height": 164
+    },
+    "large": {
+      "src": "/animals/ott335725-large-163f12ee3d7b.jpg",
+      "bytes": 126972,
+      "width": 960,
+      "height": 632
+    }
+  },
+  {
+    "animalId": "ott203159",
+    "scientific": "Papio ursinus",
+    "name": "بابون دماغه",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q257670",
+    "commonsTitle": "File:Chacma Baboon, male.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chacma_Baboon,_male.jpg",
+    "artist": "D. Gordon E. Robertson",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott203159-small-411d161e971d.jpg",
+      "bytes": 31461,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott203159-large-c45989a2d4db.jpg",
+      "bytes": 279088,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott427150",
+    "scientific": "Athene noctua",
+    "name": "جغد کوچک",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q129958",
+    "commonsTitle": "File:Athene noctua, Ambula, Montenegro 1.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Athene_noctua,_Ambula,_Montenegro_1.jpg",
+    "artist": "Frank Vassen from Brussels, Belgium",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott427150-small-4d1fce73d6e3.jpg",
+      "bytes": 19211,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott427150-large-ae2ef11d5938.jpg",
+      "bytes": 142392,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott115463",
+    "scientific": "Papio hamadryas",
+    "name": "بابون مقدس",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q189484",
+    "commonsTitle": "File:Hamadryas baboon (Papio hamadryas) female.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hamadryas_baboon_(Papio_hamadryas)_female.jpg",
+    "artist": "Charles J. Sharp",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott115463-small-acb427f2d441.jpg",
+      "bytes": 25503,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott115463-large-d32e9e6eb705.jpg",
+      "bytes": 285199,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott810756",
+    "scientific": "Calypte anna",
+    "name": "مرغ مگس آنا",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q564265",
+    "commonsTitle": "File:Anna's Hummingbird - 0L8A9194.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anna%27s_Hummingbird_-_0L8A9194.jpg",
+    "artist": "Nigel",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott810756-small-bdf7e842d642.jpg",
+      "bytes": 11785,
+      "width": 250,
+      "height": 173
+    },
+    "large": {
+      "src": "/animals/ott810756-large-52d72fc7061a.jpg",
+      "bytes": 130594,
+      "width": 960,
+      "height": 666
+    }
+  },
+  {
+    "animalId": "ott1035823",
+    "scientific": "Tomistoma schlegelii",
+    "name": "گریال دروغین",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q242464",
+    "commonsTitle": "File:Tomistoma schlegelii.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tomistoma_schlegelii.jpg",
+    "artist": "User:Haplochromis",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "small": {
+      "src": "/animals/ott1035823-small-7c007b204ef8.jpg",
+      "bytes": 8687,
+      "width": 250,
+      "height": 84
+    },
+    "large": {
+      "src": "/animals/ott1035823-large-ca41e0a4ba54.jpg",
+      "bytes": 113978,
+      "width": 960,
+      "height": 324
+    }
+  },
+  {
+    "animalId": "ott509850",
+    "scientific": "Aegolius acadicus",
+    "name": "جغد جیغ‌اره‌ای شمالی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q638019",
+    "commonsTitle": "File:Northern Saw-whet Owl, Reifel BC 1.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Northern_Saw-whet_Owl,_Reifel_BC_1.jpg",
+    "artist": "Brendan Lally from Delta, Canada",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott509850-small-239bf4df9c67.jpg",
+      "bytes": 19666,
+      "width": 250,
+      "height": 238
+    },
+    "large": {
+      "src": "/animals/ott509850-large-5d137f8852dd.jpg",
+      "bytes": 119198,
+      "width": 960,
+      "height": 912
+    }
+  },
+  {
+    "animalId": "ott333784",
+    "scientific": "Crocodylus siamensis",
+    "name": "تمساح سیامی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q208277",
+    "commonsTitle": "File:Siamese Crocodile (Crocodylus siamensis) (7781302098).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Siamese_Crocodile_(Crocodylus_siamensis)_(7781302098).jpg",
+    "artist": "Bernard DUPONT from FRANCE",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "small": {
+      "src": "/animals/ott333784-small-f585785ee54a.jpg",
+      "bytes": 21137,
+      "width": 250,
+      "height": 168
+    },
+    "large": {
+      "src": "/animals/ott333784-large-1cf1651d9e66.jpg",
+      "bytes": 235938,
+      "width": 960,
+      "height": 645
+    }
+  },
+  {
+    "animalId": "ott400227",
+    "scientific": "Ginglymostoma cirratum",
+    "name": "کوسه پرستار",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q756859",
+    "commonsTitle": "File:Nurse shark.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nurse_shark.jpg",
+    "artist": "نام عکاس در ویکی‌انبار درج نشده",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott400227-small-2ced35cebed8.jpg",
+      "bytes": 17880,
+      "width": 250,
+      "height": 164
+    },
+    "large": {
+      "src": "/animals/ott400227-large-a60b6792c8d9.jpg",
+      "bytes": 142951,
+      "width": 960,
+      "height": 631
+    }
+  },
+  {
+    "animalId": "ott900913",
+    "scientific": "Eolophus roseicapilla",
+    "name": "طوطی‌کاکلی سینه‌صورتی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q1253755",
+    "commonsTitle": "File:Eolophus roseicapilla AF.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eolophus_roseicapilla_AF.jpg",
+    "artist": "JJ Harrison ( https://www.jjharrison.com.au/ )",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott900913-small-a457de21663c.jpg",
+      "bytes": 30821,
+      "width": 250,
+      "height": 398
+    },
+    "large": {
+      "src": "/animals/ott900913-large-b53c280383a7.jpg",
+      "bytes": 286320,
+      "width": 960,
+      "height": 1529
+    }
+  },
+  {
+    "animalId": "ott435193",
+    "scientific": "Hexanchus griseus",
+    "name": "کوسه شش‌آبششی پخ‌بینی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q312293",
+    "commonsTitle": "File:Six-gill shark.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Six-gill_shark.jpg",
+    "artist": "نام عکاس در ویکی‌انبار درج نشده",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott435193-small-6b0d33eaee08.jpg",
+      "bytes": 12064,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott435193-large-7f4388781f4c.jpg",
+      "bytes": 39673,
+      "width": 600,
+      "height": 450
+    }
+  },
+  {
+    "animalId": "ott1035832",
+    "scientific": "Crocodylus intermedius",
+    "name": "تمساح اورینوکو",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q272395",
+    "commonsTitle": "File:OrinocoCrocodile.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:OrinocoCrocodile.jpg",
+    "artist": "Greg Hume",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott1035832-small-34d9048ef600.jpg",
+      "bytes": 23384,
+      "width": 250,
+      "height": 207
+    },
+    "large": {
+      "src": "/animals/ott1035832-large-5431002b4427.jpg",
+      "bytes": 311112,
+      "width": 960,
+      "height": 795
+    }
+  },
+  {
+    "animalId": "ott451900",
+    "scientific": "Phyllobates terribilis",
+    "name": "قورباغه سمی طلایی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q963997",
+    "commonsTitle": "File:Schrecklicherpfeilgiftfrosch-01.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Schrecklicherpfeilgiftfrosch-01.jpg",
+    "artist": "Wilfried Berns",
+    "license": "CC BY-SA 2.0 de",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en",
+    "small": {
+      "src": "/animals/ott451900-small-e88ec175aca0.jpg",
+      "bytes": 11633,
+      "width": 250,
+      "height": 191
+    },
+    "large": {
+      "src": "/animals/ott451900-large-e42b4e6d7c09.jpg",
+      "bytes": 64718,
+      "width": 895,
+      "height": 683
+    }
+  },
+  {
+    "animalId": "ott417961",
+    "scientific": "Symphalangus syndactylus",
+    "name": "غبغبی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q213889",
+    "commonsTitle": "File:Siamang 2014.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Siamang_2014.jpg",
+    "artist": "J. Patrick Fischer",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott417961-small-b0d89ae29d80.jpg",
+      "bytes": 21839,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott417961-large-443ce7410980.jpg",
+      "bytes": 188468,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott225753",
+    "scientific": "Nestor meridionalis",
+    "name": "طوطی کاکای نیوزیلندی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q626289",
+    "commonsTitle": "File:Kaka-Parrots.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kaka-Parrots.jpg",
+    "artist": "Small",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "small": {
+      "src": "/animals/ott225753-small-72f171adccbb.jpg",
+      "bytes": 20483,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott225753-large-259368d380bf.jpg",
+      "bytes": 358801,
+      "width": 760,
+      "height": 570
+    }
+  },
+  {
+    "animalId": "ott954050",
+    "scientific": "Andrias japonicus",
+    "name": "سمندر بزرگ ژاپنی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q112045",
+    "commonsTitle": "File:Japanese giant salamander in Tottori Prefecture, Japan.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Japanese_giant_salamander_in_Tottori_Prefecture,_Japan.jpg",
+    "artist": "Salamandra2021",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott954050-small-ecf8f9c7c972.jpg",
+      "bytes": 18554,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott954050-large-7df404d77074.jpg",
+      "bytes": 197758,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott1019126",
+    "scientific": "Squalus acanthias",
+    "name": "کوسه‌ماهی خاردار",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q212694",
+    "commonsTitle": "File:Squalus acanthias stellwagen.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Squalus_acanthias_stellwagen.jpg",
+    "artist": "Doug Costa, NOAA/SBNMS",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott1019126-small-408818485f16.jpg",
+      "bytes": 11602,
+      "width": 250,
+      "height": 98
+    },
+    "large": {
+      "src": "/animals/ott1019126-large-886d3469f7ad.jpg",
+      "bytes": 112134,
+      "width": 960,
+      "height": 377
+    }
+  },
+  {
+    "animalId": "ott919164",
+    "scientific": "Pipa pipa",
+    "name": "وزغ سورینامی معمولی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q220414",
+    "commonsTitle": "File:Pipa pipa 1.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pipa_pipa_1.jpg",
+    "artist": "User:Stan Shebs",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott919164-small-5b308f03963f.jpg",
+      "bytes": 20493,
+      "width": 250,
+      "height": 145
+    },
+    "large": {
+      "src": "/animals/ott919164-large-5fc678a07f23.jpg",
+      "bytes": 203437,
+      "width": 960,
+      "height": 555
+    }
+  },
+  {
+    "animalId": "ott115449",
+    "scientific": "Papio anubis",
+    "name": "بابون زیتونی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q208561",
+    "commonsTitle": "File:Olive baboon animal papio anubis.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Olive_baboon_animal_papio_anubis.jpg",
+    "artist": "Stolz Gary M, U.S. Fish and Wildlife Service",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott115449-small-2b897857db45.jpg",
+      "bytes": 8784,
+      "width": 250,
+      "height": 166
+    },
+    "large": {
+      "src": "/animals/ott115449-large-6241da76d165.jpg",
+      "bytes": 87238,
+      "width": 960,
+      "height": 639
+    }
+  },
+  {
+    "animalId": "ott146028",
+    "scientific": "Chironex fleckeri",
+    "name": "زنبور دریایی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q310432",
+    "commonsTitle": "File:Avispa marina cropped.png",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Avispa_marina_cropped.png",
+    "artist": "Avispa marina.jpg : Guido Gautsch , Toyota, Japan derivative work: Mithril ( talk )",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "small": {
+      "src": "/animals/ott146028-small-bcc8ef1e7e2a.png",
+      "bytes": 108008,
+      "width": 250,
+      "height": 317
+    },
+    "large": {
+      "src": "/animals/ott146028-large-9b42745e24d6.png",
+      "bytes": 573407,
+      "width": 572,
+      "height": 725
+    }
+  },
+  {
+    "animalId": "ott587328",
+    "scientific": "Lepidochelys kempii",
+    "name": "لاک‌پشت ریدلی کمپ",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q301089",
+    "commonsTitle": "File:Padre Island National Seashore - Kemps Ridley Sea Turtle.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg",
+    "artist": "uploaded by Johntex",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott587328-small-d62544eadefb.jpg",
+      "bytes": 24388,
+      "width": 250,
+      "height": 237
+    },
+    "large": {
+      "src": "/animals/ott587328-large-1678fefd0796.jpg",
+      "bytes": 250166,
+      "width": 960,
+      "height": 908
+    }
+  },
+  {
+    "animalId": "ott415538",
+    "scientific": "Varanus varius",
+    "name": "بزمجه نواری",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q924941",
+    "commonsTitle": "File:Goanna head2.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Goanna_head2.jpg",
+    "artist": "No machine-readable author provided. LiquidGhoul assumed (based on copyright claims).",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "small": {
+      "src": "/animals/ott415538-small-8bfe8331cb14.jpg",
+      "bytes": 22660,
+      "width": 250,
+      "height": 137
+    },
+    "large": {
+      "src": "/animals/ott415538-large-fb1566b128e8.jpg",
+      "bytes": 259058,
+      "width": 960,
+      "height": 527
+    }
+  },
+  {
+    "animalId": "ott458963",
+    "scientific": "Crocodylus rhombifer",
+    "name": "تمساح کوبایی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q242102",
+    "commonsTitle": "File:Estocolm 2008 163.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Estocolm_2008_163.jpg",
+    "artist": "Eric Mas Casas",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "small": {
+      "src": "/animals/ott458963-small-f7d73cfe6efc.jpg",
+      "bytes": 17777,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott458963-large-960700c63e6f.jpg",
+      "bytes": 190753,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott172914",
+    "scientific": "Varanus niloticus",
+    "name": "بزمجه نیل",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q737896",
+    "commonsTitle": "File:Nile Monitor, Lake Manyara.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nile_Monitor,_Lake_Manyara.jpg",
+    "artist": "D. Gordon E. Robertson",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott172914-small-1293e9ae87db.jpg",
+      "bytes": 22024,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott172914-large-3757d2aa76a3.jpg",
+      "bytes": 273683,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott351685",
+    "scientific": "Gorilla beringei",
+    "name": "گوریل شرقی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q307157",
+    "commonsTitle": "File:Gorillas in Uganda-1, by Fiver Löcker.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gorillas_in_Uganda-1,_by_Fiver_L%C3%B6cker.jpg",
+    "artist": "Fiver Löcker from Wellington, New Zealand",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "small": {
+      "src": "/animals/ott351685-small-08a40a170bc5.jpg",
+      "bytes": 40297,
+      "width": 250,
+      "height": 309
+    },
+    "large": {
+      "src": "/animals/ott351685-large-bc99b9e1628e.jpg",
+      "bytes": 374474,
+      "width": 960,
+      "height": 1187
+    }
+  },
+  {
+    "animalId": "ott458978",
+    "scientific": "Crocodylus johnsoni",
+    "name": "تمساح آب‌شیرین",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q319535",
+    "commonsTitle": "File:.00 1042 Freshwater crocodile.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:.00_1042_Freshwater_crocodile.jpg",
+    "artist": "W. Bulach",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott458978-small-d000fce98d0b.jpg",
+      "bytes": 29029,
+      "width": 250,
+      "height": 188
+    },
+    "large": {
+      "src": "/animals/ott458978-large-d61f2b47ded0.jpg",
+      "bytes": 440901,
+      "width": 960,
+      "height": 722
+    }
+  },
+  {
+    "animalId": "ott207360",
+    "scientific": "Cygnus columbianus",
+    "name": "قوی کوچک",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q26603",
+    "commonsTitle": "File:Cygnus bewickii 01.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cygnus_bewickii_01.jpg",
+    "artist": "Maga-chan",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "small": {
+      "src": "/animals/ott207360-small-b79c6576a188.jpg",
+      "bytes": 12517,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott207360-large-130156c2a4bc.jpg",
+      "bytes": 97408,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott747043",
+    "scientific": "Varanus bengalensis",
+    "name": "بزمجه بنگالی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q756805",
+    "commonsTitle": "File:Bengal monitor (Varanus bengalensis)..jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bengal_monitor_(Varanus_bengalensis)..jpg",
+    "artist": "Md shahanshah bappy",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott747043-small-ef8972bdddb4.jpg",
+      "bytes": 11759,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott747043-large-0d16aa8a9c7c.jpg",
+      "bytes": 128026,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott458970",
+    "scientific": "Crocodylus mindorensis",
+    "name": "تمساح فیلیپین",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q272402",
+    "commonsTitle": "File:Crocodylus mindorensis by Gregg Yan 01.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Crocodylus_mindorensis_by_Gregg_Yan_01.jpg",
+    "artist": "Gregg Yan",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott458970-small-233ad8454336.jpg",
+      "bytes": 23250,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott458970-large-c9c842cc678d.jpg",
+      "bytes": 215698,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott458975",
+    "scientific": "Crocodylus moreletii",
+    "name": "تمساح مورلت",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q723708",
+    "commonsTitle": "File:Morelet's Crocodile (Crocodylus moreletii) big male attracting Julia Butterflies (Dryas iulia) - Rio Usumacintla Chiapas 2020.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Morelet%27s_Crocodile_(Crocodylus_moreletii)_big_male_attracting_Julia_Butterflies_(Dryas_iulia)_-_Rio_Usumacintla_Chiapas_2020.jpg",
+    "artist": "Bernard DUPONT",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "small": {
+      "src": "/animals/ott458975-small-21e8429fe68b.jpg",
+      "bytes": 13866,
+      "width": 250,
+      "height": 127
+    },
+    "large": {
+      "src": "/animals/ott458975-large-c63794c816f5.jpg",
+      "bytes": 148508,
+      "width": 960,
+      "height": 488
+    }
+  },
+  {
+    "animalId": "ott570956",
+    "scientific": "Alectura lathami",
+    "name": "بوقلمون وحشی استرالیایی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q632066",
+    "commonsTitle": "File:Australian Brushturkey 2 - Newington.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Australian_Brushturkey_2_-_Newington.jpg",
+    "artist": "JJ Harrison ( https://www.jjharrison.com.au/ )",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott570956-small-e0564457dae8.jpg",
+      "bytes": 17122,
+      "width": 250,
+      "height": 250
+    },
+    "large": {
+      "src": "/animals/ott570956-large-d0ba4cf0b564.jpg",
+      "bytes": 140342,
+      "width": 960,
+      "height": 960
+    }
+  },
+  {
+    "animalId": "ott828655",
+    "scientific": "Paleosuchus palpebrosus",
+    "name": "کیمن کوتوله کوویر",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q757363",
+    "commonsTitle": "File:Paleosuchus palpebrosus 0zz.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paleosuchus_palpebrosus_0zz.jpg",
+    "artist": "Photo by David J. Stang",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott828655-small-ec539bd073bd.jpg",
+      "bytes": 13156,
+      "width": 250,
+      "height": 166
+    },
+    "large": {
+      "src": "/animals/ott828655-large-a6d15a2337df.jpg",
+      "bytes": 88038,
+      "width": 960,
+      "height": 638
+    }
+  },
+  {
+    "animalId": "ott1077204",
+    "scientific": "Alopias vulpinus",
+    "name": "دم‌دراز معمولی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q618595",
+    "commonsTitle": "File:Alopias vulpinus noaa2.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alopias_vulpinus_noaa2.jpg",
+    "artist": "NOAA/PIER",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott1077204-small-0a3fec02d546.jpg",
+      "bytes": 8340,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott1077204-large-9c2dbb2d3379.jpg",
+      "bytes": 35446,
+      "width": 499,
+      "height": 333
+    }
+  },
+  {
+    "animalId": "ott1035828",
+    "scientific": "Osteolaemus tetraspis",
+    "name": "تمساح کوتوله",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q244349",
+    "commonsTitle": "File:Crocodile nain aquarium porte dorée Paris.JPG",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Crocodile_nain_aquarium_porte_dor%C3%A9e_Paris.JPG",
+    "artist": "Thesupermat",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott1035828-small-f1c746adecd2.jpg",
+      "bytes": 18880,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott1035828-large-a2f1a974da92.jpg",
+      "bytes": 224413,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott316441",
+    "scientific": "Lumbricus terrestris",
+    "name": "لومبریکوس ترستریس",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q30092",
+    "commonsTitle": "File:Lumbricus terrestris (26559560801).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lumbricus_terrestris_(26559560801).jpg",
+    "artist": "Donald Hobern from Copenhagen, Denmark",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott316441-small-fffe93033725.jpg",
+      "bytes": 20260,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott316441-large-b4ab041981aa.jpg",
+      "bytes": 190510,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott290409",
+    "scientific": "Notorynchus cepedianus",
+    "name": "کوسه هفت‌آبششی پهن‌بینی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q377591",
+    "commonsTitle": "File:Notorynchus cepedianus 2.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Notorynchus_cepedianus_2.jpg",
+    "artist": "José María Pérez Nuñez from Buenos Aires, Argentina",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "small": {
+      "src": "/animals/ott290409-small-cbeceab785f8.jpg",
+      "bytes": 9593,
+      "width": 250,
+      "height": 171
+    },
+    "large": {
+      "src": "/animals/ott290409-large-ff7444e35584.jpg",
+      "bytes": 95099,
+      "width": 960,
+      "height": 657
+    }
+  },
+  {
+    "animalId": "ott111864",
+    "scientific": "Macaca silenus",
+    "name": "ماکاک دم‌شیری",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q506518",
+    "commonsTitle": "File:Lion-tailed macaque by N. A. Naseer.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lion-tailed_macaque_by_N._A._Naseer.jpg",
+    "artist": "N.A.Nazeer",
+    "license": "CC BY-SA 2.5 in",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/in/deed.en",
+    "small": {
+      "src": "/animals/ott111864-small-2894258da90d.jpg",
+      "bytes": 27261,
+      "width": 250,
+      "height": 175
+    },
+    "large": {
+      "src": "/animals/ott111864-large-e59b12f19592.jpg",
+      "bytes": 282042,
+      "width": 960,
+      "height": 672
+    }
+  },
+  {
+    "animalId": "ott339043",
+    "scientific": "Nycticebus coucang",
+    "name": "چشم‌گرد تنبل سوندا",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q688601",
+    "commonsTitle": "File:Outloň váhavý - autor Lucie Čižmářová.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Outlo%C5%88_v%C3%A1hav%C3%BD_-_autor_Lucie_%C4%8Ci%C5%BEm%C3%A1%C5%99ov%C3%A1.jpg",
+    "artist": "Lucie Čižmářová, The Kukang Rescue Program",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott339043-small-36b613ea1e05.jpg",
+      "bytes": 10906,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott339043-large-8ac9da60edd4.jpg",
+      "bytes": 90256,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott216168",
+    "scientific": "Electrophorus electricus",
+    "name": "مارماهی برقی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q201235",
+    "commonsTitle": "File:Electric-eel.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Electric-eel.jpg",
+    "artist": "Steven G. Johnson",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "small": {
+      "src": "/animals/ott216168-small-29bd9f532a2c.jpg",
+      "bytes": 21168,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott216168-large-42783b07de21.jpg",
+      "bytes": 220249,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott735586",
+    "scientific": "Aegolius funereus",
+    "name": "جغد شمالی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q174466",
+    "commonsTitle": "File:Aegolius funereus funereus (Tengmalm's Owl), Lindberg, Germany 2.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aegolius_funereus_funereus_(Tengmalm%27s_Owl),_Lindberg,_Germany_2.jpg",
+    "artist": "Christoph Moning",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "small": {
+      "src": "/animals/ott735586-small-2b660242fc82.jpg",
+      "bytes": 21463,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott735586-large-9bbeab3c795f.jpg",
+      "bytes": 241596,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott446490",
+    "scientific": "Meleagris ocellata",
+    "name": "بوقلمون خال‌چشمی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q94601",
+    "commonsTitle": "File:Meleagris ocellata -Guatemala-8a.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Meleagris_ocellata_-Guatemala-8a.jpg",
+    "artist": "Bruno Girin",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "small": {
+      "src": "/animals/ott446490-small-b4349a8edcf6.jpg",
+      "bytes": 21245,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott446490-large-1cec2a52567b.jpg",
+      "bytes": 244318,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott143391",
+    "scientific": "Pelodiscus sinensis",
+    "name": "لاک‌پشت نرم‌کاسه چینی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q754028",
+    "commonsTitle": "File:Chinese Softshell Turtle (Pelodiscus sinensis).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chinese_Softshell_Turtle_(Pelodiscus_sinensis).jpg",
+    "artist": "尹若宇",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott143391-small-0da4ca30ff60.jpg",
+      "bytes": 14897,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott143391-large-72e23f2802a4.jpg",
+      "bytes": 151003,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott516305",
+    "scientific": "Hemiscyllium ocellatum",
+    "name": "کوسه سردوشی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q29243",
+    "commonsTitle": "File:Hemiscyllium ocellatum Océanopolis.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hemiscyllium_ocellatum_Oc%C3%A9anopolis.jpg",
+    "artist": "This illustration was made by Citron You must credit this : Citron / CC-BY-SA-3.0",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott516305-small-21273481008a.jpg",
+      "bytes": 15930,
+      "width": 250,
+      "height": 90
+    },
+    "large": {
+      "src": "/animals/ott516305-large-3921a91abe2e.jpg",
+      "bytes": 170156,
+      "width": 960,
+      "height": 346
+    }
+  },
+  {
+    "animalId": "ott254541",
+    "scientific": "Micrathene whitneyi",
+    "name": "جغد جنی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q926291",
+    "commonsTitle": "File:Elf Owl (Micrathene whitneyi) (17210856942).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Elf_Owl_(Micrathene_whitneyi)_(17210856942).jpg",
+    "artist": "Dominic Sherony",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "small": {
+      "src": "/animals/ott254541-small-4608404904bc.jpg",
+      "bytes": 15885,
+      "width": 250,
+      "height": 162
+    },
+    "large": {
+      "src": "/animals/ott254541-large-b848e2b345b4.jpg",
+      "bytes": 160867,
+      "width": 960,
+      "height": 622
+    }
+  },
+  {
+    "animalId": "ott788419",
+    "scientific": "Caiman yacare",
+    "name": "یاکار کیمن",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q756678",
+    "commonsTitle": "File:Brillenkaiman Caiman yacare.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brillenkaiman_Caiman_yacare.jpg",
+    "artist": "Andreas Trepte",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott788419-small-b8e1bb2c542a.jpg",
+      "bytes": 13657,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott788419-large-2f30b3ce50ec.jpg",
+      "bytes": 137560,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott172898",
+    "scientific": "Varanus salvadorii",
+    "name": "بزمجه تمساحی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q940883",
+    "commonsTitle": "File:Crocodile Monitor.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Crocodile_Monitor.jpg",
+    "artist": "Ltshears",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "small": {
+      "src": "/animals/ott172898-small-a08d2d16d381.jpg",
+      "bytes": 21150,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott172898-large-9dcca13c8a46.jpg",
+      "bytes": 221269,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott817994",
+    "scientific": "Cygnus cygnus",
+    "name": "قوی فریادکش",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q25612",
+    "commonsTitle": "File:Cygnus cygnus 070416 IOL.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cygnus_cygnus_070416_IOL.jpg",
+    "artist": "Pascal Aleixandre",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "small": {
+      "src": "/animals/ott817994-small-e5bc2bebe4b0.jpg",
+      "bytes": 13033,
+      "width": 250,
+      "height": 250
+    },
+    "large": {
+      "src": "/animals/ott817994-large-fe0d6471c303.jpg",
+      "bytes": 118019,
+      "width": 960,
+      "height": 960
+    }
+  },
+  {
+    "animalId": "ott960090",
+    "scientific": "Thaumoctopus mimicus",
+    "name": "هشت‌پا تقلیدگر",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q132999",
+    "commonsTitle": "File:Mimic Octopus 1.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mimic_Octopus_1.jpg",
+    "artist": "Steve Childs",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott960090-small-6be039d11fcd.jpg",
+      "bytes": 31836,
+      "width": 250,
+      "height": 200
+    },
+    "large": {
+      "src": "/animals/ott960090-large-1dc9714bb089.jpg",
+      "bytes": 713960,
+      "width": 750,
+      "height": 600
+    }
+  },
+  {
+    "animalId": "ott995038",
+    "scientific": "Hylobates lar",
+    "name": "گیبون دست‌سفید",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q208043",
+    "commonsTitle": "File:Hylobates lar - Kaeng Krachan WB.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hylobates_lar_-_Kaeng_Krachan_WB.jpg",
+    "artist": "JJ Harrison ( jjharrison89@facebook.com )",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "small": {
+      "src": "/animals/ott995038-small-2a83846e797c.jpg",
+      "bytes": 17809,
+      "width": 250,
+      "height": 141
+    },
+    "large": {
+      "src": "/animals/ott995038-large-cf53c9a72b78.jpg",
+      "bytes": 154104,
+      "width": 960,
+      "height": 540
+    }
+  },
+  {
+    "animalId": "ott235773",
+    "scientific": "Chelus fimbriatus",
+    "name": "ماتاماتا",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q317386",
+    "commonsTitle": "File:2009 Chelus fimbriatus.JPG",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2009_Chelus_fimbriatus.JPG",
+    "artist": "J. Patrick Fischer",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott235773-small-dab6582d201f.jpg",
+      "bytes": 19376,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott235773-large-a649127c2574.jpg",
+      "bytes": 176147,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott487672",
+    "scientific": "Sternotherus odoratus",
+    "name": "لاک‌پشت مشک‌دار معمولی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q674891",
+    "commonsTitle": "File:Stinkpot Turtle.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stinkpot_Turtle.jpg",
+    "artist": "Ontley",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott487672-small-e415909ba69e.jpg",
+      "bytes": 19204,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott487672-large-86f265d861e2.jpg",
+      "bytes": 141818,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott489551",
+    "scientific": "Nasikabatrachus sahyadrensis",
+    "name": "قورباغه بنفش",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q311152",
+    "commonsTitle": "File:Nasikabatrachus sahyadrensis.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nasikabatrachus_sahyadrensis.jpg",
+    "artist": "Original uploader was Karthickbala at ta.wikipedia",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott489551-small-c744c5557320.jpg",
+      "bytes": 25283,
+      "width": 250,
+      "height": 190
+    },
+    "large": {
+      "src": "/animals/ott489551-large-db86e1b2bc87.jpg",
+      "bytes": 258495,
+      "width": 960,
+      "height": 728
+    }
+  },
+  {
+    "animalId": "ott895624",
+    "scientific": "Natator depressus",
+    "name": "لاک‌پشت دریایی تخت‌لاک",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q372997",
+    "commonsTitle": "File:Natator depressus00.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Natator_depressus00.jpg",
+    "artist": "Lyndie Malan",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott895624-small-f33329fc30bb.jpg",
+      "bytes": 26788,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott895624-large-f79030f131f4.jpg",
+      "bytes": 98083,
+      "width": 720,
+      "height": 540
+    }
+  },
+  {
+    "animalId": "ott149798",
+    "scientific": "Apalone spinifera",
+    "name": "لاک‌پشت خاردار نرم‌کاسه",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q650232",
+    "commonsTitle": "File:Apalone spinifera.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Apalone_spinifera.jpg",
+    "artist": "LA Dawson",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "small": {
+      "src": "/animals/ott149798-small-9a365b3d2e32.jpg",
+      "bytes": 12733,
+      "width": 250,
+      "height": 180
+    },
+    "large": {
+      "src": "/animals/ott149798-large-c0e88cc8b72b.jpg",
+      "bytes": 50851,
+      "width": 600,
+      "height": 432
+    }
+  },
+  {
+    "animalId": "ott1019121",
+    "scientific": "Heterodontus francisci",
+    "name": "کوسه شاخدار",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q934615",
+    "commonsTitle": "File:Heterodontus francisci.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Heterodontus_francisci.jpg",
+    "artist": "Chad King / SIMoN NOAA",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott1019121-small-88b92839e4bd.jpg",
+      "bytes": 15385,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott1019121-large-0b8e9720c6ec.jpg",
+      "bytes": 159639,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott316451",
+    "scientific": "Eisenia fetida",
+    "name": "ایزینیا فتیدا",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q1501422",
+    "commonsTitle": "File:Redwiggler1.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Redwiggler1.jpg",
+    "artist": "Mihai Duguleana ;",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott316451-small-3d9fd9245821.jpg",
+      "bytes": 11404,
+      "width": 250,
+      "height": 184
+    },
+    "large": {
+      "src": "/animals/ott316451-large-7a70c45b9cbd.jpg",
+      "bytes": 59707,
+      "width": 325,
+      "height": 239
+    }
+  },
+  {
+    "animalId": "ott848781",
+    "scientific": "Deirochelys reticularia",
+    "name": "لاک‌پشت مرغی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q262146",
+    "commonsTitle": "File:Deirochelys reticulariaHolbrookV1P07A.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Deirochelys_reticulariaHolbrookV1P07A.jpg",
+    "artist": "Holbrook, John Edwards, 1794-1871 ( English Wikipedia )",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott848781-small-a2d0877e7f3f.jpg",
+      "bytes": 25649,
+      "width": 250,
+      "height": 321
+    },
+    "large": {
+      "src": "/animals/ott848781-large-aa5dc29b77b2.jpg",
+      "bytes": 227450,
+      "width": 798,
+      "height": 1024
+    }
+  },
+  {
+    "animalId": "ott500598",
+    "scientific": "Isurus paucus",
+    "name": "کوسه ماکو پوزه بلند",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q207630",
+    "commonsTitle": "File:Isurus paucus.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Isurus_paucus.jpg",
+    "artist": "NOAA Observer Program",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott500598-small-efcb9be0162f.jpg",
+      "bytes": 9667,
+      "width": 250,
+      "height": 112
+    },
+    "large": {
+      "src": "/animals/ott500598-large-0084e65a478a.jpg",
+      "bytes": 124269,
+      "width": 778,
+      "height": 349
+    }
+  },
+  {
+    "animalId": "ott257323",
+    "scientific": "Tursiops aduncus",
+    "name": "دلفین بینی‌بطری گرمسیری",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q370597",
+    "commonsTitle": "File:Tursiops aduncus, Port River, Adelaide, Australia - 2003.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tursiops_aduncus,_Port_River,_Adelaide,_Australia_-_2003.jpg",
+    "artist": "Aude Steiner",
+    "license": "CC BY-SA 1.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0",
+    "small": {
+      "src": "/animals/ott257323-small-5db207186372.jpg",
+      "bytes": 15269,
+      "width": 250,
+      "height": 169
+    },
+    "large": {
+      "src": "/animals/ott257323-large-04d417b62151.jpg",
+      "bytes": 439982,
+      "width": 931,
+      "height": 629
+    }
+  },
+  {
+    "animalId": "ott810244",
+    "scientific": "Carettochelys insculpta",
+    "name": "لاک‌پشت بینی‌خوکی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q457742",
+    "commonsTitle": "File:Carettochelys insculpta Natural History Museum University of Pisa.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carettochelys_insculpta_Natural_History_Museum_University_of_Pisa.jpg",
+    "artist": "Mattia Nocciola",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott810244-small-0d9823b5b38b.jpg",
+      "bytes": 14909,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott810244-large-9513709c9fed.jpg",
+      "bytes": 139894,
+      "width": 960,
+      "height": 639
+    }
+  },
+  {
+    "animalId": "ott1019118",
+    "scientific": "Heterodontus portusjacksoni",
+    "name": "کوسه پورت جکسون",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q1364894",
+    "commonsTitle": "File:2009 shark in Shanghai.JPG",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2009_shark_in_Shanghai.JPG",
+    "artist": "J. Patrick Fischer",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott1019118-small-877e841ce029.jpg",
+      "bytes": 12756,
+      "width": 250,
+      "height": 149
+    },
+    "large": {
+      "src": "/animals/ott1019118-large-0c1e8c2654ba.jpg",
+      "bytes": 105634,
+      "width": 960,
+      "height": 571
+    }
+  },
+  {
+    "animalId": "ott714464",
+    "scientific": "Anseranas semipalmata",
+    "name": "غاز زاغی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q212937",
+    "commonsTitle": "File:Magpie Goose (Anseranas semipalmata) (10242697785).jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Magpie_Goose_(Anseranas_semipalmata)_(10242697785).jpg",
+    "artist": "Bernard DUPONT from FRANCE",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "small": {
+      "src": "/animals/ott714464-small-c80b22fb28cf.jpg",
+      "bytes": 20761,
+      "width": 250,
+      "height": 165
+    },
+    "large": {
+      "src": "/animals/ott714464-large-faf55f77c283.jpg",
+      "bytes": 228561,
+      "width": 960,
+      "height": 633
+    }
+  },
+  {
+    "animalId": "ott35869",
+    "scientific": "Crocodylus novaeguineae",
+    "name": "تمساح گینه نو",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q504839",
+    "commonsTitle": "File:Neuguinea-krokodil-0272.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Neuguinea-krokodil-0272.jpg",
+    "artist": "Wilfried Berns www.Tierdoku.com",
+    "license": "CC BY-SA 2.0 de",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en",
+    "small": {
+      "src": "/animals/ott35869-small-f637883f4dd3.jpg",
+      "bytes": 15871,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott35869-large-340f4438d954.jpg",
+      "bytes": 136672,
+      "width": 900,
+      "height": 600
+    }
+  },
+  {
+    "animalId": "ott111862",
+    "scientific": "Macaca nigra",
+    "name": "میمون سیاه کاکل‌دار",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q280590",
+    "commonsTitle": "File:Macaca nigra self-portrait large.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Macaca_nigra_self-portrait_large.jpg",
+    "artist": "Self-portrait by the depicted Macaca nigra female. See article .",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott111862-small-f85aa67e4716.jpg",
+      "bytes": 31456,
+      "width": 250,
+      "height": 346
+    },
+    "large": {
+      "src": "/animals/ott111862-large-9df937c898a9.jpg",
+      "bytes": 332225,
+      "width": 960,
+      "height": 1329
+    }
+  },
+  {
+    "animalId": "ott662608",
+    "scientific": "Dendrocygna autumnalis",
+    "name": "اردک سوت‌زن شکم‌سیاه",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q752461",
+    "commonsTitle": "File:Black-bellied Whistling Duck, Tobago, Trinidad and Tobago 1.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Black-bellied_Whistling_Duck,_Tobago,_Trinidad_and_Tobago_1.jpg",
+    "artist": "williamstephens56",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "small": {
+      "src": "/animals/ott662608-small-3ac1b0e019a9.jpg",
+      "bytes": 38494,
+      "width": 250,
+      "height": 285
+    },
+    "large": {
+      "src": "/animals/ott662608-large-5d6574fa9992.jpg",
+      "bytes": 329537,
+      "width": 960,
+      "height": 1095
+    }
+  },
+  {
+    "animalId": "ott397243",
+    "scientific": "Caperea marginata",
+    "name": "نهنگ صاف کوتوله",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q189615",
+    "commonsTitle": "File:Pygmy right whale.png",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pygmy_right_whale.png",
+    "artist": "Dedden et al.",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "small": {
+      "src": "/animals/ott397243-small-52bd1316bd5b.png",
+      "bytes": 27808,
+      "width": 250,
+      "height": 110
+    },
+    "large": {
+      "src": "/animals/ott397243-large-4f657a53046f.png",
+      "bytes": 243430,
+      "width": 960,
+      "height": 424
+    }
+  },
+  {
+    "animalId": "ott197638",
+    "scientific": "Pycnopodia helianthoides",
+    "name": "آفتابگردان دریایی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q1857023",
+    "commonsTitle": "File:Olympic Coast National Marine Sanctuary 2010 Pycnopodia helianthoides.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Olympic_Coast_National_Marine_Sanctuary_2010_Pycnopodia_helianthoides.jpg",
+    "artist": "Ed Bowlby, NOAA/Olympic Coast NMS; NOAA/OAR/Office of Ocean Exploration.",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "small": {
+      "src": "/animals/ott197638-small-5056e84b378a.jpg",
+      "bytes": 18947,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott197638-large-a664afe9a63d.jpg",
+      "bytes": 226928,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott238724",
+    "scientific": "Toxopneustes pileolus",
+    "name": "توتیای دریایی گلگون",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q2488394",
+    "commonsTitle": "File:Erizo de flor (Toxopneustes pileolus), Zanzíbar, Tanzania, 2024-06-01, DD 134.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Erizo_de_flor_(Toxopneustes_pileolus),_Zanz%C3%ADbar,_Tanzania,_2024-06-01,_DD_134.jpg",
+    "artist": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "small": {
+      "src": "/animals/ott238724-small-7df14003de2e.jpg",
+      "bytes": 28908,
+      "width": 250,
+      "height": 250
+    },
+    "large": {
+      "src": "/animals/ott238724-large-b318b2a5c0fb.jpg",
+      "bytes": 220165,
+      "width": 960,
+      "height": 960
+    }
+  },
+  {
+    "animalId": "ott274889",
+    "scientific": "Eucrossorhinus dasypogon",
+    "name": "کوسه منگوله‌دار",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q29090",
+    "commonsTitle": "File:Eucrossorhinus dasypogon kings garden.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eucrossorhinus_dasypogon_kings_garden.jpg",
+    "artist": "Lakshmi Sawitri",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "small": {
+      "src": "/animals/ott274889-small-5575a0366a22.jpg",
+      "bytes": 25469,
+      "width": 250,
+      "height": 193
+    },
+    "large": {
+      "src": "/animals/ott274889-large-a2b4322b31fc.jpg",
+      "bytes": 297551,
+      "width": 960,
+      "height": 742
+    }
+  },
+  {
+    "animalId": "ott837392",
+    "scientific": "Macaca radiata",
+    "name": "زاتی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q520949",
+    "commonsTitle": "File:തൊപ്പിക്കുരങ്ങ്..JPG",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E0%B4%A4%E0%B5%8A%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%B0%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%8D..JPG",
+    "artist": "Dr. Ajay Balachandran",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott837392-small-2e0976495737.jpg",
+      "bytes": 17615,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott837392-large-04dc7c034713.jpg",
+      "bytes": 135064,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott690600",
+    "scientific": "Varanus griseus",
+    "name": "بزمجه بیابانی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q838735",
+    "commonsTitle": "File:Varanus griseus.JPG",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Varanus_griseus.JPG",
+    "artist": "Knockout mouse",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "small": {
+      "src": "/animals/ott690600-small-51795252267e.jpg",
+      "bytes": 11211,
+      "width": 250,
+      "height": 113
+    },
+    "large": {
+      "src": "/animals/ott690600-large-659c8755ead2.jpg",
+      "bytes": 136307,
+      "width": 960,
+      "height": 435
+    }
+  },
+  {
+    "animalId": "ott513904",
+    "scientific": "Papio papio",
+    "name": "بابون گینه‌ای",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q748929",
+    "commonsTitle": "File:Male Guinea Baboon in Nuremberg Zoo.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Male_Guinea_Baboon_in_Nuremberg_Zoo.jpg",
+    "artist": "Jakub Friedl from Prague, Czechia",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "small": {
+      "src": "/animals/ott513904-small-0766fc900f3d.jpg",
+      "bytes": 20247,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott513904-large-c2789591cba7.jpg",
+      "bytes": 210437,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott1029454",
+    "scientific": "Nomascus leucogenys",
+    "name": "گیبون گونه‌سفید شمالی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q998141",
+    "commonsTitle": "File:Female White-Cheeked Gibbon.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Female_White-Cheeked_Gibbon.jpg",
+    "artist": "Bilby",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "small": {
+      "src": "/animals/ott1029454-small-0a6fbb28fb38.jpg",
+      "bytes": 30498,
+      "width": 250,
+      "height": 376
+    },
+    "large": {
+      "src": "/animals/ott1029454-large-60ab93b6dda4.jpg",
+      "bytes": 274052,
+      "width": 960,
+      "height": 1445
+    }
+  },
+  {
+    "animalId": "ott492226",
+    "scientific": "Nomascus hainanus",
+    "name": "گیبون هاینان",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q960477",
+    "commonsTitle": "File:Nomascus hainanus (Hainan Gibbon) Locomotor modes.webp",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nomascus_hainanus_(Hainan_Gibbon)_Locomotor_modes.webp",
+    "artist": "Camera trap photographs taken by Kadoorie Farm and Botanic Garden.",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "small": {
+      "src": "/animals/ott492226-small-7d7e3455c2c7.webp",
+      "bytes": 17390,
+      "width": 250,
+      "height": 184
+    },
+    "large": {
+      "src": "/animals/ott492226-large-21145d84a75e.webp",
+      "bytes": 227390,
+      "width": 960,
+      "height": 705
+    }
+  },
+  {
+    "animalId": "ott98390",
+    "scientific": "Dermatemys mawii",
+    "name": "هیکاتی",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q301044",
+    "commonsTitle": "File:Dlouhohlávka mexická 9245u.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dlouhohl%C3%A1vka_mexick%C3%A1_9245u.jpg",
+    "artist": "Matěj Baťha",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "small": {
+      "src": "/animals/ott98390-small-6495c32bab6f.jpg",
+      "bytes": 10338,
+      "width": 250,
+      "height": 167
+    },
+    "large": {
+      "src": "/animals/ott98390-large-6d47f2516b8d.jpg",
+      "bytes": 145333,
+      "width": 960,
+      "height": 640
+    }
+  },
+  {
+    "animalId": "ott713773",
+    "scientific": "Varanus exanthematicus",
+    "name": "بزمجه ساوانا",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q135677",
+    "commonsTitle": "File:Varanus exanthematicus at beijingzoo.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Varanus_exanthematicus_at_beijingzoo.jpg",
+    "artist": "Shizhao",
+    "license": "CC BY 1.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/1.0",
+    "small": {
+      "src": "/animals/ott713773-small-7e1af89e85cb.jpg",
+      "bytes": 19329,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott713773-large-eb76eef38ea1.jpg",
+      "bytes": 306418,
+      "width": 960,
+      "height": 720
+    }
+  },
+  {
+    "animalId": "ott109888",
+    "scientific": "Leipoa ocellata",
+    "name": "مرغ دماسنج",
+    "wikidataUrl": "https://www.wikidata.org/entity/Q901228",
+    "commonsTitle": "File:Leipoa ocellata.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leipoa_ocellata.jpg",
+    "artist": "Kr.afol at English Wikipedia",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "small": {
+      "src": "/animals/ott109888-small-ab7c6fa665d5.jpg",
+      "bytes": 26864,
+      "width": 250,
+      "height": 187
+    },
+    "large": {
+      "src": "/animals/ott109888-large-4ff729b6d112.jpg",
+      "bytes": 347155,
+      "width": 960,
+      "height": 720
+    }
   }
 ]

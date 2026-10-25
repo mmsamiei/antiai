@@ -7,9 +7,9 @@ import { countryChallengeWindow } from "./country-challenge-schedule";
 
 const id = (name: string) => animalRecords.find(a => a.name === name)!.id;
 describe("animal game data and rankings", () => {
-  it("only exposes the 97 distinct animal leaves, without geographic coordinates", () => {
-    expect(datasetFor("ANIMAL")).toHaveLength(97);
-    expect(new Set(animalRecords.map(a => a.id)).size).toBe(97);
+  it("only exposes the 263 distinct animal leaves, without geographic coordinates", () => {
+    expect(datasetFor("ANIMAL")).toHaveLength(263);
+    expect(new Set(animalRecords.map(a => a.id)).size).toBe(263);
     expect(datasetFor("ANIMAL").every(a => a.latitude === undefined && a.longitude === undefined)).toBe(true);
     expect(searchItems("ANIMAL", "گربه").some(a => a.name === "گربه خانگی")).toBe(true);
     expect(searchItems("ANIMAL", "گربه‌سان")).toEqual([]);
